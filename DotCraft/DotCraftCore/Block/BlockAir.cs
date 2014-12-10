@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace DotCraftCore.Block
 {
-
-	using Material = DotCraftCore.Block.Material.Material;
 	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
 	using World = DotCraftCore.World.World;
 
@@ -18,10 +16,17 @@ namespace DotCraftCore.Block
 		{
 		}
 
+        public override String BlockName
+        {
+            get
+            {
+                return "air";
+            }
+        }
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{

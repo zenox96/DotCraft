@@ -3,9 +3,6 @@ using System.Collections;
 
 namespace DotCraftCore.Block
 {
-
-    using MapColor = DotCraftCore.Block.Material.MapColor;
-    using Material = DotCraftCore.Block.Material.Material;
     using IIconRegister = DotCraftCore.Client.renderer.texture.IIconRegister;
     using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
     using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
@@ -128,13 +125,12 @@ namespace DotCraftCore.Block
         /// <summary> Sound of stepping on the block  </summary>
         public Block.SoundType stepSound;
         public float blockParticleGravity;
-        protected internal readonly Material blockMaterial;
+        protected internal readonly Material.Material blockMaterial;
 
         ///    
         ///     <summary> * Determines how much velocity is maintained while moving on top of this block </summary>
         ///     
         public float slipperiness;
-        private string unlocalizedNameBlock;
         protected internal IIcon blockIcon;
         private const string __OBFID = "CL_00000199";
 
@@ -211,7 +207,7 @@ namespace DotCraftCore.Block
             return this.field_149783_u;
         }
 
-        public virtual Material Material
+        public virtual Material BlockMaterial
         {
             get
             {
@@ -221,12 +217,12 @@ namespace DotCraftCore.Block
 
         public virtual MapColor getMapColor(int p_149728_1_)
         {
-            return this.Material.MaterialMapColor;
+            return this.BlockMaterial.MaterialMapColor;
         }
 
         public static void registerBlocks( )
         {
-            blockRegistry.addObject(0, "air", (new BlockAir( )).setBlockName("air"));
+            blockRegistry.addObject(0, "air", new BlockAir( ));
             blockRegistry.addObject(1, "stone", (new BlockStone( )).setHardness(1.5F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stone").setBlockTextureName("stone"));
             blockRegistry.addObject(2, "grass", (new BlockGrass( )).setHardness(0.6F).setStepSound(soundTypeGrass).setBlockName("grass").setBlockTextureName("grass"));
             blockRegistry.addObject(3, "dirt", (new BlockDirt( )).setHardness(0.5F).setStepSound(soundTypeGravel).setBlockName("dirt").setBlockTextureName("dirt"));
@@ -532,19 +528,8 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Sets how many hits it takes to break a block. </summary>
         ///     
-        protected internal virtual Block Hardness
+        protected virtual float Hardness
         {
-            set
-            {
-                this.blockHardness = value;
-
-                if (this.blockResistance < value * 5.0F)
-                {
-                    this.blockResistance = value * 5.0F;
-                }
-
-                return this;
-            }
         }
 
         protected internal virtual Block setBlockUnbreakable( )
@@ -1230,13 +1215,8 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Sets the mod-specific block name </summary>
         ///     
-        public virtual Block BlockName
+        public virtual String BlockName
         {
-            set
-            {
-                this.unlocalizedNameBlock = value;
-                return this;
-            }
         }
 
         ///    
@@ -1257,7 +1237,7 @@ namespace DotCraftCore.Block
         {
             get
             {
-                return "tile." + this.unlocalizedNameBlock;
+                return "tile." + this.BlockName;
             }
         }
 

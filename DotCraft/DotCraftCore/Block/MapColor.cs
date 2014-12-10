@@ -1,8 +1,5 @@
-namespace DotCraftCore.Block.Material
+namespace DotCraftCore.Block
 {
-
-	using BlockColored = DotCraftCore.Block.BlockColored;
-
 	public class MapColor
 	{
 ///    
