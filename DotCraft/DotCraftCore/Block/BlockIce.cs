@@ -4,10 +4,10 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EnchantmentHelper = DotCraftCore.enchantment.EnchantmentHelper;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using StatList = DotCraftCore.stats.StatList;
 	using EnumSkyBlock = DotCraftCore.world.EnumSkyBlock;

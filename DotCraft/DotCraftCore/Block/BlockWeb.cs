@@ -4,9 +4,9 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using Items = DotCraftCore.init.Items;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Entity = DotCraftCore.Entity.Entity;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using World = DotCraftCore.world.World;

@@ -1,7 +1,7 @@
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
 	using DamageSource = DotCraftCore.util.DamageSource;
 

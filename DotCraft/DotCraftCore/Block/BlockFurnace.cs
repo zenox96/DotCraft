@@ -5,12 +5,12 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.entity.item.EntityItem;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Container = DotCraftCore.inventory.Container;
-	using IInventory = DotCraftCore.inventory.IInventory;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using Container = DotCraftCore.Inventory.Container;
+	using IInventory = DotCraftCore.Inventory.IInventory;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;

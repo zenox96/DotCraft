@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;
 	using World = DotCraftCore.world.World;

@@ -8,8 +8,8 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 
 	public class CommandTeleport : CommandBase

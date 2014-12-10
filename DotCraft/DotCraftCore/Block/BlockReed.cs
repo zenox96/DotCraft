@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;

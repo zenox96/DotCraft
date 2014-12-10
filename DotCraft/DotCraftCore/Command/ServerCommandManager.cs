@@ -32,7 +32,7 @@ namespace DotCraftCore.Command
 	using CommandTestFor = DotCraftCore.Command.Server.CommandTestFor;
 	using CommandTestForBlock = DotCraftCore.Command.Server.CommandTestForBlock;
 	using CommandWhitelist = DotCraftCore.Command.Server.CommandWhitelist;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using RConConsoleSource = DotCraftCore.network.rcon.RConConsoleSource;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;

@@ -8,7 +8,7 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using IPBanEntry = DotCraftCore.server.management.IPBanEntry;
 	using IChatComponent = DotCraftCore.util.IChatComponent;

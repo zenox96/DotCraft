@@ -1,7 +1,7 @@
 namespace DotCraftCore.Block
 {
 
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using IIcon = DotCraftCore.util.IIcon;
 
 	public class BlockButtonStone : BlockButton

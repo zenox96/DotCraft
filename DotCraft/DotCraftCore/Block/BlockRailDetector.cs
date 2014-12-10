@@ -6,11 +6,11 @@ namespace DotCraftCore.Block
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityMinecartCommandBlock = DotCraftCore.entity.EntityMinecartCommandBlock;
-	using EntityMinecart = DotCraftCore.entity.item.EntityMinecart;
-	using Container = DotCraftCore.inventory.Container;
-	using IInventory = DotCraftCore.inventory.IInventory;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityMinecartCommandBlock = DotCraftCore.Entity.EntityMinecartCommandBlock;
+	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
+	using Container = DotCraftCore.Inventory.Container;
+	using IInventory = DotCraftCore.Inventory.IInventory;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IIcon = DotCraftCore.util.IIcon;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;

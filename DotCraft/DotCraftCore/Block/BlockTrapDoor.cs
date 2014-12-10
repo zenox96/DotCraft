@@ -2,9 +2,9 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
 	using Vec3 = DotCraftCore.util.Vec3;

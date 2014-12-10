@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using World = DotCraftCore.world.World;

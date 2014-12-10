@@ -3,7 +3,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using IIcon = DotCraftCore.util.IIcon;
 
 	public class BlockHay : BlockRotatedPillar

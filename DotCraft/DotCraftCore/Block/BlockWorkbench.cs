@@ -3,9 +3,9 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using IIcon = DotCraftCore.util.IIcon;
 	using World = DotCraftCore.world.World;
 

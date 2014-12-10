@@ -5,11 +5,11 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using InventoryEnderChest = DotCraftCore.inventory.InventoryEnderChest;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using InventoryEnderChest = DotCraftCore.Inventory.InventoryEnderChest;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;

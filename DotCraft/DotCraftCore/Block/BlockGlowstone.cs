@@ -5,8 +5,8 @@ namespace DotCraftCore.Block
 
 	using MapColor = DotCraftCore.Block.material.MapColor;
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Items = DotCraftCore.init.Items;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using MathHelper = DotCraftCore.util.MathHelper;
 

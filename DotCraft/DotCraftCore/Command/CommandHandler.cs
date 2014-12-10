@@ -4,7 +4,7 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
 	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
 	using LogManager = org.apache.logging.log4j.LogManager;

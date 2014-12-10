@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using Item = DotCraftCore.item.Item;
 	using IIcon = DotCraftCore.util.IIcon;
 	using World = DotCraftCore.world.World;

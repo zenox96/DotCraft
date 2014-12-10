@@ -6,10 +6,10 @@ namespace DotCraftCore.Command.Server
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityList = DotCraftCore.entity.EntityList;
-	using EntityLiving = DotCraftCore.entity.EntityLiving;
-	using IEntityLivingData = DotCraftCore.entity.IEntityLivingData;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityList = DotCraftCore.Entity.EntityList;
+	using EntityLiving = DotCraftCore.Entity.EntityLiving;
+	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
 	using JsonToNBT = DotCraftCore.nbt.JsonToNBT;
 	using NBTBase = DotCraftCore.nbt.NBTBase;
 	using NBTException = DotCraftCore.nbt.NBTException;

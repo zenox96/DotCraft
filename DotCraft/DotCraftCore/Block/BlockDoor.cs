@@ -6,8 +6,8 @@ namespace DotCraftCore.Block
 	
 	using IconFlipped = DotCraftCore.client.renderer.IconFlipped;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Items = DotCraftCore.init.Items;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IIcon = DotCraftCore.util.IIcon;

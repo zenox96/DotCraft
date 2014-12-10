@@ -3,7 +3,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using Facing = DotCraftCore.util.Facing;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;
 

@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 
 	public class BlockPackedIce : Block
 	{

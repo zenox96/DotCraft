@@ -8,8 +8,8 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
 	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;

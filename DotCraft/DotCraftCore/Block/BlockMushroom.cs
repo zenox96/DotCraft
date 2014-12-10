@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.Block
 {
 
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using World = DotCraftCore.world.World;
 	using WorldGenBigMushroom = DotCraftCore.world.gen.feature.WorldGenBigMushroom;
 

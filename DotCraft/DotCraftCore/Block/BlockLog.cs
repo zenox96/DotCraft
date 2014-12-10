@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Item = DotCraftCore.item.Item;
 	using IIcon = DotCraftCore.util.IIcon;
 	using World = DotCraftCore.world.World;

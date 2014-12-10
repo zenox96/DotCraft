@@ -6,7 +6,7 @@ namespace DotCraftCore.Block
 	using MapColor = DotCraftCore.Block.material.MapColor;
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IIcon = DotCraftCore.util.IIcon;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;

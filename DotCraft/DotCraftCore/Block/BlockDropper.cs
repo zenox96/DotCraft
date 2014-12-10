@@ -2,9 +2,9 @@ namespace DotCraftCore.Block
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using BehaviorDefaultDispenseItem = DotCraftCore.dispenser.BehaviorDefaultDispenseItem;
-	using IBehaviorDispenseItem = DotCraftCore.dispenser.IBehaviorDispenseItem;
-	using IInventory = DotCraftCore.inventory.IInventory;
+	using BehaviorDefaultDispenseItem = DotCraftCore.Dispenser.BehaviorDefaultDispenseItem;
+	using IBehaviorDispenseItem = DotCraftCore.Dispenser.IBehaviorDispenseItem;
+	using IInventory = DotCraftCore.Inventory.IInventory;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;
 	using TileEntityDispenser = DotCraftCore.tileentity.TileEntityDispenser;

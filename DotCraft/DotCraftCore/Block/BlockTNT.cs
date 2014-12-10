@@ -5,13 +5,13 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityTNTPrimed = DotCraftCore.entity.item.EntityTNTPrimed;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EntityArrow = DotCraftCore.entity.projectile.EntityArrow;
-	using Items = DotCraftCore.init.Items;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityTNTPrimed = DotCraftCore.Entity.Item.EntityTNTPrimed;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
+	using Items = DotCraftCore.Init.Items;
 	using IIcon = DotCraftCore.util.IIcon;
 	using Explosion = DotCraftCore.world.Explosion;
 	using World = DotCraftCore.world.World;

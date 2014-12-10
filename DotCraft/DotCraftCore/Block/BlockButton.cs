@@ -6,10 +6,10 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EntityArrow = DotCraftCore.entity.projectile.EntityArrow;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;
 	using World = DotCraftCore.world.World;

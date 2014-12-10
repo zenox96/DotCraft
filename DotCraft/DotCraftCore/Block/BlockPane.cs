@@ -6,9 +6,9 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using Blocks = DotCraftCore.init.Blocks;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Entity = DotCraftCore.Entity.Entity;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;

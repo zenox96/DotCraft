@@ -3,11 +3,11 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityIronGolem = DotCraftCore.entity.monster.EntityIronGolem;
-	using EntitySnowman = DotCraftCore.entity.monster.EntitySnowman;
-	using Blocks = DotCraftCore.init.Blocks;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityIronGolem = DotCraftCore.Entity.Monster.EntityIronGolem;
+	using EntitySnowman = DotCraftCore.Entity.Monster.EntitySnowman;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using IIcon = DotCraftCore.util.IIcon;
 	using MathHelper = DotCraftCore.util.MathHelper;

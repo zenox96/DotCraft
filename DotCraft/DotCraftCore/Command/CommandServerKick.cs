@@ -3,7 +3,7 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 
 	public class CommandServerKick : CommandBase

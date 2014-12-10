@@ -5,7 +5,7 @@ namespace DotCraftCore.Command.Server
 
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using NetworkManager = DotCraftCore.network.NetworkManager;
 	using NetworkStatistics = DotCraftCore.network.NetworkStatistics;
 	using ChatComponentText = DotCraftCore.util.ChatComponentText;

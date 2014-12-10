@@ -2,7 +2,7 @@ namespace DotCraftCore.Block
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Items = DotCraftCore.init.Items;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using IIcon = DotCraftCore.util.IIcon;

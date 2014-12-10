@@ -5,8 +5,8 @@ namespace DotCraftCore.Block
     using IIconRegister = DotCraftCore.Client.renderer.texture.IIconRegister;
     using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
     using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-    using EntityFallingBlock = DotCraftCore.Entity.item.EntityFallingBlock;
-    using EntityPlayer = DotCraftCore.Entity.player.EntityPlayer;
+    using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
+    using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
     using Item = DotCraftCore.Item.Item;
     using ItemStack = DotCraftCore.Item.ItemStack;
     using IIcon = DotCraftCore.Util.IIcon;

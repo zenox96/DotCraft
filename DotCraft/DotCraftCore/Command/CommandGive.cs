@@ -4,8 +4,8 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using EntityItem = DotCraftCore.entity.item.EntityItem;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using JsonToNBT = DotCraftCore.nbt.JsonToNBT;

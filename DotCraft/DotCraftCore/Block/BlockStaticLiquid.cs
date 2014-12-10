@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Blocks = DotCraftCore.init.Blocks;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using World = DotCraftCore.world.World;
 
 	public class BlockStaticLiquid : BlockLiquid

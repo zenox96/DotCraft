@@ -9,7 +9,7 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using IChatComponent = DotCraftCore.util.IChatComponent;
 	using ExceptionUtils = org.apache.commons.lang3.exception.ExceptionUtils;

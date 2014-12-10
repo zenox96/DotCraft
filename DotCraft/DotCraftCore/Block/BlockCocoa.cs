@@ -3,9 +3,9 @@ using System;
 namespace DotCraftCore.Block
 {
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;

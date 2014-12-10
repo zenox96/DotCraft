@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace DotCraftCore.Command.Server
 {
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using Achievement = DotCraftCore.stats.Achievement;
 	using AchievementList = DotCraftCore.stats.AchievementList;

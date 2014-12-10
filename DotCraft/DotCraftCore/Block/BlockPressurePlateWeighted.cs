@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Entity = DotCraftCore.entity.Entity;
+	using Entity = DotCraftCore.Entity.Entity;
 	using MathHelper = DotCraftCore.util.MathHelper;
 	using World = DotCraftCore.world.World;
 

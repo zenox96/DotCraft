@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using Blocks = DotCraftCore.init.Blocks;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using Direction = DotCraftCore.util.Direction;
 	using IIcon = DotCraftCore.util.IIcon;

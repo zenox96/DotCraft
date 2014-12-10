@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;
 	using TileEntityNote = DotCraftCore.tileentity.TileEntityNote;
 	using World = DotCraftCore.world.World;

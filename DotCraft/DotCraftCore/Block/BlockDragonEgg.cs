@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	
-	using EntityFallingBlock = DotCraftCore.entity.item.EntityFallingBlock;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Item = DotCraftCore.item.Item;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;
 	using World = DotCraftCore.world.World;

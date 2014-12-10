@@ -1,0 +1,123 @@
+using System;
+
+namespace DotCraftCore.Entity.AI
+{
+
+	using Block = DotCraftCore.block.Block;
+	using BlockDoor = DotCraftCore.block.BlockDoor;
+	using EntityLiving = DotCraftCore.Entity.EntityLiving;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using PathEntity = DotCraftCore.pathfinding.PathEntity;
+	using PathNavigate = DotCraftCore.pathfinding.PathNavigate;
+	using PathPoint = DotCraftCore.pathfinding.PathPoint;
+	using MathHelper = DotCraftCore.util.MathHelper;
+
+	public abstract class EntityAIDoorInteract : EntityAIBase
+	{
+		protected internal EntityLiving theEntity;
+		protected internal int entityPosX;
+		protected internal int entityPosY;
+		protected internal int entityPosZ;
+		protected internal BlockDoor field_151504_e;
+
+///    
+///     <summary> * If is true then the Entity has stopped Door Interaction and compoleted the task. </summary>
+///     
+		internal bool hasStoppedDoorInteraction;
+		internal float entityPositionX;
+		internal float entityPositionZ;
+		private const string __OBFID = "CL_00001581";
+
+		public EntityAIDoorInteract(EntityLiving p_i1621_1_)
+		{
+			this.theEntity = p_i1621_1_;
+		}
+
+///    
+///     <summary> * Returns whether the EntityAIBase should begin execution. </summary>
+///     
+		public override bool shouldExecute()
+		{
+			if (!this.theEntity.isCollidedHorizontally)
+			{
+				return false;
+			}
+			else
+			{
+				PathNavigate var1 = this.theEntity.Navigator;
+				PathEntity var2 = var1.Path;
+
+				if (var2 != null && !var2.Finished && var1.CanBreakDoors)
+				{
+					for (int var3 = 0; var3 < Math.Min(var2.CurrentPathIndex + 2, var2.CurrentPathLength); ++var3)
+					{
+						PathPoint var4 = var2.getPathPointFromIndex(var3);
+						this.entityPosX = var4.xCoord;
+						this.entityPosY = var4.yCoord + 1;
+						this.entityPosZ = var4.zCoord;
+
+						if (this.theEntity.getDistanceSq((double)this.entityPosX, this.theEntity.posY, (double)this.entityPosZ) <= 2.25D)
+						{
+							this.field_151504_e = this.func_151503_a(this.entityPosX, this.entityPosY, this.entityPosZ);
+
+							if (this.field_151504_e != null)
+							{
+								return true;
+							}
+						}
+					}
+
+					this.entityPosX = MathHelper.floor_double(this.theEntity.posX);
+					this.entityPosY = MathHelper.floor_double(this.theEntity.posY + 1.0D);
+					this.entityPosZ = MathHelper.floor_double(this.theEntity.posZ);
+					this.field_151504_e = this.func_151503_a(this.entityPosX, this.entityPosY, this.entityPosZ);
+					return this.field_151504_e != null;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+
+///    
+///     <summary> * Returns whether an in-progress EntityAIBase should continue executing </summary>
+///     
+		public override bool continueExecuting()
+		{
+			return !this.hasStoppedDoorInteraction;
+		}
+
+///    
+///     <summary> * Execute a one shot task or start executing a continuous task </summary>
+///     
+		public override void startExecuting()
+		{
+			this.hasStoppedDoorInteraction = false;
+			this.entityPositionX = (float)((double)((float)this.entityPosX + 0.5F) - this.theEntity.posX);
+			this.entityPositionZ = (float)((double)((float)this.entityPosZ + 0.5F) - this.theEntity.posZ);
+		}
+
+///    
+///     <summary> * Updates the task </summary>
+///     
+		public override void updateTask()
+		{
+			float var1 = (float)((double)((float)this.entityPosX + 0.5F) - this.theEntity.posX);
+			float var2 = (float)((double)((float)this.entityPosZ + 0.5F) - this.theEntity.posZ);
+			float var3 = this.entityPositionX * var1 + this.entityPositionZ * var2;
+
+			if (var3 < 0.0F)
+			{
+				this.hasStoppedDoorInteraction = true;
+			}
+		}
+
+		private BlockDoor func_151503_a(int p_151503_1_, int p_151503_2_, int p_151503_3_)
+		{
+			Block var4 = this.theEntity.worldObj.getBlock(p_151503_1_, p_151503_2_, p_151503_3_);
+			return var4 != Blocks.wooden_door ? null : (BlockDoor)var4;
+		}
+	}
+
+}

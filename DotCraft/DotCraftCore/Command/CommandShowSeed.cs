@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
 	using World = DotCraftCore.world.World;

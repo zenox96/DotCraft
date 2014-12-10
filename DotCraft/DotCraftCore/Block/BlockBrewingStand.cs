@@ -6,13 +6,13 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.entity.item.EntityItem;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Items = DotCraftCore.init.Items;
-	using Container = DotCraftCore.inventory.Container;
-	using IInventory = DotCraftCore.inventory.IInventory;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Items = DotCraftCore.Init.Items;
+	using Container = DotCraftCore.Inventory.Container;
+	using IInventory = DotCraftCore.Inventory.IInventory;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;

@@ -4,7 +4,7 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using Item = DotCraftCore.item.Item;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 

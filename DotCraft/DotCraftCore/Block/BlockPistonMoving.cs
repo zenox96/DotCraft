@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Item = DotCraftCore.item.Item;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;
 	using TileEntityPiston = DotCraftCore.tileentity.TileEntityPiston;

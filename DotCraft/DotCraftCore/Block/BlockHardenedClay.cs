@@ -3,7 +3,7 @@ namespace DotCraftCore.Block
 
 	using MapColor = DotCraftCore.Block.material.MapColor;
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 
 	public class BlockHardenedClay : Block
 	{

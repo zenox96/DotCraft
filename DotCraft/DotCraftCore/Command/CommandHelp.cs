@@ -4,8 +4,8 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using ClickEvent = DotCraftCore.event.ClickEvent;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using ClickEvent = DotCraftCore.Event.ClickEvent;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
 	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;

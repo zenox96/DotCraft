@@ -3,7 +3,7 @@
 namespace DotCraftCore.Block
 {
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using EntityFallingBlock = DotCraftCore.Entity.item.EntityFallingBlock;
+	using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using World = DotCraftCore.World.World;
 

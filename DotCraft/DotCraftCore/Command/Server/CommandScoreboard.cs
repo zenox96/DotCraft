@@ -9,7 +9,7 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using IScoreObjectiveCriteria = DotCraftCore.scoreboard.IScoreObjectiveCriteria;
 	using Score = DotCraftCore.scoreboard.Score;
 	using ScoreObjective = DotCraftCore.scoreboard.ScoreObjective;

@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Entity = DotCraftCore.entity.Entity;
-	using Blocks = DotCraftCore.init.Blocks;
+	using Entity = DotCraftCore.Entity.Entity;
+	using Blocks = DotCraftCore.Init.Blocks;
 	using Item = DotCraftCore.item.Item;
 	using ItemMonsterPlacer = DotCraftCore.item.ItemMonsterPlacer;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;

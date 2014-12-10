@@ -1,11 +1,11 @@
 namespace DotCraftCore.Command
 {
 
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityLiving = DotCraftCore.entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using IInventory = DotCraftCore.inventory.IInventory;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityLiving = DotCraftCore.Entity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using IInventory = DotCraftCore.Inventory.IInventory;
 	using ItemStack = DotCraftCore.item.ItemStack;
 
 	public interface IEntitySelector

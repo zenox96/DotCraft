@@ -8,9 +8,9 @@ namespace DotCraftCore.Command
 	using Maps = com.google.common.collect.Maps;
 	using Sets = com.google.common.collect.Sets;
 	using Material = DotCraftCore.block.material.Material;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using Team = DotCraftCore.scoreboard.Team;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;
 	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;

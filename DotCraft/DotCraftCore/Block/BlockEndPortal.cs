@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 	using MapColor = DotCraftCore.Block.material.MapColor;
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.entity.Entity;
+	using Entity = DotCraftCore.Entity.Entity;
 	using Item = DotCraftCore.item.Item;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;
 	using TileEntityEndPortal = DotCraftCore.tileentity.TileEntityEndPortal;

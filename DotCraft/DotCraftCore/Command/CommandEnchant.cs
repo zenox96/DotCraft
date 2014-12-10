@@ -4,8 +4,8 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using Enchantment = DotCraftCore.enchantment.Enchantment;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
+	using Enchantment = DotCraftCore.Enchantment.Enchantment;
+	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
 	using MinecraftServer = DotCraftCore.server.MinecraftServer;

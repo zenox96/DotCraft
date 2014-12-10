@@ -2,7 +2,7 @@ namespace DotCraftCore.Block
 {
 
 	using MapColor = DotCraftCore.Block.material.MapColor;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using IBlockAccess = DotCraftCore.world.IBlockAccess;
 
 	public class BlockCompressedPowered : BlockCompressed

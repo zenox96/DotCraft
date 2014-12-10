@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;
 	using TileEntityDaylightDetector = DotCraftCore.tileentity.TileEntityDaylightDetector;
 	using IIcon = DotCraftCore.util.IIcon;

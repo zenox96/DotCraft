@@ -6,15 +6,15 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.entity.item.EntityItem;
-	using EntityOcelot = DotCraftCore.entity.passive.EntityOcelot;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Container = DotCraftCore.inventory.Container;
-	using IInventory = DotCraftCore.inventory.IInventory;
-	using InventoryLargeChest = DotCraftCore.inventory.InventoryLargeChest;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
+	using EntityOcelot = DotCraftCore.Entity.Passive.EntityOcelot;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Container = DotCraftCore.Inventory.Container;
+	using IInventory = DotCraftCore.Inventory.IInventory;
+	using InventoryLargeChest = DotCraftCore.Inventory.InventoryLargeChest;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using TileEntity = DotCraftCore.tileentity.TileEntity;

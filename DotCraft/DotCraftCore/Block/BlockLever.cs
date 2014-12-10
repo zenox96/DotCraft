@@ -2,9 +2,9 @@ namespace DotCraftCore.Block
 {
 
 	
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using MathHelper = DotCraftCore.util.MathHelper;

@@ -5,10 +5,10 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
+	using Entity = DotCraftCore.Entity.Entity;
+	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Blocks = DotCraftCore.Init.Blocks;
+	using Items = DotCraftCore.Init.Items;
 	using Item = DotCraftCore.item.Item;
 	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
 	using Direction = DotCraftCore.util.Direction;

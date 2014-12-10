@@ -8,9 +8,9 @@ namespace DotCraftCore.Block
     using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
     using Entity = DotCraftCore.Entity.Entity;
     using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-    using EntityItem = DotCraftCore.Entity.item.EntityItem;
-    using EntityXPOrb = DotCraftCore.Entity.item.EntityXPOrb;
-    using EntityPlayer = DotCraftCore.Entity.player.EntityPlayer;
+    using EntityItem = DotCraftCore.Entity.Item.EntityItem;
+    using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
+    using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
     using Item = DotCraftCore.Item.Item;
     using ItemStack = DotCraftCore.Item.ItemStack;
     using StatList = DotCraftCore.Stats.StatList;

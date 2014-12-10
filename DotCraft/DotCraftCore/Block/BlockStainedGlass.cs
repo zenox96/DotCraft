@@ -6,7 +6,7 @@ namespace DotCraftCore.Block
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Item = DotCraftCore.item.Item;
 	using ItemDye = DotCraftCore.item.ItemDye;
 	using ItemStack = DotCraftCore.item.ItemStack;
