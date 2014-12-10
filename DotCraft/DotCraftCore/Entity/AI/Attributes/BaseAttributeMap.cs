@@ -4,7 +4,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 {
 
 	using Multimap = com.google.common.collect.Multimap;
-	using LowerStringMap = DotCraftCore.server.management.LowerStringMap;
+	using LowerStringMap = DotCraftCore.Server.Management.LowerStringMap;
 
 	public abstract class BaseAttributeMap
 	{

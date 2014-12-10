@@ -7,11 +7,11 @@ namespace DotCraftCore.Block
 	
 	using Entity = DotCraftCore.Entity.Entity;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Facing = DotCraftCore.util.Facing;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Facing = DotCraftCore.Util.Facing;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public abstract class BlockSlab : Block
 	{

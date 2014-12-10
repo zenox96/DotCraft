@@ -3,7 +3,7 @@ namespace DotCraftCore.Entity.Monster
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
 	using IAnimals = DotCraftCore.Entity.Passive.IAnimals;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityGolem : EntityCreature, IAnimals
 	{

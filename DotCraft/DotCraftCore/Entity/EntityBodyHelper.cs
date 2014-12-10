@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.Entity
 {
 
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class EntityBodyHelper
 	{

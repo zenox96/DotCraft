@@ -3,7 +3,7 @@ namespace DotCraftCore.Entity.Passive
 
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityAmbientCreature : EntityLiving, IAnimals
 	{

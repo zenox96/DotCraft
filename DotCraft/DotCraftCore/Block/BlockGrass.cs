@@ -7,11 +7,11 @@ namespace DotCraftCore.Block
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using IIcon = DotCraftCore.util.IIcon;
-	using ColorizerGrass = DotCraftCore.world.ColorizerGrass;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using ColorizerGrass = DotCraftCore.World.ColorizerGrass;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

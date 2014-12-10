@@ -4,7 +4,7 @@ namespace DotCraftCore.Entity.AI
 {
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
 
 	public class EntityAIHurtByTarget : EntityAITarget
 	{

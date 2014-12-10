@@ -11,13 +11,13 @@ namespace DotCraftCore.Entity.Item
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Entity = DotCraftCore.Entity.Entity;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTBase = DotCraftCore.nbt.NBTBase;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTBase = DotCraftCore.NBT.NBTBase;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityFallingBlock : Entity
 	{

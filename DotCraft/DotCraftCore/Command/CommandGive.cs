@@ -6,13 +6,13 @@ namespace DotCraftCore.Command
 
 	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using JsonToNBT = DotCraftCore.nbt.JsonToNBT;
-	using NBTBase = DotCraftCore.nbt.NBTBase;
-	using NBTException = DotCraftCore.nbt.NBTException;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
+	using NBTBase = DotCraftCore.NBT.NBTBase;
+	using NBTException = DotCraftCore.NBT.NBTException;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandGive : CommandBase
 	{

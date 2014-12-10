@@ -7,11 +7,11 @@ namespace DotCraftCore.Block
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
-	using WorldProviderEnd = DotCraftCore.world.WorldProviderEnd;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
+	using WorldProviderEnd = DotCraftCore.World.WorldProviderEnd;
 
 	public class BlockFire : Block
 	{

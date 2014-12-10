@@ -7,10 +7,10 @@ namespace DotCraftCore.Entity.Passive
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using IEntityOwnable = DotCraftCore.Entity.IEntityOwnable;
 	using EntityAISit = DotCraftCore.Entity.AI.EntityAISit;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Team = DotCraftCore.scoreboard.Team;
-	using PreYggdrasilConverter = DotCraftCore.server.management.PreYggdrasilConverter;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using Team = DotCraftCore.Scoreboard.Team;
+	using PreYggdrasilConverter = DotCraftCore.Server.Management.PreYggdrasilConverter;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityTameable : EntityAnimal, IEntityOwnable
 	{

@@ -9,11 +9,11 @@ namespace DotCraftCore.Block
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityEnchantmentTable = DotCraftCore.tileentity.TileEntityEnchantmentTable;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityEnchantmentTable = DotCraftCore.TileEntity.TileEntityEnchantmentTable;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockEnchantmentTable : BlockContainer
 	{

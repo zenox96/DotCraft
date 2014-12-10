@@ -5,8 +5,8 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
 
 	public class CommandSetSpawnpoint : CommandBase
 	{

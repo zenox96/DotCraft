@@ -6,9 +6,9 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using EnumSkyBlock = DotCraftCore.world.EnumSkyBlock;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
+	using World = DotCraftCore.World.World;
 
 	public class BlockSnowBlock : Block
 	{

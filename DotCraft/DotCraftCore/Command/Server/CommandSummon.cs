@@ -10,12 +10,12 @@ namespace DotCraftCore.Command.Server
 	using EntityList = DotCraftCore.Entity.EntityList;
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using JsonToNBT = DotCraftCore.nbt.JsonToNBT;
-	using NBTBase = DotCraftCore.nbt.NBTBase;
-	using NBTException = DotCraftCore.nbt.NBTException;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
-	using World = DotCraftCore.world.World;
+	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
+	using NBTBase = DotCraftCore.NBT.NBTBase;
+	using NBTException = DotCraftCore.NBT.NBTException;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using World = DotCraftCore.World.World;
 
 	public class CommandSummon : CommandBase
 	{

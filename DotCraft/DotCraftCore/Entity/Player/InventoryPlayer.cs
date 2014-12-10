@@ -7,12 +7,12 @@ namespace DotCraftCore.Entity.Player
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using Item = DotCraftCore.item.Item;
-	using ItemArmor = DotCraftCore.item.ItemArmor;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using ReportedException = DotCraftCore.util.ReportedException;
+	using Item = DotCraftCore.Item.Item;
+	using ItemArmor = DotCraftCore.Item.ItemArmor;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using ReportedException = DotCraftCore.Util.ReportedException;
 
 	public class InventoryPlayer : IInventory
 	{

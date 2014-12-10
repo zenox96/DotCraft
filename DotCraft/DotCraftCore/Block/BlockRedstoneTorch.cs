@@ -6,9 +6,9 @@ namespace DotCraftCore.Block
 
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockRedstoneTorch : BlockTorch
 	{

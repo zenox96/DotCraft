@@ -10,12 +10,12 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using InventoryEnderChest = DotCraftCore.Inventory.InventoryEnderChest;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityEnderChest = DotCraftCore.tileentity.TileEntityEnderChest;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityEnderChest = DotCraftCore.TileEntity.TileEntityEnderChest;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class BlockEnderChest : BlockContainer
 	{

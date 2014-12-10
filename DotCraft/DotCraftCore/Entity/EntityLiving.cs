@@ -19,20 +19,20 @@ namespace DotCraftCore.Entity
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemArmor = DotCraftCore.item.ItemArmor;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using ItemSword = DotCraftCore.item.ItemSword;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagFloat = DotCraftCore.nbt.NBTTagFloat;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using S1BPacketEntityAttach = DotCraftCore.network.play.server.S1BPacketEntityAttach;
-	using PathNavigate = DotCraftCore.pathfinding.PathNavigate;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using Item = DotCraftCore.Item.Item;
+	using ItemArmor = DotCraftCore.Item.ItemArmor;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using ItemSword = DotCraftCore.Item.ItemSword;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagFloat = DotCraftCore.NBT.NBTTagFloat;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using S1BPacketEntityAttach = DotCraftCore.Network.Play.Server.S1BPacketEntityAttach;
+	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public abstract class EntityLiving : EntityLivingBase
 	{

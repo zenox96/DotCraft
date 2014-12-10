@@ -5,12 +5,12 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
-	using WorldSettings = DotCraftCore.world.WorldSettings;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
+	using WorldSettings = DotCraftCore.World.WorldSettings;
 
 	public class PlayerSelector
 	{

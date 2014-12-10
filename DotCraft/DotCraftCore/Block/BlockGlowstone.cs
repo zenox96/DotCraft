@@ -7,8 +7,8 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using Item = DotCraftCore.Item.Item;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class BlockGlowstone : Block
 	{

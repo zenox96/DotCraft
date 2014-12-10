@@ -11,10 +11,10 @@ namespace DotCraftCore.Block
 	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
 	using Container = DotCraftCore.Inventory.Container;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockRailDetector : BlockRailBase
 	{

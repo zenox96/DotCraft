@@ -10,7 +10,7 @@ namespace DotCraftCore.Command.Server
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandTeleport : CommandBase
 	{

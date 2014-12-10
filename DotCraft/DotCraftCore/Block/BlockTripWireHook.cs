@@ -6,10 +6,10 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Direction = DotCraftCore.util.Direction;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Direction = DotCraftCore.Util.Direction;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockTripWireHook : Block
 	{

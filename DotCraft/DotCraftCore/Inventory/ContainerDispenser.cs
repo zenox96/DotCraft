@@ -4,8 +4,8 @@ namespace DotCraftCore.Inventory
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntityDispenser = DotCraftCore.tileentity.TileEntityDispenser;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
 
 	public class ContainerDispenser : Container
 	{

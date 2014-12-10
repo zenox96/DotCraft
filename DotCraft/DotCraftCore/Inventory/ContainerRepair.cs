@@ -10,8 +10,8 @@ namespace DotCraftCore.Inventory
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using World = DotCraftCore.World.World;
 	using StringUtils = org.apache.commons.lang3.StringUtils;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;

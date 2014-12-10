@@ -17,12 +17,12 @@ namespace DotCraftCore.Entity.Passive
 	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemSeeds = DotCraftCore.item.ItemSeeds;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemSeeds = DotCraftCore.Item.ItemSeeds;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityChicken : EntityAnimal
 	{

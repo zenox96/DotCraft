@@ -5,9 +5,9 @@ namespace DotCraftCore.Enchantment
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using ItemArmor = DotCraftCore.item.ItemArmor;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using DamageSource = DotCraftCore.util.DamageSource;
+	using ItemArmor = DotCraftCore.Item.ItemArmor;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using DamageSource = DotCraftCore.Util.DamageSource;
 
 	public class EnchantmentThorns : Enchantment
 	{

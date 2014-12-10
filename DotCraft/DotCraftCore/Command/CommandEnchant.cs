@@ -6,9 +6,9 @@ namespace DotCraftCore.Command
 
 	using Enchantment = DotCraftCore.Enchantment.Enchantment;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandEnchant : CommandBase
 	{

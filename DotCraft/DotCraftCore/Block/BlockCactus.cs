@@ -8,10 +8,10 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Entity = DotCraftCore.Entity.Entity;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockCactus : Block
 	{

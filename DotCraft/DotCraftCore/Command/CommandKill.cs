@@ -2,8 +2,8 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using DamageSource = DotCraftCore.util.DamageSource;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using DamageSource = DotCraftCore.Util.DamageSource;
 
 	public class CommandKill : CommandBase
 	{

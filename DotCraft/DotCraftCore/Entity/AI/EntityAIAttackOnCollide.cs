@@ -5,9 +5,9 @@ namespace DotCraftCore.Entity.AI
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityAIAttackOnCollide : EntityAIBase
 	{

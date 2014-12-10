@@ -6,9 +6,9 @@ namespace DotCraftCore.Command.Server
 
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
 
 	public class CommandListBans : CommandBase
 	{

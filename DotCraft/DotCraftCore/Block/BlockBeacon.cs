@@ -6,10 +6,10 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityBeacon = DotCraftCore.tileentity.TileEntityBeacon;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityBeacon = DotCraftCore.TileEntity.TileEntityBeacon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockBeacon : BlockContainer
 	{

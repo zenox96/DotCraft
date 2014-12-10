@@ -8,10 +8,10 @@ namespace DotCraftCore.Entity.Monster
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityBlaze : EntityMob
 	{

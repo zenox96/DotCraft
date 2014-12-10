@@ -8,8 +8,8 @@ namespace DotCraftCore.CreativeTab
 	using EnumEnchantmentType = DotCraftCore.Enchantment.EnumEnchantmentType;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public abstract class CreativeTabs
 	{

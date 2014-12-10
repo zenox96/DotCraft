@@ -5,10 +5,10 @@ namespace DotCraftCore.Entity.Item
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityEnderEye : Entity
 	{

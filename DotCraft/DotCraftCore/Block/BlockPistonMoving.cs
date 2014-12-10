@@ -6,13 +6,13 @@ namespace DotCraftCore.Block
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Item = DotCraftCore.item.Item;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityPiston = DotCraftCore.tileentity.TileEntityPiston;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Facing = DotCraftCore.util.Facing;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityPiston = DotCraftCore.TileEntity.TileEntityPiston;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Facing = DotCraftCore.Util.Facing;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockPistonMoving : BlockContainer
 	{

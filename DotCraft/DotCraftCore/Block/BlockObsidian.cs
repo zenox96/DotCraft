@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	using MapColor = DotCraftCore.Block.material.MapColor;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
+	using Item = DotCraftCore.Item.Item;
 
 	public class BlockObsidian : BlockStone
 	{

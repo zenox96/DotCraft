@@ -6,13 +6,13 @@ namespace DotCraftCore.Entity.Projectile
 	using Block = DotCraftCore.block.Block;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using Explosion = DotCraftCore.world.Explosion;
-	using World = DotCraftCore.world.World;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using Explosion = DotCraftCore.World.Explosion;
+	using World = DotCraftCore.World.World;
 
 	public class EntityWitherSkull : EntityFireball
 	{

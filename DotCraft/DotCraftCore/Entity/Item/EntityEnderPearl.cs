@@ -5,9 +5,9 @@ namespace DotCraftCore.Entity.Item
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using EntityThrowable = DotCraftCore.Entity.Projectile.EntityThrowable;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using World = DotCraftCore.world.World;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using World = DotCraftCore.World.World;
 
 	public class EntityEnderPearl : EntityThrowable
 	{

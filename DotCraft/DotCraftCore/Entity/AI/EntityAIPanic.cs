@@ -2,7 +2,7 @@ namespace DotCraftCore.Entity.AI
 {
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class EntityAIPanic : EntityAIBase
 	{

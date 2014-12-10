@@ -10,15 +10,15 @@ namespace DotCraftCore.Command.Server
 	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using IScoreObjectiveCriteria = DotCraftCore.scoreboard.IScoreObjectiveCriteria;
-	using Score = DotCraftCore.scoreboard.Score;
-	using ScoreObjective = DotCraftCore.scoreboard.ScoreObjective;
-	using ScorePlayerTeam = DotCraftCore.scoreboard.ScorePlayerTeam;
-	using Scoreboard = DotCraftCore.scoreboard.Scoreboard;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
+	using IScoreObjectiveCriteria = DotCraftCore.Scoreboard.IScoreObjectiveCriteria;
+	using Score = DotCraftCore.Scoreboard.Score;
+	using ScoreObjective = DotCraftCore.Scoreboard.ScoreObjective;
+	using ScorePlayerTeam = DotCraftCore.Scoreboard.ScorePlayerTeam;
+	using Scoreboard = DotCraftCore.Scoreboard.Scoreboard;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
 
 	public class CommandScoreboard : CommandBase
 	{

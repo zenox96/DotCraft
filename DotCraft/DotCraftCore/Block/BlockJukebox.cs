@@ -7,12 +7,12 @@ namespace DotCraftCore.Block
 	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockJukebox : BlockContainer
 	{

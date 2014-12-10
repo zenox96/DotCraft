@@ -5,10 +5,10 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
 
 	public class CommandEffect : CommandBase
 	{

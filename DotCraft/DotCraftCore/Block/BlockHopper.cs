@@ -13,15 +13,15 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Container = DotCraftCore.Inventory.Container;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityHopper = DotCraftCore.tileentity.TileEntityHopper;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Facing = DotCraftCore.util.Facing;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityHopper = DotCraftCore.TileEntity.TileEntityHopper;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Facing = DotCraftCore.Util.Facing;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockHopper : BlockContainer
 	{

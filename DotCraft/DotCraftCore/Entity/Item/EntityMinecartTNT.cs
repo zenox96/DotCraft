@@ -6,11 +6,11 @@ namespace DotCraftCore.Entity.Item
 	using Block = DotCraftCore.block.Block;
 	using BlockRailBase = DotCraftCore.block.BlockRailBase;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using Explosion = DotCraftCore.world.Explosion;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using Explosion = DotCraftCore.World.Explosion;
+	using World = DotCraftCore.World.World;
 
 	public class EntityMinecartTNT : EntityMinecart
 	{

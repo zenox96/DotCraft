@@ -12,15 +12,15 @@ namespace DotCraftCore.Entity.Monster
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using EntityDamageSource = DotCraftCore.util.EntityDamageSource;
-	using EntityDamageSourceIndirect = DotCraftCore.util.EntityDamageSourceIndirect;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using EntityDamageSource = DotCraftCore.Util.EntityDamageSource;
+	using EntityDamageSourceIndirect = DotCraftCore.Util.EntityDamageSourceIndirect;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
 
 	public class EntityEnderman : EntityMob
 	{

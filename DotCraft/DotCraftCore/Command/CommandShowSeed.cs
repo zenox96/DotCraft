@@ -4,9 +4,9 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using World = DotCraftCore.world.World;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using World = DotCraftCore.World.World;
 
 	public class CommandShowSeed : CommandBase
 	{

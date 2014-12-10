@@ -9,12 +9,12 @@ namespace DotCraftCore.Enchantment
 	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using WeightedRandom = DotCraftCore.util.WeightedRandom;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
 
 	public class EnchantmentHelper
 	{

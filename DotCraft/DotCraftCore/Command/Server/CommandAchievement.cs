@@ -3,11 +3,11 @@ using System.Collections;
 namespace DotCraftCore.Command.Server
 {
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using Achievement = DotCraftCore.stats.Achievement;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using StatBase = DotCraftCore.stats.StatBase;
-	using StatList = DotCraftCore.stats.StatList;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using Achievement = DotCraftCore.Stats.Achievement;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using StatBase = DotCraftCore.Stats.StatBase;
+	using StatList = DotCraftCore.Stats.StatList;
 
 	public class CommandAchievement : CommandBase
 	{

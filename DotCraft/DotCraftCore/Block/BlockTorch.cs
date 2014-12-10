@@ -6,10 +6,10 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
 
 	public class BlockTorch : Block
 	{

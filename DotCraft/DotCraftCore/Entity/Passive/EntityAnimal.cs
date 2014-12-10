@@ -11,13 +11,13 @@ namespace DotCraftCore.Entity.Passive
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using StatList = DotCraftCore.stats.StatList;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using StatList = DotCraftCore.Stats.StatList;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityAnimal : EntityAgeable, IAnimals
 	{

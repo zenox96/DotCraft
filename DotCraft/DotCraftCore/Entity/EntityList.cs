@@ -58,10 +58,10 @@ namespace DotCraftCore.Entity
 	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
 	using EntitySnowball = DotCraftCore.Entity.Projectile.EntitySnowball;
 	using EntityWitherSkull = DotCraftCore.Entity.Projectile.EntityWitherSkull;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using StatBase = DotCraftCore.stats.StatBase;
-	using StatList = DotCraftCore.stats.StatList;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using StatBase = DotCraftCore.Stats.StatBase;
+	using StatList = DotCraftCore.Stats.StatList;
+	using World = DotCraftCore.World.World;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

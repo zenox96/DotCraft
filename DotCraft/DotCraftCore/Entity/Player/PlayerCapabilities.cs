@@ -1,7 +1,7 @@
 namespace DotCraftCore.Entity.Player
 {
 
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
 
 	public class PlayerCapabilities
 	{

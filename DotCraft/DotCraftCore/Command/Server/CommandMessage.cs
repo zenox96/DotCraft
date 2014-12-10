@@ -10,10 +10,10 @@ namespace DotCraftCore.Command.Server
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 
 	public class CommandMessage : CommandBase
 	{

@@ -29,16 +29,16 @@ namespace DotCraftCore.Entity.Passive
 	using AnimalChest = DotCraftCore.Inventory.AnimalChest;
 	using IInvBasic = DotCraftCore.Inventory.IInvBasic;
 	using InventoryBasic = DotCraftCore.Inventory.InventoryBasic;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using Potion = DotCraftCore.potion.Potion;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using StatCollector = DotCraftCore.util.StatCollector;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using Potion = DotCraftCore.Potion.Potion;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using StatCollector = DotCraftCore.Util.StatCollector;
+	using World = DotCraftCore.World.World;
 
 	public class EntityHorse : EntityAnimal, IInvBasic
 	{

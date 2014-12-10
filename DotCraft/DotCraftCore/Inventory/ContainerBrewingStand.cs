@@ -6,9 +6,9 @@ namespace DotCraftCore.Inventory
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using TileEntityBrewingStand = DotCraftCore.tileentity.TileEntityBrewingStand;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using TileEntityBrewingStand = DotCraftCore.TileEntity.TileEntityBrewingStand;
 
 	public class ContainerBrewingStand : Container
 	{

@@ -5,10 +5,10 @@ namespace DotCraftCore.Entity.Monster
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
 
 	public class EntityCaveSpider : EntitySpider
 	{

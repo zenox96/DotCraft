@@ -6,9 +6,9 @@ namespace DotCraftCore.Inventory
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public abstract class Container
 	{

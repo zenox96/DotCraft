@@ -10,9 +10,9 @@ namespace DotCraftCore.Block
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public abstract class BlockButton : Block
 	{

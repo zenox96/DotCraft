@@ -16,15 +16,15 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Container = DotCraftCore.Inventory.Container;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityDispenser = DotCraftCore.tileentity.TileEntityDispenser;
-	using EnumFacing = DotCraftCore.util.EnumFacing;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IRegistry = DotCraftCore.util.IRegistry;
-	using RegistryDefaulted = DotCraftCore.util.RegistryDefaulted;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
+	using EnumFacing = DotCraftCore.Util.EnumFacing;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IRegistry = DotCraftCore.Util.IRegistry;
+	using RegistryDefaulted = DotCraftCore.Util.RegistryDefaulted;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDispenser : BlockContainer
 	{

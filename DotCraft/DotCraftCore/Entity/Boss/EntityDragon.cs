@@ -17,12 +17,12 @@ namespace DotCraftCore.Entity.Boss
 	using IMob = DotCraftCore.Entity.Monster.IMob;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using Explosion = DotCraftCore.world.Explosion;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using Explosion = DotCraftCore.World.Explosion;
+	using World = DotCraftCore.World.World;
 
 	public class EntityDragon : EntityLiving, IBossDisplayData, IEntityMultiPart, IMob
 	{

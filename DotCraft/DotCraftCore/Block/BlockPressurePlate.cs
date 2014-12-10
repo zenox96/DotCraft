@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public class BlockPressurePlate : BlockBasePressurePlate
 	{

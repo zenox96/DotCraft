@@ -8,14 +8,14 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using StatList = DotCraftCore.stats.StatList;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Direction = DotCraftCore.util.Direction;
-	using ColorizerFoliage = DotCraftCore.world.ColorizerFoliage;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using StatList = DotCraftCore.Stats.StatList;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Direction = DotCraftCore.Util.Direction;
+	using ColorizerFoliage = DotCraftCore.World.ColorizerFoliage;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockVine : Block
 	{

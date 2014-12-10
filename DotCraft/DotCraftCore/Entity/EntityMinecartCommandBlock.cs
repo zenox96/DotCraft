@@ -9,11 +9,11 @@ namespace DotCraftCore.Entity
 	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityMinecartCommandBlock : EntityMinecart
 	{

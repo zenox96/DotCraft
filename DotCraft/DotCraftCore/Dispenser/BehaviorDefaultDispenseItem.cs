@@ -3,9 +3,9 @@ namespace DotCraftCore.Dispenser
 
 	using BlockDispenser = DotCraftCore.block.BlockDispenser;
 	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using EnumFacing = DotCraftCore.util.EnumFacing;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using EnumFacing = DotCraftCore.Util.EnumFacing;
+	using World = DotCraftCore.World.World;
 
 	public class BehaviorDefaultDispenseItem : IBehaviorDispenseItem
 	{

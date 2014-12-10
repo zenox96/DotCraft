@@ -4,9 +4,9 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using WorldServer = DotCraftCore.world.WorldServer;
-	using WorldInfo = DotCraftCore.world.storage.WorldInfo;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using WorldServer = DotCraftCore.World.WorldServer;
+	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
 
 	public class CommandWeather : CommandBase
 	{

@@ -7,15 +7,15 @@ namespace DotCraftCore.Entity.Monster
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
-	using WorldType = DotCraftCore.world.WorldType;
-	using BiomeGenBase = DotCraftCore.world.biome.BiomeGenBase;
-	using Chunk = DotCraftCore.world.chunk.Chunk;
+	using Item = DotCraftCore.Item.Item;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
+	using WorldType = DotCraftCore.World.WorldType;
+	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using Chunk = DotCraftCore.World.Chunk.Chunk;
 
 	public class EntitySlime : EntityLiving, IMob
 	{

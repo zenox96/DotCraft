@@ -9,12 +9,12 @@ namespace DotCraftCore.Entity.Monster
 	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
 
 	public class EntitySpider : EntityMob
 	{

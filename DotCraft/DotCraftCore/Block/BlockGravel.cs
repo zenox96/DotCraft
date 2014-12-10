@@ -4,7 +4,7 @@ namespace DotCraftCore.Block
 {
 
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
+	using Item = DotCraftCore.Item.Item;
 
 	public class BlockGravel : BlockFalling
 	{

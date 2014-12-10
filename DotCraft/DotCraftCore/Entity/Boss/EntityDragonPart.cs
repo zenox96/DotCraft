@@ -3,8 +3,8 @@ namespace DotCraftCore.Entity.Boss
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using IEntityMultiPart = DotCraftCore.Entity.IEntityMultiPart;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
 
 	public class EntityDragonPart : Entity
 	{

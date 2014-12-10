@@ -4,7 +4,7 @@ namespace DotCraftCore.Inventory
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class ContainerChest : Container
 	{

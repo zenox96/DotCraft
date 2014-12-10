@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	
 	using Blocks = DotCraftCore.Init.Blocks;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDynamicLiquid : BlockLiquid
 	{

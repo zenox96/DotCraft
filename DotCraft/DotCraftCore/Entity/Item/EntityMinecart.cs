@@ -15,15 +15,15 @@ namespace DotCraftCore.Entity.Item
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public abstract class EntityMinecart : Entity
 	{

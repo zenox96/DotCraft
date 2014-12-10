@@ -8,8 +8,8 @@ namespace DotCraftCore.Entity
 	using IAttribute = DotCraftCore.Entity.AI.Attributes.IAttribute;
 	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
 	using RangedAttribute = DotCraftCore.Entity.AI.Attributes.RangedAttribute;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

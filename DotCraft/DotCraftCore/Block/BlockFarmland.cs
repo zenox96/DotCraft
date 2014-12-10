@@ -8,10 +8,10 @@ namespace DotCraftCore.Block
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockFarmland : Block
 	{

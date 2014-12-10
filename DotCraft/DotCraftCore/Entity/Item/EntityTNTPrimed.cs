@@ -5,8 +5,8 @@ namespace DotCraftCore.Entity.Item
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using World = DotCraftCore.World.World;
 
 	public class EntityTNTPrimed : Entity
 	{

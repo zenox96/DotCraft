@@ -26,13 +26,13 @@ namespace DotCraftCore.Entity.Boss
 	using EntityWitherSkull = DotCraftCore.Entity.Projectile.EntityWitherSkull;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
 
 	public class EntityWither : EntityMob, IBossDisplayData, IRangedAttackMob
 	{

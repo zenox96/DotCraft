@@ -2,9 +2,9 @@ namespace DotCraftCore.Entity
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using MerchantRecipe = DotCraftCore.village.MerchantRecipe;
-	using MerchantRecipeList = DotCraftCore.village.MerchantRecipeList;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using MerchantRecipe = DotCraftCore.Village.MerchantRecipe;
+	using MerchantRecipeList = DotCraftCore.Village.MerchantRecipeList;
 
 	public interface IMerchant
 	{

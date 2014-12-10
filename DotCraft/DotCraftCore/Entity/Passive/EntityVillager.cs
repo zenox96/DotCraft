@@ -34,19 +34,19 @@ namespace DotCraftCore.Entity.Passive
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Tuple = DotCraftCore.util.Tuple;
-	using MerchantRecipe = DotCraftCore.village.MerchantRecipe;
-	using MerchantRecipeList = DotCraftCore.village.MerchantRecipeList;
-	using Village = DotCraftCore.village.Village;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Tuple = DotCraftCore.Util.Tuple;
+	using MerchantRecipe = DotCraftCore.Village.MerchantRecipe;
+	using MerchantRecipeList = DotCraftCore.Village.MerchantRecipeList;
+	using Village = DotCraftCore.Village.Village;
+	using World = DotCraftCore.World.World;
 
 	public class EntityVillager : EntityAgeable, IMerchant, INpc
 	{

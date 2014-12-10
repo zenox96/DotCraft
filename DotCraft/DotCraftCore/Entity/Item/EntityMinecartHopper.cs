@@ -7,12 +7,12 @@ namespace DotCraftCore.Entity.Item
 	using IEntitySelector = DotCraftCore.command.IEntitySelector;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using IHopper = DotCraftCore.tileentity.IHopper;
-	using TileEntityHopper = DotCraftCore.tileentity.TileEntityHopper;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using IHopper = DotCraftCore.TileEntity.IHopper;
+	using TileEntityHopper = DotCraftCore.TileEntity.TileEntityHopper;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using World = DotCraftCore.World.World;
 
 	public class EntityMinecartHopper : EntityMinecartContainer, IHopper
 	{

@@ -6,10 +6,10 @@ namespace DotCraftCore.Command
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using ClickEvent = DotCraftCore.Event.ClickEvent;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class CommandHelp : CommandBase
 	{

@@ -9,11 +9,11 @@ namespace DotCraftCore.Entity
 	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
 	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityCreature : EntityLiving
 	{

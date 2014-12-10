@@ -5,7 +5,7 @@ namespace DotCraftCore.Entity.AI
 
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class EntityMoveHelper
 	{

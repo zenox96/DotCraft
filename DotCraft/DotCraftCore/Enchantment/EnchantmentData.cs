@@ -1,7 +1,7 @@
 namespace DotCraftCore.Enchantment
 {
 
-	using WeightedRandom = DotCraftCore.util.WeightedRandom;
+	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
 
 	public class EnchantmentData : WeightedRandom.Item
 	{

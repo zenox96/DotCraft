@@ -3,9 +3,9 @@ namespace DotCraftCore.Entity.Projectile
 
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using World = DotCraftCore.world.World;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using World = DotCraftCore.World.World;
 
 	public class EntitySmallFireball : EntityFireball
 	{

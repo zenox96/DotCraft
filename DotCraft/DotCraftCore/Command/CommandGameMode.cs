@@ -4,9 +4,9 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using WorldSettings = DotCraftCore.world.WorldSettings;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using WorldSettings = DotCraftCore.World.WorldSettings;
 
 	public class CommandGameMode : CommandBase
 	{

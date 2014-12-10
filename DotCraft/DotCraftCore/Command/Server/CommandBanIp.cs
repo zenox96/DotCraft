@@ -9,9 +9,9 @@ namespace DotCraftCore.Command.Server
 	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using IPBanEntry = DotCraftCore.server.management.IPBanEntry;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using IPBanEntry = DotCraftCore.Server.Management.IPBanEntry;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 
 	public class CommandBanIp : CommandBase
 	{

@@ -9,10 +9,10 @@ namespace DotCraftCore.Block
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemLead = DotCraftCore.item.ItemLead;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemLead = DotCraftCore.Item.ItemLead;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockFence : Block
 	{

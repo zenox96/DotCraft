@@ -4,7 +4,7 @@ namespace DotCraftCore.Entity.AI
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using IRangedAttackMob = DotCraftCore.Entity.IRangedAttackMob;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class EntityAIArrowAttack : EntityAIBase
 	{

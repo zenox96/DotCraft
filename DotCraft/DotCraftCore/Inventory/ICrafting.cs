@@ -3,7 +3,7 @@ using System.Collections;
 namespace DotCraftCore.Inventory
 {
 
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public interface ICrafting
 	{

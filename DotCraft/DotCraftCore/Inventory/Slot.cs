@@ -4,8 +4,8 @@ namespace DotCraftCore.Inventory
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using IIcon = DotCraftCore.util.IIcon;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using IIcon = DotCraftCore.Util.IIcon;
 
 	public class Slot
 	{

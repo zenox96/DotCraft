@@ -6,10 +6,10 @@ namespace DotCraftCore.Entity
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using PacketBuffer = DotCraftCore.network.PacketBuffer;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using ReportedException = DotCraftCore.util.ReportedException;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using ReportedException = DotCraftCore.Util.ReportedException;
 	using ObjectUtils = org.apache.commons.lang3.ObjectUtils;
 
 	public class DataWatcher

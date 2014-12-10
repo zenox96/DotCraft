@@ -6,7 +6,7 @@ namespace DotCraftCore.Command.Server
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
 
 	public class CommandSetDefaultSpawnpoint : CommandBase
 	{

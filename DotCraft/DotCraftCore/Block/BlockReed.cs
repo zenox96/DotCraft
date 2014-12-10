@@ -6,10 +6,10 @@ namespace DotCraftCore.Block
 	
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockReed : Block
 	{

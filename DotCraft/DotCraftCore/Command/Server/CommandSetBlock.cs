@@ -8,13 +8,13 @@ namespace DotCraftCore.Command.Server
 	using CommandException = DotCraftCore.Command.CommandException;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using JsonToNBT = DotCraftCore.nbt.JsonToNBT;
-	using NBTBase = DotCraftCore.nbt.NBTBase;
-	using NBTException = DotCraftCore.nbt.NBTException;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
+	using NBTBase = DotCraftCore.NBT.NBTBase;
+	using NBTException = DotCraftCore.NBT.NBTException;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class CommandSetBlock : CommandBase
 	{

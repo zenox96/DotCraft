@@ -8,9 +8,9 @@ namespace DotCraftCore.Entity.AI
 	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using PathPoint = DotCraftCore.pathfinding.PathPoint;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using PathPoint = DotCraftCore.Pathfinding.PathPoint;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 	using StringUtils = org.apache.commons.lang3.StringUtils;
 
 	public abstract class EntityAITarget : EntityAIBase

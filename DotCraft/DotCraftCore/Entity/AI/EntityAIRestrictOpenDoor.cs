@@ -2,9 +2,9 @@ namespace DotCraftCore.Entity.AI
 {
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Village = DotCraftCore.village.Village;
-	using VillageDoorInfo = DotCraftCore.village.VillageDoorInfo;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Village = DotCraftCore.Village.Village;
+	using VillageDoorInfo = DotCraftCore.Village.VillageDoorInfo;
 
 	public class EntityAIRestrictOpenDoor : EntityAIBase
 	{

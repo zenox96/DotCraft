@@ -6,11 +6,11 @@ namespace DotCraftCore.Entity
 
 	using Material = DotCraftCore.block.material.Material;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using Direction = DotCraftCore.util.Direction;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using Direction = DotCraftCore.Util.Direction;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityHanging : Entity
 	{

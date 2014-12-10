@@ -25,16 +25,16 @@ namespace DotCraftCore.Init
 	using EntityPotion = DotCraftCore.Entity.Projectile.EntityPotion;
 	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
 	using EntitySnowball = DotCraftCore.Entity.Projectile.EntitySnowball;
-	using Item = DotCraftCore.item.Item;
-	using ItemBucket = DotCraftCore.item.ItemBucket;
-	using ItemDye = DotCraftCore.item.ItemDye;
-	using ItemMonsterPlacer = DotCraftCore.item.ItemMonsterPlacer;
-	using ItemPotion = DotCraftCore.item.ItemPotion;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using StatList = DotCraftCore.stats.StatList;
-	using TileEntityDispenser = DotCraftCore.tileentity.TileEntityDispenser;
-	using EnumFacing = DotCraftCore.util.EnumFacing;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemBucket = DotCraftCore.Item.ItemBucket;
+	using ItemDye = DotCraftCore.Item.ItemDye;
+	using ItemMonsterPlacer = DotCraftCore.Item.ItemMonsterPlacer;
+	using ItemPotion = DotCraftCore.Item.ItemPotion;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using StatList = DotCraftCore.Stats.StatList;
+	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
+	using EnumFacing = DotCraftCore.Util.EnumFacing;
+	using World = DotCraftCore.World.World;
 
 	public class Bootstrap
 	{

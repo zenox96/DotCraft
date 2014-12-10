@@ -27,14 +27,14 @@ namespace DotCraftCore.Entity.Passive
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemFood = DotCraftCore.item.ItemFood;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemFood = DotCraftCore.Item.ItemFood;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntityWolf : EntityTameable
 	{

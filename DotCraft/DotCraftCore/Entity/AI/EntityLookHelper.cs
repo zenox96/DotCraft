@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.AI
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class EntityLookHelper
 	{

@@ -9,9 +9,9 @@ namespace DotCraftCore.Entity.AI
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
 	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using PathEntity = DotCraftCore.pathfinding.PathEntity;
-	using PathNavigate = DotCraftCore.pathfinding.PathNavigate;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
+	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class EntityAIAvoidEntity : EntityAIBase
 	{

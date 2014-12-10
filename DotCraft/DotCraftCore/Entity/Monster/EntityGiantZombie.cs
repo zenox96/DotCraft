@@ -2,7 +2,7 @@ namespace DotCraftCore.Entity.Monster
 {
 
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public class EntityGiantZombie : EntityMob
 	{

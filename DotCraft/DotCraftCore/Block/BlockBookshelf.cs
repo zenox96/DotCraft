@@ -7,8 +7,8 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using IIcon = DotCraftCore.util.IIcon;
+	using Item = DotCraftCore.Item.Item;
+	using IIcon = DotCraftCore.Util.IIcon;
 
 	public class BlockBookshelf : Block
 	{

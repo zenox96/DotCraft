@@ -3,9 +3,9 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
 
 	public class CommandDifficulty : CommandBase
 	{

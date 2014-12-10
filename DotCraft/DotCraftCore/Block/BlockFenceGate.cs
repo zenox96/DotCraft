@@ -7,12 +7,12 @@ namespace DotCraftCore.Block
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockFenceGate : BlockDirectional
 	{

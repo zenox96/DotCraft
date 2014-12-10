@@ -4,7 +4,7 @@ namespace DotCraftCore.Entity.AI
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityHorse = DotCraftCore.Entity.Passive.EntityHorse;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class EntityAIRunAroundLikeCrazy : EntityAIBase
 	{

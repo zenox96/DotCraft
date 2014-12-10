@@ -14,15 +14,15 @@ namespace DotCraftCore.Entity.Projectile
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using S2BPacketChangeGameState = DotCraftCore.network.play.server.S2BPacketChangeGameState;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using S2BPacketChangeGameState = DotCraftCore.Network.Play.Server.S2BPacketChangeGameState;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
 
 	public class EntityArrow : Entity, IProjectile
 	{

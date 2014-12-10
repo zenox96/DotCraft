@@ -5,9 +5,9 @@ namespace DotCraftCore.Inventory
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using FurnaceRecipes = DotCraftCore.item.crafting.FurnaceRecipes;
-	using TileEntityFurnace = DotCraftCore.tileentity.TileEntityFurnace;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using FurnaceRecipes = DotCraftCore.Item.Crafting.FurnaceRecipes;
+	using TileEntityFurnace = DotCraftCore.TileEntity.TileEntityFurnace;
 
 	public class ContainerFurnace : Container
 	{

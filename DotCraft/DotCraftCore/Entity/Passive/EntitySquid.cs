@@ -6,10 +6,10 @@ namespace DotCraftCore.Entity.Passive
 	using Material = DotCraftCore.block.material.Material;
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntitySquid : EntityWaterMob
 	{

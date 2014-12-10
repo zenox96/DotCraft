@@ -27,16 +27,16 @@ namespace DotCraftCore.Entity.Monster
 	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
-	using WorldProviderHell = DotCraftCore.world.WorldProviderHell;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
+	using WorldProviderHell = DotCraftCore.World.WorldProviderHell;
 
 	public class EntitySkeleton : EntityMob, IRangedAttackMob
 	{

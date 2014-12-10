@@ -5,7 +5,7 @@ namespace DotCraftCore.Inventory
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class ContainerHopper : Container
 	{

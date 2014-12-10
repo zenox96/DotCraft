@@ -6,8 +6,8 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockWorkbench : Block
 	{

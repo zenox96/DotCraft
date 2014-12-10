@@ -30,11 +30,11 @@ namespace DotCraftCore.Entity
 	using EntityPotion = DotCraftCore.Entity.Projectile.EntityPotion;
 	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
 	using EntitySnowball = DotCraftCore.Entity.Projectile.EntitySnowball;
-	using Packet = DotCraftCore.network.Packet;
-	using IntHashMap = DotCraftCore.util.IntHashMap;
-	using ReportedException = DotCraftCore.util.ReportedException;
-	using WorldServer = DotCraftCore.world.WorldServer;
-	using Chunk = DotCraftCore.world.chunk.Chunk;
+	using Packet = DotCraftCore.Network.Packet;
+	using IntHashMap = DotCraftCore.Util.IntHashMap;
+	using ReportedException = DotCraftCore.Util.ReportedException;
+	using WorldServer = DotCraftCore.World.WorldServer;
+	using Chunk = DotCraftCore.World.Chunk.Chunk;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

@@ -5,8 +5,8 @@ namespace DotCraftCore.Entity.AI
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class EntityAITempt : EntityAIBase
 	{

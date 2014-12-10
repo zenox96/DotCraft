@@ -19,11 +19,11 @@ namespace DotCraftCore.Entity.Passive
 	using EntityPigZombie = DotCraftCore.Entity.Monster.EntityPigZombie;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using World = DotCraftCore.World.World;
 
 	public class EntityPig : EntityAnimal
 	{

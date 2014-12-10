@@ -5,12 +5,12 @@ using System.Text;
 namespace DotCraftCore.Command
 {
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Item = DotCraftCore.item.Item;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using Item = DotCraftCore.Item.Item;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 
 	public abstract class CommandBase : ICommand
 	{

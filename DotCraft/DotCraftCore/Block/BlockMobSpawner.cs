@@ -4,10 +4,10 @@ namespace DotCraftCore.Block
 {
 
 	
-	using Item = DotCraftCore.item.Item;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityMobSpawner = DotCraftCore.tileentity.TileEntityMobSpawner;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityMobSpawner = DotCraftCore.TileEntity.TileEntityMobSpawner;
+	using World = DotCraftCore.World.World;
 
 	public class BlockMobSpawner : BlockContainer
 	{

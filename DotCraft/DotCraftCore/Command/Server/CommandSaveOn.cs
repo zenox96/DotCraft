@@ -4,8 +4,8 @@ namespace DotCraftCore.Command.Server
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using CommandException = DotCraftCore.Command.CommandException;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public class CommandSaveOn : CommandBase
 	{

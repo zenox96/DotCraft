@@ -2,8 +2,8 @@ namespace DotCraftCore.Entity
 {
 
 	using EntityDragonPart = DotCraftCore.Entity.Boss.EntityDragonPart;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using World = DotCraftCore.world.World;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using World = DotCraftCore.World.World;
 
 	public interface IEntityMultiPart
 	{

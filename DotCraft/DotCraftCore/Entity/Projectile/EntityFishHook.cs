@@ -13,19 +13,19 @@ namespace DotCraftCore.Entity.Projectile
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using ItemFishFood = DotCraftCore.item.ItemFishFood;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using StatList = DotCraftCore.stats.StatList;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using WeightedRandom = DotCraftCore.util.WeightedRandom;
-	using WeightedRandomFishable = DotCraftCore.util.WeightedRandomFishable;
-	using World = DotCraftCore.world.World;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using ItemFishFood = DotCraftCore.Item.ItemFishFood;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using StatList = DotCraftCore.Stats.StatList;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
+	using WeightedRandomFishable = DotCraftCore.Util.WeightedRandomFishable;
+	using World = DotCraftCore.World.World;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public class EntityFishHook : Entity
 	{

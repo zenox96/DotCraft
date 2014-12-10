@@ -2,7 +2,7 @@ namespace DotCraftCore.Event
 {
 
 	using Maps = com.google.common.collect.Maps;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 
 	public class HoverEvent
 	{

@@ -10,8 +10,8 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using UserListBansEntry = DotCraftCore.server.management.UserListBansEntry;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using UserListBansEntry = DotCraftCore.Server.Management.UserListBansEntry;
 
 	public class CommandBanPlayer : CommandBase
 	{

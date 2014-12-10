@@ -9,12 +9,12 @@ namespace DotCraftCore.Block
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class BlockEndPortalFrame : Block
 	{

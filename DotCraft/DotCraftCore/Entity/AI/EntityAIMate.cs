@@ -9,9 +9,9 @@ namespace DotCraftCore.Entity.AI
 	using EntityAnimal = DotCraftCore.Entity.Passive.EntityAnimal;
 	using EntityCow = DotCraftCore.Entity.Passive.EntityCow;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using StatList = DotCraftCore.stats.StatList;
-	using World = DotCraftCore.world.World;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using StatList = DotCraftCore.Stats.StatList;
+	using World = DotCraftCore.World.World;
 
 	public class EntityAIMate : EntityAIBase
 	{

@@ -15,14 +15,14 @@ namespace DotCraftCore.Block
 	using Container = DotCraftCore.Inventory.Container;
 	using IInventory = DotCraftCore.Inventory.IInventory;
 	using InventoryLargeChest = DotCraftCore.Inventory.InventoryLargeChest;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityChest = DotCraftCore.tileentity.TileEntityChest;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockChest : BlockContainer
 	{

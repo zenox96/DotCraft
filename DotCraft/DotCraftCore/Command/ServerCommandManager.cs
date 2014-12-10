@@ -33,10 +33,10 @@ namespace DotCraftCore.Command
 	using CommandTestForBlock = DotCraftCore.Command.Server.CommandTestForBlock;
 	using CommandWhitelist = DotCraftCore.Command.Server.CommandWhitelist;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using RConConsoleSource = DotCraftCore.network.rcon.RConConsoleSource;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.util.EnumChatFormatting;
+	using RConConsoleSource = DotCraftCore.Network.Rcon.RConConsoleSource;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
 
 	public class ServerCommandManager : CommandHandler, IAdminCommand
 	{

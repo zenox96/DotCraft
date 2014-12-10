@@ -4,7 +4,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 {
 
 	using Sets = com.google.common.collect.Sets;
-	using LowerStringMap = DotCraftCore.server.management.LowerStringMap;
+	using LowerStringMap = DotCraftCore.Server.Management.LowerStringMap;
 
 	public class ServersideAttributeMap : BaseAttributeMap
 	{

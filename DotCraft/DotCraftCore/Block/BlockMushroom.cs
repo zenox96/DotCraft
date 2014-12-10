@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 {
 
 	using Blocks = DotCraftCore.Init.Blocks;
-	using World = DotCraftCore.world.World;
-	using WorldGenBigMushroom = DotCraftCore.world.gen.feature.WorldGenBigMushroom;
+	using World = DotCraftCore.World.World;
+	using WorldGenBigMushroom = DotCraftCore.World.Gen.Feature.WorldGenBigMushroom;
 
 	public class BlockMushroom : BlockBush, IGrowable
 	{

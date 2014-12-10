@@ -6,9 +6,9 @@ namespace DotCraftCore.Enchantment
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using StatCollector = DotCraftCore.util.StatCollector;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using StatCollector = DotCraftCore.Util.StatCollector;
 
 	public abstract class Enchantment
 	{

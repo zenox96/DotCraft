@@ -8,7 +8,7 @@ namespace DotCraftCore.Command.Server
 	using CommandException = DotCraftCore.Command.CommandException;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandOp : CommandBase
 	{

@@ -10,12 +10,12 @@ namespace DotCraftCore.Entity.Projectile
 	using IProjectile = DotCraftCore.Entity.IProjectile;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityThrowable : Entity, IProjectile
 	{

@@ -13,13 +13,13 @@ namespace DotCraftCore.Block
 	using Items = DotCraftCore.Init.Items;
 	using Container = DotCraftCore.Inventory.Container;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityBrewingStand = DotCraftCore.tileentity.TileEntityBrewingStand;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityBrewingStand = DotCraftCore.TileEntity.TileEntityBrewingStand;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockBrewingStand : BlockContainer
 	{

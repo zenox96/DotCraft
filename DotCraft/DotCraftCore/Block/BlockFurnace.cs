@@ -11,14 +11,14 @@ namespace DotCraftCore.Block
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Container = DotCraftCore.Inventory.Container;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityFurnace = DotCraftCore.tileentity.TileEntityFurnace;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityFurnace = DotCraftCore.TileEntity.TileEntityFurnace;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class BlockFurnace : BlockContainer
 	{

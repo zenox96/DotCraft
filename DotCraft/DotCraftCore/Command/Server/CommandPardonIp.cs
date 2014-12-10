@@ -7,7 +7,7 @@ namespace DotCraftCore.Command.Server
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandPardonIp : CommandBase
 	{

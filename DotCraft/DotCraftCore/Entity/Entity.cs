@@ -14,26 +14,26 @@ namespace DotCraftCore.Entity
 	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagDouble = DotCraftCore.nbt.NBTTagDouble;
-	using NBTTagFloat = DotCraftCore.nbt.NBTTagFloat;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using Direction = DotCraftCore.util.Direction;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using ReportedException = DotCraftCore.util.ReportedException;
-	using StatCollector = DotCraftCore.util.StatCollector;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using Explosion = DotCraftCore.world.Explosion;
-	using World = DotCraftCore.world.World;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagDouble = DotCraftCore.NBT.NBTTagDouble;
+	using NBTTagFloat = DotCraftCore.NBT.NBTTagFloat;
+	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using Direction = DotCraftCore.Util.Direction;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using ReportedException = DotCraftCore.Util.ReportedException;
+	using StatCollector = DotCraftCore.Util.StatCollector;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using Explosion = DotCraftCore.World.Explosion;
+	using World = DotCraftCore.World.World;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public abstract class Entity
 	{

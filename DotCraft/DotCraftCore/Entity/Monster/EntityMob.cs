@@ -9,11 +9,11 @@ namespace DotCraftCore.Entity.Monster
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using EnumSkyBlock = DotCraftCore.world.EnumSkyBlock;
-	using World = DotCraftCore.world.World;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityMob : EntityCreature, IMob
 	{

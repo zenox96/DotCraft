@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.Block
 {
 
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public interface IGrowable
 	{

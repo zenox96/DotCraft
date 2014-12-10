@@ -11,11 +11,11 @@ namespace DotCraftCore.Command
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Team = DotCraftCore.scoreboard.Team;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Team = DotCraftCore.Scoreboard.Team;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class CommandSpreadPlayers : CommandBase
 	{

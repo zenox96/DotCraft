@@ -8,13 +8,13 @@ namespace DotCraftCore.Block
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDoor : Block
 	{

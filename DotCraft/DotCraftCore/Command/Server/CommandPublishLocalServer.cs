@@ -3,8 +3,8 @@ namespace DotCraftCore.Command.Server
 
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using WorldSettings = DotCraftCore.world.WorldSettings;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using WorldSettings = DotCraftCore.World.WorldSettings;
 
 	public class CommandPublishLocalServer : CommandBase
 	{

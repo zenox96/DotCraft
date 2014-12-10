@@ -22,12 +22,12 @@ namespace DotCraftCore.Entity.Passive
 	using Items = DotCraftCore.Init.Items;
 	using Container = DotCraftCore.Inventory.Container;
 	using InventoryCrafting = DotCraftCore.Inventory.InventoryCrafting;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using CraftingManager = DotCraftCore.item.crafting.CraftingManager;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using CraftingManager = DotCraftCore.Item.Crafting.CraftingManager;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class EntitySheep : EntityAnimal
 	{

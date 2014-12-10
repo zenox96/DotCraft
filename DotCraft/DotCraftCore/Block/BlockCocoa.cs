@@ -6,14 +6,14 @@ namespace DotCraftCore.Block
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Direction = DotCraftCore.util.Direction;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Direction = DotCraftCore.Util.Direction;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockCocoa : BlockDirectional, IGrowable
 	{

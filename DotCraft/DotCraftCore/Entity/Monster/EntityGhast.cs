@@ -9,15 +9,15 @@ namespace DotCraftCore.Entity.Monster
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityLargeFireball = DotCraftCore.Entity.Projectile.EntityLargeFireball;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
 
 	public class EntityGhast : EntityFlying, IMob
 	{

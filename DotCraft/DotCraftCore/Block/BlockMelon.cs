@@ -7,8 +7,8 @@ namespace DotCraftCore.Block
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using IIcon = DotCraftCore.util.IIcon;
+	using Item = DotCraftCore.Item.Item;
+	using IIcon = DotCraftCore.Util.IIcon;
 
 	public class BlockMelon : Block
 	{

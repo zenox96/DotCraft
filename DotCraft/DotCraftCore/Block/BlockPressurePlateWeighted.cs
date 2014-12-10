@@ -5,8 +5,8 @@ namespace DotCraftCore.Block
 
 	
 	using Entity = DotCraftCore.Entity.Entity;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class BlockPressurePlateWeighted : BlockBasePressurePlate
 	{

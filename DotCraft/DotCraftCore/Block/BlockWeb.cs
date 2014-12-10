@@ -7,9 +7,9 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Entity = DotCraftCore.Entity.Entity;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using World = DotCraftCore.World.World;
 
 	public class BlockWeb : Block
 	{

@@ -4,8 +4,8 @@ using System.Collections;
 namespace DotCraftCore.Command
 {
 
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using WorldServer = DotCraftCore.world.WorldServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using WorldServer = DotCraftCore.World.WorldServer;
 
 	public class CommandTime : CommandBase
 	{

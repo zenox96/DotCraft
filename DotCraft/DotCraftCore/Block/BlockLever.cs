@@ -5,11 +5,11 @@ namespace DotCraftCore.Block
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockLever : Block
 	{

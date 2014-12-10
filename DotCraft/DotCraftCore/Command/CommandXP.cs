@@ -5,7 +5,7 @@ namespace DotCraftCore.Command
 {
 
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 
 	public class CommandXP : CommandBase
 	{

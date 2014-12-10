@@ -4,8 +4,8 @@ namespace DotCraftCore.Entity.AI
 {
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class RandomPositionGenerator
 	{

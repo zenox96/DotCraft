@@ -5,13 +5,13 @@ namespace DotCraftCore.Block
 	using BehaviorDefaultDispenseItem = DotCraftCore.Dispenser.BehaviorDefaultDispenseItem;
 	using IBehaviorDispenseItem = DotCraftCore.Dispenser.IBehaviorDispenseItem;
 	using IInventory = DotCraftCore.Inventory.IInventory;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityDispenser = DotCraftCore.tileentity.TileEntityDispenser;
-	using TileEntityDropper = DotCraftCore.tileentity.TileEntityDropper;
-	using TileEntityHopper = DotCraftCore.tileentity.TileEntityHopper;
-	using Facing = DotCraftCore.util.Facing;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
+	using TileEntityDropper = DotCraftCore.TileEntity.TileEntityDropper;
+	using TileEntityHopper = DotCraftCore.TileEntity.TileEntityHopper;
+	using Facing = DotCraftCore.Util.Facing;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDropper : BlockDispenser
 	{

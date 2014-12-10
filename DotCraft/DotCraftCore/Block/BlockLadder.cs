@@ -5,9 +5,9 @@ namespace DotCraftCore.Block
 
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockLadder : Block
 	{

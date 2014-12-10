@@ -4,10 +4,10 @@ namespace DotCraftCore.Block
 {
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityCommandBlock = DotCraftCore.tileentity.TileEntityCommandBlock;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityCommandBlock = DotCraftCore.TileEntity.TileEntityCommandBlock;
+	using World = DotCraftCore.World.World;
 
 	public class BlockCommandBlock : BlockContainer
 	{

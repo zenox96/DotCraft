@@ -8,10 +8,10 @@ namespace DotCraftCore.Block
 	using EntityIronGolem = DotCraftCore.Entity.Monster.EntityIronGolem;
 	using EntitySnowman = DotCraftCore.Entity.Monster.EntitySnowman;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public class BlockPumpkin : BlockDirectional
 	{

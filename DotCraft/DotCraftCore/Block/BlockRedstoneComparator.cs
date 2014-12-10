@@ -6,13 +6,13 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityComparator = DotCraftCore.tileentity.TileEntityComparator;
-	using Direction = DotCraftCore.util.Direction;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityComparator = DotCraftCore.TileEntity.TileEntityComparator;
+	using Direction = DotCraftCore.Util.Direction;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockRedstoneComparator : BlockRedstoneDiode, ITileEntityProvider
 	{

@@ -7,12 +7,12 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemBlock = DotCraftCore.item.ItemBlock;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityFlowerPot = DotCraftCore.tileentity.TileEntityFlowerPot;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemBlock = DotCraftCore.Item.ItemBlock;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityFlowerPot = DotCraftCore.TileEntity.TileEntityFlowerPot;
+	using World = DotCraftCore.World.World;
 
 	public class BlockFlowerPot : BlockContainer
 	{

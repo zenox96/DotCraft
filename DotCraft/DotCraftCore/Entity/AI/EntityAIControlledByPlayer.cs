@@ -10,10 +10,10 @@ namespace DotCraftCore.Entity.AI
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using PathFinder = DotCraftCore.pathfinding.PathFinder;
-	using PathPoint = DotCraftCore.pathfinding.PathPoint;
-	using MathHelper = DotCraftCore.util.MathHelper;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using PathFinder = DotCraftCore.Pathfinding.PathFinder;
+	using PathPoint = DotCraftCore.Pathfinding.PathPoint;
+	using MathHelper = DotCraftCore.Util.MathHelper;
 
 	public class EntityAIControlledByPlayer : EntityAIBase
 	{

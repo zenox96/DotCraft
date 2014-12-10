@@ -11,20 +11,20 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemSkull = DotCraftCore.item.ItemSkull;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTUtil = DotCraftCore.nbt.NBTUtil;
-	using AchievementList = DotCraftCore.stats.AchievementList;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntitySkull = DotCraftCore.tileentity.TileEntitySkull;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemSkull = DotCraftCore.Item.ItemSkull;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTUtil = DotCraftCore.NBT.NBTUtil;
+	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntitySkull = DotCraftCore.TileEntity.TileEntitySkull;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockSkull : BlockContainer
 	{

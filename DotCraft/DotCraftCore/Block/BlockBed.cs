@@ -10,14 +10,14 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using Direction = DotCraftCore.util.Direction;
-	using IIcon = DotCraftCore.util.IIcon;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
-	using BiomeGenBase = DotCraftCore.world.biome.BiomeGenBase;
+	using Item = DotCraftCore.Item.Item;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using Direction = DotCraftCore.Util.Direction;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
+	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
 
 	public class BlockBed : BlockDirectional
 	{

@@ -6,7 +6,7 @@ namespace DotCraftCore.Inventory
 	using EntityHorse = DotCraftCore.Entity.Passive.EntityHorse;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class ContainerHorseInventory : Container
 	{

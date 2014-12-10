@@ -9,9 +9,9 @@ namespace DotCraftCore.Command.Server
 	using CommandException = DotCraftCore.Command.CommandException;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
 
 	public class CommandWhitelist : CommandBase
 	{

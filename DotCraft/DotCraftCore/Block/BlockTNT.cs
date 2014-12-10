@@ -12,9 +12,9 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
 	using Items = DotCraftCore.Init.Items;
-	using IIcon = DotCraftCore.util.IIcon;
-	using Explosion = DotCraftCore.world.Explosion;
-	using World = DotCraftCore.world.World;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using Explosion = DotCraftCore.World.Explosion;
+	using World = DotCraftCore.World.World;
 
 	public class BlockTNT : Block
 	{

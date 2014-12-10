@@ -2,8 +2,8 @@ namespace DotCraftCore.Entity.AI
 {
 
 	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class EntityAIMoveTowardsRestriction : EntityAIBase
 	{

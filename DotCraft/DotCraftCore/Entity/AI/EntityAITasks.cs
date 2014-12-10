@@ -3,7 +3,7 @@ using System.Collections;
 namespace DotCraftCore.Entity.AI
 {
 
-	using Profiler = DotCraftCore.profiler.Profiler;
+	using Profiler = DotCraftCore.Profiler.Profiler;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

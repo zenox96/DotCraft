@@ -6,13 +6,13 @@ namespace DotCraftCore.Entity.Projectile
 
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using World = DotCraftCore.World.World;
 
 	public class EntityPotion : EntityThrowable
 	{

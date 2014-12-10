@@ -7,20 +7,20 @@ namespace DotCraftCore.Block
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
-	using WorldGenBigTree = DotCraftCore.world.gen.feature.WorldGenBigTree;
-	using WorldGenCanopyTree = DotCraftCore.world.gen.feature.WorldGenCanopyTree;
-	using WorldGenForest = DotCraftCore.world.gen.feature.WorldGenForest;
-	using WorldGenMegaJungle = DotCraftCore.world.gen.feature.WorldGenMegaJungle;
-	using WorldGenMegaPineTree = DotCraftCore.world.gen.feature.WorldGenMegaPineTree;
-	using WorldGenSavannaTree = DotCraftCore.world.gen.feature.WorldGenSavannaTree;
-	using WorldGenTaiga2 = DotCraftCore.world.gen.feature.WorldGenTaiga2;
-	using WorldGenTrees = DotCraftCore.world.gen.feature.WorldGenTrees;
-	using WorldGenerator = DotCraftCore.world.gen.feature.WorldGenerator;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
+	using WorldGenBigTree = DotCraftCore.World.Gen.Feature.WorldGenBigTree;
+	using WorldGenCanopyTree = DotCraftCore.World.Gen.Feature.WorldGenCanopyTree;
+	using WorldGenForest = DotCraftCore.World.Gen.Feature.WorldGenForest;
+	using WorldGenMegaJungle = DotCraftCore.World.Gen.Feature.WorldGenMegaJungle;
+	using WorldGenMegaPineTree = DotCraftCore.World.Gen.Feature.WorldGenMegaPineTree;
+	using WorldGenSavannaTree = DotCraftCore.World.Gen.Feature.WorldGenSavannaTree;
+	using WorldGenTaiga2 = DotCraftCore.World.Gen.Feature.WorldGenTaiga2;
+	using WorldGenTrees = DotCraftCore.World.Gen.Feature.WorldGenTrees;
+	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
 
 	public class BlockSapling : BlockBush, IGrowable
 	{

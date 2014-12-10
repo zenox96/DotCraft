@@ -3,10 +3,10 @@ namespace DotCraftCore.Entity.Projectile
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using World = DotCraftCore.World.World;
 
 	public class EntityLargeFireball : EntityFireball
 	{

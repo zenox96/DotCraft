@@ -7,10 +7,10 @@ namespace DotCraftCore.Block
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using StatList = DotCraftCore.stats.StatList;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using StatList = DotCraftCore.Stats.StatList;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDeadBush : BlockBush
 	{

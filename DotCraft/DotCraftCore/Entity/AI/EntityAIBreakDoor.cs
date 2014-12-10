@@ -3,7 +3,7 @@ namespace DotCraftCore.Entity.AI
 
 	using Block = DotCraftCore.block.Block;
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
 
 	public class EntityAIBreakDoor : EntityAIDoorInteract
 	{

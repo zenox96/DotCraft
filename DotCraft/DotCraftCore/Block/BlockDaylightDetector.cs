@@ -6,13 +6,13 @@ namespace DotCraftCore.Block
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityDaylightDetector = DotCraftCore.tileentity.TileEntityDaylightDetector;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumSkyBlock = DotCraftCore.world.EnumSkyBlock;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityDaylightDetector = DotCraftCore.TileEntity.TileEntityDaylightDetector;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockDaylightDetector : BlockContainer
 	{

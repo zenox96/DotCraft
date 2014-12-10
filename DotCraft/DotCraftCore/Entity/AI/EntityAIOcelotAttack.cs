@@ -5,7 +5,7 @@ namespace DotCraftCore.Entity.AI
 
 	using EntityLiving = DotCraftCore.Entity.EntityLiving;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public class EntityAIOcelotAttack : EntityAIBase
 	{

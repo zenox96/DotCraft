@@ -10,15 +10,15 @@ namespace DotCraftCore.Block
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityPiston = DotCraftCore.tileentity.TileEntityPiston;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using Facing = DotCraftCore.util.Facing;
-	using IIcon = DotCraftCore.util.IIcon;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using IBlockAccess = DotCraftCore.world.IBlockAccess;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityPiston = DotCraftCore.TileEntity.TileEntityPiston;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using Facing = DotCraftCore.Util.Facing;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using World = DotCraftCore.World.World;
 
 	public class BlockPistonBase : Block
 	{

@@ -2,7 +2,7 @@ namespace DotCraftCore.Entity.Item
 {
 
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using World = DotCraftCore.world.World;
+	using World = DotCraftCore.World.World;
 
 	public class EntityMinecartEmpty : EntityMinecart
 	{

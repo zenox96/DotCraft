@@ -5,7 +5,7 @@ namespace DotCraftCore.Entity.AI
 
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using Vec3 = DotCraftCore.util.Vec3;
+	using Vec3 = DotCraftCore.Util.Vec3;
 
 	public class EntityAIPlay : EntityAIBase
 	{

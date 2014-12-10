@@ -5,8 +5,8 @@ using System.Text;
 namespace DotCraftCore.Command
 {
 
-	using Profiler = DotCraftCore.profiler.Profiler;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
+	using Profiler = DotCraftCore.Profiler.Profiler;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

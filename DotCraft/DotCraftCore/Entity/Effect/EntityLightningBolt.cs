@@ -6,11 +6,11 @@ namespace DotCraftCore.Entity.Effect
 	using Material = DotCraftCore.block.material.Material;
 	using Entity = DotCraftCore.Entity.Entity;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using EnumDifficulty = DotCraftCore.world.EnumDifficulty;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using World = DotCraftCore.World.World;
 
 	public class EntityLightningBolt : EntityWeatherEffect
 	{

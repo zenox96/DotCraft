@@ -2,8 +2,8 @@ namespace DotCraftCore.Block
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using IIcon = DotCraftCore.util.IIcon;
-	using World = DotCraftCore.world.World;
+	using IIcon = DotCraftCore.Util.IIcon;
+	using World = DotCraftCore.World.World;
 
 	public class BlockRail : BlockRailBase
 	{

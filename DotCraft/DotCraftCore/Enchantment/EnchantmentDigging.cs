@@ -2,7 +2,7 @@ namespace DotCraftCore.Enchantment
 {
 
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class EnchantmentDigging : Enchantment
 	{

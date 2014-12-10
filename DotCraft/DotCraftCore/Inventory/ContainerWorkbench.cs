@@ -6,9 +6,9 @@ namespace DotCraftCore.Inventory
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using CraftingManager = DotCraftCore.item.crafting.CraftingManager;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using CraftingManager = DotCraftCore.Item.Crafting.CraftingManager;
+	using World = DotCraftCore.World.World;
 
 	public class ContainerWorkbench : Container
 	{

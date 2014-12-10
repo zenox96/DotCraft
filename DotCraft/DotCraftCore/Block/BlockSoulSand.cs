@@ -4,8 +4,8 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Entity = DotCraftCore.Entity.Entity;
-	using AxisAlignedBB = DotCraftCore.util.AxisAlignedBB;
-	using World = DotCraftCore.world.World;
+	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using World = DotCraftCore.World.World;
 
 	public class BlockSoulSand : Block
 	{

@@ -4,10 +4,10 @@ namespace DotCraftCore.Enchantment
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using ItemAxe = DotCraftCore.item.ItemAxe;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using Potion = DotCraftCore.potion.Potion;
-	using PotionEffect = DotCraftCore.potion.PotionEffect;
+	using ItemAxe = DotCraftCore.Item.ItemAxe;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using Potion = DotCraftCore.Potion.Potion;
+	using PotionEffect = DotCraftCore.Potion.PotionEffect;
 
 	public class EnchantmentDamage : Enchantment
 	{

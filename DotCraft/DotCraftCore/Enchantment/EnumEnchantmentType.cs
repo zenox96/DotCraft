@@ -1,12 +1,12 @@
 namespace DotCraftCore.Enchantment
 {
 
-	using Item = DotCraftCore.item.Item;
-	using ItemArmor = DotCraftCore.item.ItemArmor;
-	using ItemBow = DotCraftCore.item.ItemBow;
-	using ItemFishingRod = DotCraftCore.item.ItemFishingRod;
-	using ItemSword = DotCraftCore.item.ItemSword;
-	using ItemTool = DotCraftCore.item.ItemTool;
+	using Item = DotCraftCore.Item.Item;
+	using ItemArmor = DotCraftCore.Item.ItemArmor;
+	using ItemBow = DotCraftCore.Item.ItemBow;
+	using ItemFishingRod = DotCraftCore.Item.ItemFishingRod;
+	using ItemSword = DotCraftCore.Item.ItemSword;
+	using ItemTool = DotCraftCore.Item.ItemTool;
 
 	public enum EnumEnchantmentType
 	{

@@ -6,11 +6,11 @@ namespace DotCraftCore.Command.Server
 	using ByteBuf = io.netty.buffer.ByteBuf;
 	using ICommandManager = DotCraftCore.Command.ICommandManager;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.util.ChatComponentText;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
-	using World = DotCraftCore.world.World;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using World = DotCraftCore.World.World;
 
 	public abstract class CommandBlockLogic : ICommandSender
 	{

@@ -23,13 +23,13 @@ namespace DotCraftCore.Entity.Monster
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using ChunkCoordinates = DotCraftCore.util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Village = DotCraftCore.village.Village;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Village = DotCraftCore.Village.Village;
+	using World = DotCraftCore.World.World;
 
 	public class EntityIronGolem : EntityGolem
 	{

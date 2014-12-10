@@ -8,12 +8,12 @@ namespace DotCraftCore.Entity.Monster
 	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.item.Item;
-	using DamageSource = DotCraftCore.util.DamageSource;
-	using EntityDamageSource = DotCraftCore.util.EntityDamageSource;
-	using Facing = DotCraftCore.util.Facing;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using Item = DotCraftCore.Item.Item;
+	using DamageSource = DotCraftCore.Util.DamageSource;
+	using EntityDamageSource = DotCraftCore.Util.EntityDamageSource;
+	using Facing = DotCraftCore.Util.Facing;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 	using ImmutablePair = org.apache.commons.lang3.tuple.ImmutablePair;
 
 	public class EntitySilverfish : EntityMob

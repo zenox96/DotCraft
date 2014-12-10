@@ -10,8 +10,8 @@ namespace DotCraftCore.Command.Server
 	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
 	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 	using ExceptionUtils = org.apache.commons.lang3.exception.ExceptionUtils;
 
 	public class CommandMessageRaw : CommandBase

@@ -6,7 +6,7 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.item.Item;
+	using Item = DotCraftCore.Item.Item;
 
 	public class BlockClay : Block
 	{

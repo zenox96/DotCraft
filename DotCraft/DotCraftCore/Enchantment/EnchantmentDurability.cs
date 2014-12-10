@@ -3,8 +3,8 @@ using System;
 namespace DotCraftCore.Enchantment
 {
 
-	using ItemArmor = DotCraftCore.item.ItemArmor;
-	using ItemStack = DotCraftCore.item.ItemStack;
+	using ItemArmor = DotCraftCore.Item.ItemArmor;
+	using ItemStack = DotCraftCore.Item.ItemStack;
 
 	public class EnchantmentDurability : Enchantment
 	{

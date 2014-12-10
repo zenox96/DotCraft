@@ -6,9 +6,9 @@ namespace DotCraftCore.Block
 	
 	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using TileEntity = DotCraftCore.tileentity.TileEntity;
-	using TileEntityNote = DotCraftCore.tileentity.TileEntityNote;
-	using World = DotCraftCore.world.World;
+	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntityNote = DotCraftCore.TileEntity.TileEntityNote;
+	using World = DotCraftCore.World.World;
 
 	public class BlockNote : BlockContainer
 	{

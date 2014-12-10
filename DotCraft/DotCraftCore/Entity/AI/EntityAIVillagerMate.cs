@@ -3,9 +3,9 @@ namespace DotCraftCore.Entity.AI
 
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using Village = DotCraftCore.village.Village;
-	using World = DotCraftCore.world.World;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Village = DotCraftCore.Village.Village;
+	using World = DotCraftCore.World.World;
 
 	public class EntityAIVillagerMate : EntityAIBase
 	{

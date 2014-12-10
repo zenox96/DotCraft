@@ -6,8 +6,8 @@ namespace DotCraftCore.Entity.Passive
 	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
 	using Blocks = DotCraftCore.Init.Blocks;
 	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using World = DotCraftCore.world.World;
+	using ItemStack = DotCraftCore.Item.ItemStack;
+	using World = DotCraftCore.World.World;
 
 	public class EntityMooshroom : EntityCow
 	{

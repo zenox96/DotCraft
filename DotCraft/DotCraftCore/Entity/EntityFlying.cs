@@ -1,8 +1,8 @@
 namespace DotCraftCore.Entity
 {
 
-	using MathHelper = DotCraftCore.util.MathHelper;
-	using World = DotCraftCore.world.World;
+	using MathHelper = DotCraftCore.Util.MathHelper;
+	using World = DotCraftCore.World.World;
 
 	public abstract class EntityFlying : EntityLiving
 	{

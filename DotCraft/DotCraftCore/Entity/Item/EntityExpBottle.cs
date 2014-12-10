@@ -5,8 +5,8 @@ namespace DotCraftCore.Entity.Item
 
 	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
 	using EntityThrowable = DotCraftCore.Entity.Projectile.EntityThrowable;
-	using MovingObjectPosition = DotCraftCore.util.MovingObjectPosition;
-	using World = DotCraftCore.world.World;
+	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
+	using World = DotCraftCore.World.World;
 
 	public class EntityExpBottle : EntityThrowable
 	{

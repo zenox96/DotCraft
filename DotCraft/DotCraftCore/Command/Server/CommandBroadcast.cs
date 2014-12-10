@@ -6,9 +6,9 @@ namespace DotCraftCore.Command.Server
 	using CommandBase = DotCraftCore.Command.CommandBase;
 	using ICommandSender = DotCraftCore.Command.ICommandSender;
 	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.util.ChatComponentTranslation;
-	using IChatComponent = DotCraftCore.util.IChatComponent;
+	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using IChatComponent = DotCraftCore.Util.IChatComponent;
 
 	public class CommandBroadcast : CommandBase
 	{
