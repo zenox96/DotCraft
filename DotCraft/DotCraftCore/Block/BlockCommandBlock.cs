@@ -2,9 +2,6 @@ using System;
 
 namespace DotCraftCore.Block
 {
-
-	
-	using CommandBlockLogic = DotCraftCore.command.server.CommandBlockLogic;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using ItemStack = DotCraftCore.item.ItemStack;
