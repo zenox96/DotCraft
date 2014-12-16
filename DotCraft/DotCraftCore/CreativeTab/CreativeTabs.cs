@@ -15,70 +15,17 @@ namespace DotCraftCore.CreativeTab
         public static readonly CreativeTabs[] creativeTabArray = new CreativeTabs[12];
 
         public static readonly CreativeTabs tabBlock = new CreativeTabs(0, "buildingBlocks", new TabIconItemDelegate(() => Item.getItemFromBlock(Blocks.brick_block)));
-        public static readonly CreativeTabs tabBlock = new CreativeTabs(0, "buildingBlocks", new TabIconItemDelegate(() => Item.getItemFromBlock(Blocks.brick_block)));
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabDecorations = new CreativeTabs(1, "decorations")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Item.getItemFromBlock(Blocks.double_plant);
-        //		}
-        //		public int func_151243_f()
-        //		{
-        //			return 5;
-        //		}
-        //	};
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabRedstone = new CreativeTabs(2, "redstone")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Items.redstone;
-        //		}
-        //	};
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabTransport = new CreativeTabs(3, "transportation")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Item.getItemFromBlock(Blocks.golden_rail);
-        //		}
-        //	};
-        /*public static readonly CreativeTabs tabMisc = (new CreativeTabs(4, "misc") {  public Item TabIconItem { return Items.lava_bucket; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.all});
-        public static readonly CreativeTabs tabAllSearch = (new CreativeTabs(5, "search") {  public Item TabIconItem { return Items.compass; } }).BackgroundImageName = "item_search.png";
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabFood = new CreativeTabs(6, "food")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Items.apple;
-        //		}
-        //	};
-                public static readonly CreativeTabs tabTools = (new CreativeTabs(7, "tools") {  public Item TabIconItem { return Items.iron_axe; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.digger, EnumEnchantmentType.fishing_rod, EnumEnchantmentType.breakable});
-                public static readonly CreativeTabs tabCombat = (new CreativeTabs(8, "combat") {  public Item TabIconItem { return Items.golden_sword; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.armor, EnumEnchantmentType.armor_feet, EnumEnchantmentType.armor_head, EnumEnchantmentType.armor_legs, EnumEnchantmentType.armor_torso, EnumEnchantmentType.bow, EnumEnchantmentType.weapon});
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabBrewing = new CreativeTabs(9, "brewing")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Items.potionitem;
-        //		}
-        //	};
-        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final CreativeTabs tabMaterials = new CreativeTabs(10, "materials")
-        //	{
-        //		
-        //		public Item getTabIconItem()
-        //		{
-        //			return Items.stick;
-        //		}
-        //	};
-        public static readonly CreativeTabs tabInventory = (new CreativeTabs(11, "inventory") {  public Item TabIconItem { return Item.getItemFromBlock(Blocks.chest); } }).setBackgroundImageName("inventory.png").setNoScrollbar().setNoTitle();*/
+        public static readonly CreativeTabs tabDecorations = new CreativeTabs(1, "decorations", new TabIconItemDelegate(( ) => Item.getItemFromBlock(Blocks.double_plant)), new IconBlockDamageDelegate(() => 5));
+        public static readonly CreativeTabs tabRedstone = new CreativeTabs(2, "redstone", new TabIconItemDelegate(( ) => Items.redstone));
+        public static readonly CreativeTabs tabTransport = new CreativeTabs(3, "transportation", new TabIconItemDelegate(( ) => Item.getItemFromBlock(Blocks.golden_rail)));
+        public static readonly CreativeTabs tabMisc = new CreativeTabs(4, "misc", new TabIconItemDelegate(( ) => Items.lava_bucket)).SetEnchantments(new EnumEnchantmentType[] {EnumEnchantmentType.all});
+        public static readonly CreativeTabs tabAllSearch = new CreativeTabs(5, "search", new TabIconItemDelegate(( ) => Items.compass)).SetBackgroundImageName("item_search.png");
+        public static readonly CreativeTabs tabFood = new CreativeTabs(6, "food", new TabIconItemDelegate(( ) => Items.apple));
+        public static readonly CreativeTabs tabTools = new CreativeTabs(7, "tools", new TabIconItemDelegate(( ) => Items.iron_axe)).SetEnchantments(new EnumEnchantmentType[] { EnumEnchantmentType.digger, EnumEnchantmentType.fishing_rod, EnumEnchantmentType.breakable });
+        public static readonly CreativeTabs tabCombat = new CreativeTabs(8, "combat", new TabIconItemDelegate(( ) => Items.golden_sword)).SetEnchantments(new EnumEnchantmentType[] { EnumEnchantmentType.armor, EnumEnchantmentType.armor_feet, EnumEnchantmentType.armor_head, EnumEnchantmentType.armor_legs, EnumEnchantmentType.armor_torso, EnumEnchantmentType.bow, EnumEnchantmentType.weapon });
+        public static readonly CreativeTabs tabBrewing = new CreativeTabs(9, "brewing", new TabIconItemDelegate(( ) => Items.potionitem));
+        public static readonly CreativeTabs tabMaterials = new CreativeTabs(10, "materials", new TabIconItemDelegate(( ) => Items.stick));
+        public static readonly CreativeTabs tabInventory = new CreativeTabs(11, "inventory", new TabIconItemDelegate(( ) => Item.getItemFromBlock(Blocks.chest))).SetBackgroundImageName("inventory.png").SetNoScrollbar().SetNoTitle();
     }
 
 	public partial class CreativeTabs
@@ -94,7 +41,7 @@ namespace DotCraftCore.CreativeTab
 
 	/// <summary> Whether to draw the title in the foreground of the creative GUI  </summary>
 		private bool drawTitle = true;
-		private EnumEnchantmentType[] field_111230_s;
+		private EnumEnchantmentType[] tabEnchantments;
 		private ItemStack field_151245_t;
 
         public delegate Item TabIconItemDelegate();
@@ -168,16 +115,16 @@ namespace DotCraftCore.CreativeTab
             return iconDamageDel();
         }
 
+        private CreativeTabs SetBackgroundImageName(string p)
+        {
+            BackgroundImageName = p;
+            return this;
+        }
+
 		public virtual string BackgroundImageName
 		{
-			get
-			{
-				return this.backgroundImageName;
-			}
-			set
-			{
-				this.backgroundImageName = value;
-			}
+			get;
+			protected set;
 		}
 
 		public virtual bool drawInForegroundOfTab()
@@ -185,7 +132,7 @@ namespace DotCraftCore.CreativeTab
 			return this.drawTitle;
 		}
 
-		public virtual CreativeTabs setNoTitle()
+		public virtual CreativeTabs SetNoTitle()
 		{
 			this.drawTitle = false;
 			return this;
@@ -196,7 +143,7 @@ namespace DotCraftCore.CreativeTab
 			return this.hasScrollbar;
 		}
 
-		public virtual CreativeTabs setNoScrollbar()
+		public virtual CreativeTabs SetNoScrollbar()
 		{
 			this.hasScrollbar = false;
 			return this;
@@ -224,33 +171,33 @@ namespace DotCraftCore.CreativeTab
 			}
 		}
 
-		public virtual EnumEnchantmentType[] func_111225_m()
+		public virtual EnumEnchantmentType[] GetEnchantments()
 		{
-			return this.field_111230_s;
+			return this.tabEnchantments;
 		}
 
-		public virtual CreativeTabs func_111229_a(params EnumEnchantmentType[] p_111229_1_)
+		public virtual CreativeTabs SetEnchantments(EnumEnchantmentType[] enchantments)
 		{
-			this.field_111230_s = p_111229_1_;
+			this.tabEnchantments = enchantments;
 			return this;
 		}
 
-		public virtual bool func_111226_a(EnumEnchantmentType p_111226_1_)
+		public virtual bool func_111226_a(EnumEnchantmentType enchantments)
 		{
-			if (this.field_111230_s == null)
+			if (this.tabEnchantments == null)
 			{
 				return false;
 			}
 			else
 			{
-				EnumEnchantmentType[] var2 = this.field_111230_s;
+				EnumEnchantmentType[] var2 = this.tabEnchantments;
 				int var3 = var2.Length;
 
 				for (int var4 = 0; var4 < var3; ++var4)
 				{
 					EnumEnchantmentType var5 = var2[var4];
 
-					if (var5 == p_111226_1_)
+					if (var5 == enchantments)
 					{
 						return true;
 					}
@@ -277,9 +224,9 @@ namespace DotCraftCore.CreativeTab
 				}
 			}
 
-			if (this.func_111225_m() != null)
+			if (this.GetEnchantments() != null)
 			{
-				this.addEnchantmentBooksToList(p_78018_1_, this.func_111225_m());
+				this.addEnchantmentBooksToList(p_78018_1_, this.GetEnchantments());
 			}
 		}
 
@@ -299,7 +246,7 @@ namespace DotCraftCore.CreativeTab
 				{
 					bool var7 = false;
 
-					for (int var8 = 0; var8 < p_92116_2_.length && !var7; ++var8)
+					for (int var8 = 0; var8 < p_92116_2_.Length && !var7; ++var8)
 					{
 						if (var6.type == p_92116_2_[var8])
 						{

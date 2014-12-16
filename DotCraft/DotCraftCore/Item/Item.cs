@@ -40,6 +40,7 @@ namespace DotCraftCore.Item
 	using StatCollector = DotCraftCore.Util.StatCollector;
 	using Vec3 = DotCraftCore.Util.Vec3;
 	using World = DotCraftCore.World.World;
+using DotCraftCore.CreativeTab;
 
 	public class Item
 	{
