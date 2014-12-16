@@ -25,7 +25,7 @@ namespace DotCraftCore.Block
 	{
 		private Random field_149961_a = new Random();
 		private IIcon field_149960_b;
-		private const string __OBFID = "CL_00000207";
+		
 
 		public BlockBrewingStand() : base(Material.iron)
 		{

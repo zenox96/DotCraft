@@ -20,7 +20,7 @@ namespace DotCraftCore.Entity
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private final CommandBlockLogic field_145824_a = new CommandBlockLogic()
 //	{
-//		private static final String __OBFID = "CL_00001673";
+//		
 //		public void func_145756_e()
 //		{
 //			EntityMinecartCommandBlock.getDataWatcher().updateObject(23, this.func_145753_i());
@@ -44,7 +44,7 @@ namespace DotCraftCore.Entity
 //		}
 //	};
 		private int field_145823_b = 0;
-		private const string __OBFID = "CL_00001672";
+		
 
 		public EntityMinecartCommandBlock(World p_i45321_1_) : base(p_i45321_1_)
 		{

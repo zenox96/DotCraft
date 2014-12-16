@@ -40,7 +40,7 @@ namespace DotCraftCore.Command
 
 	public class ServerCommandManager : CommandHandler, IAdminCommand
 	{
-		private const string __OBFID = "CL_00000922";
+		
 
 		public ServerCommandManager()
 		{

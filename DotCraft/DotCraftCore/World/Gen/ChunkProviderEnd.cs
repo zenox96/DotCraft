@@ -38,7 +38,7 @@ namespace DotCraftCore.World.Gen
 //ORIGINAL LINE: internal int[][] field_73203_h = new int[32][32];
 //JAVA TO VB & C# CONVERTER NOTE: The following call to the 'RectangularArrays' helper class reproduces the rectangular array initialization that is automatic in Java:
 		internal int[][] field_73203_h = RectangularArrays.ReturnRectangularIntArray(32, 32);
-		private const string __OBFID = "CL_00000397";
+		
 
 		public ChunkProviderEnd(World p_i2007_1_, long p_i2007_2_)
 		{

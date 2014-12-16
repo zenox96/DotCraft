@@ -22,13 +22,13 @@ namespace DotCraftCore.Server.Management
 		public static readonly File field_152729_b = new File("banned-players.txt");
 		public static readonly File field_152730_c = new File("ops.txt");
 		public static readonly File field_152731_d = new File("white-list.txt");
-		private const string __OBFID = "CL_00001882";
+		
 
 		private static void func_152717_a(MinecraftServer p_152717_0_, ICollection p_152717_1_, ProfileLookupCallback p_152717_2_)
 		{
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
-//ORIGINAL LINE: String[] var3 = (String[])Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate() { private static final String __OBFID = "CL_00001881"; public boolean func_152733_a(String p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public boolean apply(Object p_apply_1_) { return this.func_152733_a((String)p_apply_1_); } }), String.class);
-			string[] var3 = (string[])Iterators.ToArray(Iterators.filter(p_152717_1_.GetEnumerator(), new Predicate() { private static string __OBFID = "CL_00001881"; public bool func_152733_a(string p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public bool apply(object p_apply_1_) { return this.func_152733_a((string)p_apply_1_); } }), typeof(string));
+//ORIGINAL LINE: String[] var3 = (String[])Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate() {  public boolean func_152733_a(String p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public boolean apply(Object p_apply_1_) { return this.func_152733_a((String)p_apply_1_); } }), String.class);
+			string[] var3 = (string[])Iterators.ToArray(Iterators.filter(p_152717_1_.GetEnumerator(), new Predicate() {  public bool func_152733_a(string p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public bool apply(object p_apply_1_) { return this.func_152733_a((string)p_apply_1_); } }), typeof(string));
 
 			if(p_152717_0_.ServerInOnlineMode)
 			{
@@ -70,7 +70,7 @@ namespace DotCraftCore.Server.Management
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //					ProfileLookupCallback var4 = new ProfileLookupCallback()
 //				{
-//					private static final String __OBFID = "CL_00001880";
+//					
 //					public void onProfileLookupSucceeded(GameProfile p_onProfileLookupSucceeded_1_)
 //					{
 //						var1.func_152358_ax().func_152649_a(p_onProfileLookupSucceeded_1_);

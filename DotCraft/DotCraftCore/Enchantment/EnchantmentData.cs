@@ -10,7 +10,7 @@ namespace DotCraftCore.Enchantment
 
 	/// <summary> Enchantment level associated with this EnchantmentData  </summary>
 		public readonly int enchantmentLevel;
-		private const string __OBFID = "CL_00000115";
+		
 
 		public EnchantmentData(Enchantment p_i1930_1_, int p_i1930_2_) : base(p_i1930_1_.getWeight())
 		{

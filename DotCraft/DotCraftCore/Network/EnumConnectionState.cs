@@ -117,7 +117,7 @@ namespace DotCraftCore.Network
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
 //		private final BiMap field_150770_i;
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00001245";
+//		
 
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain methods in .NET:
 //		private EnumConnectionState(int p_i45152_3_)
@@ -183,14 +183,14 @@ namespace DotCraftCore.Network
 	{
 			internal HANDSHAKING(this EnumConnectionState instance, "HANDSHAKING", 0, -1, null)
 		{
-			private static final string __OBFID = "CL_00001247";
+			
 			{
 				instance.func_150751_a(0, typeof(C00Handshake));
 			}
 		}
 		   internal , PLAY(this EnumConnectionState instance, "PLAY", 1, 0, null)
 		{
-			private static final string __OBFID = "CL_00001250";
+			
 			{
 				instance.func_150756_b(0, typeof(S00PacketKeepAlive));
 				instance.func_150756_b(1, typeof(S01PacketJoinGame));
@@ -285,7 +285,7 @@ namespace DotCraftCore.Network
 		}
 		   internal , STATUS(this EnumConnectionState instance, "STATUS", 2, 1, null)
 		{
-			private static final string __OBFID = "CL_00001246";
+			
 			{
 				instance.func_150751_a(0, typeof(C00PacketServerQuery));
 				instance.func_150756_b(0, typeof(S00PacketServerInfo));
@@ -295,7 +295,7 @@ namespace DotCraftCore.Network
 		}
 		   internal , LOGIN(this EnumConnectionState instance, "LOGIN", 3, 2, null)
 		{
-			private static final string __OBFID = "CL_00001249";
+			
 			{
 				instance.func_150756_b(0, typeof(S00PacketDisconnect));
 				instance.func_150756_b(1, typeof(S01PacketEncryptionRequest));

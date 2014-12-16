@@ -27,7 +27,7 @@ namespace DotCraftCore.Entity.AI
 		private double posX;
 		private double posY;
 		private double posZ;
-		private const string __OBFID = "CL_00001572";
+		
 
 		public EntityLookHelper(EntityLiving p_i1613_1_)
 		{

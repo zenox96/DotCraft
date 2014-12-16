@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentFireAspect : Enchantment
 	{
-		private const string __OBFID = "CL_00000116";
+		
 
 		protected internal EnchantmentFireAspect(int p_i1932_1_, int p_i1932_2_) : base(p_i1932_1_, p_i1932_2_, EnumEnchantmentType.weapon)
 		{

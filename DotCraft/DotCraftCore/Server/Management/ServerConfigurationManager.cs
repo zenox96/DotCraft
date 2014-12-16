@@ -96,7 +96,7 @@ namespace DotCraftCore.Server.Management
 ///     <summary> * index into playerEntities of player to ping, updated every tick; currently hardcoded to max at 200 players </summary>
 ///     
 		private int playerPingIndex;
-		private const string __OBFID = "CL_00001423";
+		
 
 		public ServerConfigurationManager(MinecraftServer p_i1500_1_)
 		{

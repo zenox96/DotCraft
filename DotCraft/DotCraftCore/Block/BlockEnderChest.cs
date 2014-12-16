@@ -19,7 +19,7 @@ namespace DotCraftCore.Block
 
 	public class BlockEnderChest : BlockContainer
 	{
-		private const string __OBFID = "CL_00000238";
+		
 
 		protected internal BlockEnderChest() : base(Material.rock)
 		{

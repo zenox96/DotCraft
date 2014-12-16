@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemSnowball : Item
 	{
-		private const string __OBFID = "CL_00000069";
+		
 
 		public ItemSnowball()
 		{

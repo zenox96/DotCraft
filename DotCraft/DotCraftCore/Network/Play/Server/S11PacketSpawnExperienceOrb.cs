@@ -17,7 +17,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148991_c;
 		private int field_148988_d;
 		private int field_148989_e;
-		private const string __OBFID = "CL_00001277";
+		
 
 		public S11PacketSpawnExperienceOrb()
 		{

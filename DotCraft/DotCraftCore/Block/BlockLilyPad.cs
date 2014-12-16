@@ -14,7 +14,7 @@ namespace DotCraftCore.Block
 
 	public class BlockLilyPad : BlockBush
 	{
-		private const string __OBFID = "CL_00000332";
+		
 
 		protected internal BlockLilyPad()
 		{

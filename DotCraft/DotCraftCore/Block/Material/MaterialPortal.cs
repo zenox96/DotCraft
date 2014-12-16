@@ -1,4 +1,4 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.Block.Material
 {
 
 	public class MaterialPortal : Material

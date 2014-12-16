@@ -6,7 +6,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The string value for the tag (cannot be empty).  </summary>
 		private string data;
-		private const string __OBFID = "CL_00001228";
+		
 
 		public NBTTagString()
 		{

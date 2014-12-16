@@ -12,7 +12,7 @@ namespace DotCraftCore.Entity.AI
 		private EntityIronGolem theGolem;
 		private int takeGolemRoseTick;
 		private bool tookGolemRose;
-		private const string __OBFID = "CL_00001615";
+		
 
 		public EntityAIFollowGolem(EntityVillager p_i1656_1_)
 		{

@@ -6,7 +6,7 @@ namespace DotCraftCore.Item
 
 	public class ItemAnvilBlock : ItemMultiTexture
 	{
-		private const string __OBFID = "CL_00001764";
+		
 
 		public ItemAnvilBlock(Block p_i1826_1_) : base(p_i1826_1_, p_i1826_1_, BlockAnvil.field_149834_a)
 		{

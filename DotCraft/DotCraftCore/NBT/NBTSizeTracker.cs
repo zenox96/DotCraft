@@ -8,14 +8,14 @@ namespace DotCraftCore.NBT
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public static final NBTSizeTracker field_152451_a = new NBTSizeTracker(0L)
 //	{
-//		private static final String __OBFID = "CL_00001902";
+//		
 //		public void func_152450_a(long p_152450_1_)
 //		{
 //		}
 //	};
 		private readonly long field_152452_b;
 		private long field_152453_c;
-		private const string __OBFID = "CL_00001903";
+		
 
 		public NBTSizeTracker(long p_i1203_1_)
 		{

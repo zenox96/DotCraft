@@ -9,7 +9,7 @@ namespace DotCraftCore.Command
 
 	public class CommandDifficulty : CommandBase
 	{
-		private const string __OBFID = "CL_00000422";
+		
 
 		public virtual string CommandName
 		{

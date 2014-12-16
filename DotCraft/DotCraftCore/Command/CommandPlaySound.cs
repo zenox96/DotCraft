@@ -8,7 +8,7 @@ namespace DotCraftCore.Command
 
 	public class CommandPlaySound : CommandBase
 	{
-		private const string __OBFID = "CL_00000774";
+		
 
 		public virtual string CommandName
 		{

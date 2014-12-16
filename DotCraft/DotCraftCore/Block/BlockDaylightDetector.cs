@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public class BlockDaylightDetector : BlockContainer
 	{
 		private IIcon[] field_149958_a = new IIcon[2];
-		private const string __OBFID = "CL_00000223";
+		
 
 		public BlockDaylightDetector() : base(Material.wood)
 		{

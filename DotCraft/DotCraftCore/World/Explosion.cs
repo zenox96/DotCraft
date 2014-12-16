@@ -36,7 +36,7 @@ namespace DotCraftCore.World
 	/// <summary> A list of ChunkPositions of blocks affected by this explosion  </summary>
 		public IList affectedBlockPositions = new ArrayList();
 		private IDictionary field_77288_k = new Hashtable();
-		private const string __OBFID = "CL_00000134";
+		
 
 		public Explosion(World p_i1948_1_, Entity p_i1948_2_, double p_i1948_3_, double p_i1948_5_, double p_i1948_7_, float p_i1948_9_)
 		{

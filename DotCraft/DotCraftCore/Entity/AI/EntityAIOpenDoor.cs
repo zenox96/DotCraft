@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.AI
 	{
 		internal bool field_75361_i;
 		internal int field_75360_j;
-		private const string __OBFID = "CL_00001603";
+		
 
 		public EntityAIOpenDoor(EntityLiving p_i1644_1_, bool p_i1644_2_) : base(p_i1644_1_)
 		{

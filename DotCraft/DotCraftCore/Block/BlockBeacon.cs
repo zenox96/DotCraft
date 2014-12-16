@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockBeacon : BlockContainer
 	{
-		private const string __OBFID = "CL_00000197";
+		
 
 		public BlockBeacon() : base(Material.glass)
 		{

@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 	{
 		private readonly Block field_150944_b;
 		private string[] field_150945_c;
-		private const string __OBFID = "CL_00000003";
+		
 
 		public ItemColored(Block p_i45332_1_, bool p_i45332_2_) : base(p_i45332_1_)
 		{

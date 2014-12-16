@@ -24,7 +24,7 @@ namespace DotCraftCore.Entity
 	/// <summary> true if one or more object was changed  </summary>
 		private bool objectChanged;
 		private ReadWriteLock @lock = new ReentrantReadWriteLock();
-		private const string __OBFID = "CL_00001559";
+		
 
 		public DataWatcher(Entity p_i45313_1_)
 		{
@@ -426,7 +426,7 @@ namespace DotCraftCore.Entity
 			private readonly int dataValueId;
 			private object watchedObject;
 			private bool watched;
-			private const string __OBFID = "CL_00001560";
+			
 
 			public WatchableObject(int p_i1603_1_, int p_i1603_2_, object p_i1603_3_)
 			{

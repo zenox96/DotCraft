@@ -9,7 +9,7 @@ namespace DotCraftCore.Network.Status.Server
 	public class S01PacketPong : Packet
 	{
 		private long field_149293_a;
-		private const string __OBFID = "CL_00001383";
+		
 
 		public S01PacketPong()
 		{

@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Rcon
 	{
 		public static readonly RConConsoleSource field_70010_a = new RConConsoleSource();
 		private StringBuilder field_70009_b = new StringBuilder();
-		private const string __OBFID = "CL_00001800";
+		
 
 ///    
 ///     <summary> * Gets the name of this command sender (usually username, but possibly "Rcon") </summary>

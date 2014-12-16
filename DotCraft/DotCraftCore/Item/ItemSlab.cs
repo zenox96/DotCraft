@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 		private readonly bool field_150948_b;
 		private readonly BlockSlab field_150949_c;
 		private readonly BlockSlab field_150947_d;
-		private const string __OBFID = "CL_00000071";
+		
 
 		public ItemSlab(Block p_i45355_1_, BlockSlab p_i45355_2_, BlockSlab p_i45355_3_, bool p_i45355_4_) : base(p_i45355_1_)
 		{

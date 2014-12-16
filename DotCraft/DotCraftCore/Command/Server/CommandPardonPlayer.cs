@@ -12,7 +12,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandPardonPlayer : CommandBase
 	{
-		private const string __OBFID = "CL_00000747";
+		
 
 		public virtual string CommandName
 		{

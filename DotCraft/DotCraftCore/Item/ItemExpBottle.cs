@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemExpBottle : Item
 	{
-		private const string __OBFID = "CL_00000028";
+		
 
 		public ItemExpBottle()
 		{

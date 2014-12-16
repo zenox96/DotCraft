@@ -8,7 +8,7 @@ namespace DotCraftCore.Server.Management
 
 	public class UserListOps : UserList
 	{
-		private const string __OBFID = "CL_00001879";
+		
 
 		public UserListOps(File p_i1152_1_) : base(p_i1152_1_)
 		{

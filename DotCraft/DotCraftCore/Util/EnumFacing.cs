@@ -34,7 +34,7 @@ namespace DotCraftCore.Util
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
 //		private static final EnumFacing[] faceList = new EnumFacing[6];
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00001201";
+//		
 
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain methods in .NET:
 //		private EnumFacing(int p_i1367_3_, int p_i1367_4_, int p_i1367_5_, int p_i1367_6_, int p_i1367_7_)

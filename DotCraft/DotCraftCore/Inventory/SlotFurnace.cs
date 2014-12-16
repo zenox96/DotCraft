@@ -17,7 +17,7 @@ namespace DotCraftCore.Inventory
 	/// <summary> The player that is using the GUI where this slot resides.  </summary>
 		private EntityPlayer thePlayer;
 		private int field_75228_b;
-		private const string __OBFID = "CL_00001749";
+		
 
 		public SlotFurnace(EntityPlayer p_i1813_1_, IInventory p_i1813_2_, int p_i1813_3_, int p_i1813_4_, int p_i1813_5_) : base(p_i1813_2_, p_i1813_3_, p_i1813_4_, p_i1813_5_)
 		{

@@ -8,7 +8,7 @@ namespace DotCraftCore.Realms
 	public class RealmsButton
 	{
 		private GuiButtonRealmsProxy proxy;
-		private const string __OBFID = "CL_00001890";
+		
 
 		public RealmsButton(int p_i1177_1_, int p_i1177_2_, int p_i1177_3_, string p_i1177_4_)
 		{

@@ -14,7 +14,7 @@ namespace DotCraftCore.Item
 	public class ItemHangingEntity : Item
 	{
 		private readonly Type hangingEntityClass;
-		private const string __OBFID = "CL_00000038";
+		
 
 		public ItemHangingEntity(Type p_i45342_1_)
 		{

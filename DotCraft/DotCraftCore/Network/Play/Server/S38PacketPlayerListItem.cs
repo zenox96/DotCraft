@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 		private string field_149126_a;
 		private bool field_149124_b;
 		private int field_149125_c;
-		private const string __OBFID = "CL_00001318";
+		
 
 		public S38PacketPlayerListItem()
 		{

@@ -18,7 +18,7 @@ namespace DotCraftCore.World
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
 //		private final String difficultyResourceKey;
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00001510";
+//		
 
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain methods in .NET:
 //		private EnumDifficulty(int p_i45312_3_, String p_i45312_4_)

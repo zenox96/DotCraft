@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.AI
 		internal EntityTameable theDefendingTameable;
 		internal EntityLivingBase theOwnerAttacker;
 		private int field_142051_e;
-		private const string __OBFID = "CL_00001624";
+		
 
 		public EntityAIOwnerHurtByTarget(EntityTameable p_i1667_1_) : base(p_i1667_1_, false)
 		{

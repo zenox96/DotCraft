@@ -27,7 +27,7 @@ namespace DotCraftCore.Block
 		private static bool field_149934_M;
 		private IIcon field_149935_N;
 		private IIcon field_149936_O;
-		private const string __OBFID = "CL_00000248";
+		
 
 		protected internal BlockFurnace(bool p_i45407_1_) : base(Material.rock)
 		{

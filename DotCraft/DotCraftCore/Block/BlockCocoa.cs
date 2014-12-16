@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 	public class BlockCocoa : BlockDirectional, IGrowable
 	{
 		private IIcon[] field_149989_a;
-		private const string __OBFID = "CL_00000216";
+		
 
 		public BlockCocoa() : base(Material.plants)
 		{

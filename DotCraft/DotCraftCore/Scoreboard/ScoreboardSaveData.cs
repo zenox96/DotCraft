@@ -15,7 +15,7 @@ namespace DotCraftCore.Scoreboard
 		private static readonly Logger logger = LogManager.Logger;
 		private Scoreboard theScoreboard;
 		private NBTTagCompound field_96506_b;
-		private const string __OBFID = "CL_00000620";
+		
 
 		public ScoreboardSaveData() : this("scoreboard")
 		{

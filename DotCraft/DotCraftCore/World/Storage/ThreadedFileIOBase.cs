@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Storage
 		private volatile long writeQueuedCounter;
 		private volatile long savedIOCounter;
 		private volatile bool isThreadWaiting;
-		private const string __OBFID = "CL_00000605";
+		
 
 		private ThreadedFileIOBase()
 		{

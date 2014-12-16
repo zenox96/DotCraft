@@ -17,7 +17,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148969_d;
 		private int field_148970_e;
 		private string field_148968_f;
-		private const string __OBFID = "CL_00001280";
+		
 
 		public S10PacketSpawnPainting()
 		{

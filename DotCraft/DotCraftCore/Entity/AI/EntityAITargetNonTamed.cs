@@ -8,7 +8,7 @@ namespace DotCraftCore.Entity.AI
 	public class EntityAITargetNonTamed : EntityAINearestAttackableTarget
 	{
 		private EntityTameable theTameable;
-		private const string __OBFID = "CL_00001623";
+		
 
 		public EntityAITargetNonTamed(EntityTameable p_i1666_1_, Type p_i1666_2_, int p_i1666_3_, bool p_i1666_4_) : base(p_i1666_1_, p_i1666_2_, p_i1666_3_, p_i1666_4_)
 		{

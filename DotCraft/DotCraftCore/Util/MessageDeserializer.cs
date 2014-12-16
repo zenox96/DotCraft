@@ -22,7 +22,7 @@ namespace DotCraftCore.Util
 		private static readonly Logger logger = LogManager.Logger;
 		private static readonly Marker field_150799_b = MarkerManager.getMarker("PACKET_RECEIVED", NetworkManager.logMarkerPackets);
 		private readonly NetworkStatistics field_152499_c;
-		private const string __OBFID = "CL_00001252";
+		
 
 		public MessageDeserializer(NetworkStatistics p_i1183_1_)
 		{

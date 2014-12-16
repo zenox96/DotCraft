@@ -19,7 +19,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandSummon : CommandBase
 	{
-		private const string __OBFID = "CL_00001158";
+		
 
 		public virtual string CommandName
 		{

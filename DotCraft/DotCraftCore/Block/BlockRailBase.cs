@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockRailBase : Block
 	{
 		protected internal readonly bool field_150053_a;
-		private const string __OBFID = "CL_00000195";
+		
 
 		public static bool func_150049_b_(World p_150049_0_, int p_150049_1_, int p_150049_2_, int p_150049_3_)
 		{
@@ -222,7 +222,7 @@ namespace DotCraftCore.Block
 			private int field_150659_e;
 			private readonly bool field_150656_f;
 			private IList field_150657_g = new ArrayList();
-			private const string __OBFID = "CL_00000196";
+			
 
 			public Rail(World p_i45388_2_, int p_i45388_3_, int p_i45388_4_, int p_i45388_5_)
 			{

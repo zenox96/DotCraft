@@ -13,7 +13,7 @@ namespace DotCraftCore.Item
 
 	public class ItemLead : Item
 	{
-		private const string __OBFID = "CL_00000045";
+		
 
 		public ItemLead()
 		{

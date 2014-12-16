@@ -6,7 +6,7 @@ namespace DotCraftCore.Dispenser
 		protected internal readonly double x;
 		protected internal readonly double y;
 		protected internal readonly double z;
-		private const string __OBFID = "CL_00001208";
+		
 
 		public PositionImpl(double p_i1368_1_, double p_i1368_3_, double p_i1368_5_)
 		{

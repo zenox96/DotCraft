@@ -14,7 +14,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	/// <summary> The number of blocks to generate.  </summary>
 		private int numberOfBlocks;
-		private const string __OBFID = "CL_00000405";
+		
 
 		public WorldGenClay(int p_i2011_1_)
 		{

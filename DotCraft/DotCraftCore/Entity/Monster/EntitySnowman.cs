@@ -22,7 +22,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public class EntitySnowman : EntityGolem, IRangedAttackMob
 	{
-		private const string __OBFID = "CL_00001650";
+		
 
 		public EntitySnowman(World p_i1692_1_) : base(p_i1692_1_)
 		{

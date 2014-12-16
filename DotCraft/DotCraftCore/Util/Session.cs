@@ -13,7 +13,7 @@ namespace DotCraftCore.Util
 		private readonly string playerID;
 		private readonly string token;
 		private readonly Session.Type field_152429_d;
-		private const string __OBFID = "CL_00000659";
+		
 
 		public Session(string p_i1098_1_, string p_i1098_2_, string p_i1098_3_, string p_i1098_4_)
 		{
@@ -86,7 +86,7 @@ namespace DotCraftCore.Util
 
 			@private static final Session.Type[] $VALUES = new Session.Type[]{LEGACY, MOJANG
 		}
-			private const string __OBFID = "CL_00001851";
+			
 
 			private Type(string p_i1096_1_, int p_i1096_2_, string p_i1096_3_)
 			{

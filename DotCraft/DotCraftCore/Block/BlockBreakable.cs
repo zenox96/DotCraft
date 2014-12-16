@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 	{
 		private bool field_149996_a;
 		private string field_149995_b;
-		private const string __OBFID = "CL_00000254";
+		
 
 		protected internal BlockBreakable(string p_i45411_1_, Material p_i45411_2_, bool p_i45411_3_) : base(p_i45411_2_)
 		{

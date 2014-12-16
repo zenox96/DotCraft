@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 	public class ItemReed : Item
 	{
 		private Block field_150935_a;
-		private const string __OBFID = "CL_00001773";
+		
 
 		public ItemReed(Block p_i45329_1_)
 		{

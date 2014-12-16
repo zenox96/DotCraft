@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.AI
 	{
 		private EntityCreature entityObj;
 		private VillageDoorInfo frontDoor;
-		private const string __OBFID = "CL_00001610";
+		
 
 		public EntityAIRestrictOpenDoor(EntityCreature p_i1651_1_)
 		{

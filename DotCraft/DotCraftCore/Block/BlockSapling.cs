@@ -26,7 +26,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly string[] field_149882_a = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "roofed_oak"};
 		private static readonly IIcon[] field_149881_b = new IIcon[field_149882_a.Length];
-		private const string __OBFID = "CL_00000305";
+		
 
 		protected internal BlockSapling()
 		{

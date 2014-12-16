@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Client
 		private int field_149591_b;
 		private int field_149592_c;
 		private string[] field_149590_d;
-		private const string __OBFID = "CL_00001370";
+		
 
 		public C12PacketUpdateSign()
 		{

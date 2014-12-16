@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 
 	public class ItemFirework : Item
 	{
-		private const string __OBFID = "CL_00000031";
+		
 
 ///    
 ///     <summary> * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return

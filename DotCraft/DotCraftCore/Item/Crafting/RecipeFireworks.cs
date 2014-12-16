@@ -15,7 +15,7 @@ namespace DotCraftCore.Item.Crafting
 	public class RecipeFireworks : IRecipe
 	{
 		private ItemStack field_92102_a;
-		private const string __OBFID = "CL_00000083";
+		
 
 ///    
 ///     <summary> * Used to check if a recipe matches current crafting inventory </summary>

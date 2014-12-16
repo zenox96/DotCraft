@@ -14,7 +14,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEnderEye : Item
 	{
-		private const string __OBFID = "CL_00000026";
+		
 
 		public ItemEnderEye()
 		{

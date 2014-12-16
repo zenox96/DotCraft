@@ -12,7 +12,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenMegaPineTree : WorldGenHugeTrees
 	{
 		private bool field_150542_e;
-		private const string __OBFID = "CL_00000421";
+		
 
 		public WorldGenMegaPineTree(bool p_i45457_1_, bool p_i45457_2_) : base(p_i45457_1_, 13, 15, 1, 1)
 		{

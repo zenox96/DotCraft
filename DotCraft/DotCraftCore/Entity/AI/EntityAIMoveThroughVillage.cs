@@ -20,7 +20,7 @@ namespace DotCraftCore.Entity.AI
 		private VillageDoorInfo doorInfo;
 		private bool isNocturnal;
 		private IList doorList = new ArrayList();
-		private const string __OBFID = "CL_00001597";
+		
 
 		public EntityAIMoveThroughVillage(EntityCreature p_i1638_1_, double p_i1638_2_, bool p_i1638_4_)
 		{

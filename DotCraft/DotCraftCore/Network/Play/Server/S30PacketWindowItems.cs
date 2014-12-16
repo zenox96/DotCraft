@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private int field_148914_a;
 		private ItemStack[] field_148913_b;
-		private const string __OBFID = "CL_00001294";
+		
 
 		public S30PacketWindowItems()
 		{

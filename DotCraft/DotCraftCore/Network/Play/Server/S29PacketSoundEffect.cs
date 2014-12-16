@@ -15,7 +15,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149215_d;
 		private float field_149216_e;
 		private int field_149214_f;
-		private const string __OBFID = "CL_00001309";
+		
 
 		public S29PacketSoundEffect()
 		{

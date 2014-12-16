@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity.AI
 		internal EntityLiving theEntity;
 		internal EntityLivingBase theVictim;
 		internal int attackCountdown;
-		private const string __OBFID = "CL_00001600";
+		
 
 		public EntityAIOcelotAttack(EntityLiving p_i1641_1_)
 		{

@@ -9,7 +9,7 @@ namespace DotCraftCore.Dispenser
 
 	public class BehaviorDefaultDispenseItem : IBehaviorDispenseItem
 	{
-		private const string __OBFID = "CL_00001195";
+		
 
 ///    
 ///     <summary> * Dispenses the specified ItemStack from a dispenser. </summary>

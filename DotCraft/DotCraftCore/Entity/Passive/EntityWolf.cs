@@ -50,7 +50,7 @@ namespace DotCraftCore.Entity.Passive
 ///     
 		private float timeWolfIsShaking;
 		private float prevTimeWolfIsShaking;
-		private const string __OBFID = "CL_00001654";
+		
 
 		public EntityWolf(World p_i1696_1_) : base(p_i1696_1_)
 		{

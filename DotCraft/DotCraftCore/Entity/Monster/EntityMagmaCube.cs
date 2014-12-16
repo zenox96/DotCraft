@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public class EntityMagmaCube : EntitySlime
 	{
-		private const string __OBFID = "CL_00001691";
+		
 
 		public EntityMagmaCube(World p_i1737_1_) : base(p_i1737_1_)
 		{

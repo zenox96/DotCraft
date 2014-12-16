@@ -9,7 +9,7 @@ namespace DotCraftCore.NBT
 
 	public class CompressedStreamTools
 	{
-		private const string __OBFID = "CL_00001226";
+		
 
 ///    
 ///     <summary> * Load the gzipped compound from the inputstream. </summary>

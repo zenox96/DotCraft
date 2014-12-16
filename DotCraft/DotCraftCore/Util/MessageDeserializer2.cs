@@ -12,7 +12,7 @@ namespace DotCraftCore.Util
 
 	public class MessageDeserializer2 : ByteToMessageDecoder
 	{
-		private const string __OBFID = "CL_00001255";
+		
 
 		protected internal virtual void decode(ChannelHandlerContext p_decode_1_, ByteBuf p_decode_2_, IList p_decode_3_)
 		{

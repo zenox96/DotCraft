@@ -22,7 +22,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandScoreboard : CommandBase
 	{
-		private const string __OBFID = "CL_00000896";
+		
 
 		public virtual string CommandName
 		{

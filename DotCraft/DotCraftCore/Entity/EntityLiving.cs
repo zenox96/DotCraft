@@ -76,7 +76,7 @@ namespace DotCraftCore.Entity
 		private bool isLeashed;
 		private Entity leashedToEntity;
 		private NBTTagCompound field_110170_bx;
-		private const string __OBFID = "CL_00001550";
+		
 
 		public EntityLiving(World p_i1595_1_) : base(p_i1595_1_)
 		{

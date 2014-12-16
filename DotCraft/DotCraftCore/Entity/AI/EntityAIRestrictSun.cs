@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.AI
 	public class EntityAIRestrictSun : EntityAIBase
 	{
 		private EntityCreature theEntity;
-		private const string __OBFID = "CL_00001611";
+		
 
 		public EntityAIRestrictSun(EntityCreature p_i1652_1_)
 		{

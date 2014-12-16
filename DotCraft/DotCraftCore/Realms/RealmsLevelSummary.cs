@@ -6,7 +6,7 @@ namespace DotCraftCore.Realms
 	public class RealmsLevelSummary : Comparable
 	{
 		private SaveFormatComparator levelSummary;
-		private const string __OBFID = "CL_00001857";
+		
 
 		public RealmsLevelSummary(SaveFormatComparator p_i1109_1_)
 		{

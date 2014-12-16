@@ -164,7 +164,7 @@ namespace DotCraftCore.Entity.Player
 ///     <summary> * An instance of a fishing rod's hook. If this isn't null, the icon image of the fishing rod is slightly different </summary>
 ///     
 		public EntityFishHook fishEntity;
-		private const string __OBFID = "CL_00001711";
+		
 
 		public EntityPlayer(World p_i45324_1_, GameProfile p_i45324_2_) : base(p_i45324_1_)
 		{
@@ -2488,7 +2488,7 @@ namespace DotCraftCore.Entity.Player
 
 			@private static final EntityPlayer.EnumChatVisibility[] $VALUES = new EntityPlayer.EnumChatVisibility[]{FULL, SYSTEM, HIDDEN
 		}
-			private const string __OBFID = "CL_00001714";
+			
 
 			private EnumChatVisibility(string p_i45323_1_, int p_i45323_2_, int p_i45323_3_, string p_i45323_4_)
 			{
@@ -2548,7 +2548,7 @@ namespace DotCraftCore.Entity.Player
 			@private static final EntityPlayer.EnumStatus[] $VALUES = new EntityPlayer.EnumStatus[]{OK, NOT_POSSIBLE_HERE, NOT_POSSIBLE_NOW, TOO_FAR_AWAY, OTHER_PROBLEM, NOT_SAFE
 		}
 //JAVA TO VB & C# CONVERTER TODO TASK: The following line could not be converted:
-			private static final String __OBFID = "CL_00001712";
+			
 
 //JAVA TO VB & C# CONVERTER TODO TASK: The following line could not be converted:
 			private EnumStatus(String p_i1751_1_, int p_i1751_2_)

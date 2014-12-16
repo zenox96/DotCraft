@@ -17,7 +17,7 @@ namespace DotCraftCore.Network
 	{
 		private static readonly Logger logger = LogManager.Logger;
 		private NetworkSystem field_151257_b;
-		private const string __OBFID = "CL_00001444";
+		
 
 		public PingResponseHandler(NetworkSystem p_i45286_1_)
 		{

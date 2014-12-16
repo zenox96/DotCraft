@@ -15,7 +15,7 @@ namespace DotCraftCore.Item
 	{
 		public static readonly string[] bowPullIconNameArray = new string[] {"pulling_0", "pulling_1", "pulling_2"};
 		private IIcon[] iconArray;
-		private const string __OBFID = "CL_00001777";
+		
 
 		public ItemBow()
 		{

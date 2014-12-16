@@ -8,7 +8,7 @@ namespace DotCraftCore.Util
 	public class EntityDamageSourceIndirect : EntityDamageSource
 	{
 		private Entity indirectEntity;
-		private const string __OBFID = "CL_00001523";
+		
 
 		public EntityDamageSourceIndirect(string p_i1568_1_, Entity p_i1568_2_, Entity p_i1568_3_) : base(p_i1568_1_, p_i1568_2_)
 		{

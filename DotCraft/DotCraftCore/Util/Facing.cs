@@ -23,7 +23,7 @@ namespace DotCraftCore.Util
 ///     
 		public static readonly int[] offsetsZForSide = new int[] {0, 0, -1, 1, 0, 0};
 		public static readonly string[] facings = new string[] {"DOWN", "UP", "NORTH", "SOUTH", "WEST", "EAST"};
-		private const string __OBFID = "CL_00001532";
+		
 	}
 
 }

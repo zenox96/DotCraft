@@ -9,7 +9,7 @@ namespace DotCraftCore.Block
 
 	public class BlockMushroom : BlockBush, IGrowable
 	{
-		private const string __OBFID = "CL_00000272";
+		
 
 		protected internal BlockMushroom()
 		{

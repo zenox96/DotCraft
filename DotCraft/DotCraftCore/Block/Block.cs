@@ -1,56 +1,50 @@
-﻿using System;
+﻿using DotCraftCore.CreativeTab;
+using DotCraftCore.Util;
+using System;
 using System.Collections;
 
 namespace DotCraftCore.Block
 {
-    using IIconRegister = DotCraftCore.Client.renderer.texture.IIconRegister;
-    using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-    using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-    using Entity = DotCraftCore.Entity.Entity;
-    using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-    using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-    using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-    using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
     using Item = DotCraftCore.Item.Item;
-    using ItemStack = DotCraftCore.Item.ItemStack;
-    using StatList = DotCraftCore.Stats.StatList;
-    using TileEntitySign = DotCraftCore.TileEntity.TileEntitySign;
-    using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-    using IIcon = DotCraftCore.Util.IIcon;
-    using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-    using RegistryNamespaced = DotCraftCore.Util.RegistryNamespaced;
-    using RegistryNamespacedDefaultedByKey = DotCraftCore.Util.RegistryNamespacedDefaultedByKey;
-    using StatCollector = DotCraftCore.Util.StatCollector;
-    using Vec3 = DotCraftCore.Util.Vec3;
-    using Explosion = DotCraftCore.World.Explosion;
-    using IBlockAccess = DotCraftCore.World.IBlockAccess;
-    using World = DotCraftCore.World.World;
-
+    
     public class Block
     {
         public static readonly RegistryNamespaced blockRegistry = new RegistryNamespacedDefaultedByKey("air");
         private CreativeTabs displayOnCreativeTab;
         protected internal string textureName;
-        public static readonly Block.SoundType soundTypeStone = new Block.SoundType("stone", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeStone = new SoundType("stone", 1.0F, 1.0F);
 
         /// <summary> the wood sound type  </summary>
-        public static readonly Block.SoundType soundTypeWood = new Block.SoundType("wood", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeWood = new SoundType("wood", 1.0F, 1.0F);
 
         /// <summary> the gravel sound type  </summary>
-        public static readonly Block.SoundType soundTypeGravel = new Block.SoundType("gravel", 1.0F, 1.0F);
-        public static readonly Block.SoundType soundTypeGrass = new Block.SoundType("grass", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeGravel = new SoundType("gravel", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeGrass = new SoundType("grass", 1.0F, 1.0F);
 
         /// <summary> The piston step sound  </summary>
-        public static readonly Block.SoundType soundTypePiston = new Block.SoundType("stone", 1.0F, 1.0F);
+        public static readonly SoundType soundTypePiston = new SoundType("stone", 1.0F, 1.0F);
 
         /// <summary> The metal sound type  </summary>
-        public static readonly Block.SoundType soundTypeMetal = new Block.SoundType("stone", 1.0F, 1.5F);
+        public static readonly SoundType soundTypeMetal = new SoundType("stone", 1.0F, 1.5F);
+
+        /*public static readonly SoundType soundTypeGlass = new SoundType("stone", 1.0F, 1.0F)
+    	{
+        		
+        	public String func_150495_a()
+        	{
+        		return "dig.glass";
+        	}
+        	public String func_150496_b()
+        	{
+        		return "step.stone";
+        	}
+        };*/
 
         /// <summary> Glass footsteps  </summary>
         //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final Block.SoundType soundTypeGlass = new Block.SoundType("stone", 1.0F, 1.0F)
+        //		public static final SoundType soundTypeGlass = new SoundType("stone", 1.0F, 1.0F)
         //	{
-        //		private static final String __OBFID = "CL_00000200";
+        //		
         //		public String func_150495_a()
         //		{
         //			return "dig.glass";
@@ -62,15 +56,15 @@ namespace DotCraftCore.Block
         //	};
 
         /// <summary> Sound for cloth and carpets  </summary>
-        public static readonly Block.SoundType soundTypeCloth = new Block.SoundType("cloth", 1.0F, 1.0F);
-        public static readonly Block.SoundType field_149776_m = new Block.SoundType("sand", 1.0F, 1.0F);
-        public static readonly Block.SoundType soundTypeSnow = new Block.SoundType("snow", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeCloth = new SoundType("cloth", 1.0F, 1.0F);
+        public static readonly SoundType field_149776_m = new SoundType("sand", 1.0F, 1.0F);
+        public static readonly SoundType soundTypeSnow = new SoundType("snow", 1.0F, 1.0F);
 
         /// <summary> The ladder sound type  </summary>
         //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final Block.SoundType soundTypeLadder = new Block.SoundType("ladder", 1.0F, 1.0F)
+        //		public static final SoundType soundTypeLadder = new SoundType("ladder", 1.0F, 1.0F)
         //	{
-        //		private static final String __OBFID = "CL_00000201";
+        //		
         //		public String func_150495_a()
         //		{
         //			return "dig.wood";
@@ -79,9 +73,9 @@ namespace DotCraftCore.Block
 
         /// <summary> The anvil sound type  </summary>
         //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-        //		public static final Block.SoundType soundTypeAnvil = new Block.SoundType("anvil", 0.3F, 1.0F)
+        //		public static final SoundType soundTypeAnvil = new SoundType("anvil", 0.3F, 1.0F)
         //	{
-        //		private static final String __OBFID = "CL_00000202";
+        //		
         //		public String func_150495_a()
         //		{
         //			return "dig.stone";
@@ -123,7 +117,7 @@ namespace DotCraftCore.Block
         protected internal double field_149757_G;
 
         /// <summary> Sound of stepping on the block  </summary>
-        public Block.SoundType stepSound;
+        public SoundType stepSound;
         public float blockParticleGravity;
         protected internal readonly Material.Material blockMaterial;
 
@@ -132,7 +126,7 @@ namespace DotCraftCore.Block
         ///     
         public float slipperiness;
         protected internal IIcon blockIcon;
-        private const string __OBFID = "CL_00000199";
+        
 
         public static int getIdFromBlock(Block p_149682_0_)
         {
@@ -157,14 +151,7 @@ namespace DotCraftCore.Block
             }
             else
             {
-                try
-                {
-                    return (Block)blockRegistry.getObjectForID(Convert.ToInt32(p_149684_0_));
-                }
-                catch (NumberFormatException var2)
-                {
-                    return null;
-                }
+                return (Block)blockRegistry.getObjectForID(Convert.ToInt32(p_149684_0_));
             }
         }
 
@@ -182,7 +169,6 @@ namespace DotCraftCore.Block
             set
             {
                 this.lightOpacity = value;
-                return this;
             }
         }
 
@@ -207,7 +193,7 @@ namespace DotCraftCore.Block
             return this.field_149783_u;
         }
 
-        public virtual Material BlockMaterial
+        public virtual Material.Material BlockMaterial
         {
             get
             {
@@ -215,27 +201,27 @@ namespace DotCraftCore.Block
             }
         }
 
-        public virtual MapColor getMapColor(int p_149728_1_)
+        public virtual Material.MapColor getMapColor(int p_149728_1_)
         {
             return this.BlockMaterial.MaterialMapColor;
         }
 
         public static void registerBlocks( )
         {
-            blockRegistry.addObject(0, "air", new BlockAir( ));
+            blockRegistry.addObject(0, "air", (new BlockAir( )).setBlockName("air"));
             blockRegistry.addObject(1, "stone", (new BlockStone( )).setHardness(1.5F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stone").setBlockTextureName("stone"));
             blockRegistry.addObject(2, "grass", (new BlockGrass( )).setHardness(0.6F).setStepSound(soundTypeGrass).setBlockName("grass").setBlockTextureName("grass"));
             blockRegistry.addObject(3, "dirt", (new BlockDirt( )).setHardness(0.5F).setStepSound(soundTypeGravel).setBlockName("dirt").setBlockTextureName("dirt"));
-            Block var0 = (new Block(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stonebrick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("cobblestone");
+            Block var0 = (new Block(Material.Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stonebrick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("cobblestone");
             blockRegistry.addObject(4, "cobblestone", var0);
             Block var1 = (new BlockWood( )).setHardness(2.0F).setResistance(5.0F).setStepSound(soundTypeWood).setBlockName("wood").setBlockTextureName("planks");
             blockRegistry.addObject(5, "planks", var1);
             blockRegistry.addObject(6, "sapling", (new BlockSapling( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("sapling").setBlockTextureName("sapling"));
-            blockRegistry.addObject(7, "bedrock", (new Block(Material.rock)).setBlockUnbreakable( ).setResistance(6000000.0F).setStepSound(soundTypePiston).setBlockName("bedrock").disableStats( ).setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("bedrock"));
-            blockRegistry.addObject(8, "flowing_water", (new BlockDynamicLiquid(Material.water)).setHardness(100.0F).setLightOpacity(3).setBlockName("water").disableStats( ).setBlockTextureName("water_flow"));
-            blockRegistry.addObject(9, "water", (new BlockStaticLiquid(Material.water)).setHardness(100.0F).setLightOpacity(3).setBlockName("water").disableStats( ).setBlockTextureName("water_still"));
-            blockRegistry.addObject(10, "flowing_lava", (new BlockDynamicLiquid(Material.lava)).setHardness(100.0F).setLightLevel(1.0F).setBlockName("lava").disableStats( ).setBlockTextureName("lava_flow"));
-            blockRegistry.addObject(11, "lava", (new BlockStaticLiquid(Material.lava)).setHardness(100.0F).setLightLevel(1.0F).setBlockName("lava").disableStats( ).setBlockTextureName("lava_still"));
+            blockRegistry.addObject(7, "bedrock", (new Block(Material.Material.rock)).setBlockUnbreakable( ).setResistance(6000000.0F).setStepSound(soundTypePiston).setBlockName("bedrock").disableStats( ).setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("bedrock"));
+            blockRegistry.addObject(8, "flowing_water", (new BlockDynamicLiquid(Material.Material.water)).setHardness(100.0F).setLightOpacity(3).setBlockName("water").disableStats( ).setBlockTextureName("water_flow"));
+            blockRegistry.addObject(9, "water", (new BlockStaticLiquid(Material.Material.water)).setHardness(100.0F).setLightOpacity(3).setBlockName("water").disableStats( ).setBlockTextureName("water_still"));
+            blockRegistry.addObject(10, "flowing_lava", (new BlockDynamicLiquid(Material.Material.lava)).setHardness(100.0F).setLightLevel(1.0F).setBlockName("lava").disableStats( ).setBlockTextureName("lava_flow"));
+            blockRegistry.addObject(11, "lava", (new BlockStaticLiquid(Material.Material.lava)).setHardness(100.0F).setLightLevel(1.0F).setBlockName("lava").disableStats( ).setBlockTextureName("lava_still"));
             blockRegistry.addObject(12, "sand", (new BlockSand( )).setHardness(0.5F).setStepSound(field_149776_m).setBlockName("sand").setBlockTextureName("sand"));
             blockRegistry.addObject(13, "gravel", (new BlockGravel( )).setHardness(0.6F).setStepSound(soundTypeGravel).setBlockName("gravel").setBlockTextureName("gravel"));
             blockRegistry.addObject(14, "gold_ore", (new BlockOre( )).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("oreGold").setBlockTextureName("gold_ore"));
@@ -244,7 +230,7 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(17, "log", (new BlockOldLog( )).setBlockName("log").setBlockTextureName("log"));
             blockRegistry.addObject(18, "leaves", (new BlockOldLeaf( )).setBlockName("leaves").setBlockTextureName("leaves"));
             blockRegistry.addObject(19, "sponge", (new BlockSponge( )).setHardness(0.6F).setStepSound(soundTypeGrass).setBlockName("sponge").setBlockTextureName("sponge"));
-            blockRegistry.addObject(20, "glass", (new BlockGlass(Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("glass").setBlockTextureName("glass"));
+            blockRegistry.addObject(20, "glass", (new BlockGlass(Material.Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("glass").setBlockTextureName("glass"));
             blockRegistry.addObject(21, "lapis_ore", (new BlockOre( )).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("oreLapis").setBlockTextureName("lapis_ore"));
             blockRegistry.addObject(22, "lapis_block", (new BlockCompressed(MapColor.field_151652_H)).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("blockLapis").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("lapis_block"));
             blockRegistry.addObject(23, "dispenser", (new BlockDispenser( )).setHardness(3.5F).setStepSound(soundTypePiston).setBlockName("dispenser").setBlockTextureName("dispenser"));
@@ -260,21 +246,21 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(32, "deadbush", (new BlockDeadBush( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("deadbush").setBlockTextureName("deadbush"));
             blockRegistry.addObject(33, "piston", (new BlockPistonBase(false)).setBlockName("pistonBase"));
             blockRegistry.addObject(34, "piston_head", new BlockPistonExtension( ));
-            blockRegistry.addObject(35, "wool", (new BlockColored(Material.cloth)).setHardness(0.8F).setStepSound(soundTypeCloth).setBlockName("cloth").setBlockTextureName("wool_colored"));
+            blockRegistry.addObject(35, "wool", (new BlockColored(Material.Material.cloth)).setHardness(0.8F).setStepSound(soundTypeCloth).setBlockName("cloth").setBlockTextureName("wool_colored"));
             blockRegistry.addObject(36, "piston_extension", new BlockPistonMoving( ));
             blockRegistry.addObject(37, "yellow_flower", (new BlockFlower(0)).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("flower1").setBlockTextureName("flower_dandelion"));
             blockRegistry.addObject(38, "red_flower", (new BlockFlower(1)).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("flower2").setBlockTextureName("flower_rose"));
             blockRegistry.addObject(39, "brown_mushroom", (new BlockMushroom( )).setHardness(0.0F).setStepSound(soundTypeGrass).setLightLevel(0.125F).setBlockName("mushroom").setBlockTextureName("mushroom_brown"));
             blockRegistry.addObject(40, "red_mushroom", (new BlockMushroom( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("mushroom").setBlockTextureName("mushroom_red"));
-            blockRegistry.addObject(41, "gold_block", (new BlockCompressed(MapColor.field_151647_F)).setHardness(3.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockGold").setBlockTextureName("gold_block"));
-            blockRegistry.addObject(42, "iron_block", (new BlockCompressed(MapColor.field_151668_h)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockIron").setBlockTextureName("iron_block"));
+            blockRegistry.addObject(41, "gold_block", (new BlockCompressed(Material.MapColor.field_151647_F)).setHardness(3.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockGold").setBlockTextureName("gold_block"));
+            blockRegistry.addObject(42, "iron_block", (new BlockCompressed(Material.MapColor.field_151668_h)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockIron").setBlockTextureName("iron_block"));
             blockRegistry.addObject(43, "double_stone_slab", (new BlockStoneSlab(true)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stoneSlab"));
             blockRegistry.addObject(44, "stone_slab", (new BlockStoneSlab(false)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stoneSlab"));
-            Block var3 = (new Block(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("brick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("brick");
+            Block var3 = (new Block(Material.Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("brick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("brick");
             blockRegistry.addObject(45, "brick_block", var3);
             blockRegistry.addObject(46, "tnt", (new BlockTNT( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("tnt").setBlockTextureName("tnt"));
             blockRegistry.addObject(47, "bookshelf", (new BlockBookshelf( )).setHardness(1.5F).setStepSound(soundTypeWood).setBlockName("bookshelf").setBlockTextureName("bookshelf"));
-            blockRegistry.addObject(48, "mossy_cobblestone", (new Block(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stoneMoss").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("cobblestone_mossy"));
+            blockRegistry.addObject(48, "mossy_cobblestone", (new Block(Material.Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stoneMoss").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("cobblestone_mossy"));
             blockRegistry.addObject(49, "obsidian", (new BlockObsidian( )).setHardness(50.0F).setResistance(2000.0F).setStepSound(soundTypePiston).setBlockName("obsidian").setBlockTextureName("obsidian"));
             blockRegistry.addObject(50, "torch", (new BlockTorch( )).setHardness(0.0F).setLightLevel(0.9375F).setStepSound(soundTypeWood).setBlockName("torch").setBlockTextureName("torch_on"));
             blockRegistry.addObject(51, "fire", (new BlockFire( )).setHardness(0.0F).setLightLevel(1.0F).setStepSound(soundTypeWood).setBlockName("fire").disableStats( ).setBlockTextureName("fire"));
@@ -283,7 +269,7 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(54, "chest", (new BlockChest(0)).setHardness(2.5F).setStepSound(soundTypeWood).setBlockName("chest"));
             blockRegistry.addObject(55, "redstone_wire", (new BlockRedstoneWire( )).setHardness(0.0F).setStepSound(soundTypeStone).setBlockName("redstoneDust").disableStats( ).setBlockTextureName("redstone_dust"));
             blockRegistry.addObject(56, "diamond_ore", (new BlockOre( )).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("oreDiamond").setBlockTextureName("diamond_ore"));
-            blockRegistry.addObject(57, "diamond_block", (new BlockCompressed(MapColor.field_151648_G)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockDiamond").setBlockTextureName("diamond_block"));
+            blockRegistry.addObject(57, "diamond_block", (new BlockCompressed(Material.MapColor.field_151648_G)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockDiamond").setBlockTextureName("diamond_block"));
             blockRegistry.addObject(58, "crafting_table", (new BlockWorkbench( )).setHardness(2.5F).setStepSound(soundTypeWood).setBlockName("workbench").setBlockTextureName("crafting_table"));
             blockRegistry.addObject(59, "wheat", (new BlockCrops( )).setBlockName("crops").setBlockTextureName("wheat"));
             Block var4 = (new BlockFarmland( )).setHardness(0.6F).setStepSound(soundTypeGravel).setBlockName("farmland").setBlockTextureName("farmland");
@@ -291,14 +277,14 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(61, "furnace", (new BlockFurnace(false)).setHardness(3.5F).setStepSound(soundTypePiston).setBlockName("furnace").setCreativeTab(CreativeTabs.tabDecorations));
             blockRegistry.addObject(62, "lit_furnace", (new BlockFurnace(true)).setHardness(3.5F).setStepSound(soundTypePiston).setLightLevel(0.875F).setBlockName("furnace"));
             blockRegistry.addObject(63, "standing_sign", (new BlockSign(typeof(TileEntitySign), true)).setHardness(1.0F).setStepSound(soundTypeWood).setBlockName("sign").disableStats( ));
-            blockRegistry.addObject(64, "wooden_door", (new BlockDoor(Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setBlockName("doorWood").disableStats( ).setBlockTextureName("door_wood"));
+            blockRegistry.addObject(64, "wooden_door", (new BlockDoor(Material.Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setBlockName("doorWood").disableStats( ).setBlockTextureName("door_wood"));
             blockRegistry.addObject(65, "ladder", (new BlockLadder( )).setHardness(0.4F).setStepSound(soundTypeLadder).setBlockName("ladder").setBlockTextureName("ladder"));
             blockRegistry.addObject(66, "rail", (new BlockRail( )).setHardness(0.7F).setStepSound(soundTypeMetal).setBlockName("rail").setBlockTextureName("rail_normal"));
             blockRegistry.addObject(67, "stone_stairs", (new BlockStairs(var0, 0)).setBlockName("stairsStone"));
             blockRegistry.addObject(68, "wall_sign", (new BlockSign(typeof(TileEntitySign), false)).setHardness(1.0F).setStepSound(soundTypeWood).setBlockName("sign").disableStats( ));
             blockRegistry.addObject(69, "lever", (new BlockLever( )).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("lever").setBlockTextureName("lever"));
-            blockRegistry.addObject(70, "stone_pressure_plate", (new BlockPressurePlate("stone", Material.rock, BlockPressurePlate.Sensitivity.mobs)).setHardness(0.5F).setStepSound(soundTypePiston).setBlockName("pressurePlate"));
-            blockRegistry.addObject(71, "iron_door", (new BlockDoor(Material.iron)).setHardness(5.0F).setStepSound(soundTypeMetal).setBlockName("doorIron").disableStats( ).setBlockTextureName("door_iron"));
+            blockRegistry.addObject(70, "stone_pressure_plate", (new BlockPressurePlate("stone", Material.Material.rock, BlockPressurePlate.Sensitivity.mobs)).setHardness(0.5F).setStepSound(soundTypePiston).setBlockName("pressurePlate"));
+            blockRegistry.addObject(71, "iron_door", (new BlockDoor(Material.Material.iron)).setHardness(5.0F).setStepSound(soundTypeMetal).setBlockName("doorIron").disableStats( ).setBlockTextureName("door_iron"));
             blockRegistry.addObject(72, "wooden_pressure_plate", (new BlockPressurePlate("planks_oak", Material.wood, BlockPressurePlate.Sensitivity.everything)).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("pressurePlate"));
             blockRegistry.addObject(73, "redstone_ore", (new BlockRedstoneOre(false)).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("oreRedstone").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("redstone_ore"));
             blockRegistry.addObject(74, "lit_redstone_ore", (new BlockRedstoneOre(true)).setLightLevel(0.625F).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("oreRedstone").setBlockTextureName("redstone_ore"));
@@ -312,26 +298,26 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(82, "clay", (new BlockClay( )).setHardness(0.6F).setStepSound(soundTypeGravel).setBlockName("clay").setBlockTextureName("clay"));
             blockRegistry.addObject(83, "reeds", (new BlockReed( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("reeds").disableStats( ).setBlockTextureName("reeds"));
             blockRegistry.addObject(84, "jukebox", (new BlockJukebox( )).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("jukebox").setBlockTextureName("jukebox"));
-            blockRegistry.addObject(85, "fence", (new BlockFence("planks_oak", Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundTypeWood).setBlockName("fence"));
+            blockRegistry.addObject(85, "fence", (new BlockFence("planks_oak", Material.Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundTypeWood).setBlockName("fence"));
             Block var5 = (new BlockPumpkin(false)).setHardness(1.0F).setStepSound(soundTypeWood).setBlockName("pumpkin").setBlockTextureName("pumpkin");
             blockRegistry.addObject(86, "pumpkin", var5);
             blockRegistry.addObject(87, "netherrack", (new BlockNetherrack( )).setHardness(0.4F).setStepSound(soundTypePiston).setBlockName("hellrock").setBlockTextureName("netherrack"));
             blockRegistry.addObject(88, "soul_sand", (new BlockSoulSand( )).setHardness(0.5F).setStepSound(field_149776_m).setBlockName("hellsand").setBlockTextureName("soul_sand"));
-            blockRegistry.addObject(89, "glowstone", (new BlockGlowstone(Material.glass)).setHardness(0.3F).setStepSound(soundTypeGlass).setLightLevel(1.0F).setBlockName("lightgem").setBlockTextureName("glowstone"));
+            blockRegistry.addObject(89, "glowstone", (new BlockGlowstone(Material.Material.glass)).setHardness(0.3F).setStepSound(soundTypeGlass).setLightLevel(1.0F).setBlockName("lightgem").setBlockTextureName("glowstone"));
             blockRegistry.addObject(90, "portal", (new BlockPortal( )).setHardness(-1.0F).setStepSound(soundTypeGlass).setLightLevel(0.75F).setBlockName("portal").setBlockTextureName("portal"));
             blockRegistry.addObject(91, "lit_pumpkin", (new BlockPumpkin(true)).setHardness(1.0F).setStepSound(soundTypeWood).setLightLevel(1.0F).setBlockName("litpumpkin").setBlockTextureName("pumpkin"));
             blockRegistry.addObject(92, "cake", (new BlockCake( )).setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("cake").disableStats( ).setBlockTextureName("cake"));
             blockRegistry.addObject(93, "unpowered_repeater", (new BlockRedstoneRepeater(false)).setHardness(0.0F).setStepSound(soundTypeWood).setBlockName("diode").disableStats( ).setBlockTextureName("repeater_off"));
             blockRegistry.addObject(94, "powered_repeater", (new BlockRedstoneRepeater(true)).setHardness(0.0F).setLightLevel(0.625F).setStepSound(soundTypeWood).setBlockName("diode").disableStats( ).setBlockTextureName("repeater_on"));
-            blockRegistry.addObject(95, "stained_glass", (new BlockStainedGlass(Material.glass)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("stainedGlass").setBlockTextureName("glass"));
-            blockRegistry.addObject(96, "trapdoor", (new BlockTrapDoor(Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setBlockName("trapdoor").disableStats( ).setBlockTextureName("trapdoor"));
+            blockRegistry.addObject(95, "stained_glass", (new BlockStainedGlass(Material.Material.glass)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("stainedGlass").setBlockTextureName("glass"));
+            blockRegistry.addObject(96, "trapdoor", (new BlockTrapDoor(Material.Material.wood)).setHardness(3.0F).setStepSound(soundTypeWood).setBlockName("trapdoor").disableStats( ).setBlockTextureName("trapdoor"));
             blockRegistry.addObject(97, "monster_egg", (new BlockSilverfish( )).setHardness(0.75F).setBlockName("monsterStoneEgg"));
             Block var6 = (new BlockStoneBrick( )).setHardness(1.5F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("stonebricksmooth").setBlockTextureName("stonebrick");
             blockRegistry.addObject(98, "stonebrick", var6);
-            blockRegistry.addObject(99, "brown_mushroom_block", (new BlockHugeMushroom(Material.wood, 0)).setHardness(0.2F).setStepSound(soundTypeWood).setBlockName("mushroom").setBlockTextureName("mushroom_block"));
-            blockRegistry.addObject(100, "red_mushroom_block", (new BlockHugeMushroom(Material.wood, 1)).setHardness(0.2F).setStepSound(soundTypeWood).setBlockName("mushroom").setBlockTextureName("mushroom_block"));
-            blockRegistry.addObject(101, "iron_bars", (new BlockPane("iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("fenceIron"));
-            blockRegistry.addObject(102, "glass_pane", (new BlockPane("glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("thinGlass"));
+            blockRegistry.addObject(99, "brown_mushroom_block", (new BlockHugeMushroom(Material.Material.wood, 0)).setHardness(0.2F).setStepSound(soundTypeWood).setBlockName("mushroom").setBlockTextureName("mushroom_block"));
+            blockRegistry.addObject(100, "red_mushroom_block", (new BlockHugeMushroom(Material.Material.wood, 1)).setHardness(0.2F).setStepSound(soundTypeWood).setBlockName("mushroom").setBlockTextureName("mushroom_block"));
+            blockRegistry.addObject(101, "iron_bars", (new BlockPane("iron_bars", "iron_bars", Material.Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("fenceIron"));
+            blockRegistry.addObject(102, "glass_pane", (new BlockPane("glass", "glass_pane_top", Material.Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("thinGlass"));
             Block var7 = (new BlockMelon( )).setHardness(1.0F).setStepSound(soundTypeWood).setBlockName("melon").setBlockTextureName("melon");
             blockRegistry.addObject(103, "melon_block", var7);
             blockRegistry.addObject(104, "pumpkin_stem", (new BlockStem(var5)).setHardness(0.0F).setStepSound(soundTypeWood).setBlockName("pumpkinStem").setBlockTextureName("pumpkin_stem"));
@@ -342,17 +328,17 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(109, "stone_brick_stairs", (new BlockStairs(var6, 0)).setBlockName("stairsStoneBrickSmooth"));
             blockRegistry.addObject(110, "mycelium", (new BlockMycelium( )).setHardness(0.6F).setStepSound(soundTypeGrass).setBlockName("mycel").setBlockTextureName("mycelium"));
             blockRegistry.addObject(111, "waterlily", (new BlockLilyPad( )).setHardness(0.0F).setStepSound(soundTypeGrass).setBlockName("waterlily").setBlockTextureName("waterlily"));
-            Block var8 = (new Block(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("netherBrick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("nether_brick");
+            Block var8 = (new Block(Material.Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("netherBrick").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("nether_brick");
             blockRegistry.addObject(112, "nether_brick", var8);
-            blockRegistry.addObject(113, "nether_brick_fence", (new BlockFence("nether_brick", Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("netherFence"));
+            blockRegistry.addObject(113, "nether_brick_fence", (new BlockFence("nether_brick", Material.Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("netherFence"));
             blockRegistry.addObject(114, "nether_brick_stairs", (new BlockStairs(var8, 0)).setBlockName("stairsNetherBrick"));
             blockRegistry.addObject(115, "nether_wart", (new BlockNetherWart( )).setBlockName("netherStalk").setBlockTextureName("nether_wart"));
             blockRegistry.addObject(116, "enchanting_table", (new BlockEnchantmentTable( )).setHardness(5.0F).setResistance(2000.0F).setBlockName("enchantmentTable").setBlockTextureName("enchanting_table"));
             blockRegistry.addObject(117, "brewing_stand", (new BlockBrewingStand( )).setHardness(0.5F).setLightLevel(0.125F).setBlockName("brewingStand").setBlockTextureName("brewing_stand"));
             blockRegistry.addObject(118, "cauldron", (new BlockCauldron( )).setHardness(2.0F).setBlockName("cauldron").setBlockTextureName("cauldron"));
-            blockRegistry.addObject(119, "end_portal", (new BlockEndPortal(Material.Portal)).setHardness(-1.0F).setResistance(6000000.0F));
+            blockRegistry.addObject(119, "end_portal", (new BlockEndPortal(Material.Material.Portal)).setHardness(-1.0F).setResistance(6000000.0F));
             blockRegistry.addObject(120, "end_portal_frame", (new BlockEndPortalFrame( )).setStepSound(soundTypeGlass).setLightLevel(0.125F).setHardness(-1.0F).setBlockName("endPortalFrame").setResistance(6000000.0F).setCreativeTab(CreativeTabs.tabDecorations).setBlockTextureName("endframe"));
-            blockRegistry.addObject(121, "end_stone", (new Block(Material.rock)).setHardness(3.0F).setResistance(15.0F).setStepSound(soundTypePiston).setBlockName("whiteStone").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("end_stone"));
+            blockRegistry.addObject(121, "end_stone", (new Block(Material.Material.rock)).setHardness(3.0F).setResistance(15.0F).setStepSound(soundTypePiston).setBlockName("whiteStone").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("end_stone"));
             blockRegistry.addObject(122, "dragon_egg", (new BlockDragonEgg( )).setHardness(3.0F).setResistance(15.0F).setStepSound(soundTypePiston).setLightLevel(0.125F).setBlockName("dragonEgg").setBlockTextureName("dragon_egg"));
             blockRegistry.addObject(123, "redstone_lamp", (new BlockRedstoneLight(false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("redstoneLight").setCreativeTab(CreativeTabs.tabRedstone).setBlockTextureName("redstone_lamp_off"));
             blockRegistry.addObject(124, "lit_redstone_lamp", (new BlockRedstoneLight(true)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("redstoneLight").setBlockTextureName("redstone_lamp_on"));
@@ -364,7 +350,7 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(130, "ender_chest", (new BlockEnderChest( )).setHardness(22.5F).setResistance(1000.0F).setStepSound(soundTypePiston).setBlockName("enderChest").setLightLevel(0.5F));
             blockRegistry.addObject(131, "tripwire_hook", (new BlockTripWireHook( )).setBlockName("tripWireSource").setBlockTextureName("trip_wire_source"));
             blockRegistry.addObject(132, "tripwire", (new BlockTripWire( )).setBlockName("tripWire").setBlockTextureName("trip_wire"));
-            blockRegistry.addObject(133, "emerald_block", (new BlockCompressed(MapColor.field_151653_I)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockEmerald").setBlockTextureName("emerald_block"));
+            blockRegistry.addObject(133, "emerald_block", (new BlockCompressed(Material.MapColor.field_151653_I)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockEmerald").setBlockTextureName("emerald_block"));
             blockRegistry.addObject(134, "spruce_stairs", (new BlockStairs(var1, 1)).setBlockName("stairsWoodSpruce"));
             blockRegistry.addObject(135, "birch_stairs", (new BlockStairs(var1, 2)).setBlockName("stairsWoodBirch"));
             blockRegistry.addObject(136, "jungle_stairs", (new BlockStairs(var1, 3)).setBlockName("stairsWoodJungle"));
@@ -378,12 +364,12 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(144, "skull", (new BlockSkull( )).setHardness(1.0F).setStepSound(soundTypePiston).setBlockName("skull").setBlockTextureName("skull"));
             blockRegistry.addObject(145, "anvil", (new BlockAnvil( )).setHardness(5.0F).setStepSound(soundTypeAnvil).setResistance(2000.0F).setBlockName("anvil"));
             blockRegistry.addObject(146, "trapped_chest", (new BlockChest(1)).setHardness(2.5F).setStepSound(soundTypeWood).setBlockName("chestTrap"));
-            blockRegistry.addObject(147, "light_weighted_pressure_plate", (new BlockPressurePlateWeighted("gold_block", Material.iron, 15)).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("weightedPlate_light"));
-            blockRegistry.addObject(148, "heavy_weighted_pressure_plate", (new BlockPressurePlateWeighted("iron_block", Material.iron, 150)).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("weightedPlate_heavy"));
+            blockRegistry.addObject(147, "light_weighted_pressure_plate", (new BlockPressurePlateWeighted("gold_block", Material.Material.iron, 15)).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("weightedPlate_light"));
+            blockRegistry.addObject(148, "heavy_weighted_pressure_plate", (new BlockPressurePlateWeighted("iron_block", Material.Material.iron, 150)).setHardness(0.5F).setStepSound(soundTypeWood).setBlockName("weightedPlate_heavy"));
             blockRegistry.addObject(149, "unpowered_comparator", (new BlockRedstoneComparator(false)).setHardness(0.0F).setStepSound(soundTypeWood).setBlockName("comparator").disableStats( ).setBlockTextureName("comparator_off"));
             blockRegistry.addObject(150, "powered_comparator", (new BlockRedstoneComparator(true)).setHardness(0.0F).setLightLevel(0.625F).setStepSound(soundTypeWood).setBlockName("comparator").disableStats( ).setBlockTextureName("comparator_on"));
             blockRegistry.addObject(151, "daylight_detector", (new BlockDaylightDetector( )).setHardness(0.2F).setStepSound(soundTypeWood).setBlockName("daylightDetector").setBlockTextureName("daylight_detector"));
-            blockRegistry.addObject(152, "redstone_block", (new BlockCompressedPowered(MapColor.field_151656_f)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockRedstone").setBlockTextureName("redstone_block"));
+            blockRegistry.addObject(152, "redstone_block", (new BlockCompressedPowered(Material.MapColor.field_151656_f)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("blockRedstone").setBlockTextureName("redstone_block"));
             blockRegistry.addObject(153, "quartz_ore", (new BlockOre( )).setHardness(3.0F).setResistance(5.0F).setStepSound(soundTypePiston).setBlockName("netherquartz").setBlockTextureName("quartz_ore"));
             blockRegistry.addObject(154, "hopper", (new BlockHopper( )).setHardness(3.0F).setResistance(8.0F).setStepSound(soundTypeWood).setBlockName("hopper").setBlockTextureName("hopper"));
             Block var9 = (new BlockQuartz( )).setStepSound(soundTypePiston).setHardness(0.8F).setBlockName("quartzBlock").setBlockTextureName("quartz_block");
@@ -391,7 +377,7 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(156, "quartz_stairs", (new BlockStairs(var9, 0)).setBlockName("stairsQuartz"));
             blockRegistry.addObject(157, "activator_rail", (new BlockRailPowered( )).setHardness(0.7F).setStepSound(soundTypeMetal).setBlockName("activatorRail").setBlockTextureName("rail_activator"));
             blockRegistry.addObject(158, "dropper", (new BlockDropper( )).setHardness(3.5F).setStepSound(soundTypePiston).setBlockName("dropper").setBlockTextureName("dropper"));
-            blockRegistry.addObject(159, "stained_hardened_clay", (new BlockColored(Material.rock)).setHardness(1.25F).setResistance(7.0F).setStepSound(soundTypePiston).setBlockName("clayHardenedStained").setBlockTextureName("hardened_clay_stained"));
+            blockRegistry.addObject(159, "stained_hardened_clay", (new BlockColored(Material.Material.rock)).setHardness(1.25F).setResistance(7.0F).setStepSound(soundTypePiston).setBlockName("clayHardenedStained").setBlockTextureName("hardened_clay_stained"));
             blockRegistry.addObject(160, "stained_glass_pane", (new BlockStainedGlassPane( )).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("thinStainedGlass").setBlockTextureName("glass"));
             blockRegistry.addObject(161, "leaves2", (new BlockNewLeaf( )).setBlockName("leaves").setBlockTextureName("leaves"));
             blockRegistry.addObject(162, "log2", (new BlockNewLog( )).setBlockName("log").setBlockTextureName("log"));
@@ -400,7 +386,7 @@ namespace DotCraftCore.Block
             blockRegistry.addObject(170, "hay_block", (new BlockHay( )).setHardness(0.5F).setStepSound(soundTypeGrass).setBlockName("hayBlock").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("hay_block"));
             blockRegistry.addObject(171, "carpet", (new BlockCarpet( )).setHardness(0.1F).setStepSound(soundTypeCloth).setBlockName("woolCarpet").setLightOpacity(0));
             blockRegistry.addObject(172, "hardened_clay", (new BlockHardenedClay( )).setHardness(1.25F).setResistance(7.0F).setStepSound(soundTypePiston).setBlockName("clayHardened").setBlockTextureName("hardened_clay"));
-            blockRegistry.addObject(173, "coal_block", (new Block(Material.rock)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("blockCoal").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("coal_block"));
+            blockRegistry.addObject(173, "coal_block", (new Block(Material.Material.rock)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("blockCoal").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("coal_block"));
             blockRegistry.addObject(174, "packed_ice", (new BlockPackedIce( )).setHardness(0.5F).setStepSound(soundTypeGlass).setBlockName("icePacked").setBlockTextureName("ice_packed"));
             blockRegistry.addObject(175, "double_plant", new BlockDoublePlant( ));
             IEnumerator var10 = blockRegistry.GetEnumerator( );
@@ -409,7 +395,7 @@ namespace DotCraftCore.Block
             {
                 Block var11 = (Block)var10.Current;
 
-                if (var11.blockMaterial == Material.air)
+                if (var11.blockMaterial == Material.Material.air)
                 {
                     var11.field_149783_u = false;
                 }
@@ -432,7 +418,7 @@ namespace DotCraftCore.Block
             }
         }
 
-        protected internal Block(Material p_i45394_1_)
+        protected internal Block(Material.Material p_i45394_1_)
         {
             this.stepSound = soundTypeStone;
             this.blockParticleGravity = 1.0F;
@@ -444,17 +430,81 @@ namespace DotCraftCore.Block
             this.canBlockGrass = !p_i45394_1_.CanBlockGrass;
         }
 
-        ///    
-        ///     <summary> * Sets the footstep sound for the block. Returns the object for convenience in constructing. </summary>
-        ///     
-        protected internal virtual Block StepSound
+        public virtual Block setBlockName(String name)
         {
-            set
-            {
-                this.stepSound = value;
-                return this;
-            }
+            BlockName = name;
+            return this;
         }
+
+        public virtual String BlockName
+        {
+            get;
+            set;
+        }
+
+        public virtual Block setHardness(float value)
+        {
+            Hardness = value;
+            return this;
+        }
+
+        public virtual float Hardness
+        {
+            get;
+            set;
+        }
+
+        public virtual Block setResistance(float value)
+        {
+            Resistance = value;
+            return this;
+        }
+
+        public virtual float Resistance
+        {
+            get;
+            set;
+        }
+
+        public virtual Block setStepSound(SoundType value)
+        {
+            StepSound = value;
+            return this;
+        }
+   
+        public virtual SoundType StepSound
+        {
+            get;
+            set;
+        }
+
+        public virtual Block setBlockTextureName(String value)
+        {
+            BlockTextureName = value;
+            return this;
+        }
+
+        public virtual String BlockTextureName
+        {
+            get;
+            set;
+        }
+
+        public virtual Block setCreativeTab(CreativeTabs value)
+        {
+            CreativeTab = value;
+            return this;
+        }
+
+        public virtual CreativeTabs CreativeTab
+        {
+            get;
+            set;
+        }
+
+
+
+
 
         ///    
         ///     <summary> * Sets how much light is blocked going through this block. Returns the object for convenience in constructing. </summary>
@@ -1215,9 +1265,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Sets the mod-specific block name </summary>
         ///     
-        public virtual String BlockName
-        {
-        }
+        
 
         ///    
         ///     <summary> * Gets the localized name of this block. Used for the statistics page. </summary>
@@ -1392,15 +1440,6 @@ namespace DotCraftCore.Block
             return 0;
         }
 
-        protected internal virtual Block BlockTextureName
-        {
-            set
-            {
-                this.textureName = value;
-                return this;
-            }
-        }
-
         protected internal virtual string TextureName
         {
             get
@@ -1427,46 +1466,6 @@ namespace DotCraftCore.Block
             get
             {
                 return null;
-            }
-        }
-
-        public class SoundType
-        {
-            public readonly string field_150501_a;
-            public readonly float field_150499_b;
-            public readonly float field_150500_c;
-            private const string __OBFID = "CL_00000203";
-
-            public SoundType(string p_i45393_1_, float p_i45393_2_, float p_i45393_3_)
-            {
-                this.field_150501_a = p_i45393_1_;
-                this.field_150499_b = p_i45393_2_;
-                this.field_150500_c = p_i45393_3_;
-            }
-
-            public virtual float func_150497_c( )
-            {
-                return this.field_150499_b;
-            }
-
-            public virtual float func_150494_d( )
-            {
-                return this.field_150500_c;
-            }
-
-            public virtual string func_150495_a( )
-            {
-                return "dig." + this.field_150501_a;
-            }
-
-            public virtual string func_150498_e( )
-            {
-                return "step." + this.field_150501_a;
-            }
-
-            public virtual string func_150496_b( )
-            {
-                return this.func_150495_a( );
             }
         }
     }

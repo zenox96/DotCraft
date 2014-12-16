@@ -14,7 +14,7 @@ namespace DotCraftCore.NBT
 ///     <summary> * The type byte for the tags in the list - they must all be of the same type. </summary>
 ///     
 		private sbyte tagType = 0;
-		private const string __OBFID = "CL_00001224";
+		
 
 ///    
 ///     <summary> * Write the actual data contents of the tag, implemented in NBT extension classes </summary>

@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.AI
 	{
 		internal bool entityCallsForHelp;
 		private int field_142052_b;
-		private const string __OBFID = "CL_00001619";
+		
 
 		public EntityAIHurtByTarget(EntityCreature p_i1660_1_, bool p_i1660_2_) : base(p_i1660_1_, false)
 		{

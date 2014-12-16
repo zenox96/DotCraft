@@ -12,7 +12,7 @@ namespace DotCraftCore.TileEntity
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private final MobSpawnerBaseLogic field_145882_a = new MobSpawnerBaseLogic()
 //	{
-//		private static final String __OBFID = "CL_00000361";
+//		
 //		public void func_98267_a(int p_98267_1_)
 //		{
 //			TileEntityMobSpawner.worldObj.func_147452_c(TileEntityMobSpawner.field_145851_c, TileEntityMobSpawner.field_145848_d, TileEntityMobSpawner.field_145849_e, Blocks.mob_spawner, p_98267_1_, 0);
@@ -43,7 +43,7 @@ namespace DotCraftCore.TileEntity
 //			}
 //		}
 //	};
-		private const string __OBFID = "CL_00000360";
+		
 
 		public override void readFromNBT(NBTTagCompound p_145839_1_)
 		{

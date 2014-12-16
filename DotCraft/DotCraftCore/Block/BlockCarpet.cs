@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockCarpet : Block
 	{
-		private const string __OBFID = "CL_00000338";
+		
 
 		protected internal BlockCarpet() : base(Material.carpet)
 		{

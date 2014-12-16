@@ -11,7 +11,7 @@ namespace DotCraftCore.Realms
 	public class RealmsAnvilLevelStorageSource
 	{
 		private ISaveFormat levelStorageSource;
-		private const string __OBFID = "CL_00001856";
+		
 
 		public RealmsAnvilLevelStorageSource(ISaveFormat p_i1106_1_)
 		{

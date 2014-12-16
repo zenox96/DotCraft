@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenForest : WorldGenAbstractTree
 	{
 		private bool field_150531_a;
-		private const string __OBFID = "CL_00000401";
+		
 
 		public WorldGenForest(bool p_i45449_1_, bool p_i45449_2_) : base(p_i45449_1_)
 		{

@@ -15,7 +15,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> The entity's motionY after leaping.  </summary>
 		internal float leapMotionY;
-		private const string __OBFID = "CL_00001591";
+		
 
 		public EntityAILeapAtTarget(EntityLiving p_i1630_1_, float p_i1630_2_)
 		{

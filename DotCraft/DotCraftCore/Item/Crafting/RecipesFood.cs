@@ -7,7 +7,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipesFood
 	{
-		private const string __OBFID = "CL_00000084";
+		
 
 ///    
 ///     <summary> * Adds the food recipes to the CraftingManager. </summary>

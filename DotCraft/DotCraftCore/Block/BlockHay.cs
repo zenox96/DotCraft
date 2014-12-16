@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 
 	public class BlockHay : BlockRotatedPillar
 	{
-		private const string __OBFID = "CL_00000256";
+		
 
 		public BlockHay() : base(Material.grass)
 		{

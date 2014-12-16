@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 	public class BlockOldLog : BlockLog
 	{
 		public static readonly string[] field_150168_M = new string[] {"oak", "spruce", "birch", "jungle"};
-		private const string __OBFID = "CL_00000281";
+		
 
 		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{

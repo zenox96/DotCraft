@@ -32,7 +32,7 @@ namespace DotCraftCore.Server.Integrated
 		private bool isGamePaused;
 		private bool isPublic;
 		private ThreadLanServerPing lanServerPing;
-		private const string __OBFID = "CL_00001129";
+		
 
 		public IntegratedServer(Minecraft p_i1317_1_, string p_i1317_2_, string p_i1317_3_, WorldSettings p_i1317_4_) : base(new File(p_i1317_1_.mcDataDir, "saves"), p_i1317_1_.getProxy())
 		{
@@ -209,8 +209,8 @@ namespace DotCraftCore.Server.Integrated
 		public override CrashReport addServerInfoToCrashReport(CrashReport p_71230_1_)
 		{
 			p_71230_1_ = base.addServerInfoToCrashReport(p_71230_1_);
-			p_71230_1_.Category.addCrashSectionCallable("Type", new Callable() { private static final string __OBFID = "CL_00001130"; public string call() { return "Integrated Server (map_client.txt)"; } });
-			p_71230_1_.Category.addCrashSectionCallable("Is Modded", new Callable() { private static final string __OBFID = "CL_00001131"; public string call() { string var1 = ClientBrandRetriever.ClientModName; if(!var1.Equals("vanilla")) { return "Definitely; Client brand changed to \'" + var1 + "\'"; } else { var1 = IntegratedServer.ServerModName; return !var1.Equals("vanilla") ? "Definitely; Server brand changed to \'" + var1 + "\'" : (typeof(Minecraft).Signers == null ? "Very likely; Jar signature invalidated" : "Probably not. Jar signature remains and both client + server brands are untouched."); } } });
+			p_71230_1_.Category.addCrashSectionCallable("Type", new Callable() {  public string call() { return "Integrated Server (map_client.txt)"; } });
+			p_71230_1_.Category.addCrashSectionCallable("Is Modded", new Callable() {  public string call() { string var1 = ClientBrandRetriever.ClientModName; if(!var1.Equals("vanilla")) { return "Definitely; Client brand changed to \'" + var1 + "\'"; } else { var1 = IntegratedServer.ServerModName; return !var1.Equals("vanilla") ? "Definitely; Server brand changed to \'" + var1 + "\'" : (typeof(Minecraft).Signers == null ? "Very likely; Jar signature invalidated" : "Probably not. Jar signature remains and both client + server brands are untouched."); } } });
 			return p_71230_1_;
 		}
 

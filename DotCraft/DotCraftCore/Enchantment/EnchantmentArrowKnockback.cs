@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentArrowKnockback : Enchantment
 	{
-		private const string __OBFID = "CL_00000101";
+		
 
 		public EnchantmentArrowKnockback(int p_i1922_1_, int p_i1922_2_) : base(p_i1922_1_, p_i1922_2_, EnumEnchantmentType.bow)
 		{

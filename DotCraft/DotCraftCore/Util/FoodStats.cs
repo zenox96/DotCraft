@@ -23,7 +23,7 @@ namespace DotCraftCore.Util
 	/// <summary> The player's food timer value.  </summary>
 		private int foodTimer;
 		private int prevFoodLevel = 20;
-		private const string __OBFID = "CL_00001729";
+		
 
 ///    
 ///     <summary> * Args: int foodLevel, float foodSaturationModifier </summary>

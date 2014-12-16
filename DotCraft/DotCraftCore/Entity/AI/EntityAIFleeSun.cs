@@ -16,7 +16,7 @@ namespace DotCraftCore.Entity.AI
 		private double shelterZ;
 		private double movementSpeed;
 		private World theWorld;
-		private const string __OBFID = "CL_00001583";
+		
 
 		public EntityAIFleeSun(EntityCreature p_i1623_1_, double p_i1623_2_)
 		{

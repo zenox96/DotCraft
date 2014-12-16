@@ -48,7 +48,7 @@ namespace DotCraftCore.Util
 		private bool magicDamage;
 		private bool explosion;
 		public string damageType;
-		private const string __OBFID = "CL_00001521";
+		
 
 		public static DamageSource causeMobDamage(EntityLivingBase p_76358_0_)
 		{

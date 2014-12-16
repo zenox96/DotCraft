@@ -55,7 +55,7 @@ namespace DotCraftCore.Entity.Projectile
 		private double field_146061_aH;
 		private double field_146052_aI;
 		private double field_146053_aJ;
-		private const string __OBFID = "CL_00001663";
+		
 
 		public EntityFishHook(World p_i1764_1_) : base(p_i1764_1_)
 		{

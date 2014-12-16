@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 	{
 		protected internal readonly Block field_150941_b;
 		protected internal readonly string[] field_150942_c;
-		private const string __OBFID = "CL_00000051";
+		
 
 		public ItemMultiTexture(Block p_i45346_1_, Block p_i45346_2_, string[] p_i45346_3_) : base(p_i45346_1_)
 		{

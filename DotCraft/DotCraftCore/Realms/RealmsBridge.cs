@@ -12,7 +12,7 @@ namespace DotCraftCore.Realms
 	{
 		private static readonly Logger LOGGER = LogManager.Logger;
 		private GuiScreen previousScreen;
-		private const string __OBFID = "CL_00001869";
+		
 
 		public virtual void switchToRealms(GuiScreen p_switchToRealms_1_)
 		{

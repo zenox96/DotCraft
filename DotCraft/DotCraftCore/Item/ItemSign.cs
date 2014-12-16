@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 
 	public class ItemSign : Item
 	{
-		private const string __OBFID = "CL_00000064";
+		
 
 		public ItemSign()
 		{

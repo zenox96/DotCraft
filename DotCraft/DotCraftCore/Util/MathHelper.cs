@@ -19,7 +19,7 @@ namespace DotCraftCore.Util
 ///     * this number" calculations. </summary>
 ///     
 		private static readonly int[] multiplyDeBruijnBitPosition;
-		private const string __OBFID = "CL_00001496";
+		
 
 ///    
 ///     <summary> * sin looked up in a table </summary>

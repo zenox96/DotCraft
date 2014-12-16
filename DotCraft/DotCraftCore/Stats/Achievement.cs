@@ -49,7 +49,7 @@ namespace DotCraftCore.Stats
 ///     * achieve. </summary>
 ///     
 		private bool isSpecial;
-		private const string __OBFID = "CL_00001466";
+		
 
 		public Achievement(string p_i45300_1_, string p_i45300_2_, int p_i45300_3_, int p_i45300_4_, Item p_i45300_5_, Achievement p_i45300_6_) : this(p_i45300_1_, p_i45300_2_, p_i45300_3_, p_i45300_4_, new ItemStack(p_i45300_5_), p_i45300_6_)
 		{

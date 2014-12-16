@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 
 	public class BlockDragonEgg : Block
 	{
-		private const string __OBFID = "CL_00000232";
+		
 
 		public BlockDragonEgg() : base(Material.dragonEgg)
 		{

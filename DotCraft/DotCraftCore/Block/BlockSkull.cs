@@ -28,7 +28,7 @@ namespace DotCraftCore.Block
 
 	public class BlockSkull : BlockContainer
 	{
-		private const string __OBFID = "CL_00000307";
+		
 
 		protected internal BlockSkull() : base(Material.circuits)
 		{

@@ -4,7 +4,7 @@ namespace DotCraftCore.NBT
 
 	public class NBTTagEnd : NBTBase
 	{
-		private const string __OBFID = "CL_00001219";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: Method 'throws' clauses are not available in .NET:
 //ORIGINAL LINE: void func_152446_a(DataInput p_152446_1_, int p_152446_2_, NBTSizeTracker p_152446_3_) throws IOException

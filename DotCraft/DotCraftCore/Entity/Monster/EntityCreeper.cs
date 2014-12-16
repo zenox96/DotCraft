@@ -40,7 +40,7 @@ namespace DotCraftCore.Entity.Monster
 
 	/// <summary> Explosion radius for this creeper.  </summary>
 		private int explosionRadius = 3;
-		private const string __OBFID = "CL_00001684";
+		
 
 		public EntityCreeper(World p_i1733_1_) : base(p_i1733_1_)
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Network
 		private readonly Cipher field_150507_a;
 		private sbyte[] field_150505_b = new sbyte[0];
 		private sbyte[] field_150506_c = new sbyte[0];
-		private const string __OBFID = "CL_00001237";
+		
 
 		protected internal NettyEncryptionTranslator(Cipher p_i45140_1_)
 		{

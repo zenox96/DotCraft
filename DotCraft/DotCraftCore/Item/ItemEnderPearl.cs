@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEnderPearl : Item
 	{
-		private const string __OBFID = "CL_00000027";
+		
 
 		public ItemEnderPearl()
 		{

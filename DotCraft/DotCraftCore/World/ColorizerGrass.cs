@@ -5,7 +5,7 @@ namespace DotCraftCore.World
 	{
 	/// <summary> Color buffer for grass  </summary>
 		private static int[] grassBuffer = new int[65536];
-		private const string __OBFID = "CL_00000138";
+		
 
 		public static int[] GrassBiomeColorizer
 		{

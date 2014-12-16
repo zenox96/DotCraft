@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.Passive
 
 	public abstract class EntityAmbientCreature : EntityLiving, IAnimals
 	{
-		private const string __OBFID = "CL_00001636";
+		
 
 		public EntityAmbientCreature(World p_i1679_1_) : base(p_i1679_1_)
 		{

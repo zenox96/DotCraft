@@ -112,7 +112,7 @@ namespace DotCraftCore.Network
 		private double lastPosY;
 		private double lastPosZ;
 		private bool hasMoved = true;
-		private const string __OBFID = "CL_00001452";
+		
 
 		public NetHandlerPlayServer(MinecraftServer p_i1530_1_, NetworkManager p_i1530_2_, EntityPlayerMP p_i1530_3_)
 		{
@@ -170,7 +170,7 @@ namespace DotCraftCore.Network
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: final ChatComponentText var2 = new ChatComponentText(p_147360_1_);
 			ChatComponentText var2 = new ChatComponentText(p_147360_1_);
-			this.netManager.scheduleOutboundPacket(new S40PacketDisconnect(var2), new GenericFutureListener[] {new GenericFutureListener() { private static final string __OBFID = "CL_00001453"; public void operationComplete(Future p_operationComplete_1_) { NetHandlerPlayServer.netManager.closeChannel(var2); } } });
+			this.netManager.scheduleOutboundPacket(new S40PacketDisconnect(var2), new GenericFutureListener[] {new GenericFutureListener() {  public void operationComplete(Future p_operationComplete_1_) { NetHandlerPlayServer.netManager.closeChannel(var2); } } });
 			this.netManager.disableAutoRead();
 		}
 
@@ -649,7 +649,7 @@ namespace DotCraftCore.Network
 			{
 				CrashReport var6 = CrashReport.makeCrashReport(var5, "Sending packet");
 				CrashReportCategory var4 = var6.makeCategory("Packet being sent");
-				var4.addCrashSectionCallable("Packet class", new Callable() { private static final string __OBFID = "CL_00001454"; public string call() { return p_147359_1_.GetType().CanonicalName; } });
+				var4.addCrashSectionCallable("Packet class", new Callable() {  public string call() { return p_147359_1_.GetType().CanonicalName; } });
 				throw new ReportedException(var6);
 			}
 		}
@@ -1337,7 +1337,7 @@ namespace DotCraftCore.Network
 		internal sealed class SwitchEnumState
 		{
 			internal static readonly int[] field_151290_a = new int[C16PacketClientStatus.EnumState.values().length];
-			private const string __OBFID = "CL_00001455";
+			
 
 			static SwitchEnumState()
 			{

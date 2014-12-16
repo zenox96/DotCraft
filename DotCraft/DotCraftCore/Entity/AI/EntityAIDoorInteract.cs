@@ -26,7 +26,7 @@ namespace DotCraftCore.Entity.AI
 		internal bool hasStoppedDoorInteraction;
 		internal float entityPositionX;
 		internal float entityPositionZ;
-		private const string __OBFID = "CL_00001581";
+		
 
 		public EntityAIDoorInteract(EntityLiving p_i1621_1_)
 		{

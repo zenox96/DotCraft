@@ -42,7 +42,7 @@ namespace DotCraftCore.Entity.Monster
 	{
 		private EntityAIArrowAttack aiArrowAttack = new EntityAIArrowAttack(this, 1.0D, 20, 60, 15.0F);
 		private EntityAIAttackOnCollide aiAttackOnCollide = new EntityAIAttackOnCollide(this, typeof(EntityPlayer), 1.2D, false);
-		private const string __OBFID = "CL_00001697";
+		
 
 		public EntitySkeleton(World p_i1741_1_) : base(p_i1741_1_)
 		{

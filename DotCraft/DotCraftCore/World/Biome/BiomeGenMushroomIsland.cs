@@ -6,7 +6,7 @@ namespace DotCraftCore.World.Biome
 
 	public class BiomeGenMushroomIsland : BiomeGenBase
 	{
-		private const string __OBFID = "CL_00000177";
+		
 
 		public BiomeGenMushroomIsland(int p_i1984_1_) : base(p_i1984_1_)
 		{

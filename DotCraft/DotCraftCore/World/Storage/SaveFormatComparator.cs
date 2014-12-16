@@ -18,7 +18,7 @@ namespace DotCraftCore.World.Storage
 		private readonly WorldSettings.GameType theEnumGameType;
 		private readonly bool hardcore;
 		private readonly bool cheatsEnabled;
-		private const string __OBFID = "CL_00000601";
+		
 
 		public SaveFormatComparator(string p_i2161_1_, string p_i2161_2_, long p_i2161_3_, long p_i2161_5_, WorldSettings.GameType p_i2161_7_, bool p_i2161_8_, bool p_i2161_9_, bool p_i2161_10_)
 		{

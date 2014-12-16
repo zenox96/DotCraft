@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Client
 		private float field_149622_b;
 		private bool field_149623_c;
 		private bool field_149621_d;
-		private const string __OBFID = "CL_00001367";
+		
 
 		public C0CPacketInput()
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandPardonIp : CommandBase
 	{
-		private const string __OBFID = "CL_00000720";
+		
 
 		public virtual string CommandName
 		{

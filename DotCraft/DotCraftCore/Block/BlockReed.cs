@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockReed : Block
 	{
-		private const string __OBFID = "CL_00000300";
+		
 
 		protected internal BlockReed() : base(Material.plants)
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandAchievement : CommandBase
 	{
-		private const string __OBFID = "CL_00000113";
+		
 
 		public virtual string CommandName
 		{

@@ -9,7 +9,7 @@ namespace DotCraftCore.Block
 
 	public class BlockSoulSand : Block
 	{
-		private const string __OBFID = "CL_00000310";
+		
 
 		public BlockSoulSand() : base(Material.sand)
 		{

@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 
 	public class BlockNetherrack : Block
 	{
-		private const string __OBFID = "CL_00000275";
+		
 
 		public BlockNetherrack() : base(Material.rock)
 		{

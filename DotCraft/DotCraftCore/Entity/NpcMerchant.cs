@@ -17,7 +17,7 @@ namespace DotCraftCore.Entity
 
 	/// <summary> The MerchantRecipeList instance.  </summary>
 		private MerchantRecipeList recipeList;
-		private const string __OBFID = "CL_00001705";
+		
 
 		public NpcMerchant(EntityPlayer p_i1746_1_)
 		{

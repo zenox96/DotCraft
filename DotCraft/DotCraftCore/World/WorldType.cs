@@ -36,7 +36,7 @@ namespace DotCraftCore.World
 	/// <summary> Whether this WorldType has a version or not.  </summary>
 		private bool isWorldTypeVersioned;
 		private bool field_151361_l;
-		private const string __OBFID = "CL_00000150";
+		
 
 		private WorldType(int p_i1959_1_, string p_i1959_2_) : this(p_i1959_1_, p_i1959_2_, 0)
 		{

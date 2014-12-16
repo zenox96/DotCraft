@@ -9,7 +9,7 @@ namespace DotCraftCore.Command
 
 	public class CommandXP : CommandBase
 	{
-		private const string __OBFID = "CL_00000398";
+		
 
 		public virtual string CommandName
 		{

@@ -24,7 +24,7 @@ namespace DotCraftCore.Village
 		private readonly IList newDoors = new ArrayList();
 		private readonly IList villageList = new ArrayList();
 		private int tickCounter;
-		private const string __OBFID = "CL_00001635";
+		
 
 		public VillageCollection(string p_i1677_1_) : base(p_i1677_1_)
 		{

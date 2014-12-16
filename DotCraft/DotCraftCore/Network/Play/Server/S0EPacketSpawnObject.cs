@@ -23,7 +23,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149022_i;
 		private int field_149019_j;
 		private int field_149020_k;
-		private const string __OBFID = "CL_00001276";
+		
 
 		public S0EPacketSpawnObject()
 		{

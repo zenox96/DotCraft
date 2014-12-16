@@ -30,7 +30,7 @@ namespace DotCraftCore.Util
 ///     <summary> * The time, in milliseconds since epoch, that this instance was last updated </summary>
 ///     
 		private long lastUpdateTimeInMilliseconds;
-		private const string __OBFID = "CL_00001212";
+		
 
 		public StringTranslate()
 		{

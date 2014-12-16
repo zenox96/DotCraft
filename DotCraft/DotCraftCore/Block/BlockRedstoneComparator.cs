@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockRedstoneComparator : BlockRedstoneDiode, ITileEntityProvider
 	{
-		private const string __OBFID = "CL_00000220";
+		
 
 		public BlockRedstoneComparator(bool p_i45399_1_) : base(p_i45399_1_)
 		{

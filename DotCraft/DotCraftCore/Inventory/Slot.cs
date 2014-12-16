@@ -23,7 +23,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> display position of the inventory slot on the screen y axis  </summary>
 		public int yDisplayPosition;
-		private const string __OBFID = "CL_00001762";
+		
 
 		public Slot(IInventory p_i1824_1_, int p_i1824_2_, int p_i1824_3_, int p_i1824_4_)
 		{

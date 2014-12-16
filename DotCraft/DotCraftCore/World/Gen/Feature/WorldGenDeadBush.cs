@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenDeadBush : WorldGenerator
 	{
 		private Block field_150547_a;
-		private const string __OBFID = "CL_00000406";
+		
 
 		public WorldGenDeadBush(Block p_i45451_1_)
 		{

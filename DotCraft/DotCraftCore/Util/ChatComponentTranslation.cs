@@ -23,7 +23,7 @@ namespace DotCraftCore.Util
 ///     
 		internal IList children = Lists.newArrayList();
 		public static readonly Pattern stringVariablePattern = Pattern.compile("%(?:(\\d+)\\$)?([A-Za-z%]|$)");
-		private const string __OBFID = "CL_00001270";
+		
 
 		public ChatComponentTranslation(string p_i45160_1_, params object[] p_i45160_2_)
 		{

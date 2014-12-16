@@ -9,7 +9,7 @@ namespace DotCraftCore.World.Gen.Structure
 	public class MapGenMineshaft : MapGenStructure
 	{
 		private double field_82673_e = 0.004D;
-		private const string __OBFID = "CL_00000443";
+		
 
 		public MapGenMineshaft()
 		{

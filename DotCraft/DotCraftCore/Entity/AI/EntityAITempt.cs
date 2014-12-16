@@ -43,7 +43,7 @@ namespace DotCraftCore.Entity.AI
 ///     
 		private bool scaredByPlayerMovement;
 		private bool field_75286_m;
-		private const string __OBFID = "CL_00001616";
+		
 
 		public EntityAITempt(EntityCreature p_i45316_1_, double p_i45316_2_, Item p_i45316_4_, bool p_i45316_5_)
 		{

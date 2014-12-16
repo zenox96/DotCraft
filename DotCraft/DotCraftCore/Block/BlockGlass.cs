@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 
 	public class BlockGlass : BlockBreakable
 	{
-		private const string __OBFID = "CL_00000249";
+		
 
 		public BlockGlass(Material p_i45408_1_, bool p_i45408_2_) : base("glass", p_i45408_1_, p_i45408_2_)
 		{

@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public class EntityGiantZombie : EntityMob
 	{
-		private const string __OBFID = "CL_00001690";
+		
 
 		public EntityGiantZombie(World p_i1736_1_) : base(p_i1736_1_)
 		{

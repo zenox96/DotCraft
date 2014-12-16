@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenSwamp : WorldGenAbstractTree
 	{
-		private const string __OBFID = "CL_00000436";
+		
 
 		public WorldGenSwamp() : base(false)
 		{

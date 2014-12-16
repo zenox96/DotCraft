@@ -20,7 +20,7 @@ namespace DotCraftCore.Command.Server
 		private IChatComponent field_145762_d = null;
 		private string field_145763_e = "";
 		private string field_145761_f = "@";
-		private const string __OBFID = "CL_00000128";
+		
 
 		public virtual int func_145760_g()
 		{

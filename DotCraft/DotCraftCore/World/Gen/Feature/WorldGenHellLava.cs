@@ -12,7 +12,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 		private Block field_150553_a;
 		private bool field_94524_b;
-		private const string __OBFID = "CL_00000414";
+		
 
 		public WorldGenHellLava(Block p_i45453_1_, bool p_i45453_2_)
 		{

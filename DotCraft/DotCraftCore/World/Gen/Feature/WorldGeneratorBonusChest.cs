@@ -21,7 +21,7 @@ namespace DotCraftCore.World.Gen.Feature
 ///     <summary> * Value of this int will determine how much items gonna generate in Bonus Chest. </summary>
 ///     
 		private readonly int itemsToGenerateInBonusChest;
-		private const string __OBFID = "CL_00000403";
+		
 
 		public WorldGeneratorBonusChest(WeightedRandomChestContent[] p_i2010_1_, int p_i2010_2_)
 		{

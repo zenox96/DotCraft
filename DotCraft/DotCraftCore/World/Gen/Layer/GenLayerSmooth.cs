@@ -3,7 +3,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerSmooth : GenLayer
 	{
-		private const string __OBFID = "CL_00000569";
+		
 
 		public GenLayerSmooth(long p_i2131_1_, GenLayer p_i2131_3_) : base(p_i2131_1_)
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Network
 	public abstract class Packet
 	{
 		private static readonly Logger logger = LogManager.Logger;
-		private const string __OBFID = "CL_00001272";
+		
 
 ///    
 ///     <summary> * Returns a packet instance, given the params: BiMap<int, (Packet) Class> and (int) id </summary>

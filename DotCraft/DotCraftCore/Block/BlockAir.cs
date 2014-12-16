@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 	public class BlockAir : Block
 	{
         protected internal BlockAir( )
-            : base(Material.air)
+            : base(Material.Material.air)
 		{
 		}
 
@@ -67,5 +67,4 @@ namespace DotCraftCore.Block
 		{
 		}
 	}
-
 }

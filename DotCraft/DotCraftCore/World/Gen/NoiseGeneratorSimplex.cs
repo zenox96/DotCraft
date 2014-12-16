@@ -14,7 +14,7 @@ namespace DotCraftCore.World.Gen
 		public double field_151610_d;
 		private const double field_151609_g = 0.5D * (field_151614_a - 1.0D);
 		private const double field_151615_h = (3.0D - field_151614_a) / 6.0D;
-		private const string __OBFID = "CL_00000537";
+		
 
 		public NoiseGeneratorSimplex() : this(new Random())
 		{

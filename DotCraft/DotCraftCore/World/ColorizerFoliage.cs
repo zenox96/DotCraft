@@ -5,7 +5,7 @@ namespace DotCraftCore.World
 	{
 	/// <summary> Color buffer for foliage  </summary>
 		private static int[] foliageBuffer = new int[65536];
-		private const string __OBFID = "CL_00000135";
+		
 
 		public static int[] FoliageBiomeColorizer
 		{

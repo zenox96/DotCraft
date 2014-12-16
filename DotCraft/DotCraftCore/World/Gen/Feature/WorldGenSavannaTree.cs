@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenSavannaTree : WorldGenAbstractTree
 	{
-		private const string __OBFID = "CL_00000432";
+		
 
 		public WorldGenSavannaTree(bool p_i45463_1_) : base(p_i45463_1_)
 		{

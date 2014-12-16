@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Gen.Feature
 	/// <summary> Sets the metadata for the leaves used in huge trees  </summary>
 		protected internal readonly int leavesMetadata;
 		protected internal int field_150538_d;
-		private const string __OBFID = "CL_00000423";
+		
 
 		public WorldGenHugeTrees(bool p_i45458_1_, int p_i45458_2_, int p_i45458_3_, int p_i45458_4_, int p_i45458_5_) : base(p_i45458_1_)
 		{

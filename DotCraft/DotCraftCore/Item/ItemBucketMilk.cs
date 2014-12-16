@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemBucketMilk : Item
 	{
-		private const string __OBFID = "CL_00000048";
+		
 
 		public ItemBucketMilk()
 		{

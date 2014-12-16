@@ -21,7 +21,7 @@ namespace DotCraftCore.Entity.AI
 		private readonly Profiler theProfiler;
 		private int tickCount;
 		private int tickRate = 3;
-		private const string __OBFID = "CL_00001588";
+		
 
 		public EntityAITasks(Profiler p_i1628_1_)
 		{
@@ -189,7 +189,7 @@ namespace DotCraftCore.Entity.AI
 		{
 			public EntityAIBase action;
 			public int priority;
-			private const string __OBFID = "CL_00001589";
+			
 
 			public EntityAITaskEntry(int p_i1627_2_, EntityAIBase p_i1627_3_)
 			{

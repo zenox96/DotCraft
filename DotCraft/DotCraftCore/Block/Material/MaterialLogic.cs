@@ -1,11 +1,11 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.Block.Material
 {
 
-	public class MaterialTransparent : Material
+	public class MaterialLogic : Material
 	{
-		public MaterialTransparent(MapColor p_i2113_1_) : base(p_i2113_1_)
+		public MaterialLogic(MapColor p_i2112_1_) : base(p_i2112_1_)
 		{
-			this.setReplaceable();
+			this.setAdventureModeExempt();
 		}
 
 		public override bool Solid

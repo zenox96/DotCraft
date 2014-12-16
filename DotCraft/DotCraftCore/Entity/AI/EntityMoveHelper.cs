@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.AI
 	/// <summary> The speed at which the entity should move  </summary>
 		private double speed;
 		private bool update;
-		private const string __OBFID = "CL_00001573";
+		
 
 		public EntityMoveHelper(EntityLiving p_i1614_1_)
 		{

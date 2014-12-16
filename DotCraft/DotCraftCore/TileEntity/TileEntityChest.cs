@@ -28,7 +28,7 @@ namespace DotCraftCore.TileEntity
 		private int field_145983_q;
 		private int field_145982_r;
 		private string field_145981_s;
-		private const string __OBFID = "CL_00000346";
+		
 
 		public TileEntityChest()
 		{

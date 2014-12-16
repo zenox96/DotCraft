@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockLiquid : Block
 	{
 		private IIcon[] field_149806_a;
-		private const string __OBFID = "CL_00000265";
+		
 
 		protected internal BlockLiquid(Material p_i45413_1_) : base(p_i45413_1_)
 		{

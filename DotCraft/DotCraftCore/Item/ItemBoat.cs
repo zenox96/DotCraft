@@ -17,7 +17,7 @@ namespace DotCraftCore.Item
 
 	public class ItemBoat : Item
 	{
-		private const string __OBFID = "CL_00001774";
+		
 
 		public ItemBoat()
 		{

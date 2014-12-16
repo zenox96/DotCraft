@@ -76,7 +76,7 @@ namespace DotCraftCore.Entity.Boss
 
 	/// <summary> The current endercrystal that is healing this dragon  </summary>
 		public EntityEnderCrystal healingEnderCrystal;
-		private const string __OBFID = "CL_00001659";
+		
 
 		public EntityDragon(World p_i1700_1_) : base(p_i1700_1_)
 		{

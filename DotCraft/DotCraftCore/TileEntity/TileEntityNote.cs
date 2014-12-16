@@ -10,7 +10,7 @@ namespace DotCraftCore.TileEntity
 	{
 		public sbyte field_145879_a;
 		public bool field_145880_i;
-		private const string __OBFID = "CL_00000362";
+		
 
 		public override void writeToNBT(NBTTagCompound p_145841_1_)
 		{

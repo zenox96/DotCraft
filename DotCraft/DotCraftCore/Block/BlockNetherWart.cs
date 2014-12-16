@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	public class BlockNetherWart : BlockBush
 	{
 		private IIcon[] field_149883_a;
-		private const string __OBFID = "CL_00000274";
+		
 
 		protected internal BlockNetherWart()
 		{

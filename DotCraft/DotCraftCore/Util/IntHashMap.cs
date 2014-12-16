@@ -26,7 +26,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> The set of all the keys stored in this MCHash object  </summary>
 		private Set keySet = new HashSet();
-		private const string __OBFID = "CL_00001490";
+		
 
 ///    
 ///     <summary> * Makes the passed in integer suitable for hashing by a number of shifts </summary>
@@ -246,7 +246,7 @@ namespace DotCraftCore.Util
 			internal object valueEntry;
 			internal IntHashMap.Entry nextEntry;
 			internal readonly int slotHash;
-			private const string __OBFID = "CL_00001491";
+			
 
 			internal Entry(int p_i1552_1_, int p_i1552_2_, object p_i1552_3_, IntHashMap.Entry p_i1552_4_)
 			{

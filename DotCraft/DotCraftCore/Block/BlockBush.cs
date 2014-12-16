@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 
 	public class BlockBush : Block
 	{
-		private const string __OBFID = "CL_00000208";
+		
 
 		protected internal BlockBush(Material p_i45395_1_) : base(p_i45395_1_)
 		{

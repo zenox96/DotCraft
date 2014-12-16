@@ -27,7 +27,7 @@ namespace DotCraftCore.Item
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final IBehaviorDispenseItem dispenserBehavior = new BehaviorDefaultDispenseItem()
 //	{
-//		private static final String __OBFID = "CL_00001767";
+//		
 //		protected ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
 //		{
 //			EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.getBlockMetadata());
@@ -79,7 +79,7 @@ namespace DotCraftCore.Item
 		private readonly ItemArmor.ArmorMaterial material;
 		private IIcon overlayIcon;
 		private IIcon emptySlotIcon;
-		private const string __OBFID = "CL_00001766";
+		
 
 		public ItemArmor(ItemArmor.ArmorMaterial p_i45325_1_, int p_i45325_2_, int p_i45325_3_)
 		{
@@ -296,7 +296,7 @@ namespace DotCraftCore.Item
 			private int enchantability;
 
 			private static final ItemArmor.ArmorMaterial[] $VALUES = new ItemArmor.ArmorMaterial[]{CLOTH, CHAIN, IRON, GOLD, DIAMOND};
-			private static final string __OBFID = "CL_00001768";
+			
 
 			private ArmorMaterial(string p_i1827_1_, int p_i1827_2_, int p_i1827_3_, int[] p_i1827_4_, int p_i1827_5_)
 			{

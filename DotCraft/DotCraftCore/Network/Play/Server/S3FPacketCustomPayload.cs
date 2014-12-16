@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private string field_149172_a;
 		private sbyte[] field_149171_b;
-		private const string __OBFID = "CL_00001297";
+		
 
 		public S3FPacketCustomPayload()
 		{

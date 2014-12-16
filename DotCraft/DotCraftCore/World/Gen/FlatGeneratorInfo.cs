@@ -18,7 +18,7 @@ namespace DotCraftCore.World.Gen
 	/// <summary> List of world features enabled on this preset.  </summary>
 		private readonly IDictionary worldFeatures = new Hashtable();
 		private int biomeToUse;
-		private const string __OBFID = "CL_00000440";
+		
 
 ///    
 ///     <summary> * Return the biome used on this preset. </summary>

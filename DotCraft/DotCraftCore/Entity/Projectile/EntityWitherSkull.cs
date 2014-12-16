@@ -16,7 +16,7 @@ namespace DotCraftCore.Entity.Projectile
 
 	public class EntityWitherSkull : EntityFireball
 	{
-		private const string __OBFID = "CL_00001728";
+		
 
 		public EntityWitherSkull(World p_i1793_1_) : base(p_i1793_1_)
 		{

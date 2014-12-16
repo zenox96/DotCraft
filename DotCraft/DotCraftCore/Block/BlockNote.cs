@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 
 	public class BlockNote : BlockContainer
 	{
-		private const string __OBFID = "CL_00000278";
+		
 
 		public BlockNote() : base(Material.wood)
 		{

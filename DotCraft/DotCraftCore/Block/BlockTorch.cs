@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockTorch : Block
 	{
-		private const string __OBFID = "CL_00000325";
+		
 
 		protected internal BlockTorch() : base(Material.circuits)
 		{

@@ -7,7 +7,7 @@ namespace DotCraftCore.World.Biome
 
 	public class BiomeGenHell : BiomeGenBase
 	{
-		private const string __OBFID = "CL_00000173";
+		
 
 		public BiomeGenHell(int p_i1981_1_) : base(p_i1981_1_)
 		{

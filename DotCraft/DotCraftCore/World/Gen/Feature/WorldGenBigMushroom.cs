@@ -12,7 +12,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 	/// <summary> The mushroom type. 0 for brown, 1 for red.  </summary>
 		private int mushroomType = -1;
-		private const string __OBFID = "CL_00000415";
+		
 
 		public WorldGenBigMushroom(int p_i2017_1_) : base(true)
 		{

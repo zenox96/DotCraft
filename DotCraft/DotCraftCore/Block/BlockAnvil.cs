@@ -20,7 +20,7 @@ namespace DotCraftCore.Block
         private static readonly string[] field_149835_N = new string[] { "anvil_top_damaged_0", "anvil_top_damaged_1", "anvil_top_damaged_2" };
         public int field_149833_b;
         private IIcon[] field_149836_O;
-        private const string __OBFID = "CL_00000192";
+        
 
         protected internal BlockAnvil( )
             : base(Material.anvil)

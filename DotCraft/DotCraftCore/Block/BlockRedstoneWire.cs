@@ -24,7 +24,7 @@ namespace DotCraftCore.Block
 		private IIcon field_150183_N;
 		private IIcon field_150184_O;
 		private IIcon field_150180_P;
-		private const string __OBFID = "CL_00000295";
+		
 
 		public BlockRedstoneWire() : base(Material.circuits)
 		{

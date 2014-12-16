@@ -51,7 +51,7 @@ namespace DotCraftCore.Server.Management
 
 	/// <summary> x, z direction vectors: east, south, west, north  </summary>
 		private readonly int[][] xzDirectionsConst = new int[][] {{1, 0}, {0, 1}, { -1, 0}, {0, -1}};
-		private const string __OBFID = "CL_00001434";
+		
 
 		public PlayerManager(WorldServer p_i1176_1_)
 		{
@@ -378,7 +378,7 @@ namespace DotCraftCore.Server.Management
 			private int numberOfTilesToUpdate;
 			private int flagsYAreasToUpdate;
 			private long previousWorldTime;
-			private const string __OBFID = "CL_00001435";
+			
 
 			public PlayerInstance(int p_i1518_2_, int p_i1518_3_)
 			{

@@ -25,7 +25,7 @@ namespace DotCraftCore.Block
 		private IIcon field_150029_a;
 		private IIcon field_150028_b;
 		private IIcon field_150030_M;
-		private const string __OBFID = "CL_00000213";
+		
 
 		public BlockCauldron() : base(Material.iron)
 		{

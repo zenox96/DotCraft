@@ -25,7 +25,7 @@ namespace DotCraftCore.Profiler
 
 	/// <summary> Profiling map  </summary>
 		private readonly IDictionary profilingMap = new Hashtable();
-		private const string __OBFID = "CL_00001497";
+		
 
 ///    
 ///     <summary> * Clear profiling. </summary>
@@ -188,7 +188,7 @@ namespace DotCraftCore.Profiler
 			public double field_76332_a;
 			public double field_76330_b;
 			public string field_76331_c;
-			private const string __OBFID = "CL_00001498";
+			
 
 			public Result(string p_i1554_1_, double p_i1554_2_, double p_i1554_4_)
 			{

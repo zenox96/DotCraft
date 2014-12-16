@@ -3,7 +3,7 @@ namespace DotCraftCore.Item
 
 	public class ItemBook : Item
 	{
-		private const string __OBFID = "CL_00001775";
+		
 
 ///    
 ///     <summary> * Checks isDamagable and if it cannot be stacked </summary>

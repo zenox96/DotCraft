@@ -71,7 +71,7 @@ namespace DotCraftCore.World.Storage
 		private bool allowCommands;
 		private bool initialized;
 		private GameRules theGameRules;
-		private const string __OBFID = "CL_00000587";
+		
 
 		protected internal WorldInfo()
 		{
@@ -652,21 +652,21 @@ namespace DotCraftCore.World.Storage
 ///     
 		public virtual void addToCrashReport(CrashReportCategory p_85118_1_)
 		{
-			p_85118_1_.addCrashSectionCallable("Level seed", new Callable() { private static final string __OBFID = "CL_00000588"; public string call() { return Convert.ToString(WorldInfo.Seed); } });
+			p_85118_1_.addCrashSectionCallable("Level seed", new Callable() {  public string call() { return Convert.ToString(WorldInfo.Seed); } });
 //JAVA TO VB & C# CONVERTER TODO TASK: The following line has a Java format specifier which cannot be directly translated to .NET:
-//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level generator", new Callable() { private static final String __OBFID = "CL_00000589"; public String call() { return String.format("ID %02d - %s, ver %d. Features enabled: %b", new Object[] {Integer.valueOf(WorldInfo.terrainType.getWorldTypeID()), WorldInfo.terrainType.getWorldTypeName(), Integer.valueOf(WorldInfo.terrainType.getGeneratorVersion()), Boolean.valueOf(WorldInfo.mapFeaturesEnabled)}); } });
-			p_85118_1_.addCrashSectionCallable("Level generator", new Callable() { private static final string __OBFID = "CL_00000589"; public string call() { return string.Format("ID %02d - %s, ver %d. Features enabled: %b", new object[] {Convert.ToInt32(WorldInfo.terrainType.WorldTypeID), WorldInfo.terrainType.WorldTypeName, Convert.ToInt32(WorldInfo.terrainType.GeneratorVersion), Convert.ToBoolean(WorldInfo.mapFeaturesEnabled)}); } });
-			p_85118_1_.addCrashSectionCallable("Level generator options", new Callable() { private static final string __OBFID = "CL_00000590"; public string call() { return WorldInfo.generatorOptions; } });
-			p_85118_1_.addCrashSectionCallable("Level spawn location", new Callable() { private static final string __OBFID = "CL_00000591"; public string call() { return CrashReportCategory.getLocationInfo(WorldInfo.spawnX, WorldInfo.spawnY, WorldInfo.spawnZ); } });
-			p_85118_1_.addCrashSectionCallable("Level time", new Callable() { private static final string __OBFID = "CL_00000592"; public string call() { return string.Format("{0:D} game time, {1:D} day time", new object[] {Convert.ToInt64(WorldInfo.totalTime), Convert.ToInt64(WorldInfo.worldTime)}); } });
-			p_85118_1_.addCrashSectionCallable("Level dimension", new Callable() { private static final string __OBFID = "CL_00000593"; public string call() { return Convert.ToString(WorldInfo.dimension); } });
-			p_85118_1_.addCrashSectionCallable("Level storage version", new Callable() { private static final string __OBFID = "CL_00000594"; public string call() { string var1 = "Unknown?"; try { switch (WorldInfo.saveVersion) { case 19132: var1 = "McRegion"; break; case 19133: var1 = "Anvil"; } } catch (Exception var3) { ; } return string.Format("0x{0:X5} - {1}", new object[] {Convert.ToInt32(WorldInfo.saveVersion), var1}); } });
+//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level generator", new Callable() {  public String call() { return String.format("ID %02d - %s, ver %d. Features enabled: %b", new Object[] {Integer.valueOf(WorldInfo.terrainType.getWorldTypeID()), WorldInfo.terrainType.getWorldTypeName(), Integer.valueOf(WorldInfo.terrainType.getGeneratorVersion()), Boolean.valueOf(WorldInfo.mapFeaturesEnabled)}); } });
+			p_85118_1_.addCrashSectionCallable("Level generator", new Callable() {  public string call() { return string.Format("ID %02d - %s, ver %d. Features enabled: %b", new object[] {Convert.ToInt32(WorldInfo.terrainType.WorldTypeID), WorldInfo.terrainType.WorldTypeName, Convert.ToInt32(WorldInfo.terrainType.GeneratorVersion), Convert.ToBoolean(WorldInfo.mapFeaturesEnabled)}); } });
+			p_85118_1_.addCrashSectionCallable("Level generator options", new Callable() {  public string call() { return WorldInfo.generatorOptions; } });
+			p_85118_1_.addCrashSectionCallable("Level spawn location", new Callable() {  public string call() { return CrashReportCategory.getLocationInfo(WorldInfo.spawnX, WorldInfo.spawnY, WorldInfo.spawnZ); } });
+			p_85118_1_.addCrashSectionCallable("Level time", new Callable() {  public string call() { return string.Format("{0:D} game time, {1:D} day time", new object[] {Convert.ToInt64(WorldInfo.totalTime), Convert.ToInt64(WorldInfo.worldTime)}); } });
+			p_85118_1_.addCrashSectionCallable("Level dimension", new Callable() {  public string call() { return Convert.ToString(WorldInfo.dimension); } });
+			p_85118_1_.addCrashSectionCallable("Level storage version", new Callable() {  public string call() { string var1 = "Unknown?"; try { switch (WorldInfo.saveVersion) { case 19132: var1 = "McRegion"; break; case 19133: var1 = "Anvil"; } } catch (Exception var3) { ; } return string.Format("0x{0:X5} - {1}", new object[] {Convert.ToInt32(WorldInfo.saveVersion), var1}); } });
 //JAVA TO VB & C# CONVERTER TODO TASK: The following line has a Java format specifier which cannot be directly translated to .NET:
-//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level weather", new Callable() { private static final String __OBFID = "CL_00000595"; public String call() { return String.format("Rain time: %d (now: %b), thunder time: %d (now: %b)", new Object[] {Integer.valueOf(WorldInfo.rainTime), Boolean.valueOf(WorldInfo.raining), Integer.valueOf(WorldInfo.thunderTime), Boolean.valueOf(WorldInfo.thundering)}); } });
-			p_85118_1_.addCrashSectionCallable("Level weather", new Callable() { private static final string __OBFID = "CL_00000595"; public string call() { return string.Format("Rain time: %d (now: %b), thunder time: %d (now: %b)", new object[] {Convert.ToInt32(WorldInfo.rainTime), Convert.ToBoolean(WorldInfo.raining), Convert.ToInt32(WorldInfo.thunderTime), Convert.ToBoolean(WorldInfo.thundering)}); } });
+//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level weather", new Callable() {  public String call() { return String.format("Rain time: %d (now: %b), thunder time: %d (now: %b)", new Object[] {Integer.valueOf(WorldInfo.rainTime), Boolean.valueOf(WorldInfo.raining), Integer.valueOf(WorldInfo.thunderTime), Boolean.valueOf(WorldInfo.thundering)}); } });
+			p_85118_1_.addCrashSectionCallable("Level weather", new Callable() {  public string call() { return string.Format("Rain time: %d (now: %b), thunder time: %d (now: %b)", new object[] {Convert.ToInt32(WorldInfo.rainTime), Convert.ToBoolean(WorldInfo.raining), Convert.ToInt32(WorldInfo.thunderTime), Convert.ToBoolean(WorldInfo.thundering)}); } });
 //JAVA TO VB & C# CONVERTER TODO TASK: The following line has a Java format specifier which cannot be directly translated to .NET:
-//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level game mode", new Callable() { private static final String __OBFID = "CL_00000597"; public String call() { return String.format("Game mode: %s (ID %d). Hardcore: %b. Cheats: %b", new Object[] {WorldInfo.theGameType.getName(), Integer.valueOf(WorldInfo.theGameType.getID()), Boolean.valueOf(WorldInfo.hardcore), Boolean.valueOf(WorldInfo.allowCommands)}); } });
-			p_85118_1_.addCrashSectionCallable("Level game mode", new Callable() { private static final string __OBFID = "CL_00000597"; public string call() { return string.Format("Game mode: %s (ID %d). Hardcore: %b. Cheats: %b", new object[] {WorldInfo.theGameType.Name, Convert.ToInt32(WorldInfo.theGameType.ID), Convert.ToBoolean(WorldInfo.hardcore), Convert.ToBoolean(WorldInfo.allowCommands)}); } });
+//ORIGINAL LINE: p_85118_1_.addCrashSectionCallable("Level game mode", new Callable() {  public String call() { return String.format("Game mode: %s (ID %d). Hardcore: %b. Cheats: %b", new Object[] {WorldInfo.theGameType.getName(), Integer.valueOf(WorldInfo.theGameType.getID()), Boolean.valueOf(WorldInfo.hardcore), Boolean.valueOf(WorldInfo.allowCommands)}); } });
+			p_85118_1_.addCrashSectionCallable("Level game mode", new Callable() {  public string call() { return string.Format("Game mode: %s (ID %d). Hardcore: %b. Cheats: %b", new object[] {WorldInfo.theGameType.Name, Convert.ToInt32(WorldInfo.theGameType.ID), Convert.ToBoolean(WorldInfo.hardcore), Convert.ToBoolean(WorldInfo.allowCommands)}); } });
 		}
 	}
 

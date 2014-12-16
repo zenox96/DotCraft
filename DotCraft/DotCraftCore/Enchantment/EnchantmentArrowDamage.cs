@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentArrowDamage : Enchantment
 	{
-		private const string __OBFID = "CL_00000098";
+		
 
 		public EnchantmentArrowDamage(int p_i1919_1_, int p_i1919_2_) : base(p_i1919_1_, p_i1919_2_, EnumEnchantmentType.bow)
 		{

@@ -7,7 +7,7 @@ namespace DotCraftCore.World.Gen.Structure
 	public class MapGenStructureData : WorldSavedData
 	{
 		private NBTTagCompound field_143044_a = new NBTTagCompound();
-		private const string __OBFID = "CL_00000510";
+		
 
 		public MapGenStructureData(string p_i43001_1_) : base(p_i43001_1_)
 		{

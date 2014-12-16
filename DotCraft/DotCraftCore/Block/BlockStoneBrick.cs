@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 		public static readonly string[] field_150142_a = new string[] {"default", "mossy", "cracked", "chiseled"};
 		public static readonly string[] field_150141_b = new string[] {null, "mossy", "cracked", "carved"};
 		private IIcon[] field_150143_M;
-		private const string __OBFID = "CL_00000318";
+		
 
 		public BlockStoneBrick() : base(Material.rock)
 		{

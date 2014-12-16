@@ -25,7 +25,7 @@ namespace DotCraftCore.Entity.Monster
 
 	/// <summary> ticks until this slime jumps again  </summary>
 		private int slimeJumpDelay;
-		private const string __OBFID = "CL_00001698";
+		
 
 		public EntitySlime(World p_i1742_1_) : base(p_i1742_1_)
 		{

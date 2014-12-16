@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Biome
 	public class BiomeGenMutated : BiomeGenBase
 	{
 		protected internal BiomeGenBase field_150611_aD;
-		private const string __OBFID = "CL_00000178";
+		
 
 		public BiomeGenMutated(int p_i45381_1_, BiomeGenBase p_i45381_2_) : base(p_i45381_1_)
 		{

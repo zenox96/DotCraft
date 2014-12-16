@@ -9,7 +9,7 @@ namespace DotCraftCore.Item
 
 	public class ItemFireball : Item
 	{
-		private const string __OBFID = "CL_00000029";
+		
 
 		public ItemFireball()
 		{

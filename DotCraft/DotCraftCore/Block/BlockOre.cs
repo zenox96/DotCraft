@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockOre : Block
 	{
-		private const string __OBFID = "CL_00000282";
+		
 
 		public BlockOre() : base(Material.rock)
 		{

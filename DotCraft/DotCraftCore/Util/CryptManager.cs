@@ -14,7 +14,7 @@ namespace DotCraftCore.Util
 
 	public class CryptManager
 	{
-		private const string __OBFID = "CL_00001483";
+		
 
 ///    
 ///     <summary> * Generate a new shared secret AES key from a secure random source </summary>

@@ -31,7 +31,7 @@ namespace DotCraftCore.World.Chunk.Storage
 
 	/// <summary> Save directory for chunks using the Anvil format  </summary>
 		private readonly File chunkSaveLocation;
-		private const string __OBFID = "CL_00000384";
+		
 
 		public AnvilChunkLoader(File p_i2003_1_)
 		{
@@ -454,7 +454,7 @@ namespace DotCraftCore.World.Chunk.Storage
 		{
 			public readonly ChunkCoordIntPair chunkCoordinate;
 			public readonly NBTTagCompound nbtTags;
-			private const string __OBFID = "CL_00000385";
+			
 
 			public PendingChunk(ChunkCoordIntPair p_i2002_1_, NBTTagCompound p_i2002_2_)
 			{

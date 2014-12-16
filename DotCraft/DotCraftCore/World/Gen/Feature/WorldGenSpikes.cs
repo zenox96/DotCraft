@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenSpikes : WorldGenerator
 	{
 		private Block field_150520_a;
-		private const string __OBFID = "CL_00000433";
+		
 
 		public WorldGenSpikes(Block p_i45464_1_)
 		{

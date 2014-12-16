@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerVoronoiZoom : GenLayer
 	{
-		private const string __OBFID = "CL_00000571";
+		
 
 		public GenLayerVoronoiZoom(long p_i2133_1_, GenLayer p_i2133_3_) : base(p_i2133_1_)
 		{

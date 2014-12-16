@@ -104,7 +104,7 @@ namespace DotCraftCore.Enchantment
 
 	/// <summary> Used in localisation and stats.  </summary>
 		protected internal string name;
-		private const string __OBFID = "CL_00000105";
+		
 
 		protected internal Enchantment(int p_i1926_1_, int p_i1926_2_, EnumEnchantmentType p_i1926_3_)
 		{

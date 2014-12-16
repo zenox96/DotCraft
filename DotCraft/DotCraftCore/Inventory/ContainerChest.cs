@@ -10,7 +10,7 @@ namespace DotCraftCore.Inventory
 	{
 		private IInventory lowerChestInventory;
 		private int numRows;
-		private const string __OBFID = "CL_00001742";
+		
 
 		public ContainerChest(IInventory p_i1806_1_, IInventory p_i1806_2_)
 		{

@@ -31,7 +31,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> Maximum time the entity's speed should be boosted for.  </summary>
 		private int maxSpeedBoostTime;
-		private const string __OBFID = "CL_00001580";
+		
 
 		public EntityAIControlledByPlayer(EntityLiving p_i1620_1_, float p_i1620_2_)
 		{

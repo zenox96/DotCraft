@@ -9,7 +9,7 @@ namespace DotCraftCore.Item
 	public class ItemAxe : ItemTool
 	{
 		private static readonly Set field_150917_c = Sets.newHashSet(new Block[] {Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin});
-		private const string __OBFID = "CL_00001770";
+		
 
 		protected internal ItemAxe(Item.ToolMaterial p_i45327_1_) : base(3.0F, p_i45327_1_, field_150917_c)
 		{

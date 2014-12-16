@@ -10,7 +10,7 @@ namespace DotCraftCore.Command
 
 	public class CommandShowSeed : CommandBase
 	{
-		private const string __OBFID = "CL_00001053";
+		
 
 ///    
 ///     <summary> * Returns true if the given command sender is allowed to use this command. </summary>

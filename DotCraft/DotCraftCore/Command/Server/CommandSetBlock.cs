@@ -18,7 +18,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandSetBlock : CommandBase
 	{
-		private const string __OBFID = "CL_00000949";
+		
 
 		public virtual string CommandName
 		{

@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Biome
 		private NoiseGeneratorPerlin field_150625_aG;
 		private bool field_150626_aH;
 		private bool field_150620_aI;
-		private const string __OBFID = "CL_00000176";
+		
 
 		public BiomeGenMesa(int p_i45380_1_, bool p_i45380_2_, bool p_i45380_3_) : base(p_i45380_1_)
 		{

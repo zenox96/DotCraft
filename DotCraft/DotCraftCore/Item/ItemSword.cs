@@ -16,7 +16,7 @@ namespace DotCraftCore.Item
 	{
 		private float field_150934_a;
 		private readonly Item.ToolMaterial field_150933_b;
-		private const string __OBFID = "CL_00000072";
+		
 
 		public ItemSword(Item.ToolMaterial p_i45356_1_)
 		{

@@ -1,22 +1,22 @@
 namespace DotCraftCore.Util
 {
 
-	public class RegistryDefaulted : RegistrySimple
+	public class RegistryDefaulted<T,K> : RegistrySimple<T,K>
 	{
 ///    
 ///     <summary> * Default object for this registry, returned when an object is not found. </summary>
 ///     
-		private readonly object defaultObject;
-		private const string __OBFID = "CL_00001198";
+		private readonly K defaultObject;
+		
 
-		public RegistryDefaulted(object p_i1366_1_)
+		public RegistryDefaulted(K defualt)
 		{
-			this.defaultObject = p_i1366_1_;
+			this.defaultObject = defualt;
 		}
 
-		public override object getObject(object p_82594_1_)
+		public override K getObject(T p_82594_1_)
 		{
-			object var2 = base.getObject(p_82594_1_);
+			K var2 = base.getObject(p_82594_1_);
 			return var2 == null ? this.defaultObject : var2;
 		}
 	}

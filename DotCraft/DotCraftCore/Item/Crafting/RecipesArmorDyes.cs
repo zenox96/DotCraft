@@ -14,7 +14,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipesArmorDyes : IRecipe
 	{
-		private const string __OBFID = "CL_00000079";
+		
 
 ///    
 ///     <summary> * Used to check if a recipe matches current crafting inventory </summary>

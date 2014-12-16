@@ -26,7 +26,7 @@ namespace DotCraftCore.Inventory
 ///     <summary> * The number of items that have been crafted so far. Gets passed to ItemStack.onCrafting before being reset. </summary>
 ///     
 		private int amountCrafted;
-		private const string __OBFID = "CL_00001761";
+		
 
 		public SlotCrafting(EntityPlayer p_i1823_1_, IInventory p_i1823_2_, IInventory p_i1823_3_, int p_i1823_4_, int p_i1823_5_, int p_i1823_6_) : base(p_i1823_3_, p_i1823_4_, p_i1823_5_, p_i1823_6_)
 		{

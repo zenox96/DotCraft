@@ -9,7 +9,7 @@ namespace DotCraftCore.World
 		public readonly int field_151329_a;
 		public readonly int field_151327_b;
 		public readonly int field_151328_c;
-		private const string __OBFID = "CL_00000132";
+		
 
 		public ChunkPosition(int p_i45363_1_, int p_i45363_2_, int p_i45363_3_)
 		{

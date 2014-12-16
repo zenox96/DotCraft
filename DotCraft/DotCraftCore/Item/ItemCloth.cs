@@ -7,7 +7,7 @@ namespace DotCraftCore.Item
 
 	public class ItemCloth : ItemBlock
 	{
-		private const string __OBFID = "CL_00000075";
+		
 
 		public ItemCloth(Block p_i45358_1_) : base(p_i45358_1_)
 		{

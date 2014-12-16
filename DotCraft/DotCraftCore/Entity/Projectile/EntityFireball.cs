@@ -29,7 +29,7 @@ namespace DotCraftCore.Entity.Projectile
 		public double accelerationX;
 		public double accelerationY;
 		public double accelerationZ;
-		private const string __OBFID = "CL_00001717";
+		
 
 		public EntityFireball(World p_i1759_1_) : base(p_i1759_1_)
 		{

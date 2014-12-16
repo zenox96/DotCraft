@@ -39,7 +39,7 @@ namespace DotCraftCore.Entity
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
 //		private final boolean isAnimal;
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00001551";
+//		
 
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain methods in .NET:
 //		private EnumCreatureType(Class p_i1596_3_, int p_i1596_4_, Material p_i1596_5_, boolean p_i1596_6_, boolean p_i1596_7_)

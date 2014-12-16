@@ -9,7 +9,7 @@ namespace DotCraftCore.Block
 	public class BlockCarrot : BlockCrops
 	{
 		private IIcon[] field_149868_a;
-		private const string __OBFID = "CL_00000212";
+		
 
 ///    
 ///     <summary> * Gets the block's texture. Args: side, meta </summary>

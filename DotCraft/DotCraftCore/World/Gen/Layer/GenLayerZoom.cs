@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerZoom : GenLayer
 	{
-		private const string __OBFID = "CL_00000572";
+		
 
 		public GenLayerZoom(long p_i2134_1_, GenLayer p_i2134_3_) : base(p_i2134_1_)
 		{

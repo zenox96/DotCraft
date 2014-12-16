@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 		private readonly float field_94565_d;
 		private readonly string field_94566_e;
 		private readonly float field_94564_f;
-		private const string __OBFID = "CL_00001519";
+		
 
 		public CombatEntry(DamageSource p_i1564_1_, int p_i1564_2_, float p_i1564_3_, float p_i1564_4_, string p_i1564_5_, float p_i1564_6_)
 		{

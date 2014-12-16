@@ -10,7 +10,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockRotatedPillar : Block
 	{
 		protected internal IIcon field_150164_N;
-		private const string __OBFID = "CL_00000302";
+		
 
 		protected internal BlockRotatedPillar(Material p_i45425_1_) : base(p_i45425_1_)
 		{

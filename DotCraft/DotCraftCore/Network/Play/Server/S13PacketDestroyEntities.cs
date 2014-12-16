@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S13PacketDestroyEntities : Packet
 	{
 		private int[] field_149100_a;
-		private const string __OBFID = "CL_00001320";
+		
 
 		public S13PacketDestroyEntities()
 		{

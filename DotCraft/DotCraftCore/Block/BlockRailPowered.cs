@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 	public class BlockRailPowered : BlockRailBase
 	{
 		protected internal IIcon field_150059_b;
-		private const string __OBFID = "CL_00000288";
+		
 
 		protected internal BlockRailPowered() : base(true)
 		{

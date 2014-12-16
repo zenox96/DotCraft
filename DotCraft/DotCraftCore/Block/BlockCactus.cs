@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_150041_a;
 		private IIcon field_150040_b;
-		private const string __OBFID = "CL_00000210";
+		
 
 		protected internal BlockCactus() : base(Material.field_151570_A)
 		{

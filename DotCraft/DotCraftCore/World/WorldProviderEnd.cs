@@ -13,7 +13,7 @@ namespace DotCraftCore.World
 
 	public class WorldProviderEnd : WorldProvider
 	{
-		private const string __OBFID = "CL_00000389";
+		
 
 ///    
 ///     <summary> * creates a new world chunk manager for WorldProvider </summary>

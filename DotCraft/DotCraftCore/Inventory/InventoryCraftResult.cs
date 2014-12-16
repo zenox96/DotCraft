@@ -8,7 +8,7 @@ namespace DotCraftCore.Inventory
 	{
 	/// <summary> A list of one item containing the result of the crafting formula  </summary>
 		private ItemStack[] stackResult = new ItemStack[1];
-		private const string __OBFID = "CL_00001760";
+		
 
 ///    
 ///     <summary> * Returns the number of slots in the inventory. </summary>

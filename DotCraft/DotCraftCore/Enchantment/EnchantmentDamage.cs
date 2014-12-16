@@ -34,7 +34,7 @@ namespace DotCraftCore.Enchantment
 ///     <summary> * Defines the type of damage of the enchantment, 0 = all, 1 = undead, 3 = arthropods </summary>
 ///     
 		public readonly int damageType;
-		private const string __OBFID = "CL_00000102";
+		
 
 		public EnchantmentDamage(int p_i1923_1_, int p_i1923_2_, int p_i1923_3_) : base(p_i1923_1_, p_i1923_2_, EnumEnchantmentType.weapon)
 		{

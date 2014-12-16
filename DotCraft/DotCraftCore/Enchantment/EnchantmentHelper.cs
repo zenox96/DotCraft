@@ -32,7 +32,7 @@ namespace DotCraftCore.Enchantment
 		private static readonly EnchantmentHelper.ModifierLiving enchantmentModifierLiving = new EnchantmentHelper.ModifierLiving(null);
 		private static readonly EnchantmentHelper.HurtIterator field_151388_d = new EnchantmentHelper.HurtIterator(null);
 		private static readonly EnchantmentHelper.DamageIterator field_151389_e = new EnchantmentHelper.DamageIterator(null);
-		private const string __OBFID = "CL_00000107";
+		
 
 ///    
 ///     <summary> * Returns the level of enchantment on the ItemStack passed. </summary>
@@ -525,7 +525,7 @@ namespace DotCraftCore.Enchantment
 		{
 			public EntityLivingBase field_151366_a;
 			public Entity field_151365_b;
-			private const string __OBFID = "CL_00000109";
+			
 
 			private DamageIterator()
 			{
@@ -545,7 +545,7 @@ namespace DotCraftCore.Enchantment
 		{
 			public EntityLivingBase field_151364_a;
 			public Entity field_151363_b;
-			private const string __OBFID = "CL_00000110";
+			
 
 			private HurtIterator()
 			{
@@ -570,7 +570,7 @@ namespace DotCraftCore.Enchantment
 		{
 			public int damageModifier;
 			public DamageSource source;
-			private const string __OBFID = "CL_00000114";
+			
 
 			private ModifierDamage()
 			{
@@ -590,7 +590,7 @@ namespace DotCraftCore.Enchantment
 		{
 			public float livingModifier;
 			public EnumCreatureAttribute entityLiving;
-			private const string __OBFID = "CL_00000112";
+			
 
 			private ModifierLiving()
 			{

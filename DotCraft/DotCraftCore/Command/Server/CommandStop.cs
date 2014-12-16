@@ -7,7 +7,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandStop : CommandBase
 	{
-		private const string __OBFID = "CL_00001132";
+		
 
 		public virtual string CommandName
 		{

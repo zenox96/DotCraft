@@ -9,7 +9,7 @@ namespace DotCraftCore.World.Chunk.Storage
 	{
 	/// <summary> A map containing Files as keys and RegionFiles as values  </summary>
 		private static readonly IDictionary regionsByFilename = new Hashtable();
-		private const string __OBFID = "CL_00000383";
+		
 
 		[MethodImpl(MethodImplOptions.Synchronized)]
 		public static RegionFile createOrLoadRegionFile(File p_76550_0_, int p_76550_1_, int p_76550_2_)

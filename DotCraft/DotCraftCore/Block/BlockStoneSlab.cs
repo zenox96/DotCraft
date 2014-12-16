@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly string[] field_150006_b = new string[] {"stone", "sand", "wood", "cobble", "brick", "smoothStoneBrick", "netherBrick", "quartz"};
 		private IIcon field_150007_M;
-		private const string __OBFID = "CL_00000320";
+		
 
 		public BlockStoneSlab(bool p_i45431_1_) : base(p_i45431_1_, Material.rock)
 		{

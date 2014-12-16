@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 
 	public class BlockStone : Block
 	{
-		private const string __OBFID = "CL_00000317";
+		
 
 		public BlockStone() : base(Material.rock)
 		{

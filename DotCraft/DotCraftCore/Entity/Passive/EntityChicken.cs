@@ -35,7 +35,7 @@ namespace DotCraftCore.Entity.Passive
 	/// <summary> The time until the next egg is spawned.  </summary>
 		public int timeUntilNextEgg;
 		public bool field_152118_bv;
-		private const string __OBFID = "CL_00001639";
+		
 
 		public EntityChicken(World p_i1682_1_) : base(p_i1682_1_)
 		{

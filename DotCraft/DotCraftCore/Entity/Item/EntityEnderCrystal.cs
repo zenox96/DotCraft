@@ -16,7 +16,7 @@ namespace DotCraftCore.Entity.Item
 	/// <summary> Used to create the rotation animation when rendering the crystal.  </summary>
 		public int innerRotation;
 		public int health;
-		private const string __OBFID = "CL_00001658";
+		
 
 		public EntityEnderCrystal(World p_i1698_1_) : base(p_i1698_1_)
 		{

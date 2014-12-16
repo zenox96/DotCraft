@@ -18,7 +18,7 @@ namespace DotCraftCore.World.Biome
 		protected internal static readonly WorldGenForest field_150629_aC = new WorldGenForest(false, true);
 		protected internal static readonly WorldGenForest field_150630_aD = new WorldGenForest(false, false);
 		protected internal static readonly WorldGenCanopyTree field_150631_aE = new WorldGenCanopyTree(false);
-		private const string __OBFID = "CL_00000170";
+		
 
 		public BiomeGenForest(int p_i45377_1_, int p_i45377_2_) : base(p_i45377_1_)
 		{
@@ -212,7 +212,7 @@ namespace DotCraftCore.World.Biome
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //				return this.biomeID != BiomeGenBase.field_150583_P.biomeID && this.biomeID != BiomeGenBase.field_150582_Q.biomeID ? new BiomeGenMutated(this.biomeID + 128, this)
 //			{
-//				private static final String __OBFID = "CL_00000172";
+//				
 //				public void decorate(World p_76728_1_, Random p_76728_2_, int p_76728_3_, int p_76728_4_)
 //				{
 //					this.field_150611_aD.decorate(p_76728_1_, p_76728_2_, p_76728_3_, p_76728_4_);
@@ -221,7 +221,7 @@ namespace DotCraftCore.World.Biome
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //				: new BiomeGenMutated(this.biomeID + 128, this)
 //			{
-//				private static final String __OBFID = "CL_00001861";
+//				
 //				public WorldGenAbstractTree func_150567_a(Random p_150567_1_)
 //				{
 //					return p_150567_1_.nextBoolean() ? BiomeGenForest.field_150629_aC : BiomeGenForest.field_150630_aD;

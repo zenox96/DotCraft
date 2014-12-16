@@ -29,7 +29,7 @@ namespace DotCraftCore.Stats
 		private readonly Set field_150888_e = Sets.newHashSet();
 		private int field_150885_f = -300;
 		private bool field_150886_g = false;
-		private const string __OBFID = "CL_00001471";
+		
 
 		public StatisticsFile(MinecraftServer p_i45306_1_, File p_i45306_2_)
 		{

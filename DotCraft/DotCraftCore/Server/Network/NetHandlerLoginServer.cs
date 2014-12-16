@@ -38,7 +38,7 @@ namespace DotCraftCore.Server.Network
 		private GameProfile field_147337_i;
 		private string field_147334_j;
 		private SecretKey field_147335_k;
-		private const string __OBFID = "CL_00001458";
+		
 
 		public NetHandlerLoginServer(MinecraftServer p_i45298_1_, NetworkManager p_i45298_2_)
 		{
@@ -155,7 +155,7 @@ namespace DotCraftCore.Server.Network
 				this.field_147335_k = p_147315_1_.func_149300_a(var2);
 				this.field_147328_g = NetHandlerLoginServer.LoginState.AUTHENTICATING;
 				this.field_147333_a.enableEncryption(this.field_147335_k);
-				(new Thread("User Authenticator #" + field_147331_b.incrementAndGet()) { private static final string __OBFID = "CL_00001459"; public void run() { GameProfile var1 = NetHandlerLoginServer.field_147337_i; try { string var2 = (new BigInteger(CryptManager.getServerIdHash(NetHandlerLoginServer.field_147334_j, NetHandlerLoginServer.field_147327_f.KeyPair.Public, NetHandlerLoginServer.field_147335_k))).ToString(16); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.field_147327_f.func_147130_as().hasJoinedServer(new GameProfile((UUID)null, var1.Name), var2); if(NetHandlerLoginServer.field_147337_i != null) { NetHandlerLoginServer.logger.info("UUID of player " + NetHandlerLoginServer.field_147337_i.Name + " is " + NetHandlerLoginServer.field_147337_i.Id); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else if(NetHandlerLoginServer.field_147327_f.SinglePlayer) { NetHandlerLoginServer.logger.warn("Failed to verify username but will let them in anyway!"); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.func_152506_a(var1); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else { NetHandlerLoginServer.func_147322_a("Failed to verify username!"); NetHandlerLoginServer.logger.error("Username \'" + NetHandlerLoginServer.field_147337_i.Name + "\' tried to join with an invalid session"); } } catch (AuthenticationUnavailableException var3) { if(NetHandlerLoginServer.field_147327_f.SinglePlayer) { NetHandlerLoginServer.logger.warn("Authentication servers are down but will let them in anyway!"); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.func_152506_a(var1); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else { NetHandlerLoginServer.func_147322_a("Authentication servers are down. Please try again later, sorry!"); NetHandlerLoginServer.logger.error("Couldn\'t verify username because servers are unavailable"); } } } }).start();
+				(new Thread("User Authenticator #" + field_147331_b.incrementAndGet()) {  public void run() { GameProfile var1 = NetHandlerLoginServer.field_147337_i; try { string var2 = (new BigInteger(CryptManager.getServerIdHash(NetHandlerLoginServer.field_147334_j, NetHandlerLoginServer.field_147327_f.KeyPair.Public, NetHandlerLoginServer.field_147335_k))).ToString(16); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.field_147327_f.func_147130_as().hasJoinedServer(new GameProfile((UUID)null, var1.Name), var2); if(NetHandlerLoginServer.field_147337_i != null) { NetHandlerLoginServer.logger.info("UUID of player " + NetHandlerLoginServer.field_147337_i.Name + " is " + NetHandlerLoginServer.field_147337_i.Id); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else if(NetHandlerLoginServer.field_147327_f.SinglePlayer) { NetHandlerLoginServer.logger.warn("Failed to verify username but will let them in anyway!"); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.func_152506_a(var1); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else { NetHandlerLoginServer.func_147322_a("Failed to verify username!"); NetHandlerLoginServer.logger.error("Username \'" + NetHandlerLoginServer.field_147337_i.Name + "\' tried to join with an invalid session"); } } catch (AuthenticationUnavailableException var3) { if(NetHandlerLoginServer.field_147327_f.SinglePlayer) { NetHandlerLoginServer.logger.warn("Authentication servers are down but will let them in anyway!"); NetHandlerLoginServer.field_147337_i = NetHandlerLoginServer.func_152506_a(var1); NetHandlerLoginServer.field_147328_g = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT; } else { NetHandlerLoginServer.func_147322_a("Authentication servers are down. Please try again later, sorry!"); NetHandlerLoginServer.logger.error("Couldn\'t verify username because servers are unavailable"); } } } }).start();
 			}
 		}
 
@@ -180,7 +180,7 @@ namespace DotCraftCore.Server.Network
 
 			@private static final NetHandlerLoginServer.LoginState[] $VALUES = new NetHandlerLoginServer.LoginState[]{HELLO, KEY, AUTHENTICATING, READY_TO_ACCEPT, ACCEPTED
 		}
-			private const string __OBFID = "CL_00001463";
+			
 
 			private LoginState(string p_i45297_1_, int p_i45297_2_)
 			{

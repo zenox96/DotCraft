@@ -8,7 +8,7 @@ namespace DotCraftCore.World
 
 	public class WorldServerMulti : WorldServer
 	{
-		private const string __OBFID = "CL_00001430";
+		
 
 		public WorldServerMulti(MinecraftServer p_i45283_1_, ISaveHandler p_i45283_2_, string p_i45283_3_, int p_i45283_4_, WorldSettings p_i45283_5_, WorldServer p_i45283_6_, Profiler p_i45283_7_) : base(p_i45283_1_, p_i45283_2_, p_i45283_3_, p_i45283_4_, p_i45283_5_, p_i45283_7_)
 		{

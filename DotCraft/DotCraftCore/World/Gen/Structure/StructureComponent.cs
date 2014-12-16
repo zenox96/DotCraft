@@ -27,7 +27,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	/// <summary> The type ID of this component.  </summary>
 		protected internal int componentType;
-		private const string __OBFID = "CL_00000511";
+		
 
 		public StructureComponent()
 		{
@@ -842,7 +842,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			protected internal Block field_151562_a;
 			protected internal int selectedBlockMetaData;
-			private const string __OBFID = "CL_00000512";
+			
 
 			protected internal BlockSelector()
 			{

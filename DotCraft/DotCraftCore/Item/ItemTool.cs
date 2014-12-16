@@ -19,7 +19,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> The material this tool is made from.  </summary>
 		protected internal Item.ToolMaterial toolMaterial;
-		private const string __OBFID = "CL_00000019";
+		
 
 		protected internal ItemTool(float p_i45333_1_, Item.ToolMaterial p_i45333_2_, Set p_i45333_3_)
 		{

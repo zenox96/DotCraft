@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenLakes : WorldGenerator
 	{
 		private Block field_150556_a;
-		private const string __OBFID = "CL_00000418";
+		
 
 		public WorldGenLakes(Block p_i45455_1_)
 		{

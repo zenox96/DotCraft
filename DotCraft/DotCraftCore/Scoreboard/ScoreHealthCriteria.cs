@@ -8,7 +8,7 @@ namespace DotCraftCore.Scoreboard
 
 	public class ScoreHealthCriteria : ScoreDummyCriteria
 	{
-		private const string __OBFID = "CL_00000623";
+		
 
 		public ScoreHealthCriteria(string p_i2312_1_) : base(p_i2312_1_)
 		{

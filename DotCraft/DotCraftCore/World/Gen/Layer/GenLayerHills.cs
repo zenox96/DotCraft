@@ -9,7 +9,7 @@ namespace DotCraftCore.World.Gen.Layer
 	{
 		private static readonly Logger logger = LogManager.Logger;
 		private GenLayer field_151628_d;
-		private const string __OBFID = "CL_00000563";
+		
 
 		public GenLayerHills(long p_i45479_1_, GenLayer p_i45479_3_, GenLayer p_i45479_4_) : base(p_i45479_1_)
 		{

@@ -14,7 +14,7 @@ namespace DotCraftCore.Pathfinding
 
 	/// <summary> The total length of the path  </summary>
 		private int pathLength;
-		private const string __OBFID = "CL_00000575";
+		
 
 		public PathEntity(PathPoint[] p_i2136_1_)
 		{

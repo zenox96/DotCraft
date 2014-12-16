@@ -12,7 +12,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandEmote : CommandBase
 	{
-		private const string __OBFID = "CL_00000351";
+		
 
 		public virtual string CommandName
 		{

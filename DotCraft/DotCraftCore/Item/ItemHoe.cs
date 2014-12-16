@@ -11,7 +11,7 @@ namespace DotCraftCore.Item
 	public class ItemHoe : Item
 	{
 		protected internal Item.ToolMaterial theToolMaterial;
-		private const string __OBFID = "CL_00000039";
+		
 
 		public ItemHoe(Item.ToolMaterial p_i45343_1_)
 		{

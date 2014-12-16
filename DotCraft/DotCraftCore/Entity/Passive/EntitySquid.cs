@@ -39,7 +39,7 @@ namespace DotCraftCore.Entity.Passive
 		private float randomMotionVecX;
 		private float randomMotionVecY;
 		private float randomMotionVecZ;
-		private const string __OBFID = "CL_00001651";
+		
 
 		public EntitySquid(World p_i1693_1_) : base(p_i1693_1_)
 		{

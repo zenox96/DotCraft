@@ -21,7 +21,7 @@ namespace DotCraftCore.World.Biome
 
 	/// <summary> The list of cached BiomeCacheBlocks  </summary>
 		private IList cache = new ArrayList();
-		private const string __OBFID = "CL_00000162";
+		
 
 		public BiomeCache(WorldChunkManager p_i1973_1_)
 		{
@@ -99,7 +99,7 @@ namespace DotCraftCore.World.Biome
 			public int xPosition;
 			public int zPosition;
 			public long lastAccessTime;
-			private const string __OBFID = "CL_00000163";
+			
 
 			public Block(int p_i1972_2_, int p_i1972_3_)
 			{

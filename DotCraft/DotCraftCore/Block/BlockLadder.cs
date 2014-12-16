@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 
 	public class BlockLadder : Block
 	{
-		private const string __OBFID = "CL_00000262";
+		
 
 		protected internal BlockLadder() : base(Material.circuits)
 		{

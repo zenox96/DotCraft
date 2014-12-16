@@ -8,7 +8,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentDurability : Enchantment
 	{
-		private const string __OBFID = "CL_00000103";
+		
 
 		protected internal EnchantmentDurability(int p_i1924_1_, int p_i1924_2_) : base(p_i1924_1_, p_i1924_2_, EnumEnchantmentType.breakable)
 		{

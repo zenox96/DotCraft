@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 		private sbyte field_149432_b;
 		private sbyte field_149433_c;
 		private short field_149431_d;
-		private const string __OBFID = "CL_00001343";
+		
 
 		public S1DPacketEntityEffect()
 		{

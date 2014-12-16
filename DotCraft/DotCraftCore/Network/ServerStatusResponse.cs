@@ -20,7 +20,7 @@ namespace DotCraftCore.Network
 		private ServerStatusResponse.PlayerCountData field_151324_b;
 		private ServerStatusResponse.MinecraftProtocolVersionIdentifier field_151325_c;
 		private string field_151323_d;
-		private const string __OBFID = "CL_00001385";
+		
 
 		public virtual IChatComponent func_151317_a()
 		{
@@ -66,7 +66,7 @@ namespace DotCraftCore.Network
 		{
 			private readonly string field_151306_a;
 			private readonly int field_151305_b;
-			private const string __OBFID = "CL_00001389";
+			
 
 			public MinecraftProtocolVersionIdentifier(string p_i45275_1_, int p_i45275_2_)
 			{
@@ -86,7 +86,7 @@ namespace DotCraftCore.Network
 
 			public class Serializer : JsonDeserializer, JsonSerializer
 			{
-				private const string __OBFID = "CL_00001390";
+				
 
 				public virtual ServerStatusResponse.MinecraftProtocolVersionIdentifier deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_)
 				{
@@ -114,7 +114,7 @@ namespace DotCraftCore.Network
 			private readonly int field_151336_a;
 			private readonly int field_151334_b;
 			private GameProfile[] field_151335_c;
-			private const string __OBFID = "CL_00001386";
+			
 
 			public PlayerCountData(int p_i45274_1_, int p_i45274_2_)
 			{
@@ -144,7 +144,7 @@ namespace DotCraftCore.Network
 
 			public class Serializer : JsonDeserializer, JsonSerializer
 			{
-				private const string __OBFID = "CL_00001387";
+				
 
 				public virtual ServerStatusResponse.PlayerCountData deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_)
 				{
@@ -207,7 +207,7 @@ namespace DotCraftCore.Network
 
 		public class Serializer : JsonDeserializer, JsonSerializer
 		{
-			private const string __OBFID = "CL_00001388";
+			
 
 			public virtual ServerStatusResponse deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_)
 			{

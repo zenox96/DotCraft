@@ -9,7 +9,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenDoublePlant : WorldGenerator
 	{
 		private int field_150549_a;
-		private const string __OBFID = "CL_00000408";
+		
 
 		public virtual void func_150548_a(int p_150548_1_)
 		{

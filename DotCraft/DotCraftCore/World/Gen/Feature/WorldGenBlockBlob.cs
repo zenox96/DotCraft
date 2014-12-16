@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 		private Block field_150545_a;
 		private int field_150544_b;
-		private const string __OBFID = "CL_00000402";
+		
 
 		public WorldGenBlockBlob(Block p_i45450_1_, int p_i45450_2_) : base(false)
 		{

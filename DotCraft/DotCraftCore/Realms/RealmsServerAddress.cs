@@ -11,7 +11,7 @@ namespace DotCraftCore.Realms
 	{
 		private readonly string host;
 		private readonly int port;
-		private const string __OBFID = "CL_00001864";
+		
 
 		protected internal RealmsServerAddress(string p_i1121_1_, int p_i1121_2_)
 		{

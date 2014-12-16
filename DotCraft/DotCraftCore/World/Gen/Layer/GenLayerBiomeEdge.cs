@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerBiomeEdge : GenLayer
 	{
-		private const string __OBFID = "CL_00000554";
+		
 
 		public GenLayerBiomeEdge(long p_i45475_1_, GenLayer p_i45475_3_) : base(p_i45475_1_)
 		{

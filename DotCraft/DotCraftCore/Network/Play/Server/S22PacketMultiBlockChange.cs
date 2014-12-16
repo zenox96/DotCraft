@@ -19,7 +19,7 @@ namespace DotCraftCore.Network.Play.Server
 		private ChunkCoordIntPair field_148925_b;
 		private sbyte[] field_148926_c;
 		private int field_148924_d;
-		private const string __OBFID = "CL_00001290";
+		
 
 		public S22PacketMultiBlockChange()
 		{

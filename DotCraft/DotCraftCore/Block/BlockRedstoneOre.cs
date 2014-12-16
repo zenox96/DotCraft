@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	public class BlockRedstoneOre : Block
 	{
 		private bool field_150187_a;
-		private const string __OBFID = "CL_00000294";
+		
 
 		public BlockRedstoneOre(bool p_i45420_1_) : base(Material.rock)
 		{

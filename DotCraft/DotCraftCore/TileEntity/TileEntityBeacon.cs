@@ -28,7 +28,7 @@ namespace DotCraftCore.TileEntity
 		private int field_146010_n;
 		private ItemStack field_146011_o;
 		private string field_146008_p;
-		private const string __OBFID = "CL_00000339";
+		
 
 		public override void updateEntity()
 		{

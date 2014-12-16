@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockSlab : Block
 	{
 		protected internal readonly bool field_150004_a;
-		private const string __OBFID = "CL_00000253";
+		
 
 		public BlockSlab(bool p_i45410_1_, Material p_i45410_2_) : base(p_i45410_2_)
 		{

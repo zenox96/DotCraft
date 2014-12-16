@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 		private Block field_150522_a;
 		private int tallGrassMetadata;
-		private const string __OBFID = "CL_00000437";
+		
 
 		public WorldGenTallGrass(Block p_i45466_1_, int p_i45466_2_)
 		{

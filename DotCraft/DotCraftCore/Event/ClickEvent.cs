@@ -7,7 +7,7 @@ namespace DotCraftCore.Event
 	{
 		private readonly ClickEvent.Action action;
 		private readonly string value;
-		private const string __OBFID = "CL_00001260";
+		
 
 		public ClickEvent(ClickEvent.Action p_i45156_1_, string p_i45156_2_)
 		{
@@ -108,7 +108,7 @@ namespace DotCraftCore.Event
 
 			@private static final ClickEvent.Action[] $VALUES = new ClickEvent.Action[]{OPEN_URL, OPEN_FILE, RUN_COMMAND, TWITCH_USER_INFO, SUGGEST_COMMAND
 		}
-			private const string __OBFID = "CL_00001261";
+			
 
 			private Action(string p_i45155_1_, int p_i45155_2_, string p_i45155_3_, bool p_i45155_4_)
 			{

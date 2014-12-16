@@ -17,7 +17,7 @@ namespace DotCraftCore.Inventory
 	/// <summary> Instance of Slot.  </summary>
 		private readonly Slot theSlot;
 		private int brewTime;
-		private const string __OBFID = "CL_00001737";
+		
 
 		public ContainerBrewingStand(InventoryPlayer p_i1805_1_, TileEntityBrewingStand p_i1805_2_)
 		{
@@ -161,7 +161,7 @@ namespace DotCraftCore.Inventory
 
 		internal class Ingredient : Slot
 		{
-			private const string __OBFID = "CL_00001738";
+			
 
 			public Ingredient(IInventory p_i1803_2_, int p_i1803_3_, int p_i1803_4_, int p_i1803_5_) : base(p_i1803_2_, p_i1803_3_, p_i1803_4_, p_i1803_5_)
 			{
@@ -184,7 +184,7 @@ namespace DotCraftCore.Inventory
 		internal class Potion : Slot
 		{
 			private EntityPlayer player;
-			private const string __OBFID = "CL_00001740";
+			
 
 			public Potion(EntityPlayer p_i1804_1_, IInventory p_i1804_2_, int p_i1804_3_, int p_i1804_4_, int p_i1804_5_) : base(p_i1804_2_, p_i1804_3_, p_i1804_4_, p_i1804_5_)
 			{

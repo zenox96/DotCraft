@@ -3,7 +3,7 @@ namespace DotCraftCore.Command
 
 	public class SyntaxErrorException : CommandException
 	{
-		private const string __OBFID = "CL_00001189";
+		
 
 		public SyntaxErrorException() : this("commands.generic.snytax", new object[0])
 		{

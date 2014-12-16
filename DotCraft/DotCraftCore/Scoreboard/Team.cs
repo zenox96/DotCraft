@@ -3,7 +3,7 @@ namespace DotCraftCore.Scoreboard
 
 	public abstract class Team
 	{
-		private const string __OBFID = "CL_00000621";
+		
 
 ///    
 ///     <summary> * Same as == </summary>

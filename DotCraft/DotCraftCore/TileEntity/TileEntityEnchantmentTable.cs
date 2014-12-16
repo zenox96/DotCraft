@@ -20,7 +20,7 @@ namespace DotCraftCore.TileEntity
 		public float field_145924_q;
 		private static Random field_145923_r = new Random();
 		private string field_145922_s;
-		private const string __OBFID = "CL_00000354";
+		
 
 		public override void writeToNBT(NBTTagCompound p_145841_1_)
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Storage
 	{
 	/// <summary> Instance of WorldInfo.  </summary>
 		private readonly WorldInfo theWorldInfo;
-		private const string __OBFID = "CL_00000584";
+		
 
 		public DerivedWorldInfo(WorldInfo p_i2145_1_)
 		{

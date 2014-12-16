@@ -8,7 +8,7 @@ namespace DotCraftCore.World.Chunk.Storage
 
 	public class ChunkLoader
 	{
-		private const string __OBFID = "CL_00000379";
+		
 
 		public static ChunkLoader.AnvilConverterData load(NBTTagCompound p_76691_0_)
 		{
@@ -156,7 +156,7 @@ namespace DotCraftCore.World.Chunk.Storage
 			public NBTTagList field_151563_j;
 			public readonly int x;
 			public readonly int z;
-			private const string __OBFID = "CL_00000380";
+			
 
 			public AnvilConverterData(int p_i1999_1_, int p_i1999_2_)
 			{

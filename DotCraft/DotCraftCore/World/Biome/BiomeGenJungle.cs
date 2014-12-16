@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Biome
 	public class BiomeGenJungle : BiomeGenBase
 	{
 		private bool field_150614_aC;
-		private const string __OBFID = "CL_00000175";
+		
 
 		public BiomeGenJungle(int p_i45379_1_, bool p_i45379_2_) : base(p_i45379_1_)
 		{

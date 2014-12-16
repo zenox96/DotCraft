@@ -10,7 +10,7 @@ namespace DotCraftCore.TileEntity
 	{
 		private Item field_145967_a;
 		private int field_145968_i;
-		private const string __OBFID = "CL_00000356";
+		
 
 		public TileEntityFlowerPot()
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.Command
 
 	public class CommandGameMode : CommandBase
 	{
-		private const string __OBFID = "CL_00000448";
+		
 
 		public virtual string CommandName
 		{

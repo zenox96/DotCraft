@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 		public static readonly string[] field_149858_b = new string[] {"dandelion"};
 		private IIcon[] field_149861_N;
 		private int field_149862_O;
-		private const string __OBFID = "CL_00000246";
+		
 
 		protected internal BlockFlower(int p_i2173_1_) : base(Material.plants)
 		{

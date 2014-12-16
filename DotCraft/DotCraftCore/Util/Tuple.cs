@@ -8,7 +8,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> Second Object in the Tuple  </summary>
 		private object second;
-		private const string __OBFID = "CL_00001502";
+		
 
 		public Tuple(object p_i1555_1_, object p_i1555_2_)
 		{

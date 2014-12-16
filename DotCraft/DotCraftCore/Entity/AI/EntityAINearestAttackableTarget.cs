@@ -23,7 +23,7 @@ namespace DotCraftCore.Entity.AI
 ///     
 		private readonly IEntitySelector targetEntitySelector;
 		private EntityLivingBase targetEntity;
-		private const string __OBFID = "CL_00001620";
+		
 
 		public EntityAINearestAttackableTarget(EntityCreature p_i1663_1_, Type p_i1663_2_, int p_i1663_3_, bool p_i1663_4_) : this(p_i1663_1_, p_i1663_2_, p_i1663_3_, p_i1663_4_, false)
 		{
@@ -44,7 +44,7 @@ namespace DotCraftCore.Entity.AI
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //			this.targetEntitySelector = new IEntitySelector()
 //		{
-//			private static final String __OBFID = "CL_00001621";
+//			
 //			public boolean isEntityApplicable(Entity p_82704_1_)
 //			{
 //				return !(p_82704_1_ instanceof EntityLivingBase) ? false : (p_i1665_6_ != null && !p_i1665_6_.isEntityApplicable(p_82704_1_) ? false : EntityAINearestAttackableTarget.isSuitableTarget((EntityLivingBase)p_82704_1_, false));
@@ -91,7 +91,7 @@ namespace DotCraftCore.Entity.AI
 		public class Sorter : IComparer
 		{
 			private readonly Entity theEntity;
-			private const string __OBFID = "CL_00001622";
+			
 
 			public Sorter(Entity p_i1662_1_)
 			{

@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 		internal int field_149815_a;
 		internal bool[] field_149814_b = new bool[4];
 		internal int[] field_149816_M = new int[4];
-		private const string __OBFID = "CL_00000234";
+		
 
 		protected internal BlockDynamicLiquid(Material p_i45403_1_) : base(p_i45403_1_)
 		{

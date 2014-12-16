@@ -9,7 +9,7 @@ namespace DotCraftCore.Server.Management
 	public class UserListOpsEntry : UserListEntry
 	{
 		private readonly int field_152645_a;
-		private const string __OBFID = "CL_00001878";
+		
 
 		public UserListOpsEntry(GameProfile p_i1149_1_, int p_i1149_2_) : base(p_i1149_1_)
 		{

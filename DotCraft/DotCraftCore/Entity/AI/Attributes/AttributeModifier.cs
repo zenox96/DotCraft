@@ -16,7 +16,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 ///     <summary> * If false, this modifier is not saved in NBT. Used for "natural" modifiers like speed boost from sprinting </summary>
 ///     
 		private bool isSaved;
-		private const string __OBFID = "CL_00001564";
+		
 
 		public AttributeModifier(string p_i1605_1_, double p_i1605_2_, int p_i1605_4_) : this(UUID.randomUUID(), p_i1605_1_, p_i1605_2_, p_i1605_4_)
 		{

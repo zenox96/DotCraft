@@ -10,7 +10,7 @@ namespace DotCraftCore.Block
 
 	public class BlockClay : Block
 	{
-		private const string __OBFID = "CL_00000215";
+		
 
 		public BlockClay() : base(Material.field_151571_B)
 		{

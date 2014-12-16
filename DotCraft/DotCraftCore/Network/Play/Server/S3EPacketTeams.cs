@@ -18,7 +18,7 @@ namespace DotCraftCore.Network.Play.Server
 		private ICollection field_149317_e = new ArrayList();
 		private int field_149314_f;
 		private int field_149315_g;
-		private const string __OBFID = "CL_00001334";
+		
 
 		public S3EPacketTeams()
 		{

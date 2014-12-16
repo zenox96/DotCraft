@@ -9,7 +9,7 @@ namespace DotCraftCore.Command
 
 	public class CommandTime : CommandBase
 	{
-		private const string __OBFID = "CL_00001183";
+		
 
 		public virtual string CommandName
 		{

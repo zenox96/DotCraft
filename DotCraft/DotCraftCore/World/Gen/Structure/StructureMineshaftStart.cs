@@ -7,7 +7,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	public class StructureMineshaftStart : StructureStart
 	{
-		private const string __OBFID = "CL_00000450";
+		
 
 		public StructureMineshaftStart()
 		{

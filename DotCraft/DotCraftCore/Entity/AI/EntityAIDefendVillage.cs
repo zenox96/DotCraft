@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity.AI
 ///     <summary> * The aggressor of the iron golem's village which is now the golem's attack target. </summary>
 ///     
 		internal EntityLivingBase villageAgressorTarget;
-		private const string __OBFID = "CL_00001618";
+		
 
 		public EntityAIDefendVillage(EntityIronGolem p_i1659_1_) : base(p_i1659_1_, false, true)
 		{

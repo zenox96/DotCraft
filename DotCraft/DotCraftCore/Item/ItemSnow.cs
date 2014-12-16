@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemSnow : ItemBlockWithMetadata
 	{
-		private const string __OBFID = "CL_00000068";
+		
 
 		public ItemSnow(Block p_i45354_1_, Block p_i45354_2_) : base(p_i45354_1_, p_i45354_2_)
 		{

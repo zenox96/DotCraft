@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Biome
 	public class BiomeGenPlains : BiomeGenBase
 	{
 		protected internal bool field_150628_aC;
-		private const string __OBFID = "CL_00000180";
+		
 
 		protected internal BiomeGenPlains(int p_i1986_1_) : base(p_i1986_1_)
 		{

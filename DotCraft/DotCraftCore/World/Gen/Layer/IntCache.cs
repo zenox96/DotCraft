@@ -30,7 +30,7 @@ namespace DotCraftCore.World.Gen.Layer
 ///     * be re-used again until resetIntCache() is called. </summary>
 ///     
 		private static IList inUseLargeArrays = new ArrayList();
-		private const string __OBFID = "CL_00000557";
+		
 
 		[MethodImpl(MethodImplOptions.Synchronized)]
 		public static int[] getIntCache(int p_76445_0_)

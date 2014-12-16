@@ -14,7 +14,7 @@ namespace DotCraftCore.Entity.AI
 		private World worldObj;
 		private int matingTimeout;
 		internal Village villageObj;
-		private const string __OBFID = "CL_00001594";
+		
 
 		public EntityAIVillagerMate(EntityVillager p_i1634_1_)
 		{

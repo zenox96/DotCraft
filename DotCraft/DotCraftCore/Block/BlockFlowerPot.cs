@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockFlowerPot : BlockContainer
 	{
-		private const string __OBFID = "CL_00000247";
+		
 
 		public BlockFlowerPot() : base(Material.circuits)
 		{

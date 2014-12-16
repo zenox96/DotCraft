@@ -21,7 +21,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandTestForBlock : CommandBase
 	{
-		private const string __OBFID = "CL_00001181";
+		
 
 		public virtual string CommandName
 		{

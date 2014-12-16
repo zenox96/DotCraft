@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Chunk.Storage
 
 	public class AnvilSaveHandler : SaveHandler
 	{
-		private const string __OBFID = "CL_00000581";
+		
 
 		public AnvilSaveHandler(File p_i2142_1_, string p_i2142_2_, bool p_i2142_3_) : base(p_i2142_1_, p_i2142_2_, p_i2142_3_)
 		{

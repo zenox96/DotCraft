@@ -7,7 +7,7 @@ namespace DotCraftCore.Scoreboard
 	public class ScoreDummyCriteria : IScoreObjectiveCriteria
 	{
 		private readonly string field_96644_g;
-		private const string __OBFID = "CL_00000622";
+		
 
 		public ScoreDummyCriteria(string p_i2311_1_)
 		{

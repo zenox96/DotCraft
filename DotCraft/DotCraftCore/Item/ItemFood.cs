@@ -36,7 +36,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> probably of the set potion effect occurring  </summary>
 		private float potionEffectProbability;
-		private const string __OBFID = "CL_00000036";
+		
 
 		public ItemFood(int p_i45339_1_, float p_i45339_2_, bool p_i45339_3_)
 		{

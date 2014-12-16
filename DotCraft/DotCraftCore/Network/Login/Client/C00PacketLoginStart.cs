@@ -10,7 +10,7 @@ namespace DotCraftCore.Network.Login.Client
 	public class C00PacketLoginStart : Packet
 	{
 		private GameProfile field_149305_a;
-		private const string __OBFID = "CL_00001379";
+		
 
 		public C00PacketLoginStart()
 		{

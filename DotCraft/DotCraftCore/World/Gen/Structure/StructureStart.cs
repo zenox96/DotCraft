@@ -15,7 +15,7 @@ namespace DotCraftCore.World.Gen.Structure
 		protected internal StructureBoundingBox boundingBox;
 		private int field_143024_c;
 		private int field_143023_d;
-		private const string __OBFID = "CL_00000513";
+		
 
 		public StructureStart()
 		{

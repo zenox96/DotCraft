@@ -11,7 +11,7 @@ namespace DotCraftCore.Entity.Boss
 	/// <summary> The dragon entity this dragon part belongs to  </summary>
 		public readonly IEntityMultiPart entityDragonObj;
 		public readonly string field_146032_b;
-		private const string __OBFID = "CL_00001657";
+		
 
 		public EntityDragonPart(IEntityMultiPart p_i1697_1_, string p_i1697_2_, float p_i1697_3_, float p_i1697_4_) : base(p_i1697_1_.func_82194_d())
 		{

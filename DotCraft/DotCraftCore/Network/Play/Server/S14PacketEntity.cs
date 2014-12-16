@@ -19,7 +19,7 @@ namespace DotCraftCore.Network.Play.Server
 		protected internal sbyte field_149071_e;
 		protected internal sbyte field_149068_f;
 		protected internal bool field_149069_g;
-		private const string __OBFID = "CL_00001312";
+		
 
 		public S14PacketEntity()
 		{
@@ -110,7 +110,7 @@ namespace DotCraftCore.Network.Play.Server
 
 		public class S15PacketEntityRelMove : S14PacketEntity
 		{
-			private const string __OBFID = "CL_00001313";
+			
 
 			public S15PacketEntityRelMove()
 			{
@@ -156,7 +156,7 @@ namespace DotCraftCore.Network.Play.Server
 
 		public class S16PacketEntityLook : S14PacketEntity
 		{
-			private const string __OBFID = "CL_00001315";
+			
 
 			public S16PacketEntityLook()
 			{
@@ -201,7 +201,7 @@ namespace DotCraftCore.Network.Play.Server
 
 		public class S17PacketEntityLookMove : S14PacketEntity
 		{
-			private const string __OBFID = "CL_00001314";
+			
 
 			public S17PacketEntityLookMove()
 			{

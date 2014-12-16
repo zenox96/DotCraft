@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentLootBonus : Enchantment
 	{
-		private const string __OBFID = "CL_00000119";
+		
 
 		protected internal EnchantmentLootBonus(int p_i1934_1_, int p_i1934_2_, EnumEnchantmentType p_i1934_3_) : base(p_i1934_1_, p_i1934_2_, p_i1934_3_)
 		{

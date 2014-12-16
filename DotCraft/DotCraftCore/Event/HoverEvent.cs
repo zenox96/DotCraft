@@ -8,7 +8,7 @@ namespace DotCraftCore.Event
 	{
 		private readonly HoverEvent.Action action;
 		private readonly IChatComponent value;
-		private const string __OBFID = "CL_00001264";
+		
 
 		public HoverEvent(HoverEvent.Action p_i45158_1_, IChatComponent p_i45158_2_)
 		{
@@ -105,7 +105,7 @@ namespace DotCraftCore.Event
 
 			@private static final HoverEvent.Action[] $VALUES = new HoverEvent.Action[]{SHOW_TEXT, SHOW_ACHIEVEMENT, SHOW_ITEM
 		}
-			private const string __OBFID = "CL_00001265";
+			
 
 			private Action(string p_i45157_1_, int p_i45157_2_, string p_i45157_3_, bool p_i45157_4_)
 			{

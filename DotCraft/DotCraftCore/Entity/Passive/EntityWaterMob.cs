@@ -8,7 +8,7 @@ namespace DotCraftCore.Entity.Passive
 
 	public abstract class EntityWaterMob : EntityCreature, IAnimals
 	{
-		private const string __OBFID = "CL_00001653";
+		
 
 		public EntityWaterMob(World p_i1695_1_) : base(p_i1695_1_)
 		{

@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.Item
 
 	public class EntityMinecartChest : EntityMinecartContainer
 	{
-		private const string __OBFID = "CL_00001671";
+		
 
 		public EntityMinecartChest(World p_i1714_1_) : base(p_i1714_1_)
 		{

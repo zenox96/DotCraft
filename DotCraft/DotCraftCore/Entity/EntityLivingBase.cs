@@ -181,7 +181,7 @@ namespace DotCraftCore.Entity
 	/// <summary> Number of ticks since last jump  </summary>
 		private int jumpTicks;
 		private float field_110151_bq;
-		private const string __OBFID = "CL_00001549";
+		
 
 		public EntityLivingBase(World p_i1594_1_) : base(p_i1594_1_)
 		{
@@ -1196,7 +1196,7 @@ namespace DotCraftCore.Entity
 
 				if (var8.Material != Material.air)
 				{
-					Block.SoundType var9 = var8.stepSound;
+					SoundType var9 = var8.stepSound;
 					this.playSound(var9.func_150498_e(), var9.func_150497_c() * 0.5F, var9.func_150494_d() * 0.75F);
 				}
 			}

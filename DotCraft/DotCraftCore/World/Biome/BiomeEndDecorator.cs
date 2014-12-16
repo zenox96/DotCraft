@@ -9,7 +9,7 @@ namespace DotCraftCore.World.Biome
 	public class BiomeEndDecorator : BiomeDecorator
 	{
 		protected internal WorldGenerator spikeGen;
-		private const string __OBFID = "CL_00000188";
+		
 
 		public BiomeEndDecorator()
 		{

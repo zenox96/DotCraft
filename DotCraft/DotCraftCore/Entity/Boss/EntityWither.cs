@@ -48,13 +48,13 @@ namespace DotCraftCore.Entity.Boss
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final IEntitySelector attackEntitySelector = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001662";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_ instanceof EntityLivingBase && ((EntityLivingBase)p_82704_1_).getCreatureAttribute() != EnumCreatureAttribute.UNDEAD;
 //		}
 //	};
-		private const string __OBFID = "CL_00001661";
+		
 
 		public EntityWither(World p_i1701_1_) : base(p_i1701_1_)
 		{

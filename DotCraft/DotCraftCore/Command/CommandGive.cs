@@ -16,7 +16,7 @@ namespace DotCraftCore.Command
 
 	public class CommandGive : CommandBase
 	{
-		private const string __OBFID = "CL_00000502";
+		
 
 		public virtual string CommandName
 		{

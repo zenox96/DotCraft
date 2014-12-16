@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149364_a;
 		private int field_149362_b;
 		private int field_149363_c;
-		private const string __OBFID = "CL_00001336";
+		
 
 		public S05PacketSpawnPosition()
 		{

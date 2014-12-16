@@ -74,7 +74,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> The string associated with this Item's Icon.  </summary>
 		protected internal string iconString;
-		private const string __OBFID = "CL_00000041";
+		
 
 		public static int getIdFromItem(Item p_150891_0_)
 		{
@@ -936,7 +936,7 @@ namespace DotCraftCore.Item
 
 			@private static final Item.ToolMaterial[] $VALUES = new Item.ToolMaterial[]{WOOD, STONE, IRON, EMERALD, GOLD
 		}
-			private const string __OBFID = "CL_00000042";
+			
 
 			private ToolMaterial(string p_i1874_1_, int p_i1874_2_, int p_i1874_3_, int p_i1874_4_, float p_i1874_5_, float p_i1874_6_, int p_i1874_7_)
 			{

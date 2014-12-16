@@ -8,7 +8,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The array of saved integers  </summary>
 		private int[] intArray;
-		private const string __OBFID = "CL_00001221";
+		
 
 		internal NBTTagIntArray()
 		{

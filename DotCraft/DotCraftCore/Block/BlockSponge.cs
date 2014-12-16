@@ -6,7 +6,7 @@ namespace DotCraftCore.Block
 
 	public class BlockSponge : Block
 	{
-		private const string __OBFID = "CL_00000311";
+		
 
 		protected internal BlockSponge() : base(Material.sponge)
 		{

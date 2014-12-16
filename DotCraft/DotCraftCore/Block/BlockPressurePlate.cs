@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 	public class BlockPressurePlate : BlockBasePressurePlate
 	{
 		private BlockPressurePlate.Sensitivity field_150069_a;
-		private const string __OBFID = "CL_00000289";
+		
 
 		protected internal BlockPressurePlate(string p_i45418_1_, Material p_i45418_2_, BlockPressurePlate.Sensitivity p_i45418_3_) : base(p_i45418_1_, p_i45418_2_)
 		{
@@ -77,7 +77,7 @@ namespace DotCraftCore.Block
 
 			@private static final BlockPressurePlate.Sensitivity[] $VALUES = new BlockPressurePlate.Sensitivity[]{everything, mobs, players
 		}
-			private const string __OBFID = "CL_00000290";
+			
 
 			private Sensitivity(string p_i45417_1_, int p_i45417_2_)
 			{

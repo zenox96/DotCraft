@@ -7,7 +7,7 @@ namespace DotCraftCore.Util
 	{
 		private readonly string resourceDomain;
 		private readonly string resourcePath;
-		private const string __OBFID = "CL_00001082";
+		
 
 		public ResourceLocation(string p_i1292_1_, string p_i1292_2_)
 		{

@@ -33,7 +33,7 @@ namespace DotCraftCore.Item
 		private IIcon field_94591_c;
 		private IIcon field_94590_d;
 		private IIcon field_94592_ct;
-		private const string __OBFID = "CL_00000055";
+		
 
 		public ItemPotion()
 		{

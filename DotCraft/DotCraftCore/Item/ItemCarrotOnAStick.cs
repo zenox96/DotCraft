@@ -9,7 +9,7 @@ namespace DotCraftCore.Item
 
 	public class ItemCarrotOnAStick : Item
 	{
-		private const string __OBFID = "CL_00000001";
+		
 
 		public ItemCarrotOnAStick()
 		{

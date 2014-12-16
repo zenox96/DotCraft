@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 	public class BlockPotato : BlockCrops
 	{
 		private IIcon[] field_149869_a;
-		private const string __OBFID = "CL_00000286";
+		
 
 ///    
 ///     <summary> * Gets the block's texture. Args: side, meta </summary>

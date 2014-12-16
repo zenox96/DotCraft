@@ -22,7 +22,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149261_g;
 		private bool field_149267_h;
 		private static sbyte[] field_149268_i = new sbyte[0];
-		private const string __OBFID = "CL_00001306";
+		
 
 		public S26PacketMapChunkBulk()
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S3APacketTabComplete : Packet
 	{
 		private string[] field_149632_a;
-		private const string __OBFID = "CL_00001288";
+		
 
 		public S3APacketTabComplete()
 		{

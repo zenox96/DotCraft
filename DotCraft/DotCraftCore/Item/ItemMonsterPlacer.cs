@@ -24,7 +24,7 @@ namespace DotCraftCore.Item
 	public class ItemMonsterPlacer : Item
 	{
 		private IIcon theIcon;
-		private const string __OBFID = "CL_00000070";
+		
 
 		public ItemMonsterPlacer()
 		{

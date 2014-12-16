@@ -21,7 +21,7 @@ namespace DotCraftCore.Block
 		private IIcon field_149991_b;
 		private IIcon field_149993_M;
 		private IIcon field_149994_N;
-		private const string __OBFID = "CL_00000251";
+		
 
 		protected internal BlockGrass() : base(Material.grass)
 		{

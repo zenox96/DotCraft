@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 		private string field_149327_b = "";
 		private int field_149328_c;
 		private int field_149326_d;
-		private const string __OBFID = "CL_00001335";
+		
 
 		public S3CPacketUpdateScore()
 		{

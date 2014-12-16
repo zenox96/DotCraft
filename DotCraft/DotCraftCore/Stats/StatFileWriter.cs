@@ -11,7 +11,7 @@ namespace DotCraftCore.Stats
 	public class StatFileWriter
 	{
 		protected internal readonly IDictionary field_150875_a = Maps.newConcurrentMap();
-		private const string __OBFID = "CL_00001481";
+		
 
 ///    
 ///     <summary> * Returns true if the achievement has been unlocked. </summary>

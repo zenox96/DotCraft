@@ -11,7 +11,7 @@ namespace DotCraftCore.Item
 	public class ItemFishingRod : Item
 	{
 		private IIcon theIcon;
-		private const string __OBFID = "CL_00000034";
+		
 
 		public ItemFishingRod()
 		{

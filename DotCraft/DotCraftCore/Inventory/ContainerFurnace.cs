@@ -15,7 +15,7 @@ namespace DotCraftCore.Inventory
 		private int lastCookTime;
 		private int lastBurnTime;
 		private int lastItemBurnTime;
-		private const string __OBFID = "CL_00001748";
+		
 
 		public ContainerFurnace(InventoryPlayer p_i1812_1_, TileEntityFurnace p_i1812_2_)
 		{

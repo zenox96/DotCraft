@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenMegaJungle : WorldGenHugeTrees
 	{
-		private const string __OBFID = "CL_00000420";
+		
 
 		public WorldGenMegaJungle(bool p_i45456_1_, int p_i45456_2_, int p_i45456_3_, int p_i45456_4_, int p_i45456_5_) : base(p_i45456_1_, p_i45456_2_, p_i45456_3_, p_i45456_4_, p_i45456_5_)
 		{

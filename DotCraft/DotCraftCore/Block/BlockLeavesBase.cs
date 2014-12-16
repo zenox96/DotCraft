@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 	public class BlockLeavesBase : Block
 	{
 		protected internal bool field_150121_P;
-		private const string __OBFID = "CL_00000326";
+		
 
 		protected internal BlockLeavesBase(Material p_i45433_1_, bool p_i45433_2_) : base(p_i45433_1_)
 		{

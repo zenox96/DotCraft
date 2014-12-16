@@ -27,7 +27,7 @@ namespace DotCraftCore.World
 ///     * location. </summary>
 ///     
 		private readonly IList destinationCoordinateKeys = new ArrayList();
-		private const string __OBFID = "CL_00000153";
+		
 
 		public Teleporter(WorldServer p_i1963_1_)
 		{
@@ -514,7 +514,7 @@ namespace DotCraftCore.World
 		public class PortalPosition : ChunkCoordinates
 		{
 			public long lastUpdateTime;
-			private const string __OBFID = "CL_00000154";
+			
 
 			public PortalPosition(int p_i1962_2_, int p_i1962_3_, int p_i1962_4_, long p_i1962_5_) : base(p_i1962_2_, p_i1962_3_, p_i1962_4_)
 			{

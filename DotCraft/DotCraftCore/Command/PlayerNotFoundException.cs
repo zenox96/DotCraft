@@ -3,7 +3,7 @@ namespace DotCraftCore.Command
 
 	public class PlayerNotFoundException : CommandException
 	{
-		private const string __OBFID = "CL_00001190";
+		
 
 		public PlayerNotFoundException() : this("commands.generic.player.notFound", new object[0])
 		{

@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 		private readonly double minimumValue;
 		private readonly double maximumValue;
 		private string description;
-		private const string __OBFID = "CL_00001568";
+		
 
 		public RangedAttribute(string p_i1609_1_, double p_i1609_2_, double p_i1609_4_, double p_i1609_6_) : base(p_i1609_1_, p_i1609_2_)
 		{

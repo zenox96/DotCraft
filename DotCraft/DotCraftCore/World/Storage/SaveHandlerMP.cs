@@ -8,7 +8,7 @@ namespace DotCraftCore.World.Storage
 
 	public class SaveHandlerMP : ISaveHandler
 	{
-		private const string __OBFID = "CL_00000602";
+		
 
 ///    
 ///     <summary> * Loads and returns the world info </summary>

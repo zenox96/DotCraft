@@ -28,7 +28,7 @@ namespace DotCraftCore.Command
 ///     <summary> * This matches things like "rm=4,c=2" and is used for handling named token arguments. </summary>
 ///     
 		private static readonly Pattern keyValueListPattern = Pattern.compile("\\G(\\w+)=([-!]?[\\w-]*)(?:$|,)");
-		private const string __OBFID = "CL_00000086";
+		
 
 ///    
 ///     <summary> * Returns the one player that matches the given at-token.  Returns null if more than one player matches. </summary>

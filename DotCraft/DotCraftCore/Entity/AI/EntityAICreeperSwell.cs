@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity.AI
 ///     <summary> * The creeper's attack target. This is used for the changing of the creeper's state. </summary>
 ///     
 		internal EntityLivingBase creeperAttackTarget;
-		private const string __OBFID = "CL_00001614";
+		
 
 		public EntityAICreeperSwell(EntityCreeper p_i1655_1_)
 		{

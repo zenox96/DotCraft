@@ -19,7 +19,7 @@ namespace DotCraftCore.Block
 	{
 		private readonly Block field_149877_a;
 		private IIcon field_149876_b;
-		private const string __OBFID = "CL_00000316";
+		
 
 		protected internal BlockStem(Block p_i45430_1_)
 		{

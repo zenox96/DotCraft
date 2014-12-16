@@ -10,7 +10,7 @@ namespace DotCraftCore.Inventory
 	public class ContainerHopper : Container
 	{
 		private readonly IInventory field_94538_a;
-		private const string __OBFID = "CL_00001750";
+		
 
 		public ContainerHopper(InventoryPlayer p_i1814_1_, IInventory p_i1814_2_)
 		{

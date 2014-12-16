@@ -8,7 +8,7 @@ namespace DotCraftCore.Realms
 	{
 		public static Tessellator t = Tessellator.instance;
 		public static readonly Tezzelator instance = new Tezzelator();
-		private const string __OBFID = "CL_00001855";
+		
 
 		public virtual int end()
 		{

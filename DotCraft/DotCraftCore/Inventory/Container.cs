@@ -28,7 +28,7 @@ namespace DotCraftCore.Inventory
 ///     
 		protected internal IList crafters = new ArrayList();
 		private Set playerList = new HashSet();
-		private const string __OBFID = "CL_00001730";
+		
 
 ///    
 ///     <summary> * the slot is assumed empty </summary>

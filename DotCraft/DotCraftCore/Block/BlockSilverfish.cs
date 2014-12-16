@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 	public class BlockSilverfish : Block
 	{
 		public static readonly string[] field_150198_a = new string[] {"stone", "cobble", "brick", "mossybrick", "crackedbrick", "chiseledbrick"};
-		private const string __OBFID = "CL_00000271";
+		
 
 		public BlockSilverfish() : base(Material.field_151571_B)
 		{

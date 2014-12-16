@@ -37,7 +37,7 @@ namespace DotCraftCore.Entity.Item
 
 	/// <summary> The EntityItem's random initial float height.  </summary>
 		public float hoverStart;
-		private const string __OBFID = "CL_00001669";
+		
 
 		public EntityItem(World p_i1709_1_, double p_i1709_2_, double p_i1709_4_, double p_i1709_6_) : base(p_i1709_1_)
 		{

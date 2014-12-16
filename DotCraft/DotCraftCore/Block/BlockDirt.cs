@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 		public static readonly string[] field_150009_a = new string[] {"default", "default", "podzol"};
 		private IIcon field_150008_b;
 		private IIcon field_150010_M;
-		private const string __OBFID = "CL_00000228";
+		
 
 		protected internal BlockDirt() : base(Material.ground)
 		{

@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.Projectile
 
 	public class EntitySmallFireball : EntityFireball
 	{
-		private const string __OBFID = "CL_00001721";
+		
 
 		public EntitySmallFireball(World p_i1770_1_) : base(p_i1770_1_)
 		{

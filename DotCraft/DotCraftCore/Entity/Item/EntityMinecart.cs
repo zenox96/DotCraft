@@ -43,7 +43,7 @@ namespace DotCraftCore.Entity.Item
 		private double velocityX;
 		private double velocityY;
 		private double velocityZ;
-		private const string __OBFID = "CL_00001670";
+		
 
 		public EntityMinecart(World p_i1712_1_) : base(p_i1712_1_)
 		{

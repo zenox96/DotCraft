@@ -17,7 +17,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandMessage : CommandBase
 	{
-		private const string __OBFID = "CL_00000641";
+		
 
 		public override IList CommandAliases
 		{

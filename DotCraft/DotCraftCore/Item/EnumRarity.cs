@@ -25,7 +25,7 @@ namespace DotCraftCore.Item
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
 //		public final String rarityName;
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00000056";
+//		
 
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain methods in .NET:
 //		private EnumRarity(EnumChatFormatting p_i45349_3_, String p_i45349_4_)

@@ -16,7 +16,7 @@ namespace DotCraftCore.Util
 ///     
 		protected internal IList siblings = Lists.newArrayList();
 		private ChatStyle style;
-		private const string __OBFID = "CL_00001257";
+		
 
 ///    
 ///     <summary> * Appends the given component to the end of this one. </summary>
@@ -136,9 +136,9 @@ namespace DotCraftCore.Util
 		public static IEnumerator createDeepCopyIterator(IEnumerable p_150262_0_)
 		{
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
-//ORIGINAL LINE: Iterator var1 = Iterators.concat(Iterators.transform(p_150262_0_.iterator(), new Function() { private static final String __OBFID = "CL_00001258"; public Iterator apply(IChatComponent p_apply_1_) { return p_apply_1_.iterator(); } public Object apply(Object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } }));
-			IEnumerator var1 = Iterators.concat(Iterators.transform(p_150262_0_.GetEnumerator(), new Function() { private static string __OBFID = "CL_00001258"; public IEnumerator apply(IChatComponent p_apply_1_) { return p_apply_1_.GetEnumerator(); } public object apply(object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } }));
-			var1 = Iterators.transform(var1, new Function() { private static final string __OBFID = "CL_00001259"; public IChatComponent apply(IChatComponent p_apply_1_) { IChatComponent var2 = p_apply_1_.createCopy(); var2.setChatStyle(var2.ChatStyle.createDeepCopy()); return var2; } public object apply(object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } });
+//ORIGINAL LINE: Iterator var1 = Iterators.concat(Iterators.transform(p_150262_0_.iterator(), new Function() {  public Iterator apply(IChatComponent p_apply_1_) { return p_apply_1_.iterator(); } public Object apply(Object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } }));
+			IEnumerator var1 = Iterators.concat(Iterators.transform(p_150262_0_.GetEnumerator(), new Function() {  public IEnumerator apply(IChatComponent p_apply_1_) { return p_apply_1_.GetEnumerator(); } public object apply(object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } }));
+			var1 = Iterators.transform(var1, new Function() {  public IChatComponent apply(IChatComponent p_apply_1_) { IChatComponent var2 = p_apply_1_.createCopy(); var2.setChatStyle(var2.ChatStyle.createDeepCopy()); return var2; } public object apply(object p_apply_1_) { return this.apply((IChatComponent)p_apply_1_); } });
 			return var1;
 		}
 

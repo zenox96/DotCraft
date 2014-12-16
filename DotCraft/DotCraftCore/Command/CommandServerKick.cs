@@ -8,7 +8,7 @@ namespace DotCraftCore.Command
 
 	public class CommandServerKick : CommandBase
 	{
-		private const string __OBFID = "CL_00000550";
+		
 
 		public virtual string CommandName
 		{

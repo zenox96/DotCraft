@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Biome
 
 	public class BiomeGenSwamp : BiomeGenBase
 	{
-		private const string __OBFID = "CL_00000185";
+		
 
 		protected internal BiomeGenSwamp(int p_i1988_1_) : base(p_i1988_1_)
 		{

@@ -22,7 +22,7 @@ namespace DotCraftCore.Entity.Item
 		private double targetZ;
 		private int despawnTimer;
 		private bool shatterOrDrop;
-		private const string __OBFID = "CL_00001716";
+		
 
 		public EntityEnderEye(World p_i1757_1_) : base(p_i1757_1_)
 		{

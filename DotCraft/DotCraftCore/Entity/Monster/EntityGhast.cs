@@ -34,7 +34,7 @@ namespace DotCraftCore.Entity.Monster
 
 	/// <summary> The explosion radius of spawned fireballs.  </summary>
 		private int explosionStrength = 1;
-		private const string __OBFID = "CL_00001689";
+		
 
 		public EntityGhast(World p_i1735_1_) : base(p_i1735_1_)
 		{

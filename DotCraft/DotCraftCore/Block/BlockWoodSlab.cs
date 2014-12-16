@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	public class BlockWoodSlab : BlockSlab
 	{
 		public static readonly string[] field_150005_b = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "big_oak"};
-		private const string __OBFID = "CL_00000337";
+		
 
 		public BlockWoodSlab(bool p_i45437_1_) : base(p_i45437_1_, Material.wood)
 		{

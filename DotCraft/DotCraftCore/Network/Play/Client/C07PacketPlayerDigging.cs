@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Client
 		private int field_149510_c;
 		private int field_149507_d;
 		private int field_149508_e;
-		private const string __OBFID = "CL_00001365";
+		
 
 		public C07PacketPlayerDigging()
 		{

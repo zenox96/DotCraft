@@ -24,7 +24,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	/// <summary> The second z coordinate of a bounding box.  </summary>
 		public int maxZ;
-		private const string __OBFID = "CL_00000442";
+		
 
 		public StructureBoundingBox()
 		{

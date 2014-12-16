@@ -1,4 +1,4 @@
-﻿namespace DotCraftCore.Block
+﻿namespace DotCraftCore.Block.Material
 {
 	public class Material
 	{
@@ -38,7 +38,7 @@
 		public static readonly Material field_151568_F = (new Material(MapColor.field_151660_b)).setNoPushMobility();
 		
         /* TODO annonymous inner class
-         * public static readonly Material field_151569_G = (new Material(MapColor.field_151659_e) { private static final string __OBFID = "CL_00000543"; public bool blocksMovement() { return false; } }).setRequiresTool().setNoPushMobility();
+         * public static readonly Material field_151569_G = (new Material(MapColor.field_151659_e) {  public bool blocksMovement() { return false; } }).setRequiresTool().setNoPushMobility();
          */
 
 	/// <summary> Pistons' material.  </summary>
@@ -70,7 +70,7 @@
 ///     
 		private int mobilityFlag;
 		private bool isAdventureModeExempt;
-		private const string __OBFID = "CL_00000542";
+		
 
 		public Material(MapColor p_i2116_1_)
 		{

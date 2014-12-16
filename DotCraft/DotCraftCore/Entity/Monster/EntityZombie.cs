@@ -55,7 +55,7 @@ namespace DotCraftCore.Entity.Monster
 		private bool field_146076_bu = false;
 		private float field_146074_bv = -1.0F;
 		private float field_146073_bw;
-		private const string __OBFID = "CL_00001702";
+		
 
 		public EntityZombie(World p_i1745_1_) : base(p_i1745_1_)
 		{
@@ -760,7 +760,7 @@ namespace DotCraftCore.Entity.Monster
 		{
 			public bool field_142048_a;
 			public bool field_142046_b;
-			private const string __OBFID = "CL_00001704";
+			
 
 			private GroupData(bool p_i2348_2_, bool p_i2348_3_)
 			{

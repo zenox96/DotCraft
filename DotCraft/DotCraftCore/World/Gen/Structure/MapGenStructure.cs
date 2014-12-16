@@ -25,7 +25,7 @@ namespace DotCraftCore.World.Gen.Structure
 ///     * placed. </summary>
 ///     
 		protected internal IDictionary structureMap = new Hashtable();
-		private const string __OBFID = "CL_00000505";
+		
 
 		public abstract string func_143025_a();
 
@@ -52,10 +52,10 @@ namespace DotCraftCore.World.Gen.Structure
 				{
 					CrashReport var8 = CrashReport.makeCrashReport(var10, "Exception preparing structure feature");
 					CrashReportCategory var9 = var8.makeCategory("Feature being prepared");
-					var9.addCrashSectionCallable("Is feature chunk", new Callable() { private static final string __OBFID = "CL_00000506"; public string call() { return MapGenStructure.canSpawnStructureAtCoords(p_151538_2_, p_151538_3_) ? "True" : "False"; } });
+					var9.addCrashSectionCallable("Is feature chunk", new Callable() {  public string call() { return MapGenStructure.canSpawnStructureAtCoords(p_151538_2_, p_151538_3_) ? "True" : "False"; } });
 					var9.addCrashSection("Chunk location", string.Format("{0:D},{1:D}", new object[] {Convert.ToInt32(p_151538_2_), Convert.ToInt32(p_151538_3_)}));
-					var9.addCrashSectionCallable("Chunk pos hash", new Callable() { private static final string __OBFID = "CL_00000507"; public string call() { return Convert.ToString(ChunkCoordIntPair.chunkXZ2Int(p_151538_2_, p_151538_3_)); } });
-					var9.addCrashSectionCallable("Structure type", new Callable() { private static final string __OBFID = "CL_00000508"; public string call() { return MapGenStructure.GetType().CanonicalName; } });
+					var9.addCrashSectionCallable("Chunk pos hash", new Callable() {  public string call() { return Convert.ToString(ChunkCoordIntPair.chunkXZ2Int(p_151538_2_, p_151538_3_)); } });
+					var9.addCrashSectionCallable("Structure type", new Callable() {  public string call() { return MapGenStructure.GetType().CanonicalName; } });
 					throw new ReportedException(var8);
 				}
 			}

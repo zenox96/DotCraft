@@ -8,7 +8,7 @@ namespace DotCraftCore.Network.Status.Client
 
 	public class C00PacketServerQuery : Packet
 	{
-		private const string __OBFID = "CL_00001393";
+		
 
 ///    
 ///     <summary> * Reads the raw packet data from the data stream. </summary>

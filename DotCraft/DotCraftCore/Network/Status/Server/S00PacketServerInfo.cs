@@ -16,7 +16,7 @@ namespace DotCraftCore.Network.Status.Server
 	{
 		private static readonly Gson field_149297_a = (new GsonBuilder()).registerTypeAdapter(typeof(ServerStatusResponse.MinecraftProtocolVersionIdentifier), new ServerStatusResponse.MinecraftProtocolVersionIdentifier.Serializer()).registerTypeAdapter(typeof(ServerStatusResponse.PlayerCountData), new ServerStatusResponse.PlayerCountData.Serializer()).registerTypeAdapter(typeof(ServerStatusResponse), new ServerStatusResponse.Serializer()).registerTypeHierarchyAdapter(typeof(IChatComponent), new IChatComponent.Serializer()).registerTypeHierarchyAdapter(typeof(ChatStyle), new ChatStyle.Serializer()).registerTypeAdapterFactory(new EnumTypeAdapterFactory()).create();
 		private ServerStatusResponse field_149296_b;
-		private const string __OBFID = "CL_00001384";
+		
 
 		public S00PacketServerInfo()
 		{

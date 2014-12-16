@@ -14,7 +14,7 @@ namespace DotCraftCore.Util
 		public float moveForward;
 		public bool jump;
 		public bool sneak;
-		private const string __OBFID = "CL_00000936";
+		
 
 		public virtual void updatePlayerMoveState()
 		{

@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemRedstone : Item
 	{
-		private const string __OBFID = "CL_00000058";
+		
 
 		public ItemRedstone()
 		{

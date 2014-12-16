@@ -10,7 +10,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandSetDefaultSpawnpoint : CommandBase
 	{
-		private const string __OBFID = "CL_00000973";
+		
 
 		public virtual string CommandName
 		{

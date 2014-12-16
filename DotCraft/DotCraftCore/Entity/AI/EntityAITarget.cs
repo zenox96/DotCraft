@@ -38,7 +38,7 @@ namespace DotCraftCore.Entity.AI
 ///     
 		private int targetSearchDelay;
 		private int field_75298_g;
-		private const string __OBFID = "CL_00001626";
+		
 
 		public EntityAITarget(EntityCreature p_i1669_1_, bool p_i1669_2_) : this(p_i1669_1_, p_i1669_2_, false)
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.Inventory
 		private ItemStack[] inventoryContents;
 		private IList field_70480_d;
 		private bool field_94051_e;
-		private const string __OBFID = "CL_00001514";
+		
 
 		public InventoryBasic(string p_i1561_1_, bool p_i1561_2_, int p_i1561_3_)
 		{

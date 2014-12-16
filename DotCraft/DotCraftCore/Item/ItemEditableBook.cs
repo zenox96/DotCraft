@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEditableBook : Item
 	{
-		private const string __OBFID = "CL_00000077";
+		
 
 		public ItemEditableBook()
 		{

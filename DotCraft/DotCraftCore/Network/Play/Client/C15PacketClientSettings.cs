@@ -18,7 +18,7 @@ namespace DotCraftCore.Network.Play.Client
 		private bool field_149526_d;
 		private EnumDifficulty field_149527_e;
 		private bool field_149525_f;
-		private const string __OBFID = "CL_00001350";
+		
 
 		public C15PacketClientSettings()
 		{

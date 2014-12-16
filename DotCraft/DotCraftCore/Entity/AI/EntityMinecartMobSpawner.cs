@@ -15,7 +15,7 @@ namespace DotCraftCore.Entity.AI
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private final MobSpawnerBaseLogic mobSpawnerLogic = new MobSpawnerBaseLogic()
 //	{
-//		private static final String __OBFID = "CL_00001679";
+//		
 //		public void func_98267_a(int p_98267_1_)
 //		{
 //			EntityMinecartMobSpawner.worldObj.setEntityState(EntityMinecartMobSpawner.this, (byte)p_98267_1_);
@@ -37,7 +37,7 @@ namespace DotCraftCore.Entity.AI
 //			return MathHelper.floor_double(EntityMinecartMobSpawner.posZ);
 //		}
 //	};
-		private const string __OBFID = "CL_00001678";
+		
 
 		public EntityMinecartMobSpawner(World p_i1725_1_) : base(p_i1725_1_)
 		{

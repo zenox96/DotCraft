@@ -9,7 +9,7 @@ namespace DotCraftCore.Scoreboard
 	/// <summary> The ScoreObjectiveCriteria for this objetive  </summary>
 		private readonly IScoreObjectiveCriteria objectiveCriteria;
 		private string displayName;
-		private const string __OBFID = "CL_00000614";
+		
 
 		public ScoreObjective(Scoreboard p_i2307_1_, string p_i2307_2_, IScoreObjectiveCriteria p_i2307_3_)
 		{

@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public class BlockFence : Block
 	{
 		private readonly string field_149827_a;
-		private const string __OBFID = "CL_00000242";
+		
 
 		public BlockFence(string p_i45406_1_, Material p_i45406_2_) : base(p_i45406_2_)
 		{

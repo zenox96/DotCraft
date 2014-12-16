@@ -21,7 +21,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	/// <summary> the minimum distance between scattered features  </summary>
 		private int minDistanceBetweenScatteredFeatures;
-		private const string __OBFID = "CL_00000471";
+		
 
 		public MapGenScatteredFeature()
 		{
@@ -126,7 +126,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Start : StructureStart
 		{
-			private const string __OBFID = "CL_00000472";
+			
 
 			public Start()
 			{

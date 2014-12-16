@@ -14,7 +14,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	/// <summary> The maximum radius used when generating a patch of blocks.  </summary>
 		private int radius;
-		private const string __OBFID = "CL_00000431";
+		
 
 		public WorldGenSand(Block p_i45462_1_, int p_i45462_2_)
 		{

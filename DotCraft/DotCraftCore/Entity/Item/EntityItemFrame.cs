@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.Item
 	{
 	/// <summary> Chance for this item frame's item to drop from the frame.  </summary>
 		private float itemDropChance = 1.0F;
-		private const string __OBFID = "CL_00001547";
+		
 
 		public EntityItemFrame(World p_i1590_1_) : base(p_i1590_1_)
 		{

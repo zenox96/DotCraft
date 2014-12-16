@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.Item
 		private int fuel;
 		public double pushX;
 		public double pushZ;
-		private const string __OBFID = "CL_00001675";
+		
 
 		public EntityMinecartFurnace(World p_i1718_1_) : base(p_i1718_1_)
 		{

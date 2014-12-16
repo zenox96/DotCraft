@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.AI
 	{
 		private int breakingTime;
 		private int field_75358_j = -1;
-		private const string __OBFID = "CL_00001577";
+		
 
 		public EntityAIBreakDoor(EntityLiving p_i1618_1_) : base(p_i1618_1_)
 		{

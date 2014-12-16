@@ -13,7 +13,7 @@ namespace DotCraftCore.Command
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		IEntitySelector selectAnything = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001541";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_.isEntityAlive();
@@ -22,7 +22,7 @@ namespace DotCraftCore.Command
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		IEntitySelector field_152785_b = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001542";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_.isEntityAlive() && p_82704_1_.riddenByEntity == null && p_82704_1_.ridingEntity == null;
@@ -31,7 +31,7 @@ namespace DotCraftCore.Command
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		IEntitySelector selectInventories = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001867";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_ instanceof IInventory && p_82704_1_.isEntityAlive();
@@ -47,7 +47,7 @@ namespace DotCraftCore.Command
 //		public static class ArmoredMob implements IEntitySelector
 //	{
 //		private final ItemStack field_96567_c;
-//		private static final String __OBFID = "CL_00001543";
+//		
 //
 //		public ArmoredMob(ItemStack p_i1584_1_)
 //		{

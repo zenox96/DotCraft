@@ -11,7 +11,7 @@ namespace DotCraftCore.Village
 		public int lastActivityTimestamp;
 		public bool isDetachedFromVillageFlag;
 		private int doorOpeningRestrictionCounter;
-		private const string __OBFID = "CL_00001630";
+		
 
 		public VillageDoorInfo(int p_i1673_1_, int p_i1673_2_, int p_i1673_3_, int p_i1673_4_, int p_i1673_5_, int p_i1673_6_)
 		{

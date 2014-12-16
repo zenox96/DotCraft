@@ -6,7 +6,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The short value for the tag.  </summary>
 		private short data;
-		private const string __OBFID = "CL_00001227";
+		
 
 		public NBTTagShort()
 		{

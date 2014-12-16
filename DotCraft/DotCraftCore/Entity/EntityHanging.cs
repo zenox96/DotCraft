@@ -19,7 +19,7 @@ namespace DotCraftCore.Entity
 		public int field_146063_b;
 		public int field_146064_c;
 		public int field_146062_d;
-		private const string __OBFID = "CL_00001546";
+		
 
 		public EntityHanging(World p_i1588_1_) : base(p_i1588_1_)
 		{

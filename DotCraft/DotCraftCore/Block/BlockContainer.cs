@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 
 	public abstract class BlockContainer : Block, ITileEntityProvider
 	{
-		private const string __OBFID = "CL_00000193";
+		
 
 		protected internal BlockContainer(Material p_i45386_1_) : base(p_i45386_1_)
 		{

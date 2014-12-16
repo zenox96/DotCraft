@@ -8,7 +8,7 @@ namespace DotCraftCore.Village
 
 	public class MerchantRecipeList : ArrayList
 	{
-		private const string __OBFID = "CL_00000127";
+		
 
 		public MerchantRecipeList()
 		{

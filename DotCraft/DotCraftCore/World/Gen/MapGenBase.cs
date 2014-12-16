@@ -17,7 +17,7 @@ namespace DotCraftCore.World.Gen
 
 	/// <summary> This world object.  </summary>
 		protected internal World worldObj;
-		private const string __OBFID = "CL_00000394";
+		
 
 		public virtual void func_151539_a(IChunkProvider p_151539_1_, World p_151539_2_, int p_151539_3_, int p_151539_4_, Block[] p_151539_5_)
 		{

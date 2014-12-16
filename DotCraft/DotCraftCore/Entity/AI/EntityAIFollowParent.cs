@@ -12,7 +12,7 @@ namespace DotCraftCore.Entity.AI
 		internal EntityAnimal parentAnimal;
 		internal double field_75347_c;
 		private int field_75345_d;
-		private const string __OBFID = "CL_00001586";
+		
 
 		public EntityAIFollowParent(EntityAnimal p_i1626_1_, double p_i1626_2_)
 		{

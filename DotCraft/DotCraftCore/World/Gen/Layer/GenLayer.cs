@@ -25,7 +25,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	/// <summary> base seed to the LCG prng provided via the constructor  </summary>
 		protected internal long baseSeed;
-		private const string __OBFID = "CL_00000559";
+		
 
 ///    
 ///     <summary> * the first array item is a linked list of the bioms, the second is the zoom function, the third is the same as the
@@ -197,8 +197,8 @@ namespace DotCraftCore.World.Gen.Layer
 					CrashReportCategory var4 = var3.makeCategory("Biomes being compared");
 					var4.addCrashSection("Biome A ID", Convert.ToInt32(p_151616_0_));
 					var4.addCrashSection("Biome B ID", Convert.ToInt32(p_151616_1_));
-					var4.addCrashSectionCallable("Biome A", new Callable() { private static final string __OBFID = "CL_00000560"; public string call() { return Convert.ToString(BiomeGenBase.func_150568_d(p_151616_0_)); } });
-					var4.addCrashSectionCallable("Biome B", new Callable() { private static final string __OBFID = "CL_00000561"; public string call() { return Convert.ToString(BiomeGenBase.func_150568_d(p_151616_1_)); } });
+					var4.addCrashSectionCallable("Biome A", new Callable() {  public string call() { return Convert.ToString(BiomeGenBase.func_150568_d(p_151616_0_)); } });
+					var4.addCrashSectionCallable("Biome B", new Callable() {  public string call() { return Convert.ToString(BiomeGenBase.func_150568_d(p_151616_1_)); } });
 					throw new ReportedException(var3);
 				}
 			}

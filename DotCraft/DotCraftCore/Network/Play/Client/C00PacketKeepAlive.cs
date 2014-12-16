@@ -9,7 +9,7 @@ namespace DotCraftCore.Network.Play.Client
 	public class C00PacketKeepAlive : Packet
 	{
 		private int field_149461_a;
-		private const string __OBFID = "CL_00001359";
+		
 
 		public C00PacketKeepAlive()
 		{

@@ -22,7 +22,7 @@ namespace DotCraftCore.Entity.Monster
 ///     <summary> * A cooldown before this entity will search for another Silverfish to join them in battle. </summary>
 ///     
 		private int allySummonCooldown;
-		private const string __OBFID = "CL_00001696";
+		
 
 		public EntitySilverfish(World p_i1740_1_) : base(p_i1740_1_)
 		{

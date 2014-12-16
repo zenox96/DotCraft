@@ -10,7 +10,7 @@ namespace DotCraftCore.Item.Crafting
 	{
 		private string[][] recipePatterns = new string[][] {{"X", "X", "#"}};
 		private object[][] recipeItems;
-		private const string __OBFID = "CL_00000097";
+		
 
 		public RecipesWeapons()
 		{

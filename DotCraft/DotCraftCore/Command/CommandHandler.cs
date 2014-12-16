@@ -19,7 +19,7 @@ namespace DotCraftCore.Command
 
 	/// <summary> The set of ICommand objects currently loaded.  </summary>
 		private readonly Set commandSet = new HashSet();
-		private const string __OBFID = "CL_00001765";
+		
 
 		public virtual int executeCommand(ICommandSender p_71556_1_, string p_71556_2_)
 		{

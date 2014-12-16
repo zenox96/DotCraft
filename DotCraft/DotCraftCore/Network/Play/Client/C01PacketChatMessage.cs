@@ -9,7 +9,7 @@ namespace DotCraftCore.Network.Play.Client
 	public class C01PacketChatMessage : Packet
 	{
 		private string field_149440_a;
-		private const string __OBFID = "CL_00001347";
+		
 
 		public C01PacketChatMessage()
 		{

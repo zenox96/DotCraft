@@ -28,7 +28,7 @@ namespace DotCraftCore.TileEntity
 		public int field_145963_i;
 		public int field_145961_j;
 		private string field_145958_o;
-		private const string __OBFID = "CL_00000357";
+		
 
 ///    
 ///     <summary> * Returns the number of slots in the inventory. </summary>

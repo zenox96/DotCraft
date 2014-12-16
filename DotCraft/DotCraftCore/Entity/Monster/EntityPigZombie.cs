@@ -27,7 +27,7 @@ namespace DotCraftCore.Entity.Monster
 	/// <summary> A random delay until this PigZombie next makes a sound.  </summary>
 		private int randomSoundDelay;
 		private Entity field_110191_bu;
-		private const string __OBFID = "CL_00001693";
+		
 
 		public EntityPigZombie(World p_i1739_1_) : base(p_i1739_1_)
 		{

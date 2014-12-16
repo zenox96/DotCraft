@@ -27,7 +27,7 @@ namespace DotCraftCore.Realms
 		public int width;
 		public int height;
 		private GuiScreenRealmsProxy proxy = new GuiScreenRealmsProxy(this);
-		private const string __OBFID = "CL_00001898";
+		
 
 		public virtual GuiScreenRealmsProxy Proxy
 		{

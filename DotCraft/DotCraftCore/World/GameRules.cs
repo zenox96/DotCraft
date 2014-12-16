@@ -9,7 +9,7 @@ namespace DotCraftCore.World
 	public class GameRules
 	{
 		private SortedDictionary theGameRules = new SortedDictionary();
-		private const string __OBFID = "CL_00000136";
+		
 
 		public GameRules()
 		{
@@ -123,7 +123,7 @@ namespace DotCraftCore.World
 			private bool valueBoolean;
 			private int valueInteger;
 			private double valueDouble;
-			private const string __OBFID = "CL_00000137";
+			
 
 			public Value(string p_i1949_1_)
 			{

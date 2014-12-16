@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 
 	public class BlockBookshelf : Block
 	{
-		private const string __OBFID = "CL_00000206";
+		
 
 		public BlockBookshelf() : base(Material.wood)
 		{

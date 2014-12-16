@@ -142,7 +142,7 @@ namespace DotCraftCore.World
 ///     * the original block, plus 32 (i.e. value of 31 would mean a -1 offset </summary>
 ///     
 		internal int[] lightUpdateBlockList;
-		private const string __OBFID = "CL_00000140";
+		
 
 ///    
 ///     <summary> * Gets the biome for a given set of x/z coordinates </summary>
@@ -163,7 +163,7 @@ namespace DotCraftCore.World
 				{
 					CrashReport var5 = CrashReport.makeCrashReport(var7, "Getting biome");
 					CrashReportCategory var6 = var5.makeCategory("Coordinates of biome request");
-					var6.addCrashSectionCallable("Location", new Callable() { private static final string __OBFID = "CL_00000141"; public string call() { return CrashReportCategory.getLocationInfo(p_72807_1_, 0, p_72807_2_); } });
+					var6.addCrashSectionCallable("Location", new Callable() {  public string call() { return CrashReportCategory.getLocationInfo(p_72807_1_, 0, p_72807_2_); } });
 					throw new ReportedException(var5);
 				}
 			}
@@ -720,7 +720,7 @@ namespace DotCraftCore.World
 						var9 = -1;
 					}
 
-					var8.addCrashSectionCallable("Source block type", new Callable() { private static final string __OBFID = "CL_00000142"; public string call() { try { return string.Format("ID #{0:D} ({1} // {2})", new object[] {Convert.ToInt32(Block.getIdFromBlock(p_147460_4_)), p_147460_4_.UnlocalizedName, p_147460_4_.GetType().CanonicalName}); } catch (Exception var2) { return "ID #" + Block.getIdFromBlock(p_147460_4_); } } });
+					var8.addCrashSectionCallable("Source block type", new Callable() {  public string call() { try { return string.Format("ID #{0:D} ({1} // {2})", new object[] {Convert.ToInt32(Block.getIdFromBlock(p_147460_4_)), p_147460_4_.UnlocalizedName, p_147460_4_.GetType().CanonicalName}); } catch (Exception var2) { return "ID #" + Block.getIdFromBlock(p_147460_4_); } } });
 					CrashReportCategory.func_147153_a(var8, p_147460_1_, p_147460_2_, p_147460_3_, var5, var9);
 					throw new ReportedException(var7);
 				}
@@ -4112,8 +4112,8 @@ namespace DotCraftCore.World
 		{
 			CrashReportCategory var2 = p_72914_1_.makeCategoryDepth("Affected level", 1);
 			var2.addCrashSection("Level name", this.worldInfo == null ? "????" : this.worldInfo.WorldName);
-			var2.addCrashSectionCallable("All players", new Callable() { private static final string __OBFID = "CL_00000143"; public string call() { return World.playerEntities.size() + " total; " + World.playerEntities.ToString(); } });
-			var2.addCrashSectionCallable("Chunk stats", new Callable() { private static final string __OBFID = "CL_00000144"; public string call() { return World.chunkProvider.makeString(); } });
+			var2.addCrashSectionCallable("All players", new Callable() {  public string call() { return World.playerEntities.size() + " total; " + World.playerEntities.ToString(); } });
+			var2.addCrashSectionCallable("Chunk stats", new Callable() {  public string call() { return World.chunkProvider.makeString(); } });
 
 			try
 			{

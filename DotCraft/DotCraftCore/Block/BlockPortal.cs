@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public class BlockPortal : BlockBreakable
 	{
 		public static readonly int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
-		private const string __OBFID = "CL_00000284";
+		
 
 		public BlockPortal() : base("portal", Material.Portal, false)
 		{
@@ -265,7 +265,7 @@ namespace DotCraftCore.Block
 			private ChunkCoordinates field_150861_f;
 			private int field_150862_g;
 			private int field_150868_h;
-			private const string __OBFID = "CL_00000285";
+			
 
 			public Size(World p_i45415_1_, int p_i45415_2_, int p_i45415_3_, int p_i45415_4_, int p_i45415_5_)
 			{

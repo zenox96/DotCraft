@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEgg : Item
 	{
-		private const string __OBFID = "CL_00000023";
+		
 
 		public ItemEgg()
 		{

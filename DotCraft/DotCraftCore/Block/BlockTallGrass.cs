@@ -22,7 +22,7 @@ namespace DotCraftCore.Block
 	{
 		private static readonly string[] field_149871_a = new string[] {"deadbush", "tallgrass", "fern"};
 		private IIcon[] field_149870_b;
-		private const string __OBFID = "CL_00000321";
+		
 
 		protected internal BlockTallGrass() : base(Material.vine)
 		{

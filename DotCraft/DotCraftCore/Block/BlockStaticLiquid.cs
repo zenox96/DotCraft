@@ -9,7 +9,7 @@ namespace DotCraftCore.Block
 
 	public class BlockStaticLiquid : BlockLiquid
 	{
-		private const string __OBFID = "CL_00000315";
+		
 
 		protected internal BlockStaticLiquid(Material p_i45429_1_) : base(p_i45429_1_)
 		{

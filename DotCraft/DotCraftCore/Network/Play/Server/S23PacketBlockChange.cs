@@ -17,7 +17,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148886_c;
 		private Block field_148883_d;
 		private int field_148884_e;
-		private const string __OBFID = "CL_00001287";
+		
 
 		public S23PacketBlockChange()
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.Util
 	{
 	/// <summary> The set for this ForwardingSet to forward methods to.  </summary>
 		private readonly Set underlyingSet = Sets.newHashSet();
-		private const string __OBFID = "CL_00001482";
+		
 
 		public virtual void func_152753_a(JsonElement p_152753_1_)
 		{

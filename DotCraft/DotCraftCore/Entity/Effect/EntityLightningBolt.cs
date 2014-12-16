@@ -28,7 +28,7 @@ namespace DotCraftCore.Entity.Effect
 ///     <summary> * Determines the time before the EntityLightningBolt is destroyed. It is a random integer decremented over time. </summary>
 ///     
 		private int boltLivingTime;
-		private const string __OBFID = "CL_00001666";
+		
 
 		public EntityLightningBolt(World p_i1703_1_, double p_i1703_2_, double p_i1703_4_, double p_i1703_6_) : base(p_i1703_1_)
 		{

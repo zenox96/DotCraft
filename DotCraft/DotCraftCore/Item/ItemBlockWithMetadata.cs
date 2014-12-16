@@ -7,7 +7,7 @@ namespace DotCraftCore.Item
 	public class ItemBlockWithMetadata : ItemBlock
 	{
 		private Block field_150950_b;
-		private const string __OBFID = "CL_00001769";
+		
 
 		public ItemBlockWithMetadata(Block p_i45326_1_, Block p_i45326_2_) : base(p_i45326_1_)
 		{

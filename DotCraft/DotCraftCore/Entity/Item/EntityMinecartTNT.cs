@@ -15,7 +15,7 @@ namespace DotCraftCore.Entity.Item
 	public class EntityMinecartTNT : EntityMinecart
 	{
 		private int minecartTNTFuse = -1;
-		private const string __OBFID = "CL_00001680";
+		
 
 		public EntityMinecartTNT(World p_i1727_1_) : base(p_i1727_1_)
 		{

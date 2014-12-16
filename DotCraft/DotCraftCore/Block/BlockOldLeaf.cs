@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly string[][] field_150130_N = new string[][] {{"leaves_oak", "leaves_spruce", "leaves_birch", "leaves_jungle"}, {"leaves_oak_opaque", "leaves_spruce_opaque", "leaves_birch_opaque", "leaves_jungle_opaque"}};
 		public static readonly string[] field_150131_O = new string[] {"oak", "spruce", "birch", "jungle"};
-		private const string __OBFID = "CL_00000280";
+		
 
 ///    
 ///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>

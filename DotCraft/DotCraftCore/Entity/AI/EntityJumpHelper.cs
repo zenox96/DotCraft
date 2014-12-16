@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.AI
 	{
 		private EntityLiving entity;
 		private bool isJumping;
-		private const string __OBFID = "CL_00001571";
+		
 
 		public EntityJumpHelper(EntityLiving p_i1612_1_)
 		{

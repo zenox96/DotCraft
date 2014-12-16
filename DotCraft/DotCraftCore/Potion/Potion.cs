@@ -91,7 +91,7 @@ namespace DotCraftCore.Potion
 		private int statusIconIndex = -1;
 		private double effectiveness;
 		private bool usable;
-		private const string __OBFID = "CL_00001528";
+		
 
 		protected internal Potion(int p_i1573_1_, bool p_i1573_2_, int p_i1573_3_)
 		{

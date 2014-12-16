@@ -20,7 +20,7 @@ namespace DotCraftCore.Entity.Projectile
 ///     <summary> * The damage value of the thrown potion that this EntityPotion represents. </summary>
 ///     
 		private ItemStack potionDamage;
-		private const string __OBFID = "CL_00001727";
+		
 
 		public EntityPotion(World p_i1788_1_) : base(p_i1788_1_)
 		{

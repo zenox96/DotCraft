@@ -43,7 +43,7 @@ namespace DotCraftCore.World.Chunk.Storage
 
 	/// <summary> The NibbleArray containing a block of Sky-light data.  </summary>
 		private NibbleArray skylightArray;
-		private const string __OBFID = "CL_00000375";
+		
 
 		public ExtendedBlockStorage(int p_i1997_1_, bool p_i1997_2_)
 		{

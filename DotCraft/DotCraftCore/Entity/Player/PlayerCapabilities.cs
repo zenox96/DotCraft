@@ -23,7 +23,7 @@ namespace DotCraftCore.Entity.Player
 		public bool allowEdit = true;
 		private float flySpeed = 0.05F;
 		private float walkSpeed = 0.1F;
-		private const string __OBFID = "CL_00001708";
+		
 
 		public virtual void writeCapabilitiesToNBT(NBTTagCompound p_75091_1_)
 		{

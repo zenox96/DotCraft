@@ -10,7 +10,7 @@ namespace DotCraftCore.TileEntity
 		public float field_145975_i;
 		public int field_145973_j;
 		private int field_145974_k;
-		private const string __OBFID = "CL_00000355";
+		
 
 		public override void updateEntity()
 		{

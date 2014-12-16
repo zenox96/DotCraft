@@ -76,7 +76,7 @@ namespace DotCraftCore.Entity.Passive
 
 	/// <summary> Selling list of Blacksmith items.  </summary>
 		private static readonly IDictionary blacksmithSellingList = new Hashtable();
-		private const string __OBFID = "CL_00001707";
+		
 
 		public EntityVillager(World p_i1747_1_) : this(p_i1747_1_, 0)
 		{

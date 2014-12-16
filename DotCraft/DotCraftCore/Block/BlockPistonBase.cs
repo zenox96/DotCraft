@@ -26,7 +26,7 @@ namespace DotCraftCore.Block
 		private IIcon field_150081_b;
 		private IIcon field_150083_M;
 		private IIcon field_150084_N;
-		private const string __OBFID = "CL_00000366";
+		
 
 		public BlockPistonBase(bool p_i45443_1_) : base(Material.piston)
 		{

@@ -21,7 +21,7 @@ namespace DotCraftCore.World
 	{
 	/// <summary> The 17x17 area around the player where mobs can spawn  </summary>
 		private Hashtable eligibleChunksForSpawning = new Hashtable();
-		private const string __OBFID = "CL_00000152";
+		
 
 		protected internal static ChunkPosition func_151350_a(World p_151350_0_, int p_151350_1_, int p_151350_2_)
 		{

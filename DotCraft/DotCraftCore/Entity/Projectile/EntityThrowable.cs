@@ -31,7 +31,7 @@ namespace DotCraftCore.Entity.Projectile
 		private string throwerName;
 		private int ticksInGround;
 		private int ticksInAir;
-		private const string __OBFID = "CL_00001723";
+		
 
 		public EntityThrowable(World p_i1776_1_) : base(p_i1776_1_)
 		{

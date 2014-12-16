@@ -6,7 +6,7 @@ namespace DotCraftCore.TileEntity
 	public class TileEntityComparator : TileEntity
 	{
 		private int field_145997_a;
-		private const string __OBFID = "CL_00000349";
+		
 
 		public override void writeToNBT(NBTTagCompound p_145841_1_)
 		{

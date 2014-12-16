@@ -16,7 +16,7 @@ namespace DotCraftCore.Server.Network
 	{
 		private readonly MinecraftServer field_147314_a;
 		private readonly NetworkManager field_147313_b;
-		private const string __OBFID = "CL_00001464";
+		
 
 		public NetHandlerStatusServer(MinecraftServer p_i45299_1_, NetworkManager p_i45299_2_)
 		{

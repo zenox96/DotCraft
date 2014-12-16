@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 
 	public class BlockGravel : BlockFalling
 	{
-		private const string __OBFID = "CL_00000252";
+		
 
 		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{

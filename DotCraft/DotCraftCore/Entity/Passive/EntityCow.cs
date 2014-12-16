@@ -20,7 +20,7 @@ namespace DotCraftCore.Entity.Passive
 
 	public class EntityCow : EntityAnimal
 	{
-		private const string __OBFID = "CL_00001640";
+		
 
 		public EntityCow(World p_i1683_1_) : base(p_i1683_1_)
 		{

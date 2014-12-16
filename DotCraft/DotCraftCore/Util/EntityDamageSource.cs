@@ -9,7 +9,7 @@ namespace DotCraftCore.Util
 	public class EntityDamageSource : DamageSource
 	{
 		protected internal Entity damageSourceEntity;
-		private const string __OBFID = "CL_00001522";
+		
 
 		public EntityDamageSource(string p_i1567_1_, Entity p_i1567_2_) : base(p_i1567_1_)
 		{

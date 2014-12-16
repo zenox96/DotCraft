@@ -11,7 +11,7 @@ namespace DotCraftCore.Entity.Projectile
 	public class EntityLargeFireball : EntityFireball
 	{
 		public int field_92057_e = 1;
-		private const string __OBFID = "CL_00001719";
+		
 
 		public EntityLargeFireball(World p_i1767_1_) : base(p_i1767_1_)
 		{

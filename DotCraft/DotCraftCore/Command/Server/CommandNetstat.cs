@@ -12,7 +12,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandNetstat : CommandBase
 	{
-		private const string __OBFID = "CL_00001904";
+		
 
 		public virtual string CommandName
 		{

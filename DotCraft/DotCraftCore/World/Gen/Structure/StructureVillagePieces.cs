@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	public class StructureVillagePieces
 	{
-		private const string __OBFID = "CL_00000516";
+		
 
 		public static void func_143016_a()
 		{
@@ -265,7 +265,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Church : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000525";
+			
 
 			public Church()
 			{
@@ -385,7 +385,7 @@ namespace DotCraftCore.World.Gen.Structure
 			private Block cropTypeB;
 			private Block cropTypeC;
 			private Block cropTypeD;
-			private const string __OBFID = "CL_00000518";
+			
 
 			public Field1()
 			{
@@ -497,7 +497,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private Block cropTypeA;
 			private Block cropTypeB;
-			private const string __OBFID = "CL_00000519";
+			
 
 			public Field2()
 			{
@@ -593,7 +593,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Hall : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000522";
+			
 
 			public Hall()
 			{
@@ -716,7 +716,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class House1 : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000517";
+			
 
 			public House1()
 			{
@@ -844,7 +844,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private static readonly WeightedRandomChestContent[] villageBlacksmithChestContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.diamond, 0, 1, 3, 3), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 10), new WeightedRandomChestContent(Items.gold_ingot, 0, 1, 3, 5), new WeightedRandomChestContent(Items.bread, 0, 1, 3, 15), new WeightedRandomChestContent(Items.apple, 0, 1, 3, 15), new WeightedRandomChestContent(Items.iron_pickaxe, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_sword, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_chestplate, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_helmet, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_leggings, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_boots, 0, 1, 1, 5), new WeightedRandomChestContent(Item.getItemFromBlock(Blocks.obsidian), 0, 3, 7, 5), new WeightedRandomChestContent(Item.getItemFromBlock(Blocks.sapling), 0, 3, 7, 5), new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 3), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
 			private bool hasMadeChest;
-			private const string __OBFID = "CL_00000526";
+			
 
 			public House2()
 			{
@@ -968,7 +968,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class House3 : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000530";
+			
 
 			public House3()
 			{
@@ -1131,7 +1131,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class House4Garden : StructureVillagePieces.Village
 		{
 			private bool isRoofAccessible;
-			private const string __OBFID = "CL_00000523";
+			
 
 			public House4Garden()
 			{
@@ -1262,7 +1262,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Path : StructureVillagePieces.Road
 		{
 			private int averageGroundLevel;
-			private const string __OBFID = "CL_00000528";
+			
 
 			public Path()
 			{
@@ -1401,7 +1401,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public readonly int villagePieceWeight;
 			public int villagePiecesSpawned;
 			public int villagePiecesLimit;
-			private const string __OBFID = "CL_00000521";
+			
 
 			public PieceWeight(Type p_i2098_1_, int p_i2098_2_, int p_i2098_3_)
 			{
@@ -1423,7 +1423,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public abstract class Road : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000532";
+			
 
 			public Road()
 			{
@@ -1443,7 +1443,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public IList structureVillageWeightedPieceList;
 			public IList field_74932_i = new ArrayList();
 			public IList field_74930_j = new ArrayList();
-			private const string __OBFID = "CL_00000527";
+			
 
 			public Start()
 			{
@@ -1469,7 +1469,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Torch : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000520";
+			
 
 			public Torch()
 			{
@@ -1519,7 +1519,7 @@ namespace DotCraftCore.World.Gen.Structure
 			protected internal int field_143015_k = -1;
 			private int villagersSpawned;
 			private bool field_143014_b;
-			private const string __OBFID = "CL_00000531";
+			
 
 			public Village()
 			{
@@ -1737,7 +1737,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Well : StructureVillagePieces.Village
 		{
-			private const string __OBFID = "CL_00000533";
+			
 
 			public Well()
 			{
@@ -1817,7 +1817,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private bool isTallHouse;
 			private int tablePosition;
-			private const string __OBFID = "CL_00000524";
+			
 
 			public WoodHut()
 			{

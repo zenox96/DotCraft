@@ -17,7 +17,7 @@ namespace DotCraftCore.Item
 	public class ItemFishFood : ItemFood
 	{
 		private readonly bool field_150907_b;
-		private const string __OBFID = "CL_00000032";
+		
 
 		public ItemFishFood(bool p_i45338_1_) : base(0, 0.0F, false)
 		{
@@ -138,7 +138,7 @@ namespace DotCraftCore.Item
 
 			@private static final ItemFishFood.FishType[] $VALUES = new ItemFishFood.FishType[]{COD, SALMON, CLOWNFISH, PUFFERFISH
 		}
-			private const string __OBFID = "CL_00000033";
+			
 
 			private FishType(string p_i45336_1_, int p_i45336_2_, int p_i45336_3_, string p_i45336_4_, int p_i45336_5_, float p_i45336_6_, int p_i45336_7_, float p_i45336_8_)
 			{

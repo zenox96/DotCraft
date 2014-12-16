@@ -5,7 +5,7 @@ namespace DotCraftCore.TileEntity
 
 	public class TileEntityDaylightDetector : TileEntity
 	{
-		private const string __OBFID = "CL_00000350";
+		
 
 		public override void updateEntity()
 		{

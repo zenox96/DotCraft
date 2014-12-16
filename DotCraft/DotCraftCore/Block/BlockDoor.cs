@@ -20,7 +20,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon[] field_150017_a;
 		private IIcon[] field_150016_b;
-		private const string __OBFID = "CL_00000230";
+		
 
 		protected internal BlockDoor(Material p_i45402_1_) : base(p_i45402_1_)
 		{

@@ -7,7 +7,7 @@ namespace DotCraftCore.Command
 
 	public class CommandKill : CommandBase
 	{
-		private const string __OBFID = "CL_00000570";
+		
 
 		public virtual string CommandName
 		{

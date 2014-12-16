@@ -181,7 +181,7 @@ namespace DotCraftCore.World.Biome
 
 	/// <summary> The swamp tree generator.  </summary>
 		protected internal WorldGenSwamp worldGeneratorSwamp;
-		private const string __OBFID = "CL_00000158";
+		
 
 		protected internal BiomeGenBase(int p_i1971_1_)
 		{
@@ -662,7 +662,7 @@ namespace DotCraftCore.World.Biome
 		{
 			public float field_150777_a;
 			public float field_150776_b;
-			private const string __OBFID = "CL_00000159";
+			
 
 			public Height(float p_i45371_1_, float p_i45371_2_)
 			{
@@ -681,7 +681,7 @@ namespace DotCraftCore.World.Biome
 			public Type entityClass;
 			public int minGroupCount;
 			public int maxGroupCount;
-			private const string __OBFID = "CL_00000161";
+			
 
 			public SpawnListEntry(Type p_i1970_1_, int p_i1970_2_, int p_i1970_3_, int p_i1970_4_) : base(p_i1970_2_)
 			{
@@ -709,7 +709,7 @@ namespace DotCraftCore.World.Biome
 
 			@private static final BiomeGenBase.TempCategory[] $VALUES = new BiomeGenBase.TempCategory[]{OCEAN, COLD, MEDIUM, WARM
 		}
-			private const string __OBFID = "CL_00000160";
+			
 
 			private TempCategory(string p_i45372_1_, int p_i45372_2_)
 			{

@@ -19,7 +19,7 @@ namespace DotCraftCore.Block
 
 	public class BlockVine : Block
 	{
-		private const string __OBFID = "CL_00000330";
+		
 
 		public BlockVine() : base(Material.vine)
 		{

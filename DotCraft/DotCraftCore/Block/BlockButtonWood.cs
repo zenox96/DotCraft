@@ -6,7 +6,7 @@ namespace DotCraftCore.Block
 
 	public class BlockButtonWood : BlockButton
 	{
-		private const string __OBFID = "CL_00000336";
+		
 
 		protected internal BlockButtonWood() : base(true)
 		{

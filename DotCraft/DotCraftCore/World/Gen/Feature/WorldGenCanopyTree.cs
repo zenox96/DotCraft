@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenCanopyTree : WorldGenAbstractTree
 	{
-		private const string __OBFID = "CL_00000430";
+		
 
 		public WorldGenCanopyTree(bool p_i45461_1_) : base(p_i45461_1_)
 		{

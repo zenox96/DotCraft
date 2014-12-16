@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> BlockID of the block the seeds can be planted on.  </summary>
 		private Block soilBlockID;
-		private const string __OBFID = "CL_00000061";
+		
 
 		public ItemSeeds(Block p_i45352_1_, Block p_i45352_2_)
 		{

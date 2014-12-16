@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 	public class BlockRedstoneLight : Block
 	{
 		private readonly bool field_150171_a;
-		private const string __OBFID = "CL_00000297";
+		
 
 		public BlockRedstoneLight(bool p_i45421_1_) : base(Material.redstoneLight)
 		{

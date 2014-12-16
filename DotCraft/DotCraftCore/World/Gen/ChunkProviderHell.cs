@@ -63,7 +63,7 @@ namespace DotCraftCore.World.Gen
 		internal double[] noiseData3;
 		internal double[] noiseData4;
 		internal double[] noiseData5;
-		private const string __OBFID = "CL_00000392";
+		
 
 		public ChunkProviderHell(World p_i2005_1_, long p_i2005_2_)
 		{

@@ -6,7 +6,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The long value for the tag.  </summary>
 		private long data;
-		private const string __OBFID = "CL_00001225";
+		
 
 		internal NBTTagLong()
 		{

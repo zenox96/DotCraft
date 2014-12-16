@@ -15,7 +15,7 @@ namespace DotCraftCore.Server.Network
 	{
 		private readonly MinecraftServer field_147387_a;
 		private readonly NetworkManager field_147386_b;
-		private const string __OBFID = "CL_00001456";
+		
 
 		public NetHandlerHandshakeTCP(MinecraftServer p_i45295_1_, NetworkManager p_i45295_2_)
 		{
@@ -95,7 +95,7 @@ namespace DotCraftCore.Server.Network
 		internal sealed class SwitchEnumConnectionState
 		{
 			internal static readonly int[] field_151291_a = new int[EnumConnectionState.values().length];
-			private const string __OBFID = "CL_00001457";
+			
 
 			static SwitchEnumConnectionState()
 			{

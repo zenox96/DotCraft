@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 
 	public class ItemShears : Item
 	{
-		private const string __OBFID = "CL_00000062";
+		
 
 		public ItemShears()
 		{

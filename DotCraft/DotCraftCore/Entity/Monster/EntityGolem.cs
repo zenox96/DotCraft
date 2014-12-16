@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public abstract class EntityGolem : EntityCreature, IAnimals
 	{
-		private const string __OBFID = "CL_00001644";
+		
 
 		public EntityGolem(World p_i1686_1_) : base(p_i1686_1_)
 		{

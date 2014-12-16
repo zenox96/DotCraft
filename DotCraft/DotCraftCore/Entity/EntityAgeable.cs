@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity
 	{
 		private float field_98056_d = -1.0F;
 		private float field_98057_e;
-		private const string __OBFID = "CL_00001530";
+		
 
 		public EntityAgeable(World p_i1578_1_) : base(p_i1578_1_)
 		{

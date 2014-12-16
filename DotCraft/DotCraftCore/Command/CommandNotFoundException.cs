@@ -3,7 +3,7 @@ namespace DotCraftCore.Command
 
 	public class CommandNotFoundException : CommandException
 	{
-		private const string __OBFID = "CL_00001191";
+		
 
 		public CommandNotFoundException() : this("commands.generic.notFound", new object[0])
 		{

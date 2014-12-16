@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	{
 		private static readonly IIcon[] field_150106_a = new IIcon[16];
 		private static readonly IIcon[] field_150105_b = new IIcon[16];
-		private const string __OBFID = "CL_00000313";
+		
 
 		public BlockStainedGlassPane() : base("glass", "glass_pane_top", Material.glass, false)
 		{

@@ -33,7 +33,7 @@ namespace DotCraftCore.Entity.Item
 
 	/// <summary> Threshold color for tracking players  </summary>
 		private int xpTargetColor;
-		private const string __OBFID = "CL_00001544";
+		
 
 		public EntityXPOrb(World p_i1585_1_, double p_i1585_2_, double p_i1585_4_, double p_i1585_6_, int p_i1585_8_) : base(p_i1585_1_)
 		{

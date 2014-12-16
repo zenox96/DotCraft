@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockPistonMoving : BlockContainer
 	{
-		private const string __OBFID = "CL_00000368";
+		
 
 		public BlockPistonMoving() : base(Material.piston)
 		{

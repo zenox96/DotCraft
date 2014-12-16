@@ -33,7 +33,7 @@ namespace DotCraftCore.Block
 		protected internal IIcon field_149944_M;
 		protected internal IIcon field_149945_N;
 		protected internal IIcon field_149946_O;
-		private const string __OBFID = "CL_00000229";
+		
 
 		protected internal BlockDispenser() : base(Material.rock)
 		{

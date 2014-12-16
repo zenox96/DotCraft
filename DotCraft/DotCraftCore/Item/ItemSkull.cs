@@ -23,7 +23,7 @@ namespace DotCraftCore.Item
 		private static readonly string[] skullTypes = new string[] {"skeleton", "wither", "zombie", "char", "creeper"};
 		public static readonly string[] field_94587_a = new string[] {"skeleton", "wither", "zombie", "steve", "creeper"};
 		private IIcon[] field_94586_c;
-		private const string __OBFID = "CL_00000067";
+		
 
 		public ItemSkull()
 		{

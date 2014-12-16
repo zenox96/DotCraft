@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 	public class ItemCoal : Item
 	{
 		private IIcon field_111220_a;
-		private const string __OBFID = "CL_00000002";
+		
 
 		public ItemCoal()
 		{

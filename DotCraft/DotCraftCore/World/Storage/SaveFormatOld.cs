@@ -20,7 +20,7 @@ namespace DotCraftCore.World.Storage
 ///     <summary> * Reference to the File object representing the directory for the world saves </summary>
 ///     
 		protected internal readonly File savesDirectory;
-		private const string __OBFID = "CL_00000586";
+		
 
 		public SaveFormatOld(File p_i2147_1_)
 		{

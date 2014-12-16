@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 		private Block field_150555_a;
 		private int field_150554_b;
-		private const string __OBFID = "CL_00000416";
+		
 
 		public WorldGenIcePath(int p_i45454_1_)
 		{

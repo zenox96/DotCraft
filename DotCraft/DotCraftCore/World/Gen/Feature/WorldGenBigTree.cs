@@ -48,7 +48,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	/// <summary> Contains a list of a points at which to generate groups of leaves.  </summary>
 		internal int[][] leafNodes;
-		private const string __OBFID = "CL_00000400";
+		
 
 		public WorldGenBigTree(bool p_i2008_1_) : base(p_i2008_1_)
 		{

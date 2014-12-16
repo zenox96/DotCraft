@@ -8,7 +8,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The byte array stored in the tag.  </summary>
 		private sbyte[] byteArray;
-		private const string __OBFID = "CL_00001213";
+		
 
 		internal NBTTagByteArray()
 		{

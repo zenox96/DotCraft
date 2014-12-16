@@ -20,7 +20,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_150116_a;
 		private IIcon field_150115_b;
-		private const string __OBFID = "CL_00000324";
+		
 
 		public BlockTNT() : base(Material.tnt)
 		{

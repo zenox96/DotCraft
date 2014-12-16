@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 	{
 		protected internal readonly IDictionary attributes = new Hashtable();
 		protected internal readonly IDictionary attributesByName = new LowerStringMap();
-		private const string __OBFID = "CL_00001566";
+		
 
 		public virtual IAttributeInstance getAttributeInstance(IAttribute p_111151_1_)
 		{

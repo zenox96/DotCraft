@@ -158,7 +158,7 @@ namespace DotCraftCore.Server
 		private long field_147142_T = 0L;
 		private readonly GameProfileRepository field_152365_W;
 		private readonly PlayerProfileCache field_152366_X;
-		private const string __OBFID = "CL_00001462";
+		
 
 		public MinecraftServer(File p_i45281_1_, Proxy p_i45281_2_)
 		{
@@ -187,7 +187,7 @@ namespace DotCraftCore.Server
 			{
 				logger.info("Converting map!");
 				this.UserMessage = "menu.convertingLevel";
-				this.ActiveAnvilConverter.convertMapFormat(p_71237_1_, new IProgressUpdate() { private long field_96245_b = System.currentTimeMillis(); private static final string __OBFID = "CL_00001417"; public void displayProgressMessage(string p_73720_1_) {} public void resetProgressAndMessage(string p_73721_1_) {} public void setLoadingProgress(int p_73718_1_) { if(System.currentTimeMillis() - this.field_96245_b >= 1000L) { this.field_96245_b = System.currentTimeMillis(); MinecraftServer.logger.info("Converting... " + p_73718_1_ + "%"); } } public void func_146586_a() {} public void resetProgresAndWorkingMessage(string p_73719_1_) {} });
+				this.ActiveAnvilConverter.convertMapFormat(p_71237_1_, new IProgressUpdate() { private long field_96245_b = System.currentTimeMillis();  public void displayProgressMessage(string p_73720_1_) {} public void resetProgressAndMessage(string p_73721_1_) {} public void setLoadingProgress(int p_73718_1_) { if(System.currentTimeMillis() - this.field_96245_b >= 1000L) { this.field_96245_b = System.currentTimeMillis(); MinecraftServer.logger.info("Converting... " + p_73718_1_ + "%"); } } public void func_146586_a() {} public void resetProgresAndWorkingMessage(string p_73719_1_) {} });
 			}
 		}
 
@@ -732,7 +732,7 @@ namespace DotCraftCore.Server
 
 		public virtual void startServerThread()
 		{
-			(new Thread("Server thread") { private static final string __OBFID = "CL_00001418"; public void run() { MinecraftServer.run(); } }).start();
+			(new Thread("Server thread") {  public void run() { MinecraftServer.run(); } }).start();
 		}
 
 ///    
@@ -821,16 +821,16 @@ namespace DotCraftCore.Server
 ///     
 		public virtual CrashReport addServerInfoToCrashReport(CrashReport p_71230_1_)
 		{
-			p_71230_1_.Category.addCrashSectionCallable("Profiler Position", new Callable() { private static final string __OBFID = "CL_00001419"; public string call() { return MinecraftServer.theProfiler.profilingEnabled ? MinecraftServer.theProfiler.NameOfLastSection : "N/A (disabled)"; } });
+			p_71230_1_.Category.addCrashSectionCallable("Profiler Position", new Callable() {  public string call() { return MinecraftServer.theProfiler.profilingEnabled ? MinecraftServer.theProfiler.NameOfLastSection : "N/A (disabled)"; } });
 
 			if(this.worldServers != null && this.worldServers.Length > 0 && this.worldServers[0] != null)
 			{
-				p_71230_1_.Category.addCrashSectionCallable("Vec3 Pool Size", new Callable() { private static final string __OBFID = "CL_00001420"; public string call() { sbyte var1 = 0; int var2 = 56 * var1; int var3 = var2 / 1024 / 1024; sbyte var4 = 0; int var5 = 56 * var4; int var6 = var5 / 1024 / 1024; return var1 + " (" + var2 + " bytes; " + var3 + " MB) allocated, " + var4 + " (" + var5 + " bytes; " + var6 + " MB) used"; } });
+				p_71230_1_.Category.addCrashSectionCallable("Vec3 Pool Size", new Callable() {  public string call() { sbyte var1 = 0; int var2 = 56 * var1; int var3 = var2 / 1024 / 1024; sbyte var4 = 0; int var5 = 56 * var4; int var6 = var5 / 1024 / 1024; return var1 + " (" + var2 + " bytes; " + var3 + " MB) allocated, " + var4 + " (" + var5 + " bytes; " + var6 + " MB) used"; } });
 			}
 
 			if(this.serverConfigManager != null)
 			{
-				p_71230_1_.Category.addCrashSectionCallable("Player Count", new Callable() { private static final string __OBFID = "CL_00001780"; public string call() { return MinecraftServer.serverConfigManager.CurrentPlayerCount + " / " + MinecraftServer.serverConfigManager.MaxPlayers + "; " + MinecraftServer.serverConfigManager.playerEntityList; } });
+				p_71230_1_.Category.addCrashSectionCallable("Player Count", new Callable() {  public string call() { return MinecraftServer.serverConfigManager.CurrentPlayerCount + " / " + MinecraftServer.serverConfigManager.MaxPlayers + "; " + MinecraftServer.serverConfigManager.playerEntityList; } });
 			}
 
 			return p_71230_1_;

@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149186_a;
 		private int field_149184_b;
 		private int field_149185_c;
-		private const string __OBFID = "CL_00001295";
+		
 
 		public S31PacketWindowProperty()
 		{

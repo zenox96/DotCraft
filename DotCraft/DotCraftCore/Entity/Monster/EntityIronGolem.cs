@@ -38,7 +38,7 @@ namespace DotCraftCore.Entity.Monster
 		internal Village villageObj;
 		private int attackTimer;
 		private int holdRoseTick;
-		private const string __OBFID = "CL_00001652";
+		
 
 		public EntityIronGolem(World p_i1694_1_) : base(p_i1694_1_)
 		{

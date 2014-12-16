@@ -10,7 +10,7 @@ namespace DotCraftCore.Inventory
 	public class ContainerDispenser : Container
 	{
 		private TileEntityDispenser tileEntityDispenser;
-		private const string __OBFID = "CL_00001763";
+		
 
 		public ContainerDispenser(IInventory p_i1825_1_, TileEntityDispenser p_i1825_2_)
 		{

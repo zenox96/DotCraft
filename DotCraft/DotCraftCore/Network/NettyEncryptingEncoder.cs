@@ -10,7 +10,7 @@ namespace DotCraftCore.Network
 	public class NettyEncryptingEncoder : MessageToByteEncoder
 	{
 		private readonly NettyEncryptionTranslator field_150750_a;
-		private const string __OBFID = "CL_00001239";
+		
 
 		public NettyEncryptingEncoder(Cipher p_i45142_1_)
 		{

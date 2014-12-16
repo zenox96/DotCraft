@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private int field_149445_a;
 		private readonly IList field_149444_b = new ArrayList();
-		private const string __OBFID = "CL_00001341";
+		
 
 		public S20PacketEntityProperties()
 		{
@@ -114,7 +114,7 @@ namespace DotCraftCore.Network.Play.Server
 			private readonly string field_151412_b;
 			private readonly double field_151413_c;
 			private readonly ICollection field_151411_d;
-			private const string __OBFID = "CL_00001342";
+			
 
 			public Snapshot(string p_i45235_2_, double p_i45235_3_, ICollection p_i45235_5_)
 			{

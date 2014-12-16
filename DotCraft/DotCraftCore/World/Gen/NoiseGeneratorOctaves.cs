@@ -12,7 +12,7 @@ namespace DotCraftCore.World.Gen
 ///     
 		private NoiseGeneratorImproved[] generatorCollection;
 		private int octaves;
-		private const string __OBFID = "CL_00000535";
+		
 
 		public NoiseGeneratorOctaves(Random p_i2111_1_, int p_i2111_2_)
 		{

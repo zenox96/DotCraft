@@ -12,7 +12,7 @@ namespace DotCraftCore.Inventory
 	{
 		private IInventory field_111243_a;
 		private EntityHorse theHorse;
-		private const string __OBFID = "CL_00001751";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: 'final' parameters are not allowed in .NET:
 //ORIGINAL LINE: public ContainerHorseInventory(IInventory p_i1817_1_, final IInventory p_i1817_2_, final EntityHorse p_i1817_3_)
@@ -23,8 +23,8 @@ namespace DotCraftCore.Inventory
 			sbyte var4 = 3;
 			p_i1817_2_.openInventory();
 			int var5 = (var4 - 4) * 18;
-			this.addSlotToContainer(new Slot(p_i1817_2_, 0, 8, 18) { private static final string __OBFID = "CL_00001752"; public bool isItemValid(ItemStack p_75214_1_) { return base.isItemValid(p_75214_1_) && p_75214_1_.Item == Items.saddle && !this.HasStack; } });
-			this.addSlotToContainer(new Slot(p_i1817_2_, 1, 8, 36) { private static final string __OBFID = "CL_00001753"; public bool isItemValid(ItemStack p_75214_1_) { return base.isItemValid(p_75214_1_) && p_i1817_3_.func_110259_cr() && EntityHorse.func_146085_a(p_75214_1_.Item); } public bool func_111238_b() { return p_i1817_3_.func_110259_cr(); } });
+			this.addSlotToContainer(new Slot(p_i1817_2_, 0, 8, 18) {  public bool isItemValid(ItemStack p_75214_1_) { return base.isItemValid(p_75214_1_) && p_75214_1_.Item == Items.saddle && !this.HasStack; } });
+			this.addSlotToContainer(new Slot(p_i1817_2_, 1, 8, 36) {  public bool isItemValid(ItemStack p_75214_1_) { return base.isItemValid(p_75214_1_) && p_i1817_3_.func_110259_cr() && EntityHorse.func_146085_a(p_75214_1_.Item); } public bool func_111238_b() { return p_i1817_3_.func_110259_cr(); } });
 			int var6;
 			int var7;
 

@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerDeepOcean : GenLayer
 	{
-		private const string __OBFID = "CL_00000546";
+		
 
 		public GenLayerDeepOcean(long p_i45472_1_, GenLayer p_i45472_3_) : base(p_i45472_1_)
 		{

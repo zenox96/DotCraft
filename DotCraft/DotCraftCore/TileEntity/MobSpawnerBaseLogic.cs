@@ -39,7 +39,7 @@ namespace DotCraftCore.TileEntity
 
 	/// <summary> The range coefficient for spawning entities around.  </summary>
 		private int spawnRange = 4;
-		private const string __OBFID = "CL_00000129";
+		
 
 ///    
 ///     <summary> * Gets the entity name that should be spawned. </summary>
@@ -397,7 +397,7 @@ namespace DotCraftCore.TileEntity
 		{
 			public readonly NBTTagCompound field_98222_b;
 			public readonly string minecartName;
-			private const string __OBFID = "CL_00000130";
+			
 
 			public WeightedRandomMinecart(NBTTagCompound p_i1945_2_) : base(p_i1945_2_.getInteger("Weight"))
 			{

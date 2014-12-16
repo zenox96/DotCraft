@@ -10,7 +10,7 @@ namespace DotCraftCore.World
 
 	/// <summary> Whether this MapDataBase needs saving to disk.  </summary>
 		private bool dirty;
-		private const string __OBFID = "CL_00000580";
+		
 
 		public WorldSavedData(string p_i2141_1_)
 		{

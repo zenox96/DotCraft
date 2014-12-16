@@ -14,7 +14,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandTeleport : CommandBase
 	{
-		private const string __OBFID = "CL_00001180";
+		
 
 		public virtual string CommandName
 		{

@@ -15,7 +15,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEnchantedBook : Item
 	{
-		private const string __OBFID = "CL_00000025";
+		
 
 		public virtual bool hasEffect(ItemStack p_77636_1_)
 		{

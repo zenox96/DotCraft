@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.Stats
 {
 
-	using HoverEvent = DotCraftCore.event.HoverEvent;
+	using HoverEvent = DotCraftCore.Event.HoverEvent;
 	using IScoreObjectiveCriteria = DotCraftCore.Scoreboard.IScoreObjectiveCriteria;
 	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
 	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
@@ -24,7 +24,7 @@ namespace DotCraftCore.Stats
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public static IStatType simpleStatType = new IStatType()
 //	{
-//		private static final String __OBFID = "CL_00001473";
+//		
 //		public String format(int p_75843_1_)
 //		{
 //			return StatBase.numberFormat.format((long)p_75843_1_);
@@ -34,7 +34,7 @@ namespace DotCraftCore.Stats
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public static IStatType timeStatType = new IStatType()
 //	{
-//		private static final String __OBFID = "CL_00001474";
+//		
 //		public String format(int p_75843_1_)
 //		{
 //			double var2 = (double)p_75843_1_ / 20.0D;
@@ -48,7 +48,7 @@ namespace DotCraftCore.Stats
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public static IStatType distanceStatType = new IStatType()
 //	{
-//		private static final String __OBFID = "CL_00001475";
+//		
 //		public String format(int p_75843_1_)
 //		{
 //			double var2 = (double)p_75843_1_ / 100.0D;
@@ -59,13 +59,13 @@ namespace DotCraftCore.Stats
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public static IStatType field_111202_k = new IStatType()
 //	{
-//		private static final String __OBFID = "CL_00001476";
+//		
 //		public String format(int p_75843_1_)
 //		{
 //			return StatBase.decimalFormat.format((double)p_75843_1_ * 0.1D);
 //		}
 //	};
-		private const string __OBFID = "CL_00001472";
+		
 
 		public StatBase(string p_i45307_1_, IChatComponent p_i45307_2_, IStatType p_i45307_3_)
 		{

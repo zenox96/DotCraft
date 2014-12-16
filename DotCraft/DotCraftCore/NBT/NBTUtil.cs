@@ -10,7 +10,7 @@ namespace DotCraftCore.NBT
 
 	public sealed class NBTUtil
 	{
-		private const string __OBFID = "CL_00001901";
+		
 
 		public static GameProfile func_152459_a(NBTTagCompound p_152459_0_)
 		{

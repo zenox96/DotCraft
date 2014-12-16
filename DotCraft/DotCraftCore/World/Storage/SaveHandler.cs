@@ -31,7 +31,7 @@ namespace DotCraftCore.World.Storage
 
 	/// <summary> The directory name of the world  </summary>
 		private readonly string saveDirectoryName;
-		private const string __OBFID = "CL_00000585";
+		
 
 		public SaveHandler(File p_i2146_1_, string p_i2146_2_, bool p_i2146_3_)
 		{

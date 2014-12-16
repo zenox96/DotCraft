@@ -9,7 +9,7 @@ namespace DotCraftCore.Util
 	{
 	/// <summary> Instance of CrashReport.  </summary>
 		private readonly CrashReport theReportedExceptionCrashReport;
-		private const string __OBFID = "CL_00001579";
+		
 
 		public ReportedException(CrashReport p_i1356_1_)
 		{

@@ -3,7 +3,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerRemoveTooMuchOcean : GenLayer
 	{
-		private const string __OBFID = "CL_00000564";
+		
 
 		public GenLayerRemoveTooMuchOcean(long p_i45480_1_, GenLayer p_i45480_3_) : base(p_i45480_1_)
 		{

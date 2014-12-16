@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 
 	public class BlockMobSpawner : BlockContainer
 	{
-		private const string __OBFID = "CL_00000269";
+		
 
 		protected internal BlockMobSpawner() : base(Material.rock)
 		{

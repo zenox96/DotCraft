@@ -7,7 +7,7 @@ namespace DotCraftCore.Item
 	public class ItemLeaves : ItemBlock
 	{
 		private readonly BlockLeaves field_150940_b;
-		private const string __OBFID = "CL_00000046";
+		
 
 		public ItemLeaves(BlockLeaves p_i45344_1_) : base(p_i45344_1_)
 		{

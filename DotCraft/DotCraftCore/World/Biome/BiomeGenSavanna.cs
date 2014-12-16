@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Biome
 	public class BiomeGenSavanna : BiomeGenBase
 	{
 		private static readonly WorldGenSavannaTree field_150627_aC = new WorldGenSavannaTree(false);
-		private const string __OBFID = "CL_00000182";
+		
 
 		protected internal BiomeGenSavanna(int p_i45383_1_) : base(p_i45383_1_)
 		{
@@ -54,7 +54,7 @@ namespace DotCraftCore.World.Biome
 
 		public class Mutated : BiomeGenMutated
 		{
-			private const string __OBFID = "CL_00000183";
+			
 
 			public Mutated(int p_i45382_1_, BiomeGenBase p_i45382_2_) : base(p_i45382_1_, p_i45382_2_)
 			{

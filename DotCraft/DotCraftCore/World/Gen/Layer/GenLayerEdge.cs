@@ -4,7 +4,7 @@ namespace DotCraftCore.World.Gen.Layer
 	public class GenLayerEdge : GenLayer
 	{
 		private readonly GenLayerEdge.Mode field_151627_c;
-		private const string __OBFID = "CL_00000547";
+		
 
 		public GenLayerEdge(long p_i45474_1_, GenLayer p_i45474_3_, GenLayerEdge.Mode p_i45474_4_) : base(p_i45474_1_)
 		{
@@ -142,7 +142,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 			@private static final GenLayerEdge.Mode[] $VALUES = new GenLayerEdge.Mode[]{COOL_WARM, HEAT_ICE, SPECIAL
 		}
-			private const string __OBFID = "CL_00000549";
+			
 
 			private Mode(string p_i45473_1_, int p_i45473_2_)
 			{
@@ -152,7 +152,7 @@ namespace DotCraftCore.World.Gen.Layer
 		internal sealed class SwitchMode
 		{
 			internal static readonly int[] field_151642_a = new int[GenLayerEdge.Mode.values().length];
-			private const string __OBFID = "CL_00000548";
+			
 
 			static SwitchMode()
 			{

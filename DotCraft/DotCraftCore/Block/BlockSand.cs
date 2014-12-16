@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 		public static readonly string[] field_149838_a = new string[] {"default", "red"};
 		private static IIcon field_149837_b;
 		private static IIcon field_149839_N;
-		private const string __OBFID = "CL_00000303";
+		
 
 ///    
 ///     <summary> * Gets the block's texture. Args: side, meta </summary>

@@ -19,7 +19,7 @@ namespace DotCraftCore.Entity.AI
 		private int lookTime;
 		private float field_75331_e;
 		private Type watchedClass;
-		private const string __OBFID = "CL_00001592";
+		
 
 		public EntityAIWatchClosest(EntityLiving p_i1631_1_, Type p_i1631_2_, float p_i1631_3_)
 		{

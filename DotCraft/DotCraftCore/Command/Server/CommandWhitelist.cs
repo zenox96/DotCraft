@@ -15,7 +15,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandWhitelist : CommandBase
 	{
-		private const string __OBFID = "CL_00001186";
+		
 
 		public virtual string CommandName
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Gen
 	/// <summary> Block metadata used on this set of laeyrs.  </summary>
 		private int layerFillBlockMeta;
 		private int layerMinimumY;
-		private const string __OBFID = "CL_00000441";
+		
 
 		public FlatLayerInfo(int p_i45467_1_, Block p_i45467_2_)
 		{

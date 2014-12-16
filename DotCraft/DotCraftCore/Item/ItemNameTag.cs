@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemNameTag : Item
 	{
-		private const string __OBFID = "CL_00000052";
+		
 
 		public ItemNameTag()
 		{

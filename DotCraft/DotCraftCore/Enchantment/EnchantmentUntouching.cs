@@ -6,7 +6,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentUntouching : Enchantment
 	{
-		private const string __OBFID = "CL_00000123";
+		
 
 		protected internal EnchantmentUntouching(int p_i1938_1_, int p_i1938_2_) : base(p_i1938_1_, p_i1938_2_, EnumEnchantmentType.digger)
 		{

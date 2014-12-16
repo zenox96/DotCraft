@@ -5,7 +5,7 @@ namespace DotCraftCore.Block
 
 	public abstract class BlockDirectional : Block
 	{
-		private const string __OBFID = "CL_00000227";
+		
 
 		protected internal BlockDirectional(Material p_i45401_1_) : base(p_i45401_1_)
 		{

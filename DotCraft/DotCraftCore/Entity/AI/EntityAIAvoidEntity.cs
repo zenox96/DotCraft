@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.AI
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public final IEntitySelector field_98218_a = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001575";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_.isEntityAlive() && EntityAIAvoidEntity.theEntity.getEntitySenses().canSee(p_82704_1_);
@@ -40,7 +40,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> The class of the entity we should avoid  </summary>
 		private Type targetEntityClass;
-		private const string __OBFID = "CL_00001574";
+		
 
 		public EntityAIAvoidEntity(EntityCreature p_i1616_1_, Type p_i1616_2_, float p_i1616_3_, double p_i1616_4_, double p_i1616_6_)
 		{

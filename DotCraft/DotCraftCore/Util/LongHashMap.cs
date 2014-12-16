@@ -26,7 +26,7 @@ namespace DotCraftCore.Util
 	/// <summary> count of times elements have been added/removed  </summary>
 		[NonSerialized]
 		private volatile int modCount;
-		private const string __OBFID = "CL_00001492";
+		
 
 ///    
 ///     <summary> * returns the hashed key given the original key </summary>
@@ -238,7 +238,7 @@ namespace DotCraftCore.Util
 			internal object value;
 			internal LongHashMap.Entry nextEntry;
 			internal readonly int hash;
-			private const string __OBFID = "CL_00001493";
+			
 
 			internal Entry(int p_i1553_1_, long p_i1553_2_, object p_i1553_4_, LongHashMap.Entry p_i1553_5_)
 			{

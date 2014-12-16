@@ -10,7 +10,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> the z coordinate  </summary>
 		public int posZ;
-		private const string __OBFID = "CL_00001555";
+		
 
 		public ChunkCoordinates()
 		{

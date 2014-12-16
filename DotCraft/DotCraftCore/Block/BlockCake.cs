@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 		private IIcon field_150038_a;
 		private IIcon field_150037_b;
 		private IIcon field_150039_M;
-		private const string __OBFID = "CL_00000211";
+		
 
 		protected internal BlockCake() : base(Material.field_151568_F)
 		{

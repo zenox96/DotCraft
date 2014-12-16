@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148894_a;
 		private short field_148892_b;
 		private bool field_148893_c;
-		private const string __OBFID = "CL_00001291";
+		
 
 		public S32PacketConfirmTransaction()
 		{

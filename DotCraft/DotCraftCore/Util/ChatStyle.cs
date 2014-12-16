@@ -35,7 +35,7 @@ namespace DotCraftCore.Util
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final ChatStyle rootStyle = new ChatStyle()
 //	{
-//		private static final String __OBFID = "CL_00001267";
+//		
 //		public EnumChatFormatting getColor()
 //		{
 //			return null;
@@ -121,7 +121,7 @@ namespace DotCraftCore.Util
 //			return "";
 //		}
 //	};
-		private const string __OBFID = "CL_00001266";
+		
 
 ///    
 ///     <summary> * Gets the effective color of this ChatStyle. </summary>
@@ -485,7 +485,7 @@ namespace DotCraftCore.Util
 
 		public class Serializer : JsonDeserializer, JsonSerializer
 		{
-			private const string __OBFID = "CL_00001268";
+			
 
 			public virtual ChatStyle deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_)
 			{

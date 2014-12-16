@@ -7,7 +7,7 @@ namespace DotCraftCore.Item
 
 	public class ItemMapBase : Item
 	{
-		private const string __OBFID = "CL_00000004";
+		
 
 ///    
 ///     <summary> * false for all Items except sub-classes of ItemMapBase </summary>

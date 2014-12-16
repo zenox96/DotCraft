@@ -50,7 +50,7 @@ namespace DotCraftCore.Util
 ///     <summary> * A ratio used to sync the high-resolution clock to the system clock, updated once per second </summary>
 ///     
 		private double timeSyncAdjustment = 1.0D;
-		private const string __OBFID = "CL_00000658";
+		
 
 		public Timer(float p_i1018_1_)
 		{

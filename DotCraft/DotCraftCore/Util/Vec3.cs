@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> Z coordinate of Vec3D  </summary>
 		public double zCoord;
-		private const string __OBFID = "CL_00000612";
+		
 
 ///    
 ///     <summary> * Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static

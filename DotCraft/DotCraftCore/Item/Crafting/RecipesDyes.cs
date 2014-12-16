@@ -9,7 +9,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipesDyes
 	{
-		private const string __OBFID = "CL_00000082";
+		
 
 ///    
 ///     <summary> * Adds the dye recipes to the CraftingManager. </summary>

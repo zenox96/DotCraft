@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Feature
 	{
 		private Block field_150552_a;
 		private int field_150551_b;
-		private const string __OBFID = "CL_00000410";
+		
 
 		public WorldGenFlowers(Block p_i45452_1_)
 		{

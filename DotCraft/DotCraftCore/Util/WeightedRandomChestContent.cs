@@ -18,7 +18,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> The maximum chance of item generating.  </summary>
 		private int theMaximumChanceToGenerateItem;
-		private const string __OBFID = "CL_00001505";
+		
 
 		public WeightedRandomChestContent(Item p_i45311_1_, int p_i45311_2_, int p_i45311_3_, int p_i45311_4_, int p_i45311_5_) : base(p_i45311_5_)
 		{

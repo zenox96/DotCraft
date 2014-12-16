@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity.Item
 	/// <summary> How long the fuse is  </summary>
 		public int fuse;
 		private EntityLivingBase tntPlacedBy;
-		private const string __OBFID = "CL_00001681";
+		
 
 		public EntityTNTPrimed(World p_i1729_1_) : base(p_i1729_1_)
 		{

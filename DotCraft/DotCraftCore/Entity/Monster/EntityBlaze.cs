@@ -21,7 +21,7 @@ namespace DotCraftCore.Entity.Monster
 	/// <summary> ticks until heightOffset is randomized  </summary>
 		private int heightOffsetUpdateTime;
 		private int field_70846_g;
-		private const string __OBFID = "CL_00001682";
+		
 
 		public EntityBlaze(World p_i1731_1_) : base(p_i1731_1_)
 		{

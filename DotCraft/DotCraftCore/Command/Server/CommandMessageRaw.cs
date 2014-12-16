@@ -16,7 +16,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandMessageRaw : CommandBase
 	{
-		private const string __OBFID = "CL_00000667";
+		
 
 		public virtual string CommandName
 		{

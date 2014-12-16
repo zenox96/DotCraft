@@ -7,7 +7,7 @@ namespace DotCraftCore.Server.Management
 
 	public class IPBanEntry : BanEntry
 	{
-		private const string __OBFID = "CL_00001883";
+		
 
 		public IPBanEntry(string p_i1158_1_) : this(p_i1158_1_, (DateTime)null, (string)null, (DateTime)null, (string)null)
 		{

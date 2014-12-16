@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.Item
 ///     <summary> * The lifetime of the firework in ticks. When the age reaches the lifetime the firework explodes. </summary>
 ///     
 		private int lifetime;
-		private const string __OBFID = "CL_00001718";
+		
 
 		public EntityFireworkRocket(World p_i1762_1_) : base(p_i1762_1_)
 		{

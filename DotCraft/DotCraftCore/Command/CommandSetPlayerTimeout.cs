@@ -7,7 +7,7 @@ namespace DotCraftCore.Command
 
 	public class CommandSetPlayerTimeout : CommandBase
 	{
-		private const string __OBFID = "CL_00000999";
+		
 
 		public virtual string CommandName
 		{

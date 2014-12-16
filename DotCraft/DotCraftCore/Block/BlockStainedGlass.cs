@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	public class BlockStainedGlass : BlockBreakable
 	{
 		private static readonly IIcon[] field_149998_a = new IIcon[16];
-		private const string __OBFID = "CL_00000312";
+		
 
 		public BlockStainedGlass(Material p_i45427_1_) : base("glass", p_i45427_1_, false)
 		{

@@ -15,7 +15,7 @@ namespace DotCraftCore.Item
 	{
 		private static readonly IDictionary field_150928_b = new Hashtable();
 		public readonly string field_150929_a;
-		private const string __OBFID = "CL_00000057";
+		
 
 		protected internal ItemRecord(string p_i45350_1_)
 		{

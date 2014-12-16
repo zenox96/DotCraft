@@ -26,7 +26,7 @@ namespace DotCraftCore.TileEntity
 		private ItemStack[] field_145900_a = new ItemStack[5];
 		private string field_145902_i;
 		private int field_145901_j = -1;
-		private const string __OBFID = "CL_00000359";
+		
 
 		public override void readFromNBT(NBTTagCompound p_145839_1_)
 		{

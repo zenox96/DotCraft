@@ -14,12 +14,12 @@ namespace DotCraftCore.World.Gen.Structure
 
 	public class StructureStrongholdPieces
 	{
-		private static readonly StructureStrongholdPieces.PieceWeight[] pieceWeightArray = new StructureStrongholdPieces.PieceWeight[] {new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Straight), 40, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Prison), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.LeftTurn), 20, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.RightTurn), 20, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.RoomCrossing), 10, 6), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.StairsStraight), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Stairs), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Crossing), 5, 4), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.ChestCorridor), 5, 4), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Library), 10, 2) { private static final string __OBFID = "CL_00000484"; public bool canSpawnMoreStructuresOfType(int p_75189_1_) { return base.canSpawnMoreStructuresOfType(p_75189_1_) && p_75189_1_ > 4; } }, new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.PortalRoom), 20, 1) { private static final string __OBFID = "CL_00000485"; public bool canSpawnMoreStructuresOfType(int p_75189_1_) { return base.canSpawnMoreStructuresOfType(p_75189_1_) && p_75189_1_ > 5; } } };
+		private static readonly StructureStrongholdPieces.PieceWeight[] pieceWeightArray = new StructureStrongholdPieces.PieceWeight[] {new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Straight), 40, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Prison), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.LeftTurn), 20, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.RightTurn), 20, 0), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.RoomCrossing), 10, 6), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.StairsStraight), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Stairs), 5, 5), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Crossing), 5, 4), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.ChestCorridor), 5, 4), new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.Library), 10, 2) {  public bool canSpawnMoreStructuresOfType(int p_75189_1_) { return base.canSpawnMoreStructuresOfType(p_75189_1_) && p_75189_1_ > 4; } }, new StructureStrongholdPieces.PieceWeight(typeof(StructureStrongholdPieces.PortalRoom), 20, 1) {  public bool canSpawnMoreStructuresOfType(int p_75189_1_) { return base.canSpawnMoreStructuresOfType(p_75189_1_) && p_75189_1_ > 5; } } };
 		private static IList structurePieceList;
 		private static Type strongComponentType;
 		internal static int totalWeight;
 		private static readonly StructureStrongholdPieces.Stones strongholdStones = new StructureStrongholdPieces.Stones(null);
-		private const string __OBFID = "CL_00000483";
+		
 
 		public static void func_143046_a()
 		{
@@ -229,7 +229,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private static readonly WeightedRandomChestContent[] strongholdChestContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.ender_pearl, 0, 1, 1, 10), new WeightedRandomChestContent(Items.diamond, 0, 1, 3, 3), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 10), new WeightedRandomChestContent(Items.gold_ingot, 0, 1, 3, 5), new WeightedRandomChestContent(Items.redstone, 0, 4, 9, 5), new WeightedRandomChestContent(Items.bread, 0, 1, 3, 15), new WeightedRandomChestContent(Items.apple, 0, 1, 3, 15), new WeightedRandomChestContent(Items.iron_pickaxe, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_sword, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_chestplate, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_helmet, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_leggings, 0, 1, 1, 5), new WeightedRandomChestContent(Items.iron_boots, 0, 1, 1, 5), new WeightedRandomChestContent(Items.golden_apple, 0, 1, 1, 1), new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 1), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
 			private bool hasMadeChest;
-			private const string __OBFID = "CL_00000487";
+			
 
 			public ChestCorridor()
 			{
@@ -309,7 +309,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Corridor : StructureStrongholdPieces.Stronghold
 		{
 			private int field_74993_a;
-			private const string __OBFID = "CL_00000488";
+			
 
 			public Corridor()
 			{
@@ -406,7 +406,7 @@ namespace DotCraftCore.World.Gen.Structure
 			private bool field_74997_c;
 			private bool field_74995_d;
 			private bool field_74999_h;
-			private const string __OBFID = "CL_00000489";
+			
 
 			public Crossing()
 			{
@@ -534,7 +534,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class LeftTurn : StructureStrongholdPieces.Stronghold
 		{
-			private const string __OBFID = "CL_00000490";
+			
 
 			public LeftTurn()
 			{
@@ -594,7 +594,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private static readonly WeightedRandomChestContent[] strongholdLibraryChestContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.book, 0, 1, 3, 20), new WeightedRandomChestContent(Items.paper, 0, 2, 7, 20), new WeightedRandomChestContent(Items.map, 0, 1, 1, 1), new WeightedRandomChestContent(Items.compass, 0, 1, 1, 1)};
 			private bool isLargeRoom;
-			private const string __OBFID = "CL_00000491";
+			
 
 			public Library()
 			{
@@ -759,7 +759,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public readonly int pieceWeight;
 			public int instancesSpawned;
 			public int instancesLimit;
-			private const string __OBFID = "CL_00000492";
+			
 
 			public PieceWeight(Type p_i2076_1_, int p_i2076_2_, int p_i2076_3_)
 			{
@@ -782,7 +782,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class PortalRoom : StructureStrongholdPieces.Stronghold
 		{
 			private bool hasSpawner;
-			private const string __OBFID = "CL_00000493";
+			
 
 			public PortalRoom()
 			{
@@ -929,7 +929,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Prison : StructureStrongholdPieces.Stronghold
 		{
-			private const string __OBFID = "CL_00000494";
+			
 
 			public Prison()
 			{
@@ -983,7 +983,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class RightTurn : StructureStrongholdPieces.LeftTurn
 		{
-			private const string __OBFID = "CL_00000495";
+			
 
 			public virtual void buildComponent(StructureComponent p_74861_1_, IList p_74861_2_, Random p_74861_3_)
 			{
@@ -1026,7 +1026,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private static readonly WeightedRandomChestContent[] strongholdRoomCrossingChestContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 10), new WeightedRandomChestContent(Items.gold_ingot, 0, 1, 3, 5), new WeightedRandomChestContent(Items.redstone, 0, 4, 9, 5), new WeightedRandomChestContent(Items.coal, 0, 3, 8, 10), new WeightedRandomChestContent(Items.bread, 0, 1, 3, 15), new WeightedRandomChestContent(Items.apple, 0, 1, 3, 15), new WeightedRandomChestContent(Items.iron_pickaxe, 0, 1, 1, 1)};
 			protected internal int roomType;
-			private const string __OBFID = "CL_00000496";
+			
 
 			public RoomCrossing()
 			{
@@ -1178,7 +1178,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Stairs : StructureStrongholdPieces.Stronghold
 		{
 			private bool field_75024_a;
-			private const string __OBFID = "CL_00000498";
+			
 
 			public Stairs()
 			{
@@ -1277,7 +1277,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public StructureStrongholdPieces.PieceWeight strongholdPieceWeight;
 			public StructureStrongholdPieces.PortalRoom strongholdPortalRoom;
 			public IList field_75026_c = new ArrayList();
-			private const string __OBFID = "CL_00000499";
+			
 
 			public Stairs2()
 			{
@@ -1295,7 +1295,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class StairsStraight : StructureStrongholdPieces.Stronghold
 		{
-			private const string __OBFID = "CL_00000501";
+			
 
 			public StairsStraight()
 			{
@@ -1353,7 +1353,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		internal class Stones : StructureComponent.BlockSelector
 		{
-			private const string __OBFID = "CL_00000497";
+			
 
 			private Stones()
 			{
@@ -1400,7 +1400,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private bool expandsX;
 			private bool expandsZ;
-			private const string __OBFID = "CL_00000500";
+			
 
 			public Straight()
 			{
@@ -1484,7 +1484,7 @@ namespace DotCraftCore.World.Gen.Structure
 		internal abstract class Stronghold : StructureComponent
 		{
 			protected internal StructureStrongholdPieces.Stronghold.Door field_143013_d;
-			private const string __OBFID = "CL_00000503";
+			
 
 			public Stronghold()
 			{
@@ -1658,7 +1658,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 				@private static final StructureStrongholdPieces.Stronghold.Door[] $VALUES = new StructureStrongholdPieces.Stronghold.Door[]{OPENING, WOOD_DOOR, GRATES, IRON_DOOR
 			}
-				private const string __OBFID = "CL_00000504";
+				
 
 				private Door(string p_i2086_1_, int p_i2086_2_)
 				{
@@ -1669,7 +1669,7 @@ namespace DotCraftCore.World.Gen.Structure
 		internal sealed class SwitchDoor
 		{
 			internal static readonly int[] doorEnum = new int[StructureStrongholdPieces.Stronghold.Door.values().length];
-			private const string __OBFID = "CL_00000486";
+			
 
 			static SwitchDoor()
 			{

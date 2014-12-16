@@ -17,7 +17,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> Instance of World.  </summary>
 		private readonly World theWorld;
-		private const string __OBFID = "CL_00001757";
+		
 
 		public ContainerMerchant(InventoryPlayer p_i1821_1_, IMerchant p_i1821_2_, World p_i1821_3_)
 		{

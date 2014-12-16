@@ -8,7 +8,7 @@ namespace DotCraftCore.Block
 
 	public class BlockPackedIce : Block
 	{
-		private const string __OBFID = "CL_00000283";
+		
 
 		public BlockPackedIce() : base(Material.field_151598_x)
 		{

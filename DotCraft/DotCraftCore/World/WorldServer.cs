@@ -84,7 +84,7 @@ namespace DotCraftCore.World
 
 	/// <summary> An IntHashMap of entity IDs (integers) to their Entity objects.  </summary>
 		private IntHashMap entityIdMap;
-		private const string __OBFID = "CL_00001437";
+		
 
 		public WorldServer(MinecraftServer p_i45284_1_, ISaveHandler p_i45284_2_, string p_i45284_3_, int p_i45284_4_, WorldSettings p_i45284_5_, Profiler p_i45284_6_) : base(p_i45284_2_, p_i45284_3_, p_i45284_5_, WorldProvider.getProviderForDimension(p_i45284_4_), p_i45284_6_)
 		{
@@ -1098,7 +1098,7 @@ namespace DotCraftCore.World
 
 		internal class ServerBlockEventList : ArrayList
 		{
-			private const string __OBFID = "CL_00001439";
+			
 
 			private ServerBlockEventList()
 			{

@@ -14,7 +14,7 @@ namespace DotCraftCore.World.Demo
 		private bool demoTimeExpired;
 		private int field_73104_e;
 		private int field_73102_f;
-		private const string __OBFID = "CL_00001429";
+		
 
 		public DemoWorldManager(World p_i1513_1_) : base(p_i1513_1_)
 		{

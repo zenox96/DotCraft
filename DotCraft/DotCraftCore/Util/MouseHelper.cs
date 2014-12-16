@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> Mouse delta Y this frame  </summary>
 		public int deltaY;
-		private const string __OBFID = "CL_00000648";
+		
 
 ///    
 ///     <summary> * Grabs the mouse cursor it doesn't move and isn't seen. </summary>

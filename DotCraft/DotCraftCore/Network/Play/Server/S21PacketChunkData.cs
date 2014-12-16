@@ -22,7 +22,7 @@ namespace DotCraftCore.Network.Play.Server
 		private bool field_149279_g;
 		private int field_149285_h;
 		private static sbyte[] field_149286_i = new sbyte[196864];
-		private const string __OBFID = "CL_00001304";
+		
 
 		public S21PacketChunkData()
 		{
@@ -280,7 +280,7 @@ namespace DotCraftCore.Network.Play.Server
 			public sbyte[] field_150282_a;
 			public int field_150280_b;
 			public int field_150281_c;
-			private const string __OBFID = "CL_00001305";
+			
 		}
 	}
 

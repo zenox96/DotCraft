@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Layer
 		private BiomeGenBase[] field_151621_d;
 		private BiomeGenBase[] field_151622_e;
 		private BiomeGenBase[] field_151620_f;
-		private const string __OBFID = "CL_00000555";
+		
 
 		public GenLayerBiome(long p_i2122_1_, GenLayer p_i2122_3_, WorldType p_i2122_4_) : base(p_i2122_1_)
 		{

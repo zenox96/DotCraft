@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 
 	public class ItemGlassBottle : Item
 	{
-		private const string __OBFID = "CL_00001776";
+		
 
 		public ItemGlassBottle()
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenTaiga2 : WorldGenAbstractTree
 	{
-		private const string __OBFID = "CL_00000435";
+		
 
 		public WorldGenTaiga2(bool p_i2025_1_) : base(p_i2025_1_)
 		{

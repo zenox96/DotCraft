@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 		private bool field_149985_a;
 		private IIcon field_149984_b;
 		private IIcon field_149986_M;
-		private const string __OBFID = "CL_00000291";
+		
 
 		protected internal BlockPumpkin(bool p_i45419_1_) : base(Material.field_151572_C)
 		{

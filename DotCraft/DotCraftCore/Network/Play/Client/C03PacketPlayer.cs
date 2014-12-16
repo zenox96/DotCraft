@@ -17,7 +17,7 @@ namespace DotCraftCore.Network.Play.Client
 		protected internal bool field_149474_g;
 		protected internal bool field_149480_h;
 		protected internal bool field_149481_i;
-		private const string __OBFID = "CL_00001360";
+		
 
 		public C03PacketPlayer()
 		{
@@ -110,7 +110,7 @@ namespace DotCraftCore.Network.Play.Client
 
 		public class C04PacketPlayerPosition : C03PacketPlayer
 		{
-			private const string __OBFID = "CL_00001361";
+			
 
 			public C04PacketPlayerPosition()
 			{
@@ -157,7 +157,7 @@ namespace DotCraftCore.Network.Play.Client
 
 		public class C05PacketPlayerLook : C03PacketPlayer
 		{
-			private const string __OBFID = "CL_00001363";
+			
 
 			public C05PacketPlayerLook()
 			{
@@ -198,7 +198,7 @@ namespace DotCraftCore.Network.Play.Client
 
 		public class C06PacketPlayerPosLook : C03PacketPlayer
 		{
-			private const string __OBFID = "CL_00001362";
+			
 
 			public C06PacketPlayerPosLook()
 			{

@@ -22,7 +22,7 @@ namespace DotCraftCore.Block
 		private readonly bool field_150099_b;
 		private readonly string field_150101_M;
 		private IIcon field_150102_N;
-		private const string __OBFID = "CL_00000322";
+		
 
 		protected internal BlockPane(string p_i45432_1_, string p_i45432_2_, Material p_i45432_3_, bool p_i45432_4_) : base(p_i45432_3_)
 		{

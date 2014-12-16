@@ -8,7 +8,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipesMapCloning : IRecipe
 	{
-		private const string __OBFID = "CL_00000087";
+		
 
 ///    
 ///     <summary> * Used to check if a recipe matches current crafting inventory </summary>

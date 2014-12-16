@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	public class BlockCrops : BlockBush, IGrowable
 	{
 		private IIcon[] field_149867_a;
-		private const string __OBFID = "CL_00000222";
+		
 
 		protected internal BlockCrops()
 		{

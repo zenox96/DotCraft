@@ -23,7 +23,7 @@ namespace DotCraftCore.Util
 		private bool field_94552_d;
 		private bool field_94553_e;
 		private string field_94551_f;
-		private const string __OBFID = "CL_00001520";
+		
 
 		public CombatTracker(EntityLivingBase p_i1565_1_)
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.Network.Login.Server
 	public class S02PacketLoginSuccess : Packet
 	{
 		private GameProfile field_149602_a;
-		private const string __OBFID = "CL_00001375";
+		
 
 		public S02PacketLoginSuccess()
 		{

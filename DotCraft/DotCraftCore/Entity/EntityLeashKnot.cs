@@ -12,7 +12,7 @@ namespace DotCraftCore.Entity
 
 	public class EntityLeashKnot : EntityHanging
 	{
-		private const string __OBFID = "CL_00001548";
+		
 
 		public EntityLeashKnot(World p_i1592_1_) : base(p_i1592_1_)
 		{

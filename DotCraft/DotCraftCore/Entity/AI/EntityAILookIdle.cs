@@ -20,7 +20,7 @@ namespace DotCraftCore.Entity.AI
 ///     <summary> * A decrementing tick that stops the entity from being idle once it reaches 0. </summary>
 ///     
 		private int idleTime;
-		private const string __OBFID = "CL_00001607";
+		
 
 		public EntityAILookIdle(EntityLiving p_i1647_1_)
 		{

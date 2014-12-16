@@ -37,7 +37,7 @@ namespace DotCraftCore.Entity
 		private float maximumHomeDistance = -1.0F;
 		private EntityAIBase field_110178_bs = new EntityAIMoveTowardsRestriction(this, 1.0D);
 		private bool field_110180_bt;
-		private const string __OBFID = "CL_00001558";
+		
 
 		public EntityCreature(World p_i1602_1_) : base(p_i1602_1_)
 		{

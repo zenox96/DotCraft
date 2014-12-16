@@ -5,7 +5,7 @@ namespace DotCraftCore.Util
 	{
 		private readonly string field_148760_d;
 		private object field_148761_e;
-		private const string __OBFID = "CL_00001196";
+		
 
 		public RegistryNamespacedDefaultedByKey(string p_i45127_1_)
 		{
@@ -15,14 +15,14 @@ namespace DotCraftCore.Util
 ///    
 ///     <summary> * Adds a new object to this registry, keyed by both the given integer ID and the given string. </summary>
 ///     
-		public override void addObject(int p_148756_1_, string p_148756_2_, object p_148756_3_)
+		public override void addObject(int intID, string stringID, object obj)
 		{
-			if(this.field_148760_d.Equals(p_148756_2_))
+			if(this.field_148760_d.Equals(stringID))
 			{
-				this.field_148761_e = p_148756_3_;
+				this.field_148761_e = obj;
 			}
 
-			base.addObject(p_148756_1_, p_148756_2_, p_148756_3_);
+			base.addObject(intID, stringID, obj);
 		}
 
 		public override object getObject(string p_82594_1_)

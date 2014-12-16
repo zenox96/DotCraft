@@ -10,7 +10,7 @@ namespace DotCraftCore.Network.Play.Client
 	public class C14PacketTabComplete : Packet
 	{
 		private string field_149420_a;
-		private const string __OBFID = "CL_00001346";
+		
 
 		public C14PacketTabComplete()
 		{

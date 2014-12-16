@@ -77,7 +77,7 @@ namespace DotCraftCore.Network
 	/// <summary> A String indicating why the network has shutdown.  </summary>
 		private IChatComponent terminationReason;
 		private bool field_152463_r;
-		private const string __OBFID = "CL_00001240";
+		
 
 		public NetworkManager(bool p_i45147_1_)
 		{
@@ -212,7 +212,7 @@ namespace DotCraftCore.Network
 			}
 			else
 			{
-				this.channel.eventLoop().execute(new Runnable() { private static final string __OBFID = "CL_00001241"; public void run() { if (var3 != var4) { NetworkManager.setConnectionState(var3); } NetworkManager.channel.writeAndFlush(p_150732_1_).addListeners(p_150732_2_).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE); } });
+				this.channel.eventLoop().execute(new Runnable() {  public void run() { if (var3 != var4) { NetworkManager.setConnectionState(var3); } NetworkManager.channel.writeAndFlush(p_150732_1_).addListeners(p_150732_2_).addListener(ChannelFutureListener.FIRE_EXCEPTION_ON_FAILURE); } });
 			}
 		}
 
@@ -307,7 +307,7 @@ namespace DotCraftCore.Network
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: final NetworkManager var2 = new NetworkManager(true);
 			NetworkManager var2 = new NetworkManager(true);
-			((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).group(eventLoops)).handler(new ChannelInitializer() { private static final string __OBFID = "CL_00001242"; protected void initChannel(Channel p_initChannel_1_) { try { p_initChannel_1_.config().setOption(ChannelOption.IP_TOS, Convert.ToInt32(24)); } catch (ChannelException var4) { ; } try { p_initChannel_1_.config().setOption(ChannelOption.TCP_NODELAY, Convert.ToBoolean(false)); } catch (ChannelException var3) { ; } p_initChannel_1_.pipeline().addLast("timeout", new ReadTimeoutHandler(20)).addLast("splitter", new MessageDeserializer2()).addLast("decoder", new MessageDeserializer(NetworkManager.field_152462_h)).addLast("prepender", new MessageSerializer2()).addLast("encoder", new MessageSerializer(NetworkManager.field_152462_h)).addLast("packet_handler", var2); } })).channel(typeof(NioSocketChannel))).connect(p_150726_0_, p_150726_1_).syncUninterruptibly();
+			((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).group(eventLoops)).handler(new ChannelInitializer() {  protected void initChannel(Channel p_initChannel_1_) { try { p_initChannel_1_.config().setOption(ChannelOption.IP_TOS, Convert.ToInt32(24)); } catch (ChannelException var4) { ; } try { p_initChannel_1_.config().setOption(ChannelOption.TCP_NODELAY, Convert.ToBoolean(false)); } catch (ChannelException var3) { ; } p_initChannel_1_.pipeline().addLast("timeout", new ReadTimeoutHandler(20)).addLast("splitter", new MessageDeserializer2()).addLast("decoder", new MessageDeserializer(NetworkManager.field_152462_h)).addLast("prepender", new MessageSerializer2()).addLast("encoder", new MessageSerializer(NetworkManager.field_152462_h)).addLast("packet_handler", var2); } })).channel(typeof(NioSocketChannel))).connect(p_150726_0_, p_150726_1_).syncUninterruptibly();
 			return var2;
 		}
 
@@ -320,7 +320,7 @@ namespace DotCraftCore.Network
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: final NetworkManager var1 = new NetworkManager(true);
 			NetworkManager var1 = new NetworkManager(true);
-			((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).group(eventLoops)).handler(new ChannelInitializer() { private static final string __OBFID = "CL_00001243"; protected void initChannel(Channel p_initChannel_1_) { p_initChannel_1_.pipeline().addLast("packet_handler", var1); } })).channel(typeof(LocalChannel))).connect(p_150722_0_).syncUninterruptibly();
+			((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).group(eventLoops)).handler(new ChannelInitializer() {  protected void initChannel(Channel p_initChannel_1_) { p_initChannel_1_.pipeline().addLast("packet_handler", var1); } })).channel(typeof(LocalChannel))).connect(p_150722_0_).syncUninterruptibly();
 			return var1;
 		}
 
@@ -377,7 +377,7 @@ namespace DotCraftCore.Network
 		{
 			private readonly Packet field_150774_a;
 			private readonly GenericFutureListener[] field_150773_b;
-			private const string __OBFID = "CL_00001244";
+			
 
 			public InboundHandlerTuplePacketListener(Packet p_i45146_1_, params GenericFutureListener[] p_i45146_2_)
 			{

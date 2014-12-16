@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerRiver : GenLayer
 	{
-		private const string __OBFID = "CL_00000566";
+		
 
 		public GenLayerRiver(long p_i2128_1_, GenLayer p_i2128_3_) : base(p_i2128_1_)
 		{

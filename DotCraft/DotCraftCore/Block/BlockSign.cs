@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 	{
 		private Type field_149968_a;
 		private bool field_149967_b;
-		private const string __OBFID = "CL_00000306";
+		
 
 		protected internal BlockSign(Type p_i45426_1_, bool p_i45426_2_) : base(Material.wood)
 		{

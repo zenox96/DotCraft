@@ -12,7 +12,7 @@ namespace DotCraftCore.Entity.AI
 		private double movePosY;
 		private double movePosZ;
 		private double movementSpeed;
-		private const string __OBFID = "CL_00001598";
+		
 
 		public EntityAIMoveTowardsRestriction(EntityCreature p_i2347_1_, double p_i2347_2_)
 		{

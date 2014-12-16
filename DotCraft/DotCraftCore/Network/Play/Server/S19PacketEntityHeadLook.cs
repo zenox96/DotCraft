@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private int field_149384_a;
 		private sbyte field_149383_b;
-		private const string __OBFID = "CL_00001323";
+		
 
 		public S19PacketEntityHeadLook()
 		{

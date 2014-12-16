@@ -39,7 +39,7 @@ namespace DotCraftCore.Entity.Monster
 		private int stareTimer;
 		private Entity lastEntityToAttack;
 		private bool isAggressive;
-		private const string __OBFID = "CL_00001685";
+		
 
 		public EntityEnderman(World p_i1734_1_) : base(p_i1734_1_)
 		{

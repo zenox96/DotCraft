@@ -12,7 +12,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandListBans : CommandBase
 	{
-		private const string __OBFID = "CL_00000596";
+		
 
 		public virtual string CommandName
 		{

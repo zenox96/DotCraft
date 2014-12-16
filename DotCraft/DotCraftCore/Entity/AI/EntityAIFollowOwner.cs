@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.AI
 		internal float maxDist;
 		internal float minDist;
 		private bool field_75344_i;
-		private const string __OBFID = "CL_00001585";
+		
 
 		public EntityAIFollowOwner(EntityTameable p_i1625_1_, double p_i1625_2_, float p_i1625_4_, float p_i1625_5_)
 		{

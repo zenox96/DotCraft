@@ -8,7 +8,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandPublishLocalServer : CommandBase
 	{
-		private const string __OBFID = "CL_00000799";
+		
 
 		public virtual string CommandName
 		{

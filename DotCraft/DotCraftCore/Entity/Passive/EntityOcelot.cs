@@ -37,7 +37,7 @@ namespace DotCraftCore.Entity.Passive
 ///     <summary> * The tempt AI task for this mob, used to prevent taming while it is fleeing. </summary>
 ///     
 		private EntityAITempt aiTempt;
-		private const string __OBFID = "CL_00001646";
+		
 
 		public EntityOcelot(World p_i1688_1_) : base(p_i1688_1_)
 		{

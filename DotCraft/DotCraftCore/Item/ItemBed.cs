@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 
 	public class ItemBed : Item
 	{
-		private const string __OBFID = "CL_00001771";
+		
 
 		public ItemBed()
 		{

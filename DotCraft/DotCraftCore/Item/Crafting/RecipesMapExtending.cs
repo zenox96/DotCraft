@@ -10,7 +10,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipesMapExtending : ShapedRecipes
 	{
-		private const string __OBFID = "CL_00000088";
+		
 
 		public RecipesMapExtending() : base(3, 3, new ItemStack[] {new ItemStack(Items.paper), new ItemStack(Items.paper), new ItemStack(Items.paper), new ItemStack(Items.paper), new ItemStack(Items.filled_map, 0, 32767), new ItemStack(Items.paper), new ItemStack(Items.paper), new ItemStack(Items.paper), new ItemStack(Items.paper)}, new ItemStack(Items.map, 0, 0))
 		{

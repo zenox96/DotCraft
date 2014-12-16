@@ -19,7 +19,7 @@ namespace DotCraftCore.Block
 	public class BlockRailDetector : BlockRailBase
 	{
 		private IIcon[] field_150055_b;
-		private const string __OBFID = "CL_00000225";
+		
 
 		public BlockRailDetector() : base(true)
 		{

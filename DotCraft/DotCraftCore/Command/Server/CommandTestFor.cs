@@ -8,7 +8,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandTestFor : CommandBase
 	{
-		private const string __OBFID = "CL_00001182";
+		
 
 		public virtual string CommandName
 		{

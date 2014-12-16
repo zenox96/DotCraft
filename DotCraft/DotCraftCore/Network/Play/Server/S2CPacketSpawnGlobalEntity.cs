@@ -18,7 +18,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149058_c;
 		private int field_149055_d;
 		private int field_149056_e;
-		private const string __OBFID = "CL_00001278";
+		
 
 		public S2CPacketSpawnGlobalEntity()
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandSaveAll : CommandBase
 	{
-		private const string __OBFID = "CL_00000826";
+		
 
 		public virtual string CommandName
 		{

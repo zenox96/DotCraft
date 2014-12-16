@@ -10,7 +10,7 @@ namespace DotCraftCore.Pathfinding
 
 	/// <summary> The number of points in this path  </summary>
 		private int count;
-		private const string __OBFID = "CL_00000573";
+		
 
 ///    
 ///     <summary> * Adds a point to the path </summary>

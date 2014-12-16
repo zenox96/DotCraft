@@ -16,7 +16,7 @@ namespace DotCraftCore.Scoreboard
 		private readonly MinecraftServer scoreboardMCServer;
 		private readonly Set field_96553_b = new HashSet();
 		private ScoreboardSaveData field_96554_c;
-		private const string __OBFID = "CL_00001424";
+		
 
 		public ServerScoreboard(MinecraftServer p_i1501_1_)
 		{

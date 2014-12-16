@@ -7,7 +7,7 @@ namespace DotCraftCore.Realms
 
 	public class RealmsMth
 	{
-		private const string __OBFID = "CL_00001900";
+		
 
 		public static float sin(float p_sin_0_)
 		{

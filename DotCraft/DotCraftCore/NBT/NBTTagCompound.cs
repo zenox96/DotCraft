@@ -18,7 +18,7 @@ namespace DotCraftCore.NBT
 ///     <summary> * The key-value pairs for the tag. Each key is a UTF string, each value is a tag. </summary>
 ///     
 		private IDictionary tagMap = new Hashtable();
-		private const string __OBFID = "CL_00001215";
+		
 
 ///    
 ///     <summary> * Write the actual data contents of the tag, implemented in NBT extension classes </summary>
@@ -415,8 +415,8 @@ namespace DotCraftCore.NBT
 		{
 			CrashReport var4 = CrashReport.makeCrashReport(p_82581_3_, "Reading NBT data");
 			CrashReportCategory var5 = var4.makeCategoryDepth("Corrupt NBT tag", 1);
-			var5.addCrashSectionCallable("Tag type found", new Callable() { private static final string __OBFID = "CL_00001216"; public string call() { return NBTBase.NBTTypes[((NBTBase)NBTTagCompound.tagMap.get(p_82581_1_)).Id]; } });
-			var5.addCrashSectionCallable("Tag type expected", new Callable() { private static final string __OBFID = "CL_00001217"; public string call() { return NBTBase.NBTTypes[p_82581_2_]; } });
+			var5.addCrashSectionCallable("Tag type found", new Callable() {  public string call() { return NBTBase.NBTTypes[((NBTBase)NBTTagCompound.tagMap.get(p_82581_1_)).Id]; } });
+			var5.addCrashSectionCallable("Tag type expected", new Callable() {  public string call() { return NBTBase.NBTTypes[p_82581_2_]; } });
 			var5.addCrashSection("Tag name", p_82581_1_);
 			return var4;
 		}

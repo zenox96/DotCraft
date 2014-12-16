@@ -29,7 +29,7 @@ namespace DotCraftCore.Entity.Passive
 	{
 	/// <summary> AI task for player control.  </summary>
 		private readonly EntityAIControlledByPlayer aiControlledByPlayer;
-		private const string __OBFID = "CL_00001647";
+		
 
 		public EntityPig(World p_i1689_1_) : base(p_i1689_1_)
 		{

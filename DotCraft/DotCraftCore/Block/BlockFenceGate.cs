@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockFenceGate : BlockDirectional
 	{
-		private const string __OBFID = "CL_00000243";
+		
 
 		public BlockFenceGate() : base(Material.wood)
 		{

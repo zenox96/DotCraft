@@ -53,7 +53,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> Item frame this stack is on, or null if not on an item frame.  </summary>
 		private EntityItemFrame itemFrame;
-		private const string __OBFID = "CL_00000043";
+		
 
 		public ItemStack(Block p_i1876_1_) : this(p_i1876_1_, 1)
 		{

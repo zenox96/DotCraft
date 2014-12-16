@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.Effect
 
 	public abstract class EntityWeatherEffect : Entity
 	{
-		private const string __OBFID = "CL_00001665";
+		
 
 		public EntityWeatherEffect(World p_i1702_1_) : base(p_i1702_1_)
 		{

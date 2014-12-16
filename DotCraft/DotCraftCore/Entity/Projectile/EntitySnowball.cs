@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.Projectile
 
 	public class EntitySnowball : EntityThrowable
 	{
-		private const string __OBFID = "CL_00001722";
+		
 
 		public EntitySnowball(World p_i1773_1_) : base(p_i1773_1_)
 		{

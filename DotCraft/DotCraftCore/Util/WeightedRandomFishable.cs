@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 		private readonly ItemStack field_150711_b;
 		private float field_150712_c;
 		private bool field_150710_d;
-		private const string __OBFID = "CL_00001664";
+		
 
 		public WeightedRandomFishable(ItemStack p_i45317_1_, int p_i45317_2_) : base(p_i45317_2_)
 		{

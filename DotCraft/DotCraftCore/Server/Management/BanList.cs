@@ -5,7 +5,7 @@ namespace DotCraftCore.Server.Management
 
 	public class BanList : UserList
 	{
-		private const string __OBFID = "CL_00001396";
+		
 
 		public BanList(File p_i1490_1_) : base(p_i1490_1_)
 		{

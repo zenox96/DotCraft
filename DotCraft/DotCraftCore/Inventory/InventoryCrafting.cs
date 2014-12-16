@@ -16,7 +16,7 @@ namespace DotCraftCore.Inventory
 ///     <summary> * Class containing the callbacks for the events on_GUIClosed and on_CraftMaxtrixChanged. </summary>
 ///     
 		private Container eventHandler;
-		private const string __OBFID = "CL_00001743";
+		
 
 		public InventoryCrafting(Container p_i1807_1_, int p_i1807_2_, int p_i1807_3_)
 		{

@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentFishingSpeed : Enchantment
 	{
-		private const string __OBFID = "CL_00000117";
+		
 
 		protected internal EnchantmentFishingSpeed(int p_i45361_1_, int p_i45361_2_, EnumEnchantmentType p_i45361_3_) : base(p_i45361_1_, p_i45361_2_, p_i45361_3_)
 		{

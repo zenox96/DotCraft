@@ -12,7 +12,7 @@ namespace DotCraftCore.Command
 
 	public class CommandEnchant : CommandBase
 	{
-		private const string __OBFID = "CL_00000377";
+		
 
 		public virtual string CommandName
 		{

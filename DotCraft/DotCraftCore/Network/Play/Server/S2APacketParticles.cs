@@ -17,7 +17,7 @@ namespace DotCraftCore.Network.Play.Server
 		private float field_149231_g;
 		private float field_149237_h;
 		private int field_149238_i;
-		private const string __OBFID = "CL_00001308";
+		
 
 		public S2APacketParticles()
 		{

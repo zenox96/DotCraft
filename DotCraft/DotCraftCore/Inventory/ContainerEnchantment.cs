@@ -19,7 +19,7 @@ namespace DotCraftCore.Inventory
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		public IInventory tableInventory = new InventoryBasic("Enchant", true, 1)
 //	{
-//		private static final String __OBFID = "CL_00001746";
+//		
 //		public int getInventoryStackLimit()
 //		{
 //			return 1;
@@ -43,7 +43,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> 3-member array storing the enchantment levels of each slot  </summary>
 		public int[] enchantLevels = new int[3];
-		private const string __OBFID = "CL_00001745";
+		
 
 		public ContainerEnchantment(InventoryPlayer p_i1811_1_, World p_i1811_2_, int p_i1811_3_, int p_i1811_4_, int p_i1811_5_)
 		{
@@ -51,7 +51,7 @@ namespace DotCraftCore.Inventory
 			this.posX = p_i1811_3_;
 			this.posY = p_i1811_4_;
 			this.posZ = p_i1811_5_;
-			this.addSlotToContainer(new Slot(this.tableInventory, 0, 25, 47) { private static final string __OBFID = "CL_00001747"; public bool isItemValid(ItemStack p_75214_1_) { return true; } });
+			this.addSlotToContainer(new Slot(this.tableInventory, 0, 25, 47) {  public bool isItemValid(ItemStack p_75214_1_) { return true; } });
 			int var6;
 
 			for (var6 = 0; var6 < 3; ++var6)

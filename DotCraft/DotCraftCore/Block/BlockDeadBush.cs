@@ -14,7 +14,7 @@ namespace DotCraftCore.Block
 
 	public class BlockDeadBush : BlockBush
 	{
-		private const string __OBFID = "CL_00000224";
+		
 
 		protected internal BlockDeadBush() : base(Material.vine)
 		{

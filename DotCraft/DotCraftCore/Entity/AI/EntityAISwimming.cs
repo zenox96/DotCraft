@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.AI
 	public class EntityAISwimming : EntityAIBase
 	{
 		private EntityLiving theEntity;
-		private const string __OBFID = "CL_00001584";
+		
 
 		public EntityAISwimming(EntityLiving p_i1624_1_)
 		{

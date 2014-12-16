@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly string[][] field_150132_N = new string[][] {{"leaves_acacia", "leaves_big_oak"}, {"leaves_acacia_opaque", "leaves_big_oak_opaque"}};
 		public static readonly string[] field_150133_O = new string[] {"acacia", "big_oak"};
-		private const string __OBFID = "CL_00000276";
+		
 
 		protected internal override void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_, int p_150124_6_)
 		{

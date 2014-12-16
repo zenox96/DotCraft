@@ -5,7 +5,7 @@ namespace DotCraftCore.NBT
 	public abstract class NBTBase
 	{
 		public static readonly string[] NBTTypes = new string[] {"END", "BYTE", "SHORT", "INT", "LONG", "FLOAT", "DOUBLE", "BYTE[]", "STRING", "LIST", "COMPOUND", "INT[]"};
-		private const string __OBFID = "CL_00001229";
+		
 
 ///    
 ///     <summary> * Write the actual data contents of the tag, implemented in NBT extension classes </summary>
@@ -100,7 +100,7 @@ namespace DotCraftCore.NBT
 
 		public abstract class NBTPrimitive : NBTBase
 		{
-			private const string __OBFID = "CL_00001230";
+			
 
 			public abstract long func_150291_c();
 

@@ -34,7 +34,7 @@ namespace DotCraftCore.Pathfinding
 
 	/// <summary> tells the FathFinder to not stop pathing underwater  </summary>
 		private bool canEntityDrown;
-		private const string __OBFID = "CL_00000576";
+		
 
 		public PathFinder(IBlockAccess p_i2137_1_, bool p_i2137_2_, bool p_i2137_3_, bool p_i2137_4_, bool p_i2137_5_)
 		{

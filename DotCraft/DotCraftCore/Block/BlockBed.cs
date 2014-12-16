@@ -25,7 +25,7 @@ namespace DotCraftCore.Block
 		private IIcon[] field_149980_b;
 		private IIcon[] field_149982_M;
 		private IIcon[] field_149983_N;
-		private const string __OBFID = "CL_00000198";
+		
 
 		public BlockBed() : base(Material.cloth)
 		{

@@ -60,7 +60,7 @@ namespace DotCraftCore.Pathfinding
 ///     * upwards when underwater </summary>
 ///     
 		private bool canSwim;
-		private const string __OBFID = "CL_00001627";
+		
 
 		public PathNavigate(EntityLiving p_i1671_1_, World p_i1671_2_)
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Realms
 		private IChatComponent reason;
 		private IList lines;
 		private readonly RealmsScreen parent;
-		private const string __OBFID = "CL_00001912";
+		
 
 		public DisconnectedOnlineScreen(RealmsScreen p_i1000_1_, string p_i1000_2_, IChatComponent p_i1000_3_)
 		{

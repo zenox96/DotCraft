@@ -140,7 +140,7 @@ namespace DotCraftCore.World.Biome
 
 	/// <summary> True if decorator should generate surface lava & water  </summary>
 		public bool generateLakes;
-		private const string __OBFID = "CL_00000164";
+		
 
 		public BiomeDecorator()
 		{

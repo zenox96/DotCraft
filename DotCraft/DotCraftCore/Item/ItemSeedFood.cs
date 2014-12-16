@@ -11,7 +11,7 @@ namespace DotCraftCore.Item
 
 	/// <summary> Block ID of the soil this seed food should be planted on.  </summary>
 		private Block soilId;
-		private const string __OBFID = "CL_00000060";
+		
 
 		public ItemSeedFood(int p_i45351_1_, float p_i45351_2_, Block p_i45351_3_, Block p_i45351_4_) : base(p_i45351_1_, p_i45351_2_, false)
 		{

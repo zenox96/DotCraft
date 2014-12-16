@@ -15,7 +15,7 @@ namespace DotCraftCore.World.Gen.Structure
 	{
 		private static readonly StructureNetherBridgePieces.PieceWeight[] primaryComponents = new StructureNetherBridgePieces.PieceWeight[] {new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Straight), 30, 0, true), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Crossing3), 10, 4), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Crossing), 10, 4), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Stairs), 10, 3), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Throne), 5, 2), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Entrance), 5, 1)};
 		private static readonly StructureNetherBridgePieces.PieceWeight[] secondaryComponents = new StructureNetherBridgePieces.PieceWeight[] {new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Corridor5), 25, 0, true), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Crossing2), 15, 5), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Corridor2), 5, 10), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Corridor), 5, 10), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Corridor3), 10, 3, true), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.Corridor4), 7, 2), new StructureNetherBridgePieces.PieceWeight(typeof(StructureNetherBridgePieces.NetherStalkRoom), 5, 2)};
-		private const string __OBFID = "CL_00000453";
+		
 
 		public static void func_143049_a()
 		{
@@ -100,7 +100,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Corridor : StructureNetherBridgePieces.Piece
 		{
 			private bool field_111021_b;
-			private const string __OBFID = "CL_00000461";
+			
 
 			public Corridor()
 			{
@@ -180,7 +180,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Corridor2 : StructureNetherBridgePieces.Piece
 		{
 			private bool field_111020_b;
-			private const string __OBFID = "CL_00000463";
+			
 
 			public Corridor2()
 			{
@@ -259,7 +259,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Corridor3 : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000457";
+			
 
 			public Corridor3()
 			{
@@ -323,7 +323,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Corridor4 : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000458";
+			
 
 			public Corridor4()
 			{
@@ -390,7 +390,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Corridor5 : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000462";
+			
 
 			public Corridor5()
 			{
@@ -439,7 +439,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Crossing : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000468";
+			
 
 			public Crossing()
 			{
@@ -499,7 +499,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Crossing2 : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000460";
+			
 
 			public Crossing2()
 			{
@@ -548,7 +548,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Crossing3 : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000454";
+			
 
 			public Crossing3()
 			{
@@ -641,7 +641,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class End : StructureNetherBridgePieces.Piece
 		{
 			private int fillSeed;
-			private const string __OBFID = "CL_00000455";
+			
 
 			public End()
 			{
@@ -714,7 +714,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Entrance : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000459";
+			
 
 			public Entrance()
 			{
@@ -827,7 +827,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class NetherStalkRoom : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000464";
+			
 
 			public NetherStalkRoom()
 			{
@@ -983,7 +983,7 @@ namespace DotCraftCore.World.Gen.Structure
 		internal abstract class Piece : StructureComponent
 		{
 			protected internal static readonly WeightedRandomChestContent[] field_111019_a = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.diamond, 0, 1, 3, 5), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 5), new WeightedRandomChestContent(Items.gold_ingot, 0, 1, 3, 15), new WeightedRandomChestContent(Items.golden_sword, 0, 1, 1, 5), new WeightedRandomChestContent(Items.golden_chestplate, 0, 1, 1, 5), new WeightedRandomChestContent(Items.flint_and_steel, 0, 1, 1, 5), new WeightedRandomChestContent(Items.nether_wart, 0, 3, 7, 5), new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 10), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 8), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 5), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 3)};
-			private const string __OBFID = "CL_00000466";
+			
 
 			public Piece()
 			{
@@ -1168,7 +1168,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public int field_78827_c;
 			public int field_78824_d;
 			public bool field_78825_e;
-			private const string __OBFID = "CL_00000467";
+			
 
 			public PieceWeight(Type p_i2055_1_, int p_i2055_2_, int p_i2055_3_, bool p_i2055_4_)
 			{
@@ -1195,7 +1195,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Stairs : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000469";
+			
 
 			public Stairs()
 			{
@@ -1258,7 +1258,7 @@ namespace DotCraftCore.World.Gen.Structure
 			public IList primaryWeights;
 			public IList secondaryWeights;
 			public ArrayList field_74967_d = new ArrayList();
-			private const string __OBFID = "CL_00000470";
+			
 
 			public Start()
 			{
@@ -1304,7 +1304,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Straight : StructureNetherBridgePieces.Piece
 		{
-			private const string __OBFID = "CL_00000456";
+			
 
 			public Straight()
 			{
@@ -1362,7 +1362,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Throne : StructureNetherBridgePieces.Piece
 		{
 			private bool hasSpawner;
-			private const string __OBFID = "CL_00000465";
+			
 
 			public Throne()
 			{

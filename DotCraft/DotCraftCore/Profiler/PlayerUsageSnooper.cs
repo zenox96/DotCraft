@@ -25,7 +25,7 @@ namespace DotCraftCore.Profiler
 
 	/// <summary> incremented on every getSelfCounterFor  </summary>
 		private int selfCounter;
-		private const string __OBFID = "CL_00001515";
+		
 
 		public PlayerUsageSnooper(string p_i1563_1_, IPlayerUsage p_i1563_2_, long p_i1563_3_)
 		{
@@ -51,7 +51,7 @@ namespace DotCraftCore.Profiler
 			{
 				this.isRunning = true;
 				this.func_152766_h();
-				this.threadTrigger.schedule(new TimerTask() { private static final string __OBFID = "CL_00001516"; public void run() { if (PlayerUsageSnooper.playerStatsCollector.SnooperEnabled) { Hashtable var1; synchronized (PlayerUsageSnooper.syncLock) { var1 = new Hashtable(PlayerUsageSnooper.field_152774_b); if (PlayerUsageSnooper.selfCounter == 0) { var1.putAll(PlayerUsageSnooper.field_152773_a); } var1.put("snooper_count", Convert.ToInt32(PlayerUsageSnooper.access$308(PlayerUsageSnooper.this))); var1.put("snooper_token", PlayerUsageSnooper.uniqueID); } HttpUtil.func_151226_a(PlayerUsageSnooper.serverUrl, var1, true); } } }, 0L, 900000L);
+				this.threadTrigger.schedule(new TimerTask() {  public void run() { if (PlayerUsageSnooper.playerStatsCollector.SnooperEnabled) { Hashtable var1; synchronized (PlayerUsageSnooper.syncLock) { var1 = new Hashtable(PlayerUsageSnooper.field_152774_b); if (PlayerUsageSnooper.selfCounter == 0) { var1.putAll(PlayerUsageSnooper.field_152773_a); } var1.put("snooper_count", Convert.ToInt32(PlayerUsageSnooper.access$308(PlayerUsageSnooper.this))); var1.put("snooper_token", PlayerUsageSnooper.uniqueID); } HttpUtil.func_151226_a(PlayerUsageSnooper.serverUrl, var1, true); } } }, 0L, 900000L);
 			}
 		}
 

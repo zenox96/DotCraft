@@ -15,7 +15,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S37PacketStatistics : Packet
 	{
 		private IDictionary field_148976_a;
-		private const string __OBFID = "CL_00001283";
+		
 
 		public S37PacketStatistics()
 		{

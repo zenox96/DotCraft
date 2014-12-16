@@ -18,7 +18,7 @@ namespace DotCraftCore.World.Gen.Structure
 		private int terrainType;
 		private int field_82665_g;
 		private int field_82666_h;
-		private const string __OBFID = "CL_00000514";
+		
 
 		public MapGenVillage()
 		{
@@ -94,7 +94,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class Start : StructureStart
 		{
 			private bool hasMoreThanTwoComponents;
-			private const string __OBFID = "CL_00000515";
+			
 
 			public Start()
 			{

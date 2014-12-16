@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 
 	public class JsonUtils
 	{
-		private const string __OBFID = "CL_00001484";
+		
 
 ///    
 ///     <summary> * Does the given JsonObject contain a string field with the given name? </summary>

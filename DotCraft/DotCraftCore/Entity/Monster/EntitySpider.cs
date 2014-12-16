@@ -18,7 +18,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public class EntitySpider : EntityMob
 	{
-		private const string __OBFID = "CL_00001699";
+		
 
 		public EntitySpider(World p_i1743_1_) : base(p_i1743_1_)
 		{
@@ -263,7 +263,7 @@ namespace DotCraftCore.Entity.Monster
 		public class GroupData : IEntityLivingData
 		{
 			public int field_111105_a;
-			private const string __OBFID = "CL_00001700";
+			
 
 			public virtual void func_111104_a(Random p_111104_1_)
 			{

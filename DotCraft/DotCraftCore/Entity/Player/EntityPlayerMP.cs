@@ -159,7 +159,7 @@ namespace DotCraftCore.Entity.Player
 ///     * and XP </summary>
 ///     
 		public bool playerConqueredTheEnd;
-		private const string __OBFID = "CL_00001440";
+		
 
 		public EntityPlayerMP(MinecraftServer p_i45285_1_, WorldServer p_i45285_2_, GameProfile p_i45285_3_, ItemInWorldManager p_i45285_4_) : base(p_i45285_2_, p_i45285_3_)
 		{

@@ -11,7 +11,7 @@ namespace DotCraftCore.Item
 
 	public class ItemAppleGold : ItemFood
 	{
-		private const string __OBFID = "CL_00000037";
+		
 
 		public ItemAppleGold(int p_i45341_1_, float p_i45341_2_, bool p_i45341_3_) : base(p_i45341_1_, p_i45341_2_, p_i45341_3_)
 		{

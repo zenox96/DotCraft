@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Client
 	{
 		private int field_149567_a;
 		private C02PacketUseEntity.Action field_149566_b;
-		private const string __OBFID = "CL_00001357";
+		
 
 		public C02PacketUseEntity()
 		{
@@ -79,7 +79,7 @@ namespace DotCraftCore.Network.Play.Client
 
 			@private static final C02PacketUseEntity.Action[] $VALUES = new C02PacketUseEntity.Action[]{INTERACT, ATTACK
 		}
-			private const string __OBFID = "CL_00001358";
+			
 
 			private Action(string p_i45250_1_, int p_i45250_2_, int p_i45250_3_)
 			{

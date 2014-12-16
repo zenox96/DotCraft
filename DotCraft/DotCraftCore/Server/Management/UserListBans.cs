@@ -8,7 +8,7 @@ namespace DotCraftCore.Server.Management
 
 	public class UserListBans : UserList
 	{
-		private const string __OBFID = "CL_00001873";
+		
 
 		public UserListBans(File p_i1138_1_) : base(p_i1138_1_)
 		{

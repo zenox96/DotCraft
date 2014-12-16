@@ -15,7 +15,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandBanPlayer : CommandBase
 	{
-		private const string __OBFID = "CL_00000165";
+		
 
 		public virtual string CommandName
 		{

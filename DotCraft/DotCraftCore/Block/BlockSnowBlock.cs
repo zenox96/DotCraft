@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 
 	public class BlockSnowBlock : Block
 	{
-		private const string __OBFID = "CL_00000308";
+		
 
 		protected internal BlockSnowBlock() : base(Material.craftedSnow)
 		{

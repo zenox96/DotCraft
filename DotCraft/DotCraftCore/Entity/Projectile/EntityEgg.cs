@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.Projectile
 
 	public class EntityEgg : EntityThrowable
 	{
-		private const string __OBFID = "CL_00001724";
+		
 
 		public EntityEgg(World p_i1779_1_) : base(p_i1779_1_)
 		{

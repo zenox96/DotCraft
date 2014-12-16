@@ -44,7 +44,7 @@ namespace DotCraftCore.Village
 		private SortedDictionary playerReputation = new SortedDictionary();
 		private IList villageAgressors = new ArrayList();
 		private int numIronGolems;
-		private const string __OBFID = "CL_00001631";
+		
 
 		public Village()
 		{
@@ -622,7 +622,7 @@ namespace DotCraftCore.Village
 		{
 			public EntityLivingBase agressor;
 			public int agressionTime;
-			private const string __OBFID = "CL_00001632";
+			
 
 			internal VillageAgressor(EntityLivingBase p_i1674_2_, int p_i1674_3_)
 			{

@@ -30,7 +30,7 @@ namespace DotCraftCore.Server.Management
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final ParameterizedType field_152698_f = new ParameterizedType()
 //	{
-//		private static final String __OBFID = "CL_00001875";
+//		
 //		public Type[] getActualTypeArguments()
 //		{
 //			return new Type[] {UserListEntry.class};
@@ -44,7 +44,7 @@ namespace DotCraftCore.Server.Management
 //			return null;
 //		}
 //	};
-		private const string __OBFID = "CL_00001876";
+		
 
 		public UserList(File p_i1144_1_)
 		{
@@ -168,7 +168,7 @@ namespace DotCraftCore.Server.Management
 
 		internal class Serializer : JsonDeserializer, JsonSerializer
 		{
-			private const string __OBFID = "CL_00001874";
+			
 
 			private Serializer()
 			{

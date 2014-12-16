@@ -14,7 +14,7 @@ namespace DotCraftCore.World.Gen.Structure
 	public class MapGenNetherBridge : MapGenStructure
 	{
 		private IList spawnList = new ArrayList();
-		private const string __OBFID = "CL_00000451";
+		
 
 		public MapGenNetherBridge()
 		{
@@ -53,7 +53,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Start : StructureStart
 		{
-			private const string __OBFID = "CL_00000452";
+			
 
 			public Start()
 			{

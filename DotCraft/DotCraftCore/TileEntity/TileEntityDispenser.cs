@@ -14,7 +14,7 @@ namespace DotCraftCore.TileEntity
 		private ItemStack[] field_146022_i = new ItemStack[9];
 		private Random field_146021_j = new Random();
 		protected internal string field_146020_a;
-		private const string __OBFID = "CL_00000352";
+		
 
 ///    
 ///     <summary> * Returns the number of slots in the inventory. </summary>

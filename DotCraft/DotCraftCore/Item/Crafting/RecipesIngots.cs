@@ -9,7 +9,7 @@ namespace DotCraftCore.Item.Crafting
 	public class RecipesIngots
 	{
 		private object[][] recipeItems;
-		private const string __OBFID = "CL_00000089";
+		
 
 		public RecipesIngots()
 		{

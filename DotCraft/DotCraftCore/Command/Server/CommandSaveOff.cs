@@ -9,7 +9,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandSaveOff : CommandBase
 	{
-		private const string __OBFID = "CL_00000847";
+		
 
 		public virtual string CommandName
 		{

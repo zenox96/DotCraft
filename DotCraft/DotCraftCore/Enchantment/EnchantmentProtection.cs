@@ -31,7 +31,7 @@ namespace DotCraftCore.Enchantment
 ///     * 4 = projectile. </summary>
 ///     
 		public readonly int protectionType;
-		private const string __OBFID = "CL_00000121";
+		
 
 		public EnchantmentProtection(int p_i1936_1_, int p_i1936_2_, int p_i1936_3_) : base(p_i1936_1_, p_i1936_2_, EnumEnchantmentType.armor)
 		{

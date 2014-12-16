@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_150200_a;
 		private IIcon field_150199_b;
-		private const string __OBFID = "CL_00000273";
+		
 
 		protected internal BlockMycelium() : base(Material.grass)
 		{

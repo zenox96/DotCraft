@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Biome
 		private int field_150636_aF;
 		private int field_150637_aG;
 		private int field_150638_aH;
-		private const string __OBFID = "CL_00000168";
+		
 
 		protected internal BiomeGenHills(int p_i45373_1_, bool p_i45373_2_) : base(p_i45373_1_)
 		{

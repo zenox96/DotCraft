@@ -16,7 +16,7 @@ namespace DotCraftCore.TileEntity
 		private int field_145908_a;
 		private int field_145910_i;
 		private GameProfile field_152110_j = null;
-		private const string __OBFID = "CL_00000364";
+		
 
 		public override void writeToNBT(NBTTagCompound p_145841_1_)
 		{

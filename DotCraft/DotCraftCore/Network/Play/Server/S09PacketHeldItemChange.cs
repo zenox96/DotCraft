@@ -9,7 +9,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S09PacketHeldItemChange : Packet
 	{
 		private int field_149387_a;
-		private const string __OBFID = "CL_00001324";
+		
 
 		public S09PacketHeldItemChange()
 		{

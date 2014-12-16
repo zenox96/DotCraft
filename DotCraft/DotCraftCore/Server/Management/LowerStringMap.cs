@@ -7,7 +7,7 @@ namespace DotCraftCore.Server.Management
 	public class LowerStringMap : IDictionary
 	{
 		private readonly IDictionary internalMap = new LinkedHashMap();
-		private const string __OBFID = "CL_00001488";
+		
 
 		public virtual int size()
 		{

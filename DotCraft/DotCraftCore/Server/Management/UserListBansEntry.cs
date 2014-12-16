@@ -8,7 +8,7 @@ namespace DotCraftCore.Server.Management
 
 	public class UserListBansEntry : BanEntry
 	{
-		private const string __OBFID = "CL_00001872";
+		
 
 		public UserListBansEntry(GameProfile p_i1134_1_) : this(p_i1134_1_, (DateTime)null, (string)null, (DateTime)null, (string)null)
 		{

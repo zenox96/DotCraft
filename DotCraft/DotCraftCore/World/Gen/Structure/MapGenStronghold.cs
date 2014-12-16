@@ -21,7 +21,7 @@ namespace DotCraftCore.World.Gen.Structure
 		private ChunkCoordIntPair[] structureCoords;
 		private double field_82671_h;
 		private int field_82672_i;
-		private const string __OBFID = "CL_00000481";
+		
 
 		public MapGenStronghold()
 		{
@@ -162,7 +162,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 		public class Start : StructureStart
 		{
-			private const string __OBFID = "CL_00000482";
+			
 
 			public Start()
 			{

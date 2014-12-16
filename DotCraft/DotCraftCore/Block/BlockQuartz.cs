@@ -21,7 +21,7 @@ namespace DotCraftCore.Block
 		private IIcon field_150194_O;
 		private IIcon field_150190_P;
 		private IIcon field_150188_Q;
-		private const string __OBFID = "CL_00000292";
+		
 
 		public BlockQuartz() : base(Material.rock)
 		{

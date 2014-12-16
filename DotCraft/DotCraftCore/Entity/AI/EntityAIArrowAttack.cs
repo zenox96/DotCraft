@@ -32,7 +32,7 @@ namespace DotCraftCore.Entity.AI
 		private int maxRangedAttackTime;
 		private float field_96562_i;
 		private float field_82642_h;
-		private const string __OBFID = "CL_00001609";
+		
 
 		public EntityAIArrowAttack(IRangedAttackMob p_i1649_1_, double p_i1649_2_, int p_i1649_4_, float p_i1649_5_) : this(p_i1649_1_, p_i1649_2_, p_i1649_4_, p_i1649_4_, p_i1649_5_)
 		{

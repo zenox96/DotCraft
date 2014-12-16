@@ -20,7 +20,7 @@ namespace DotCraftCore.Block
 	public class BlockPistonExtension : Block
 	{
 		private IIcon field_150088_a;
-		private const string __OBFID = "CL_00000367";
+		
 
 		public BlockPistonExtension() : base(Material.piston)
 		{

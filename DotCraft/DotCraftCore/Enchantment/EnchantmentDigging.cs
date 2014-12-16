@@ -6,7 +6,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentDigging : Enchantment
 	{
-		private const string __OBFID = "CL_00000104";
+		
 
 		protected internal EnchantmentDigging(int p_i1925_1_, int p_i1925_2_) : base(p_i1925_1_, p_i1925_2_, EnumEnchantmentType.digger)
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.Command
 
 	public class CommandClearInventory : CommandBase
 	{
-		private const string __OBFID = "CL_00000218";
+		
 
 		public virtual string CommandName
 		{

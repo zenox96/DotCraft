@@ -5,7 +5,7 @@ namespace DotCraftCore.Item
 
 	public class ItemPiston : ItemBlock
 	{
-		private const string __OBFID = "CL_00000054";
+		
 
 		public ItemPiston(Block p_i45348_1_) : base(p_i45348_1_)
 		{

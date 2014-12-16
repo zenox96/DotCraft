@@ -5,7 +5,7 @@ namespace DotCraftCore.Stats
 
 	public class StatBasic : StatBase
 	{
-		private const string __OBFID = "CL_00001469";
+		
 
 		public StatBasic(string p_i45303_1_, IChatComponent p_i45303_2_, IStatType p_i45303_3_) : base(p_i45303_1_, p_i45303_2_, p_i45303_3_)
 		{

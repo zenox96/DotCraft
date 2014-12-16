@@ -10,7 +10,7 @@ namespace DotCraftCore.Command
 
 	public class CommandWeather : CommandBase
 	{
-		private const string __OBFID = "CL_00001185";
+		
 
 		public virtual string CommandName
 		{

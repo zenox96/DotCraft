@@ -3,7 +3,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerAddSnow : GenLayer
 	{
-		private const string __OBFID = "CL_00000553";
+		
 
 		public GenLayerAddSnow(long p_i2121_1_, GenLayer p_i2121_3_) : base(p_i2121_1_)
 		{

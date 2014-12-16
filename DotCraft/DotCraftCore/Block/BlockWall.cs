@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public class BlockWall : Block
 	{
 		public static readonly string[] field_150092_a = new string[] {"normal", "mossy"};
-		private const string __OBFID = "CL_00000331";
+		
 
 		public BlockWall(Block p_i45435_1_) : base(p_i45435_1_.blockMaterial)
 		{

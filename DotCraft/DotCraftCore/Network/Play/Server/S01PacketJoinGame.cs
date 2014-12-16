@@ -20,7 +20,7 @@ namespace DotCraftCore.Network.Play.Server
 		private EnumDifficulty field_149203_e;
 		private int field_149200_f;
 		private WorldType field_149201_g;
-		private const string __OBFID = "CL_00001310";
+		
 
 		public S01PacketJoinGame()
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 	public class BlockMelon : Block
 	{
 		private IIcon field_150201_a;
-		private const string __OBFID = "CL_00000267";
+		
 
 		protected internal BlockMelon() : base(Material.field_151572_C)
 		{

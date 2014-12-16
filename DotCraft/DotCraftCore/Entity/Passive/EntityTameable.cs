@@ -15,7 +15,7 @@ namespace DotCraftCore.Entity.Passive
 	public abstract class EntityTameable : EntityAnimal, IEntityOwnable
 	{
 		protected internal EntityAISit aiSit = new EntityAISit(this);
-		private const string __OBFID = "CL_00001561";
+		
 
 		public EntityTameable(World p_i1604_1_) : base(p_i1604_1_)
 		{

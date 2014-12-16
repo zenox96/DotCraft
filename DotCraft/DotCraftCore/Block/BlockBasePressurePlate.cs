@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockBasePressurePlate : Block
 	{
 		private string field_150067_a;
-		private const string __OBFID = "CL_00000194";
+		
 
 		protected internal BlockBasePressurePlate(string p_i45387_1_, Material p_i45387_2_) : base(p_i45387_2_)
 		{

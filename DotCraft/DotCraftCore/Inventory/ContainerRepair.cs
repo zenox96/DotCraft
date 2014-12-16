@@ -29,7 +29,7 @@ namespace DotCraftCore.Inventory
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private IInventory inputSlots = new InventoryBasic("Repair", true, 2)
 //	{
-//		private static final String __OBFID = "CL_00001733";
+//		
 //		public void onInventoryChanged()
 //		{
 //			base.onInventoryChanged();
@@ -50,7 +50,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> The player that has this container open.  </summary>
 		private readonly EntityPlayer thePlayer;
-		private const string __OBFID = "CL_00001732";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: 'final' parameters are not allowed in .NET:
 //ORIGINAL LINE: public ContainerRepair(InventoryPlayer p_i1800_1_, final World p_i1800_2_, final int p_i1800_3_, final int p_i1800_4_, final int p_i1800_5_, EntityPlayer p_i1800_6_)
@@ -63,7 +63,7 @@ namespace DotCraftCore.Inventory
 			this.thePlayer = p_i1800_6_;
 			this.addSlotToContainer(new Slot(this.inputSlots, 0, 27, 47));
 			this.addSlotToContainer(new Slot(this.inputSlots, 1, 76, 47));
-			this.addSlotToContainer(new Slot(this.outputSlot, 2, 134, 47) { private static final string __OBFID = "CL_00001734"; public bool isItemValid(ItemStack p_75214_1_) { return false; } public bool canTakeStack(EntityPlayer p_82869_1_) { return (p_82869_1_.capabilities.isCreativeMode || p_82869_1_.experienceLevel >= ContainerRepair.maximumCost) && ContainerRepair.maximumCost > 0 && this.HasStack; } public void onPickupFromSlot(EntityPlayer p_82870_1_, ItemStack p_82870_2_) { if (!p_82870_1_.capabilities.isCreativeMode) { p_82870_1_.addExperienceLevel(-ContainerRepair.maximumCost); } ContainerRepair.inputSlots.setInventorySlotContents(0, (ItemStack)null); if (ContainerRepair.stackSizeToBeUsedInRepair > 0) { ItemStack var3 = ContainerRepair.inputSlots.getStackInSlot(1); if (var3 != null && var3.stackSize > ContainerRepair.stackSizeToBeUsedInRepair) { var3.stackSize -= ContainerRepair.stackSizeToBeUsedInRepair; ContainerRepair.inputSlots.setInventorySlotContents(1, var3); } else { ContainerRepair.inputSlots.setInventorySlotContents(1, (ItemStack)null); } } else { ContainerRepair.inputSlots.setInventorySlotContents(1, (ItemStack)null); } ContainerRepair.maximumCost = 0; if (!p_82870_1_.capabilities.isCreativeMode && !p_i1800_2_.isClient && p_i1800_2_.getBlock(p_i1800_3_, p_i1800_4_, p_i1800_5_) == Blocks.anvil && p_82870_1_.RNG.nextFloat() < 0.12F) { int var6 = p_i1800_2_.getBlockMetadata(p_i1800_3_, p_i1800_4_, p_i1800_5_); int var4 = var6 & 3; int var5 = var6 >> 2; ++var5; if (var5 > 2) { p_i1800_2_.setBlockToAir(p_i1800_3_, p_i1800_4_, p_i1800_5_); p_i1800_2_.playAuxSFX(1020, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } else { p_i1800_2_.setBlockMetadataWithNotify(p_i1800_3_, p_i1800_4_, p_i1800_5_, var4 | var5 << 2, 2); p_i1800_2_.playAuxSFX(1021, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } } else if (!p_i1800_2_.isClient) { p_i1800_2_.playAuxSFX(1021, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } } });
+			this.addSlotToContainer(new Slot(this.outputSlot, 2, 134, 47) {  public bool isItemValid(ItemStack p_75214_1_) { return false; } public bool canTakeStack(EntityPlayer p_82869_1_) { return (p_82869_1_.capabilities.isCreativeMode || p_82869_1_.experienceLevel >= ContainerRepair.maximumCost) && ContainerRepair.maximumCost > 0 && this.HasStack; } public void onPickupFromSlot(EntityPlayer p_82870_1_, ItemStack p_82870_2_) { if (!p_82870_1_.capabilities.isCreativeMode) { p_82870_1_.addExperienceLevel(-ContainerRepair.maximumCost); } ContainerRepair.inputSlots.setInventorySlotContents(0, (ItemStack)null); if (ContainerRepair.stackSizeToBeUsedInRepair > 0) { ItemStack var3 = ContainerRepair.inputSlots.getStackInSlot(1); if (var3 != null && var3.stackSize > ContainerRepair.stackSizeToBeUsedInRepair) { var3.stackSize -= ContainerRepair.stackSizeToBeUsedInRepair; ContainerRepair.inputSlots.setInventorySlotContents(1, var3); } else { ContainerRepair.inputSlots.setInventorySlotContents(1, (ItemStack)null); } } else { ContainerRepair.inputSlots.setInventorySlotContents(1, (ItemStack)null); } ContainerRepair.maximumCost = 0; if (!p_82870_1_.capabilities.isCreativeMode && !p_i1800_2_.isClient && p_i1800_2_.getBlock(p_i1800_3_, p_i1800_4_, p_i1800_5_) == Blocks.anvil && p_82870_1_.RNG.nextFloat() < 0.12F) { int var6 = p_i1800_2_.getBlockMetadata(p_i1800_3_, p_i1800_4_, p_i1800_5_); int var4 = var6 & 3; int var5 = var6 >> 2; ++var5; if (var5 > 2) { p_i1800_2_.setBlockToAir(p_i1800_3_, p_i1800_4_, p_i1800_5_); p_i1800_2_.playAuxSFX(1020, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } else { p_i1800_2_.setBlockMetadataWithNotify(p_i1800_3_, p_i1800_4_, p_i1800_5_, var4 | var5 << 2, 2); p_i1800_2_.playAuxSFX(1021, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } } else if (!p_i1800_2_.isClient) { p_i1800_2_.playAuxSFX(1021, p_i1800_3_, p_i1800_4_, p_i1800_5_, 0); } } });
 			int var7;
 
 			for (var7 = 0; var7 < 3; ++var7)

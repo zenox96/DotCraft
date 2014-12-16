@@ -14,7 +14,7 @@ namespace DotCraftCore.Entity.AI
 ///     * MULTIPLE findTowards and findAway calls, will share this var </summary>
 ///     
 		private static Vec3 staticVector = Vec3.createVectorHelper(0.0D, 0.0D, 0.0D);
-		private const string __OBFID = "CL_00001629";
+		
 
 ///    
 ///     <summary> * finds a random target within par1(x,z) and par2 (y) blocks </summary>

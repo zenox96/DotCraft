@@ -13,7 +13,7 @@ namespace DotCraftCore.Server.Integrated
 ///     <summary> * Holds the NBT data for the host player's save file, so this can be written to level.dat. </summary>
 ///     
 		private NBTTagCompound hostPlayerData;
-		private const string __OBFID = "CL_00001128";
+		
 
 		public IntegratedPlayerList(IntegratedServer p_i1314_1_) : base(p_i1314_1_)
 		{

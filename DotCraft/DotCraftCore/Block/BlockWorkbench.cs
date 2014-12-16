@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_150035_a;
 		private IIcon field_150034_b;
-		private const string __OBFID = "CL_00000221";
+		
 
 		protected internal BlockWorkbench() : base(Material.wood)
 		{

@@ -5,7 +5,7 @@ namespace DotCraftCore.Potion
 
 	public class PotionAttackDamage : Potion
 	{
-		private const string __OBFID = "CL_00001525";
+		
 
 		protected internal PotionAttackDamage(int p_i1570_1_, bool p_i1570_2_, int p_i1570_3_) : base(p_i1570_1_, p_i1570_2_, p_i1570_3_)
 		{

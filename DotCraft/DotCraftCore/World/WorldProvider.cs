@@ -45,7 +45,7 @@ namespace DotCraftCore.World
 
 	/// <summary> Array for sunrise/sunset colors (RGBA)  </summary>
 		private float[] colorsSunriseSunset = new float[4];
-		private const string __OBFID = "CL_00000386";
+		
 
 ///    
 ///     <summary> * associate an existing world with a World provider, and setup its lightbrightness table </summary>

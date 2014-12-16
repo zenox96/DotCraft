@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Gen.Feature
 ///     * this is false, when saplings grow, this is true. </summary>
 ///     
 		private readonly bool doBlockNotify;
-		private const string __OBFID = "CL_00000409";
+		
 
 		public WorldGenerator()
 		{

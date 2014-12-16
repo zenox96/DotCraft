@@ -19,7 +19,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 		private double baseValue;
 		private bool needsUpdate = true;
 		private double cachedValue;
-		private const string __OBFID = "CL_00001567";
+		
 
 		public ModifiableAttributeInstance(BaseAttributeMap p_i1608_1_, IAttribute p_i1608_2_)
 		{

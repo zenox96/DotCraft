@@ -47,7 +47,7 @@ namespace DotCraftCore.Entity.Projectile
 
 	/// <summary> The amount of knockback an arrow applies when it hits a mob.  </summary>
 		private int knockbackStrength;
-		private const string __OBFID = "CL_00001715";
+		
 
 		public EntityArrow(World p_i1753_1_) : base(p_i1753_1_)
 		{

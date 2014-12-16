@@ -8,7 +8,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public class WorldGenPumpkin : WorldGenerator
 	{
-		private const string __OBFID = "CL_00000428";
+		
 
 		public override bool generate(World p_76484_1_, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_)
 		{

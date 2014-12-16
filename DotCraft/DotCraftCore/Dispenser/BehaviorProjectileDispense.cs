@@ -10,7 +10,7 @@ namespace DotCraftCore.Dispenser
 
 	public abstract class BehaviorProjectileDispense : BehaviorDefaultDispenseItem
 	{
-		private const string __OBFID = "CL_00001394";
+		
 
 ///    
 ///     <summary> * Dispense the specified stack, play the dispense sound and spawn particles. </summary>

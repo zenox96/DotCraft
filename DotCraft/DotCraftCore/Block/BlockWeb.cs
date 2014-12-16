@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockWeb : Block
 	{
-		private const string __OBFID = "CL_00000333";
+		
 
 		public BlockWeb() : base(Material.field_151569_G)
 		{

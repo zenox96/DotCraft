@@ -11,7 +11,7 @@ namespace DotCraftCore.Entity.Passive
 
 	public class EntityMooshroom : EntityCow
 	{
-		private const string __OBFID = "CL_00001645";
+		
 
 		public EntityMooshroom(World p_i1687_1_) : base(p_i1687_1_)
 		{

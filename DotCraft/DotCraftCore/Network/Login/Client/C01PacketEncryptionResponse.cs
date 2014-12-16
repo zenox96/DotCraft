@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Login.Client
 	{
 		private sbyte[] field_149302_a = new sbyte[0];
 		private sbyte[] field_149301_b = new sbyte[0];
-		private const string __OBFID = "CL_00001380";
+		
 
 		public C01PacketEncryptionResponse()
 		{

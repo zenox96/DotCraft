@@ -10,7 +10,7 @@ namespace DotCraftCore.NBT
 	public class JsonToNBT
 	{
 		private static readonly Logger logger = LogManager.Logger;
-		private const string __OBFID = "CL_00001232";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: Method 'throws' clauses are not available in .NET:
 //ORIGINAL LINE: public static NBTBase func_150315_a(String p_150315_0_) throws NBTException
@@ -412,7 +412,7 @@ namespace DotCraftCore.NBT
 		internal abstract class Any
 		{
 			protected internal string field_150490_a;
-			private const string __OBFID = "CL_00001233";
+			
 
 			public abstract NBTBase func_150489_a();
 		}
@@ -420,7 +420,7 @@ namespace DotCraftCore.NBT
 		internal class Compound : JsonToNBT.Any
 		{
 			protected internal ArrayList field_150491_b = new ArrayList();
-			private const string __OBFID = "CL_00001234";
+			
 
 			public Compound(string p_i45137_1_)
 			{
@@ -445,7 +445,7 @@ namespace DotCraftCore.NBT
 		internal class List : JsonToNBT.Any
 		{
 			protected internal ArrayList field_150492_b = new ArrayList();
-			private const string __OBFID = "CL_00001235";
+			
 
 			public IList(string p_i45138_1_)
 			{
@@ -470,7 +470,7 @@ namespace DotCraftCore.NBT
 		internal class Primitive : JsonToNBT.Any
 		{
 			protected internal string field_150493_b;
-			private const string __OBFID = "CL_00001236";
+			
 
 			public Primitive(string p_i45139_1_, string p_i45139_2_)
 			{

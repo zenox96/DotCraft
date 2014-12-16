@@ -8,7 +8,7 @@ namespace DotCraftCore.World.Biome
 
 	public class BiomeGenOcean : BiomeGenBase
 	{
-		private const string __OBFID = "CL_00000179";
+		
 
 		public BiomeGenOcean(int p_i1985_1_) : base(p_i1985_1_)
 		{

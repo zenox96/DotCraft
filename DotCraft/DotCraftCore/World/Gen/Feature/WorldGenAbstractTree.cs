@@ -10,7 +10,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	public abstract class WorldGenAbstractTree : WorldGenerator
 	{
-		private const string __OBFID = "CL_00000399";
+		
 
 		public WorldGenAbstractTree(bool p_i45448_1_) : base(p_i45448_1_)
 		{

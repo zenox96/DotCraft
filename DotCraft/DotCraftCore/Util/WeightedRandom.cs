@@ -7,7 +7,7 @@ namespace DotCraftCore.Util
 
 	public class WeightedRandom
 	{
-		private const string __OBFID = "CL_00001503";
+		
 
 ///    
 ///     <summary> * Returns the total weight of all items in a collection. </summary>
@@ -123,7 +123,7 @@ namespace DotCraftCore.Util
 		public class Item
 		{
 			protected internal int itemWeight;
-			private const string __OBFID = "CL_00001504";
+			
 
 			public Item(int p_i1556_1_)
 			{

@@ -15,7 +15,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 	public class ComponentScatteredFeaturePieces
 	{
-		private const string __OBFID = "CL_00000473";
+		
 
 		public static void func_143045_a()
 		{
@@ -28,7 +28,7 @@ namespace DotCraftCore.World.Gen.Structure
 		{
 			private bool[] field_74940_h = new bool[4];
 			private static readonly WeightedRandomChestContent[] itemsToGenerateInTemple = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.diamond, 0, 1, 3, 3), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 10), new WeightedRandomChestContent(Items.gold_ingot, 0, 2, 7, 15), new WeightedRandomChestContent(Items.emerald, 0, 1, 3, 2), new WeightedRandomChestContent(Items.bone, 0, 4, 6, 20), new WeightedRandomChestContent(Items.rotten_flesh, 0, 3, 7, 16), new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 3), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
-			private const string __OBFID = "CL_00000476";
+			
 
 			public DesertPyramid()
 			{
@@ -269,7 +269,7 @@ namespace DotCraftCore.World.Gen.Structure
 			protected internal int scatteredFeatureSizeY;
 			protected internal int scatteredFeatureSizeZ;
 			protected internal int field_74936_d = -1;
-			private const string __OBFID = "CL_00000479";
+			
 
 			public Feature()
 			{
@@ -357,7 +357,7 @@ namespace DotCraftCore.World.Gen.Structure
 			private static readonly WeightedRandomChestContent[] junglePyramidsChestContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.diamond, 0, 1, 3, 3), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 5, 10), new WeightedRandomChestContent(Items.gold_ingot, 0, 2, 7, 15), new WeightedRandomChestContent(Items.emerald, 0, 1, 3, 2), new WeightedRandomChestContent(Items.bone, 0, 4, 6, 20), new WeightedRandomChestContent(Items.rotten_flesh, 0, 3, 7, 16), new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 3), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 1), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
 			private static readonly WeightedRandomChestContent[] junglePyramidsDispenserContents = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.arrow, 0, 2, 7, 30)};
 			private static ComponentScatteredFeaturePieces.JunglePyramid.Stones junglePyramidsRandomScatteredStones = new ComponentScatteredFeaturePieces.JunglePyramid.Stones(null);
-			private const string __OBFID = "CL_00000477";
+			
 
 			public JunglePyramid()
 			{
@@ -584,7 +584,7 @@ namespace DotCraftCore.World.Gen.Structure
 
 			internal class Stones : StructureComponent.BlockSelector
 			{
-				private const string __OBFID = "CL_00000478";
+				
 
 				private Stones()
 				{
@@ -611,7 +611,7 @@ namespace DotCraftCore.World.Gen.Structure
 		public class SwampHut : ComponentScatteredFeaturePieces.Feature
 		{
 			private bool hasWitch;
-			private const string __OBFID = "CL_00000480";
+			
 
 			public SwampHut()
 			{

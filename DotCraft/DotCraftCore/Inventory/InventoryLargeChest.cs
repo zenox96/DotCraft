@@ -14,7 +14,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> Inventory object corresponding to double chest lower part  </summary>
 		private IInventory lowerChest;
-		private const string __OBFID = "CL_00001507";
+		
 
 		public InventoryLargeChest(string p_i1559_1_, IInventory p_i1559_2_, IInventory p_i1559_3_)
 		{

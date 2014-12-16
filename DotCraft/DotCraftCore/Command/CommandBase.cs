@@ -15,7 +15,7 @@ namespace DotCraftCore.Command
 	public abstract class CommandBase : ICommand
 	{
 		private static IAdminCommand theAdmin;
-		private const string __OBFID = "CL_00001739";
+		
 
 ///    
 ///     <summary> * Return the required permission level for this command. </summary>

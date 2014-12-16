@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 
 	public class BlockCommandBlock : BlockContainer
 	{
-		private const string __OBFID = "CL_00000219";
+		
 
 		public BlockCommandBlock() : base(Material.iron)
 		{

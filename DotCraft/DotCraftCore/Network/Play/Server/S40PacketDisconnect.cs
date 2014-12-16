@@ -10,7 +10,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S40PacketDisconnect : Packet
 	{
 		private IChatComponent field_149167_a;
-		private const string __OBFID = "CL_00001298";
+		
 
 		public S40PacketDisconnect()
 		{

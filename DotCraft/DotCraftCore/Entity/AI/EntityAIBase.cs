@@ -8,7 +8,7 @@ namespace DotCraftCore.Entity.AI
 ///     * zero, the two tasks may run concurrently, if not - they must run exclusively from each other. </summary>
 ///     
 		private int mutexBits;
-		private const string __OBFID = "CL_00001587";
+		
 
 ///    
 ///     <summary> * Returns whether the EntityAIBase should begin execution. </summary>

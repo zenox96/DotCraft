@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Client
 	{
 		private int field_149541_a;
 		private int field_149540_b;
-		private const string __OBFID = "CL_00001352";
+		
 
 		public C11PacketEnchantItem()
 		{

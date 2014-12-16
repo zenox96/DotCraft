@@ -39,7 +39,7 @@ namespace DotCraftCore.Server.Management
 		private int posZ;
 		private int initialBlockDamage;
 		private int durabilityRemainingOnBlock;
-		private const string __OBFID = "CL_00001442";
+		
 
 		public ItemInWorldManager(World p_i1524_1_)
 		{

@@ -22,7 +22,7 @@ namespace DotCraftCore.Enchantment
 		breakable,
 		bow
 //JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//		private static final String __OBFID = "CL_00000106";
+//		
 
 ///    
 ///     <summary> * Return true if the item passed can be enchanted by a enchantment of this type. </summary>

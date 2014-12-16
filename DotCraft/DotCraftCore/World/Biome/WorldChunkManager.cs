@@ -25,7 +25,7 @@ namespace DotCraftCore.World.Biome
 
 	/// <summary> A list of biomes that the player can spawn in.  </summary>
 		private IList biomesToSpawnIn;
-		private const string __OBFID = "CL_00000166";
+		
 
 		protected internal WorldChunkManager()
 		{

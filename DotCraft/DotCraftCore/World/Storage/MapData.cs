@@ -30,7 +30,7 @@ namespace DotCraftCore.World.Storage
 ///     
 		private IDictionary playersHashMap = new Hashtable();
 		public IDictionary playersVisibleOnMap = new LinkedHashMap();
-		private const string __OBFID = "CL_00000577";
+		
 
 		public MapData(string p_i2140_1_) : base(p_i2140_1_)
 		{
@@ -292,7 +292,7 @@ namespace DotCraftCore.World.Storage
 			public sbyte centerX;
 			public sbyte centerZ;
 			public sbyte iconRotation;
-			private const string __OBFID = "CL_00000579";
+			
 
 			public MapCoord(sbyte p_i2139_2_, sbyte p_i2139_3_, sbyte p_i2139_4_, sbyte p_i2139_5_)
 			{
@@ -313,7 +313,7 @@ namespace DotCraftCore.World.Storage
 			private sbyte[] lastPlayerLocationOnMap;
 			public int field_82569_d;
 			private bool field_82570_i;
-			private const string __OBFID = "CL_00000578";
+			
 
 			public MapInfo(EntityPlayer p_i2138_2_)
 			{

@@ -17,7 +17,7 @@ namespace DotCraftCore.Scoreboard
 
 	/// <summary> Map of usernames to ScorePlayerTeam objects.  </summary>
 		private readonly IDictionary teamMemberships = new Hashtable();
-		private const string __OBFID = "CL_00000619";
+		
 
 ///    
 ///     <summary> * Returns a ScoreObjective for the objective name </summary>

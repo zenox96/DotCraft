@@ -13,7 +13,7 @@ namespace DotCraftCore.Command
 
 	public class CommandHelp : CommandBase
 	{
-		private const string __OBFID = "CL_00000529";
+		
 
 		public virtual string CommandName
 		{

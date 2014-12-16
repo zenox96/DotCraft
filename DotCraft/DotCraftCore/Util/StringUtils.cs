@@ -5,7 +5,7 @@ namespace DotCraftCore.Util
 	public class StringUtils
 	{
 		private static readonly Pattern patternControlCode = Pattern.compile("(?i)\\u00A7[0-9A-FK-OR]");
-		private const string __OBFID = "CL_00001501";
+		
 
 ///    
 ///     <summary> * Returns the time elapsed for the given number of ticks, in "mm:ss" format. </summary>

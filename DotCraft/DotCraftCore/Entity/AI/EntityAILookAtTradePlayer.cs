@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.AI
 	public class EntityAILookAtTradePlayer : EntityAIWatchClosest
 	{
 		private readonly EntityVillager theMerchant;
-		private const string __OBFID = "CL_00001593";
+		
 
 		public EntityAILookAtTradePlayer(EntityVillager p_i1633_1_) : base(p_i1633_1_, EntityPlayer.class, 8.0F)
 		{

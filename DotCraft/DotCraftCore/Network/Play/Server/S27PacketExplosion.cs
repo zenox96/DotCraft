@@ -20,7 +20,7 @@ namespace DotCraftCore.Network.Play.Server
 		private float field_149152_f;
 		private float field_149153_g;
 		private float field_149159_h;
-		private const string __OBFID = "CL_00001300";
+		
 
 		public S27PacketExplosion()
 		{

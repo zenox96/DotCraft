@@ -12,7 +12,7 @@ namespace DotCraftCore.Server.Management
 		protected internal readonly string bannedBy;
 		protected internal readonly DateTime banEndDate;
 		protected internal readonly string reason;
-		private const string __OBFID = "CL_00001395";
+		
 
 		public BanEntry(object p_i1173_1_, DateTime p_i1173_2_, string p_i1173_3_, DateTime p_i1173_4_, string p_i1173_5_) : base(p_i1173_1_)
 		{

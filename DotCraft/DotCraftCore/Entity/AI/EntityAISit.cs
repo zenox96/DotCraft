@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> If the EntityTameable is sitting.  </summary>
 		private bool isSitting;
-		private const string __OBFID = "CL_00001613";
+		
 
 		public EntityAISit(EntityTameable p_i1654_1_)
 		{

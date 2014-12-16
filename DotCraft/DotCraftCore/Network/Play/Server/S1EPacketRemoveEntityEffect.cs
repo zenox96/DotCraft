@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private int field_149079_a;
 		private int field_149078_b;
-		private const string __OBFID = "CL_00001321";
+		
 
 		public S1EPacketRemoveEntityEffect()
 		{

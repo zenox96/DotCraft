@@ -3,9 +3,6 @@ using System.Collections;
 
 namespace DotCraftCore.Entity.Passive
 {
-
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
 	using IEntitySelector = DotCraftCore.command.IEntitySelector;
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
@@ -45,7 +42,7 @@ namespace DotCraftCore.Entity.Passive
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final IEntitySelector horseBreedingSelector = new IEntitySelector()
 //	{
-//		private static final String __OBFID = "CL_00001642";
+//		
 //		public boolean isEntityApplicable(Entity p_82704_1_)
 //		{
 //			return p_82704_1_ instanceof EntityHorse && ((EntityHorse)p_82704_1_).func_110205_ce();
@@ -83,7 +80,7 @@ namespace DotCraftCore.Entity.Passive
 		private int field_110285_bP;
 		private string field_110286_bQ;
 		private string[] field_110280_bR = new string[3];
-		private const string __OBFID = "CL_00001641";
+		
 
 		public EntityHorse(World p_i1685_1_) : base(p_i1685_1_)
 		{
@@ -491,7 +488,7 @@ namespace DotCraftCore.Entity.Passive
 
 				if (var3.Material != Material.air)
 				{
-					Block.SoundType var4 = var3.stepSound;
+					SoundType var4 = var3.stepSound;
 					this.worldObj.playSoundAtEntity(this, var4.func_150498_e(), var4.func_150497_c() * 0.5F, var4.func_150494_d() * 0.75F);
 				}
 			}
@@ -685,7 +682,7 @@ namespace DotCraftCore.Entity.Passive
 
 		protected internal override void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
 		{
-			Block.SoundType var5 = p_145780_4_.stepSound;
+			SoundType var5 = p_145780_4_.stepSound;
 
 			if (this.worldObj.getBlock(p_145780_1_, p_145780_2_ + 1, p_145780_3_) == Blocks.snow_layer)
 			{
@@ -714,7 +711,7 @@ namespace DotCraftCore.Entity.Passive
 						this.playSound("mob.horse.wood", var5.func_150497_c() * 0.15F, var5.func_150494_d());
 					}
 				}
-				else if (var5 == Block.soundTypeWood)
+				else if (var5 == SoundType.Wood)
 				{
 					this.playSound("mob.horse.wood", var5.func_150497_c() * 0.15F, var5.func_150494_d());
 				}
@@ -1855,7 +1852,7 @@ namespace DotCraftCore.Entity.Passive
 		{
 			public int field_111107_a;
 			public int field_111106_b;
-			private const string __OBFID = "CL_00001643";
+			
 
 			public GroupData(int p_i1684_1_, int p_i1684_2_)
 			{

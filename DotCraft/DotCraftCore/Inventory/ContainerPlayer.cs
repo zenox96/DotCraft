@@ -22,7 +22,7 @@ namespace DotCraftCore.Inventory
 	/// <summary> Determines if inventory manipulation should be handled.  </summary>
 		public bool isLocalWorld;
 		private readonly EntityPlayer thePlayer;
-		private const string __OBFID = "CL_00001754";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: 'final' parameters are not allowed in .NET:
 //ORIGINAL LINE: public ContainerPlayer(final InventoryPlayer p_i1819_1_, boolean p_i1819_2_, EntityPlayer p_i1819_3_)
@@ -47,7 +47,7 @@ namespace DotCraftCore.Inventory
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: final int var44 = var4;
 				int var44 = var4;
-				this.addSlotToContainer(new Slot(p_i1819_1_, p_i1819_1_.SizeInventory - 1 - var4, 8, 8 + var4 * 18) { private static final string __OBFID = "CL_00001755"; public int SlotStackLimit { return 1; } public bool isItemValid(ItemStack p_75214_1_) { return p_75214_1_ == null ? false : (p_75214_1_.Item is ItemArmor ? ((ItemArmor)p_75214_1_.Item).armorType == var44 : (p_75214_1_.Item != Item.getItemFromBlock(Blocks.pumpkin) && p_75214_1_.Item != Items.skull ? false : var44 == 0)); } public IIcon BackgroundIconIndex { return ItemArmor.func_94602_b(var44); } });
+				this.addSlotToContainer(new Slot(p_i1819_1_, p_i1819_1_.SizeInventory - 1 - var4, 8, 8 + var4 * 18) {  public int SlotStackLimit { return 1; } public bool isItemValid(ItemStack p_75214_1_) { return p_75214_1_ == null ? false : (p_75214_1_.Item is ItemArmor ? ((ItemArmor)p_75214_1_.Item).armorType == var44 : (p_75214_1_.Item != Item.getItemFromBlock(Blocks.pumpkin) && p_75214_1_.Item != Items.skull ? false : var44 == 0)); } public IIcon BackgroundIconIndex { return ItemArmor.func_94602_b(var44); } });
 			}
 
 			for (var4 = 0; var4 < 3; ++var4)

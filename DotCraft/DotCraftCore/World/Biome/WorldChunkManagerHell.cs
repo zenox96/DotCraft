@@ -13,7 +13,7 @@ namespace DotCraftCore.World.Biome
 
 	/// <summary> The rainfall in the world  </summary>
 		private float rainfall;
-		private const string __OBFID = "CL_00000169";
+		
 
 		public WorldChunkManagerHell(BiomeGenBase p_i45374_1_, float p_i45374_2_)
 		{

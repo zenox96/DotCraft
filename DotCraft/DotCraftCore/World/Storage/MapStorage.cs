@@ -24,7 +24,7 @@ namespace DotCraftCore.World.Storage
 ///     <summary> * Map of MapDataBase id String prefixes ('map' etc) to max known unique Short id (the 0 part etc) for that prefix </summary>
 ///     
 		private IDictionary idCounts = new Hashtable();
-		private const string __OBFID = "CL_00000604";
+		
 
 		public MapStorage(ISaveHandler p_i2162_1_)
 		{

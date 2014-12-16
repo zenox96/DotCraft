@@ -22,7 +22,7 @@ namespace DotCraftCore.Util
 	/// <summary> Maps a direction to that to the left of it.  </summary>
 		public static readonly int[] rotateLeft = new int[] {3, 0, 1, 2};
 		public static readonly int[][] bedDirection = new int[][] {{1, 0, 3, 2, 5, 4}, {1, 0, 5, 4, 2, 3}, {1, 0, 2, 3, 4, 5}, {1, 0, 4, 5, 3, 2}};
-		private const string __OBFID = "CL_00001506";
+		
 
 ///    
 ///     <summary> * Returns the movement direction from a velocity vector. </summary>

@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149394_a;
 		private int field_149392_b;
 		private ItemStack field_149393_c;
-		private const string __OBFID = "CL_00001330";
+		
 
 		public S04PacketEntityEquipment()
 		{

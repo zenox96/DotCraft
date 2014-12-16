@@ -19,7 +19,7 @@ namespace DotCraftCore.World
 
 	/// <summary> Reference to the World object.  </summary>
 		private World worldObj;
-		private const string __OBFID = "CL_00000155";
+		
 
 		public ChunkCache(World p_i1964_1_, int p_i1964_2_, int p_i1964_3_, int p_i1964_4_, int p_i1964_5_, int p_i1964_6_, int p_i1964_7_, int p_i1964_8_)
 		{

@@ -22,7 +22,7 @@ namespace DotCraftCore.World.Gen.Feature
 
 	/// <summary> The metadata value of the leaves to use in tree generation.  </summary>
 		private readonly int metaLeaves;
-		private const string __OBFID = "CL_00000438";
+		
 
 		public WorldGenTrees(bool p_i2027_1_) : this(p_i2027_1_, 4, 0, 0, false)
 		{

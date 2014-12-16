@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 
 	public class BlockIce : BlockBreakable
 	{
-		private const string __OBFID = "CL_00000259";
+		
 
 		public BlockIce() : base("ice", Material.ice, false)
 		{

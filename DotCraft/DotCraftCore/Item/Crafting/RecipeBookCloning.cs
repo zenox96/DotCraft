@@ -9,7 +9,7 @@ namespace DotCraftCore.Item.Crafting
 
 	public class RecipeBookCloning : IRecipe
 	{
-		private const string __OBFID = "CL_00000081";
+		
 
 ///    
 ///     <summary> * Used to check if a recipe matches current crafting inventory </summary>

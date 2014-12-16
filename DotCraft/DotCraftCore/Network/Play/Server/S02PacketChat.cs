@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private IChatComponent field_148919_a;
 		private bool field_148918_b;
-		private const string __OBFID = "CL_00001289";
+		
 
 		public S02PacketChat()
 		{

@@ -49,7 +49,7 @@ namespace DotCraftCore.Entity
 		private Set trackedEntities = new HashSet();
 		private IntHashMap trackedEntityIDs = new IntHashMap();
 		private int entityViewDistance;
-		private const string __OBFID = "CL_00001431";
+		
 
 		public EntityTracker(WorldServer p_i1516_1_)
 		{
@@ -208,7 +208,7 @@ namespace DotCraftCore.Entity
 				CrashReport var6 = CrashReport.makeCrashReport(var11, "Adding entity to track");
 				CrashReportCategory var7 = var6.makeCategory("Entity To Track");
 				var7.addCrashSection("Tracking range", p_72785_2_ + " blocks");
-				var7.addCrashSectionCallable("Update interval", new Callable() { private static final string __OBFID = "CL_00001432"; public string call() { string var1 = "Once per " + p_72785_3_ + " ticks"; if (p_72785_3_ == int.MaxValue) { var1 = "Maximum (" + var1 + ")"; } return var1; } });
+				var7.addCrashSectionCallable("Update interval", new Callable() {  public string call() { string var1 = "Once per " + p_72785_3_ + " ticks"; if (p_72785_3_ == int.MaxValue) { var1 = "Maximum (" + var1 + ")"; } return var1; } });
 				p_72785_1_.addEntityCrashInfo(var7);
 				CrashReportCategory var8 = var6.makeCategory("Entity That Is Already Tracked");
 				((EntityTrackerEntry)this.trackedEntityIDs.lookup(p_72785_1_.EntityId)).myEntity.addEntityCrashInfo(var8);

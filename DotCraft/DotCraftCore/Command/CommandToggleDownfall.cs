@@ -6,7 +6,7 @@ namespace DotCraftCore.Command
 
 	public class CommandToggleDownfall : CommandBase
 	{
-		private const string __OBFID = "CL_00001184";
+		
 
 		public virtual string CommandName
 		{

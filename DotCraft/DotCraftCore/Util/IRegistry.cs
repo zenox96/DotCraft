@@ -1,14 +1,14 @@
 namespace DotCraftCore.Util
 {
 
-	public interface IRegistry
+	public interface IRegistry<T, K>
 	{
-		object getObject(object p_82594_1_);
+		object getObject(T key);
 
 ///    
 ///     <summary> * Register an object on this registry. </summary>
 ///     
-		void putObject(object p_82595_1_, object p_82595_2_);
+		void putObject(T key, K value);
 	}
 
 }

@@ -13,7 +13,7 @@ namespace DotCraftCore.Entity.AI
 		private EntityLivingBase targetVillager;
 		private double field_75261_c;
 		private int playTime;
-		private const string __OBFID = "CL_00001605";
+		
 
 		public EntityAIPlay(EntityVillager p_i1646_1_, double p_i1646_2_)
 		{

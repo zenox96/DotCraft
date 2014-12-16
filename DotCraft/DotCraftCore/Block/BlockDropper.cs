@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	public class BlockDropper : BlockDispenser
 	{
 		private readonly IBehaviorDispenseItem field_149947_P = new BehaviorDefaultDispenseItem();
-		private const string __OBFID = "CL_00000233";
+		
 
 		public override void registerBlockIcons(IIconRegister p_149651_1_)
 		{

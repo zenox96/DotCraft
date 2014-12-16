@@ -10,7 +10,7 @@ namespace DotCraftCore.Command
 
 	public class CommandDefaultGameMode : CommandGameMode
 	{
-		private const string __OBFID = "CL_00000296";
+		
 
 		public override string CommandName
 		{

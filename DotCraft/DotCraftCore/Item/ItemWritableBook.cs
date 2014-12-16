@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemWritableBook : Item
 	{
-		private const string __OBFID = "CL_00000076";
+		
 
 		public ItemWritableBook()
 		{

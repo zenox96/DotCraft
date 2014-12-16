@@ -8,7 +8,7 @@ namespace DotCraftCore.Server.Management
 
 	public class UserListWhitelist : UserList
 	{
-		private const string __OBFID = "CL_00001871";
+		
 
 		public UserListWhitelist(File p_i1132_1_) : base(p_i1132_1_)
 		{

@@ -22,7 +22,7 @@ namespace DotCraftCore.Item
 
 	public class ItemMap : ItemMapBase
 	{
-		private const string __OBFID = "CL_00000047";
+		
 
 		protected internal ItemMap()
 		{

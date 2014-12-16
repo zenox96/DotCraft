@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockLever : Block
 	{
-		private const string __OBFID = "CL_00000264";
+		
 
 		protected internal BlockLever() : base(Material.circuits)
 		{

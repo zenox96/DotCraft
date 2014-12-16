@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149247_d;
 		private int field_149248_e;
 		private bool field_149246_f;
-		private const string __OBFID = "CL_00001307";
+		
 
 		public S28PacketEffect()
 		{

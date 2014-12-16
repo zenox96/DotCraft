@@ -15,7 +15,7 @@ namespace DotCraftCore.Block
 	public class BlockColored : Block
 	{
 		private IIcon[] field_150033_a;
-		private const string __OBFID = "CL_00000217";
+		
 
 		public BlockColored(Material p_i45398_1_) : base(p_i45398_1_)
 		{

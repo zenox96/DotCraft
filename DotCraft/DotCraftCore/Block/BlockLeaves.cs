@@ -21,7 +21,7 @@ namespace DotCraftCore.Block
 		internal int[] field_150128_a;
 		protected internal int field_150127_b;
 		protected internal IIcon[][] field_150129_M = new IIcon[2][];
-		private const string __OBFID = "CL_00000263";
+		
 
 		public BlockLeaves() : base(Material.leaves, false)
 		{

@@ -14,7 +14,7 @@ namespace DotCraftCore.Entity.AI
 		private EntityLiving field_151500_b;
 		private World field_151501_c;
 		internal int field_151502_a;
-		private const string __OBFID = "CL_00001582";
+		
 
 		public EntityAIEatGrass(EntityLiving p_i45314_1_)
 		{

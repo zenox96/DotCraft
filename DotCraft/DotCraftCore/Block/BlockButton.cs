@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockButton : Block
 	{
 		private readonly bool field_150047_a;
-		private const string __OBFID = "CL_00000209";
+		
 
 		protected internal BlockButton(bool p_i45396_1_) : base(Material.circuits)
 		{

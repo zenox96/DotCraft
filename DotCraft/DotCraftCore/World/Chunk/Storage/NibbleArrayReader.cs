@@ -6,7 +6,7 @@ namespace DotCraftCore.World.Chunk.Storage
 		public readonly sbyte[] data;
 		private readonly int depthBits;
 		private readonly int depthBitsPlusFour;
-		private const string __OBFID = "CL_00000376";
+		
 
 		public NibbleArrayReader(sbyte[] p_i1998_1_, int p_i1998_2_)
 		{

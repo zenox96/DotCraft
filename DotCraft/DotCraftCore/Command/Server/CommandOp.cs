@@ -12,7 +12,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandOp : CommandBase
 	{
-		private const string __OBFID = "CL_00000694";
+		
 
 		public virtual string CommandName
 		{

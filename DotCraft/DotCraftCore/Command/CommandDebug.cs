@@ -15,7 +15,7 @@ namespace DotCraftCore.Command
 		private static readonly Logger logger = LogManager.Logger;
 		private long field_147206_b;
 		private int field_147207_c;
-		private const string __OBFID = "CL_00000270";
+		
 
 		public virtual string CommandName
 		{

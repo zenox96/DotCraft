@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 	{
 		private readonly Set attributeInstanceSet = Sets.newHashSet();
 		protected internal readonly IDictionary descriptionToAttributeInstanceMap = new LowerStringMap();
-		private const string __OBFID = "CL_00001569";
+		
 
 		public override ModifiableAttributeInstance getAttributeInstance(IAttribute p_111151_1_)
 		{

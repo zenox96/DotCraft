@@ -23,7 +23,7 @@ namespace DotCraftCore.World.Chunk.Storage
 	public class AnvilSaveConverter : SaveFormatOld
 	{
 		private static readonly Logger logger = LogManager.Logger;
-		private const string __OBFID = "CL_00000582";
+		
 
 		public AnvilSaveConverter(File p_i2144_1_) : base(p_i2144_1_)
 		{
@@ -284,8 +284,8 @@ namespace DotCraftCore.World.Chunk.Storage
 		{
 			File var3 = new File(p_75810_1_, "region");
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
-//ORIGINAL LINE: File[] var4 = var3.listFiles(new FilenameFilter() { private static final String __OBFID = "CL_00000583"; public boolean accept(File p_accept_1_, String p_accept_2_) { return p_accept_2_.endsWith(".mcr"); } });
-			File[] var4 = var3.listFiles(new FilenameFilter() { private static string __OBFID = "CL_00000583"; public bool accept(File p_accept_1_, string p_accept_2_) { return p_accept_2_.EndsWith(".mcr"); } });
+//ORIGINAL LINE: File[] var4 = var3.listFiles(new FilenameFilter() {  public boolean accept(File p_accept_1_, String p_accept_2_) { return p_accept_2_.endsWith(".mcr"); } });
+			File[] var4 = var3.listFiles(new FilenameFilter() {  public bool accept(File p_accept_1_, string p_accept_2_) { return p_accept_2_.EndsWith(".mcr"); } });
 
 			if (var4 != null)
 			{

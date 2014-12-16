@@ -34,7 +34,7 @@ namespace DotCraftCore.Entity.AI
 		private double field_151497_i;
 		private double field_151495_j;
 		private double field_151496_k;
-		private const string __OBFID = "CL_00001595";
+		
 
 		public EntityAIAttackOnCollide(EntityCreature p_i1635_1_, Type p_i1635_2_, double p_i1635_3_, bool p_i1635_5_) : this(p_i1635_1_, p_i1635_3_, p_i1635_5_)
 		{

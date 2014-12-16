@@ -14,7 +14,7 @@ namespace DotCraftCore.Item.Crafting
 
 	/// <summary> Is a List of ItemStack that composes the recipe.  </summary>
 		private readonly IList recipeItems;
-		private const string __OBFID = "CL_00000094";
+		
 
 		public ShapelessRecipes(ItemStack p_i1918_1_, IList p_i1918_2_)
 		{

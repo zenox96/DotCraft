@@ -16,7 +16,7 @@ namespace DotCraftCore.Entity.Passive
 	{
 	/// <summary> Coordinates of where the bat spawned.  </summary>
 		private ChunkCoordinates spawnPosition;
-		private const string __OBFID = "CL_00001637";
+		
 
 		public EntityBat(World p_i1680_1_) : base(p_i1680_1_)
 		{

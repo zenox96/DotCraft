@@ -36,7 +36,7 @@ namespace DotCraftCore.Realms
 		private int textColor;
 		private int textColorUneditable;
 		private bool visible;
-		private const string __OBFID = "CL_00001858";
+		
 
 		public RealmsEditBox(int p_i1111_1_, int p_i1111_2_, int p_i1111_3_, int p_i1111_4_) : this(Minecraft.getMinecraft().fontRenderer, p_i1111_1_, p_i1111_2_, p_i1111_3_, p_i1111_4_)
 		{

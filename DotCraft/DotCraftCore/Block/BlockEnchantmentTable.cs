@@ -19,7 +19,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_149950_a;
 		private IIcon field_149949_b;
-		private const string __OBFID = "CL_00000235";
+		
 
 		protected internal BlockEnchantmentTable() : base(Material.rock)
 		{

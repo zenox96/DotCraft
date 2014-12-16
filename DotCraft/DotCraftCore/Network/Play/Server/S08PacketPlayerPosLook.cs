@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 		private float field_148936_d;
 		private float field_148937_e;
 		private bool field_148935_f;
-		private const string __OBFID = "CL_00001273";
+		
 
 		public S08PacketPlayerPosLook()
 		{

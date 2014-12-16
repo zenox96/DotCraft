@@ -16,7 +16,7 @@ namespace DotCraftCore.Scoreboard
 		private string colorSuffix = "";
 		private bool allowFriendlyFire = true;
 		private bool canSeeFriendlyInvisibles = true;
-		private const string __OBFID = "CL_00000616";
+		
 
 		public ScorePlayerTeam(Scoreboard p_i2308_1_, string p_i2308_2_)
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Handshake.Client
 		private string field_149598_b;
 		private int field_149599_c;
 		private EnumConnectionState field_149597_d;
-		private const string __OBFID = "CL_00001372";
+		
 
 		public C00Handshake()
 		{

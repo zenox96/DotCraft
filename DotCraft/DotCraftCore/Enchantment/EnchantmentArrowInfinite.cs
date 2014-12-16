@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentArrowInfinite : Enchantment
 	{
-		private const string __OBFID = "CL_00000100";
+		
 
 		public EnchantmentArrowInfinite(int p_i1921_1_, int p_i1921_2_) : base(p_i1921_1_, p_i1921_2_, EnumEnchantmentType.bow)
 		{

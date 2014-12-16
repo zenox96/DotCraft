@@ -18,7 +18,7 @@ namespace DotCraftCore.World.Chunk
 ///     <summary> * Log base 2 of the chunk height (128) * width (16); applied as a shift on X coordinate </summary>
 ///     
 		private readonly int depthBitsPlusFour;
-		private const string __OBFID = "CL_00000371";
+		
 
 		public NibbleArray(int p_i1992_1_, int p_i1992_2_)
 		{

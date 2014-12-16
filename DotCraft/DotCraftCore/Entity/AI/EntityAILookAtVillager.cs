@@ -9,7 +9,7 @@ namespace DotCraftCore.Entity.AI
 		private EntityIronGolem theGolem;
 		private EntityVillager theVillager;
 		private int lookTime;
-		private const string __OBFID = "CL_00001602";
+		
 
 		public EntityAILookAtVillager(EntityIronGolem p_i1643_1_)
 		{

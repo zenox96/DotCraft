@@ -9,7 +9,7 @@ namespace DotCraftCore.Network.Play.Server
 	public class S2EPacketCloseWindow : Packet
 	{
 		private int field_148896_a;
-		private const string __OBFID = "CL_00001292";
+		
 
 		public S2EPacketCloseWindow()
 		{

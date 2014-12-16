@@ -6,7 +6,7 @@ namespace DotCraftCore.Realms
 	public class RealmsScrolledSelectionList
 	{
 		private readonly GuiSlotRealmsProxy proxy;
-		private const string __OBFID = "CL_00001863";
+		
 
 		public RealmsScrolledSelectionList(int p_i1119_1_, int p_i1119_2_, int p_i1119_3_, int p_i1119_4_, int p_i1119_5_)
 		{

@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149095_b;
 		private int field_149096_c;
 		private int field_149094_d;
-		private const string __OBFID = "CL_00001319";
+		
 
 		public S0APacketUseBed()
 		{

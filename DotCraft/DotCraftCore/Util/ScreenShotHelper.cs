@@ -26,7 +26,7 @@ namespace DotCraftCore.Util
 ///     <summary> * The built-up array that contains all the pixel values returned by OpenGL. </summary>
 ///     
 		private static int[] pixelValues;
-		private const string __OBFID = "CL_00000656";
+		
 
 ///    
 ///     <summary> * Saves a screenshot in the game directory with a time-stamped filename.  Args: gameDirectory,

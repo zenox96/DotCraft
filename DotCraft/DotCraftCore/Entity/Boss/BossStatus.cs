@@ -7,7 +7,7 @@ namespace DotCraftCore.Entity.Boss
 		public static int statusBarTime;
 		public static string bossName;
 		public static bool hasColorModifier;
-		private const string __OBFID = "CL_00000941";
+		
 
 		public static void setBossStatus(IBossDisplayData p_82824_0_, bool p_82824_1_)
 		{

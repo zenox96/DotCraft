@@ -14,7 +14,7 @@ namespace DotCraftCore.TileEntity
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private final CommandBlockLogic field_145994_a = new CommandBlockLogic()
 //	{
-//		private static final String __OBFID = "CL_00000348";
+//		
 //		public ChunkCoordinates getPlayerCoordinates()
 //		{
 //			return new ChunkCoordinates(TileEntityCommandBlock.field_145851_c, TileEntityCommandBlock.field_145848_d, TileEntityCommandBlock.field_145849_e);
@@ -43,7 +43,7 @@ namespace DotCraftCore.TileEntity
 //			p_145757_1_.writeInt(TileEntityCommandBlock.field_145849_e);
 //		}
 //	};
-		private const string __OBFID = "CL_00000347";
+		
 
 		public override void writeToNBT(NBTTagCompound p_145841_1_)
 		{

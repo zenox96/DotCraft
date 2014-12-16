@@ -7,7 +7,7 @@ namespace DotCraftCore.Item
 
 	public class ItemSoup : ItemFood
 	{
-		private const string __OBFID = "CL_00001778";
+		
 
 		public ItemSoup(int p_i45330_1_) : base(p_i45330_1_, false)
 		{

@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemSaddle : Item
 	{
-		private const string __OBFID = "CL_00000059";
+		
 
 		public ItemSaddle()
 		{

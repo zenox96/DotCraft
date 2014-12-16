@@ -18,7 +18,7 @@ namespace DotCraftCore.World
 
 	/// <summary> The WorldServer object.  </summary>
 		private WorldServer theWorldServer;
-		private const string __OBFID = "CL_00001433";
+		
 
 		public WorldManager(MinecraftServer p_i1517_1_, WorldServer p_i1517_2_)
 		{

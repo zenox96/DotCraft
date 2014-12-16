@@ -10,7 +10,7 @@ namespace DotCraftCore.Inventory
 	public class InventoryEnderChest : InventoryBasic
 	{
 		private TileEntityEnderChest associatedChest;
-		private const string __OBFID = "CL_00001759";
+		
 
 		public InventoryEnderChest() : base("container.enderchest", false, 27)
 		{

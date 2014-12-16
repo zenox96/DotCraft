@@ -12,7 +12,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public class EntityCaveSpider : EntitySpider
 	{
-		private const string __OBFID = "CL_00001683";
+		
 
 		public EntityCaveSpider(World p_i1732_1_) : base(p_i1732_1_)
 		{

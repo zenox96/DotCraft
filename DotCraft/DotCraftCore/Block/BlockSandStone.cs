@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 		private IIcon[] field_150158_M;
 		private IIcon field_150159_N;
 		private IIcon field_150160_O;
-		private const string __OBFID = "CL_00000304";
+		
 
 		public BlockSandStone() : base(Material.rock)
 		{

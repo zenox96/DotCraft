@@ -14,7 +14,7 @@ namespace DotCraftCore.Item
 	public class ItemFireworkCharge : Item
 	{
 		private IIcon field_150904_a;
-		private const string __OBFID = "CL_00000030";
+		
 
 ///    
 ///     <summary> * Gets an icon index based on an item's damage value and the given render pass </summary>

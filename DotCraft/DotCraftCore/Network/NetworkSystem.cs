@@ -49,7 +49,7 @@ namespace DotCraftCore.Network
 
 	/// <summary> A list containing all NetworkManager instances of all endpoints  </summary>
 		private readonly IList networkManagers = Collections.synchronizedList(new ArrayList());
-		private const string __OBFID = "CL_00001447";
+		
 
 		public NetworkSystem(MinecraftServer p_i45292_1_)
 		{
@@ -68,7 +68,7 @@ namespace DotCraftCore.Network
 
 			lock (this.endpoints)
 			{
-				this.endpoints.Add(((ServerBootstrap)((ServerBootstrap)(new ServerBootstrap()).channel(typeof(NioServerSocketChannel))).childHandler(new ChannelInitializer() { private static final string __OBFID = "CL_00001448"; protected void initChannel(Channel p_initChannel_1_) { try { p_initChannel_1_.config().setOption(ChannelOption.IP_TOS, Convert.ToInt32(24)); } catch (ChannelException var4) { ; } try { p_initChannel_1_.config().setOption(ChannelOption.TCP_NODELAY, Convert.ToBoolean(false)); } catch (ChannelException var3) { ; } p_initChannel_1_.pipeline().addLast("timeout", new ReadTimeoutHandler(30)).addLast("legacy_query", new PingResponseHandler(NetworkSystem.this)).addLast("splitter", new MessageDeserializer2()).addLast("decoder", new MessageDeserializer(NetworkManager.field_152462_h)).addLast("prepender", new MessageSerializer2()).addLast("encoder", new MessageSerializer(NetworkManager.field_152462_h)); NetworkManager var2 = new NetworkManager(false); NetworkSystem.networkManagers.add(var2); p_initChannel_1_.pipeline().addLast("packet_handler", var2); var2.setNetHandler(new NetHandlerHandshakeTCP(NetworkSystem.mcServer, var2)); } }).group(eventLoops).localAddress(p_151265_1_, p_151265_2_)).bind().syncUninterruptibly());
+				this.endpoints.Add(((ServerBootstrap)((ServerBootstrap)(new ServerBootstrap()).channel(typeof(NioServerSocketChannel))).childHandler(new ChannelInitializer() {  protected void initChannel(Channel p_initChannel_1_) { try { p_initChannel_1_.config().setOption(ChannelOption.IP_TOS, Convert.ToInt32(24)); } catch (ChannelException var4) { ; } try { p_initChannel_1_.config().setOption(ChannelOption.TCP_NODELAY, Convert.ToBoolean(false)); } catch (ChannelException var3) { ; } p_initChannel_1_.pipeline().addLast("timeout", new ReadTimeoutHandler(30)).addLast("legacy_query", new PingResponseHandler(NetworkSystem.this)).addLast("splitter", new MessageDeserializer2()).addLast("decoder", new MessageDeserializer(NetworkManager.field_152462_h)).addLast("prepender", new MessageSerializer2()).addLast("encoder", new MessageSerializer(NetworkManager.field_152462_h)); NetworkManager var2 = new NetworkManager(false); NetworkSystem.networkManagers.add(var2); p_initChannel_1_.pipeline().addLast("packet_handler", var2); var2.setNetHandler(new NetHandlerHandshakeTCP(NetworkSystem.mcServer, var2)); } }).group(eventLoops).localAddress(p_151265_1_, p_151265_2_)).bind().syncUninterruptibly());
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace DotCraftCore.Network
 
 			lock (this.endpoints)
 			{
-				var1 = ((ServerBootstrap)((ServerBootstrap)(new ServerBootstrap()).channel(typeof(LocalServerChannel))).childHandler(new ChannelInitializer() { private static final string __OBFID = "CL_00001449"; protected void initChannel(Channel p_initChannel_1_) { NetworkManager var2 = new NetworkManager(false); var2.setNetHandler(new NetHandlerHandshakeMemory(NetworkSystem.mcServer, var2)); NetworkSystem.networkManagers.add(var2); p_initChannel_1_.pipeline().addLast("packet_handler", var2); } }).group(eventLoops).localAddress(LocalAddress.ANY)).bind().syncUninterruptibly();
+				var1 = ((ServerBootstrap)((ServerBootstrap)(new ServerBootstrap()).channel(typeof(LocalServerChannel))).childHandler(new ChannelInitializer() {  protected void initChannel(Channel p_initChannel_1_) { NetworkManager var2 = new NetworkManager(false); var2.setNetHandler(new NetHandlerHandshakeMemory(NetworkSystem.mcServer, var2)); NetworkSystem.networkManagers.add(var2); p_initChannel_1_.pipeline().addLast("packet_handler", var2); } }).group(eventLoops).localAddress(LocalAddress.ANY)).bind().syncUninterruptibly();
 				this.endpoints.Add(var1);
 			}
 
@@ -147,7 +147,7 @@ namespace DotCraftCore.Network
 							{
 								CrashReport var10 = CrashReport.makeCrashReport(var8, "Ticking memory connection");
 								CrashReportCategory var6 = var10.makeCategory("Ticking connection");
-								var6.addCrashSectionCallable("Connection", new Callable() { private static final string __OBFID = "CL_00001450"; public string call() { return var3.ToString(); } });
+								var6.addCrashSectionCallable("Connection", new Callable() {  public string call() { return var3.ToString(); } });
 								throw new ReportedException(var10);
 							}
 
@@ -155,7 +155,7 @@ namespace DotCraftCore.Network
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: final ChatComponentText var5 = new ChatComponentText("Internal server error");
 							ChatComponentText var5 = new ChatComponentText("Internal server error");
-							var3.scheduleOutboundPacket(new S40PacketDisconnect(var5), new GenericFutureListener[] {new GenericFutureListener() { private static final string __OBFID = "CL_00001451"; public void operationComplete(Future p_operationComplete_1_) { var3.closeChannel(var5); } } });
+							var3.scheduleOutboundPacket(new S40PacketDisconnect(var5), new GenericFutureListener[] {new GenericFutureListener() {  public void operationComplete(Future p_operationComplete_1_) { var3.closeChannel(var5); } } });
 							var3.disableAutoRead();
 						}
 					}

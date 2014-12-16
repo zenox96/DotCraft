@@ -11,7 +11,7 @@ namespace DotCraftCore.Entity.Item
 
 	public class EntityEnderPearl : EntityThrowable
 	{
-		private const string __OBFID = "CL_00001725";
+		
 
 		public EntityEnderPearl(World p_i1782_1_) : base(p_i1782_1_)
 		{

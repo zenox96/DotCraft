@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.AI.Attributes
 		private readonly string unlocalizedName;
 		private readonly double defaultValue;
 		private bool shouldWatch;
-		private const string __OBFID = "CL_00001565";
+		
 
 		protected internal BaseAttribute(string p_i1607_1_, double p_i1607_2_)
 		{

@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity
 
 	public abstract class EntityFlying : EntityLiving
 	{
-		private const string __OBFID = "CL_00001545";
+		
 
 		public EntityFlying(World p_i1587_1_) : base(p_i1587_1_)
 		{

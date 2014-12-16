@@ -44,7 +44,7 @@ namespace DotCraftCore.Entity.Passive
 ///     
 		private int sheepTimer;
 		private EntityAIEatGrass field_146087_bs = new EntityAIEatGrass(this);
-		private const string __OBFID = "CL_00001648";
+		
 
 		public EntitySheep(World p_i1691_1_) : base(p_i1691_1_)
 		{

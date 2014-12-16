@@ -15,7 +15,7 @@ namespace DotCraftCore.Network.Play.Server
 		private EnumDifficulty field_149086_b;
 		private WorldSettings.GameType field_149087_c;
 		private WorldType field_149085_d;
-		private const string __OBFID = "CL_00001322";
+		
 
 		public S07PacketRespawn()
 		{

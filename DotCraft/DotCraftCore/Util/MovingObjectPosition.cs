@@ -28,7 +28,7 @@ namespace DotCraftCore.Util
 
 	/// <summary> The hit entity  </summary>
 		public Entity entityHit;
-		private const string __OBFID = "CL_00000610";
+		
 
 		public MovingObjectPosition(int p_i2303_1_, int p_i2303_2_, int p_i2303_3_, int p_i2303_4_, Vec3 p_i2303_5_) : this(p_i2303_1_, p_i2303_2_, p_i2303_3_, p_i2303_4_, p_i2303_5_, true)
 		{
@@ -71,7 +71,7 @@ namespace DotCraftCore.Util
 
 			@private static final MovingObjectPosition.MovingObjectType[] $VALUES = new MovingObjectPosition.MovingObjectType[]{MISS, BLOCK, ENTITY
 		}
-			private const string __OBFID = "CL_00000611";
+			
 
 			private MovingObjectType(string p_i2302_1_, int p_i2302_2_)
 			{

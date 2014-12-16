@@ -12,7 +12,7 @@ namespace DotCraftCore.Item
 	public class ItemDoor : Item
 	{
 		private Material doorMaterial;
-		private const string __OBFID = "CL_00000020";
+		
 
 		public ItemDoor(Material p_i45334_1_)
 		{

@@ -15,7 +15,7 @@ namespace DotCraftCore.World.Chunk
 
 	public class EmptyChunk : Chunk
 	{
-		private const string __OBFID = "CL_00000372";
+		
 
 		public EmptyChunk(World p_i1994_1_, int p_i1994_2_, int p_i1994_3_) : base(p_i1994_1_, p_i1994_2_, p_i1994_3_)
 		{

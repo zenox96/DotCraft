@@ -184,7 +184,7 @@ namespace DotCraftCore.Init
 		public static readonly Item record_ward = (Item)Item.itemRegistry.getObject("record_ward");
 		public static readonly Item record_11 = (Item)Item.itemRegistry.getObject("record_11");
 		public static readonly Item record_wait = (Item)Item.itemRegistry.getObject("record_wait");
-		private const string __OBFID = "CL_00000044";
+		
 	}
 
 }

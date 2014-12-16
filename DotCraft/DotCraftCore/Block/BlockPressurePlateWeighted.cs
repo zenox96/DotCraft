@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 	public class BlockPressurePlateWeighted : BlockBasePressurePlate
 	{
 		private readonly int field_150068_a;
-		private const string __OBFID = "CL_00000334";
+		
 
 		protected internal BlockPressurePlateWeighted(string p_i45436_1_, Material p_i45436_2_, int p_i45436_3_) : base(p_i45436_1_, p_i45436_2_)
 		{

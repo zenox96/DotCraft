@@ -3,7 +3,7 @@ namespace DotCraftCore.Enchantment
 
 	public class EnchantmentWaterWorker : Enchantment
 	{
-		private const string __OBFID = "CL_00000124";
+		
 
 		public EnchantmentWaterWorker(int p_i1939_1_, int p_i1939_2_) : base(p_i1939_1_, p_i1939_2_, EnumEnchantmentType.armor_head)
 		{

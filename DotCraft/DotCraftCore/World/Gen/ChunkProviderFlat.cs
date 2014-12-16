@@ -34,7 +34,7 @@ namespace DotCraftCore.World.Gen
 		private readonly bool hasDungeons;
 		private WorldGenLakes waterLakeGenerator;
 		private WorldGenLakes lavaLakeGenerator;
-		private const string __OBFID = "CL_00000391";
+		
 
 		public ChunkProviderFlat(World p_i2004_1_, long p_i2004_2_, bool p_i2004_4_, string p_i2004_5_)
 		{

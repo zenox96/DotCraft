@@ -8,7 +8,7 @@ namespace DotCraftCore.Realms
 
 	public class Realms
 	{
-		private const string __OBFID = "CL_00001892";
+		
 
 		public static bool isTouchScreen()
 		{

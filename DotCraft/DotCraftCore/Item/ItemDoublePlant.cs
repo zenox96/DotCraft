@@ -8,7 +8,7 @@ namespace DotCraftCore.Item
 
 	public class ItemDoublePlant : ItemMultiTexture
 	{
-		private const string __OBFID = "CL_00000021";
+		
 
 		public ItemDoublePlant(Block p_i45335_1_, BlockDoublePlant p_i45335_2_, string[] p_i45335_3_) : base(p_i45335_1_, p_i45335_2_, p_i45335_3_)
 		{

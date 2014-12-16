@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	public class BlockJukebox : BlockContainer
 	{
 		private IIcon field_149927_a;
-		private const string __OBFID = "CL_00000260";
+		
 
 		protected internal BlockJukebox() : base(Material.wood)
 		{
@@ -136,7 +136,7 @@ namespace DotCraftCore.Block
 		public class TileEntityJukebox : TileEntity
 		{
 			private ItemStack field_145858_a;
-			private const string __OBFID = "CL_00000261";
+			
 
 			public virtual void readFromNBT(NBTTagCompound p_145839_1_)
 			{

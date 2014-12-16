@@ -11,7 +11,7 @@ namespace DotCraftCore.World.Gen.Feature
 	public class WorldGenLiquids : WorldGenerator
 	{
 		private Block field_150521_a;
-		private const string __OBFID = "CL_00000434";
+		
 
 		public WorldGenLiquids(Block p_i45465_1_)
 		{

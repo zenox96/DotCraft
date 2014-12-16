@@ -18,7 +18,7 @@ namespace DotCraftCore.Block
 	public class BlockEndPortal : BlockContainer
 	{
 		public static bool field_149948_a;
-		private const string __OBFID = "CL_00000236";
+		
 
 		protected internal BlockEndPortal(Material p_i45404_1_) : base(p_i45404_1_)
 		{

@@ -16,7 +16,7 @@ namespace DotCraftCore.Item
 	{
 	/// <summary> field for checking if the bucket has been filled.  </summary>
 		private Block isFull;
-		private const string __OBFID = "CL_00000000";
+		
 
 		public ItemBucket(Block p_i45331_1_)
 		{

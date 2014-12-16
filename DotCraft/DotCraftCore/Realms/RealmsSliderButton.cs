@@ -13,7 +13,7 @@ namespace DotCraftCore.Realms
 		private readonly float minValue;
 		private readonly float maxValue;
 		private int steps;
-		private const string __OBFID = "CL_00001834";
+		
 
 		public RealmsSliderButton(int p_i1056_1_, int p_i1056_2_, int p_i1056_3_, int p_i1056_4_, int p_i1056_5_, int p_i1056_6_) : this(p_i1056_1_, p_i1056_2_, p_i1056_3_, p_i1056_4_, p_i1056_6_, 0, 1.0F, (float)p_i1056_5_)
 		{

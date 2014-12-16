@@ -13,7 +13,7 @@ namespace DotCraftCore.Block
 
 	public class BlockTrapDoor : Block
 	{
-		private const string __OBFID = "CL_00000327";
+		
 
 		protected internal BlockTrapDoor(Material p_i45434_1_) : base(p_i45434_1_)
 		{

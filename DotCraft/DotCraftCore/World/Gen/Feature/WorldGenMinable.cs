@@ -15,7 +15,7 @@ namespace DotCraftCore.World.Gen.Feature
 	/// <summary> The number of blocks to generate.  </summary>
 		private int numberOfBlocks;
 		private Block field_150518_c;
-		private const string __OBFID = "CL_00000426";
+		
 
 		public WorldGenMinable(Block p_i45459_1_, int p_i45459_2_) : this(p_i45459_1_, p_i45459_2_, Blocks.stone)
 		{

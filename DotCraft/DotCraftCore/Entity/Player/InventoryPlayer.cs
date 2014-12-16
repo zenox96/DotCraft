@@ -39,7 +39,7 @@ namespace DotCraftCore.Entity.Player
 ///     * it and reset the value. </summary>
 ///     
 		public bool inventoryChanged;
-		private const string __OBFID = "CL_00001709";
+		
 
 		public InventoryPlayer(EntityPlayer p_i1750_1_)
 		{
@@ -444,7 +444,7 @@ namespace DotCraftCore.Entity.Player
 					CrashReportCategory var4 = var3.makeCategory("Item being added");
 					var4.addCrashSection("Item ID", Convert.ToInt32(Item.getIdFromItem(p_70441_1_.Item)));
 					var4.addCrashSection("Item data", Convert.ToInt32(p_70441_1_.ItemDamage));
-					var4.addCrashSectionCallable("Item name", new Callable() { private static final string __OBFID = "CL_00001710"; public string call() { return p_70441_1_.DisplayName; } });
+					var4.addCrashSectionCallable("Item name", new Callable() {  public string call() { return p_70441_1_.DisplayName; } });
 					throw new ReportedException(var3);
 				}
 			}

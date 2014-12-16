@@ -20,7 +20,7 @@ namespace DotCraftCore.Inventory
 
 	/// <summary> "Instance" of the Merchant.  </summary>
 		private readonly IMerchant theMerchant;
-		private const string __OBFID = "CL_00001758";
+		
 
 		public SlotMerchantResult(EntityPlayer p_i1822_1_, IMerchant p_i1822_2_, InventoryMerchant p_i1822_3_, int p_i1822_4_, int p_i1822_5_, int p_i1822_6_) : base(p_i1822_3_, p_i1822_4_, p_i1822_5_, p_i1822_6_)
 		{

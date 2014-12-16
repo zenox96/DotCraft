@@ -7,7 +7,7 @@ namespace DotCraftCore.NBT
 	{
 	/// <summary> The float value for the tag.  </summary>
 		private float data;
-		private const string __OBFID = "CL_00001220";
+		
 
 		internal NBTTagFloat()
 		{

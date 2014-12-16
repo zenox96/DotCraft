@@ -14,7 +14,7 @@ namespace DotCraftCore.Network
 		private static readonly Marker field_152479_b = MarkerManager.getMarker("NETSTAT_MARKER", NetworkManager.field_152461_c);
 		private NetworkStatistics.Tracker field_152480_c = new NetworkStatistics.Tracker();
 		private NetworkStatistics.Tracker field_152481_d = new NetworkStatistics.Tracker();
-		private const string __OBFID = "CL_00001897";
+		
 
 		public virtual void func_152469_a(int p_152469_1_, long p_152469_2_)
 		{
@@ -80,7 +80,7 @@ namespace DotCraftCore.Network
 		{
 			private readonly int field_152482_a;
 			private readonly NetworkStatistics.PacketStatData field_152483_b;
-			private const string __OBFID = "CL_00001895";
+			
 
 			public PacketStat(int p_i1188_1_, NetworkStatistics.PacketStatData p_i1188_2_)
 			{
@@ -99,7 +99,7 @@ namespace DotCraftCore.Network
 			private readonly long field_152496_a;
 			private readonly int field_152497_b;
 			private readonly double field_152498_c;
-			private const string __OBFID = "CL_00001893";
+			
 
 			private PacketStatData(long p_i1184_1_, int p_i1184_3_, double p_i1184_4_)
 			{
@@ -136,7 +136,7 @@ namespace DotCraftCore.Network
 		internal class Tracker
 		{
 			private AtomicReference[] field_152490_a = new AtomicReference[100];
-			private const string __OBFID = "CL_00001894";
+			
 
 			public Tracker()
 			{

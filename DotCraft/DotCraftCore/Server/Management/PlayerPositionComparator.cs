@@ -7,7 +7,7 @@ namespace DotCraftCore.Server.Management
 	public class PlayerPositionComparator : IComparer
 	{
 		private readonly ChunkCoordinates theChunkCoordinates;
-		private const string __OBFID = "CL_00001422";
+		
 
 		public PlayerPositionComparator(ChunkCoordinates p_i1499_1_)
 		{

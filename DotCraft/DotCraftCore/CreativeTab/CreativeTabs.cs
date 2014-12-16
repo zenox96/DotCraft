@@ -2,7 +2,6 @@ using System.Collections;
 
 namespace DotCraftCore.CreativeTab
 {
-
 	using Enchantment = DotCraftCore.Enchantment.Enchantment;
 	using EnchantmentData = DotCraftCore.Enchantment.EnchantmentData;
 	using EnumEnchantmentType = DotCraftCore.Enchantment.EnumEnchantmentType;
@@ -11,83 +10,83 @@ namespace DotCraftCore.CreativeTab
 	using Item = DotCraftCore.Item.Item;
 	using ItemStack = DotCraftCore.Item.ItemStack;
 
-	public abstract class CreativeTabs
+    public partial class CreativeTabs
+    {
+        public static readonly CreativeTabs[] creativeTabArray = new CreativeTabs[12];
+
+        public static readonly CreativeTabs tabBlock = new CreativeTabs(0, "buildingBlocks", new TabIconItemDelegate(() => Item.getItemFromBlock(Blocks.brick_block)));
+        public static readonly CreativeTabs tabBlock = new CreativeTabs(0, "buildingBlocks", new TabIconItemDelegate(() => Item.getItemFromBlock(Blocks.brick_block)));
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabDecorations = new CreativeTabs(1, "decorations")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Item.getItemFromBlock(Blocks.double_plant);
+        //		}
+        //		public int func_151243_f()
+        //		{
+        //			return 5;
+        //		}
+        //	};
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabRedstone = new CreativeTabs(2, "redstone")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Items.redstone;
+        //		}
+        //	};
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabTransport = new CreativeTabs(3, "transportation")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Item.getItemFromBlock(Blocks.golden_rail);
+        //		}
+        //	};
+        /*public static readonly CreativeTabs tabMisc = (new CreativeTabs(4, "misc") {  public Item TabIconItem { return Items.lava_bucket; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.all});
+        public static readonly CreativeTabs tabAllSearch = (new CreativeTabs(5, "search") {  public Item TabIconItem { return Items.compass; } }).BackgroundImageName = "item_search.png";
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabFood = new CreativeTabs(6, "food")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Items.apple;
+        //		}
+        //	};
+                public static readonly CreativeTabs tabTools = (new CreativeTabs(7, "tools") {  public Item TabIconItem { return Items.iron_axe; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.digger, EnumEnchantmentType.fishing_rod, EnumEnchantmentType.breakable});
+                public static readonly CreativeTabs tabCombat = (new CreativeTabs(8, "combat") {  public Item TabIconItem { return Items.golden_sword; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.armor, EnumEnchantmentType.armor_feet, EnumEnchantmentType.armor_head, EnumEnchantmentType.armor_legs, EnumEnchantmentType.armor_torso, EnumEnchantmentType.bow, EnumEnchantmentType.weapon});
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabBrewing = new CreativeTabs(9, "brewing")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Items.potionitem;
+        //		}
+        //	};
+        //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
+        //		public static final CreativeTabs tabMaterials = new CreativeTabs(10, "materials")
+        //	{
+        //		
+        //		public Item getTabIconItem()
+        //		{
+        //			return Items.stick;
+        //		}
+        //	};
+        public static readonly CreativeTabs tabInventory = (new CreativeTabs(11, "inventory") {  public Item TabIconItem { return Item.getItemFromBlock(Blocks.chest); } }).setBackgroundImageName("inventory.png").setNoScrollbar().setNoTitle();*/
+    }
+
+	public partial class CreativeTabs
 	{
-		public static readonly CreativeTabs[] creativeTabArray = new CreativeTabs[12];
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabBlock = new CreativeTabs(0, "buildingBlocks")
-//	{
-//		private static final String __OBFID = "CL_00000006";
-//		public Item getTabIconItem()
-//		{
-//			return Item.getItemFromBlock(Blocks.brick_block);
-//		}
-//	};
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabDecorations = new CreativeTabs(1, "decorations")
-//	{
-//		private static final String __OBFID = "CL_00000010";
-//		public Item getTabIconItem()
-//		{
-//			return Item.getItemFromBlock(Blocks.double_plant);
-//		}
-//		public int func_151243_f()
-//		{
-//			return 5;
-//		}
-//	};
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabRedstone = new CreativeTabs(2, "redstone")
-//	{
-//		private static final String __OBFID = "CL_00000011";
-//		public Item getTabIconItem()
-//		{
-//			return Items.redstone;
-//		}
-//	};
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabTransport = new CreativeTabs(3, "transportation")
-//	{
-//		private static final String __OBFID = "CL_00000012";
-//		public Item getTabIconItem()
-//		{
-//			return Item.getItemFromBlock(Blocks.golden_rail);
-//		}
-//	};
-		public static readonly CreativeTabs tabMisc = (new CreativeTabs(4, "misc") { private static final string __OBFID = "CL_00000014"; public Item TabIconItem { return Items.lava_bucket; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.all});
-		public static readonly CreativeTabs tabAllSearch = (new CreativeTabs(5, "search") { private static final string __OBFID = "CL_00000015"; public Item TabIconItem { return Items.compass; } }).BackgroundImageName = "item_search.png";
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabFood = new CreativeTabs(6, "food")
-//	{
-//		private static final String __OBFID = "CL_00000016";
-//		public Item getTabIconItem()
-//		{
-//			return Items.apple;
-//		}
-//	};
-		public static readonly CreativeTabs tabTools = (new CreativeTabs(7, "tools") { private static final string __OBFID = "CL_00000017"; public Item TabIconItem { return Items.iron_axe; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.digger, EnumEnchantmentType.fishing_rod, EnumEnchantmentType.breakable});
-		public static readonly CreativeTabs tabCombat = (new CreativeTabs(8, "combat") { private static final string __OBFID = "CL_00000018"; public Item TabIconItem { return Items.golden_sword; } }).func_111229_a(new EnumEnchantmentType[] {EnumEnchantmentType.armor, EnumEnchantmentType.armor_feet, EnumEnchantmentType.armor_head, EnumEnchantmentType.armor_legs, EnumEnchantmentType.armor_torso, EnumEnchantmentType.bow, EnumEnchantmentType.weapon});
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabBrewing = new CreativeTabs(9, "brewing")
-//	{
-//		private static final String __OBFID = "CL_00000007";
-//		public Item getTabIconItem()
-//		{
-//			return Items.potionitem;
-//		}
-//	};
-//JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
-//		public static final CreativeTabs tabMaterials = new CreativeTabs(10, "materials")
-//	{
-//		private static final String __OBFID = "CL_00000008";
-//		public Item getTabIconItem()
-//		{
-//			return Items.stick;
-//		}
-//	};
-		public static readonly CreativeTabs tabInventory = (new CreativeTabs(11, "inventory") { private static final string __OBFID = "CL_00000009"; public Item TabIconItem { return Item.getItemFromBlock(Blocks.chest); } }).setBackgroundImageName("inventory.png").setNoScrollbar().setNoTitle();
 		private readonly int tabIndex;
 		private readonly string tabLabel;
+        private readonly TabIconItemDelegate tabIconDel;
+        private readonly IconBlockDamageDelegate iconDamageDel;
 
 	/// <summary> Texture to use.  </summary>
 		private string backgroundImageName = "items.png";
@@ -97,14 +96,27 @@ namespace DotCraftCore.CreativeTab
 		private bool drawTitle = true;
 		private EnumEnchantmentType[] field_111230_s;
 		private ItemStack field_151245_t;
-		private const string __OBFID = "CL_00000005";
 
-		public CreativeTabs(int p_i1853_1_, string p_i1853_2_)
+        public delegate Item TabIconItemDelegate();
+        public delegate int IconBlockDamageDelegate();
+
+		public CreativeTabs(int index, string label, TabIconItemDelegate tabIconItemDel)
 		{
-			this.tabIndex = p_i1853_1_;
-			this.tabLabel = p_i1853_2_;
-			creativeTabArray[p_i1853_1_] = this;
+			this.tabIndex = index;
+			this.tabLabel = label;
+			creativeTabArray[index] = this;
+            this.tabIconDel = tabIconItemDel;
+            this.iconDamageDel = new IconBlockDamageDelegate(() => 0);
 		}
+
+        public CreativeTabs(int index, string label, TabIconItemDelegate tabIconIconDel, IconBlockDamageDelegate iconBlockDamageDel)
+        {
+            this.tabIndex = index;
+            this.tabLabel = label;
+            creativeTabArray[index] = this;
+            this.tabIconDel = tabIconIconDel;
+            this.iconDamageDel = iconBlockDamageDel;
+        }
 
 		public virtual int TabIndex
 		{
@@ -139,19 +151,22 @@ namespace DotCraftCore.CreativeTab
 			{
 				if (this.field_151245_t == null)
 				{
-					this.field_151245_t = new ItemStack(this.TabIconItem, 1, this.func_151243_f());
+					this.field_151245_t = new ItemStack(TabIconItem(), 1, GetIconBlockDamage());
 				}
 	
 				return this.field_151245_t;
 			}
 		}
 
-		public abstract Item TabIconItem {get;}
+        public virtual Item TabIconItem()
+        {
+            return tabIconDel();
+        }
 
-		public virtual int func_151243_f()
-		{
-			return 0;
-		}
+        public virtual int GetIconBlockDamage()
+        {
+            return iconDamageDel();
+        }
 
 		public virtual string BackgroundImageName
 		{
@@ -162,10 +177,8 @@ namespace DotCraftCore.CreativeTab
 			set
 			{
 				this.backgroundImageName = value;
-				return this;
 			}
 		}
-
 
 		public virtual bool drawInForegroundOfTab()
 		{
@@ -203,7 +216,7 @@ namespace DotCraftCore.CreativeTab
 ///    
 ///     <summary> * returns tabIndex < 6 </summary>
 ///     
-		public virtual bool isTabInFirstRow()
+		public virtual bool isTabInFirstRow
 		{
 			get
 			{

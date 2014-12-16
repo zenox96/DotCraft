@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerAddMushroomIsland : GenLayer
 	{
-		private const string __OBFID = "CL_00000552";
+		
 
 		public GenLayerAddMushroomIsland(long p_i2120_1_, GenLayer p_i2120_3_) : base(p_i2120_1_)
 		{

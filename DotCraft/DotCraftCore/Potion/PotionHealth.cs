@@ -3,7 +3,7 @@ namespace DotCraftCore.Potion
 
 	public class PotionHealth : Potion
 	{
-		private const string __OBFID = "CL_00001527";
+		
 
 		public PotionHealth(int p_i1572_1_, bool p_i1572_2_, int p_i1572_3_) : base(p_i1572_1_, p_i1572_2_, p_i1572_3_)
 		{

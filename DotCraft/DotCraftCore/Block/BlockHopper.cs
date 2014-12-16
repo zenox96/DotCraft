@@ -29,7 +29,7 @@ namespace DotCraftCore.Block
 		private IIcon field_149921_b;
 		private IIcon field_149923_M;
 		private IIcon field_149924_N;
-		private const string __OBFID = "CL_00000257";
+		
 
 		public BlockHopper() : base(Material.iron)
 		{

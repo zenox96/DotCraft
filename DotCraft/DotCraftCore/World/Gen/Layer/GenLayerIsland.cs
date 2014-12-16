@@ -3,7 +3,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerIsland : GenLayer
 	{
-		private const string __OBFID = "CL_00000558";
+		
 
 		public GenLayerIsland(long p_i2124_1_) : base(p_i2124_1_)
 		{

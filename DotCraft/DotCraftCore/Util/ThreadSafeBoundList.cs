@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 		private readonly ReadWriteLock field_152761_c = new ReentrantReadWriteLock();
 		private int field_152762_d;
 		private int field_152763_e;
-		private const string __OBFID = "CL_00001868";
+		
 
 		public ThreadSafeBoundList(Type p_i1126_1_, int p_i1126_2_)
 		{

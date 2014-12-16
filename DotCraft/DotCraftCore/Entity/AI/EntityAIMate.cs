@@ -26,7 +26,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> The speed the creature moves at during mating behavior.  </summary>
 		internal double moveSpeed;
-		private const string __OBFID = "CL_00001578";
+		
 
 		public EntityAIMate(EntityAnimal p_i1619_1_, double p_i1619_2_)
 		{

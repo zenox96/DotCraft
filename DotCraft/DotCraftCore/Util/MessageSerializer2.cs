@@ -8,7 +8,7 @@ namespace DotCraftCore.Util
 
 	public class MessageSerializer2 : MessageToByteEncoder
 	{
-		private const string __OBFID = "CL_00001256";
+		
 
 		protected internal virtual void encode(ChannelHandlerContext p_encode_1_, ByteBuf p_encode_2_, ByteBuf p_encode_3_)
 		{

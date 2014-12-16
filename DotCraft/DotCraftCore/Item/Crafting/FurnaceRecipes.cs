@@ -18,7 +18,7 @@ namespace DotCraftCore.Item.Crafting
 	/// <summary> The list of smelting results.  </summary>
 		private IDictionary smeltingList = new Hashtable();
 		private IDictionary experienceList = new Hashtable();
-		private const string __OBFID = "CL_00000085";
+		
 
 ///    
 ///     <summary> * Used to call methods addSmelting and getSmeltingResult. </summary>

@@ -10,7 +10,7 @@ namespace DotCraftCore.Item
 
 	public class ItemLilyPad : ItemColored
 	{
-		private const string __OBFID = "CL_00000074";
+		
 
 		public ItemLilyPad(Block p_i45357_1_) : base(p_i45357_1_, false)
 		{

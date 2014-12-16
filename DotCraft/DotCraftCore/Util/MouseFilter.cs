@@ -6,7 +6,7 @@ namespace DotCraftCore.Util
 		private float field_76336_a;
 		private float field_76334_b;
 		private float field_76335_c;
-		private const string __OBFID = "CL_00001500";
+		
 
 ///    
 ///     <summary> * Smooths mouse input </summary>

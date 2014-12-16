@@ -6,7 +6,7 @@ namespace DotCraftCore.Entity.Item
 
 	public class EntityMinecartEmpty : EntityMinecart
 	{
-		private const string __OBFID = "CL_00001677";
+		
 
 		public EntityMinecartEmpty(World p_i1722_1_) : base(p_i1722_1_)
 		{

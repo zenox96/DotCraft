@@ -14,7 +14,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148905_d;
 		private bool field_148906_e;
 		private int field_148904_f;
-		private const string __OBFID = "CL_00001293";
+		
 
 		public S2DPacketOpenWindow()
 		{

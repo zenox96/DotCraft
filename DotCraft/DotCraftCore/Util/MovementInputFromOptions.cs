@@ -6,7 +6,7 @@ namespace DotCraftCore.Util
 	public class MovementInputFromOptions : MovementInput
 	{
 		private GameSettings gameSettings;
-		private const string __OBFID = "CL_00000937";
+		
 
 		public MovementInputFromOptions(GameSettings p_i1237_1_)
 		{

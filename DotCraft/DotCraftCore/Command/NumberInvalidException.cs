@@ -3,7 +3,7 @@ namespace DotCraftCore.Command
 
 	public class NumberInvalidException : CommandException
 	{
-		private const string __OBFID = "CL_00001188";
+		
 
 		public NumberInvalidException() : this("commands.generic.num.invalid", new object[0])
 		{

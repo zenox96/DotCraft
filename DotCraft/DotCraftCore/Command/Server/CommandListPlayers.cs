@@ -11,7 +11,7 @@ namespace DotCraftCore.Command.Server
 
 	public class CommandListPlayers : CommandBase
 	{
-		private const string __OBFID = "CL_00000615";
+		
 
 		public virtual string CommandName
 		{

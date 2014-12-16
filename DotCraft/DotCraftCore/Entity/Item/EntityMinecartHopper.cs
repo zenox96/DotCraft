@@ -19,7 +19,7 @@ namespace DotCraftCore.Entity.Item
 	/// <summary> Whether this hopper minecart is being blocked by an activator rail.  </summary>
 		private bool isBlocked = true;
 		private int transferTicker = -1;
-		private const string __OBFID = "CL_00001676";
+		
 
 		public EntityMinecartHopper(World p_i1720_1_) : base(p_i1720_1_)
 		{

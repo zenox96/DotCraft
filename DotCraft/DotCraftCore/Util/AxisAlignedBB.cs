@@ -11,7 +11,7 @@ namespace DotCraftCore.Util
 		public double maxX;
 		public double maxY;
 		public double maxZ;
-		private const string __OBFID = "CL_00000607";
+		
 
 ///    
 ///     <summary> * Returns a bounding box with the specified bounds. Args: minX, minY, minZ, maxX, maxY, maxZ </summary>

@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 
 	public class BlockCompressedPowered : BlockCompressed
 	{
-		private const string __OBFID = "CL_00000287";
+		
 
 		public BlockCompressedPowered(MapColor p_i45416_1_) : base(p_i45416_1_)
 		{

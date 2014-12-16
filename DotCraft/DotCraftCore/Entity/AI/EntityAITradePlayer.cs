@@ -8,7 +8,7 @@ namespace DotCraftCore.Entity.AI
 	public class EntityAITradePlayer : EntityAIBase
 	{
 		private EntityVillager villager;
-		private const string __OBFID = "CL_00001617";
+		
 
 		public EntityAITradePlayer(EntityVillager p_i1658_1_)
 		{

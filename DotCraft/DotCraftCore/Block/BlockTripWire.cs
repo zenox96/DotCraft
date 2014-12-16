@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 
 	public class BlockTripWire : Block
 	{
-		private const string __OBFID = "CL_00000328";
+		
 
 		public BlockTripWire() : base(Material.circuits)
 		{

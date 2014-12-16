@@ -217,7 +217,7 @@ namespace DotCraftCore.Entity
 		private bool invulnerable;
 		protected internal UUID entityUniqueID;
 		public Entity.EnumEntitySize myEntitySize;
-		private const string __OBFID = "CL_00001533";
+		
 
 		public virtual int EntityId
 		{
@@ -1017,7 +1017,7 @@ namespace DotCraftCore.Entity
 
 		protected internal virtual void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
 		{
-			Block.SoundType var5 = p_145780_4_.stepSound;
+			SoundType var5 = p_145780_4_.stepSound;
 
 			if (this.worldObj.getBlock(p_145780_1_, p_145780_2_ + 1, p_145780_3_) == Blocks.snow_layer)
 			{
@@ -2515,9 +2515,9 @@ namespace DotCraftCore.Entity
 
 		public virtual void addEntityCrashInfo(CrashReportCategory p_85029_1_)
 		{
-			p_85029_1_.addCrashSectionCallable("Entity Type", new Callable() { private static final string __OBFID = "CL_00001534"; public string call() { return EntityList.getEntityString(Entity.this) + " (" + Entity.GetType().CanonicalName + ")"; } });
+			p_85029_1_.addCrashSectionCallable("Entity Type", new Callable() {  public string call() { return EntityList.getEntityString(Entity.this) + " (" + Entity.GetType().CanonicalName + ")"; } });
 			p_85029_1_.addCrashSection("Entity ID", Convert.ToInt32(this.field_145783_c));
-			p_85029_1_.addCrashSectionCallable("Entity Name", new Callable() { private static final string __OBFID = "CL_00001535"; public string call() { return Entity.CommandSenderName; } });
+			p_85029_1_.addCrashSectionCallable("Entity Name", new Callable() {  public string call() { return Entity.CommandSenderName; } });
 			p_85029_1_.addCrashSection("Entity\'s Exact location", string.Format("{0:F2}, {1:F2}, {2:F2}", new object[] {Convert.ToDouble(this.posX), Convert.ToDouble(this.posY), Convert.ToDouble(this.posZ)}));
 			p_85029_1_.addCrashSection("Entity\'s Block location", CrashReportCategory.getLocationInfo(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)));
 			p_85029_1_.addCrashSection("Entity\'s Momentum", string.Format("{0:F2}, {1:F2}, {2:F2}", new object[] {Convert.ToDouble(this.motionX), Convert.ToDouble(this.motionY), Convert.ToDouble(this.motionZ)}));
@@ -2573,7 +2573,7 @@ namespace DotCraftCore.Entity
 
 			@private static final Entity.EnumEntitySize[] $VALUES = new Entity.EnumEntitySize[]{SIZE_1, SIZE_2, SIZE_3, SIZE_4, SIZE_5, SIZE_6
 		}
-			private const string __OBFID = "CL_00001537";
+			
 
 			private EnumEntitySize(string p_i1581_1_, int p_i1581_2_)
 			{
@@ -2670,7 +2670,7 @@ namespace DotCraftCore.Entity
 		internal sealed class SwitchEnumEntitySize
 		{
 			internal static readonly int[] field_96565_a = new int[Entity.EnumEntitySize.values().length];
-			private const string __OBFID = "CL_00001536";
+			
 
 			static SwitchEnumEntitySize()
 			{

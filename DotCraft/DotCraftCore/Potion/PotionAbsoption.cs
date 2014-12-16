@@ -6,7 +6,7 @@ namespace DotCraftCore.Potion
 
 	public class PotionAbsoption : Potion
 	{
-		private const string __OBFID = "CL_00001524";
+		
 
 		protected internal PotionAbsoption(int p_i1569_1_, bool p_i1569_2_, int p_i1569_3_) : base(p_i1569_1_, p_i1569_2_, p_i1569_3_)
 		{

@@ -10,7 +10,7 @@ namespace DotCraftCore.Entity.Item
 
 	public class EntityExpBottle : EntityThrowable
 	{
-		private const string __OBFID = "CL_00001726";
+		
 
 		public EntityExpBottle(World p_i1785_1_) : base(p_i1785_1_)
 		{

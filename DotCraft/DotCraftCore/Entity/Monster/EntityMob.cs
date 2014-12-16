@@ -17,7 +17,7 @@ namespace DotCraftCore.Entity.Monster
 
 	public abstract class EntityMob : EntityCreature, IMob
 	{
-		private const string __OBFID = "CL_00001692";
+		
 
 		public EntityMob(World p_i1738_1_) : base(p_i1738_1_)
 		{

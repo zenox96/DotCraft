@@ -9,7 +9,7 @@ namespace DotCraftCore.Util
 ///     <summary> * Array of the special characters that are allowed in any text drawing of Minecraft. </summary>
 ///     
 		public static readonly char[] allowedCharacters = new char[] {'/', '\n', '\r', '\t', '\u0000', '\f', '`', '?', '*', '\\', '<', '>', '|', '\"', ':'};
-		private const string __OBFID = "CL_00001606";
+		
 
 		public static bool isAllowedCharacter(char p_71566_0_)
 		{

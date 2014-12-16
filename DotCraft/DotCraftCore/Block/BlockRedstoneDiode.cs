@@ -16,7 +16,7 @@ namespace DotCraftCore.Block
 	public abstract class BlockRedstoneDiode : BlockDirectional
 	{
 		protected internal readonly bool field_149914_a;
-		private const string __OBFID = "CL_00000226";
+		
 
 		protected internal BlockRedstoneDiode(bool p_i45400_1_) : base(Material.circuits)
 		{

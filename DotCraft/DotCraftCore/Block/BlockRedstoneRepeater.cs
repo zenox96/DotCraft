@@ -14,7 +14,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly double[] field_149973_b = new double[] { -0.0625D, 0.0625D, 0.1875D, 0.3125D};
 		private static readonly int[] field_149974_M = new int[] {1, 2, 3, 4};
-		private const string __OBFID = "CL_00000301";
+		
 
 		protected internal BlockRedstoneRepeater(bool p_i45424_1_) : base(p_i45424_1_)
 		{

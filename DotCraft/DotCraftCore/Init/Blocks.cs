@@ -203,7 +203,7 @@ namespace DotCraftCore.Init
 		public static readonly BlockDoublePlant double_plant = (BlockDoublePlant)Block.blockRegistry.getObject("double_plant");
 		public static readonly BlockStainedGlass stained_glass = (BlockStainedGlass)Block.blockRegistry.getObject("stained_glass");
 		public static readonly BlockStainedGlassPane stained_glass_pane = (BlockStainedGlassPane)Block.blockRegistry.getObject("stained_glass_pane");
-		private const string __OBFID = "CL_00000204";
+		
 	}
 
 }

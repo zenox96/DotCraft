@@ -36,7 +36,7 @@ namespace DotCraftCore.Server.Management
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //		private static final ParameterizedType field_152666_h = new ParameterizedType()
 //	{
-//		private static final String __OBFID = "CL_00001886";
+//		
 //		public Type[] getActualTypeArguments()
 //		{
 //			return new Type[] {PlayerProfileCache.ProfileEntry.class};
@@ -50,7 +50,7 @@ namespace DotCraftCore.Server.Management
 //			return null;
 //		}
 //	};
-		private const string __OBFID = "CL_00001888";
+		
 
 		public PlayerProfileCache(MinecraftServer p_i1171_1_, File p_i1171_2_)
 		{
@@ -70,7 +70,7 @@ namespace DotCraftCore.Server.Management
 //JAVA TO VB & C# CONVERTER TODO TASK: Anonymous inner classes are not converted to .NET:
 //			ProfileLookupCallback var3 = new ProfileLookupCallback()
 //		{
-//			private static final String __OBFID = "CL_00001887";
+//			
 //			public void onProfileLookupSucceeded(GameProfile p_onProfileLookupSucceeded_1_)
 //			{
 //				var2[0] = p_onProfileLookupSucceeded_1_;
@@ -320,7 +320,7 @@ namespace DotCraftCore.Server.Management
 		{
 			private readonly GameProfile field_152672_b;
 			private readonly DateTime field_152673_c;
-			private const string __OBFID = "CL_00001885";
+			
 
 			private ProfileEntry(GameProfile p_i1165_2_, DateTime p_i1165_3_)
 			{
@@ -345,7 +345,7 @@ namespace DotCraftCore.Server.Management
 
 		internal class Serializer : JsonDeserializer, JsonSerializer
 		{
-			private const string __OBFID = "CL_00001884";
+			
 
 			private Serializer()
 			{

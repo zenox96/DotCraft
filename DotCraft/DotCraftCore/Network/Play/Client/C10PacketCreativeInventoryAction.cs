@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Client
 	{
 		private int field_149629_a;
 		private ItemStack field_149628_b;
-		private const string __OBFID = "CL_00001369";
+		
 
 		public C10PacketCreativeInventoryAction()
 		{

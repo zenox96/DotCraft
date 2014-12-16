@@ -14,7 +14,7 @@ namespace DotCraftCore.Inventory
 		private readonly EntityPlayer thePlayer;
 		private MerchantRecipe currentRecipe;
 		private int currentRecipeIndex;
-		private const string __OBFID = "CL_00001756";
+		
 
 		public InventoryMerchant(EntityPlayer p_i1820_1_, IMerchant p_i1820_2_)
 		{

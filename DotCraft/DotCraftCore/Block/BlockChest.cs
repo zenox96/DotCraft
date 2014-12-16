@@ -28,7 +28,7 @@ namespace DotCraftCore.Block
 	{
 		private readonly Random field_149955_b = new Random();
 		public readonly int field_149956_a;
-		private const string __OBFID = "CL_00000214";
+		
 
 		protected internal BlockChest(int p_i45397_1_) : base(Material.wood)
 		{

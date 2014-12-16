@@ -23,7 +23,7 @@ namespace DotCraftCore.World.Biome
 		private static readonly WorldGenMegaPineTree field_150642_aF = new WorldGenMegaPineTree(false, true);
 		private static readonly WorldGenBlockBlob field_150643_aG = new WorldGenBlockBlob(Blocks.mossy_cobblestone, 0);
 		private int field_150644_aH;
-		private const string __OBFID = "CL_00000186";
+		
 
 		public BiomeGenTaiga(int p_i45385_1_, int p_i45385_2_) : base(p_i45385_1_)
 		{

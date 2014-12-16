@@ -3,7 +3,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerFuzzyZoom : GenLayerZoom
 	{
-		private const string __OBFID = "CL_00000556";
+		
 
 		public GenLayerFuzzyZoom(long p_i2123_1_, GenLayer p_i2123_3_) : base(p_i2123_1_, p_i2123_3_)
 		{

@@ -19,7 +19,7 @@ namespace DotCraftCore.Entity.Item
 ///     * dimensions) it preserves its contents. </summary>
 ///     
 		private bool dropContentsWhenDead = true;
-		private const string __OBFID = "CL_00001674";
+		
 
 		public EntityMinecartContainer(World p_i1716_1_) : base(p_i1716_1_)
 		{

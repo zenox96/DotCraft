@@ -15,7 +15,7 @@ namespace DotCraftCore.Entity.AI
 
 	/// <summary> Cache of entities which we cannot see  </summary>
 		internal IList unseenEntities = new ArrayList();
-		private const string __OBFID = "CL_00001628";
+		
 
 		public EntitySenses(EntityLiving p_i1672_1_)
 		{

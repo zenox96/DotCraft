@@ -41,7 +41,7 @@ namespace DotCraftCore.Entity.Monster
 ///     * will throw a potion at the target entity. </summary>
 ///     
 		private int witchAttackTimer;
-		private const string __OBFID = "CL_00001701";
+		
 
 		public EntityWitch(World p_i1744_1_) : base(p_i1744_1_)
 		{

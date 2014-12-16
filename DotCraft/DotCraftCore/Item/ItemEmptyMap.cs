@@ -11,7 +11,7 @@ namespace DotCraftCore.Item
 
 	public class ItemEmptyMap : ItemMapBase
 	{
-		private const string __OBFID = "CL_00000024";
+		
 
 		protected internal ItemEmptyMap()
 		{

@@ -7,7 +7,7 @@ namespace DotCraftCore.Block
 
 	public class BlockHardenedClay : Block
 	{
-		private const string __OBFID = "CL_00000255";
+		
 
 		public BlockHardenedClay() : base(Material.rock)
 		{

@@ -28,7 +28,7 @@ namespace DotCraftCore.Potion
 
 	/// <summary> An array of possible potion prefix names, as translation IDs.  </summary>
 		private static readonly string[] potionPrefixes;
-		private const string __OBFID = "CL_00000078";
+		
 
 ///    
 ///     <summary> * Is the bit given set to 1? </summary>

@@ -12,7 +12,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_149179_a;
 		private int field_149177_b;
 		private ItemStack field_149178_c;
-		private const string __OBFID = "CL_00001296";
+		
 
 		public S2FPacketSetSlot()
 		{

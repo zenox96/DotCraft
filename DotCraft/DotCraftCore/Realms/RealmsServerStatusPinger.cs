@@ -23,7 +23,7 @@ namespace DotCraftCore.Realms
 	{
 		private static readonly Logger LOGGER = LogManager.Logger;
 		private readonly IList connections = Collections.synchronizedList(new ArrayList());
-		private const string __OBFID = "CL_00001854";
+		
 
 //JAVA TO VB & C# CONVERTER WARNING: Method 'throws' clauses are not available in .NET:
 //ORIGINAL LINE: public void pingServer(final String p_pingServer_1_, final ServerPing p_pingServer_2_) throws IOException
@@ -37,7 +37,7 @@ namespace DotCraftCore.Realms
 //ORIGINAL LINE: final NetworkManager var4 = NetworkManager.provideLanClient(InetAddress.getByName(var3.getHost()), var3.getPort());
 				NetworkManager var4 = NetworkManager.provideLanClient(InetAddress.getByName(var3.Host), var3.Port);
 				this.connections.Add(var4);
-				var4.NetHandler = new INetHandlerStatusClient() { private bool field_154345_e = false; private static final string __OBFID = "CL_00001807"; public void handleServerInfo(S00PacketServerInfo p_147397_1_) { ServerStatusResponse var2 = p_147397_1_.func_149294_c(); if (var2.func_151318_b() != null) { p_pingServer_2_.nrOfPlayers = Convert.ToString(var2.func_151318_b().func_151333_b()); } var4.scheduleOutboundPacket(new C01PacketPing(Realms.currentTimeMillis()), new GenericFutureListener[0]); this.field_154345_e = true; } public void handlePong(S01PacketPong p_147398_1_) { var4.closeChannel(new ChatComponentText("Finished")); } public void onDisconnect(IChatComponent p_147231_1_) { if (!this.field_154345_e) { RealmsServerStatusPinger.LOGGER.error("Can\'t ping " + p_pingServer_1_ + ": " + p_147231_1_.UnformattedText); } } public void onConnectionStateTransition(EnumConnectionState p_147232_1_, EnumConnectionState p_147232_2_) { if (p_147232_2_ != EnumConnectionState.STATUS) { throw new UnsupportedOperationException("Unexpected change in protocol to " + p_147232_2_); } } public void onNetworkTick() {} };
+				var4.NetHandler = new INetHandlerStatusClient() { private bool field_154345_e = false;  public void handleServerInfo(S00PacketServerInfo p_147397_1_) { ServerStatusResponse var2 = p_147397_1_.func_149294_c(); if (var2.func_151318_b() != null) { p_pingServer_2_.nrOfPlayers = Convert.ToString(var2.func_151318_b().func_151333_b()); } var4.scheduleOutboundPacket(new C01PacketPing(Realms.currentTimeMillis()), new GenericFutureListener[0]); this.field_154345_e = true; } public void handlePong(S01PacketPong p_147398_1_) { var4.closeChannel(new ChatComponentText("Finished")); } public void onDisconnect(IChatComponent p_147231_1_) { if (!this.field_154345_e) { RealmsServerStatusPinger.LOGGER.error("Can\'t ping " + p_pingServer_1_ + ": " + p_147231_1_.UnformattedText); } } public void onConnectionStateTransition(EnumConnectionState p_147232_1_, EnumConnectionState p_147232_2_) { if (p_147232_2_ != EnumConnectionState.STATUS) { throw new UnsupportedOperationException("Unexpected change in protocol to " + p_147232_2_); } } public void onNetworkTick() {} };
 
 				try
 				{

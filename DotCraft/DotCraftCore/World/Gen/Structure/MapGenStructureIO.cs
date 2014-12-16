@@ -16,7 +16,7 @@ namespace DotCraftCore.World.Gen.Structure
 		private static IDictionary field_143038_b = new Hashtable();
 		private static IDictionary field_143039_c = new Hashtable();
 		private static IDictionary field_143037_d = new Hashtable();
-		private const string __OBFID = "CL_00000509";
+		
 
 		private static void func_143034_b(Type p_143034_0_, string p_143034_1_)
 		{

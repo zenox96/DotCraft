@@ -28,7 +28,7 @@ namespace DotCraftCore.Block
 		private readonly int field_150151_M;
 		private bool field_150152_N;
 		private int field_150153_O;
-		private const string __OBFID = "CL_00000314";
+		
 
 		protected internal BlockStairs(Block p_i45428_1_, int p_i45428_2_) : base(p_i45428_1_.blockMaterial)
 		{

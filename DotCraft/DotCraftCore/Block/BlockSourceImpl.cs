@@ -11,7 +11,7 @@ namespace DotCraftCore.Block
 		private readonly int xPos;
 		private readonly int yPos;
 		private readonly int zPos;
-		private const string __OBFID = "CL_00001194";
+		
 
 		public BlockSourceImpl(World p_i1365_1_, int p_i1365_2_, int p_i1365_3_, int p_i1365_4_)
 		{

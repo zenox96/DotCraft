@@ -93,7 +93,7 @@ namespace DotCraftCore.Stats
 
 	/// <summary> Tracks the number of times a given block or item has been broken.  </summary>
 		public static readonly StatBase[] objectBreakStats = new StatBase[32000];
-		private const string __OBFID = "CL_00001480";
+		
 
 		public static void func_151178_a()
 		{

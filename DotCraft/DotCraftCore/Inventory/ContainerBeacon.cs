@@ -20,7 +20,7 @@ namespace DotCraftCore.Inventory
 		private int field_82865_g;
 		private int field_82867_h;
 		private int field_82868_i;
-		private const string __OBFID = "CL_00001735";
+		
 
 		public ContainerBeacon(InventoryPlayer p_i1802_1_, TileEntityBeacon p_i1802_2_)
 		{
@@ -154,7 +154,7 @@ namespace DotCraftCore.Inventory
 
 		internal class BeaconSlot : Slot
 		{
-			private const string __OBFID = "CL_00001736";
+			
 
 			public BeaconSlot(IInventory p_i1801_2_, int p_i1801_3_, int p_i1801_4_, int p_i1801_5_) : base(p_i1801_2_, p_i1801_3_, p_i1801_4_, p_i1801_5_)
 			{

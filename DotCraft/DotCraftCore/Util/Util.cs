@@ -3,7 +3,7 @@ namespace DotCraftCore.Util
 
 	public class Util
 	{
-		private const string __OBFID = "CL_00001633";
+		
 
 		public static Util.EnumOS OSType
 		{
@@ -29,7 +29,7 @@ namespace DotCraftCore.Util
 
 			@private static final Util.EnumOS[] $VALUES = new Util.EnumOS[]{LINUX, SOLARIS, WINDOWS, OSX, UNKNOWN
 		}
-			private const string __OBFID = "CL_00001660";
+			
 
 			private EnumOS(string p_i1357_1_, int p_i1357_2_)
 			{

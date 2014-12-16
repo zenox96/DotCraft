@@ -7,7 +7,7 @@ namespace DotCraftCore.Util
 	public class ChatComponentText : ChatComponentStyle
 	{
 		private readonly string text;
-		private const string __OBFID = "CL_00001269";
+		
 
 		public ChatComponentText(string p_i45159_1_)
 		{

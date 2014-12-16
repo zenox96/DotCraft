@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 		private IIcon[] field_149794_M;
 		private IIcon field_149795_N;
 		private IIcon field_149796_O;
-		private const string __OBFID = "CL_00000258";
+		
 
 		public BlockHugeMushroom(Material p_i45412_1_, int p_i45412_2_) : base(p_i45412_1_)
 		{

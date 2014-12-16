@@ -17,7 +17,7 @@ namespace DotCraftCore.Block
 	{
 		private IIcon field_149824_a;
 		private IIcon field_149823_b;
-		private const string __OBFID = "CL_00000241";
+		
 
 		protected internal BlockFarmland() : base(Material.ground)
 		{

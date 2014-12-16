@@ -12,7 +12,7 @@ namespace DotCraftCore.Block
 
 	public class BlockGlowstone : Block
 	{
-		private const string __OBFID = "CL_00000250";
+		
 
 		public BlockGlowstone(Material p_i45409_1_) : base(p_i45409_1_)
 		{

@@ -28,7 +28,7 @@ namespace DotCraftCore.Network.Play.Server
 		private int field_148959_h;
 		private DataWatcher field_148960_i;
 		private IList field_148958_j;
-		private const string __OBFID = "CL_00001281";
+		
 
 		public S0CPacketSpawnPlayer()
 		{

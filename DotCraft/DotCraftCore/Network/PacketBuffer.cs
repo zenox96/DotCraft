@@ -17,7 +17,7 @@ namespace DotCraftCore.Network
 	public class PacketBuffer : ByteBuf
 	{
 		private readonly ByteBuf field_150794_a;
-		private const string __OBFID = "CL_00001251";
+		
 
 		public PacketBuffer(ByteBuf p_i45154_1_)
 		{

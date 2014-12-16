@@ -14,7 +14,7 @@ namespace DotCraftCore.Block
 	{
 		public static readonly string[] field_150096_a = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "big_oak"};
 		private IIcon[] field_150095_b;
-		private const string __OBFID = "CL_00000335";
+		
 
 		public BlockWood() : base(Material.wood)
 		{

@@ -9,7 +9,7 @@ namespace DotCraftCore.Block
 
 	public class BlockObsidian : BlockStone
 	{
-		private const string __OBFID = "CL_00000279";
+		
 
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>

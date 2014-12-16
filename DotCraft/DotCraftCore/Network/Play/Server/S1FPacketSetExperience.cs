@@ -11,7 +11,7 @@ namespace DotCraftCore.Network.Play.Server
 		private float field_149401_a;
 		private int field_149399_b;
 		private int field_149400_c;
-		private const string __OBFID = "CL_00001331";
+		
 
 		public S1FPacketSetExperience()
 		{

@@ -19,7 +19,7 @@ namespace DotCraftCore.Item.Crafting
 
 	/// <summary> A list of all the recipes added  </summary>
 		private IList recipes = new ArrayList();
-		private const string __OBFID = "CL_00000090";
+		
 
 ///    
 ///     <summary> * Returns the static instance of this class </summary>
@@ -160,7 +160,7 @@ namespace DotCraftCore.Item.Crafting
 			this.addShapelessRecipe(new ItemStack(Items.fire_charge, 3), new object[] {Items.gunpowder, Items.blaze_powder, new ItemStack(Items.coal, 1, 1)});
 			this.addRecipe(new ItemStack(Blocks.daylight_detector), new object[] {"GGG", "QQQ", "WWW", 'G', Blocks.glass, 'Q', Items.quartz, 'W', Blocks.wooden_slab});
 			this.addRecipe(new ItemStack(Blocks.hopper), new object[] {"I I", "ICI", " I ", 'I', Items.iron_ingot, 'C', Blocks.chest});
-			Collections.sort(this.recipes, new IComparer() { private static final string __OBFID = "CL_00000091"; public int compare(IRecipe p_compare_1_, IRecipe p_compare_2_) { return p_compare_1_ is ShapelessRecipes && p_compare_2_ is ShapedRecipes ? 1 : (p_compare_2_ is ShapelessRecipes && p_compare_1_ is ShapedRecipes ? -1 : (p_compare_2_.RecipeSize < p_compare_1_.RecipeSize ? -1 : (p_compare_2_.RecipeSize > p_compare_1_.RecipeSize ? 1 : 0))); } public int compare(object p_compare_1_, object p_compare_2_) { return this.compare((IRecipe)p_compare_1_, (IRecipe)p_compare_2_); } });
+			Collections.sort(this.recipes, new IComparer() {  public int compare(IRecipe p_compare_1_, IRecipe p_compare_2_) { return p_compare_1_ is ShapelessRecipes && p_compare_2_ is ShapedRecipes ? 1 : (p_compare_2_ is ShapelessRecipes && p_compare_1_ is ShapedRecipes ? -1 : (p_compare_2_.RecipeSize < p_compare_1_.RecipeSize ? -1 : (p_compare_2_.RecipeSize > p_compare_1_.RecipeSize ? 1 : 0))); } public int compare(object p_compare_1_, object p_compare_2_) { return this.compare((IRecipe)p_compare_1_, (IRecipe)p_compare_2_); } });
 		}
 
 		internal virtual ShapedRecipes addRecipe(ItemStack p_92103_1_, params object[] p_92103_2_)

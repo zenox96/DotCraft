@@ -10,7 +10,7 @@ namespace DotCraftCore.Util
 ///     * StringTranslate singleton instance fails to translate a key. </summary>
 ///     
 		private static StringTranslate fallbackTranslator = new StringTranslate();
-		private const string __OBFID = "CL_00001211";
+		
 
 ///    
 ///     <summary> * Translates a Stat name </summary>

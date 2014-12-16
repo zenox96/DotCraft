@@ -5,7 +5,7 @@ namespace DotCraftCore.Util
 	{
 		private int integerValue;
 		private IJsonSerializable jsonSerializableValue;
-		private const string __OBFID = "CL_00001478";
+		
 
 ///    
 ///     <summary> * Gets the integer value stored in this tuple. </summary>

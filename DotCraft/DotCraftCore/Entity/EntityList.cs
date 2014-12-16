@@ -86,7 +86,7 @@ namespace DotCraftCore.Entity
 
 	/// <summary> This is a HashMap of the Creative Entity Eggs/Spawners.  </summary>
 		public static Hashtable entityEggs = new LinkedHashMap();
-		private const string __OBFID = "CL_00001538";
+		
 
 ///    
 ///     <summary> * adds a mapping between Entity classes and both a string representation and an ID </summary>
@@ -337,7 +337,7 @@ namespace DotCraftCore.Entity
 			public readonly int secondaryColor;
 			public readonly StatBase field_151512_d;
 			public readonly StatBase field_151513_e;
-			private const string __OBFID = "CL_00001539";
+			
 
 			public EntityEggInfo(int p_i1583_1_, int p_i1583_2_, int p_i1583_3_)
 			{

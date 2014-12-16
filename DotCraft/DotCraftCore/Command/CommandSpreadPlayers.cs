@@ -19,7 +19,7 @@ namespace DotCraftCore.Command
 
 	public class CommandSpreadPlayers : CommandBase
 	{
-		private const string __OBFID = "CL_00001080";
+		
 
 		public virtual string CommandName
 		{
@@ -297,7 +297,7 @@ namespace DotCraftCore.Command
 		{
 			internal double field_111101_a;
 			internal double field_111100_b;
-			private const string __OBFID = "CL_00001105";
+			
 
 			internal Position()
 			{

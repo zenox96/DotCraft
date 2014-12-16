@@ -23,7 +23,7 @@ namespace DotCraftCore.Village
 
 	/// <summary> Maximum times this trade can be used.  </summary>
 		private int maxTradeUses;
-		private const string __OBFID = "CL_00000126";
+		
 
 		public MerchantRecipe(NBTTagCompound p_i1940_1_)
 		{

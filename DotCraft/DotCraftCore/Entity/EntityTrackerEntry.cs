@@ -95,7 +95,7 @@ namespace DotCraftCore.Entity
 ///     <summary> * Holds references to all the players that are currently receiving position updates for this entity. </summary>
 ///     
 		public Set trackingPlayers = new HashSet();
-		private const string __OBFID = "CL_00001443";
+		
 
 		public EntityTrackerEntry(Entity p_i1525_1_, int p_i1525_2_, int p_i1525_3_, bool p_i1525_4_)
 		{

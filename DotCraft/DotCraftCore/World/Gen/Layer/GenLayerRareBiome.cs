@@ -5,7 +5,7 @@ namespace DotCraftCore.World.Gen.Layer
 
 	public class GenLayerRareBiome : GenLayer
 	{
-		private const string __OBFID = "CL_00000562";
+		
 
 		public GenLayerRareBiome(long p_i45478_1_, GenLayer p_i45478_3_) : base(p_i45478_1_)
 		{

@@ -13,7 +13,7 @@ namespace DotCraftCore.Network.Play.Server
 	{
 		private int field_149379_a;
 		private IList field_149378_b;
-		private const string __OBFID = "CL_00001326";
+		
 
 		public S1CPacketEntityMetadata()
 		{

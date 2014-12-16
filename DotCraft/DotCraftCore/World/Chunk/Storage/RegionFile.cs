@@ -19,7 +19,7 @@ namespace DotCraftCore.World.Chunk.Storage
 	/// <summary> McRegion sizeDelta  </summary>
 		private int sizeDelta;
 		private long lastModified;
-		private const string __OBFID = "CL_00000381";
+		
 
 		public RegionFile(File p_i2001_1_)
 		{
@@ -359,7 +359,7 @@ namespace DotCraftCore.World.Chunk.Storage
 		{
 			private int chunkX;
 			private int chunkZ;
-			private const string __OBFID = "CL_00000382";
+			
 
 			public ChunkBuffer(int p_i2000_2_, int p_i2000_3_) : base(8096)
 			{
