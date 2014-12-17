@@ -1,12 +1,12 @@
-namespace DotCraftCore.Network.Login.Client
+namespace DotCraftCore.nNetwork.nLogin.nClient
 {
 
 	using SecretKey = javax.crypto.SecretKey;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerLoginServer = DotCraftCore.Network.Login.INetHandlerLoginServer;
-	using CryptManager = DotCraftCore.Util.CryptManager;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerLoginServer = DotCraftCore.nNetwork.nLogin.INetHandlerLoginServer;
+	using CryptManager = DotCraftCore.nUtil.CryptManager;
 
 	public class C01PacketEncryptionResponse : Packet
 	{

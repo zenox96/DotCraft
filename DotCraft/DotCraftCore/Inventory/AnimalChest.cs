@@ -1,4 +1,4 @@
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
 	public class AnimalChest : InventoryBasic

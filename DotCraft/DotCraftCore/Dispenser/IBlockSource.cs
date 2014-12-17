@@ -1,7 +1,7 @@
-namespace DotCraftCore.Dispenser
+namespace DotCraftCore.nDispenser
 {
 
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
 
 	public interface IBlockSource : ILocatableSource
 	{

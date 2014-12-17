@@ -1,13 +1,13 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using TileEntityBeacon = DotCraftCore.TileEntity.TileEntityBeacon;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryPlayer = DotCraftCore.nEntity.nPlayer.InventoryPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using TileEntityBeacon = DotCraftCore.nTileEntity.TileEntityBeacon;
 
 	public class ContainerBeacon : Container
 	{

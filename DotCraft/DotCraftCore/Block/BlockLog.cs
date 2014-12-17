@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Item = DotCraftCore.Item.Item;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Item = DotCraftCore.nItem.Item;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockLog : BlockRotatedPillar
 	{

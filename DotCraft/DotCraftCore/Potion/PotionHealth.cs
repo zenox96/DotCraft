@@ -1,4 +1,4 @@
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 	public class PotionHealth : Potion

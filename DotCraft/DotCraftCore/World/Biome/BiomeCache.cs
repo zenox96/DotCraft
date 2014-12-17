@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using LongHashMap = DotCraftCore.Util.LongHashMap;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using LongHashMap = DotCraftCore.nUtil.LongHashMap;
 
 	public class BiomeCache
 	{

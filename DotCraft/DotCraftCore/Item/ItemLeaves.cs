@@ -1,8 +1,8 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using BlockLeaves = DotCraftCore.block.BlockLeaves;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using BlockLeaves = DotCraftCore.nBlock.BlockLeaves;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class ItemLeaves : ItemBlock
 	{

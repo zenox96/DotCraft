@@ -1,9 +1,9 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using BlockDispenser = DotCraftCore.block.BlockDispenser;
+	using BlockDispenser = DotCraftCore.nBlock.BlockDispenser;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using BehaviorDefaultDispenseItem = DotCraftCore.dispenser.BehaviorDefaultDispenseItem;
 	using IBehaviorDispenseItem = DotCraftCore.dispenser.IBehaviorDispenseItem;
@@ -12,11 +12,11 @@ namespace DotCraftCore.Item
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using EnumFacing = DotCraftCore.Util.EnumFacing;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemArmor : Item
 	{

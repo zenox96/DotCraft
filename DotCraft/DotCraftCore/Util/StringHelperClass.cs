@@ -4,7 +4,7 @@
 //
 //	This class is used to replace most calls to the Java String.split method.
 //----------------------------------------------------------------------------------------
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 { 
     internal static class StringHelperClass
     {

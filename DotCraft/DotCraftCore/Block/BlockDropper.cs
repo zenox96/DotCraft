@@ -1,17 +1,17 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using BehaviorDefaultDispenseItem = DotCraftCore.Dispenser.BehaviorDefaultDispenseItem;
-	using IBehaviorDispenseItem = DotCraftCore.Dispenser.IBehaviorDispenseItem;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
-	using TileEntityDropper = DotCraftCore.TileEntity.TileEntityDropper;
-	using TileEntityHopper = DotCraftCore.TileEntity.TileEntityHopper;
-	using Facing = DotCraftCore.Util.Facing;
-	using World = DotCraftCore.World.World;
+	using BehaviorDefaultDispenseItem = DotCraftCore.nDispenser.BehaviorDefaultDispenseItem;
+	using IBehaviorDispenseItem = DotCraftCore.nDispenser.IBehaviorDispenseItem;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityDispenser = DotCraftCore.nTileEntity.TileEntityDispenser;
+	using TileEntityDropper = DotCraftCore.nTileEntity.TileEntityDropper;
+	using TileEntityHopper = DotCraftCore.nTileEntity.TileEntityHopper;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockDropper : BlockDispenser
 	{

@@ -1,10 +1,10 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
 	using Minecraft = DotCraftCore.client.Minecraft;
-	using Session = DotCraftCore.Util.Session;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
+	using Session = DotCraftCore.nUtil.Session;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
 
 	public class Realms
 	{

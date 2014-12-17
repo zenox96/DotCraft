@@ -1,35 +1,35 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAvoidEntity = DotCraftCore.Entity.AI.EntityAIAvoidEntity;
-	using EntityAIFollowOwner = DotCraftCore.Entity.AI.EntityAIFollowOwner;
-	using EntityAILeapAtTarget = DotCraftCore.Entity.AI.EntityAILeapAtTarget;
-	using EntityAIMate = DotCraftCore.Entity.AI.EntityAIMate;
-	using EntityAIOcelotAttack = DotCraftCore.Entity.AI.EntityAIOcelotAttack;
-	using EntityAIOcelotSit = DotCraftCore.Entity.AI.EntityAIOcelotSit;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAITargetNonTamed = DotCraftCore.Entity.AI.EntityAITargetNonTamed;
-	using EntityAITempt = DotCraftCore.Entity.AI.EntityAITempt;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAvoidEntity = DotCraftCore.nEntity.nAI.EntityAIAvoidEntity;
+	using EntityAIFollowOwner = DotCraftCore.nEntity.nAI.EntityAIFollowOwner;
+	using EntityAILeapAtTarget = DotCraftCore.nEntity.nAI.EntityAILeapAtTarget;
+	using EntityAIMate = DotCraftCore.nEntity.nAI.EntityAIMate;
+	using EntityAIOcelotAttack = DotCraftCore.nEntity.nAI.EntityAIOcelotAttack;
+	using EntityAIOcelotSit = DotCraftCore.nEntity.nAI.EntityAIOcelotSit;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAITargetNonTamed = DotCraftCore.nEntity.nAI.EntityAITargetNonTamed;
+	using EntityAITempt = DotCraftCore.nEntity.nAI.EntityAITempt;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityOcelot : EntityTameable
 	{

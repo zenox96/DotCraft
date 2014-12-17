@@ -1,23 +1,23 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using Block = DotCraftCore.block.Block;
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using CommandException = DotCraftCore.Command.CommandException;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using NumberInvalidException = DotCraftCore.Command.NumberInvalidException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTException = DotCraftCore.NBT.NBTException;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using CommandException = DotCraftCore.nCommand.CommandException;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using NumberInvalidException = DotCraftCore.nCommand.NumberInvalidException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using JsonToNBT = DotCraftCore.nNBT.JsonToNBT;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTException = DotCraftCore.nNBT.NBTException;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class CommandTestForBlock : CommandBase
 	{

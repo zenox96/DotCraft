@@ -1,20 +1,20 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Projectile
+namespace DotCraftCore.nEntity.nProjectile
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityFireball : Entity
 	{

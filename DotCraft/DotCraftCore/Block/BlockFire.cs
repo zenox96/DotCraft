@@ -1,17 +1,17 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using MapColor = DotCraftCore.Block.material.MapColor;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
-	using WorldProviderEnd = DotCraftCore.World.WorldProviderEnd;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
+	using WorldProviderEnd = DotCraftCore.nWorld.WorldProviderEnd;
 
 	public class BlockFire : Block
 	{

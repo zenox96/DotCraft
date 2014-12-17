@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
 
 	public class EntityAIWatchClosest : EntityAIBase
 	{

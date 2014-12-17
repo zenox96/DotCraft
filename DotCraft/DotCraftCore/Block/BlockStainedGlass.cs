@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Item = DotCraftCore.Item.Item;
-	using ItemDye = DotCraftCore.Item.ItemDye;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemDye = DotCraftCore.nItem.ItemDye;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class BlockStainedGlass : BlockBreakable
 	{

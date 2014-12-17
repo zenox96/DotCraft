@@ -1,49 +1,49 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using BaseAttributeMap = DotCraftCore.Entity.AI.Attributes.BaseAttributeMap;
-	using IAttribute = DotCraftCore.Entity.AI.Attributes.IAttribute;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using ServersideAttributeMap = DotCraftCore.Entity.AI.Attributes.ServersideAttributeMap;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-	using EntityZombie = DotCraftCore.Entity.Monster.EntityZombie;
-	using EntityWolf = DotCraftCore.Entity.Passive.EntityWolf;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagFloat = DotCraftCore.NBT.NBTTagFloat;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using NBTTagShort = DotCraftCore.NBT.NBTTagShort;
-	using S04PacketEntityEquipment = DotCraftCore.Network.Play.Server.S04PacketEntityEquipment;
-	using S0BPacketAnimation = DotCraftCore.Network.Play.Server.S0BPacketAnimation;
-	using S0DPacketCollectItem = DotCraftCore.Network.Play.Server.S0DPacketCollectItem;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using PotionHelper = DotCraftCore.Potion.PotionHelper;
-	using Team = DotCraftCore.Scoreboard.Team;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using CombatTracker = DotCraftCore.Util.CombatTracker;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using BaseAttributeMap = DotCraftCore.nEntity.nAI.nAttributes.BaseAttributeMap;
+	using IAttribute = DotCraftCore.nEntity.nAI.nAttributes.IAttribute;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using ServersideAttributeMap = DotCraftCore.nEntity.nAI.nAttributes.ServersideAttributeMap;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
+	using EntityZombie = DotCraftCore.nEntity.nMonster.EntityZombie;
+	using EntityWolf = DotCraftCore.nEntity.nPassive.EntityWolf;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagFloat = DotCraftCore.nNBT.NBTTagFloat;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using NBTTagShort = DotCraftCore.nNBT.NBTTagShort;
+	using S04PacketEntityEquipment = DotCraftCore.nNetwork.nPlay.nServer.S04PacketEntityEquipment;
+	using S0BPacketAnimation = DotCraftCore.nNetwork.nPlay.nServer.S0BPacketAnimation;
+	using S0DPacketCollectItem = DotCraftCore.nNetwork.nPlay.nServer.S0DPacketCollectItem;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using PotionHelper = DotCraftCore.nPotion.PotionHelper;
+	using Team = DotCraftCore.nScoreboard.Team;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using CombatTracker = DotCraftCore.nUtil.CombatTracker;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
 
 	public abstract class EntityLivingBase : Entity
 	{

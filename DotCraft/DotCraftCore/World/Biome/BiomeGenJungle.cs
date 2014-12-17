@@ -1,20 +1,20 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using EntityChicken = DotCraftCore.entity.passive.EntityChicken;
 	using EntityOcelot = DotCraftCore.entity.passive.EntityOcelot;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenMegaJungle = DotCraftCore.World.Gen.Feature.WorldGenMegaJungle;
-	using WorldGenMelon = DotCraftCore.World.Gen.Feature.WorldGenMelon;
-	using WorldGenShrub = DotCraftCore.World.Gen.Feature.WorldGenShrub;
-	using WorldGenTallGrass = DotCraftCore.World.Gen.Feature.WorldGenTallGrass;
-	using WorldGenTrees = DotCraftCore.World.Gen.Feature.WorldGenTrees;
-	using WorldGenVines = DotCraftCore.World.Gen.Feature.WorldGenVines;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenMegaJungle = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaJungle;
+	using WorldGenMelon = DotCraftCore.nWorld.nGen.nFeature.WorldGenMelon;
+	using WorldGenShrub = DotCraftCore.nWorld.nGen.nFeature.WorldGenShrub;
+	using WorldGenTallGrass = DotCraftCore.nWorld.nGen.nFeature.WorldGenTallGrass;
+	using WorldGenTrees = DotCraftCore.nWorld.nGen.nFeature.WorldGenTrees;
+	using WorldGenVines = DotCraftCore.nWorld.nGen.nFeature.WorldGenVines;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BiomeGenJungle : BiomeGenBase
 	{

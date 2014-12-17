@@ -1,16 +1,16 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IEntityOwnable = DotCraftCore.Entity.IEntityOwnable;
-	using EntityAISit = DotCraftCore.Entity.AI.EntityAISit;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using Team = DotCraftCore.Scoreboard.Team;
-	using PreYggdrasilConverter = DotCraftCore.Server.Management.PreYggdrasilConverter;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IEntityOwnable = DotCraftCore.nEntity.IEntityOwnable;
+	using EntityAISit = DotCraftCore.nEntity.nAI.EntityAISit;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using Team = DotCraftCore.nScoreboard.Team;
+	using PreYggdrasilConverter = DotCraftCore.nServer.nManagement.PreYggdrasilConverter;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityTameable : EntityAnimal, IEntityOwnable
 	{

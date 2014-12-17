@@ -1,28 +1,28 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityOcelot = DotCraftCore.Entity.Passive.EntityOcelot;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Container = DotCraftCore.Inventory.Container;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using InventoryLargeChest = DotCraftCore.Inventory.InventoryLargeChest;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityOcelot = DotCraftCore.nEntity.nPassive.EntityOcelot;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Container = DotCraftCore.nInventory.Container;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using InventoryLargeChest = DotCraftCore.nInventory.InventoryLargeChest;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockChest : BlockContainer
 	{

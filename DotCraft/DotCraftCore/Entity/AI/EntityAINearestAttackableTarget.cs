@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
 
 	public class EntityAINearestAttackableTarget : EntityAITarget
 	{

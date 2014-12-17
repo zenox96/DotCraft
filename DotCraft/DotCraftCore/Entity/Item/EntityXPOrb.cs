@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Material = DotCraftCore.block.material.Material;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityXPOrb : Entity
 	{

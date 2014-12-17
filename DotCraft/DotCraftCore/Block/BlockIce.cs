@@ -1,18 +1,18 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using StatList = DotCraftCore.Stats.StatList;
-	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using StatList = DotCraftCore.nStats.StatList;
+	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockIce : BlockBreakable
 	{

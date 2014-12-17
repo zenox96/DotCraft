@@ -1,13 +1,13 @@
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using WorldProvider = DotCraftCore.World.WorldProvider;
-	using WorldProviderEnd = DotCraftCore.World.WorldProviderEnd;
-	using WorldProviderHell = DotCraftCore.World.WorldProviderHell;
-	using SaveHandler = DotCraftCore.World.Storage.SaveHandler;
-	using ThreadedFileIOBase = DotCraftCore.World.Storage.ThreadedFileIOBase;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using WorldProvider = DotCraftCore.nWorld.WorldProvider;
+	using WorldProviderEnd = DotCraftCore.nWorld.WorldProviderEnd;
+	using WorldProviderHell = DotCraftCore.nWorld.WorldProviderHell;
+	using SaveHandler = DotCraftCore.nWorld.nStorage.SaveHandler;
+	using ThreadedFileIOBase = DotCraftCore.nWorld.nStorage.ThreadedFileIOBase;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public class AnvilSaveHandler : SaveHandler
 	{

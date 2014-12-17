@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Profiler
+namespace DotCraftCore.nProfiler
 {
 
 	using Maps = com.google.common.collect.Maps;
-	using HttpUtil = DotCraftCore.Util.HttpUtil;
+	using HttpUtil = DotCraftCore.nUtil.HttpUtil;
 
 	public class PlayerUsageSnooper
 	{

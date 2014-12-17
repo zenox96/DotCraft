@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
-	using WorldType = DotCraftCore.World.WorldType;
-	using GenLayer = DotCraftCore.World.Gen.Layer.GenLayer;
-	using IntCache = DotCraftCore.World.Gen.Layer.IntCache;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using GenLayer = DotCraftCore.nWorld.nGen.nLayer.GenLayer;
+	using IntCache = DotCraftCore.nWorld.nGen.nLayer.IntCache;
 
 	public class WorldChunkManager
 	{

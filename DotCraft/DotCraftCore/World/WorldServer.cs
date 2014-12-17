@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using Lists = com.google.common.collect.Lists;
-	using Block = DotCraftCore.block.Block;
-	using BlockEventData = DotCraftCore.block.BlockEventData;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockEventData = DotCraftCore.nBlock.BlockEventData;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Entity = DotCraftCore.entity.Entity;
@@ -29,27 +29,27 @@ namespace DotCraftCore.World
 	using S2BPacketChangeGameState = DotCraftCore.network.play.server.S2BPacketChangeGameState;
 	using S2CPacketSpawnGlobalEntity = DotCraftCore.network.play.server.S2CPacketSpawnGlobalEntity;
 	using Profiler = DotCraftCore.profiler.Profiler;
-	using ScoreboardSaveData = DotCraftCore.Scoreboard.ScoreboardSaveData;
-	using ServerScoreboard = DotCraftCore.Scoreboard.ServerScoreboard;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using PlayerManager = DotCraftCore.Server.Management.PlayerManager;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using IntHashMap = DotCraftCore.Util.IntHashMap;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ExtendedBlockStorage = DotCraftCore.World.Chunk.Storage.ExtendedBlockStorage;
-	using IChunkLoader = DotCraftCore.World.Chunk.Storage.IChunkLoader;
-	using ChunkProviderServer = DotCraftCore.World.Gen.ChunkProviderServer;
-	using WorldGeneratorBonusChest = DotCraftCore.World.Gen.Feature.WorldGeneratorBonusChest;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
+	using ScoreboardSaveData = DotCraftCore.nScoreboard.ScoreboardSaveData;
+	using ServerScoreboard = DotCraftCore.nScoreboard.ServerScoreboard;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using PlayerManager = DotCraftCore.nServer.nManagement.PlayerManager;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using IntHashMap = DotCraftCore.nUtil.IntHashMap;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using WeightedRandom = DotCraftCore.nUtil.WeightedRandom;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ExtendedBlockStorage = DotCraftCore.nWorld.nChunk.nStorage.ExtendedBlockStorage;
+	using IChunkLoader = DotCraftCore.nWorld.nChunk.nStorage.IChunkLoader;
+	using ChunkProviderServer = DotCraftCore.nWorld.nGen.ChunkProviderServer;
+	using WorldGeneratorBonusChest = DotCraftCore.nWorld.nGen.nFeature.WorldGeneratorBonusChest;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

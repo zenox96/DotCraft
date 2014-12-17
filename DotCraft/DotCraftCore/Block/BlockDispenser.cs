@@ -1,30 +1,30 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using BehaviorDefaultDispenseItem = DotCraftCore.Dispenser.BehaviorDefaultDispenseItem;
-	using IBehaviorDispenseItem = DotCraftCore.Dispenser.IBehaviorDispenseItem;
-	using IBlockSource = DotCraftCore.Dispenser.IBlockSource;
-	using IPosition = DotCraftCore.Dispenser.IPosition;
-	using PositionImpl = DotCraftCore.Dispenser.PositionImpl;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Container = DotCraftCore.Inventory.Container;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
-	using EnumFacing = DotCraftCore.Util.EnumFacing;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using IRegistry = DotCraftCore.Util.IRegistry;
-	using RegistryDefaulted = DotCraftCore.Util.RegistryDefaulted;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using BehaviorDefaultDispenseItem = DotCraftCore.nDispenser.BehaviorDefaultDispenseItem;
+	using IBehaviorDispenseItem = DotCraftCore.nDispenser.IBehaviorDispenseItem;
+	using IBlockSource = DotCraftCore.nDispenser.IBlockSource;
+	using IPosition = DotCraftCore.nDispenser.IPosition;
+	using PositionImpl = DotCraftCore.nDispenser.PositionImpl;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Container = DotCraftCore.nInventory.Container;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityDispenser = DotCraftCore.nTileEntity.TileEntityDispenser;
+	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using IRegistry = DotCraftCore.nUtil.IRegistry;
+	using RegistryDefaulted = DotCraftCore.nUtil.RegistryDefaulted;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockDispenser : BlockContainer
 	{

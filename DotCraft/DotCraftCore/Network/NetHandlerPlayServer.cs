@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using Charsets = com.google.common.base.Charsets;
@@ -9,8 +9,8 @@ namespace DotCraftCore.Network
 	using Unpooled = io.netty.buffer.Unpooled;
 	using Future = io.netty.util.concurrent.Future;
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
-	using Material = DotCraftCore.block.material.Material;
-	using CommandBlockLogic = DotCraftCore.command.server.CommandBlockLogic;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Entity = DotCraftCore.entity.Entity;

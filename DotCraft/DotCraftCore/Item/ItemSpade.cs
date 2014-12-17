@@ -1,8 +1,8 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using Sets = com.google.common.collect.Sets;
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
 
 	public class ItemSpade : ItemTool

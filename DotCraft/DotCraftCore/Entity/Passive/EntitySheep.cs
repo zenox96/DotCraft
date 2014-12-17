@@ -1,33 +1,33 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Block = DotCraftCore.block.Block;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIEatGrass = DotCraftCore.Entity.AI.EntityAIEatGrass;
-	using EntityAIFollowParent = DotCraftCore.Entity.AI.EntityAIFollowParent;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAIMate = DotCraftCore.Entity.AI.EntityAIMate;
-	using EntityAIPanic = DotCraftCore.Entity.AI.EntityAIPanic;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAITempt = DotCraftCore.Entity.AI.EntityAITempt;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Container = DotCraftCore.Inventory.Container;
-	using InventoryCrafting = DotCraftCore.Inventory.InventoryCrafting;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using CraftingManager = DotCraftCore.Item.Crafting.CraftingManager;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIEatGrass = DotCraftCore.nEntity.nAI.EntityAIEatGrass;
+	using EntityAIFollowParent = DotCraftCore.nEntity.nAI.EntityAIFollowParent;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAIMate = DotCraftCore.nEntity.nAI.EntityAIMate;
+	using EntityAIPanic = DotCraftCore.nEntity.nAI.EntityAIPanic;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAITempt = DotCraftCore.nEntity.nAI.EntityAITempt;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Container = DotCraftCore.nInventory.Container;
+	using InventoryCrafting = DotCraftCore.nInventory.InventoryCrafting;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using CraftingManager = DotCraftCore.nItem.nCrafting.CraftingManager;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntitySheep : EntityAnimal
 	{

@@ -1,4 +1,4 @@
-namespace DotCraftCore.Server.Network
+namespace DotCraftCore.nServer.nNetwork
 {
 
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
@@ -9,8 +9,8 @@ namespace DotCraftCore.Server.Network
 	using C01PacketPing = DotCraftCore.network.status.client.C01PacketPing;
 	using S00PacketServerInfo = DotCraftCore.network.status.server.S00PacketServerInfo;
 	using S01PacketPong = DotCraftCore.network.status.server.S01PacketPong;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class NetHandlerStatusServer : INetHandlerStatusServer
 	{

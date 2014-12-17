@@ -1,16 +1,16 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockEndPortalFrame = DotCraftCore.block.BlockEndPortalFrame;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockEndPortalFrame = DotCraftCore.nBlock.BlockEndPortalFrame;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityEnderEye = DotCraftCore.entity.item.EntityEnderEye;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using Direction = DotCraftCore.Util.Direction;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemEnderEye : Item
 	{

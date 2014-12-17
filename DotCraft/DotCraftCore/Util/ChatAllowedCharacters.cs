@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	public class ChatAllowedCharacters

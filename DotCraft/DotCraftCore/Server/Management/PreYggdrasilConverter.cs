@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using Predicate = com.google.common.base.Predicate;

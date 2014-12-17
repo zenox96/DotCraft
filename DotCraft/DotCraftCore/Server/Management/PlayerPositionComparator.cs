@@ -1,8 +1,8 @@
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
 
 	public class PlayerPositionComparator : IComparer
 	{

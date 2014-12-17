@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Collections;
 using System.Threading;
 
-namespace DotCraftCore.Server
+namespace DotCraftCore.nServer
 {
 
 	using Charsets = com.google.common.base.Charsets;
@@ -16,10 +16,10 @@ namespace DotCraftCore.Server
 	using Unpooled = io.netty.buffer.Unpooled;
 	using Base64 = io.netty.handler.codec.base64.Base64;
 	using ImageIO = javax.imageio.ImageIO;
-	using CommandBase = DotCraftCore.command.CommandBase;
-	using ICommandManager = DotCraftCore.command.ICommandManager;
-	using ICommandSender = DotCraftCore.command.ICommandSender;
-	using ServerCommandManager = DotCraftCore.command.ServerCommandManager;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandManager = DotCraftCore.nCommand.ICommandManager;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using ServerCommandManager = DotCraftCore.nCommand.nServerCommandManager;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
@@ -73,7 +73,7 @@ namespace DotCraftCore.Server
 ///     
 		private readonly IList tickables = new ArrayList();
 		private readonly ICommandManager commandManager;
-		public readonly Profiler theProfiler = new Profiler();
+		public readonly nProfiler theProfiler = new Profiler();
 		private readonly NetworkSystem field_147144_o;
 		private readonly ServerStatusResponse field_147147_p = new ServerStatusResponse();
 		private readonly Random field_147146_q = new Random();

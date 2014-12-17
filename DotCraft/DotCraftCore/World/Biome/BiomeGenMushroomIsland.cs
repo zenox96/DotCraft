@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using EntityMooshroom = DotCraftCore.entity.passive.EntityMooshroom;

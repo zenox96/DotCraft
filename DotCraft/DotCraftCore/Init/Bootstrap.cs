@@ -1,40 +1,40 @@
 using System;
 
-namespace DotCraftCore.Init
+namespace DotCraftCore.nInit
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockDispenser = DotCraftCore.block.BlockDispenser;
-	using BlockFire = DotCraftCore.block.BlockFire;
-	using Material = DotCraftCore.block.material.Material;
-	using BehaviorDefaultDispenseItem = DotCraftCore.Dispenser.BehaviorDefaultDispenseItem;
-	using BehaviorProjectileDispense = DotCraftCore.Dispenser.BehaviorProjectileDispense;
-	using IBehaviorDispenseItem = DotCraftCore.Dispenser.IBehaviorDispenseItem;
-	using IBlockSource = DotCraftCore.Dispenser.IBlockSource;
-	using IPosition = DotCraftCore.Dispenser.IPosition;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IProjectile = DotCraftCore.Entity.IProjectile;
-	using EntityBoat = DotCraftCore.Entity.Item.EntityBoat;
-	using EntityExpBottle = DotCraftCore.Entity.Item.EntityExpBottle;
-	using EntityFireworkRocket = DotCraftCore.Entity.Item.EntityFireworkRocket;
-	using EntityTNTPrimed = DotCraftCore.Entity.Item.EntityTNTPrimed;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using EntityEgg = DotCraftCore.Entity.Projectile.EntityEgg;
-	using EntityPotion = DotCraftCore.Entity.Projectile.EntityPotion;
-	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
-	using EntitySnowball = DotCraftCore.Entity.Projectile.EntitySnowball;
-	using Item = DotCraftCore.Item.Item;
-	using ItemBucket = DotCraftCore.Item.ItemBucket;
-	using ItemDye = DotCraftCore.Item.ItemDye;
-	using ItemMonsterPlacer = DotCraftCore.Item.ItemMonsterPlacer;
-	using ItemPotion = DotCraftCore.Item.ItemPotion;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using StatList = DotCraftCore.Stats.StatList;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
-	using EnumFacing = DotCraftCore.Util.EnumFacing;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDispenser = DotCraftCore.nBlock.BlockDispenser;
+	using BlockFire = DotCraftCore.nBlock.BlockFire;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using BehaviorDefaultDispenseItem = DotCraftCore.nDispenser.BehaviorDefaultDispenseItem;
+	using BehaviorProjectileDispense = DotCraftCore.nDispenser.BehaviorProjectileDispense;
+	using IBehaviorDispenseItem = DotCraftCore.nDispenser.IBehaviorDispenseItem;
+	using IBlockSource = DotCraftCore.nDispenser.IBlockSource;
+	using IPosition = DotCraftCore.nDispenser.IPosition;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IProjectile = DotCraftCore.nEntity.IProjectile;
+	using EntityBoat = DotCraftCore.nEntity.nItem.EntityBoat;
+	using EntityExpBottle = DotCraftCore.nEntity.nItem.EntityExpBottle;
+	using EntityFireworkRocket = DotCraftCore.nEntity.nItem.EntityFireworkRocket;
+	using EntityTNTPrimed = DotCraftCore.nEntity.nItem.EntityTNTPrimed;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using EntityEgg = DotCraftCore.nEntity.nProjectile.EntityEgg;
+	using EntityPotion = DotCraftCore.nEntity.nProjectile.EntityPotion;
+	using EntitySmallFireball = DotCraftCore.nEntity.nProjectile.EntitySmallFireball;
+	using EntitySnowball = DotCraftCore.nEntity.nProjectile.EntitySnowball;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemBucket = DotCraftCore.nItem.ItemBucket;
+	using ItemDye = DotCraftCore.nItem.ItemDye;
+	using ItemMonsterPlacer = DotCraftCore.nItem.ItemMonsterPlacer;
+	using ItemPotion = DotCraftCore.nItem.ItemPotion;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using StatList = DotCraftCore.nStats.StatList;
+	using TileEntityDispenser = DotCraftCore.nTileEntity.TileEntityDispenser;
+	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
+	using World = DotCraftCore.nWorld.World;
 
 	public class Bootstrap
 	{

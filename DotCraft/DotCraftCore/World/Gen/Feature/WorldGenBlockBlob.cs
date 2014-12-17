@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGenBlockBlob : WorldGenerator
 	{

@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

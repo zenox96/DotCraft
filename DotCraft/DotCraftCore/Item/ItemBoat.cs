@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
@@ -9,11 +9,11 @@ namespace DotCraftCore.Item
 	using EntityBoat = DotCraftCore.entity.item.EntityBoat;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemBoat : Item
 	{

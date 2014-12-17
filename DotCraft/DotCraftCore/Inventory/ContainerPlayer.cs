@@ -1,17 +1,17 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using CraftingManager = DotCraftCore.Item.Crafting.CraftingManager;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryPlayer = DotCraftCore.nEntity.nPlayer.InventoryPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using CraftingManager = DotCraftCore.nItem.nCrafting.CraftingManager;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class ContainerPlayer : Container
 	{

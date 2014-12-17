@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
 	public class NibbleArrayReader

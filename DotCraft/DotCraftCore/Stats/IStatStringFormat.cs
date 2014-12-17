@@ -1,4 +1,4 @@
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
 	public interface IStatStringFormat

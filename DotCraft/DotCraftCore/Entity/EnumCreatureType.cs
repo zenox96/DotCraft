@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using Material = DotCraftCore.block.material.Material;
-	using IMob = DotCraftCore.Entity.Monster.IMob;
-	using EntityAmbientCreature = DotCraftCore.Entity.Passive.EntityAmbientCreature;
-	using EntityAnimal = DotCraftCore.Entity.Passive.EntityAnimal;
-	using EntityWaterMob = DotCraftCore.Entity.Passive.EntityWaterMob;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using IMob = DotCraftCore.nEntity.nMonster.IMob;
+	using EntityAmbientCreature = DotCraftCore.nEntity.nPassive.EntityAmbientCreature;
+	using EntityAnimal = DotCraftCore.nEntity.nPassive.EntityAnimal;
+	using EntityWaterMob = DotCraftCore.nEntity.nPassive.EntityWaterMob;
 
 	public enum EnumCreatureType
 	{

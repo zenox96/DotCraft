@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Scoreboard
+namespace DotCraftCore.nScoreboard
 {
 
 

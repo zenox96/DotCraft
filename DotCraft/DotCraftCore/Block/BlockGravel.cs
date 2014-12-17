@@ -1,10 +1,10 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
 
 	public class BlockGravel : BlockFalling
 	{

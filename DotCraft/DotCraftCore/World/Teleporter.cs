@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Entity = DotCraftCore.entity.Entity;
 	using Blocks = DotCraftCore.init.Blocks;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using Direction = DotCraftCore.Util.Direction;
-	using LongHashMap = DotCraftCore.Util.LongHashMap;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using LongHashMap = DotCraftCore.nUtil.LongHashMap;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class Teleporter
 	{

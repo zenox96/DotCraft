@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
 
 	public class CommandListPlayers : CommandBase
 	{

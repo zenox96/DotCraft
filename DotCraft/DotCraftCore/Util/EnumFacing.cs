@@ -1,4 +1,4 @@
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	public enum EnumFacing

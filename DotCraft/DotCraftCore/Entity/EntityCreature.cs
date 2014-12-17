@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using EntityAIBase = DotCraftCore.Entity.AI.EntityAIBase;
-	using EntityAIMoveTowardsRestriction = DotCraftCore.Entity.AI.EntityAIMoveTowardsRestriction;
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using EntityAIBase = DotCraftCore.nEntity.nAI.EntityAIBase;
+	using EntityAIMoveTowardsRestriction = DotCraftCore.nEntity.nAI.EntityAIMoveTowardsRestriction;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityCreature : EntityLiving
 	{

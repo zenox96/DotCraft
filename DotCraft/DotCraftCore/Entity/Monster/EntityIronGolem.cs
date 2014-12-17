@@ -1,35 +1,35 @@
 using System;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAttackOnCollide = DotCraftCore.Entity.AI.EntityAIAttackOnCollide;
-	using EntityAIDefendVillage = DotCraftCore.Entity.AI.EntityAIDefendVillage;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookAtVillager = DotCraftCore.Entity.AI.EntityAILookAtVillager;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAIMoveThroughVillage = DotCraftCore.Entity.AI.EntityAIMoveThroughVillage;
-	using EntityAIMoveTowardsRestriction = DotCraftCore.Entity.AI.EntityAIMoveTowardsRestriction;
-	using EntityAIMoveTowardsTarget = DotCraftCore.Entity.AI.EntityAIMoveTowardsTarget;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Village = DotCraftCore.Village.Village;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAttackOnCollide = DotCraftCore.nEntity.nAI.EntityAIAttackOnCollide;
+	using EntityAIDefendVillage = DotCraftCore.nEntity.nAI.EntityAIDefendVillage;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookAtVillager = DotCraftCore.nEntity.nAI.EntityAILookAtVillager;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAIMoveThroughVillage = DotCraftCore.nEntity.nAI.EntityAIMoveThroughVillage;
+	using EntityAIMoveTowardsRestriction = DotCraftCore.nEntity.nAI.EntityAIMoveTowardsRestriction;
+	using EntityAIMoveTowardsTarget = DotCraftCore.nEntity.nAI.EntityAIMoveTowardsTarget;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Village = DotCraftCore.nVillage.Village;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityIronGolem : EntityGolem
 	{

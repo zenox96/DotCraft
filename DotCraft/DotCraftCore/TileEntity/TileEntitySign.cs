@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;

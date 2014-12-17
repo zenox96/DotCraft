@@ -1,29 +1,29 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Block = DotCraftCore.block.Block;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIControlledByPlayer = DotCraftCore.Entity.AI.EntityAIControlledByPlayer;
-	using EntityAIFollowParent = DotCraftCore.Entity.AI.EntityAIFollowParent;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAIMate = DotCraftCore.Entity.AI.EntityAIMate;
-	using EntityAIPanic = DotCraftCore.Entity.AI.EntityAIPanic;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAITempt = DotCraftCore.Entity.AI.EntityAITempt;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityLightningBolt = DotCraftCore.Entity.Effect.EntityLightningBolt;
-	using EntityPigZombie = DotCraftCore.Entity.Monster.EntityPigZombie;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIControlledByPlayer = DotCraftCore.nEntity.nAI.EntityAIControlledByPlayer;
+	using EntityAIFollowParent = DotCraftCore.nEntity.nAI.EntityAIFollowParent;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAIMate = DotCraftCore.nEntity.nAI.EntityAIMate;
+	using EntityAIPanic = DotCraftCore.nEntity.nAI.EntityAIPanic;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAITempt = DotCraftCore.nEntity.nAI.EntityAITempt;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityLightningBolt = DotCraftCore.nEntity.nEffect.EntityLightningBolt;
+	using EntityPigZombie = DotCraftCore.nEntity.nMonster.EntityPigZombie;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityPig : EntityAnimal
 	{

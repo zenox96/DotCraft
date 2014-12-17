@@ -1,7 +1,7 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 
 	public class ItemPiston : ItemBlock
 	{

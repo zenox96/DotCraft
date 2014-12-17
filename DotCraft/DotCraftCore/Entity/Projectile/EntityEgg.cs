@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.Projectile
+namespace DotCraftCore.nEntity.nProjectile
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityChicken = DotCraftCore.Entity.Passive.EntityChicken;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using World = DotCraftCore.World.World;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityChicken = DotCraftCore.nEntity.nPassive.EntityChicken;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityEgg : EntityThrowable
 	{

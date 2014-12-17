@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryMerchant = DotCraftCore.Inventory.InventoryMerchant;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using MerchantRecipe = DotCraftCore.Village.MerchantRecipe;
-	using MerchantRecipeList = DotCraftCore.Village.MerchantRecipeList;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryMerchant = DotCraftCore.nInventory.InventoryMerchant;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using MerchantRecipe = DotCraftCore.nVillage.MerchantRecipe;
+	using MerchantRecipeList = DotCraftCore.nVillage.MerchantRecipeList;
 
 	public class NpcMerchant : IMerchant
 	{

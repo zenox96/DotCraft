@@ -1,4 +1,4 @@
-namespace DotCraftCore.Entity.AI.Attributes
+namespace DotCraftCore.nEntity.nAI.nAttributes
 {
 
 	public interface IAttribute

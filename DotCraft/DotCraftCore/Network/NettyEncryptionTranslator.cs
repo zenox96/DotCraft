@@ -1,4 +1,4 @@
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using ByteBuf = io.netty.buffer.ByteBuf;

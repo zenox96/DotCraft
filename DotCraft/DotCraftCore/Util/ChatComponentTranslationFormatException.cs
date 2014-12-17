@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	public class ChatComponentTranslationFormatException : System.ArgumentException

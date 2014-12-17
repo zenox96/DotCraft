@@ -1,19 +1,19 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using MapColor = DotCraftCore.Block.material.MapColor;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.Entity.Entity;
-	using Item = DotCraftCore.Item.Item;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityEndPortal = DotCraftCore.TileEntity.TileEntityEndPortal;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Item = DotCraftCore.nItem.Item;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityEndPortal = DotCraftCore.nTileEntity.TileEntityEndPortal;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockEndPortal : BlockContainer
 	{

@@ -1,8 +1,8 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
 
 	public class BlockLeavesBase : Block
 	{

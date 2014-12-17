@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
 
 	public class S27PacketExplosion : Packet
 	{

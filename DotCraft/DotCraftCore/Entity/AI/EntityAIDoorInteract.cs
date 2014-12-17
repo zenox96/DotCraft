@@ -1,16 +1,16 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockDoor = DotCraftCore.block.BlockDoor;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
-	using PathPoint = DotCraftCore.Pathfinding.PathPoint;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDoor = DotCraftCore.nBlock.BlockDoor;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using PathNavigate = DotCraftCore.nPathfinding.PathNavigate;
+	using PathPoint = DotCraftCore.nPathfinding.PathPoint;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public abstract class EntityAIDoorInteract : EntityAIBase
 	{

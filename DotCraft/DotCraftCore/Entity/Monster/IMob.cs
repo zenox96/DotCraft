@@ -1,9 +1,9 @@
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.Entity.Entity;
-	using IAnimals = DotCraftCore.Entity.Passive.IAnimals;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using IAnimals = DotCraftCore.nEntity.nPassive.IAnimals;
 
 	public interface IMob : IAnimals
 	{

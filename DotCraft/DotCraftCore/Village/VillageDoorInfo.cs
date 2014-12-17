@@ -1,4 +1,4 @@
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
 	public class VillageDoorInfo

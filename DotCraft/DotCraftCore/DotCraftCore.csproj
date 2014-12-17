@@ -263,7 +263,7 @@
     <Compile Include="Command\StringHelperClass.cs" />
     <Compile Include="Command\SyntaxErrorException.cs" />
     <Compile Include="Command\WrongUsageException.cs" />
-    <Compile Include="CreativeTab\CreativeTabs.cs" />
+    <Compile Include="Inventory\CreativeTabs.cs" />
     <Compile Include="Dispenser\BehaviorDefaultDispenseItem.cs" />
     <Compile Include="Dispenser\BehaviorProjectileDispense.cs" />
     <Compile Include="Dispenser\IBehaviorDispenseItem.cs" />

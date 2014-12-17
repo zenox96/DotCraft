@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using WorldProviderEnd = DotCraftCore.World.WorldProviderEnd;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using WorldProviderEnd = DotCraftCore.nWorld.WorldProviderEnd;
 
 	public class EntityEnderCrystal : Entity
 	{

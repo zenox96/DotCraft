@@ -1,8 +1,8 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockAnvil = DotCraftCore.block.BlockAnvil;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockAnvil = DotCraftCore.nBlock.BlockAnvil;
 
 	public class ItemAnvilBlock : ItemMultiTexture
 	{

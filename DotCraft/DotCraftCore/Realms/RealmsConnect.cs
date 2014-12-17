@@ -1,17 +1,17 @@
 using System;
 using System.Threading;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
 	using Minecraft = DotCraftCore.client.Minecraft;
 	using NetHandlerLoginClient = DotCraftCore.client.network.NetHandlerLoginClient;
-	using EnumConnectionState = DotCraftCore.Network.EnumConnectionState;
-	using NetworkManager = DotCraftCore.Network.NetworkManager;
-	using C00Handshake = DotCraftCore.Network.Handshake.Client.C00Handshake;
-	using C00PacketLoginStart = DotCraftCore.Network.Login.Client.C00PacketLoginStart;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using EnumConnectionState = DotCraftCore.nNetwork.EnumConnectionState;
+	using NetworkManager = DotCraftCore.nNetwork.NetworkManager;
+	using C00Handshake = DotCraftCore.nNetwork.nHandshake.nClient.C00Handshake;
+	using C00PacketLoginStart = DotCraftCore.nNetwork.nLogin.nClient.C00PacketLoginStart;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

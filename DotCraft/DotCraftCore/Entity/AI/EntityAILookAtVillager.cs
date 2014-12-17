@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityIronGolem = DotCraftCore.Entity.Monster.EntityIronGolem;
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
+	using EntityIronGolem = DotCraftCore.nEntity.nMonster.EntityIronGolem;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
 
 	public class EntityAILookAtVillager : EntityAIBase
 	{

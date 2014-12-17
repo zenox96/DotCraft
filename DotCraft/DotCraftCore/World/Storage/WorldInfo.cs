@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using GameRules = DotCraftCore.World.GameRules;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using WorldType = DotCraftCore.World.WorldType;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using GameRules = DotCraftCore.nWorld.GameRules;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
+	using WorldType = DotCraftCore.nWorld.WorldType;
 
 	public class WorldInfo
 	{

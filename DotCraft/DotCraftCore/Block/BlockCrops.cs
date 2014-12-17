@@ -1,17 +1,17 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockCrops : BlockBush, IGrowable
 	{

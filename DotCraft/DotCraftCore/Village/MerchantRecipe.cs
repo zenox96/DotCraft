@@ -1,9 +1,9 @@
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
 
 	public class MerchantRecipe
 	{

@@ -1,12 +1,12 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockBed = DotCraftCore.block.BlockBed;
-	using EntityOcelot = DotCraftCore.Entity.Passive.EntityOcelot;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockBed = DotCraftCore.nBlock.BlockBed;
+	using EntityOcelot = DotCraftCore.nEntity.nPassive.EntityOcelot;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIOcelotSit : EntityAIBase
 	{

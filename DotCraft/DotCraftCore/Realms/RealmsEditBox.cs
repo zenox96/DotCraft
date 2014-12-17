@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using Minecraft = DotCraftCore.client.Minecraft;
@@ -8,7 +8,7 @@ namespace DotCraftCore.Realms
 	using Gui = DotCraftCore.client.gui.Gui;
 	using GuiScreen = DotCraftCore.client.gui.GuiScreen;
 	using Tessellator = DotCraftCore.client.renderer.Tessellator;
-	using ChatAllowedCharacters = DotCraftCore.Util.ChatAllowedCharacters;
+	using ChatAllowedCharacters = DotCraftCore.nUtil.ChatAllowedCharacters;
 	using GL11 = org.lwjgl.opengl.GL11;
 
 	public class RealmsEditBox

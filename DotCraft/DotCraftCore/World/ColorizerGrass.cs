@@ -1,4 +1,4 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	public class ColorizerGrass

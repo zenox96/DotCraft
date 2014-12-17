@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
-	using BlockDoor = DotCraftCore.block.BlockDoor;
+	using BlockDoor = DotCraftCore.nBlock.BlockDoor;
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using World = DotCraftCore.World.World;
-	using WorldSavedData = DotCraftCore.World.WorldSavedData;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using World = DotCraftCore.nWorld.World;
+	using WorldSavedData = DotCraftCore.nWorld.WorldSavedData;
 
 	public class VillageCollection : WorldSavedData
 	{

@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using ItemFood = DotCraftCore.item.ItemFood;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
 
 	public class FoodStats
 	{

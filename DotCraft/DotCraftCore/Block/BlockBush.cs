@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockBush : Block
 	{

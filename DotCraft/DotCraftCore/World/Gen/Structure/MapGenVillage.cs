@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class MapGenVillage : MapGenStructure
 	{

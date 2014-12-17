@@ -1,20 +1,20 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityMinecartChest = DotCraftCore.entity.item.EntityMinecartChest;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
 	using Item = DotCraftCore.item.Item;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using TileEntityMobSpawner = DotCraftCore.TileEntity.TileEntityMobSpawner;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using World = DotCraftCore.World.World;
+	using TileEntityMobSpawner = DotCraftCore.nTileEntity.TileEntityMobSpawner;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using World = DotCraftCore.nWorld.World;
 
 	public class StructureMineshaftPieces
 	{

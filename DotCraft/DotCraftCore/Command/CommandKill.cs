@@ -1,9 +1,9 @@
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using DamageSource = DotCraftCore.Util.DamageSource;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
 
 	public class CommandKill : CommandBase
 	{

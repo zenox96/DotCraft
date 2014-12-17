@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityEnderCrystal = DotCraftCore.entity.item.EntityEnderCrystal;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGenSpikes : WorldGenerator
 	{

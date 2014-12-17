@@ -1,4 +1,4 @@
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Validate = org.apache.commons.lang3.Validate;

@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using IPBanEntry = DotCraftCore.Server.Management.IPBanEntry;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using PlayerNotFoundException = DotCraftCore.nCommand.PlayerNotFoundException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using IPBanEntry = DotCraftCore.nServer.nManagement.IPBanEntry;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class CommandBanIp : CommandBase
 	{

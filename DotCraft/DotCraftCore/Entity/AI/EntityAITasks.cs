@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Profiler = DotCraftCore.Profiler.Profiler;
+	using Profiler = DotCraftCore.nProfiler.Profiler;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

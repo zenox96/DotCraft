@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using Charsets = com.google.common.base.Charsets;

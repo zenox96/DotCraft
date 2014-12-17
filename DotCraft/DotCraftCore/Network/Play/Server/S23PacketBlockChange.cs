@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
-	using Block = DotCraftCore.block.Block;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using World = DotCraftCore.nWorld.World;
 
 	public class S23PacketBlockChange : Packet
 	{

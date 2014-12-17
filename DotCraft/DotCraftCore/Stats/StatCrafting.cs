@@ -1,8 +1,8 @@
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
 	using Item = DotCraftCore.item.Item;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class StatCrafting : StatBase
 	{

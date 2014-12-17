@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 	using GL11 = org.lwjgl.opengl.GL11;
 
 	public class RealmsSliderButton : RealmsButton

@@ -1,15 +1,15 @@
-namespace DotCraftCore.Init
+namespace DotCraftCore.nInit
 {
 
-	using Item = DotCraftCore.Item.Item;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemBow = DotCraftCore.Item.ItemBow;
-	using ItemEmptyMap = DotCraftCore.Item.ItemEmptyMap;
-	using ItemEnchantedBook = DotCraftCore.Item.ItemEnchantedBook;
-	using ItemFishingRod = DotCraftCore.Item.ItemFishingRod;
-	using ItemMap = DotCraftCore.Item.ItemMap;
-	using ItemPotion = DotCraftCore.Item.ItemPotion;
-	using ItemShears = DotCraftCore.Item.ItemShears;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemBow = DotCraftCore.nItem.ItemBow;
+	using ItemEmptyMap = DotCraftCore.nItem.ItemEmptyMap;
+	using ItemEnchantedBook = DotCraftCore.nItem.ItemEnchantedBook;
+	using ItemFishingRod = DotCraftCore.nItem.ItemFishingRod;
+	using ItemMap = DotCraftCore.nItem.ItemMap;
+	using ItemPotion = DotCraftCore.nItem.ItemPotion;
+	using ItemShears = DotCraftCore.nItem.ItemShears;
 
 	public class Items
 	{

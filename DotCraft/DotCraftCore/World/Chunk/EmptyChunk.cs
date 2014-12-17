@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk
+namespace DotCraftCore.nWorld.nChunk
 {
 
-	using Block = DotCraftCore.block.Block;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
+	using Block = DotCraftCore.nBlock.Block;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
 	using Entity = DotCraftCore.entity.Entity;
 	using Blocks = DotCraftCore.init.Blocks;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
-	using World = DotCraftCore.World.World;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EmptyChunk : Chunk
 	{

@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.Scoreboard
+namespace DotCraftCore.nScoreboard
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class ScoreHealthCriteria : ScoreDummyCriteria
 	{

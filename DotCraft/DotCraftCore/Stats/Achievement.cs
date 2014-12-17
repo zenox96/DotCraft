@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Item = DotCraftCore.item.Item;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using StatCollector = DotCraftCore.Util.StatCollector;
+	using Block = DotCraftCore.nBlock.Block;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
 
 	public class Achievement : StatBase
 	{

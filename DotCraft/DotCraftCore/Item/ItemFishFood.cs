@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using Maps = com.google.common.collect.Maps;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using PotionHelper = DotCraftCore.Potion.PotionHelper;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using PotionHelper = DotCraftCore.nPotion.PotionHelper;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemFishFood : ItemFood
 	{

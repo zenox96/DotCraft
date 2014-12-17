@@ -1,23 +1,23 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using StatList = DotCraftCore.Stats.StatList;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using StatList = DotCraftCore.nStats.StatList;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityAnimal : EntityAgeable, IAnimals
 	{

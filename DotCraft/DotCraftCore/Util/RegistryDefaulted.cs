@@ -1,4 +1,4 @@
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	public class RegistryDefaulted<T,K> : RegistrySimple<T,K>

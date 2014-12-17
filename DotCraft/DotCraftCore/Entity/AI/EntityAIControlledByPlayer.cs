@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockSlab = DotCraftCore.block.BlockSlab;
-	using Material = DotCraftCore.block.material.Material;
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using PathFinder = DotCraftCore.Pathfinding.PathFinder;
-	using PathPoint = DotCraftCore.Pathfinding.PathPoint;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockSlab = DotCraftCore.nBlock.BlockSlab;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using PathFinder = DotCraftCore.nPathfinding.PathFinder;
+	using PathPoint = DotCraftCore.nPathfinding.PathPoint;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EntityAIControlledByPlayer : EntityAIBase
 	{

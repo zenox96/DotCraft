@@ -1,9 +1,9 @@
-namespace DotCraftCore.Enchantment
+namespace DotCraftCore.nEnchantment
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EnchantmentProtection : Enchantment
 	{

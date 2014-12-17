@@ -1,4 +1,4 @@
-namespace DotCraftCore.Event
+namespace DotCraftCore.nEvent
 {
 
 	using Maps = com.google.common.collect.Maps;

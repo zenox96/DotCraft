@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using IInventory = DotCraftCore.inventory.IInventory;
 	using Item = DotCraftCore.item.Item;
 	using ItemStack = DotCraftCore.item.ItemStack;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
+	using TileEntityDispenser = DotCraftCore.nTileEntity.TileEntityDispenser;
 
 	public class WeightedRandomChestContent : WeightedRandom.Item
 	{

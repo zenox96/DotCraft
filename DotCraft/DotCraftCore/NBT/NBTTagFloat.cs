@@ -1,7 +1,7 @@
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class NBTTagFloat : NBTBase.NBTPrimitive
 	{

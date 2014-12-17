@@ -1,8 +1,8 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using IInventory = DotCraftCore.inventory.IInventory;
-	using World = DotCraftCore.World.World;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using World = DotCraftCore.nWorld.World;
 
 	public interface IHopper : IInventory
 	{

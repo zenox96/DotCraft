@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockHugeMushroom : Block
 	{

@@ -1,10 +1,10 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using World = DotCraftCore.World.World;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemWritableBook : Item
 	{

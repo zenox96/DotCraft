@@ -1,13 +1,13 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using IMerchant = DotCraftCore.Entity.IMerchant;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using IMerchant = DotCraftCore.nEntity.IMerchant;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryPlayer = DotCraftCore.nEntity.nPlayer.InventoryPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ContainerMerchant : Container
 	{

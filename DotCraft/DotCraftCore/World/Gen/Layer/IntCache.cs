@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
 

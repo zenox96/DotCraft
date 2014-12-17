@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI.Attributes
+namespace DotCraftCore.nEntity.nAI.nAttributes
 {
 
 	using Maps = com.google.common.collect.Maps;

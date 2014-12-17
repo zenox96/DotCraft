@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using World = DotCraftCore.World.World;
-	using MapData = DotCraftCore.World.Storage.MapData;
+	using World = DotCraftCore.nWorld.World;
+	using MapData = DotCraftCore.nWorld.nStorage.MapData;
 
 	public class ItemEmptyMap : ItemMapBase
 	{

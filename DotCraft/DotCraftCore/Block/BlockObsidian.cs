@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using MapColor = DotCraftCore.Block.material.MapColor;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
 
 	public class BlockObsidian : BlockStone
 	{

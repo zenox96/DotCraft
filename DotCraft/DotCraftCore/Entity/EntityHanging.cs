@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using Material = DotCraftCore.block.material.Material;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using Direction = DotCraftCore.Util.Direction;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityHanging : Entity
 	{

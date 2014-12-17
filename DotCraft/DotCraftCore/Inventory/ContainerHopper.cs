@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryPlayer = DotCraftCore.nEntity.nPlayer.InventoryPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public class ContainerHopper : Container
 	{

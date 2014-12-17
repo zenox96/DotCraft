@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 	public class ObjectIntIdentityMap<T>
 	{

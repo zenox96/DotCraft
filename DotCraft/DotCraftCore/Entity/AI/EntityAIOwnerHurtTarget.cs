@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
 
 	public class EntityAIOwnerHurtTarget : EntityAITarget
 	{

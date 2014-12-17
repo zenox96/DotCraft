@@ -1,10 +1,10 @@
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using GameRules = DotCraftCore.World.GameRules;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using WorldType = DotCraftCore.World.WorldType;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using GameRules = DotCraftCore.nWorld.GameRules;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
+	using WorldType = DotCraftCore.nWorld.WorldType;
 
 	public class DerivedWorldInfo : WorldInfo
 	{

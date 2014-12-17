@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using NibbleArray = DotCraftCore.World.Chunk.NibbleArray;
-	using ExtendedBlockStorage = DotCraftCore.World.Chunk.Storage.ExtendedBlockStorage;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using NibbleArray = DotCraftCore.nWorld.nChunk.NibbleArray;
+	using ExtendedBlockStorage = DotCraftCore.nWorld.nChunk.nStorage.ExtendedBlockStorage;
 
 	public class S21PacketChunkData : Packet
 	{

@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class MapGenCavesHell : MapGenBase
 	{

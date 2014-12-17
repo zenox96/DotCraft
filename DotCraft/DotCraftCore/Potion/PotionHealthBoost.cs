@@ -1,4 +1,4 @@
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;

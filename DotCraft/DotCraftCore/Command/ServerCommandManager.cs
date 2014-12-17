@@ -1,42 +1,42 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using CommandAchievement = DotCraftCore.Command.Server.CommandAchievement;
-	using CommandBanIp = DotCraftCore.Command.Server.CommandBanIp;
-	using CommandBanPlayer = DotCraftCore.Command.Server.CommandBanPlayer;
-	using CommandBlockLogic = DotCraftCore.Command.Server.CommandBlockLogic;
-	using CommandBroadcast = DotCraftCore.Command.Server.CommandBroadcast;
-	using CommandDeOp = DotCraftCore.Command.Server.CommandDeOp;
-	using CommandEmote = DotCraftCore.Command.Server.CommandEmote;
-	using CommandListBans = DotCraftCore.Command.Server.CommandListBans;
-	using CommandListPlayers = DotCraftCore.Command.Server.CommandListPlayers;
-	using CommandMessage = DotCraftCore.Command.Server.CommandMessage;
-	using CommandMessageRaw = DotCraftCore.Command.Server.CommandMessageRaw;
-	using CommandNetstat = DotCraftCore.Command.Server.CommandNetstat;
-	using CommandOp = DotCraftCore.Command.Server.CommandOp;
-	using CommandPardonIp = DotCraftCore.Command.Server.CommandPardonIp;
-	using CommandPardonPlayer = DotCraftCore.Command.Server.CommandPardonPlayer;
-	using CommandPublishLocalServer = DotCraftCore.Command.Server.CommandPublishLocalServer;
-	using CommandSaveAll = DotCraftCore.Command.Server.CommandSaveAll;
-	using CommandSaveOff = DotCraftCore.Command.Server.CommandSaveOff;
-	using CommandSaveOn = DotCraftCore.Command.Server.CommandSaveOn;
-	using CommandScoreboard = DotCraftCore.Command.Server.CommandScoreboard;
-	using CommandSetBlock = DotCraftCore.Command.Server.CommandSetBlock;
-	using CommandSetDefaultSpawnpoint = DotCraftCore.Command.Server.CommandSetDefaultSpawnpoint;
-	using CommandStop = DotCraftCore.Command.Server.CommandStop;
-	using CommandSummon = DotCraftCore.Command.Server.CommandSummon;
-	using CommandTeleport = DotCraftCore.Command.Server.CommandTeleport;
-	using CommandTestFor = DotCraftCore.Command.Server.CommandTestFor;
-	using CommandTestForBlock = DotCraftCore.Command.Server.CommandTestForBlock;
-	using CommandWhitelist = DotCraftCore.Command.Server.CommandWhitelist;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using RConConsoleSource = DotCraftCore.Network.Rcon.RConConsoleSource;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using CommandAchievement = DotCraftCore.nCommand.nServer.CommandAchievement;
+	using CommandBanIp = DotCraftCore.nCommand.nServer.CommandBanIp;
+	using CommandBanPlayer = DotCraftCore.nCommand.nServer.CommandBanPlayer;
+	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
+	using CommandBroadcast = DotCraftCore.nCommand.nServer.CommandBroadcast;
+	using CommandDeOp = DotCraftCore.nCommand.nServer.CommandDeOp;
+	using CommandEmote = DotCraftCore.nCommand.nServer.CommandEmote;
+	using CommandListBans = DotCraftCore.nCommand.nServer.CommandListBans;
+	using CommandListPlayers = DotCraftCore.nCommand.nServer.CommandListPlayers;
+	using CommandMessage = DotCraftCore.nCommand.nServer.CommandMessage;
+	using CommandMessageRaw = DotCraftCore.nCommand.nServer.CommandMessageRaw;
+	using CommandNetstat = DotCraftCore.nCommand.nServer.CommandNetstat;
+	using CommandOp = DotCraftCore.nCommand.nServer.CommandOp;
+	using CommandPardonIp = DotCraftCore.nCommand.nServer.CommandPardonIp;
+	using CommandPardonPlayer = DotCraftCore.nCommand.nServer.CommandPardonPlayer;
+	using CommandPublishLocalServer = DotCraftCore.nCommand.nServer.CommandPublishLocalServer;
+	using CommandSaveAll = DotCraftCore.nCommand.nServer.CommandSaveAll;
+	using CommandSaveOff = DotCraftCore.nCommand.nServer.CommandSaveOff;
+	using CommandSaveOn = DotCraftCore.nCommand.nServer.CommandSaveOn;
+	using CommandScoreboard = DotCraftCore.nCommand.nServer.CommandScoreboard;
+	using CommandSetBlock = DotCraftCore.nCommand.nServer.CommandSetBlock;
+	using CommandSetDefaultSpawnpoint = DotCraftCore.nCommand.nServer.CommandSetDefaultSpawnpoint;
+	using CommandStop = DotCraftCore.nCommand.nServer.CommandStop;
+	using CommandSummon = DotCraftCore.nCommand.nServer.CommandSummon;
+	using CommandTeleport = DotCraftCore.nCommand.nServer.CommandTeleport;
+	using CommandTestFor = DotCraftCore.nCommand.nServer.CommandTestFor;
+	using CommandTestForBlock = DotCraftCore.nCommand.nServer.CommandTestForBlock;
+	using CommandWhitelist = DotCraftCore.nCommand.nServer.CommandWhitelist;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using RConConsoleSource = DotCraftCore.nNetwork.nRcon.RConConsoleSource;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
 
 	public class ServerCommandManager : CommandHandler, IAdminCommand
 	{

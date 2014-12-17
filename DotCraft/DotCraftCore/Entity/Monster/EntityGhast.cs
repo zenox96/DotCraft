@@ -1,23 +1,23 @@
 using System;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityFlying = DotCraftCore.Entity.EntityFlying;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityLargeFireball = DotCraftCore.Entity.Projectile.EntityLargeFireball;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityFlying = DotCraftCore.nEntity.EntityFlying;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityLargeFireball = DotCraftCore.nEntity.nProjectile.EntityLargeFireball;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityGhast : EntityFlying, IMob
 	{

@@ -1,15 +1,15 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagIntArray = DotCraftCore.NBT.NBTTagIntArray;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using StatCollector = DotCraftCore.Util.StatCollector;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagIntArray = DotCraftCore.nNBT.NBTTagIntArray;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
 
 	public class ItemFireworkCharge : Item
 	{

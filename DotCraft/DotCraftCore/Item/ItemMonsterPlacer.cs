@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockLiquid = DotCraftCore.block.BlockLiquid;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using Entity = DotCraftCore.entity.Entity;
@@ -14,12 +14,12 @@ namespace DotCraftCore.Item
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using IEntityLivingData = DotCraftCore.entity.IEntityLivingData;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Facing = DotCraftCore.Util.Facing;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using World = DotCraftCore.World.World;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemMonsterPlacer : Item
 	{

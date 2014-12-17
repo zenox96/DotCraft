@@ -1,38 +1,38 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using EntityAITasks = DotCraftCore.Entity.AI.EntityAITasks;
-	using EntityJumpHelper = DotCraftCore.Entity.AI.EntityJumpHelper;
-	using EntityLookHelper = DotCraftCore.Entity.AI.EntityLookHelper;
-	using EntityMoveHelper = DotCraftCore.Entity.AI.EntityMoveHelper;
-	using EntitySenses = DotCraftCore.Entity.AI.EntitySenses;
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityCreeper = DotCraftCore.Entity.Monster.EntityCreeper;
-	using EntityGhast = DotCraftCore.Entity.Monster.EntityGhast;
-	using IMob = DotCraftCore.Entity.Monster.IMob;
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using ItemSword = DotCraftCore.Item.ItemSword;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagFloat = DotCraftCore.NBT.NBTTagFloat;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using S1BPacketEntityAttach = DotCraftCore.Network.Play.Server.S1BPacketEntityAttach;
-	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using EntityAITasks = DotCraftCore.nEntity.nAI.EntityAITasks;
+	using EntityJumpHelper = DotCraftCore.nEntity.nAI.EntityJumpHelper;
+	using EntityLookHelper = DotCraftCore.nEntity.nAI.EntityLookHelper;
+	using EntityMoveHelper = DotCraftCore.nEntity.nAI.EntityMoveHelper;
+	using EntitySenses = DotCraftCore.nEntity.nAI.EntitySenses;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityCreeper = DotCraftCore.nEntity.nMonster.EntityCreeper;
+	using EntityGhast = DotCraftCore.nEntity.nMonster.EntityGhast;
+	using IMob = DotCraftCore.nEntity.nMonster.IMob;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using ItemSword = DotCraftCore.nItem.ItemSword;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagFloat = DotCraftCore.nNBT.NBTTagFloat;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using S1BPacketEntityAttach = DotCraftCore.nNetwork.nPlay.nServer.S1BPacketEntityAttach;
+	using PathNavigate = DotCraftCore.nPathfinding.PathNavigate;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
 
 	public abstract class EntityLiving : EntityLivingBase
 	{

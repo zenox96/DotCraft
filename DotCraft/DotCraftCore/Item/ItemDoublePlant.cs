@@ -1,10 +1,10 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockDoublePlant = DotCraftCore.block.BlockDoublePlant;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using ColorizerGrass = DotCraftCore.World.ColorizerGrass;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDoublePlant = DotCraftCore.nBlock.BlockDoublePlant;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using ColorizerGrass = DotCraftCore.nWorld.ColorizerGrass;
 
 	public class ItemDoublePlant : ItemMultiTexture
 	{

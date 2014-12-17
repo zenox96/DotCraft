@@ -1,4 +1,4 @@
-namespace DotCraftCore.Server.GUI
+namespace DotCraftCore.nServer.nGUI
 {
 
 	public interface IUpdatePlayerListBox

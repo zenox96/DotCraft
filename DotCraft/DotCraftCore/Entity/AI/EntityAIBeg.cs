@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityWolf = DotCraftCore.Entity.Passive.EntityWolf;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using EntityWolf = DotCraftCore.nEntity.nPassive.EntityWolf;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIBeg : EntityAIBase
 	{

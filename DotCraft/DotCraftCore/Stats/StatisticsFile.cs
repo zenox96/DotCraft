@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
 	using Maps = com.google.common.collect.Maps;
@@ -13,10 +13,10 @@ namespace DotCraftCore.Stats
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
 	using S37PacketStatistics = DotCraftCore.network.play.server.S37PacketStatistics;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using IJsonSerializable = DotCraftCore.Util.IJsonSerializable;
-	using TupleIntJsonSerializable = DotCraftCore.Util.TupleIntJsonSerializable;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using IJsonSerializable = DotCraftCore.nUtil.IJsonSerializable;
+	using TupleIntJsonSerializable = DotCraftCore.nUtil.TupleIntJsonSerializable;
 	using FileUtils = org.apache.commons.io.FileUtils;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;

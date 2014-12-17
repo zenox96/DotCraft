@@ -1,10 +1,10 @@
 using System;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using S29PacketSoundEffect = DotCraftCore.Network.Play.Server.S29PacketSoundEffect;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using S29PacketSoundEffect = DotCraftCore.nNetwork.nPlay.nServer.S29PacketSoundEffect;
 
 	public class CommandPlaySound : CommandBase
 	{

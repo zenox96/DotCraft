@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Entity = DotCraftCore.entity.Entity;
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using Facing = DotCraftCore.Util.Facing;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using Facing = DotCraftCore.nUtil.Facing;
 
 	public class TileEntityPiston : TileEntity
 	{

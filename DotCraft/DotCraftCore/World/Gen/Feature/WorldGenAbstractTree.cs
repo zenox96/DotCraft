@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class WorldGenAbstractTree : WorldGenerator
 	{

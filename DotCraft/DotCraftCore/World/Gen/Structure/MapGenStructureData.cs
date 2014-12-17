@@ -1,8 +1,8 @@
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using WorldSavedData = DotCraftCore.World.WorldSavedData;
+	using WorldSavedData = DotCraftCore.nWorld.WorldSavedData;
 
 	public class MapGenStructureData : WorldSavedData
 	{

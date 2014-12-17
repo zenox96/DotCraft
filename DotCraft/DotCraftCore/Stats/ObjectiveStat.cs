@@ -1,7 +1,7 @@
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
-	using ScoreDummyCriteria = DotCraftCore.Scoreboard.ScoreDummyCriteria;
+	using ScoreDummyCriteria = DotCraftCore.nScoreboard.ScoreDummyCriteria;
 
 	public class ObjectiveStat : ScoreDummyCriteria
 	{

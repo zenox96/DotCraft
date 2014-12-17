@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk
+namespace DotCraftCore.nWorld.nChunk
 {
 
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public interface IChunkProvider
 	{

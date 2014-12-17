@@ -1,28 +1,28 @@
 using System;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAttackOnCollide = DotCraftCore.Entity.AI.EntityAIAttackOnCollide;
-	using EntityAIAvoidEntity = DotCraftCore.Entity.AI.EntityAIAvoidEntity;
-	using EntityAICreeperSwell = DotCraftCore.Entity.AI.EntityAICreeperSwell;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityLightningBolt = DotCraftCore.Entity.Effect.EntityLightningBolt;
-	using EntityOcelot = DotCraftCore.Entity.Passive.EntityOcelot;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAttackOnCollide = DotCraftCore.nEntity.nAI.EntityAIAttackOnCollide;
+	using EntityAIAvoidEntity = DotCraftCore.nEntity.nAI.EntityAIAvoidEntity;
+	using EntityAICreeperSwell = DotCraftCore.nEntity.nAI.EntityAICreeperSwell;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityLightningBolt = DotCraftCore.nEntity.nEffect.EntityLightningBolt;
+	using EntityOcelot = DotCraftCore.nEntity.nPassive.EntityOcelot;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityCreeper : EntityMob
 	{

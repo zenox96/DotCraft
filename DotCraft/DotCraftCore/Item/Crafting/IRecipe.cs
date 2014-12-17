@@ -1,9 +1,9 @@
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
 	using InventoryCrafting = DotCraftCore.inventory.InventoryCrafting;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public interface IRecipe
 	{

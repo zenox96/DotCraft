@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Text;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Function = com.google.common.base.Function;

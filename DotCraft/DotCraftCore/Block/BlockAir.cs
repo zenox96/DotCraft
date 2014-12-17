@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using World = DotCraftCore.World.World;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockAir : Block
 	{

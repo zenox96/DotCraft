@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
 
 	public class EntityAITargetNonTamed : EntityAINearestAttackableTarget
 	{

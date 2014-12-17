@@ -1,8 +1,8 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
 
 	public class BlockSponge : Block
 	{

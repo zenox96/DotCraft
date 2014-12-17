@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public class EntityAITempt : EntityAIBase
 	{

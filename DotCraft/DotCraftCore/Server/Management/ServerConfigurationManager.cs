@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using Charsets = com.google.common.base.Charsets;
@@ -508,7 +508,7 @@ namespace DotCraftCore.Server.Management
 ///    
 ///     <summary> * Transfers an entity from a world to another world. </summary>
 ///     
-		public virtual void transferEntityToWorld(Entity p_82448_1_, int p_82448_2_, WorldServer p_82448_3_, WorldServer p_82448_4_)
+		public virtual void transferEntityToWorld(nEntity p_82448_1_, int p_82448_2_, WorldServer p_82448_3_, WorldServer p_82448_4_)
 		{
 			double var5 = p_82448_1_.posX;
 			double var7 = p_82448_1_.posZ;
@@ -733,7 +733,7 @@ namespace DotCraftCore.Server.Management
 ///    
 ///     <summary> * Find all players in a specified range and narrowing down by other parameters </summary>
 ///     
-		public virtual IList findPlayers(ChunkCoordinates p_82449_1_, int p_82449_2_, int p_82449_3_, int p_82449_4_, int p_82449_5_, int p_82449_6_, int p_82449_7_, IDictionary p_82449_8_, string p_82449_9_, string p_82449_10_, World p_82449_11_)
+		public virtual IList findPlayers(ChunkCoordinates p_82449_1_, int p_82449_2_, int p_82449_3_, int p_82449_4_, int p_82449_5_, int p_82449_6_, int p_82449_7_, IDictionary p_82449_8_, string p_82449_9_, string p_82449_10_, nWorld p_82449_11_)
 		{
 			if(this.playerEntityList.Count == 0)
 			{
@@ -1056,7 +1056,7 @@ namespace DotCraftCore.Server.Management
 			this.gameType = p_152604_1_;
 		}
 
-		private void func_72381_a(EntityPlayerMP p_72381_1_, EntityPlayerMP p_72381_2_, World p_72381_3_)
+		private void func_72381_a(EntityPlayerMP p_72381_1_, EntityPlayerMP p_72381_2_, nWorld p_72381_3_)
 		{
 			if(p_72381_2_ != null)
 			{

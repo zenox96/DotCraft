@@ -1,22 +1,22 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
 	using AnvilConverterException = DotCraftCore.client.AnvilConverterException;
 	using CompressedStreamTools = DotCraftCore.nbt.CompressedStreamTools;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using WorldType = DotCraftCore.World.WorldType;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using WorldChunkManagerHell = DotCraftCore.World.Biome.WorldChunkManagerHell;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
-	using SaveFormatComparator = DotCraftCore.World.Storage.SaveFormatComparator;
-	using SaveFormatOld = DotCraftCore.World.Storage.SaveFormatOld;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using WorldChunkManagerHell = DotCraftCore.nWorld.nBiome.WorldChunkManagerHell;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
+	using SaveFormatComparator = DotCraftCore.nWorld.nStorage.SaveFormatComparator;
+	using SaveFormatOld = DotCraftCore.nWorld.nStorage.SaveFormatOld;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

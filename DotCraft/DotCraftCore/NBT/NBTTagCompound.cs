@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using ReportedException = DotCraftCore.Util.ReportedException;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

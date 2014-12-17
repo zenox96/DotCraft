@@ -1,11 +1,11 @@
-﻿using DotCraftCore.CreativeTab;
-using DotCraftCore.Util;
+﻿using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
-    using Item = DotCraftCore.Item.Item;
+    using Item = DotCraftCore.nItem.Item;
     
     public class Block
     {
@@ -588,7 +588,7 @@ namespace DotCraftCore.Block
             return this;
         }
 
-        public virtual float getBlockHardness(World p_149712_1_, int p_149712_2_, int p_149712_3_, int p_149712_4_)
+        public virtual float getBlockHardness(nWorld p_149712_1_, int p_149712_2_, int p_149712_3_, int p_149712_4_)
         {
             return this.blockHardness;
         }
@@ -680,12 +680,12 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Returns the bounding box of the wired rectangular prism to render. </summary>
         ///     
-        public virtual AxisAlignedBB getSelectedBoundingBoxFromPool(World p_149633_1_, int p_149633_2_, int p_149633_3_, int p_149633_4_)
+        public virtual AxisAlignedBB getSelectedBoundingBoxFromPool(nWorld p_149633_1_, int p_149633_2_, int p_149633_3_, int p_149633_4_)
         {
             return AxisAlignedBB.getBoundingBox((double)p_149633_2_ + this.field_149759_B, (double)p_149633_3_ + this.field_149760_C, (double)p_149633_4_ + this.field_149754_D, (double)p_149633_2_ + this.field_149755_E, (double)p_149633_3_ + this.field_149756_F, (double)p_149633_4_ + this.field_149757_G);
         }
 
-        public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
+        public virtual void addCollisionBoxesToList(nWorld p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, nEntity p_149743_7_)
         {
             AxisAlignedBB var8 = this.getCollisionBoundingBoxFromPool(p_149743_1_, p_149743_2_, p_149743_3_, p_149743_4_);
 
@@ -699,7 +699,7 @@ namespace DotCraftCore.Block
         ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
         ///     * cleared to be reused) </summary>
         ///     
-        public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+        public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(nWorld p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
         {
             return AxisAlignedBB.getBoundingBox((double)p_149668_2_ + this.field_149759_B, (double)p_149668_3_ + this.field_149760_C, (double)p_149668_4_ + this.field_149754_D, (double)p_149668_2_ + this.field_149755_E, (double)p_149668_3_ + this.field_149756_F, (double)p_149668_4_ + this.field_149757_G);
         }
@@ -732,35 +732,35 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Ticks the block if it's been scheduled </summary>
         ///     
-        public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+        public virtual void updateTick(nWorld p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
         {
         }
 
         ///    
         ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
         ///     
-        public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+        public virtual void randomDisplayTick(nWorld p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
         {
         }
 
-        public virtual void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
+        public virtual void onBlockDestroyedByPlayer(nWorld p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
         {
         }
 
-        public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+        public virtual void onNeighborBlockChange(nWorld p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
         {
         }
 
-        public virtual int func_149738_a(World p_149738_1_)
+        public virtual int func_149738_a(nWorld p_149738_1_)
         {
             return 10;
         }
 
-        public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+        public virtual void onBlockAdded(nWorld p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
         {
         }
 
-        public virtual void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
+        public virtual void breakBlock(nWorld p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
         {
         }
 
@@ -777,7 +777,7 @@ namespace DotCraftCore.Block
             return Item.getItemFromBlock(this);
         }
 
-        public virtual float getPlayerRelativeBlockHardness(EntityPlayer p_149737_1_, World p_149737_2_, int p_149737_3_, int p_149737_4_, int p_149737_5_)
+        public virtual float getPlayerRelativeBlockHardness(EntityPlayer p_149737_1_, nWorld p_149737_2_, int p_149737_3_, int p_149737_4_, int p_149737_5_)
         {
             float var6 = this.getBlockHardness(p_149737_2_, p_149737_3_, p_149737_4_, p_149737_5_);
             return var6 < 0.0F ? 0.0F : (!p_149737_1_.canHarvestBlock(this) ? p_149737_1_.getCurrentPlayerStrVsBlock(this, false) / var6 / 100.0F : p_149737_1_.getCurrentPlayerStrVsBlock(this, true) / var6 / 30.0F);
@@ -786,7 +786,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Drops the specified block items </summary>
         ///     
-        public void dropBlockAsItem(World p_149697_1_, int p_149697_2_, int p_149697_3_, int p_149697_4_, int p_149697_5_, int p_149697_6_)
+        public void dropBlockAsItem(nWorld p_149697_1_, int p_149697_2_, int p_149697_3_, int p_149697_4_, int p_149697_5_, int p_149697_6_)
         {
             this.dropBlockAsItemWithChance(p_149697_1_, p_149697_2_, p_149697_3_, p_149697_4_, p_149697_5_, 1.0F, p_149697_6_);
         }
@@ -794,7 +794,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Drops the block items with a specified chance of dropping the specified items </summary>
         ///     
-        public virtual void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
+        public virtual void dropBlockAsItemWithChance(nWorld p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
         {
             if (!p_149690_1_.isClient)
             {
@@ -818,7 +818,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Spawns EntityItem in the world for the given ItemStack if the world is not remote. </summary>
         ///     
-        protected internal virtual void dropBlockAsItem_do(World p_149642_1_, int p_149642_2_, int p_149642_3_, int p_149642_4_, ItemStack p_149642_5_)
+        protected internal virtual void dropBlockAsItem_do(nWorld p_149642_1_, int p_149642_2_, int p_149642_3_, int p_149642_4_, ItemStack p_149642_5_)
         {
             if (!p_149642_1_.isClient && p_149642_1_.GameRules.getGameRuleBooleanValue("doTileDrops"))
             {
@@ -832,7 +832,7 @@ namespace DotCraftCore.Block
             }
         }
 
-        protected internal virtual void dropXpOnBlockBreak(World p_149657_1_, int p_149657_2_, int p_149657_3_, int p_149657_4_, int p_149657_5_)
+        protected internal virtual void dropXpOnBlockBreak(nWorld p_149657_1_, int p_149657_2_, int p_149657_3_, int p_149657_4_, int p_149657_5_)
         {
             if (!p_149657_1_.isClient)
             {
@@ -856,12 +856,12 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Returns how much this block can resist explosions from the passed in entity. </summary>
         ///     
-        public virtual float getExplosionResistance(Entity p_149638_1_)
+        public virtual float getExplosionResistance(nEntity p_149638_1_)
         {
             return this.blockResistance / 5.0F;
         }
 
-        public virtual MovingObjectPosition collisionRayTrace(World p_149731_1_, int p_149731_2_, int p_149731_3_, int p_149731_4_, Vec3 p_149731_5_, Vec3 p_149731_6_)
+        public virtual MovingObjectPosition collisionRayTrace(nWorld p_149731_1_, int p_149731_2_, int p_149731_3_, int p_149731_4_, Vec3 p_149731_5_, Vec3 p_149731_6_)
         {
             this.setBlockBoundsBasedOnState(p_149731_1_, p_149731_2_, p_149731_3_, p_149731_4_);
             p_149731_5_ = p_149731_5_.addVector((double)(-p_149731_2_), (double)(-p_149731_3_), (double)(-p_149731_4_));
@@ -1004,7 +1004,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Called upon the block being destroyed by an explosion </summary>
         ///     
-        public virtual void onBlockDestroyedByExplosion(World p_149723_1_, int p_149723_2_, int p_149723_3_, int p_149723_4_, Explosion p_149723_5_)
+        public virtual void onBlockDestroyedByExplosion(nWorld p_149723_1_, int p_149723_2_, int p_149723_3_, int p_149723_4_, Explosion p_149723_5_)
         {
         }
 
@@ -1019,7 +1019,7 @@ namespace DotCraftCore.Block
             }
         }
 
-        public virtual bool canReplace(World p_149705_1_, int p_149705_2_, int p_149705_3_, int p_149705_4_, int p_149705_5_, ItemStack p_149705_6_)
+        public virtual bool canReplace(nWorld p_149705_1_, int p_149705_2_, int p_149705_3_, int p_149705_4_, int p_149705_5_, ItemStack p_149705_6_)
         {
             return this.canPlaceBlockOnSide(p_149705_1_, p_149705_2_, p_149705_3_, p_149705_4_, p_149705_5_);
         }
@@ -1027,12 +1027,12 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * checks to see if you can place this block can be placed on that side of a block: BlockLever overrides </summary>
         ///     
-        public virtual bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
+        public virtual bool canPlaceBlockOnSide(nWorld p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
         {
             return this.canPlaceBlockAt(p_149707_1_, p_149707_2_, p_149707_3_, p_149707_4_);
         }
 
-        public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+        public virtual bool canPlaceBlockAt(nWorld p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
         {
             return p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_).blockMaterial.Replaceable;
         }
@@ -1040,16 +1040,16 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Called upon block activation (right click on the block.) </summary>
         ///     
-        public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+        public virtual bool onBlockActivated(nWorld p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
         {
             return false;
         }
 
-        public virtual void onEntityWalking(World p_149724_1_, int p_149724_2_, int p_149724_3_, int p_149724_4_, Entity p_149724_5_)
+        public virtual void onEntityWalking(nWorld p_149724_1_, int p_149724_2_, int p_149724_3_, int p_149724_4_, nEntity p_149724_5_)
         {
         }
 
-        public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
+        public virtual int onBlockPlaced(nWorld p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
         {
             return p_149660_9_;
         }
@@ -1057,11 +1057,11 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Called when a player hits the block. Args: world, x, y, z, player </summary>
         ///     
-        public virtual void onBlockClicked(World p_149699_1_, int p_149699_2_, int p_149699_3_, int p_149699_4_, EntityPlayer p_149699_5_)
+        public virtual void onBlockClicked(nWorld p_149699_1_, int p_149699_2_, int p_149699_3_, int p_149699_4_, EntityPlayer p_149699_5_)
         {
         }
 
-        public virtual void velocityToAddToEntity(World p_149640_1_, int p_149640_2_, int p_149640_3_, int p_149640_4_, Entity p_149640_5_, Vec3 p_149640_6_)
+        public virtual void velocityToAddToEntity(nWorld p_149640_1_, int p_149640_2_, int p_149640_3_, int p_149640_4_, nEntity p_149640_5_, Vec3 p_149640_6_)
         {
         }
 
@@ -1173,7 +1173,7 @@ namespace DotCraftCore.Block
             return false;
         }
 
-        public virtual void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
+        public virtual void onEntityCollidedWithBlock(nWorld p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, nEntity p_149670_5_)
         {
         }
 
@@ -1189,7 +1189,7 @@ namespace DotCraftCore.Block
         {
         }
 
-        public virtual void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
+        public virtual void harvestBlock(nWorld p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
         {
             p_149636_2_.addStat(StatList.mineBlockStatArray[getIdFromBlock(this)], 1);
             p_149636_2_.addExhaustion(0.025F);
@@ -1243,7 +1243,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants. </summary>
         ///     
-        public virtual bool canBlockStay(World p_149718_1_, int p_149718_2_, int p_149718_3_, int p_149718_4_)
+        public virtual bool canBlockStay(nWorld p_149718_1_, int p_149718_2_, int p_149718_3_, int p_149718_4_)
         {
             return true;
         }
@@ -1251,14 +1251,14 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Called when the block is placed in the world. </summary>
         ///     
-        public virtual void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+        public virtual void onBlockPlacedBy(nWorld p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
         {
         }
 
         ///    
         ///     <summary> * Called after a block is placed </summary>
         ///     
-        public virtual void onPostBlockPlaced(World p_149714_1_, int p_149714_2_, int p_149714_3_, int p_149714_4_, int p_149714_5_)
+        public virtual void onPostBlockPlaced(nWorld p_149714_1_, int p_149714_2_, int p_149714_3_, int p_149714_4_, int p_149714_5_)
         {
         }
 
@@ -1289,7 +1289,7 @@ namespace DotCraftCore.Block
             }
         }
 
-        public virtual bool onBlockEventReceived(World p_149696_1_, int p_149696_2_, int p_149696_3_, int p_149696_4_, int p_149696_5_, int p_149696_6_)
+        public virtual bool onBlockEventReceived(nWorld p_149696_1_, int p_149696_2_, int p_149696_3_, int p_149696_4_, int p_149696_5_, int p_149696_6_)
         {
             return false;
         }
@@ -1333,14 +1333,14 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Block's chance to react to an entity falling on it. </summary>
         ///     
-        public virtual void onFallenUpon(World p_149746_1_, int p_149746_2_, int p_149746_3_, int p_149746_4_, Entity p_149746_5_, float p_149746_6_)
+        public virtual void onFallenUpon(nWorld p_149746_1_, int p_149746_2_, int p_149746_3_, int p_149746_4_, nEntity p_149746_5_, float p_149746_6_)
         {
         }
 
         ///    
         ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
         ///     
-        public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+        public virtual Item getItem(nWorld p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
         {
             return Item.getItemFromBlock(this);
         }
@@ -1348,7 +1348,7 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Get the block's damage value (for use with pick block). </summary>
         ///     
-        public virtual int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
+        public virtual int getDamageValue(nWorld p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
         {
             return this.damageDropped(p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_));
         }
@@ -1381,18 +1381,18 @@ namespace DotCraftCore.Block
         ///    
         ///     <summary> * Called when the block is attempted to be harvested </summary>
         ///     
-        public virtual void onBlockHarvested(World p_149681_1_, int p_149681_2_, int p_149681_3_, int p_149681_4_, int p_149681_5_, EntityPlayer p_149681_6_)
+        public virtual void onBlockHarvested(nWorld p_149681_1_, int p_149681_2_, int p_149681_3_, int p_149681_4_, int p_149681_5_, EntityPlayer p_149681_6_)
         {
         }
 
-        public virtual void onBlockPreDestroy(World p_149725_1_, int p_149725_2_, int p_149725_3_, int p_149725_4_, int p_149725_5_)
+        public virtual void onBlockPreDestroy(nWorld p_149725_1_, int p_149725_2_, int p_149725_3_, int p_149725_4_, int p_149725_5_)
         {
         }
 
         ///    
         ///     <summary> * currently only used by BlockCauldron to incrament meta-data during rain </summary>
         ///     
-        public virtual void fillWithRain(World p_149639_1_, int p_149639_2_, int p_149639_3_, int p_149639_4_)
+        public virtual void fillWithRain(nWorld p_149639_1_, int p_149639_2_, int p_149639_3_, int p_149639_4_)
         {
         }
 
@@ -1435,7 +1435,7 @@ namespace DotCraftCore.Block
             return false;
         }
 
-        public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
+        public virtual int getComparatorInputOverride(nWorld p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
         {
             return 0;
         }

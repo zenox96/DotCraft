@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using Blocks = DotCraftCore.Init.Blocks;
-	using World = DotCraftCore.World.World;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockStaticLiquid : BlockLiquid
 	{

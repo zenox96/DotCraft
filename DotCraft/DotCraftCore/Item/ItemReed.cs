@@ -1,11 +1,11 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemReed : Item
 	{

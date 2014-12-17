@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Village = DotCraftCore.Village.Village;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Village = DotCraftCore.nVillage.Village;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIVillagerMate : EntityAIBase
 	{

@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class RandomPositionGenerator
 	{

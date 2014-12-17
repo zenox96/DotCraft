@@ -1,9 +1,9 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class EntityAIMoveTowardsTarget : EntityAIBase
 	{

@@ -1,10 +1,10 @@
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using World = DotCraftCore.World.World;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityWaterMob : EntityCreature, IAnimals
 	{

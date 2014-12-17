@@ -1,13 +1,13 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Block = DotCraftCore.block.Block;
-	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using MobSpawnerBaseLogic = DotCraftCore.TileEntity.MobSpawnerBaseLogic;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using EntityMinecart = DotCraftCore.nEntity.nItem.EntityMinecart;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using MobSpawnerBaseLogic = DotCraftCore.nTileEntity.MobSpawnerBaseLogic;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMinecartMobSpawner : EntityMinecart
 	{

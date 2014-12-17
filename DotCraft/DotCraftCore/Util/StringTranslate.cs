@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Collections;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Splitter = com.google.common.base.Splitter;

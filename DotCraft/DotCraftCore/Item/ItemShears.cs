@@ -1,12 +1,12 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemShears : Item
 	{

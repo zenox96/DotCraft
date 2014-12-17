@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using NoiseGeneratorPerlin = DotCraftCore.World.Gen.NoiseGeneratorPerlin;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
+	using World = DotCraftCore.nWorld.World;
+	using NoiseGeneratorPerlin = DotCraftCore.nWorld.nGen.NoiseGeneratorPerlin;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
 
 	public class BiomeGenMesa : BiomeGenBase
 	{

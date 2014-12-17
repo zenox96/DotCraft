@@ -1,9 +1,9 @@
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using World = DotCraftCore.World.World;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using World = DotCraftCore.nWorld.World;
 
 	public interface ICommandSender
 	{

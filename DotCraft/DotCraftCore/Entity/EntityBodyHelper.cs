@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EntityBodyHelper
 	{

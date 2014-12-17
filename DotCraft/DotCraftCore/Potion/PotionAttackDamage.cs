@@ -1,4 +1,4 @@
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 	using AttributeModifier = DotCraftCore.entity.ai.attributes.AttributeModifier;

@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockFlower = DotCraftCore.block.BlockFlower;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntitySlime = DotCraftCore.entity.monster.EntitySlime;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
 
 	public class BiomeGenSwamp : BiomeGenBase
 	{

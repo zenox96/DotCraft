@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
 
 	public class CommandDifficulty : CommandBase
 	{

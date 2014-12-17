@@ -1,21 +1,21 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using StatList = DotCraftCore.Stats.StatList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using Direction = DotCraftCore.Util.Direction;
-	using ColorizerFoliage = DotCraftCore.World.ColorizerFoliage;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using StatList = DotCraftCore.nStats.StatList;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using ColorizerFoliage = DotCraftCore.nWorld.ColorizerFoliage;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockVine : Block
 	{

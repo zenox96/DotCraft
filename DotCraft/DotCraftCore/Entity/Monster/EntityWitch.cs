@@ -1,32 +1,32 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Material = DotCraftCore.block.material.Material;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IRangedAttackMob = DotCraftCore.Entity.IRangedAttackMob;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIArrowAttack = DotCraftCore.Entity.AI.EntityAIArrowAttack;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPotion = DotCraftCore.Entity.Projectile.EntityPotion;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IRangedAttackMob = DotCraftCore.nEntity.IRangedAttackMob;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIArrowAttack = DotCraftCore.nEntity.nAI.EntityAIArrowAttack;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPotion = DotCraftCore.nEntity.nProjectile.EntityPotion;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityWitch : EntityMob, IRangedAttackMob
 	{

@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
 
 	public class CommandSetSpawnpoint : CommandBase
 	{

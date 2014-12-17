@@ -1,4 +1,4 @@
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
 	public interface IProjectile

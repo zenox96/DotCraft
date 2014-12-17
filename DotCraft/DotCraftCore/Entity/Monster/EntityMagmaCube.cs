@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMagmaCube : EntitySlime
 	{

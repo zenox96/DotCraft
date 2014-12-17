@@ -1,7 +1,7 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 
 	public class NextTickListEntry : Comparable
 	{

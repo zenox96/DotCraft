@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	using Entity = DotCraftCore.entity.Entity;
@@ -11,9 +11,9 @@ namespace DotCraftCore.TileEntity
 	using NBTBase = DotCraftCore.nbt.NBTBase;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
-	using World = DotCraftCore.World.World;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using WeightedRandom = DotCraftCore.nUtil.WeightedRandom;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class MobSpawnerBaseLogic
 	{

@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenMinable = DotCraftCore.World.Gen.Feature.WorldGenMinable;
-	using WorldGenTaiga2 = DotCraftCore.World.Gen.Feature.WorldGenTaiga2;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenMinable = DotCraftCore.nWorld.nGen.nFeature.WorldGenMinable;
+	using WorldGenTaiga2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga2;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BiomeGenHills : BiomeGenBase
 	{

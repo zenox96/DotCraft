@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI.Attributes
+namespace DotCraftCore.nEntity.nAI.nAttributes
 {
 
 	using Sets = com.google.common.collect.Sets;
-	using LowerStringMap = DotCraftCore.Server.Management.LowerStringMap;
+	using LowerStringMap = DotCraftCore.nServer.nManagement.LowerStringMap;
 
 	public class ServersideAttributeMap : BaseAttributeMap
 	{

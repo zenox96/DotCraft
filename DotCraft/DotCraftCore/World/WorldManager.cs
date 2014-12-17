@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using Entity = DotCraftCore.entity.Entity;
@@ -9,7 +9,7 @@ namespace DotCraftCore.World
 	using S25PacketBlockBreakAnim = DotCraftCore.network.play.server.S25PacketBlockBreakAnim;
 	using S28PacketEffect = DotCraftCore.network.play.server.S28PacketEffect;
 	using S29PacketSoundEffect = DotCraftCore.network.play.server.S29PacketSoundEffect;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class WorldManager : IWorldAccess
 	{

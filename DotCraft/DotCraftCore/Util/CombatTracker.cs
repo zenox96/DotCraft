@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;

@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using World = DotCraftCore.World.World;
-	using WorldSavedData = DotCraftCore.World.WorldSavedData;
+	using World = DotCraftCore.nWorld.World;
+	using WorldSavedData = DotCraftCore.nWorld.WorldSavedData;
 
 	public class MapData : WorldSavedData
 	{

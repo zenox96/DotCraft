@@ -1,10 +1,10 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class BlockCarrot : BlockCrops
 	{

@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
@@ -14,8 +14,8 @@ namespace DotCraftCore.TileEntity
 	using S35PacketUpdateTileEntity = DotCraftCore.network.play.server.S35PacketUpdateTileEntity;
 	using Potion = DotCraftCore.potion.Potion;
 	using PotionEffect = DotCraftCore.potion.PotionEffect;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
 
 	public class TileEntityBeacon : TileEntity, IInventory
 	{

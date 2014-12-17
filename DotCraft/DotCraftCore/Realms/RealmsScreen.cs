@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using Minecraft = DotCraftCore.client.Minecraft;
@@ -8,8 +8,8 @@ namespace DotCraftCore.Realms
 	using Gui = DotCraftCore.client.gui.Gui;
 	using GuiScreenRealmsProxy = DotCraftCore.client.gui.GuiScreenRealmsProxy;
 	using I18n = DotCraftCore.client.resources.I18n;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using ResourceLocation = DotCraftCore.Util.ResourceLocation;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using ResourceLocation = DotCraftCore.nUtil.ResourceLocation;
 
 	public class RealmsScreen
 	{

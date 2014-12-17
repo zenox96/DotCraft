@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using Enchantment = DotCraftCore.Enchantment.Enchantment;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using Enchantment = DotCraftCore.nEnchantment.Enchantment;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandEnchant : CommandBase
 	{

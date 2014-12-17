@@ -1,9 +1,9 @@
-namespace DotCraftCore.Network.Status
+namespace DotCraftCore.nNetwork.nStatus
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using S00PacketServerInfo = DotCraftCore.Network.Status.Server.S00PacketServerInfo;
-	using S01PacketPong = DotCraftCore.Network.Status.Server.S01PacketPong;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using S00PacketServerInfo = DotCraftCore.nNetwork.nStatus.nServer.S00PacketServerInfo;
+	using S01PacketPong = DotCraftCore.nNetwork.nStatus.nServer.S01PacketPong;
 
 	public interface INetHandlerStatusClient : INetHandler
 	{

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 

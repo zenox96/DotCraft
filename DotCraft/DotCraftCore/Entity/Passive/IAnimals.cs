@@ -1,4 +1,4 @@
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
 	public interface IAnimals

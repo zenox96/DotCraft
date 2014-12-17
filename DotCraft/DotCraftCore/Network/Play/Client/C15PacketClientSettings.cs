@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Network.Play.Client
+namespace DotCraftCore.nNetwork.nPlay.nClient
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayServer = DotCraftCore.Network.Play.INetHandlerPlayServer;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayServer = DotCraftCore.nNetwork.nPlay.INetHandlerPlayServer;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
 
 	public class C15PacketClientSettings : Packet
 	{

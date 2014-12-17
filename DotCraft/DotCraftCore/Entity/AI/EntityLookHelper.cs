@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EntityLookHelper
 	{

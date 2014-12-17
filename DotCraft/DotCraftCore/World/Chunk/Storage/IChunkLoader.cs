@@ -1,9 +1,9 @@
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using World = DotCraftCore.World.World;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using World = DotCraftCore.nWorld.World;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
 
 	public interface IChunkLoader
 	{

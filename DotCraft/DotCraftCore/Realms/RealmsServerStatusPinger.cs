@@ -1,21 +1,21 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
-	using EnumConnectionState = DotCraftCore.Network.EnumConnectionState;
-	using NetworkManager = DotCraftCore.Network.NetworkManager;
-	using ServerStatusResponse = DotCraftCore.Network.ServerStatusResponse;
-	using C00Handshake = DotCraftCore.Network.Handshake.Client.C00Handshake;
-	using INetHandlerStatusClient = DotCraftCore.Network.Status.INetHandlerStatusClient;
-	using C00PacketServerQuery = DotCraftCore.Network.Status.Client.C00PacketServerQuery;
-	using C01PacketPing = DotCraftCore.Network.Status.Client.C01PacketPing;
-	using S00PacketServerInfo = DotCraftCore.Network.Status.Server.S00PacketServerInfo;
-	using S01PacketPong = DotCraftCore.Network.Status.Server.S01PacketPong;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using EnumConnectionState = DotCraftCore.nNetwork.EnumConnectionState;
+	using NetworkManager = DotCraftCore.nNetwork.NetworkManager;
+	using ServerStatusResponse = DotCraftCore.nNetwork.ServerStatusResponse;
+	using C00Handshake = DotCraftCore.nNetwork.nHandshake.nClient.C00Handshake;
+	using INetHandlerStatusClient = DotCraftCore.nNetwork.nStatus.INetHandlerStatusClient;
+	using C00PacketServerQuery = DotCraftCore.nNetwork.nStatus.nClient.C00PacketServerQuery;
+	using C01PacketPing = DotCraftCore.nNetwork.nStatus.nClient.C01PacketPing;
+	using S00PacketServerInfo = DotCraftCore.nNetwork.nStatus.nServer.S00PacketServerInfo;
+	using S01PacketPong = DotCraftCore.nNetwork.nStatus.nServer.S01PacketPong;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

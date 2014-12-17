@@ -1,40 +1,40 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockColored = DotCraftCore.block.BlockColored;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAttackOnCollide = DotCraftCore.Entity.AI.EntityAIAttackOnCollide;
-	using EntityAIBeg = DotCraftCore.Entity.AI.EntityAIBeg;
-	using EntityAIFollowOwner = DotCraftCore.Entity.AI.EntityAIFollowOwner;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILeapAtTarget = DotCraftCore.Entity.AI.EntityAILeapAtTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAIMate = DotCraftCore.Entity.AI.EntityAIMate;
-	using EntityAIOwnerHurtByTarget = DotCraftCore.Entity.AI.EntityAIOwnerHurtByTarget;
-	using EntityAIOwnerHurtTarget = DotCraftCore.Entity.AI.EntityAIOwnerHurtTarget;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAITargetNonTamed = DotCraftCore.Entity.AI.EntityAITargetNonTamed;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityCreeper = DotCraftCore.Entity.Monster.EntityCreeper;
-	using EntityGhast = DotCraftCore.Entity.Monster.EntityGhast;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemFood = DotCraftCore.Item.ItemFood;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockColored = DotCraftCore.nBlock.BlockColored;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAttackOnCollide = DotCraftCore.nEntity.nAI.EntityAIAttackOnCollide;
+	using EntityAIBeg = DotCraftCore.nEntity.nAI.EntityAIBeg;
+	using EntityAIFollowOwner = DotCraftCore.nEntity.nAI.EntityAIFollowOwner;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILeapAtTarget = DotCraftCore.nEntity.nAI.EntityAILeapAtTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAIMate = DotCraftCore.nEntity.nAI.EntityAIMate;
+	using EntityAIOwnerHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIOwnerHurtByTarget;
+	using EntityAIOwnerHurtTarget = DotCraftCore.nEntity.nAI.EntityAIOwnerHurtTarget;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAITargetNonTamed = DotCraftCore.nEntity.nAI.EntityAITargetNonTamed;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityCreeper = DotCraftCore.nEntity.nMonster.EntityCreeper;
+	using EntityGhast = DotCraftCore.nEntity.nMonster.EntityGhast;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemFood = DotCraftCore.nItem.ItemFood;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityWolf : EntityTameable
 	{

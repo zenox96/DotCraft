@@ -1,7 +1,7 @@
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public interface INetHandler
 	{

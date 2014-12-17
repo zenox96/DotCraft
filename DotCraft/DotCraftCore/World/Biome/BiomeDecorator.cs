@@ -1,25 +1,25 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using BlockFlower = DotCraftCore.block.BlockFlower;
-	using Material = DotCraftCore.block.material.Material;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenBigMushroom = DotCraftCore.World.Gen.Feature.WorldGenBigMushroom;
-	using WorldGenCactus = DotCraftCore.World.Gen.Feature.WorldGenCactus;
-	using WorldGenClay = DotCraftCore.World.Gen.Feature.WorldGenClay;
-	using WorldGenDeadBush = DotCraftCore.World.Gen.Feature.WorldGenDeadBush;
-	using WorldGenFlowers = DotCraftCore.World.Gen.Feature.WorldGenFlowers;
-	using WorldGenLiquids = DotCraftCore.World.Gen.Feature.WorldGenLiquids;
-	using WorldGenMinable = DotCraftCore.World.Gen.Feature.WorldGenMinable;
-	using WorldGenPumpkin = DotCraftCore.World.Gen.Feature.WorldGenPumpkin;
-	using WorldGenReed = DotCraftCore.World.Gen.Feature.WorldGenReed;
-	using WorldGenSand = DotCraftCore.World.Gen.Feature.WorldGenSand;
-	using WorldGenWaterlily = DotCraftCore.World.Gen.Feature.WorldGenWaterlily;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenBigMushroom = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigMushroom;
+	using WorldGenCactus = DotCraftCore.nWorld.nGen.nFeature.WorldGenCactus;
+	using WorldGenClay = DotCraftCore.nWorld.nGen.nFeature.WorldGenClay;
+	using WorldGenDeadBush = DotCraftCore.nWorld.nGen.nFeature.WorldGenDeadBush;
+	using WorldGenFlowers = DotCraftCore.nWorld.nGen.nFeature.WorldGenFlowers;
+	using WorldGenLiquids = DotCraftCore.nWorld.nGen.nFeature.WorldGenLiquids;
+	using WorldGenMinable = DotCraftCore.nWorld.nGen.nFeature.WorldGenMinable;
+	using WorldGenPumpkin = DotCraftCore.nWorld.nGen.nFeature.WorldGenPumpkin;
+	using WorldGenReed = DotCraftCore.nWorld.nGen.nFeature.WorldGenReed;
+	using WorldGenSand = DotCraftCore.nWorld.nGen.nFeature.WorldGenSand;
+	using WorldGenWaterlily = DotCraftCore.nWorld.nGen.nFeature.WorldGenWaterlily;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BiomeDecorator
 	{

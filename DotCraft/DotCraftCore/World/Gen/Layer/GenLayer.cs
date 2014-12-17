@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using WorldType = DotCraftCore.World.WorldType;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public abstract class GenLayer
 	{

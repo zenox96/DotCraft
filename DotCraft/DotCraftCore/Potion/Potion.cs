@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 	using Maps = com.google.common.collect.Maps;
@@ -12,8 +12,8 @@ namespace DotCraftCore.Potion
 	using IAttribute = DotCraftCore.entity.ai.attributes.IAttribute;
 	using IAttributeInstance = DotCraftCore.entity.ai.attributes.IAttributeInstance;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using StringUtils = DotCraftCore.Util.StringUtils;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using StringUtils = DotCraftCore.nUtil.StringUtils;
 
 	public class Potion
 	{

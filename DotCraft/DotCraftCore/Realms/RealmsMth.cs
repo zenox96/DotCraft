@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class RealmsMth
 	{

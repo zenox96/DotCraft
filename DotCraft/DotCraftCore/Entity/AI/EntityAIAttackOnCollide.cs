@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIAttackOnCollide : EntityAIBase
 	{

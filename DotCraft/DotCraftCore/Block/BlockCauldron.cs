@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockCauldron : Block
 	{

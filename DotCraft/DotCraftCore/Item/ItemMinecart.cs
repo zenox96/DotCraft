@@ -1,18 +1,18 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockDispenser = DotCraftCore.block.BlockDispenser;
-	using BlockRailBase = DotCraftCore.block.BlockRailBase;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDispenser = DotCraftCore.nBlock.BlockDispenser;
+	using BlockRailBase = DotCraftCore.nBlock.BlockRailBase;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using BehaviorDefaultDispenseItem = DotCraftCore.dispenser.BehaviorDefaultDispenseItem;
 	using IBehaviorDispenseItem = DotCraftCore.dispenser.IBehaviorDispenseItem;
 	using IBlockSource = DotCraftCore.dispenser.IBlockSource;
 	using EntityMinecart = DotCraftCore.entity.item.EntityMinecart;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EnumFacing = DotCraftCore.Util.EnumFacing;
-	using World = DotCraftCore.World.World;
+	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemMinecart : Item
 	{

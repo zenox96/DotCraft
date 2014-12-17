@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
 
 	public class BlockStone : Block
 	{

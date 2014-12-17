@@ -1,28 +1,28 @@
-namespace DotCraftCore.Network.Play
+namespace DotCraftCore.nNetwork.nPlay
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using C00PacketKeepAlive = DotCraftCore.Network.Play.Client.C00PacketKeepAlive;
-	using C01PacketChatMessage = DotCraftCore.Network.Play.Client.C01PacketChatMessage;
-	using C02PacketUseEntity = DotCraftCore.Network.Play.Client.C02PacketUseEntity;
-	using C03PacketPlayer = DotCraftCore.Network.Play.Client.C03PacketPlayer;
-	using C07PacketPlayerDigging = DotCraftCore.Network.Play.Client.C07PacketPlayerDigging;
-	using C08PacketPlayerBlockPlacement = DotCraftCore.Network.Play.Client.C08PacketPlayerBlockPlacement;
-	using C09PacketHeldItemChange = DotCraftCore.Network.Play.Client.C09PacketHeldItemChange;
-	using C0APacketAnimation = DotCraftCore.Network.Play.Client.C0APacketAnimation;
-	using C0BPacketEntityAction = DotCraftCore.Network.Play.Client.C0BPacketEntityAction;
-	using C0CPacketInput = DotCraftCore.Network.Play.Client.C0CPacketInput;
-	using C0DPacketCloseWindow = DotCraftCore.Network.Play.Client.C0DPacketCloseWindow;
-	using C0EPacketClickWindow = DotCraftCore.Network.Play.Client.C0EPacketClickWindow;
-	using C0FPacketConfirmTransaction = DotCraftCore.Network.Play.Client.C0FPacketConfirmTransaction;
-	using C10PacketCreativeInventoryAction = DotCraftCore.Network.Play.Client.C10PacketCreativeInventoryAction;
-	using C11PacketEnchantItem = DotCraftCore.Network.Play.Client.C11PacketEnchantItem;
-	using C12PacketUpdateSign = DotCraftCore.Network.Play.Client.C12PacketUpdateSign;
-	using C13PacketPlayerAbilities = DotCraftCore.Network.Play.Client.C13PacketPlayerAbilities;
-	using C14PacketTabComplete = DotCraftCore.Network.Play.Client.C14PacketTabComplete;
-	using C15PacketClientSettings = DotCraftCore.Network.Play.Client.C15PacketClientSettings;
-	using C16PacketClientStatus = DotCraftCore.Network.Play.Client.C16PacketClientStatus;
-	using C17PacketCustomPayload = DotCraftCore.Network.Play.Client.C17PacketCustomPayload;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using C00PacketKeepAlive = DotCraftCore.nNetwork.nPlay.nClient.C00PacketKeepAlive;
+	using C01PacketChatMessage = DotCraftCore.nNetwork.nPlay.nClient.C01PacketChatMessage;
+	using C02PacketUseEntity = DotCraftCore.nNetwork.nPlay.nClient.C02PacketUseEntity;
+	using C03PacketPlayer = DotCraftCore.nNetwork.nPlay.nClient.C03PacketPlayer;
+	using C07PacketPlayerDigging = DotCraftCore.nNetwork.nPlay.nClient.C07PacketPlayerDigging;
+	using C08PacketPlayerBlockPlacement = DotCraftCore.nNetwork.nPlay.nClient.C08PacketPlayerBlockPlacement;
+	using C09PacketHeldItemChange = DotCraftCore.nNetwork.nPlay.nClient.C09PacketHeldItemChange;
+	using C0APacketAnimation = DotCraftCore.nNetwork.nPlay.nClient.C0APacketAnimation;
+	using C0BPacketEntityAction = DotCraftCore.nNetwork.nPlay.nClient.C0BPacketEntityAction;
+	using C0CPacketInput = DotCraftCore.nNetwork.nPlay.nClient.C0CPacketInput;
+	using C0DPacketCloseWindow = DotCraftCore.nNetwork.nPlay.nClient.C0DPacketCloseWindow;
+	using C0EPacketClickWindow = DotCraftCore.nNetwork.nPlay.nClient.C0EPacketClickWindow;
+	using C0FPacketConfirmTransaction = DotCraftCore.nNetwork.nPlay.nClient.C0FPacketConfirmTransaction;
+	using C10PacketCreativeInventoryAction = DotCraftCore.nNetwork.nPlay.nClient.C10PacketCreativeInventoryAction;
+	using C11PacketEnchantItem = DotCraftCore.nNetwork.nPlay.nClient.C11PacketEnchantItem;
+	using C12PacketUpdateSign = DotCraftCore.nNetwork.nPlay.nClient.C12PacketUpdateSign;
+	using C13PacketPlayerAbilities = DotCraftCore.nNetwork.nPlay.nClient.C13PacketPlayerAbilities;
+	using C14PacketTabComplete = DotCraftCore.nNetwork.nPlay.nClient.C14PacketTabComplete;
+	using C15PacketClientSettings = DotCraftCore.nNetwork.nPlay.nClient.C15PacketClientSettings;
+	using C16PacketClientStatus = DotCraftCore.nNetwork.nPlay.nClient.C16PacketClientStatus;
+	using C17PacketCustomPayload = DotCraftCore.nNetwork.nPlay.nClient.C17PacketCustomPayload;
 
 	public interface INetHandlerPlayServer : INetHandler
 	{

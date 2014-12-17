@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using EntityBlaze = DotCraftCore.entity.monster.EntityBlaze;
 	using EntityMagmaCube = DotCraftCore.entity.monster.EntityMagmaCube;
 	using EntityPigZombie = DotCraftCore.entity.monster.EntityPigZombie;
 	using EntitySkeleton = DotCraftCore.entity.monster.EntitySkeleton;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class MapGenNetherBridge : MapGenStructure
 	{

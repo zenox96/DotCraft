@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using HashMultimap = com.google.common.collect.HashMultimap;
@@ -12,15 +12,15 @@ namespace DotCraftCore.Item
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityPotion = DotCraftCore.entity.projectile.EntityPotion;
 	using Items = DotCraftCore.init.Items;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using PotionHelper = DotCraftCore.Potion.PotionHelper;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using World = DotCraftCore.World.World;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using PotionHelper = DotCraftCore.nPotion.PotionHelper;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemPotion : Item
 	{

@@ -1,25 +1,25 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using Container = DotCraftCore.Inventory.Container;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityBrewingStand = DotCraftCore.TileEntity.TileEntityBrewingStand;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using Container = DotCraftCore.nInventory.Container;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityBrewingStand = DotCraftCore.nTileEntity.TileEntityBrewingStand;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockBrewingStand : BlockContainer
 	{

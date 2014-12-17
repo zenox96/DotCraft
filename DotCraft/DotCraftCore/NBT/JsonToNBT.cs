@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 	using LogManager = org.apache.logging.log4j.LogManager;

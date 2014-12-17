@@ -1,8 +1,8 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class ChunkPosition
 	{

@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 	using IIconRegister = DotCraftCore.Client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockBasePressurePlate : Block
 	{

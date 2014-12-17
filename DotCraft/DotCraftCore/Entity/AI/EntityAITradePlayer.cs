@@ -1,9 +1,9 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Container = DotCraftCore.Inventory.Container;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Container = DotCraftCore.nInventory.Container;
 
 	public class EntityAITradePlayer : EntityAIBase
 	{

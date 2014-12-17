@@ -1,8 +1,8 @@
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public class CommandToggleDownfall : CommandBase
 	{

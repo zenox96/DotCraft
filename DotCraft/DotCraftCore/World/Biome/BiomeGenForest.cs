@@ -1,16 +1,16 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using BlockFlower = DotCraftCore.block.BlockFlower;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
 	using EntityWolf = DotCraftCore.entity.passive.EntityWolf;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenBigMushroom = DotCraftCore.World.Gen.Feature.WorldGenBigMushroom;
-	using WorldGenCanopyTree = DotCraftCore.World.Gen.Feature.WorldGenCanopyTree;
-	using WorldGenForest = DotCraftCore.World.Gen.Feature.WorldGenForest;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenBigMushroom = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigMushroom;
+	using WorldGenCanopyTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenCanopyTree;
+	using WorldGenForest = DotCraftCore.nWorld.nGen.nFeature.WorldGenForest;
 
 	public class BiomeGenForest : BiomeGenBase
 	{

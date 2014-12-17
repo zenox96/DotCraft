@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using Charsets = com.google.common.base.Charsets;

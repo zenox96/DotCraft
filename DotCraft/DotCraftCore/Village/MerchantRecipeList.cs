@@ -1,4 +1,4 @@
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
 	using ItemStack = DotCraftCore.item.ItemStack;

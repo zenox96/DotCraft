@@ -1,4 +1,4 @@
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using JsonElement = com.google.gson.JsonElement;

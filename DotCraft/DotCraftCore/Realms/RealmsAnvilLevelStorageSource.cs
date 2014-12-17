@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using AnvilConverterException = DotCraftCore.client.AnvilConverterException;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using ISaveFormat = DotCraftCore.World.Storage.ISaveFormat;
-	using SaveFormatComparator = DotCraftCore.World.Storage.SaveFormatComparator;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using ISaveFormat = DotCraftCore.nWorld.nStorage.ISaveFormat;
+	using SaveFormatComparator = DotCraftCore.nWorld.nStorage.SaveFormatComparator;
 
 	public class RealmsAnvilLevelStorageSource
 	{

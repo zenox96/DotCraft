@@ -1,13 +1,13 @@
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using WorldServer = DotCraftCore.World.WorldServer;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
 
 	public class CommandSaveAll : CommandBase
 	{

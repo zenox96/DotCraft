@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityAnimal = DotCraftCore.Entity.Passive.EntityAnimal;
+	using EntityAnimal = DotCraftCore.nEntity.nPassive.EntityAnimal;
 
 	public class EntityAIFollowParent : EntityAIBase
 	{

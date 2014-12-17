@@ -1,10 +1,10 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using Profiler = DotCraftCore.profiler.Profiler;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using DerivedWorldInfo = DotCraftCore.World.Storage.DerivedWorldInfo;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using DerivedWorldInfo = DotCraftCore.nWorld.nStorage.DerivedWorldInfo;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
 
 	public class WorldServerMulti : WorldServer
 	{

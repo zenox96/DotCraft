@@ -1,15 +1,15 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using BlockJukebox = DotCraftCore.block.BlockJukebox;
+	using BlockJukebox = DotCraftCore.nBlock.BlockJukebox;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using World = DotCraftCore.World.World;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemRecord : Item
 	{

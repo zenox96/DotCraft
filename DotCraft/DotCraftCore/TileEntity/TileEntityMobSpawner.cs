@@ -1,11 +1,11 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using Packet = DotCraftCore.network.Packet;
 	using S35PacketUpdateTileEntity = DotCraftCore.network.play.server.S35PacketUpdateTileEntity;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class TileEntityMobSpawner : TileEntity
 	{

@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityThrowable = DotCraftCore.Entity.Projectile.EntityThrowable;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using World = DotCraftCore.World.World;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityThrowable = DotCraftCore.nEntity.nProjectile.EntityThrowable;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityExpBottle : EntityThrowable
 	{

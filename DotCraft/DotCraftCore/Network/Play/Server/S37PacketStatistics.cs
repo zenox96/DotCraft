@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
 	using Maps = com.google.common.collect.Maps;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using StatBase = DotCraftCore.Stats.StatBase;
-	using StatList = DotCraftCore.Stats.StatList;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using StatBase = DotCraftCore.nStats.StatBase;
+	using StatList = DotCraftCore.nStats.StatList;
 
 	public class S37PacketStatistics : Packet
 	{

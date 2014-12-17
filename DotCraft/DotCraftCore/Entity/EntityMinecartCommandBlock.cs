@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
 	using ByteBuf = io.netty.buffer.ByteBuf;
-	using Block = DotCraftCore.block.Block;
-	using CommandBlockLogic = DotCraftCore.command.server.CommandBlockLogic;
-	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
+	using EntityMinecart = DotCraftCore.nEntity.nItem.EntityMinecart;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMinecartCommandBlock : EntityMinecart
 	{

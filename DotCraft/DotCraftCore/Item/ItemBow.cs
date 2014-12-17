@@ -1,4 +1,4 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
@@ -8,8 +8,8 @@ namespace DotCraftCore.Item
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityArrow = DotCraftCore.entity.projectile.EntityArrow;
 	using Items = DotCraftCore.init.Items;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemBow : Item
 	{

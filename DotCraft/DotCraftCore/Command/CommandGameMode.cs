@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
 
 	public class CommandGameMode : CommandBase
 	{

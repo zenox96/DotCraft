@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockChest = DotCraftCore.block.BlockChest;
-	using BlockHopper = DotCraftCore.block.BlockHopper;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockChest = DotCraftCore.nBlock.BlockChest;
+	using BlockHopper = DotCraftCore.nBlock.BlockHopper;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityItem = DotCraftCore.entity.item.EntityItem;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
@@ -16,10 +16,10 @@ namespace DotCraftCore.TileEntity
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using Facing = DotCraftCore.Util.Facing;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class TileEntityHopper : TileEntity, IHopper
 	{

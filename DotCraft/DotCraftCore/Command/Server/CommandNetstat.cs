@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using NetworkManager = DotCraftCore.Network.NetworkManager;
-	using NetworkStatistics = DotCraftCore.Network.NetworkStatistics;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using NetworkManager = DotCraftCore.nNetwork.NetworkManager;
+	using NetworkStatistics = DotCraftCore.nNetwork.NetworkStatistics;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
 
 	public class CommandNetstat : CommandBase
 	{

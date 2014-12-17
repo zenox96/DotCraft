@@ -1,4 +1,4 @@
-namespace DotCraftCore.Entity.Boss
+namespace DotCraftCore.nEntity.nBoss
 {
 
 	public sealed class BossStatus

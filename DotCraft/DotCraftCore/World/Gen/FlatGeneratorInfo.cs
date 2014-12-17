@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class FlatGeneratorInfo
 	{

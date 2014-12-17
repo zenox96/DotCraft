@@ -1,9 +1,9 @@
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
-	using NibbleArray = DotCraftCore.World.Chunk.NibbleArray;
+	using NibbleArray = DotCraftCore.nWorld.nChunk.NibbleArray;
 
 	public class ExtendedBlockStorage
 	{

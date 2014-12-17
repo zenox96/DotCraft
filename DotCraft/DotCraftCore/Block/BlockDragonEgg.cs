@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Item = DotCraftCore.Item.Item;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Item = DotCraftCore.nItem.Item;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockDragonEgg : Block
 	{

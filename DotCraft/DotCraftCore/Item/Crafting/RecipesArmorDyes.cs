@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
-	using BlockColored = DotCraftCore.block.BlockColored;
+	using BlockColored = DotCraftCore.nBlock.BlockColored;
 	using EntitySheep = DotCraftCore.entity.passive.EntitySheep;
 	using Items = DotCraftCore.init.Items;
 	using InventoryCrafting = DotCraftCore.inventory.InventoryCrafting;
-	using ItemArmor = DotCraftCore.Item.ItemArmor;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using ItemArmor = DotCraftCore.nItem.ItemArmor;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public class RecipesArmorDyes : IRecipe
 	{

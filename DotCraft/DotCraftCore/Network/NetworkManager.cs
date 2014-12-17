@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using Queues = com.google.common.collect.Queues;
@@ -22,13 +22,13 @@ namespace DotCraftCore.Network
 	using AttributeKey = io.netty.util.AttributeKey;
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
 	using SecretKey = javax.crypto.SecretKey;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using CryptManager = DotCraftCore.Util.CryptManager;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using MessageDeserializer = DotCraftCore.Util.MessageDeserializer;
-	using MessageDeserializer2 = DotCraftCore.Util.MessageDeserializer2;
-	using MessageSerializer = DotCraftCore.Util.MessageSerializer;
-	using MessageSerializer2 = DotCraftCore.Util.MessageSerializer2;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using CryptManager = DotCraftCore.nUtil.CryptManager;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using MessageDeserializer = DotCraftCore.nUtil.MessageDeserializer;
+	using MessageDeserializer2 = DotCraftCore.nUtil.MessageDeserializer2;
+	using MessageSerializer = DotCraftCore.nUtil.MessageSerializer;
+	using MessageSerializer2 = DotCraftCore.nUtil.MessageSerializer2;
 	using Validate = org.apache.commons.lang3.Validate;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;

@@ -1,45 +1,45 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Block = DotCraftCore.block.Block;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAttackOnCollide = DotCraftCore.Entity.AI.EntityAIAttackOnCollide;
-	using EntityAIBreakDoor = DotCraftCore.Entity.AI.EntityAIBreakDoor;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAIMoveThroughVillage = DotCraftCore.Entity.AI.EntityAIMoveThroughVillage;
-	using EntityAIMoveTowardsRestriction = DotCraftCore.Entity.AI.EntityAIMoveTowardsRestriction;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using IAttribute = DotCraftCore.Entity.AI.Attributes.IAttribute;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using RangedAttribute = DotCraftCore.Entity.AI.Attributes.RangedAttribute;
-	using EntityChicken = DotCraftCore.Entity.Passive.EntityChicken;
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAttackOnCollide = DotCraftCore.nEntity.nAI.EntityAIAttackOnCollide;
+	using EntityAIBreakDoor = DotCraftCore.nEntity.nAI.EntityAIBreakDoor;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAIMoveThroughVillage = DotCraftCore.nEntity.nAI.EntityAIMoveThroughVillage;
+	using EntityAIMoveTowardsRestriction = DotCraftCore.nEntity.nAI.EntityAIMoveTowardsRestriction;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using IAttribute = DotCraftCore.nEntity.nAI.nAttributes.IAttribute;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using RangedAttribute = DotCraftCore.nEntity.nAI.nAttributes.RangedAttribute;
+	using EntityChicken = DotCraftCore.nEntity.nPassive.EntityChicken;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityZombie : EntityMob
 	{

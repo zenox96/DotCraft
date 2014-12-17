@@ -1,21 +1,21 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityVillager = DotCraftCore.entity.passive.EntityVillager;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
 	using Item = DotCraftCore.item.Item;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
 
 	public class StructureVillagePieces
 	{

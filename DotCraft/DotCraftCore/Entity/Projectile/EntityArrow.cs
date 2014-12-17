@@ -1,28 +1,28 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Projectile
+namespace DotCraftCore.nEntity.nProjectile
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IProjectile = DotCraftCore.Entity.IProjectile;
-	using EntityEnderman = DotCraftCore.Entity.Monster.EntityEnderman;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using S2BPacketChangeGameState = DotCraftCore.Network.Play.Server.S2BPacketChangeGameState;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IProjectile = DotCraftCore.nEntity.IProjectile;
+	using EntityEnderman = DotCraftCore.nEntity.nMonster.EntityEnderman;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using S2BPacketChangeGameState = DotCraftCore.nNetwork.nPlay.nServer.S2BPacketChangeGameState;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityArrow : Entity, IProjectile
 	{

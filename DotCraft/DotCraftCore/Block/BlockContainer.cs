@@ -1,9 +1,9 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using World = DotCraftCore.World.World;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockContainer : Block, ITileEntityProvider
 	{

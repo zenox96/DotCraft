@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
 

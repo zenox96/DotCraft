@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public interface ICrafting
 	{

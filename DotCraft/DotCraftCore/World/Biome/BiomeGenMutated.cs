@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
+	using Block = DotCraftCore.nBlock.Block;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
 
 	public class BiomeGenMutated : BiomeGenBase
 	{

@@ -1,9 +1,9 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Packet = DotCraftCore.Network.Packet;
-	using World = DotCraftCore.World.World;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemMapBase : Item
 	{

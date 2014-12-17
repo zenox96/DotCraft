@@ -1,22 +1,22 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockDirectional = DotCraftCore.block.BlockDirectional;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDirectional = DotCraftCore.nBlock.BlockDirectional;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
 	using ItemDoor = DotCraftCore.item.ItemDoor;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
-	using Direction = DotCraftCore.Util.Direction;
-	using Facing = DotCraftCore.Util.Facing;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
+	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
+	using TileEntityDispenser = DotCraftCore.nTileEntity.TileEntityDispenser;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class StructureComponent
 	{

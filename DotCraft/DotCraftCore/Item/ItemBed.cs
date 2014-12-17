@@ -1,12 +1,12 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using BlockBed = DotCraftCore.block.BlockBed;
+	using BlockBed = DotCraftCore.nBlock.BlockBed;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemBed : Item
 	{

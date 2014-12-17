@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using Blocks = DotCraftCore.Init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenBigMushroom = DotCraftCore.World.Gen.Feature.WorldGenBigMushroom;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenBigMushroom = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigMushroom;
 
 	public class BlockMushroom : BlockBush, IGrowable
 	{

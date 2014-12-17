@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMinecartChest : EntityMinecartContainer
 	{

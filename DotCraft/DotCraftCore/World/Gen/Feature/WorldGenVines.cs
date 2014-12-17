@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
-	using Direction = DotCraftCore.Util.Direction;
-	using Facing = DotCraftCore.Util.Facing;
-	using World = DotCraftCore.World.World;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGenVines : WorldGenerator
 	{

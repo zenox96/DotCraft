@@ -1,30 +1,30 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityWither = DotCraftCore.Entity.Boss.EntityWither;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemSkull = DotCraftCore.Item.ItemSkull;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTUtil = DotCraftCore.NBT.NBTUtil;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntitySkull = DotCraftCore.TileEntity.TileEntitySkull;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityWither = DotCraftCore.nEntity.nBoss.EntityWither;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemSkull = DotCraftCore.nItem.ItemSkull;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTUtil = DotCraftCore.nNBT.NBTUtil;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntitySkull = DotCraftCore.nTileEntity.TileEntitySkull;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockSkull : BlockContainer
 	{

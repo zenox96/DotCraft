@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
 	using DataWatcher = DotCraftCore.entity.DataWatcher;
 	using EntityList = DotCraftCore.entity.EntityList;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class S0FPacketSpawnMob : Packet
 	{

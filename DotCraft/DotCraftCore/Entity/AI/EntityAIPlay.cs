@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class EntityAIPlay : EntityAIBase
 	{

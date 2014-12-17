@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using BiMap = com.google.common.collect.BiMap;

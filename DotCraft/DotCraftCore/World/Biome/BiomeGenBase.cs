@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using Sets = com.google.common.collect.Sets;
-	using Block = DotCraftCore.block.Block;
-	using BlockFlower = DotCraftCore.block.BlockFlower;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using EntityCreeper = DotCraftCore.entity.monster.EntityCreeper;
 	using EntityEnderman = DotCraftCore.entity.monster.EntityEnderman;
@@ -23,19 +23,19 @@ namespace DotCraftCore.World.Biome
 	using EntitySheep = DotCraftCore.entity.passive.EntitySheep;
 	using EntitySquid = DotCraftCore.entity.passive.EntitySquid;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
-	using ColorizerFoliage = DotCraftCore.World.ColorizerFoliage;
-	using ColorizerGrass = DotCraftCore.World.ColorizerGrass;
-	using World = DotCraftCore.World.World;
-	using NoiseGeneratorPerlin = DotCraftCore.World.Gen.NoiseGeneratorPerlin;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenBigTree = DotCraftCore.World.Gen.Feature.WorldGenBigTree;
-	using WorldGenDoublePlant = DotCraftCore.World.Gen.Feature.WorldGenDoublePlant;
-	using WorldGenSwamp = DotCraftCore.World.Gen.Feature.WorldGenSwamp;
-	using WorldGenTallGrass = DotCraftCore.World.Gen.Feature.WorldGenTallGrass;
-	using WorldGenTrees = DotCraftCore.World.Gen.Feature.WorldGenTrees;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using WeightedRandom = DotCraftCore.nUtil.WeightedRandom;
+	using ColorizerFoliage = DotCraftCore.nWorld.ColorizerFoliage;
+	using ColorizerGrass = DotCraftCore.nWorld.ColorizerGrass;
+	using World = DotCraftCore.nWorld.World;
+	using NoiseGeneratorPerlin = DotCraftCore.nWorld.nGen.NoiseGeneratorPerlin;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenBigTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigTree;
+	using WorldGenDoublePlant = DotCraftCore.nWorld.nGen.nFeature.WorldGenDoublePlant;
+	using WorldGenSwamp = DotCraftCore.nWorld.nGen.nFeature.WorldGenSwamp;
+	using WorldGenTallGrass = DotCraftCore.nWorld.nGen.nFeature.WorldGenTallGrass;
+	using WorldGenTrees = DotCraftCore.nWorld.nGen.nFeature.WorldGenTrees;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

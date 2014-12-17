@@ -1,9 +1,9 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using Block = DotCraftCore.nBlock.Block;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public interface IBlockAccess
 	{

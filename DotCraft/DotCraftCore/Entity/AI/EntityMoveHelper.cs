@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EntityMoveHelper
 	{

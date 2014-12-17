@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
 	using JsonParseException = com.google.gson.JsonParseException;
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using SyntaxErrorException = DotCraftCore.nCommand.SyntaxErrorException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 	using ExceptionUtils = org.apache.commons.lang3.exception.ExceptionUtils;
 
 	public class CommandMessageRaw : CommandBase

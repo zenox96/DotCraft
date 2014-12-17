@@ -1,13 +1,13 @@
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMooshroom : EntityCow
 	{

@@ -1,13 +1,13 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using World = DotCraftCore.World.World;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemAppleGold : ItemFood
 	{

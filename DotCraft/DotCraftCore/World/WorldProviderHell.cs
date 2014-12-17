@@ -1,11 +1,11 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManagerHell = DotCraftCore.World.Biome.WorldChunkManagerHell;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ChunkProviderHell = DotCraftCore.World.Gen.ChunkProviderHell;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManagerHell = DotCraftCore.nWorld.nBiome.WorldChunkManagerHell;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ChunkProviderHell = DotCraftCore.nWorld.nGen.ChunkProviderHell;
 
 	public class WorldProviderHell : WorldProvider
 	{

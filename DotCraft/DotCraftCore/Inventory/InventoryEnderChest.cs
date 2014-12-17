@@ -1,11 +1,11 @@
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using TileEntityEnderChest = DotCraftCore.TileEntity.TileEntityEnderChest;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using TileEntityEnderChest = DotCraftCore.nTileEntity.TileEntityEnderChest;
 
 	public class InventoryEnderChest : InventoryBasic
 	{

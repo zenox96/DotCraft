@@ -1,18 +1,18 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.Entity.Entity;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockLiquid : Block
 	{

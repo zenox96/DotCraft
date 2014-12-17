@@ -1,4 +1,4 @@
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 

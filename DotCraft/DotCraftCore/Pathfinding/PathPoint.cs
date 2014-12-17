@@ -1,7 +1,7 @@
-namespace DotCraftCore.Pathfinding
+namespace DotCraftCore.nPathfinding
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class PathPoint
 	{

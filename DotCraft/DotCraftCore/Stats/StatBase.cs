@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
-	using HoverEvent = DotCraftCore.Event.HoverEvent;
-	using IScoreObjectiveCriteria = DotCraftCore.Scoreboard.IScoreObjectiveCriteria;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using HoverEvent = DotCraftCore.nEvent.HoverEvent;
+	using IScoreObjectiveCriteria = DotCraftCore.nScoreboard.IScoreObjectiveCriteria;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class StatBase
 	{

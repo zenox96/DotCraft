@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Item = DotCraftCore.Item.Item;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using Item = DotCraftCore.nItem.Item;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandClearInventory : CommandBase
 	{

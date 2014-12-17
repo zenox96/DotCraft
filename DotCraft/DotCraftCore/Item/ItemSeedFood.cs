@@ -1,9 +1,9 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSeedFood : ItemFood
 	{

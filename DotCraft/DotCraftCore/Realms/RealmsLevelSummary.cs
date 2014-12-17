@@ -1,7 +1,7 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
-	using SaveFormatComparator = DotCraftCore.World.Storage.SaveFormatComparator;
+	using SaveFormatComparator = DotCraftCore.nWorld.nStorage.SaveFormatComparator;
 
 	public class RealmsLevelSummary : Comparable
 	{

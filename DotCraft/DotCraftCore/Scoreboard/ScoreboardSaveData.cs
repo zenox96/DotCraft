@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.Scoreboard
+namespace DotCraftCore.nScoreboard
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
 	using NBTTagString = DotCraftCore.nbt.NBTTagString;
-	using WorldSavedData = DotCraftCore.World.WorldSavedData;
+	using WorldSavedData = DotCraftCore.nWorld.WorldSavedData;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

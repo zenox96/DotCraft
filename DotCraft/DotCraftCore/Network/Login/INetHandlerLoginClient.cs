@@ -1,10 +1,10 @@
-namespace DotCraftCore.Network.Login
+namespace DotCraftCore.nNetwork.nLogin
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using S00PacketDisconnect = DotCraftCore.Network.Login.Server.S00PacketDisconnect;
-	using S01PacketEncryptionRequest = DotCraftCore.Network.Login.Server.S01PacketEncryptionRequest;
-	using S02PacketLoginSuccess = DotCraftCore.Network.Login.Server.S02PacketLoginSuccess;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using S00PacketDisconnect = DotCraftCore.nNetwork.nLogin.nServer.S00PacketDisconnect;
+	using S01PacketEncryptionRequest = DotCraftCore.nNetwork.nLogin.nServer.S01PacketEncryptionRequest;
+	using S02PacketLoginSuccess = DotCraftCore.nNetwork.nLogin.nServer.S02PacketLoginSuccess;
 
 	public interface INetHandlerLoginClient : INetHandler
 	{

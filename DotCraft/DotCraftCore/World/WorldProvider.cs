@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using WorldChunkManagerHell = DotCraftCore.World.Biome.WorldChunkManagerHell;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ChunkProviderFlat = DotCraftCore.World.Gen.ChunkProviderFlat;
-	using ChunkProviderGenerate = DotCraftCore.World.Gen.ChunkProviderGenerate;
-	using FlatGeneratorInfo = DotCraftCore.World.Gen.FlatGeneratorInfo;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using WorldChunkManagerHell = DotCraftCore.nWorld.nBiome.WorldChunkManagerHell;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ChunkProviderFlat = DotCraftCore.nWorld.nGen.ChunkProviderFlat;
+	using ChunkProviderGenerate = DotCraftCore.nWorld.nGen.ChunkProviderGenerate;
+	using FlatGeneratorInfo = DotCraftCore.nWorld.nGen.FlatGeneratorInfo;
 
 	public abstract class WorldProvider
 	{

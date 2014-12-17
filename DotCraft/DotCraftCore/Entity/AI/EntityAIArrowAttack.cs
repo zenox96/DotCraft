@@ -1,10 +1,10 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IRangedAttackMob = DotCraftCore.Entity.IRangedAttackMob;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IRangedAttackMob = DotCraftCore.nEntity.IRangedAttackMob;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class EntityAIArrowAttack : EntityAIBase
 	{

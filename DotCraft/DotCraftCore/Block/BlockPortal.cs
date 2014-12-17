@@ -1,18 +1,18 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using Entity = DotCraftCore.Entity.Entity;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using ItemMonsterPlacer = DotCraftCore.Item.ItemMonsterPlacer;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using Direction = DotCraftCore.Util.Direction;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemMonsterPlacer = DotCraftCore.nItem.ItemMonsterPlacer;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockPortal : BlockBreakable
 	{

@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
-	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using World = DotCraftCore.World.World;
+	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGeneratorBonusChest : WorldGenerator
 	{

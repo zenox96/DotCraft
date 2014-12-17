@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class NoiseGeneratorOctaves : NoiseGenerator
 	{

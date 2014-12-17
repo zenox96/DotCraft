@@ -1,10 +1,10 @@
-namespace DotCraftCore.Network.Status.Client
+namespace DotCraftCore.nNetwork.nStatus.nClient
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerStatusServer = DotCraftCore.Network.Status.INetHandlerStatusServer;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerStatusServer = DotCraftCore.nNetwork.nStatus.INetHandlerStatusServer;
 
 	public class C00PacketServerQuery : Packet
 	{

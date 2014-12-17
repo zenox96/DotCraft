@@ -1,10 +1,10 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Material = DotCraftCore.block.material.Material;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class TileEntityNote : TileEntity
 	{

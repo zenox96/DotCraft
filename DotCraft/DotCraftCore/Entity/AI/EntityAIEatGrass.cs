@@ -1,13 +1,13 @@
 using System;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using Block = DotCraftCore.block.Block;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIEatGrass : EntityAIBase
 	{

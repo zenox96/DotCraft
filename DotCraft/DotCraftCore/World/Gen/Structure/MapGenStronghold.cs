@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class MapGenStronghold : MapGenStructure
 	{

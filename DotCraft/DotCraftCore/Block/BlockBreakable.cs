@@ -1,11 +1,11 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Facing = DotCraftCore.Util.Facing;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
 
 	public class BlockBreakable : Block
 	{

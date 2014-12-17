@@ -1,10 +1,10 @@
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public class RecipesIngots
 	{

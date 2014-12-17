@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
-	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class WorldGenLakes : WorldGenerator
 	{

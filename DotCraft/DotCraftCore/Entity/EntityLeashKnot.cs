@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using World = DotCraftCore.World.World;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityLeashKnot : EntityHanging
 	{

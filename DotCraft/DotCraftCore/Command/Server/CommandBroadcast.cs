@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class CommandBroadcast : CommandBase
 	{

@@ -1,10 +1,10 @@
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
 	using InventoryCrafting = DotCraftCore.inventory.InventoryCrafting;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using World = DotCraftCore.World.World;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ShapedRecipes : IRecipe
 	{

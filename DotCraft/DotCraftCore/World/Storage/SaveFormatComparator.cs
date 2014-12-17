@@ -1,7 +1,7 @@
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
-	using WorldSettings = DotCraftCore.World.WorldSettings;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
 
 	public class SaveFormatComparator : Comparable
 	{

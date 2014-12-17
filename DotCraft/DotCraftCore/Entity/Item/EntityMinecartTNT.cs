@@ -1,16 +1,16 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockRailBase = DotCraftCore.block.BlockRailBase;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using Explosion = DotCraftCore.World.Explosion;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockRailBase = DotCraftCore.nBlock.BlockRailBase;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using Explosion = DotCraftCore.nWorld.Explosion;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMinecartTNT : EntityMinecart
 	{

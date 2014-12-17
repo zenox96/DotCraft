@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManagerHell = DotCraftCore.World.Biome.WorldChunkManagerHell;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ChunkProviderEnd = DotCraftCore.World.Gen.ChunkProviderEnd;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManagerHell = DotCraftCore.nWorld.nBiome.WorldChunkManagerHell;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ChunkProviderEnd = DotCraftCore.nWorld.nGen.ChunkProviderEnd;
 
 	public class WorldProviderEnd : WorldProvider
 	{

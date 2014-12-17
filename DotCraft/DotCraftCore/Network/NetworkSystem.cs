@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using ThreadFactoryBuilder = com.google.common.util.concurrent.ThreadFactoryBuilder;
@@ -21,15 +21,15 @@ namespace DotCraftCore.Network
 	using NetHandlerHandshakeMemory = DotCraftCore.client.network.NetHandlerHandshakeMemory;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using S40PacketDisconnect = DotCraftCore.Network.Play.Server.S40PacketDisconnect;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using NetHandlerHandshakeTCP = DotCraftCore.Server.Network.NetHandlerHandshakeTCP;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using MessageDeserializer = DotCraftCore.Util.MessageDeserializer;
-	using MessageDeserializer2 = DotCraftCore.Util.MessageDeserializer2;
-	using MessageSerializer = DotCraftCore.Util.MessageSerializer;
-	using MessageSerializer2 = DotCraftCore.Util.MessageSerializer2;
-	using ReportedException = DotCraftCore.Util.ReportedException;
+	using S40PacketDisconnect = DotCraftCore.nNetwork.nPlay.nServer.S40PacketDisconnect;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using NetHandlerHandshakeTCP = DotCraftCore.nServer.nNetwork.NetHandlerHandshakeTCP;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using MessageDeserializer = DotCraftCore.nUtil.MessageDeserializer;
+	using MessageDeserializer2 = DotCraftCore.nUtil.MessageDeserializer2;
+	using MessageSerializer = DotCraftCore.nUtil.MessageSerializer;
+	using MessageSerializer2 = DotCraftCore.nUtil.MessageSerializer2;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

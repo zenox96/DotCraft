@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using NBTTagIntArray = DotCraftCore.nbt.NBTTagIntArray;

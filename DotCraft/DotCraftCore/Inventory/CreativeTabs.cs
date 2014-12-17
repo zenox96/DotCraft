@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.CreativeTab
+namespace DotCraftCore.nInventory
 {
-	using Enchantment = DotCraftCore.Enchantment.Enchantment;
-	using EnchantmentData = DotCraftCore.Enchantment.EnchantmentData;
-	using EnumEnchantmentType = DotCraftCore.Enchantment.EnumEnchantmentType;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using Enchantment = DotCraftCore.nEnchantment.Enchantment;
+	using EnchantmentData = DotCraftCore.nEnchantment.EnchantmentData;
+	using EnumEnchantmentType = DotCraftCore.nEnchantment.EnumEnchantmentType;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
     public partial class CreativeTabs
     {

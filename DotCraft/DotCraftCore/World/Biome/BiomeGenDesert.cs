@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenDesertWells = DotCraftCore.World.Gen.Feature.WorldGenDesertWells;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenDesertWells = DotCraftCore.nWorld.nGen.nFeature.WorldGenDesertWells;
 
 	public class BiomeGenDesert : BiomeGenBase
 	{

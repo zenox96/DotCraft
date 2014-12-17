@@ -1,9 +1,9 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using MapColor = DotCraftCore.Block.material.MapColor;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
 
 	public class BlockNetherrack : Block
 	{

@@ -1,42 +1,42 @@
 using System;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Enchantment = DotCraftCore.Enchantment.Enchantment;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using IRangedAttackMob = DotCraftCore.Entity.IRangedAttackMob;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIArrowAttack = DotCraftCore.Entity.AI.EntityAIArrowAttack;
-	using EntityAIAttackOnCollide = DotCraftCore.Entity.AI.EntityAIAttackOnCollide;
-	using EntityAIFleeSun = DotCraftCore.Entity.AI.EntityAIFleeSun;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAIRestrictSun = DotCraftCore.Entity.AI.EntityAIRestrictSun;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using WorldProviderHell = DotCraftCore.World.WorldProviderHell;
+	using Block = DotCraftCore.nBlock.Block;
+	using Enchantment = DotCraftCore.nEnchantment.Enchantment;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using IRangedAttackMob = DotCraftCore.nEntity.IRangedAttackMob;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIArrowAttack = DotCraftCore.nEntity.nAI.EntityAIArrowAttack;
+	using EntityAIAttackOnCollide = DotCraftCore.nEntity.nAI.EntityAIAttackOnCollide;
+	using EntityAIFleeSun = DotCraftCore.nEntity.nAI.EntityAIFleeSun;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAIRestrictSun = DotCraftCore.nEntity.nAI.EntityAIRestrictSun;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using WorldProviderHell = DotCraftCore.nWorld.WorldProviderHell;
 
 	public class EntitySkeleton : EntityMob, IRangedAttackMob
 	{

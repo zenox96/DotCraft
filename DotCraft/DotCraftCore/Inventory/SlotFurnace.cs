@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using FurnaceRecipes = DotCraftCore.Item.Crafting.FurnaceRecipes;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using FurnaceRecipes = DotCraftCore.nItem.nCrafting.FurnaceRecipes;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class SlotFurnace : Slot
 	{

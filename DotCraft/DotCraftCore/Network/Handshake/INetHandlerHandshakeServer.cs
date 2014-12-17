@@ -1,8 +1,8 @@
-namespace DotCraftCore.Network.Handshake
+namespace DotCraftCore.nNetwork.nHandshake
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using C00Handshake = DotCraftCore.Network.Handshake.Client.C00Handshake;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using C00Handshake = DotCraftCore.nNetwork.nHandshake.nClient.C00Handshake;
 
 	public interface INetHandlerHandshakeServer : INetHandler
 	{

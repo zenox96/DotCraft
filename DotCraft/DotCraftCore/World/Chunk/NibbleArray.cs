@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Chunk
+namespace DotCraftCore.nWorld.nChunk
 {
 
 	public class NibbleArray

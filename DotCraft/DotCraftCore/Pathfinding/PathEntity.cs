@@ -1,8 +1,8 @@
-namespace DotCraftCore.Pathfinding
+namespace DotCraftCore.nPathfinding
 {
 
 	using Entity = DotCraftCore.entity.Entity;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class PathEntity
 	{

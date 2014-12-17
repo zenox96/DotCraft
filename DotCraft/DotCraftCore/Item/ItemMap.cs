@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using HashMultiset = com.google.common.collect.HashMultiset;
 	using Iterables = com.google.common.collect.Iterables;
 	using Multisets = com.google.common.collect.Multisets;
-	using Block = DotCraftCore.block.Block;
-	using MapColor = DotCraftCore.block.material.MapColor;
+	using Block = DotCraftCore.nBlock.Block;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
-	using Packet = DotCraftCore.Network.Packet;
-	using S34PacketMaps = DotCraftCore.Network.Play.Server.S34PacketMaps;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using MapData = DotCraftCore.World.Storage.MapData;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using S34PacketMaps = DotCraftCore.nNetwork.nPlay.nServer.S34PacketMaps;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using MapData = DotCraftCore.nWorld.nStorage.MapData;
 
 	public class ItemMap : ItemMapBase
 	{

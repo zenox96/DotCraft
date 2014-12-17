@@ -1,11 +1,11 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
-	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
+	using PathNavigate = DotCraftCore.nPathfinding.PathNavigate;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIFollowOwner : EntityAIBase
 	{

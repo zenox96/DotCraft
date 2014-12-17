@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using Enchantment = DotCraftCore.Enchantment.Enchantment;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using InventoryPlayer = DotCraftCore.Entity.Player.InventoryPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using Enchantment = DotCraftCore.nEnchantment.Enchantment;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using InventoryPlayer = DotCraftCore.nEntity.nPlayer.InventoryPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 	using StringUtils = org.apache.commons.lang3.StringUtils;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;

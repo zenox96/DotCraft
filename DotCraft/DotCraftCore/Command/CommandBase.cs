@@ -2,15 +2,15 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Item = DotCraftCore.Item.Item;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using Item = DotCraftCore.nItem.Item;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public abstract class CommandBase : ICommand
 	{

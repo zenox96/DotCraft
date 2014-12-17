@@ -1,16 +1,16 @@
-namespace DotCraftCore.Network.Status.Server
+namespace DotCraftCore.nNetwork.nStatus.nServer
 {
 
 	using Gson = com.google.gson.Gson;
 	using GsonBuilder = com.google.gson.GsonBuilder;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using ServerStatusResponse = DotCraftCore.Network.ServerStatusResponse;
-	using INetHandlerStatusClient = DotCraftCore.Network.Status.INetHandlerStatusClient;
-	using ChatStyle = DotCraftCore.Util.ChatStyle;
-	using EnumTypeAdapterFactory = DotCraftCore.Util.EnumTypeAdapterFactory;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using ServerStatusResponse = DotCraftCore.nNetwork.ServerStatusResponse;
+	using INetHandlerStatusClient = DotCraftCore.nNetwork.nStatus.INetHandlerStatusClient;
+	using ChatStyle = DotCraftCore.nUtil.ChatStyle;
+	using EnumTypeAdapterFactory = DotCraftCore.nUtil.EnumTypeAdapterFactory;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class S00PacketServerInfo : Packet
 	{

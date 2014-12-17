@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockWeb : Block
 	{

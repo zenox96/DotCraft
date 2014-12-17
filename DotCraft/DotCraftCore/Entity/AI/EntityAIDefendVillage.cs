@@ -1,9 +1,9 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityIronGolem = DotCraftCore.Entity.Monster.EntityIronGolem;
-	using Village = DotCraftCore.Village.Village;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityIronGolem = DotCraftCore.nEntity.nMonster.EntityIronGolem;
+	using Village = DotCraftCore.nVillage.Village;
 
 	public class EntityAIDefendVillage : EntityAITarget
 	{

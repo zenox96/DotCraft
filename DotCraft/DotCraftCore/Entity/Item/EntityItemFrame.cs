@@ -1,18 +1,18 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityHanging = DotCraftCore.Entity.EntityHanging;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Items = DotCraftCore.Init.Items;
-	using ItemMap = DotCraftCore.Item.ItemMap;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using World = DotCraftCore.World.World;
-	using MapData = DotCraftCore.World.Storage.MapData;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityHanging = DotCraftCore.nEntity.EntityHanging;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemMap = DotCraftCore.nItem.ItemMap;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using World = DotCraftCore.nWorld.World;
+	using MapData = DotCraftCore.nWorld.nStorage.MapData;
 
 	public class EntityItemFrame : EntityHanging
 	{

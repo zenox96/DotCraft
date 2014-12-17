@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace DotCraftCore.Server.Network
+namespace DotCraftCore.nServer.nNetwork
 {
 
 	using Charsets = com.google.common.base.Charsets;

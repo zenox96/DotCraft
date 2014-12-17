@@ -1,9 +1,9 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockFurnace = DotCraftCore.block.BlockFurnace;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFurnace = DotCraftCore.nBlock.BlockFurnace;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;

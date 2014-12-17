@@ -1,29 +1,29 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockRailBase = DotCraftCore.block.BlockRailBase;
-	using Material = DotCraftCore.block.material.Material;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityMinecartCommandBlock = DotCraftCore.Entity.EntityMinecartCommandBlock;
-	using EntityMinecartMobSpawner = DotCraftCore.Entity.AI.EntityMinecartMobSpawner;
-	using EntityIronGolem = DotCraftCore.Entity.Monster.EntityIronGolem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockRailBase = DotCraftCore.nBlock.BlockRailBase;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityMinecartCommandBlock = DotCraftCore.nEntity.EntityMinecartCommandBlock;
+	using EntityMinecartMobSpawner = DotCraftCore.nEntity.nAI.EntityMinecartMobSpawner;
+	using EntityIronGolem = DotCraftCore.nEntity.nMonster.EntityIronGolem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
 
 	public abstract class EntityMinecart : Entity
 	{

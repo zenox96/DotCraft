@@ -1,13 +1,13 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	using ByteBuf = io.netty.buffer.ByteBuf;
-	using CommandBlockLogic = DotCraftCore.command.server.CommandBlockLogic;
+	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using Packet = DotCraftCore.network.Packet;
 	using S35PacketUpdateTileEntity = DotCraftCore.network.play.server.S35PacketUpdateTileEntity;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using World = DotCraftCore.World.World;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using World = DotCraftCore.nWorld.World;
 
 	public class TileEntityCommandBlock : TileEntity
 	{

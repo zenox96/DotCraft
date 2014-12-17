@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityList = DotCraftCore.entity.EntityList;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Item = DotCraftCore.item.Item;
@@ -12,7 +12,7 @@ namespace DotCraftCore.Stats
 	using CraftingManager = DotCraftCore.item.crafting.CraftingManager;
 	using FurnaceRecipes = DotCraftCore.item.crafting.FurnaceRecipes;
 	using IRecipe = DotCraftCore.item.crafting.IRecipe;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
 
 	public class StatList
 	{

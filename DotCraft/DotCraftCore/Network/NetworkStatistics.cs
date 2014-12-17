@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using LogManager = org.apache.logging.log4j.LogManager;

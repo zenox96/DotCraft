@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Player
+namespace DotCraftCore.nEntity.nPlayer
 {
 
 	using Charsets = com.google.common.base.Charsets;
 	using GameProfile = com.mojang.authlib.GameProfile;
-	using Block = DotCraftCore.block.Block;
-	using BlockBed = DotCraftCore.block.BlockBed;
-	using Material = DotCraftCore.block.material.Material;
-	using ICommandSender = DotCraftCore.command.ICommandSender;
-	using CommandBlockLogic = DotCraftCore.command.server.CommandBlockLogic;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockBed = DotCraftCore.nBlock.BlockBed;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
 	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
 	using Entity = DotCraftCore.Entity.Entity;
 	using EntityList = DotCraftCore.Entity.EntityList;
@@ -166,7 +166,7 @@ namespace DotCraftCore.Entity.Player
 		public EntityFishHook fishEntity;
 		
 
-		public EntityPlayer(World p_i45324_1_, GameProfile p_i45324_2_) : base(p_i45324_1_)
+		public EntityPlayer(nWorld p_i45324_1_, GameProfile p_i45324_2_) : base(p_i45324_1_)
 		{
 			this.entityUniqueID = func_146094_a(p_i45324_2_);
 			this.field_146106_i = p_i45324_2_;
@@ -460,7 +460,7 @@ namespace DotCraftCore.Entity.Player
 					var5.rotateAroundX(-this.rotationPitch * (float)Math.PI / 180.0F);
 					var5.rotateAroundY(-this.rotationYaw * (float)Math.PI / 180.0F);
 					var5 = var5.addVector(this.posX, this.posY + (double)this.EyeHeight, this.posZ);
-					string var6 = "iconcrack_" + Item.getIdFromItem(p_71010_1_.Item);
+					string var6 = "iconcrack_" + nItem.getIdFromItem(p_71010_1_.Item);
 
 					if (p_71010_1_.HasSubtypes)
 					{
@@ -907,14 +907,14 @@ namespace DotCraftCore.Entity.Player
 				}
 			}
 
-			if (this.isPotionActive(Potion.digSpeed))
+			if (this.isPotionActive(nPotion.digSpeed))
 			{
-				var3 *= 1.0F + (float)(this.getActivePotionEffect(Potion.digSpeed).Amplifier + 1) * 0.2F;
+				var3 *= 1.0F + (float)(this.getActivePotionEffect(nPotion.digSpeed).Amplifier + 1) * 0.2F;
 			}
 
-			if (this.isPotionActive(Potion.digSlowdown))
+			if (this.isPotionActive(nPotion.digSlowdown))
 			{
-				var3 *= 1.0F - (float)(this.getActivePotionEffect(Potion.digSlowdown).Amplifier + 1) * 0.2F;
+				var3 *= 1.0F - (float)(this.getActivePotionEffect(nPotion.digSlowdown).Amplifier + 1) * 0.2F;
 			}
 
 			if (this.isInsideOfMaterial(Material.water) && !EnchantmentHelper.getAquaAffinityModifier(this))
@@ -1210,7 +1210,7 @@ namespace DotCraftCore.Entity.Player
 		{
 		}
 
-		public virtual void func_146100_a(TileEntity p_146100_1_)
+		public virtual void func_146100_a(nTileEntity p_146100_1_)
 		{
 		}
 
@@ -1339,7 +1339,7 @@ namespace DotCraftCore.Entity.Player
 
 					if (var2 > 0.0F || var4 > 0.0F)
 					{
-						bool var5 = this.fallDistance > 0.0F && !this.onGround && !this.OnLadder && !this.InWater && !this.isPotionActive(Potion.blindness) && this.ridingEntity == null && p_71059_1_ is EntityLivingBase;
+						bool var5 = this.fallDistance > 0.0F && !this.onGround && !this.OnLadder && !this.InWater && !this.isPotionActive(nPotion.blindness) && this.ridingEntity == null && p_71059_1_ is EntityLivingBase;
 
 						if (var5 && var2 > 0.0F)
 						{
@@ -1663,7 +1663,7 @@ namespace DotCraftCore.Entity.Player
 ///     <summary> * Ensure that a block enabling respawning exists at the specified coordinates and find an empty space nearby to
 ///     * spawn. </summary>
 ///     
-		public static ChunkCoordinates verifyRespawnCoordinates(World p_71056_0_, ChunkCoordinates p_71056_1_, bool p_71056_2_)
+		public static ChunkCoordinates verifyRespawnCoordinates(nWorld p_71056_0_, ChunkCoordinates p_71056_1_, bool p_71056_2_)
 		{
 			IChunkProvider var3 = p_71056_0_.ChunkProvider;
 			var3.loadChunk(p_71056_1_.posX - 3 >> 4, p_71056_1_.posZ - 3 >> 4);
@@ -2330,7 +2330,7 @@ namespace DotCraftCore.Entity.Player
 			}
 		}
 
-		public virtual World EntityWorld
+		public virtual nWorld EntityWorld
 		{
 			get
 			{
@@ -2418,7 +2418,7 @@ namespace DotCraftCore.Entity.Player
 			}
 		}
 
-		public virtual Scoreboard WorldScoreboard
+		public virtual nScoreboard WorldScoreboard
 		{
 			get
 			{

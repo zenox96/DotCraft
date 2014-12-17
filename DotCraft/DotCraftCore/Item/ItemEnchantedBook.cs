@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using Enchantment = DotCraftCore.enchantment.Enchantment;
@@ -9,9 +9,9 @@ namespace DotCraftCore.Item
 	using EnchantmentHelper = DotCraftCore.enchantment.EnchantmentHelper;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
 
 	public class ItemEnchantedBook : Item
 	{

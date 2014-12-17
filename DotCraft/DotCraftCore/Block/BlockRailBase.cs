@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockRailBase : Block
 	{

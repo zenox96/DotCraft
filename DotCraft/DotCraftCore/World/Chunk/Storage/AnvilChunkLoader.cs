@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityList = DotCraftCore.entity.EntityList;
 	using CompressedStreamTools = DotCraftCore.nbt.CompressedStreamTools;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using NextTickListEntry = DotCraftCore.World.NextTickListEntry;
-	using World = DotCraftCore.World.World;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using NibbleArray = DotCraftCore.World.Chunk.NibbleArray;
-	using IThreadedFileIO = DotCraftCore.World.Storage.IThreadedFileIO;
-	using ThreadedFileIOBase = DotCraftCore.World.Storage.ThreadedFileIOBase;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using NextTickListEntry = DotCraftCore.nWorld.NextTickListEntry;
+	using World = DotCraftCore.nWorld.World;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using NibbleArray = DotCraftCore.nWorld.nChunk.NibbleArray;
+	using IThreadedFileIO = DotCraftCore.nWorld.nStorage.IThreadedFileIO;
+	using ThreadedFileIOBase = DotCraftCore.nWorld.nStorage.ThreadedFileIOBase;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

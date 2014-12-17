@@ -1,27 +1,27 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockFalling = DotCraftCore.block.BlockFalling;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFalling = DotCraftCore.nBlock.BlockFalling;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using WorldGenFire = DotCraftCore.World.Gen.Feature.WorldGenFire;
-	using WorldGenFlowers = DotCraftCore.World.Gen.Feature.WorldGenFlowers;
-	using WorldGenGlowStone1 = DotCraftCore.World.Gen.Feature.WorldGenGlowStone1;
-	using WorldGenGlowStone2 = DotCraftCore.World.Gen.Feature.WorldGenGlowStone2;
-	using WorldGenHellLava = DotCraftCore.World.Gen.Feature.WorldGenHellLava;
-	using WorldGenMinable = DotCraftCore.World.Gen.Feature.WorldGenMinable;
-	using MapGenNetherBridge = DotCraftCore.World.Gen.Structure.MapGenNetherBridge;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using WorldGenFire = DotCraftCore.nWorld.nGen.nFeature.WorldGenFire;
+	using WorldGenFlowers = DotCraftCore.nWorld.nGen.nFeature.WorldGenFlowers;
+	using WorldGenGlowStone1 = DotCraftCore.nWorld.nGen.nFeature.WorldGenGlowStone1;
+	using WorldGenGlowStone2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenGlowStone2;
+	using WorldGenHellLava = DotCraftCore.nWorld.nGen.nFeature.WorldGenHellLava;
+	using WorldGenMinable = DotCraftCore.nWorld.nGen.nFeature.WorldGenMinable;
+	using MapGenNetherBridge = DotCraftCore.nWorld.nGen.nStructure.MapGenNetherBridge;
 
 	public class ChunkProviderHell : IChunkProvider
 	{

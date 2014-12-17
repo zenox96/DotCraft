@@ -1,34 +1,34 @@
-namespace DotCraftCore.Init
+namespace DotCraftCore.nInit
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockBeacon = DotCraftCore.block.BlockBeacon;
-	using BlockBush = DotCraftCore.block.BlockBush;
-	using BlockCauldron = DotCraftCore.block.BlockCauldron;
-	using BlockChest = DotCraftCore.block.BlockChest;
-	using BlockDaylightDetector = DotCraftCore.block.BlockDaylightDetector;
-	using BlockDeadBush = DotCraftCore.block.BlockDeadBush;
-	using BlockDoublePlant = DotCraftCore.block.BlockDoublePlant;
-	using BlockFire = DotCraftCore.block.BlockFire;
-	using BlockFlower = DotCraftCore.block.BlockFlower;
-	using BlockGrass = DotCraftCore.block.BlockGrass;
-	using BlockHopper = DotCraftCore.block.BlockHopper;
-	using BlockLeaves = DotCraftCore.block.BlockLeaves;
-	using BlockLiquid = DotCraftCore.block.BlockLiquid;
-	using BlockMycelium = DotCraftCore.block.BlockMycelium;
-	using BlockPistonBase = DotCraftCore.block.BlockPistonBase;
-	using BlockPistonExtension = DotCraftCore.block.BlockPistonExtension;
-	using BlockPistonMoving = DotCraftCore.block.BlockPistonMoving;
-	using BlockPortal = DotCraftCore.block.BlockPortal;
-	using BlockRedstoneComparator = DotCraftCore.block.BlockRedstoneComparator;
-	using BlockRedstoneRepeater = DotCraftCore.block.BlockRedstoneRepeater;
-	using BlockRedstoneWire = DotCraftCore.block.BlockRedstoneWire;
-	using BlockSand = DotCraftCore.block.BlockSand;
-	using BlockSlab = DotCraftCore.block.BlockSlab;
-	using BlockStainedGlass = DotCraftCore.block.BlockStainedGlass;
-	using BlockStainedGlassPane = DotCraftCore.block.BlockStainedGlassPane;
-	using BlockTallGrass = DotCraftCore.block.BlockTallGrass;
-	using BlockTripWireHook = DotCraftCore.block.BlockTripWireHook;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockBeacon = DotCraftCore.nBlock.BlockBeacon;
+	using BlockBush = DotCraftCore.nBlock.BlockBush;
+	using BlockCauldron = DotCraftCore.nBlock.BlockCauldron;
+	using BlockChest = DotCraftCore.nBlock.BlockChest;
+	using BlockDaylightDetector = DotCraftCore.nBlock.BlockDaylightDetector;
+	using BlockDeadBush = DotCraftCore.nBlock.BlockDeadBush;
+	using BlockDoublePlant = DotCraftCore.nBlock.BlockDoublePlant;
+	using BlockFire = DotCraftCore.nBlock.BlockFire;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
+	using BlockGrass = DotCraftCore.nBlock.BlockGrass;
+	using BlockHopper = DotCraftCore.nBlock.BlockHopper;
+	using BlockLeaves = DotCraftCore.nBlock.BlockLeaves;
+	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
+	using BlockMycelium = DotCraftCore.nBlock.BlockMycelium;
+	using BlockPistonBase = DotCraftCore.nBlock.BlockPistonBase;
+	using BlockPistonExtension = DotCraftCore.nBlock.BlockPistonExtension;
+	using BlockPistonMoving = DotCraftCore.nBlock.BlockPistonMoving;
+	using BlockPortal = DotCraftCore.nBlock.BlockPortal;
+	using BlockRedstoneComparator = DotCraftCore.nBlock.BlockRedstoneComparator;
+	using BlockRedstoneRepeater = DotCraftCore.nBlock.BlockRedstoneRepeater;
+	using BlockRedstoneWire = DotCraftCore.nBlock.BlockRedstoneWire;
+	using BlockSand = DotCraftCore.nBlock.BlockSand;
+	using BlockSlab = DotCraftCore.nBlock.BlockSlab;
+	using BlockStainedGlass = DotCraftCore.nBlock.BlockStainedGlass;
+	using BlockStainedGlassPane = DotCraftCore.nBlock.BlockStainedGlassPane;
+	using BlockTallGrass = DotCraftCore.nBlock.BlockTallGrass;
+	using BlockTripWireHook = DotCraftCore.nBlock.BlockTripWireHook;
 
 	public class Blocks
 	{

@@ -1,4 +1,4 @@
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using JsonObject = com.google.gson.JsonObject;

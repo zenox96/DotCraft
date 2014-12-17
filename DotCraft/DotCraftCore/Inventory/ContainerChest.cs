@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public class ContainerChest : Container
 	{

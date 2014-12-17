@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
 
 	public class WorldChunkManagerHell : WorldChunkManager
 	{

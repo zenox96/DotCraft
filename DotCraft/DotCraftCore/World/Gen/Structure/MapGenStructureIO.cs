@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

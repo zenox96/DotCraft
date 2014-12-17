@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using CommandException = DotCraftCore.Command.CommandException;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using CommandException = DotCraftCore.nCommand.CommandException;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandPardonPlayer : CommandBase
 	{

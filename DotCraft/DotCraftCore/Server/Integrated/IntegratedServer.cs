@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Server.Integrated
+namespace DotCraftCore.nServer.nIntegrated
 {
 
 	using ClientBrandRetriever = DotCraftCore.client.ClientBrandRetriever;
@@ -8,17 +8,17 @@ namespace DotCraftCore.Server.Integrated
 	using ThreadLanServerPing = DotCraftCore.client.multiplayer.ThreadLanServerPing;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using PlayerUsageSnooper = DotCraftCore.profiler.PlayerUsageSnooper;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using CryptManager = DotCraftCore.Util.CryptManager;
-	using HttpUtil = DotCraftCore.Util.HttpUtil;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using WorldManager = DotCraftCore.World.WorldManager;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using WorldServerMulti = DotCraftCore.World.WorldServerMulti;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using WorldType = DotCraftCore.World.WorldType;
-	using DemoWorldServer = DotCraftCore.World.Demo.DemoWorldServer;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using CryptManager = DotCraftCore.nUtil.CryptManager;
+	using HttpUtil = DotCraftCore.nUtil.HttpUtil;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using WorldManager = DotCraftCore.nWorld.WorldManager;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using WorldServerMulti = DotCraftCore.nWorld.WorldServerMulti;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using DemoWorldServer = DotCraftCore.nWorld.nDemo.DemoWorldServer;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

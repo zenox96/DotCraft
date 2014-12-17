@@ -1,28 +1,28 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Boss
+namespace DotCraftCore.nEntity.nBoss
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockEndPortal = DotCraftCore.block.BlockEndPortal;
-	using Material = DotCraftCore.block.material.Material;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IEntityMultiPart = DotCraftCore.Entity.IEntityMultiPart;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityEnderCrystal = DotCraftCore.Entity.Item.EntityEnderCrystal;
-	using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-	using IMob = DotCraftCore.Entity.Monster.IMob;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using Explosion = DotCraftCore.World.Explosion;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockEndPortal = DotCraftCore.nBlock.BlockEndPortal;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IEntityMultiPart = DotCraftCore.nEntity.IEntityMultiPart;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityEnderCrystal = DotCraftCore.nEntity.nItem.EntityEnderCrystal;
+	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
+	using IMob = DotCraftCore.nEntity.nMonster.IMob;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using Explosion = DotCraftCore.nWorld.Explosion;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityDragon : EntityLiving, IBossDisplayData, IEntityMultiPart, IMob
 	{

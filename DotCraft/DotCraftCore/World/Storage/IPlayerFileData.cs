@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;

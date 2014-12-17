@@ -1,40 +1,40 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using EntityDragon = DotCraftCore.Entity.Boss.EntityDragon;
-	using EntityWither = DotCraftCore.Entity.Boss.EntityWither;
-	using EntityBoat = DotCraftCore.Entity.Item.EntityBoat;
-	using EntityEnderCrystal = DotCraftCore.Entity.Item.EntityEnderCrystal;
-	using EntityEnderEye = DotCraftCore.Entity.Item.EntityEnderEye;
-	using EntityEnderPearl = DotCraftCore.Entity.Item.EntityEnderPearl;
-	using EntityExpBottle = DotCraftCore.Entity.Item.EntityExpBottle;
-	using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
-	using EntityFireworkRocket = DotCraftCore.Entity.Item.EntityFireworkRocket;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
-	using EntityTNTPrimed = DotCraftCore.Entity.Item.EntityTNTPrimed;
-	using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-	using EntityBat = DotCraftCore.Entity.Passive.EntityBat;
-	using EntitySquid = DotCraftCore.Entity.Passive.EntitySquid;
-	using IAnimals = DotCraftCore.Entity.Passive.IAnimals;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using EntityEgg = DotCraftCore.Entity.Projectile.EntityEgg;
-	using EntityFireball = DotCraftCore.Entity.Projectile.EntityFireball;
-	using EntityFishHook = DotCraftCore.Entity.Projectile.EntityFishHook;
-	using EntityPotion = DotCraftCore.Entity.Projectile.EntityPotion;
-	using EntitySmallFireball = DotCraftCore.Entity.Projectile.EntitySmallFireball;
-	using EntitySnowball = DotCraftCore.Entity.Projectile.EntitySnowball;
-	using Packet = DotCraftCore.Network.Packet;
-	using IntHashMap = DotCraftCore.Util.IntHashMap;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
+	using EntityDragon = DotCraftCore.nEntity.nBoss.EntityDragon;
+	using EntityWither = DotCraftCore.nEntity.nBoss.EntityWither;
+	using EntityBoat = DotCraftCore.nEntity.nItem.EntityBoat;
+	using EntityEnderCrystal = DotCraftCore.nEntity.nItem.EntityEnderCrystal;
+	using EntityEnderEye = DotCraftCore.nEntity.nItem.EntityEnderEye;
+	using EntityEnderPearl = DotCraftCore.nEntity.nItem.EntityEnderPearl;
+	using EntityExpBottle = DotCraftCore.nEntity.nItem.EntityExpBottle;
+	using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
+	using EntityFireworkRocket = DotCraftCore.nEntity.nItem.EntityFireworkRocket;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityMinecart = DotCraftCore.nEntity.nItem.EntityMinecart;
+	using EntityTNTPrimed = DotCraftCore.nEntity.nItem.EntityTNTPrimed;
+	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
+	using EntityBat = DotCraftCore.nEntity.nPassive.EntityBat;
+	using EntitySquid = DotCraftCore.nEntity.nPassive.EntitySquid;
+	using IAnimals = DotCraftCore.nEntity.nPassive.IAnimals;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using EntityEgg = DotCraftCore.nEntity.nProjectile.EntityEgg;
+	using EntityFireball = DotCraftCore.nEntity.nProjectile.EntityFireball;
+	using EntityFishHook = DotCraftCore.nEntity.nProjectile.EntityFishHook;
+	using EntityPotion = DotCraftCore.nEntity.nProjectile.EntityPotion;
+	using EntitySmallFireball = DotCraftCore.nEntity.nProjectile.EntitySmallFireball;
+	using EntitySnowball = DotCraftCore.nEntity.nProjectile.EntitySnowball;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using IntHashMap = DotCraftCore.nUtil.IntHashMap;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

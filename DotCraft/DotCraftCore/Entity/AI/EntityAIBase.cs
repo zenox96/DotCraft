@@ -1,4 +1,4 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
 	public abstract class EntityAIBase

@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 	public class NBTSizeTracker

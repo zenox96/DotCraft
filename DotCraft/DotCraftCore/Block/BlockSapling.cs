@@ -1,26 +1,26 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using WorldGenBigTree = DotCraftCore.World.Gen.Feature.WorldGenBigTree;
-	using WorldGenCanopyTree = DotCraftCore.World.Gen.Feature.WorldGenCanopyTree;
-	using WorldGenForest = DotCraftCore.World.Gen.Feature.WorldGenForest;
-	using WorldGenMegaJungle = DotCraftCore.World.Gen.Feature.WorldGenMegaJungle;
-	using WorldGenMegaPineTree = DotCraftCore.World.Gen.Feature.WorldGenMegaPineTree;
-	using WorldGenSavannaTree = DotCraftCore.World.Gen.Feature.WorldGenSavannaTree;
-	using WorldGenTaiga2 = DotCraftCore.World.Gen.Feature.WorldGenTaiga2;
-	using WorldGenTrees = DotCraftCore.World.Gen.Feature.WorldGenTrees;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenBigTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigTree;
+	using WorldGenCanopyTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenCanopyTree;
+	using WorldGenForest = DotCraftCore.nWorld.nGen.nFeature.WorldGenForest;
+	using WorldGenMegaJungle = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaJungle;
+	using WorldGenMegaPineTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaPineTree;
+	using WorldGenSavannaTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenSavannaTree;
+	using WorldGenTaiga2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga2;
+	using WorldGenTrees = DotCraftCore.nWorld.nGen.nFeature.WorldGenTrees;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BlockSapling : BlockBush, IGrowable
 	{

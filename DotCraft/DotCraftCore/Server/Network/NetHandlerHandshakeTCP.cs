@@ -1,4 +1,4 @@
-namespace DotCraftCore.Server.Network
+namespace DotCraftCore.nServer.nNetwork
 {
 
 	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
@@ -7,9 +7,9 @@ namespace DotCraftCore.Server.Network
 	using INetHandlerHandshakeServer = DotCraftCore.network.handshake.INetHandlerHandshakeServer;
 	using C00Handshake = DotCraftCore.network.handshake.client.C00Handshake;
 	using S00PacketDisconnect = DotCraftCore.network.login.server.S00PacketDisconnect;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class NetHandlerHandshakeTCP : INetHandlerHandshakeServer
 	{

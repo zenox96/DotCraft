@@ -1,21 +1,21 @@
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityList = DotCraftCore.Entity.EntityList;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTException = DotCraftCore.NBT.NBTException;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using World = DotCraftCore.World.World;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityList = DotCraftCore.nEntity.EntityList;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using JsonToNBT = DotCraftCore.nNBT.JsonToNBT;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTException = DotCraftCore.nNBT.NBTException;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using World = DotCraftCore.nWorld.World;
 
 	public class CommandSummon : CommandBase
 	{

@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
 	using Property = com.mojang.authlib.properties.Property;
-	using StringUtils = DotCraftCore.Util.StringUtils;
+	using StringUtils = DotCraftCore.nUtil.StringUtils;
 
 	public sealed class NBTUtil
 	{

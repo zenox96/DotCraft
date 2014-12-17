@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
 
 	public class CommandSetDefaultSpawnpoint : CommandBase
 	{

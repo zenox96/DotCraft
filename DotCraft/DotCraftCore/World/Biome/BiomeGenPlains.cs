@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using BlockFlower = DotCraftCore.block.BlockFlower;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
 	using EntityHorse = DotCraftCore.entity.passive.EntityHorse;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BiomeGenPlains : BiomeGenBase
 	{

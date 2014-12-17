@@ -1,12 +1,12 @@
-namespace DotCraftCore.World.Demo
+namespace DotCraftCore.nWorld.nDemo
 {
 
 	using Profiler = DotCraftCore.profiler.Profiler;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using WorldType = DotCraftCore.World.WorldType;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
 
 	public class DemoWorldServer : WorldServer
 	{

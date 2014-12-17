@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.Effect
+namespace DotCraftCore.nEntity.nEffect
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityWeatherEffect : Entity
 	{

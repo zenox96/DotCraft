@@ -1,8 +1,8 @@
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
-	using WorldType = DotCraftCore.World.WorldType;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class GenLayerBiome : GenLayer
 	{

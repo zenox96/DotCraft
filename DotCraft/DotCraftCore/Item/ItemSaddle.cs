@@ -1,4 +1,4 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;

@@ -1,7 +1,7 @@
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class GenLayerRiver : GenLayer
 	{

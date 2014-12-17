@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using IEntityLivingData = DotCraftCore.entity.IEntityLivingData;
 	using EntityZombie = DotCraftCore.entity.monster.EntityZombie;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using SpawnerAnimals = DotCraftCore.World.SpawnerAnimals;
-	using World = DotCraftCore.World.World;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using SpawnerAnimals = DotCraftCore.nWorld.SpawnerAnimals;
+	using World = DotCraftCore.nWorld.World;
 
 	public class VillageSiege
 	{

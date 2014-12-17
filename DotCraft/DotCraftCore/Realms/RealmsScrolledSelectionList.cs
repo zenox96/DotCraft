@@ -1,4 +1,4 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using GuiSlotRealmsProxy = DotCraftCore.client.gui.GuiSlotRealmsProxy;

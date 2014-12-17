@@ -1,20 +1,20 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Network.Play.Server
+namespace DotCraftCore.nNetwork.nPlay.nServer
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
 	using Property = com.mojang.authlib.properties.Property;
 	using DataWatcher = DotCraftCore.entity.DataWatcher;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayClient = DotCraftCore.Network.Play.INetHandlerPlayClient;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayClient = DotCraftCore.nNetwork.nPlay.INetHandlerPlayClient;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class S0CPacketSpawnPlayer : Packet
 	{

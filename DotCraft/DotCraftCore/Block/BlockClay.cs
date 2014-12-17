@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
 
 	public class BlockClay : Block
 	{

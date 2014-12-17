@@ -1,11 +1,11 @@
-namespace DotCraftCore.Server.Integrated
+namespace DotCraftCore.nServer.nIntegrated
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ServerConfigurationManager = DotCraftCore.Server.Management.ServerConfigurationManager;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ServerConfigurationManager = DotCraftCore.nServer.nManagement.ServerConfigurationManager;
 
 	public class IntegratedPlayerList : ServerConfigurationManager
 	{

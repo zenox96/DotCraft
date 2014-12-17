@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using Charsets = com.google.common.base.Charsets;
@@ -128,7 +128,7 @@ namespace DotCraftCore.Network
 			}
 			else
 			{
-				this.writeShort(Item.getIdFromItem(p_150788_1_.Item));
+				this.writeShort(nItem.getIdFromItem(p_150788_1_.Item));
 				this.writeByte(p_150788_1_.stackSize);
 				this.writeShort(p_150788_1_.ItemDamage);
 				NBTTagCompound var2 = null;
@@ -156,7 +156,7 @@ namespace DotCraftCore.Network
 			{
 				sbyte var3 = this.readByte();
 				short var4 = this.readShort();
-				var1 = new ItemStack(Item.getItemById(var2), var3, var4);
+				var1 = new ItemStack(nItem.getItemById(var2), var3, var4);
 				var1.stackTagCompound = this.readNBTTagCompoundFromBuffer();
 			}
 

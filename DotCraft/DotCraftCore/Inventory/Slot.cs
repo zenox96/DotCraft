@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class Slot
 	{

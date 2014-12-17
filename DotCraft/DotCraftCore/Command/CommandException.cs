@@ -1,4 +1,4 @@
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
 	public class CommandException : Exception

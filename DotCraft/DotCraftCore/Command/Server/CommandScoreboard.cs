@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using CommandException = DotCraftCore.Command.CommandException;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using IScoreObjectiveCriteria = DotCraftCore.Scoreboard.IScoreObjectiveCriteria;
-	using Score = DotCraftCore.Scoreboard.Score;
-	using ScoreObjective = DotCraftCore.Scoreboard.ScoreObjective;
-	using ScorePlayerTeam = DotCraftCore.Scoreboard.ScorePlayerTeam;
-	using Scoreboard = DotCraftCore.Scoreboard.Scoreboard;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using CommandException = DotCraftCore.nCommand.CommandException;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using SyntaxErrorException = DotCraftCore.nCommand.SyntaxErrorException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using IScoreObjectiveCriteria = DotCraftCore.nScoreboard.IScoreObjectiveCriteria;
+	using Score = DotCraftCore.nScoreboard.Score;
+	using ScoreObjective = DotCraftCore.nScoreboard.ScoreObjective;
+	using ScorePlayerTeam = DotCraftCore.nScoreboard.ScorePlayerTeam;
+	using Scoreboard = DotCraftCore.nScoreboard.Scoreboard;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
 
 	public class CommandScoreboard : CommandBase
 	{

@@ -1,12 +1,12 @@
-namespace DotCraftCore.World.Demo
+namespace DotCraftCore.nWorld.nDemo
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using S2BPacketChangeGameState = DotCraftCore.network.play.server.S2BPacketChangeGameState;
-	using ItemInWorldManager = DotCraftCore.Server.Management.ItemInWorldManager;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using World = DotCraftCore.World.World;
+	using ItemInWorldManager = DotCraftCore.nServer.nManagement.ItemInWorldManager;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using World = DotCraftCore.nWorld.World;
 
 	public class DemoWorldManager : ItemInWorldManager
 	{

@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenIcePath = DotCraftCore.World.Gen.Feature.WorldGenIcePath;
-	using WorldGenIceSpike = DotCraftCore.World.Gen.Feature.WorldGenIceSpike;
-	using WorldGenTaiga2 = DotCraftCore.World.Gen.Feature.WorldGenTaiga2;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenIcePath = DotCraftCore.nWorld.nGen.nFeature.WorldGenIcePath;
+	using WorldGenIceSpike = DotCraftCore.nWorld.nGen.nFeature.WorldGenIceSpike;
+	using WorldGenTaiga2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga2;
 
 	public class BiomeGenSnow : BiomeGenBase
 	{

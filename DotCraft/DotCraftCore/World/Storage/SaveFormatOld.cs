@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Threading;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using AnvilConverterException = DotCraftCore.client.AnvilConverterException;
 	using CompressedStreamTools = DotCraftCore.nbt.CompressedStreamTools;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

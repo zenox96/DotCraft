@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public class CommandWeather : CommandBase
 	{

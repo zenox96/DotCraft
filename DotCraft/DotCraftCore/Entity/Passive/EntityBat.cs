@@ -1,16 +1,16 @@
 using System;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityBat : EntityAmbientCreature
 	{

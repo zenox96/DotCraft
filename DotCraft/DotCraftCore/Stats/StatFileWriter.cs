@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
 	using Maps = com.google.common.collect.Maps;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using IJsonSerializable = DotCraftCore.Util.IJsonSerializable;
-	using TupleIntJsonSerializable = DotCraftCore.Util.TupleIntJsonSerializable;
+	using IJsonSerializable = DotCraftCore.nUtil.IJsonSerializable;
+	using TupleIntJsonSerializable = DotCraftCore.nUtil.TupleIntJsonSerializable;
 
 	public class StatFileWriter
 	{

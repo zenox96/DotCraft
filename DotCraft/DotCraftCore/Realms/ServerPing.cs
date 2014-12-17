@@ -1,4 +1,4 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	public class ServerPing

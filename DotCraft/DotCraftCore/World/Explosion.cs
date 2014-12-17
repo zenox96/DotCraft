@@ -1,21 +1,21 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EnchantmentProtection = DotCraftCore.enchantment.EnchantmentProtection;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using EntityTNTPrimed = DotCraftCore.entity.item.EntityTNTPrimed;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class Explosion
 	{

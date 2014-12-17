@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Network
+namespace DotCraftCore.nNetwork
 {
 
 	using JsonArray = com.google.gson.JsonArray;
@@ -11,8 +11,8 @@ namespace DotCraftCore.Network
 	using JsonSerializationContext = com.google.gson.JsonSerializationContext;
 	using JsonSerializer = com.google.gson.JsonSerializer;
 	using GameProfile = com.mojang.authlib.GameProfile;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using JsonUtils = DotCraftCore.Util.JsonUtils;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using JsonUtils = DotCraftCore.nUtil.JsonUtils;
 
 	public class ServerStatusResponse
 	{

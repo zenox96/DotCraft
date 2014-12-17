@@ -1,22 +1,22 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockColored = DotCraftCore.block.BlockColored;
-	using BlockLog = DotCraftCore.block.BlockLog;
-	using IGrowable = DotCraftCore.block.IGrowable;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockColored = DotCraftCore.nBlock.BlockColored;
+	using BlockLog = DotCraftCore.nBlock.BlockLog;
+	using IGrowable = DotCraftCore.nBlock.IGrowable;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using EntitySheep = DotCraftCore.entity.passive.EntitySheep;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemDye : Item
 	{

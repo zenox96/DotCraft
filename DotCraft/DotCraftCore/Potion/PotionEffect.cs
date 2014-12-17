@@ -1,8 +1,8 @@
-namespace DotCraftCore.Potion
+namespace DotCraftCore.nPotion
 {
 
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
 
 	public class PotionEffect
 	{

@@ -1,7 +1,7 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using BlockDaylightDetector = DotCraftCore.block.BlockDaylightDetector;
+	using BlockDaylightDetector = DotCraftCore.nBlock.BlockDaylightDetector;
 
 	public class TileEntityDaylightDetector : TileEntity
 	{

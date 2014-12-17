@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemHoe = DotCraftCore.Item.ItemHoe;
-	using ItemPickaxe = DotCraftCore.Item.ItemPickaxe;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using ItemSword = DotCraftCore.Item.ItemSword;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemHoe = DotCraftCore.nItem.ItemHoe;
+	using ItemPickaxe = DotCraftCore.nItem.ItemPickaxe;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using ItemSword = DotCraftCore.nItem.ItemSword;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
 
 	public class SlotCrafting : Slot
 	{

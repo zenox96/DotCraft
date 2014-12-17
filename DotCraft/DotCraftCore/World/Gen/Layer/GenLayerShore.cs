@@ -1,9 +1,9 @@
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using BiomeGenJungle = DotCraftCore.World.Biome.BiomeGenJungle;
-	using BiomeGenMesa = DotCraftCore.World.Biome.BiomeGenMesa;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using BiomeGenJungle = DotCraftCore.nWorld.nBiome.BiomeGenJungle;
+	using BiomeGenMesa = DotCraftCore.nWorld.nBiome.BiomeGenMesa;
 
 	public class GenLayerShore : GenLayer
 	{

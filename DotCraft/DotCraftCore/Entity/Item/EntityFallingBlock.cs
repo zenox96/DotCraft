@@ -1,23 +1,23 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockFalling = DotCraftCore.block.BlockFalling;
-	using ITileEntityProvider = DotCraftCore.block.ITileEntityProvider;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFalling = DotCraftCore.nBlock.BlockFalling;
+	using ITileEntityProvider = DotCraftCore.nBlock.ITileEntityProvider;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using Entity = DotCraftCore.Entity.Entity;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityFallingBlock : Entity
 	{

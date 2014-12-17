@@ -1,11 +1,11 @@
-namespace DotCraftCore.Network.Login.Server
+namespace DotCraftCore.nNetwork.nLogin.nServer
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerLoginClient = DotCraftCore.Network.Login.INetHandlerLoginClient;
-	using CryptManager = DotCraftCore.Util.CryptManager;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerLoginClient = DotCraftCore.nNetwork.nLogin.INetHandlerLoginClient;
+	using CryptManager = DotCraftCore.nUtil.CryptManager;
 
 	public class S01PacketEncryptionRequest : Packet
 	{

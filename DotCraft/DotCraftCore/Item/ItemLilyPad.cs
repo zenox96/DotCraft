@@ -1,12 +1,12 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using World = DotCraftCore.World.World;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemLilyPad : ItemColored
 	{

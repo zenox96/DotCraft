@@ -1,7 +1,7 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
 
 	public class EntityAIRestrictSun : EntityAIBase
 	{

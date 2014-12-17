@@ -1,14 +1,14 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Material = DotCraftCore.block.material.Material;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using World = DotCraftCore.World.World;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemGlassBottle : Item
 	{

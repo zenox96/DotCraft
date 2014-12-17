@@ -1,17 +1,17 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using BlockLever = DotCraftCore.block.BlockLever;
-	using IEntityLivingData = DotCraftCore.entity.IEntityLivingData;
-	using EntityWitch = DotCraftCore.entity.monster.EntityWitch;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Direction = DotCraftCore.Util.Direction;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using World = DotCraftCore.World.World;
+	using BlockLever = DotCraftCore.nBlock.BlockLever;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using EntityWitch = DotCraftCore.nEntity.nMonster.EntityWitch;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ComponentScatteredFeaturePieces
 	{

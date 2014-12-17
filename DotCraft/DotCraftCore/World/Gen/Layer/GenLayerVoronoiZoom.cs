@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Layer
+namespace DotCraftCore.nWorld.nGen.nLayer
 {
 
 	public class GenLayerVoronoiZoom : GenLayer

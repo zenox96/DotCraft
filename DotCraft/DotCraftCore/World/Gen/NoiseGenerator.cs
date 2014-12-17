@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
 	public abstract class NoiseGenerator

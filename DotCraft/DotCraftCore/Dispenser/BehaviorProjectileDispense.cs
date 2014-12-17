@@ -1,12 +1,12 @@
-namespace DotCraftCore.Dispenser
+namespace DotCraftCore.nDispenser
 {
 
-	using BlockDispenser = DotCraftCore.block.BlockDispenser;
-	using Entity = DotCraftCore.Entity.Entity;
-	using IProjectile = DotCraftCore.Entity.IProjectile;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using EnumFacing = DotCraftCore.Util.EnumFacing;
-	using World = DotCraftCore.World.World;
+	using BlockDispenser = DotCraftCore.nBlock.BlockDispenser;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using IProjectile = DotCraftCore.nEntity.IProjectile;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BehaviorProjectileDispense : BehaviorDefaultDispenseItem
 	{

@@ -1,16 +1,16 @@
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using ItemSword = DotCraftCore.item.ItemSword;
 	using S23PacketBlockChange = DotCraftCore.network.play.server.S23PacketBlockChange;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
 
 	public class ItemInWorldManager
 	{

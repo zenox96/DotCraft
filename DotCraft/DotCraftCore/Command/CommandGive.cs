@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using JsonToNBT = DotCraftCore.NBT.JsonToNBT;
-	using NBTBase = DotCraftCore.NBT.NBTBase;
-	using NBTException = DotCraftCore.NBT.NBTException;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using JsonToNBT = DotCraftCore.nNBT.JsonToNBT;
+	using NBTBase = DotCraftCore.nNBT.NBTBase;
+	using NBTException = DotCraftCore.nNBT.NBTException;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandGive : CommandBase
 	{

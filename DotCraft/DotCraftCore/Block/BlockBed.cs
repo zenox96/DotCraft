@@ -1,23 +1,23 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using Direction = DotCraftCore.Util.Direction;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
 
 	public class BlockBed : BlockDirectional
 	{

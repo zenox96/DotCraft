@@ -1,18 +1,18 @@
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemLead = DotCraftCore.Item.ItemLead;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using ItemLead = DotCraftCore.nItem.ItemLead;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockFence : Block
 	{

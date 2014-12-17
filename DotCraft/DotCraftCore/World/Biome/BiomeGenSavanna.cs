@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityHorse = DotCraftCore.entity.passive.EntityHorse;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenSavannaTree = DotCraftCore.World.Gen.Feature.WorldGenSavannaTree;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenSavannaTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenSavannaTree;
 
 	public class BiomeGenSavanna : BiomeGenBase
 	{

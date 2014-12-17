@@ -1,4 +1,4 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	public class TileEntityDropper : TileEntityDispenser

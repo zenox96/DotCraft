@@ -1,17 +1,17 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using Direction = DotCraftCore.Util.Direction;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockRedstoneDiode : BlockDirectional
 	{

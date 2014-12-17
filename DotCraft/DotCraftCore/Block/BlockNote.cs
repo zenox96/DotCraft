@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityNote = DotCraftCore.TileEntity.TileEntityNote;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntityNote = DotCraftCore.nTileEntity.TileEntityNote;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockNote : BlockContainer
 	{

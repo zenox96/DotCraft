@@ -1,12 +1,12 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using TileEntitySign = DotCraftCore.TileEntity.TileEntitySign;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using TileEntitySign = DotCraftCore.nTileEntity.TileEntitySign;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSign : Item
 	{

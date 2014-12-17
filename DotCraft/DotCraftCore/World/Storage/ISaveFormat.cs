@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using AnvilConverterException = DotCraftCore.client.AnvilConverterException;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
 
 	public interface ISaveFormat
 	{

@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using Profiler = DotCraftCore.Profiler.Profiler;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using Profiler = DotCraftCore.nProfiler.Profiler;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;

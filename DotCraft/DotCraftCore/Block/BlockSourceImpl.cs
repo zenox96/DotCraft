@@ -1,9 +1,9 @@
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using IBlockSource = DotCraftCore.Dispenser.IBlockSource;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using World = DotCraftCore.World.World;
+	using IBlockSource = DotCraftCore.nDispenser.IBlockSource;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockSourceImpl : IBlockSource
 	{

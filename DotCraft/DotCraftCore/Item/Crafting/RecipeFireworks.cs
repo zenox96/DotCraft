@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
 	using Items = DotCraftCore.init.Items;
 	using InventoryCrafting = DotCraftCore.inventory.InventoryCrafting;
-	using ItemDye = DotCraftCore.Item.ItemDye;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using World = DotCraftCore.World.World;
+	using ItemDye = DotCraftCore.nItem.ItemDye;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using World = DotCraftCore.nWorld.World;
 
 	public class RecipeFireworks : IRecipe
 	{

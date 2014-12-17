@@ -1,7 +1,7 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
 
 	public class EntityAIOpenDoor : EntityAIDoorInteract
 	{

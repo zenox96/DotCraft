@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
 

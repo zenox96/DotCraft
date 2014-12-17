@@ -1,15 +1,15 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using AttributeModifier = DotCraftCore.Entity.AI.Attributes.AttributeModifier;
-	using BaseAttributeMap = DotCraftCore.Entity.AI.Attributes.BaseAttributeMap;
-	using IAttribute = DotCraftCore.Entity.AI.Attributes.IAttribute;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using RangedAttribute = DotCraftCore.Entity.AI.Attributes.RangedAttribute;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
+	using AttributeModifier = DotCraftCore.nEntity.nAI.nAttributes.AttributeModifier;
+	using BaseAttributeMap = DotCraftCore.nEntity.nAI.nAttributes.BaseAttributeMap;
+	using IAttribute = DotCraftCore.nEntity.nAI.nAttributes.IAttribute;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using RangedAttribute = DotCraftCore.nEntity.nAI.nAttributes.RangedAttribute;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

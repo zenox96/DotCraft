@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
-	using Material = DotCraftCore.block.material.Material;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
-	using TileEntityChest = DotCraftCore.TileEntity.TileEntityChest;
-	using TileEntityMobSpawner = DotCraftCore.TileEntity.TileEntityMobSpawner;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using World = DotCraftCore.World.World;
+	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
+	using TileEntityMobSpawner = DotCraftCore.nTileEntity.TileEntityMobSpawner;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGenDungeons : WorldGenerator
 	{

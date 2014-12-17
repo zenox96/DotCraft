@@ -1,27 +1,27 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using HashMultimap = com.google.common.collect.HashMultimap;
 	using Multimap = com.google.common.collect.Multimap;
 	using Sets = com.google.common.collect.Sets;
-	using Block = DotCraftCore.block.Block;
-	using BlockDirt = DotCraftCore.block.BlockDirt;
-	using BlockDoublePlant = DotCraftCore.block.BlockDoublePlant;
-	using BlockFlower = DotCraftCore.block.BlockFlower;
-	using BlockNewLog = DotCraftCore.block.BlockNewLog;
-	using BlockOldLog = DotCraftCore.block.BlockOldLog;
-	using BlockQuartz = DotCraftCore.block.BlockQuartz;
-	using BlockSand = DotCraftCore.block.BlockSand;
-	using BlockSandStone = DotCraftCore.block.BlockSandStone;
-	using BlockSapling = DotCraftCore.block.BlockSapling;
-	using BlockSilverfish = DotCraftCore.block.BlockSilverfish;
-	using BlockStoneBrick = DotCraftCore.block.BlockStoneBrick;
-	using BlockWall = DotCraftCore.block.BlockWall;
-	using BlockWood = DotCraftCore.block.BlockWood;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockDirt = DotCraftCore.nBlock.BlockDirt;
+	using BlockDoublePlant = DotCraftCore.nBlock.BlockDoublePlant;
+	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
+	using BlockNewLog = DotCraftCore.nBlock.BlockNewLog;
+	using BlockOldLog = DotCraftCore.nBlock.BlockOldLog;
+	using BlockQuartz = DotCraftCore.nBlock.BlockQuartz;
+	using BlockSand = DotCraftCore.nBlock.BlockSand;
+	using BlockSandStone = DotCraftCore.nBlock.BlockSandStone;
+	using BlockSapling = DotCraftCore.nBlock.BlockSapling;
+	using BlockSilverfish = DotCraftCore.nBlock.BlockSilverfish;
+	using BlockStoneBrick = DotCraftCore.nBlock.BlockStoneBrick;
+	using BlockWall = DotCraftCore.nBlock.BlockWall;
+	using BlockWood = DotCraftCore.nBlock.BlockWood;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using Entity = DotCraftCore.entity.Entity;
@@ -31,16 +31,16 @@ namespace DotCraftCore.Item
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionHelper = DotCraftCore.Potion.PotionHelper;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using RegistryNamespaced = DotCraftCore.Util.RegistryNamespaced;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
-using DotCraftCore.CreativeTab;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionHelper = DotCraftCore.nPotion.PotionHelper;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using RegistryNamespaced = DotCraftCore.nUtil.RegistryNamespaced;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
+using DotCraftCore.nInventory;
 
 	public class Item
 	{

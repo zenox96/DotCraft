@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using GameRules = DotCraftCore.World.GameRules;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using GameRules = DotCraftCore.nWorld.GameRules;
 
 	public class CommandGameRule : CommandBase
 	{

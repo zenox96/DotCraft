@@ -1,4 +1,4 @@
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Entity = DotCraftCore.entity.Entity;
@@ -6,7 +6,7 @@ namespace DotCraftCore.Util
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using EntityArrow = DotCraftCore.entity.projectile.EntityArrow;
 	using EntityFireball = DotCraftCore.entity.projectile.EntityFireball;
-	using Explosion = DotCraftCore.World.Explosion;
+	using Explosion = DotCraftCore.nWorld.Explosion;
 
 	public class DamageSource
 	{

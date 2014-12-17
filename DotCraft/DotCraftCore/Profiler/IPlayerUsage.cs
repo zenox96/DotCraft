@@ -1,4 +1,4 @@
-namespace DotCraftCore.Profiler
+namespace DotCraftCore.nProfiler
 {
 
 	public interface IPlayerUsage

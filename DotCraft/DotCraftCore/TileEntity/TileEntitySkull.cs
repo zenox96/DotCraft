@@ -1,4 +1,4 @@
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
 	using Iterables = com.google.common.collect.Iterables;
@@ -8,8 +8,8 @@ namespace DotCraftCore.TileEntity
 	using NBTUtil = DotCraftCore.nbt.NBTUtil;
 	using Packet = DotCraftCore.network.Packet;
 	using S35PacketUpdateTileEntity = DotCraftCore.network.play.server.S35PacketUpdateTileEntity;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using StringUtils = DotCraftCore.Util.StringUtils;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using StringUtils = DotCraftCore.nUtil.StringUtils;
 
 	public class TileEntitySkull : TileEntity
 	{

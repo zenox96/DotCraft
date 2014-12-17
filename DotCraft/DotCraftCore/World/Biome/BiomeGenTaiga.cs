@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EntityWolf = DotCraftCore.entity.passive.EntityWolf;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
-	using WorldGenAbstractTree = DotCraftCore.World.Gen.Feature.WorldGenAbstractTree;
-	using WorldGenBlockBlob = DotCraftCore.World.Gen.Feature.WorldGenBlockBlob;
-	using WorldGenMegaPineTree = DotCraftCore.World.Gen.Feature.WorldGenMegaPineTree;
-	using WorldGenTaiga1 = DotCraftCore.World.Gen.Feature.WorldGenTaiga1;
-	using WorldGenTaiga2 = DotCraftCore.World.Gen.Feature.WorldGenTaiga2;
-	using WorldGenTallGrass = DotCraftCore.World.Gen.Feature.WorldGenTallGrass;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using World = DotCraftCore.nWorld.World;
+	using WorldGenAbstractTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenAbstractTree;
+	using WorldGenBlockBlob = DotCraftCore.nWorld.nGen.nFeature.WorldGenBlockBlob;
+	using WorldGenMegaPineTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaPineTree;
+	using WorldGenTaiga1 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga1;
+	using WorldGenTaiga2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga2;
+	using WorldGenTallGrass = DotCraftCore.nWorld.nGen.nFeature.WorldGenTallGrass;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BiomeGenTaiga : BiomeGenBase
 	{

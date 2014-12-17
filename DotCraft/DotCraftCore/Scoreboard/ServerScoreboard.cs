@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Scoreboard
+namespace DotCraftCore.nScoreboard
 {
 
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
@@ -9,7 +9,7 @@ namespace DotCraftCore.Scoreboard
 	using S3CPacketUpdateScore = DotCraftCore.network.play.server.S3CPacketUpdateScore;
 	using S3DPacketDisplayScoreboard = DotCraftCore.network.play.server.S3DPacketDisplayScoreboard;
 	using S3EPacketTeams = DotCraftCore.network.play.server.S3EPacketTeams;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class ServerScoreboard : Scoreboard
 	{

@@ -1,11 +1,11 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPig = DotCraftCore.entity.passive.EntityPig;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemCarrotOnAStick : Item
 	{

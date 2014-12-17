@@ -1,4 +1,4 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using Tessellator = DotCraftCore.client.renderer.Tessellator;

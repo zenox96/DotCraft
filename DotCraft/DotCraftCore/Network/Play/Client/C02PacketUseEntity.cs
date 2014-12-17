@@ -1,12 +1,12 @@
-namespace DotCraftCore.Network.Play.Client
+namespace DotCraftCore.nNetwork.nPlay.nClient
 {
 
 	using Entity = DotCraftCore.entity.Entity;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerPlayServer = DotCraftCore.Network.Play.INetHandlerPlayServer;
-	using World = DotCraftCore.World.World;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerPlayServer = DotCraftCore.nNetwork.nPlay.INetHandlerPlayServer;
+	using World = DotCraftCore.nWorld.World;
 
 	public class C02PacketUseEntity : Packet
 	{

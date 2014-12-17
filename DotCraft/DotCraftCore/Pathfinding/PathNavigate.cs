@@ -1,10 +1,10 @@
 using System;
 
-namespace DotCraftCore.Pathfinding
+namespace DotCraftCore.nPathfinding
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Entity = DotCraftCore.entity.Entity;
 	using EntityLiving = DotCraftCore.entity.EntityLiving;
 	using SharedMonsterAttributes = DotCraftCore.entity.SharedMonsterAttributes;
@@ -12,9 +12,9 @@ namespace DotCraftCore.Pathfinding
 	using EntityZombie = DotCraftCore.entity.monster.EntityZombie;
 	using EntityChicken = DotCraftCore.entity.passive.EntityChicken;
 	using Blocks = DotCraftCore.init.Blocks;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public class PathNavigate
 	{

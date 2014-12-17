@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 	public class RegistrySimple<T,K> : IRegistry<T,K>
 	{

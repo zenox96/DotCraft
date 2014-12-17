@@ -2,28 +2,28 @@ using System;
 using System.Collections;
 using System.Threading;
 
-namespace DotCraftCore.World.Chunk
+namespace DotCraftCore.nWorld.nChunk
 {
 
-	using Block = DotCraftCore.block.Block;
-	using ITileEntityProvider = DotCraftCore.block.ITileEntityProvider;
-	using Material = DotCraftCore.block.material.Material;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
+	using Block = DotCraftCore.nBlock.Block;
+	using ITileEntityProvider = DotCraftCore.nBlock.ITileEntityProvider;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Entity = DotCraftCore.entity.Entity;
 	using Blocks = DotCraftCore.init.Blocks;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using ExtendedBlockStorage = DotCraftCore.World.Chunk.Storage.ExtendedBlockStorage;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using ExtendedBlockStorage = DotCraftCore.nWorld.nChunk.nStorage.ExtendedBlockStorage;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

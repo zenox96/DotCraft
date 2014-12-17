@@ -1,21 +1,21 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using EntityLiving = DotCraftCore.entity.EntityLiving;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using IEntityLivingData = DotCraftCore.entity.IEntityLivingData;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using WeightedRandom = DotCraftCore.Util.WeightedRandom;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using WeightedRandom = DotCraftCore.nUtil.WeightedRandom;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
 
 	public sealed class SpawnerAnimals
 	{

@@ -1,4 +1,4 @@
-namespace DotCraftCore.Enchantment
+namespace DotCraftCore.nEnchantment
 {
 
 	public class EnchantmentLootBonus : Enchantment

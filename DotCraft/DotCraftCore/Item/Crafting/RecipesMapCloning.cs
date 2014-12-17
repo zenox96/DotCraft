@@ -1,10 +1,10 @@
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
 	using Items = DotCraftCore.init.Items;
 	using InventoryCrafting = DotCraftCore.inventory.InventoryCrafting;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using World = DotCraftCore.World.World;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using World = DotCraftCore.nWorld.World;
 
 	public class RecipesMapCloning : IRecipe
 	{

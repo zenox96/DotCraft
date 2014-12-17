@@ -1,4 +1,4 @@
-namespace DotCraftCore.Dispenser
+namespace DotCraftCore.nDispenser
 {
 
 	public class PositionImpl : IPosition

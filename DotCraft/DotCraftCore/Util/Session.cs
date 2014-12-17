@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Maps = com.google.common.collect.Maps;

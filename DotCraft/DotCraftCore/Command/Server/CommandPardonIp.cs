@@ -1,13 +1,13 @@
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using SyntaxErrorException = DotCraftCore.Command.SyntaxErrorException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using SyntaxErrorException = DotCraftCore.nCommand.SyntaxErrorException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandPardonIp : CommandBase
 	{

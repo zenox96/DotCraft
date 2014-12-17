@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using StringUtils = DotCraftCore.Util.StringUtils;
-	using World = DotCraftCore.World.World;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using StringUtils = DotCraftCore.nUtil.StringUtils;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemEditableBook : Item
 	{

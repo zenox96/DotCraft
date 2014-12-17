@@ -1,13 +1,13 @@
-namespace DotCraftCore.Pathfinding
+namespace DotCraftCore.nPathfinding
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Entity = DotCraftCore.entity.Entity;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IntHashMap = DotCraftCore.Util.IntHashMap;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
+	using IntHashMap = DotCraftCore.nUtil.IntHashMap;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
 
 	public class PathFinder
 	{

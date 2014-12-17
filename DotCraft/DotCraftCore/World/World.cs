@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockHopper = DotCraftCore.block.BlockHopper;
-	using BlockLiquid = DotCraftCore.block.BlockLiquid;
-	using BlockSlab = DotCraftCore.block.BlockSlab;
-	using BlockSnow = DotCraftCore.block.BlockSnow;
-	using BlockStairs = DotCraftCore.block.BlockStairs;
-	using Material = DotCraftCore.block.material.Material;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockHopper = DotCraftCore.nBlock.BlockHopper;
+	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
+	using BlockSlab = DotCraftCore.nBlock.BlockSlab;
+	using BlockSnow = DotCraftCore.nBlock.BlockSnow;
+	using BlockStairs = DotCraftCore.nBlock.BlockStairs;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Entity = DotCraftCore.entity.Entity;
@@ -23,26 +23,26 @@ namespace DotCraftCore.World
 	using PathEntity = DotCraftCore.pathfinding.PathEntity;
 	using PathFinder = DotCraftCore.pathfinding.PathFinder;
 	using Profiler = DotCraftCore.profiler.Profiler;
-	using Scoreboard = DotCraftCore.Scoreboard.Scoreboard;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using Direction = DotCraftCore.Util.Direction;
-	using Facing = DotCraftCore.Util.Facing;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using MovingObjectPosition = DotCraftCore.Util.MovingObjectPosition;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using VillageCollection = DotCraftCore.Village.VillageCollection;
-	using VillageSiege = DotCraftCore.Village.VillageSiege;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
-	using MapStorage = DotCraftCore.World.Storage.MapStorage;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using Scoreboard = DotCraftCore.nScoreboard.Scoreboard;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using VillageCollection = DotCraftCore.nVillage.VillageCollection;
+	using VillageSiege = DotCraftCore.nVillage.VillageSiege;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
+	using MapStorage = DotCraftCore.nWorld.nStorage.MapStorage;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public abstract class World : IBlockAccess
 	{

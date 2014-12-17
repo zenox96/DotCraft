@@ -1,14 +1,14 @@
 using System.Collections;
 
-namespace DotCraftCore.Enchantment
+namespace DotCraftCore.nEnchantment
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using StatCollector = DotCraftCore.Util.StatCollector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
 
 	public abstract class Enchantment
 	{

@@ -1,13 +1,13 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using Multimap = com.google.common.collect.Multimap;
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using SharedMonsterAttributes = DotCraftCore.entity.SharedMonsterAttributes;
 	using AttributeModifier = DotCraftCore.entity.ai.attributes.AttributeModifier;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemTool : Item
 	{

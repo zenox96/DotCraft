@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityTameable = DotCraftCore.Entity.Passive.EntityTameable;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using PathNavigate = DotCraftCore.Pathfinding.PathNavigate;
-	using Vec3 = DotCraftCore.Util.Vec3;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityTameable = DotCraftCore.nEntity.nPassive.EntityTameable;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using PathNavigate = DotCraftCore.nPathfinding.PathNavigate;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
 
 	public class EntityAIAvoidEntity : EntityAIBase
 	{

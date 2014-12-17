@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
@@ -8,8 +8,8 @@ namespace DotCraftCore.Item
 	using EntityItemFrame = DotCraftCore.entity.item.EntityItemFrame;
 	using EntityPainting = DotCraftCore.entity.item.EntityPainting;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Direction = DotCraftCore.Util.Direction;
-	using World = DotCraftCore.World.World;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemHangingEntity : Item
 	{

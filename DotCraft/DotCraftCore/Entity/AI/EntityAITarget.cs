@@ -1,16 +1,16 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IEntityOwnable = DotCraftCore.Entity.IEntityOwnable;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using PathEntity = DotCraftCore.Pathfinding.PathEntity;
-	using PathPoint = DotCraftCore.Pathfinding.PathPoint;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IEntityOwnable = DotCraftCore.nEntity.IEntityOwnable;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using IAttributeInstance = DotCraftCore.nEntity.nAI.nAttributes.IAttributeInstance;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using PathEntity = DotCraftCore.nPathfinding.PathEntity;
+	using PathPoint = DotCraftCore.nPathfinding.PathPoint;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 	using StringUtils = org.apache.commons.lang3.StringUtils;
 
 	public abstract class EntityAITarget : EntityAIBase

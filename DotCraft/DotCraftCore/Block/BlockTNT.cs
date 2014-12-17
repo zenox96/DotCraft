@@ -1,20 +1,20 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityTNTPrimed = DotCraftCore.Entity.Item.EntityTNTPrimed;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using Items = DotCraftCore.Init.Items;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using Explosion = DotCraftCore.World.Explosion;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityTNTPrimed = DotCraftCore.nEntity.nItem.EntityTNTPrimed;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using Items = DotCraftCore.nInit.Items;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using Explosion = DotCraftCore.nWorld.Explosion;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockTNT : Block
 	{

@@ -1,26 +1,26 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using ExtendedBlockStorage = DotCraftCore.World.Chunk.Storage.ExtendedBlockStorage;
-	using WorldGenDungeons = DotCraftCore.World.Gen.Feature.WorldGenDungeons;
-	using WorldGenLakes = DotCraftCore.World.Gen.Feature.WorldGenLakes;
-	using MapGenMineshaft = DotCraftCore.World.Gen.Structure.MapGenMineshaft;
-	using MapGenScatteredFeature = DotCraftCore.World.Gen.Structure.MapGenScatteredFeature;
-	using MapGenStronghold = DotCraftCore.World.Gen.Structure.MapGenStronghold;
-	using MapGenStructure = DotCraftCore.World.Gen.Structure.MapGenStructure;
-	using MapGenVillage = DotCraftCore.World.Gen.Structure.MapGenVillage;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using ExtendedBlockStorage = DotCraftCore.nWorld.nChunk.nStorage.ExtendedBlockStorage;
+	using WorldGenDungeons = DotCraftCore.nWorld.nGen.nFeature.WorldGenDungeons;
+	using WorldGenLakes = DotCraftCore.nWorld.nGen.nFeature.WorldGenLakes;
+	using MapGenMineshaft = DotCraftCore.nWorld.nGen.nStructure.MapGenMineshaft;
+	using MapGenScatteredFeature = DotCraftCore.nWorld.nGen.nStructure.MapGenScatteredFeature;
+	using MapGenStronghold = DotCraftCore.nWorld.nGen.nStructure.MapGenStronghold;
+	using MapGenStructure = DotCraftCore.nWorld.nGen.nStructure.MapGenStructure;
+	using MapGenVillage = DotCraftCore.nWorld.nGen.nStructure.MapGenVillage;
 
 	public class ChunkProviderFlat : IChunkProvider
 	{

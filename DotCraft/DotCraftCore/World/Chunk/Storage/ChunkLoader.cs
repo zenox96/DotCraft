@@ -1,10 +1,10 @@
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using WorldChunkManager = DotCraftCore.World.Biome.WorldChunkManager;
-	using NibbleArray = DotCraftCore.World.Chunk.NibbleArray;
+	using WorldChunkManager = DotCraftCore.nWorld.nBiome.WorldChunkManager;
+	using NibbleArray = DotCraftCore.nWorld.nChunk.NibbleArray;
 
 	public class ChunkLoader
 	{

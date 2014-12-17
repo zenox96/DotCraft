@@ -1,10 +1,10 @@
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using WorldProvider = DotCraftCore.World.WorldProvider;
-	using IChunkLoader = DotCraftCore.World.Chunk.Storage.IChunkLoader;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using WorldProvider = DotCraftCore.nWorld.WorldProvider;
+	using IChunkLoader = DotCraftCore.nWorld.nChunk.nStorage.IChunkLoader;
 
 	public class SaveHandlerMP : ISaveHandler
 	{

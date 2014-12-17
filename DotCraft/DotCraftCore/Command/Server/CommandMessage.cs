@@ -1,19 +1,19 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using PlayerNotFoundException = DotCraftCore.Command.PlayerNotFoundException;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using PlayerNotFoundException = DotCraftCore.nCommand.PlayerNotFoundException;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class CommandMessage : CommandBase
 	{

@@ -1,9 +1,9 @@
 using System.Collections;
 
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public class DisconnectedOnlineScreen : RealmsScreen
 	{

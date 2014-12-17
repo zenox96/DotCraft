@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using EntityFallingBlock = DotCraftCore.Entity.Item.EntityFallingBlock;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BlockFalling : Block
 	{

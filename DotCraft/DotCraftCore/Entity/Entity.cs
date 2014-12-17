@@ -1,39 +1,39 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockLiquid = DotCraftCore.block.BlockLiquid;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using EnchantmentProtection = DotCraftCore.Enchantment.EnchantmentProtection;
-	using EntityLightningBolt = DotCraftCore.Entity.Effect.EntityLightningBolt;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagDouble = DotCraftCore.NBT.NBTTagDouble;
-	using NBTTagFloat = DotCraftCore.NBT.NBTTagFloat;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using Direction = DotCraftCore.Util.Direction;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using Explosion = DotCraftCore.World.Explosion;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
+	using EnchantmentProtection = DotCraftCore.nEnchantment.EnchantmentProtection;
+	using EntityLightningBolt = DotCraftCore.nEntity.nEffect.EntityLightningBolt;
+	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagDouble = DotCraftCore.nNBT.NBTTagDouble;
+	using NBTTagFloat = DotCraftCore.nNBT.NBTTagFloat;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using Direction = DotCraftCore.nUtil.Direction;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using Explosion = DotCraftCore.nWorld.Explosion;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
 
 	public abstract class Entity
 	{

@@ -1,11 +1,11 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class ItemCoal : Item
 	{

@@ -1,14 +1,14 @@
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Container = DotCraftCore.Inventory.Container;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using World = DotCraftCore.World.World;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Container = DotCraftCore.nInventory.Container;
+	using IInventory = DotCraftCore.nInventory.IInventory;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityMinecartContainer : EntityMinecart, IInventory
 	{

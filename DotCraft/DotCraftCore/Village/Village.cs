@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Village
+namespace DotCraftCore.nVillage
 {
 
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
@@ -11,11 +11,11 @@ namespace DotCraftCore.Village
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using World = DotCraftCore.World.World;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Vec3 = DotCraftCore.nUtil.Vec3;
+	using World = DotCraftCore.nWorld.World;
 
 	public class Village
 	{

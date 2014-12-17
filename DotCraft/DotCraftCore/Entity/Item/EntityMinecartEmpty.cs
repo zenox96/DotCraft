@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using World = DotCraftCore.World.World;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityMinecartEmpty : EntityMinecart
 	{

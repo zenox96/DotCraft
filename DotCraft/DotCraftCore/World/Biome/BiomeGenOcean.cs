@@ -1,10 +1,10 @@
 using System;
 
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
-	using Block = DotCraftCore.block.Block;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using World = DotCraftCore.nWorld.World;
 
 	public class BiomeGenOcean : BiomeGenBase
 	{

@@ -1,7 +1,7 @@
-namespace DotCraftCore.Dispenser
+namespace DotCraftCore.nDispenser
 {
 
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public interface ILocation : IPosition
 	{

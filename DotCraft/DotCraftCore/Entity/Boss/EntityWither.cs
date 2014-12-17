@@ -1,38 +1,38 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Boss
+namespace DotCraftCore.nEntity.nBoss
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
-	using IEntitySelector = DotCraftCore.command.IEntitySelector;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using IRangedAttackMob = DotCraftCore.Entity.IRangedAttackMob;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIArrowAttack = DotCraftCore.Entity.AI.EntityAIArrowAttack;
-	using EntityAIHurtByTarget = DotCraftCore.Entity.AI.EntityAIHurtByTarget;
-	using EntityAILookIdle = DotCraftCore.Entity.AI.EntityAILookIdle;
-	using EntityAINearestAttackableTarget = DotCraftCore.Entity.AI.EntityAINearestAttackableTarget;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityMob = DotCraftCore.Entity.Monster.EntityMob;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using EntityWitherSkull = DotCraftCore.Entity.Projectile.EntityWitherSkull;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
+	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
+	using IRangedAttackMob = DotCraftCore.nEntity.IRangedAttackMob;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIArrowAttack = DotCraftCore.nEntity.nAI.EntityAIArrowAttack;
+	using EntityAIHurtByTarget = DotCraftCore.nEntity.nAI.EntityAIHurtByTarget;
+	using EntityAILookIdle = DotCraftCore.nEntity.nAI.EntityAILookIdle;
+	using EntityAINearestAttackableTarget = DotCraftCore.nEntity.nAI.EntityAINearestAttackableTarget;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityMob = DotCraftCore.nEntity.nMonster.EntityMob;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using EntityWitherSkull = DotCraftCore.nEntity.nProjectile.EntityWitherSkull;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityWither : EntityMob, IBossDisplayData, IRangedAttackMob
 	{

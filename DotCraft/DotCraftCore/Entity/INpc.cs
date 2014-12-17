@@ -1,7 +1,7 @@
-namespace DotCraftCore.Entity
+namespace DotCraftCore.nEntity
 {
 
-	using IAnimals = DotCraftCore.Entity.Passive.IAnimals;
+	using IAnimals = DotCraftCore.nEntity.nPassive.IAnimals;
 
 	public interface INpc : IAnimals
 	{

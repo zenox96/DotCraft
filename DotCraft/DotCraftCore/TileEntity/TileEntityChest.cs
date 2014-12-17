@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockChest = DotCraftCore.block.BlockChest;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockChest = DotCraftCore.nBlock.BlockChest;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using ContainerChest = DotCraftCore.inventory.ContainerChest;
 	using IInventory = DotCraftCore.inventory.IInventory;
@@ -12,7 +12,7 @@ namespace DotCraftCore.TileEntity
 	using ItemStack = DotCraftCore.item.ItemStack;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
 
 	public class TileEntityChest : TileEntity, IInventory
 	{

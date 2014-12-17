@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Entity.AI.Attributes
+namespace DotCraftCore.nEntity.nAI.nAttributes
 {
 
 	using Validate = org.apache.commons.lang3.Validate;

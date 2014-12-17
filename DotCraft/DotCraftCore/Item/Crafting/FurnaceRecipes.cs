@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item.Crafting
+namespace DotCraftCore.nItem.nCrafting
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemFishFood = DotCraftCore.Item.ItemFishFood;
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemFishFood = DotCraftCore.nItem.ItemFishFood;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public class FurnaceRecipes
 	{

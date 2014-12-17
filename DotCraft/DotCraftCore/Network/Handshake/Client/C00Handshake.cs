@@ -1,11 +1,11 @@
-namespace DotCraftCore.Network.Handshake.Client
+namespace DotCraftCore.nNetwork.nHandshake.nClient
 {
 
-	using EnumConnectionState = DotCraftCore.Network.EnumConnectionState;
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerHandshakeServer = DotCraftCore.Network.Handshake.INetHandlerHandshakeServer;
+	using EnumConnectionState = DotCraftCore.nNetwork.EnumConnectionState;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerHandshakeServer = DotCraftCore.nNetwork.nHandshake.INetHandlerHandshakeServer;
 
 	public class C00Handshake : Packet
 	{

@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using TileEntityMobSpawner = DotCraftCore.TileEntity.TileEntityMobSpawner;
-	using WeightedRandomChestContent = DotCraftCore.Util.WeightedRandomChestContent;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
+	using TileEntityMobSpawner = DotCraftCore.nTileEntity.TileEntityMobSpawner;
+	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
 
 	public class StructureStrongholdPieces
 	{

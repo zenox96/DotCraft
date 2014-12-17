@@ -1,11 +1,11 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockSlab = DotCraftCore.block.BlockSlab;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockSlab = DotCraftCore.nBlock.BlockSlab;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using World = DotCraftCore.World.World;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSlab : ItemBlock
 	{

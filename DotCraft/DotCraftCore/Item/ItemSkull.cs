@@ -1,22 +1,22 @@
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using GameProfile = com.mojang.authlib.GameProfile;
-	using BlockSkull = DotCraftCore.block.BlockSkull;
+	using BlockSkull = DotCraftCore.nBlock.BlockSkull;
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTUtil = DotCraftCore.NBT.NBTUtil;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntitySkull = DotCraftCore.TileEntity.TileEntitySkull;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using StatCollector = DotCraftCore.Util.StatCollector;
-	using World = DotCraftCore.World.World;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using NBTUtil = DotCraftCore.nNBT.NBTUtil;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using TileEntitySkull = DotCraftCore.nTileEntity.TileEntitySkull;
+	using IIcon = DotCraftCore.nUtil.IIcon;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using StatCollector = DotCraftCore.nUtil.StatCollector;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSkull : Item
 	{

@@ -1,9 +1,9 @@
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using World = DotCraftCore.World.World;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityAmbientCreature : EntityLiving, IAnimals
 	{

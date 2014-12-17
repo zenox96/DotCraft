@@ -1,12 +1,12 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using Blocks = DotCraftCore.init.Blocks;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
 
 	public class ChunkCache : IBlockAccess
 	{

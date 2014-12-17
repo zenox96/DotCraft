@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using ForwardingSet = com.google.common.collect.ForwardingSet;

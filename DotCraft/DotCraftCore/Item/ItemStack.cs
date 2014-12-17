@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using HashMultimap = com.google.common.collect.HashMultimap;
 	using Multimap = com.google.common.collect.Multimap;
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using Enchantment = DotCraftCore.enchantment.Enchantment;
 	using EnchantmentDurability = DotCraftCore.enchantment.EnchantmentDurability;
 	using EnchantmentHelper = DotCraftCore.enchantment.EnchantmentHelper;
@@ -144,7 +144,7 @@ namespace DotCraftCore.Item
 			}
 		}
 
-		public bool tryPlaceItemIntoWorld(EntityPlayer p_77943_1_, World p_77943_2_, int p_77943_3_, int p_77943_4_, int p_77943_5_, int p_77943_6_, float p_77943_7_, float p_77943_8_, float p_77943_9_)
+		public bool tryPlaceItemIntoWorld(EntityPlayer p_77943_1_, nWorld p_77943_2_, int p_77943_3_, int p_77943_4_, int p_77943_5_, int p_77943_6_, float p_77943_7_, float p_77943_8_, float p_77943_9_)
 		{
 			bool var10 = this.Item.onItemUse(this, p_77943_1_, p_77943_2_, p_77943_3_, p_77943_4_, p_77943_5_, p_77943_6_, p_77943_7_, p_77943_8_, p_77943_9_);
 
@@ -165,12 +165,12 @@ namespace DotCraftCore.Item
 ///     <summary> * Called whenever this item stack is equipped and right clicked. Returns the new item stack to put in the position
 ///     * where this item is. Args: world, player </summary>
 ///     
-		public ItemStack useItemRightClick(World p_77957_1_, EntityPlayer p_77957_2_)
+		public ItemStack useItemRightClick(nWorld p_77957_1_, EntityPlayer p_77957_2_)
 		{
 			return this.Item.onItemRightClick(this, p_77957_1_, p_77957_2_);
 		}
 
-		public ItemStack onFoodEaten(World p_77950_1_, EntityPlayer p_77950_2_)
+		public ItemStack onFoodEaten(nWorld p_77950_1_, EntityPlayer p_77950_2_)
 		{
 			return this.Item.onEaten(this, p_77950_1_, p_77950_2_);
 		}
@@ -399,7 +399,7 @@ namespace DotCraftCore.Item
 			}
 		}
 
-		public void func_150999_a(World p_150999_1_, Block p_150999_2_, int p_150999_3_, int p_150999_4_, int p_150999_5_, EntityPlayer p_150999_6_)
+		public void func_150999_a(nWorld p_150999_1_, Block p_150999_2_, int p_150999_3_, int p_150999_4_, int p_150999_5_, EntityPlayer p_150999_6_)
 		{
 			bool var7 = this.field_151002_e.onBlockDestroyed(this, p_150999_1_, p_150999_2_, p_150999_3_, p_150999_4_, p_150999_5_, p_150999_6_);
 
@@ -489,7 +489,7 @@ namespace DotCraftCore.Item
 ///     <summary> * Called each tick as long the ItemStack in on player inventory. Used to progress the pickup animation and update
 ///     * maps. </summary>
 ///     
-		public void updateAnimation(World p_77945_1_, Entity p_77945_2_, int p_77945_3_, bool p_77945_4_)
+		public void updateAnimation(nWorld p_77945_1_, Entity p_77945_2_, int p_77945_3_, bool p_77945_4_)
 		{
 			if (this.animationsToGo > 0)
 			{
@@ -499,7 +499,7 @@ namespace DotCraftCore.Item
 			this.field_151002_e.onUpdate(this, p_77945_1_, p_77945_2_, p_77945_3_, p_77945_4_);
 		}
 
-		public void onCrafting(World p_77980_1_, EntityPlayer p_77980_2_, int p_77980_3_)
+		public void onCrafting(nWorld p_77980_1_, EntityPlayer p_77980_2_, int p_77980_3_)
 		{
 			p_77980_2_.addStat(StatList.objectCraftStats[Item.getIdFromItem(this.field_151002_e)], p_77980_3_);
 			this.field_151002_e.onCreated(this, p_77980_1_, p_77980_2_);
@@ -524,7 +524,7 @@ namespace DotCraftCore.Item
 ///    
 ///     <summary> * Called when the player releases the use item button. Args: world, entityplayer, itemInUseCount </summary>
 ///     
-		public void onPlayerStoppedUsing(World p_77974_1_, EntityPlayer p_77974_2_, int p_77974_3_)
+		public void onPlayerStoppedUsing(nWorld p_77974_1_, EntityPlayer p_77974_2_, int p_77974_3_)
 		{
 			this.Item.onPlayerStoppedUsing(this, p_77974_1_, p_77974_2_, p_77974_3_);
 		}

@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.TileEntity
+namespace DotCraftCore.nTileEntity
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockJukebox = DotCraftCore.block.BlockJukebox;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockJukebox = DotCraftCore.nBlock.BlockJukebox;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using Blocks = DotCraftCore.init.Blocks;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using Packet = DotCraftCore.network.Packet;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

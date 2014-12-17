@@ -1,19 +1,19 @@
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockSilverfish = DotCraftCore.block.BlockSilverfish;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EnumCreatureAttribute = DotCraftCore.Entity.EnumCreatureAttribute;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Item = DotCraftCore.Item.Item;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using EntityDamageSource = DotCraftCore.Util.EntityDamageSource;
-	using Facing = DotCraftCore.Util.Facing;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockSilverfish = DotCraftCore.nBlock.BlockSilverfish;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Item = DotCraftCore.nItem.Item;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using EntityDamageSource = DotCraftCore.nUtil.EntityDamageSource;
+	using Facing = DotCraftCore.nUtil.Facing;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
 	using ImmutablePair = org.apache.commons.lang3.tuple.ImmutablePair;
 
 	public class EntitySilverfish : EntityMob

@@ -1,12 +1,12 @@
 using System;
 
-namespace DotCraftCore.Entity.Item
+namespace DotCraftCore.nEntity.nItem
 {
 
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using World = DotCraftCore.World.World;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityTNTPrimed : Entity
 	{

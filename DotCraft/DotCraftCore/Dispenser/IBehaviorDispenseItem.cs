@@ -1,7 +1,7 @@
-namespace DotCraftCore.Dispenser
+namespace DotCraftCore.nDispenser
 {
 
-	using ItemStack = DotCraftCore.Item.ItemStack;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
 
 	public interface IBehaviorDispenseItem
 	{

@@ -1,19 +1,19 @@
 using System;
 
-namespace DotCraftCore.Entity.Monster
+namespace DotCraftCore.nEntity.nMonster
 {
 
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using EnumSkyBlock = DotCraftCore.World.EnumSkyBlock;
-	using World = DotCraftCore.World.World;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
+	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class EntityMob : EntityCreature, IMob
 	{

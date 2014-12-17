@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityVillager = DotCraftCore.Entity.Passive.EntityVillager;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
+	using EntityVillager = DotCraftCore.nEntity.nPassive.EntityVillager;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
 
 	public class EntityAILookAtTradePlayer : EntityAIWatchClosest
 	{

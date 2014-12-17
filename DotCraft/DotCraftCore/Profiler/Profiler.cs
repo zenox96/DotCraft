@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Profiler
+namespace DotCraftCore.nProfiler
 {
 
 	using LogManager = org.apache.logging.log4j.LogManager;

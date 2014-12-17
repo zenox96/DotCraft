@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using CompressedStreamTools = DotCraftCore.nbt.CompressedStreamTools;
 	using NBTBase = DotCraftCore.nbt.NBTBase;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagShort = DotCraftCore.nbt.NBTTagShort;
-	using WorldSavedData = DotCraftCore.World.WorldSavedData;
+	using WorldSavedData = DotCraftCore.nWorld.WorldSavedData;
 
 	public class MapStorage
 	{

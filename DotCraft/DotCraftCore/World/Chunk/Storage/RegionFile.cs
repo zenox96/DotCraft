@@ -2,10 +2,10 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Collections;
 
-namespace DotCraftCore.World.Chunk.Storage
+namespace DotCraftCore.nWorld.nChunk.nStorage
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class RegionFile
 	{

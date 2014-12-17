@@ -1,4 +1,4 @@
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	public interface IThreadedFileIO

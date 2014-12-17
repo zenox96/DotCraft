@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.NBT
+namespace DotCraftCore.nNBT
 {
 
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using ReportedException = DotCraftCore.Util.ReportedException;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
 
 	public class CompressedStreamTools
 	{

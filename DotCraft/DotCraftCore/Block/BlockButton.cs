@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
 	
 	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.World.IBlockAccess;
-	using World = DotCraftCore.World.World;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
+	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
+	using World = DotCraftCore.nWorld.World;
 
 	public abstract class BlockButton : Block
 	{

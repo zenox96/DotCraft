@@ -1,10 +1,10 @@
 using System;
 
-namespace DotCraftCore.World.Gen.Feature
+namespace DotCraftCore.nWorld.nGen.nFeature
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class WorldGenMelon : WorldGenerator
 	{

@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using JsonDeserializationContext = com.google.gson.JsonDeserializationContext;

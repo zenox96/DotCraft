@@ -1,9 +1,9 @@
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandStop : CommandBase
 	{

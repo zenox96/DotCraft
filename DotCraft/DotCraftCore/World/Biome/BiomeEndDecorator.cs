@@ -1,10 +1,10 @@
-namespace DotCraftCore.World.Biome
+namespace DotCraftCore.nWorld.nBiome
 {
 
 	using EntityDragon = DotCraftCore.entity.boss.EntityDragon;
 	using Blocks = DotCraftCore.init.Blocks;
-	using WorldGenSpikes = DotCraftCore.World.Gen.Feature.WorldGenSpikes;
-	using WorldGenerator = DotCraftCore.World.Gen.Feature.WorldGenerator;
+	using WorldGenSpikes = DotCraftCore.nWorld.nGen.nFeature.WorldGenSpikes;
+	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
 
 	public class BiomeEndDecorator : BiomeDecorator
 	{

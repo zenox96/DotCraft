@@ -1,26 +1,26 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
 	using Lists = com.google.common.collect.Lists;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using LongHashMap = DotCraftCore.Util.LongHashMap;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using World = DotCraftCore.World.World;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using EmptyChunk = DotCraftCore.World.Chunk.EmptyChunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using IChunkLoader = DotCraftCore.World.Chunk.Storage.IChunkLoader;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using LongHashMap = DotCraftCore.nUtil.LongHashMap;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using World = DotCraftCore.nWorld.World;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using EmptyChunk = DotCraftCore.nWorld.nChunk.EmptyChunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using IChunkLoader = DotCraftCore.nWorld.nChunk.nStorage.IChunkLoader;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

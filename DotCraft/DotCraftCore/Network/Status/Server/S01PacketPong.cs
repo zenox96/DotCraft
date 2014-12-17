@@ -1,10 +1,10 @@
-namespace DotCraftCore.Network.Status.Server
+namespace DotCraftCore.nNetwork.nStatus.nServer
 {
 
-	using INetHandler = DotCraftCore.Network.INetHandler;
-	using Packet = DotCraftCore.Network.Packet;
-	using PacketBuffer = DotCraftCore.Network.PacketBuffer;
-	using INetHandlerStatusClient = DotCraftCore.Network.Status.INetHandlerStatusClient;
+	using INetHandler = DotCraftCore.nNetwork.INetHandler;
+	using Packet = DotCraftCore.nNetwork.Packet;
+	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
+	using INetHandlerStatusClient = DotCraftCore.nNetwork.nStatus.INetHandlerStatusClient;
 
 	public class S01PacketPong : Packet
 	{

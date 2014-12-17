@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayerMP = DotCraftCore.Entity.Player.EntityPlayerMP;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using World = DotCraftCore.World.World;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
+	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using World = DotCraftCore.nWorld.World;
+	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
 
 	public class PlayerSelector
 	{

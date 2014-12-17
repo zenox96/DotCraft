@@ -1,10 +1,10 @@
-namespace DotCraftCore.Command.Server
+namespace DotCraftCore.nCommand.nServer
 {
 
-	using CommandBase = DotCraftCore.Command.CommandBase;
-	using CommandException = DotCraftCore.Command.CommandException;
-	using ICommandSender = DotCraftCore.Command.ICommandSender;
-	using WrongUsageException = DotCraftCore.Command.WrongUsageException;
+	using CommandBase = DotCraftCore.nCommand.CommandBase;
+	using CommandException = DotCraftCore.nCommand.CommandException;
+	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
+	using WrongUsageException = DotCraftCore.nCommand.WrongUsageException;
 
 	public class CommandTestFor : CommandBase
 	{

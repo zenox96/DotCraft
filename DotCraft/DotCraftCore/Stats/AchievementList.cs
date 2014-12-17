@@ -1,12 +1,12 @@
 using System.Collections;
 
-namespace DotCraftCore.Stats
+namespace DotCraftCore.nStats
 {
 
 	using Blocks = DotCraftCore.init.Blocks;
 	using Items = DotCraftCore.init.Items;
 	using ItemStack = DotCraftCore.item.ItemStack;
-	using JsonSerializableSet = DotCraftCore.Util.JsonSerializableSet;
+	using JsonSerializableSet = DotCraftCore.nUtil.JsonSerializableSet;
 
 	public class AchievementList
 	{

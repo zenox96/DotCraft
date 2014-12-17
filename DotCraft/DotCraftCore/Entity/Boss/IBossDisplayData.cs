@@ -1,7 +1,7 @@
-namespace DotCraftCore.Entity.Boss
+namespace DotCraftCore.nEntity.nBoss
 {
 
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
+	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
 
 	public interface IBossDisplayData
 	{

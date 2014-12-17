@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
-	using IMerchant = DotCraftCore.Entity.IMerchant;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using MerchantRecipe = DotCraftCore.Village.MerchantRecipe;
+	using IMerchant = DotCraftCore.nEntity.IMerchant;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using MerchantRecipe = DotCraftCore.nVillage.MerchantRecipe;
 
 	public class SlotMerchantResult : Slot
 	{

@@ -3,10 +3,10 @@ using System.Collections;
 using System.Text;
 using System.Threading;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

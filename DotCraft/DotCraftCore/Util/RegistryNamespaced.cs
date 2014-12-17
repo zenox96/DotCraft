@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	public class RegistryNamespaced<T,K> : RegistrySimple<T,K>

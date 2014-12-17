@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Server.Management
+namespace DotCraftCore.nServer.nManagement
 {
 
 	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
@@ -9,13 +9,13 @@ namespace DotCraftCore.Server.Management
 	using S21PacketChunkData = DotCraftCore.network.play.server.S21PacketChunkData;
 	using S22PacketMultiBlockChange = DotCraftCore.network.play.server.S22PacketMultiBlockChange;
 	using S23PacketBlockChange = DotCraftCore.network.play.server.S23PacketBlockChange;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using LongHashMap = DotCraftCore.Util.LongHashMap;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using WorldProvider = DotCraftCore.World.WorldProvider;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
+	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
+	using LongHashMap = DotCraftCore.nUtil.LongHashMap;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using WorldProvider = DotCraftCore.nWorld.WorldProvider;
+	using WorldServer = DotCraftCore.nWorld.WorldServer;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

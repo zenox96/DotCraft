@@ -1,7 +1,7 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
 
 	public enum EnumRarity
 	{

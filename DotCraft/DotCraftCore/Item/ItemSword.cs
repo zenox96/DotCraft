@@ -1,16 +1,16 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using Multimap = com.google.common.collect.Multimap;
-	using Block = DotCraftCore.block.Block;
-	using Material = DotCraftCore.block.material.Material;
+	using Block = DotCraftCore.nBlock.Block;
+	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
 	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
 	using SharedMonsterAttributes = DotCraftCore.entity.SharedMonsterAttributes;
 	using AttributeModifier = DotCraftCore.entity.ai.attributes.AttributeModifier;
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Blocks = DotCraftCore.init.Blocks;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSword : Item
 	{

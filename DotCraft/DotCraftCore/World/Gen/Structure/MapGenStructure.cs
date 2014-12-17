@@ -1,19 +1,19 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen.Structure
+namespace DotCraftCore.nWorld.nGen.nStructure
 {
 
-	using Block = DotCraftCore.block.Block;
+	using Block = DotCraftCore.nBlock.Block;
 	using CrashReport = DotCraftCore.crash.CrashReport;
 	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
 	using NBTBase = DotCraftCore.nbt.NBTBase;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using ChunkCoordIntPair = DotCraftCore.World.ChunkCoordIntPair;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using World = DotCraftCore.World.World;
-	using MapGenBase = DotCraftCore.World.Gen.MapGenBase;
+	using ReportedException = DotCraftCore.nUtil.ReportedException;
+	using ChunkCoordIntPair = DotCraftCore.nWorld.ChunkCoordIntPair;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using World = DotCraftCore.nWorld.World;
+	using MapGenBase = DotCraftCore.nWorld.nGen.MapGenBase;
 
 	public abstract class MapGenStructure : MapGenBase
 	{

@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI.Attributes
+namespace DotCraftCore.nEntity.nAI.nAttributes
 {
 
 	using Multimap = com.google.common.collect.Multimap;
-	using LowerStringMap = DotCraftCore.Server.Management.LowerStringMap;
+	using LowerStringMap = DotCraftCore.nServer.nManagement.LowerStringMap;
 
 	public abstract class BaseAttributeMap
 	{

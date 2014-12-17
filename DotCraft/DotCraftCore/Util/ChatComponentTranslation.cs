@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Collections;
 using System.Text;
 
-namespace DotCraftCore.Util
+namespace DotCraftCore.nUtil
 {
 
 	using Iterators = com.google.common.collect.Iterators;

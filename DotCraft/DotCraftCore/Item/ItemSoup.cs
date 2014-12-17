@@ -1,9 +1,9 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using Items = DotCraftCore.init.Items;
-	using World = DotCraftCore.World.World;
+	using World = DotCraftCore.nWorld.World;
 
 	public class ItemSoup : ItemFood
 	{

@@ -1,28 +1,28 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
-	using BlockFalling = DotCraftCore.block.BlockFalling;
+	using Block = DotCraftCore.nBlock.Block;
+	using BlockFalling = DotCraftCore.nBlock.BlockFalling;
 	using EnumCreatureType = DotCraftCore.entity.EnumCreatureType;
 	using Blocks = DotCraftCore.init.Blocks;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ChunkPosition = DotCraftCore.World.ChunkPosition;
-	using SpawnerAnimals = DotCraftCore.World.SpawnerAnimals;
-	using World = DotCraftCore.World.World;
-	using WorldType = DotCraftCore.World.WorldType;
-	using BiomeGenBase = DotCraftCore.World.Biome.BiomeGenBase;
-	using Chunk = DotCraftCore.World.Chunk.Chunk;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-	using WorldGenDungeons = DotCraftCore.World.Gen.Feature.WorldGenDungeons;
-	using WorldGenLakes = DotCraftCore.World.Gen.Feature.WorldGenLakes;
-	using MapGenMineshaft = DotCraftCore.World.Gen.Structure.MapGenMineshaft;
-	using MapGenScatteredFeature = DotCraftCore.World.Gen.Structure.MapGenScatteredFeature;
-	using MapGenStronghold = DotCraftCore.World.Gen.Structure.MapGenStronghold;
-	using MapGenVillage = DotCraftCore.World.Gen.Structure.MapGenVillage;
+	using IProgressUpdate = DotCraftCore.nUtil.IProgressUpdate;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
+	using SpawnerAnimals = DotCraftCore.nWorld.SpawnerAnimals;
+	using World = DotCraftCore.nWorld.World;
+	using WorldType = DotCraftCore.nWorld.WorldType;
+	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
+	using Chunk = DotCraftCore.nWorld.nChunk.Chunk;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
+	using WorldGenDungeons = DotCraftCore.nWorld.nGen.nFeature.WorldGenDungeons;
+	using WorldGenLakes = DotCraftCore.nWorld.nGen.nFeature.WorldGenLakes;
+	using MapGenMineshaft = DotCraftCore.nWorld.nGen.nStructure.MapGenMineshaft;
+	using MapGenScatteredFeature = DotCraftCore.nWorld.nGen.nStructure.MapGenScatteredFeature;
+	using MapGenStronghold = DotCraftCore.nWorld.nGen.nStructure.MapGenStronghold;
+	using MapGenVillage = DotCraftCore.nWorld.nGen.nStructure.MapGenVillage;
 
 	public class ChunkProviderGenerate : IChunkProvider
 	{

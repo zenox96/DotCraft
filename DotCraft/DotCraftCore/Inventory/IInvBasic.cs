@@ -1,4 +1,4 @@
-namespace DotCraftCore.Inventory
+namespace DotCraftCore.nInventory
 {
 
 	public interface IInvBasic

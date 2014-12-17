@@ -1,9 +1,9 @@
 using System;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
 
 	public class CommandSetPlayerTimeout : CommandBase
 	{

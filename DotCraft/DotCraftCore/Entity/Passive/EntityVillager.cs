@@ -1,52 +1,52 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.Passive
+namespace DotCraftCore.nEntity.nPassive
 {
 
-	using Enchantment = DotCraftCore.Enchantment.Enchantment;
-	using EnchantmentData = DotCraftCore.Enchantment.EnchantmentData;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using EntityLiving = DotCraftCore.Entity.EntityLiving;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IEntityLivingData = DotCraftCore.Entity.IEntityLivingData;
-	using IMerchant = DotCraftCore.Entity.IMerchant;
-	using INpc = DotCraftCore.Entity.INpc;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using EntityAIAvoidEntity = DotCraftCore.Entity.AI.EntityAIAvoidEntity;
-	using EntityAIFollowGolem = DotCraftCore.Entity.AI.EntityAIFollowGolem;
-	using EntityAILookAtTradePlayer = DotCraftCore.Entity.AI.EntityAILookAtTradePlayer;
-	using EntityAIMoveIndoors = DotCraftCore.Entity.AI.EntityAIMoveIndoors;
-	using EntityAIMoveTowardsRestriction = DotCraftCore.Entity.AI.EntityAIMoveTowardsRestriction;
-	using EntityAIOpenDoor = DotCraftCore.Entity.AI.EntityAIOpenDoor;
-	using EntityAIPlay = DotCraftCore.Entity.AI.EntityAIPlay;
-	using EntityAIRestrictOpenDoor = DotCraftCore.Entity.AI.EntityAIRestrictOpenDoor;
-	using EntityAISwimming = DotCraftCore.Entity.AI.EntityAISwimming;
-	using EntityAITradePlayer = DotCraftCore.Entity.AI.EntityAITradePlayer;
-	using EntityAIVillagerMate = DotCraftCore.Entity.AI.EntityAIVillagerMate;
-	using EntityAIWander = DotCraftCore.Entity.AI.EntityAIWander;
-	using EntityAIWatchClosest = DotCraftCore.Entity.AI.EntityAIWatchClosest;
-	using EntityAIWatchClosest2 = DotCraftCore.Entity.AI.EntityAIWatchClosest2;
-	using EntityZombie = DotCraftCore.Entity.Monster.EntityZombie;
-	using IMob = DotCraftCore.Entity.Monster.IMob;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using Potion = DotCraftCore.Potion.Potion;
-	using PotionEffect = DotCraftCore.Potion.PotionEffect;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Tuple = DotCraftCore.Util.Tuple;
-	using MerchantRecipe = DotCraftCore.Village.MerchantRecipe;
-	using MerchantRecipeList = DotCraftCore.Village.MerchantRecipeList;
-	using Village = DotCraftCore.Village.Village;
-	using World = DotCraftCore.World.World;
+	using Enchantment = DotCraftCore.nEnchantment.Enchantment;
+	using EnchantmentData = DotCraftCore.nEnchantment.EnchantmentData;
+	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
+	using Entity = DotCraftCore.nEntity.Entity;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using IEntityLivingData = DotCraftCore.nEntity.IEntityLivingData;
+	using IMerchant = DotCraftCore.nEntity.IMerchant;
+	using INpc = DotCraftCore.nEntity.INpc;
+	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
+	using EntityAIAvoidEntity = DotCraftCore.nEntity.nAI.EntityAIAvoidEntity;
+	using EntityAIFollowGolem = DotCraftCore.nEntity.nAI.EntityAIFollowGolem;
+	using EntityAILookAtTradePlayer = DotCraftCore.nEntity.nAI.EntityAILookAtTradePlayer;
+	using EntityAIMoveIndoors = DotCraftCore.nEntity.nAI.EntityAIMoveIndoors;
+	using EntityAIMoveTowardsRestriction = DotCraftCore.nEntity.nAI.EntityAIMoveTowardsRestriction;
+	using EntityAIOpenDoor = DotCraftCore.nEntity.nAI.EntityAIOpenDoor;
+	using EntityAIPlay = DotCraftCore.nEntity.nAI.EntityAIPlay;
+	using EntityAIRestrictOpenDoor = DotCraftCore.nEntity.nAI.EntityAIRestrictOpenDoor;
+	using EntityAISwimming = DotCraftCore.nEntity.nAI.EntityAISwimming;
+	using EntityAITradePlayer = DotCraftCore.nEntity.nAI.EntityAITradePlayer;
+	using EntityAIVillagerMate = DotCraftCore.nEntity.nAI.EntityAIVillagerMate;
+	using EntityAIWander = DotCraftCore.nEntity.nAI.EntityAIWander;
+	using EntityAIWatchClosest = DotCraftCore.nEntity.nAI.EntityAIWatchClosest;
+	using EntityAIWatchClosest2 = DotCraftCore.nEntity.nAI.EntityAIWatchClosest2;
+	using EntityZombie = DotCraftCore.nEntity.nMonster.EntityZombie;
+	using IMob = DotCraftCore.nEntity.nMonster.IMob;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using Blocks = DotCraftCore.nInit.Blocks;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using ItemStack = DotCraftCore.nItem.ItemStack;
+	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+	using Potion = DotCraftCore.nPotion.Potion;
+	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
+	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
+	using DamageSource = DotCraftCore.nUtil.DamageSource;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
+	using Tuple = DotCraftCore.nUtil.Tuple;
+	using MerchantRecipe = DotCraftCore.nVillage.MerchantRecipe;
+	using MerchantRecipeList = DotCraftCore.nVillage.MerchantRecipeList;
+	using Village = DotCraftCore.nVillage.Village;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityVillager : EntityAgeable, IMerchant, INpc
 	{

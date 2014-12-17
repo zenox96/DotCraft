@@ -1,4 +1,4 @@
-namespace DotCraftCore.Realms
+namespace DotCraftCore.nRealms
 {
 
 	using Minecraft = DotCraftCore.client.Minecraft;

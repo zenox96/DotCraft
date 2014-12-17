@@ -1,14 +1,14 @@
 using System;
 
-namespace DotCraftCore.Block
+namespace DotCraftCore.nBlock
 {
 
-	using MapColor = DotCraftCore.Block.material.MapColor;
+	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
 	
-	using CreativeTabs = DotCraftCore.CreativeTab.CreativeTabs;
-	using Items = DotCraftCore.Init.Items;
-	using Item = DotCraftCore.Item.Item;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
+	using Items = DotCraftCore.nInit.Items;
+	using Item = DotCraftCore.nItem.Item;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class BlockGlowstone : Block
 	{

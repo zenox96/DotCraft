@@ -1,8 +1,8 @@
-namespace DotCraftCore.World
+namespace DotCraftCore.nWorld
 {
 
 	using PlayerCapabilities = DotCraftCore.entity.player.PlayerCapabilities;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
+	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public sealed class WorldSettings
 	{

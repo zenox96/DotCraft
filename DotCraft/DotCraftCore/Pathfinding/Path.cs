@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.Pathfinding
+namespace DotCraftCore.nPathfinding
 {
 
 	public class Path

@@ -1,11 +1,11 @@
 using System;
 
-namespace DotCraftCore.World.Gen
+namespace DotCraftCore.nWorld.nGen
 {
 
-	using Block = DotCraftCore.block.Block;
-	using World = DotCraftCore.World.World;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
+	using Block = DotCraftCore.nBlock.Block;
+	using World = DotCraftCore.nWorld.World;
+	using IChunkProvider = DotCraftCore.nWorld.nChunk.IChunkProvider;
 
 	public class MapGenBase
 	{

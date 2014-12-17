@@ -1,8 +1,8 @@
-namespace DotCraftCore.Item
+namespace DotCraftCore.nItem
 {
 
-	using Block = DotCraftCore.block.Block;
-	using IIcon = DotCraftCore.Util.IIcon;
+	using Block = DotCraftCore.nBlock.Block;
+	using IIcon = DotCraftCore.nUtil.IIcon;
 
 	public class ItemColored : ItemBlock
 	{

@@ -1,17 +1,17 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityAgeable = DotCraftCore.Entity.EntityAgeable;
-	using EntityXPOrb = DotCraftCore.Entity.Item.EntityXPOrb;
-	using EntityAnimal = DotCraftCore.Entity.Passive.EntityAnimal;
-	using EntityCow = DotCraftCore.Entity.Passive.EntityCow;
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using StatList = DotCraftCore.Stats.StatList;
-	using World = DotCraftCore.World.World;
+	using EntityAgeable = DotCraftCore.nEntity.EntityAgeable;
+	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
+	using EntityAnimal = DotCraftCore.nEntity.nPassive.EntityAnimal;
+	using EntityCow = DotCraftCore.nEntity.nPassive.EntityCow;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using AchievementList = DotCraftCore.nStats.AchievementList;
+	using StatList = DotCraftCore.nStats.StatList;
+	using World = DotCraftCore.nWorld.World;
 
 	public class EntityAIMate : EntityAIBase
 	{

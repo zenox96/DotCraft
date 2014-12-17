@@ -1,15 +1,15 @@
 using System;
 
-namespace DotCraftCore.World.Storage
+namespace DotCraftCore.nWorld.nStorage
 {
 
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using CompressedStreamTools = DotCraftCore.nbt.CompressedStreamTools;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using WorldProvider = DotCraftCore.World.WorldProvider;
-	using IChunkLoader = DotCraftCore.World.Chunk.Storage.IChunkLoader;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using MinecraftException = DotCraftCore.nWorld.MinecraftException;
+	using WorldProvider = DotCraftCore.nWorld.WorldProvider;
+	using IChunkLoader = DotCraftCore.nWorld.nChunk.nStorage.IChunkLoader;
 	using LogManager = org.apache.logging.log4j.LogManager;
 	using Logger = org.apache.logging.log4j.Logger;
 

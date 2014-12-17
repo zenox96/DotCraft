@@ -1,4 +1,4 @@
-namespace DotCraftCore.Scoreboard
+namespace DotCraftCore.nScoreboard
 {
 
 	public class ScoreObjective

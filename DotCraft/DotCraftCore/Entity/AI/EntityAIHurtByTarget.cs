@@ -1,10 +1,10 @@
 using System.Collections;
 
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityCreature = DotCraftCore.Entity.EntityCreature;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
+	using EntityCreature = DotCraftCore.nEntity.EntityCreature;
+	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
 
 	public class EntityAIHurtByTarget : EntityAITarget
 	{

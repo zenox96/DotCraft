@@ -1,8 +1,8 @@
-namespace DotCraftCore.Entity.AI
+namespace DotCraftCore.nEntity.nAI
 {
 
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using EntityCreeper = DotCraftCore.Entity.Monster.EntityCreeper;
+	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
+	using EntityCreeper = DotCraftCore.nEntity.nMonster.EntityCreeper;
 
 	public class EntityAICreeperSwell : EntityAIBase
 	{

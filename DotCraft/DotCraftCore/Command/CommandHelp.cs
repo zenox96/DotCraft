@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
 
-namespace DotCraftCore.Command
+namespace DotCraftCore.nCommand
 {
 
-	using EntityPlayer = DotCraftCore.Entity.Player.EntityPlayer;
-	using ClickEvent = DotCraftCore.Event.ClickEvent;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentTranslation = DotCraftCore.Util.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.Util.EnumChatFormatting;
-	using MathHelper = DotCraftCore.Util.MathHelper;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
+	using ClickEvent = DotCraftCore.nEvent.ClickEvent;
+	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
+	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
+	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
+	using MathHelper = DotCraftCore.nUtil.MathHelper;
 
 	public class CommandHelp : CommandBase
 	{
