@@ -1,10 +1,7 @@
 namespace DotCraftCore.nUtil
 {
-
 	public class Util
 	{
-		
-
 		public static Util.EnumOS OSType
 		{
 			get
@@ -16,25 +13,11 @@ namespace DotCraftCore.nUtil
 
 		public enum EnumOS
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			LINUX("LINUX", 0),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SOLARIS("SOLARIS", 1),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			WINDOWS("WINDOWS", 2),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			OSX("OSX", 3),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			UNKNOWN("UNKNOWN", 4);
-
-			@private static final Util.EnumOS[] $VALUES = new Util.EnumOS[]{LINUX, SOLARIS, WINDOWS, OSX, UNKNOWN
-		}
-			
-
-			private EnumOS(string p_i1357_1_, int p_i1357_2_)
-			{
-			}
+			LINUX = 0,
+			SOLARIS = 1,
+			WINDOWS = 2,
+			OSX = 3,
+			UNKNOWN = 4
 		}
 	}
-
 }
