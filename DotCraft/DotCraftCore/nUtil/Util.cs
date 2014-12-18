@@ -1,3 +1,5 @@
+using System;
+
 namespace DotCraftCore.nUtil
 {
 	public class Util
@@ -20,4 +22,12 @@ namespace DotCraftCore.nUtil
 			UNKNOWN = 4
 		}
 	}
+
+    public static class UtilExtensions
+    {
+        public static float NextFloat(this Random rand)
+        {
+            return (float)(rand.NextDouble());
+        }
+    }
 }
