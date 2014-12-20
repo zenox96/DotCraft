@@ -1,36 +1,26 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
-	using Vec3 = DotCraftCore.nUtil.Vec3;
-	using Explosion = DotCraftCore.nWorld.Explosion;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockStairs : Block
 	{
-		private static readonly int[][] field_150150_a = new int[][] {{2, 6}, {3, 7}, {2, 3}, {6, 7}, {0, 4}, {1, 5}, {0, 1}, {4, 5}};
+		private static readonly int[,] field_150150_a = new int[,] {{2, 6}, {3, 7}, {2, 3}, {6, 7}, {0, 4}, {1, 5}, {0, 1}, {4, 5}};
 		private readonly Block field_150149_b;
 		private readonly int field_150151_M;
 		private bool field_150152_N;
 		private int field_150153_O;
 		
 
-		protected internal BlockStairs(Block p_i45428_1_, int p_i45428_2_) : base(p_i45428_1_.blockMaterial)
+		protected internal BlockStairs(Block p_i45428_1_, int p_i45428_2_) : base(p_i45428_1_.BlockMaterial)
 		{
 			this.field_150149_b = p_i45428_1_;
 			this.field_150151_M = p_i45428_2_;
@@ -402,14 +392,6 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return this.field_150149_b.getIcon(p_149691_1_, this.field_150151_M);
-		}
-
 		public virtual int func_149738_a(World p_149738_1_)
 		{
 			return this.field_150149_b.func_149738_a(p_149738_1_);
@@ -592,10 +574,5 @@ namespace DotCraftCore.nBlock
 
 			return var22;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

@@ -69,7 +69,7 @@ namespace DotCraftCore.nUtil
 			return this.underlyingIntegerMap.func_148745_a(intKey);
 		}
 
-		public virtual IEnumerator iterator()
+        public virtual IEnumerator GetEnumerator( )
 		{
 			return this.underlyingIntegerMap.GetEnumerator();
 		}

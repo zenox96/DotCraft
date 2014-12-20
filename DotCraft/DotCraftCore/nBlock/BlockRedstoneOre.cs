@@ -1,17 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRedstoneOre : Block
 	{
 		private bool field_150187_a;
@@ -131,9 +127,9 @@ namespace DotCraftCore.nBlock
 
 			for (int var8 = 0; var8 < 6; ++var8)
 			{
-				double var9 = (double)((float)p_150186_2_ + var5.nextFloat());
-				double var11 = (double)((float)p_150186_3_ + var5.nextFloat());
-				double var13 = (double)((float)p_150186_4_ + var5.nextFloat());
+				double var9 = ((double)p_150186_2_ + var5.NextDouble());
+				double var11 = ((double)p_150186_3_ + var5.NextDouble());
+				double var13 = ((double)p_150186_4_ + var5.NextDouble());
 
 				if (var8 == 0 && !p_150186_1_.getBlock(p_150186_2_, p_150186_3_ + 1, p_150186_4_).OpaqueCube)
 				{

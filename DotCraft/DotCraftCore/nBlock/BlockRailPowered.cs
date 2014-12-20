@@ -1,31 +1,10 @@
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRailPowered : BlockRailBase
 	{
-		protected internal IIcon field_150059_b;
-		
-
 		protected internal BlockRailPowered() : base(true)
 		{
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return (p_149691_2_ & 8) == 0 ? this.blockIcon : this.field_150059_b;
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			base.registerBlockIcons(p_149651_1_);
-			this.field_150059_b = p_149651_1_.registerIcon(this.TextureName + "_powered");
 		}
 
 		protected internal virtual bool func_150058_a(World p_150058_1_, int p_150058_2_, int p_150058_3_, int p_150058_4_, int p_150058_5_, bool p_150058_6_, int p_150058_7_)

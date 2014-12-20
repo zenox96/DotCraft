@@ -1,38 +1,24 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockWall : Block
 	{
 		public static readonly string[] field_150092_a = new string[] {"normal", "mossy"};
 		
 
-		public BlockWall(Block p_i45435_1_) : base(p_i45435_1_.blockMaterial)
+		public BlockWall(Block p_i45435_1_) : base(p_i45435_1_.BlockMaterial)
 		{
 			this.Hardness = p_i45435_1_.blockHardness;
 			this.Resistance = p_i45435_1_.blockResistance / 3.0F;
 			this.StepSound = p_i45435_1_.stepSound;
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_2_ == 1 ? Blocks.mossy_cobblestone.getBlockTextureFromSide(p_149691_1_) : Blocks.cobblestone.getBlockTextureFromSide(p_149691_1_);
 		}
 
 ///    
@@ -126,7 +112,7 @@ namespace DotCraftCore.nBlock
 		public virtual bool func_150091_e(IBlockAccess p_150091_1_, int p_150091_2_, int p_150091_3_, int p_150091_4_)
 		{
 			Block var5 = p_150091_1_.getBlock(p_150091_2_, p_150091_3_, p_150091_4_);
-			return var5 != this && var5 != Blocks.fence_gate ? (var5.blockMaterial.Opaque && var5.renderAsNormalBlock() ? var5.blockMaterial != Material.field_151572_C : false) : true;
+			return var5 != this && var5 != Blocks.fence_gate ? (var5.BlockMaterial.Opaque && var5.renderAsNormalBlock() ? var5.BlockMaterial != Material.field_151572_C : false) : true;
 		}
 
 		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
@@ -147,10 +133,5 @@ namespace DotCraftCore.nBlock
 		{
 			return p_149646_5_ == 0 ? base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_) : true;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

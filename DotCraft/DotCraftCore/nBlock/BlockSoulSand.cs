@@ -1,16 +1,12 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockSoulSand : Block
 	{
-		
-
 		public BlockSoulSand() : base(Material.sand)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

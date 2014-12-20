@@ -1,17 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-
 	public class BlockWoodSlab : BlockSlab
 	{
 		public static readonly string[] field_150005_b = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "big_oak"};
@@ -20,14 +16,6 @@ namespace DotCraftCore.nBlock
 		public BlockWoodSlab(bool p_i45437_1_) : base(p_i45437_1_, Material.wood)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return Blocks.planks.getIcon(p_149691_1_, p_149691_2_ & 7);
 		}
 
 		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
@@ -64,10 +52,5 @@ namespace DotCraftCore.nBlock
 				}
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

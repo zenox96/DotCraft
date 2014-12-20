@@ -1,32 +1,17 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+using DotCraftCore.nWorld.nGen.nFeature;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-	using WorldGenBigTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigTree;
-	using WorldGenCanopyTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenCanopyTree;
-	using WorldGenForest = DotCraftCore.nWorld.nGen.nFeature.WorldGenForest;
-	using WorldGenMegaJungle = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaJungle;
-	using WorldGenMegaPineTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenMegaPineTree;
-	using WorldGenSavannaTree = DotCraftCore.nWorld.nGen.nFeature.WorldGenSavannaTree;
-	using WorldGenTaiga2 = DotCraftCore.nWorld.nGen.nFeature.WorldGenTaiga2;
-	using WorldGenTrees = DotCraftCore.nWorld.nGen.nFeature.WorldGenTrees;
-	using WorldGenerator = DotCraftCore.nWorld.nGen.nFeature.WorldGenerator;
-
 	public class BlockSapling : BlockBush, IGrowable
 	{
 		public static readonly string[] field_149882_a = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "roofed_oak"};
-		private static readonly IIcon[] field_149881_b = new IIcon[field_149882_a.Length];
-		
 
 		protected internal BlockSapling()
 		{
@@ -51,15 +36,6 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			p_149691_2_ &= 7;
-			return field_149881_b[MathHelper.clamp_int(p_149691_2_, 0, 5)];
-		}
-
 		public virtual void func_149879_c(World p_149879_1_, int p_149879_2_, int p_149879_3_, int p_149879_4_, Random p_149879_5_)
 		{
 			int var6 = p_149879_1_.getBlockMetadata(p_149879_2_, p_149879_3_, p_149879_4_);
@@ -77,7 +53,7 @@ namespace DotCraftCore.nBlock
 		public virtual void func_149878_d(World p_149878_1_, int p_149878_2_, int p_149878_3_, int p_149878_4_, Random p_149878_5_)
 		{
 			int var6 = p_149878_1_.getBlockMetadata(p_149878_2_, p_149878_3_, p_149878_4_) & 7;
-			object var7 = p_149878_5_.Next(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
+            WorldGenAbstractTree var7 = p_149878_5_.Next(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
 			int var8 = 0;
 			int var9 = 0;
 			bool var10 = false;
@@ -96,7 +72,7 @@ namespace DotCraftCore.nBlock
 						{
 							if (this.func_149880_a(p_149878_1_, p_149878_2_ + var8, p_149878_3_, p_149878_4_ + var9, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8 + 1, p_149878_3_, p_149878_4_ + var9, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8, p_149878_3_, p_149878_4_ + var9 + 1, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8 + 1, p_149878_3_, p_149878_4_ + var9 + 1, 1))
 							{
-								var7 = new WorldGenMegaPineTree(false, p_149878_5_.nextBoolean());
+                                var7 = new WorldGenMegaPineTree(false, p_149878_5_.NextBoolean());
 								var10 = true;
 								goto label78;
 							}
@@ -218,14 +194,6 @@ namespace DotCraftCore.nBlock
 			p_149666_3_.Add(new ItemStack(p_149666_1_, 1, 5));
 		}
 
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			for (int var2 = 0; var2 < field_149881_b.Length; ++var2)
-			{
-				field_149881_b[var2] = p_149651_1_.registerIcon(this.TextureName + "_" + field_149882_a[var2]);
-			}
-		}
-
 		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
 		{
 			return true;
@@ -233,7 +201,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
 		{
-			return (double)p_149852_1_.rand.nextFloat() < 0.45D;
+			return (double)p_149852_1_.rand.NextFloat() < 0.45D;
 		}
 
 		public virtual void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)

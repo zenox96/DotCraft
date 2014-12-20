@@ -1,31 +1,19 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nBoss;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nStats;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityWither = DotCraftCore.nEntity.nBoss.EntityWither;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemSkull = DotCraftCore.nItem.ItemSkull;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using NBTUtil = DotCraftCore.nNBT.NBTUtil;
-	using AchievementList = DotCraftCore.nStats.AchievementList;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntitySkull = DotCraftCore.nTileEntity.TileEntitySkull;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockSkull : BlockContainer
 	{
 		
@@ -317,29 +305,5 @@ namespace DotCraftCore.nBlock
 				return var6 != null && var6 is TileEntitySkull ? ((TileEntitySkull)var6).func_145904_a() == p_149966_5_ : false;
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return Blocks.soul_sand.getBlockTextureFromSide(p_149691_1_);
-		}
-
-///    
-///     <summary> * Gets the icon name of the ItemBlock corresponding to this block. Used by hoppers. </summary>
-///     
-		public virtual string ItemIconName
-		{
-			get
-			{
-				return this.TextureName + "_" + ItemSkull.field_94587_a[0];
-			}
-		}
 	}
-
 }

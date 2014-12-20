@@ -1,38 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nEntity.nProjectile;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityTNTPrimed = DotCraftCore.nEntity.nItem.EntityTNTPrimed;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
-	using Items = DotCraftCore.nInit.Items;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using Explosion = DotCraftCore.nWorld.Explosion;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockTNT : Block
 	{
-		private IIcon field_150116_a;
-		private IIcon field_150115_b;
-		
-
 		public BlockTNT() : base(Material.tnt)
 		{
 			this.CreativeTab = CreativeTabs.tabRedstone;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
 		}
 
 		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
@@ -133,13 +115,5 @@ namespace DotCraftCore.nBlock
 		{
 			return false;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_150116_a = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_150115_b = p_149651_1_.registerIcon(this.TextureName + "_bottom");
-		}
 	}
-
 }

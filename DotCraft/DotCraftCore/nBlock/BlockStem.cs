@@ -1,25 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockStem : BlockBush, IGrowable
 	{
 		private readonly Block field_149877_a;
-		private IIcon field_149876_b;
-		
 
 		protected internal BlockStem(Block p_i45430_1_)
 		{
@@ -103,7 +94,7 @@ namespace DotCraftCore.nBlock
 
 						Block var11 = p_149674_1_.getBlock(var9, p_149674_3_ - 1, var10);
 
-						if (p_149674_1_.getBlock(var9, p_149674_3_, var10).blockMaterial == Material.air && (var11 == Blocks.farmland || var11 == Blocks.dirt || var11 == Blocks.grass))
+						if (p_149674_1_.getBlock(var9, p_149674_3_, var10).BlockMaterial == Material.air && (var11 == Blocks.farmland || var11 == Blocks.dirt || var11 == Blocks.grass))
 						{
 							p_149674_1_.setBlock(var9, p_149674_3_, var10, this.field_149877_a);
 						}
@@ -276,17 +267,6 @@ namespace DotCraftCore.nBlock
 		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return this.field_149877_a == Blocks.pumpkin ? Items.pumpkin_seeds : (this.field_149877_a == Blocks.melon_block ? Items.melon_seeds : Item.getItemById(0));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_disconnected");
-			this.field_149876_b = p_149651_1_.registerIcon(this.TextureName + "_connected");
-		}
-
-		public virtual IIcon func_149872_i()
-		{
-			return this.field_149876_b;
 		}
 
 		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)

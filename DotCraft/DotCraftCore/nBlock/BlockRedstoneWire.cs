@@ -1,30 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRedstoneWire : Block
 	{
 		private bool field_150181_a = true;
 		private Set field_150179_b = new HashSet();
-		private IIcon field_150182_M;
-		private IIcon field_150183_N;
-		private IIcon field_150184_O;
-		private IIcon field_150180_P;
-		
 
 		public BlockRedstoneWire() : base(Material.circuits)
 		{
@@ -137,14 +124,14 @@ namespace DotCraftCore.nBlock
 					var11 = this.func_150178_a(p_150175_1_, var13, p_150175_3_, var14, var11);
 				}
 
-				if (p_150175_1_.getBlock(var13, p_150175_3_, var14).NormalCube && !p_150175_1_.getBlock(p_150175_2_, p_150175_3_ + 1, p_150175_4_).NormalCube)
+				if (p_150175_1_.getBlock(var13, p_150175_3_, var14).isBlockNormalCube && !p_150175_1_.getBlock(p_150175_2_, p_150175_3_ + 1, p_150175_4_).isBlockNormalCube())
 				{
 					if ((var13 != p_150175_5_ || var14 != p_150175_7_) && p_150175_3_ >= p_150175_6_)
 					{
 						var11 = this.func_150178_a(p_150175_1_, var13, p_150175_3_ + 1, var14, var11);
 					}
 				}
-				else if (!p_150175_1_.getBlock(var13, p_150175_3_, var14).NormalCube && (var13 != p_150175_5_ || var14 != p_150175_7_) && p_150175_3_ <= p_150175_6_)
+				else if (!p_150175_1_.getBlock(var13, p_150175_3_, var14).isBlockNormalCube() && (var13 != p_150175_5_ || var14 != p_150175_7_) && p_150175_3_ <= p_150175_6_)
 				{
 					var11 = this.func_150178_a(p_150175_1_, var13, p_150175_3_ - 1, var14, var11);
 				}
@@ -209,7 +196,7 @@ namespace DotCraftCore.nBlock
 				this.func_150172_m(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_ - 1);
 				this.func_150172_m(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_ + 1);
 
-				if (p_149726_1_.getBlock(p_149726_2_ - 1, p_149726_3_, p_149726_4_).NormalCube)
+				if (p_149726_1_.getBlock(p_149726_2_ - 1, p_149726_3_, p_149726_4_).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149726_1_, p_149726_2_ - 1, p_149726_3_ + 1, p_149726_4_);
 				}
@@ -218,7 +205,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149726_1_, p_149726_2_ - 1, p_149726_3_ - 1, p_149726_4_);
 				}
 
-				if (p_149726_1_.getBlock(p_149726_2_ + 1, p_149726_3_, p_149726_4_).NormalCube)
+				if (p_149726_1_.getBlock(p_149726_2_ + 1, p_149726_3_, p_149726_4_).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149726_1_, p_149726_2_ + 1, p_149726_3_ + 1, p_149726_4_);
 				}
@@ -227,7 +214,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149726_1_, p_149726_2_ + 1, p_149726_3_ - 1, p_149726_4_);
 				}
 
-				if (p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ - 1).NormalCube)
+				if (p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ - 1).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149726_1_, p_149726_2_, p_149726_3_ + 1, p_149726_4_ - 1);
 				}
@@ -236,7 +223,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149726_1_, p_149726_2_, p_149726_3_ - 1, p_149726_4_ - 1);
 				}
 
-				if (p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ + 1).NormalCube)
+				if (p_149726_1_.getBlock(p_149726_2_, p_149726_3_, p_149726_4_ + 1).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149726_1_, p_149726_2_, p_149726_3_ + 1, p_149726_4_ + 1);
 				}
@@ -265,7 +252,7 @@ namespace DotCraftCore.nBlock
 				this.func_150172_m(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_ - 1);
 				this.func_150172_m(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_ + 1);
 
-				if (p_149749_1_.getBlock(p_149749_2_ - 1, p_149749_3_, p_149749_4_).NormalCube)
+				if (p_149749_1_.getBlock(p_149749_2_ - 1, p_149749_3_, p_149749_4_).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149749_1_, p_149749_2_ - 1, p_149749_3_ + 1, p_149749_4_);
 				}
@@ -274,7 +261,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149749_1_, p_149749_2_ - 1, p_149749_3_ - 1, p_149749_4_);
 				}
 
-				if (p_149749_1_.getBlock(p_149749_2_ + 1, p_149749_3_, p_149749_4_).NormalCube)
+				if (p_149749_1_.getBlock(p_149749_2_ + 1, p_149749_3_, p_149749_4_).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149749_1_, p_149749_2_ + 1, p_149749_3_ + 1, p_149749_4_);
 				}
@@ -283,7 +270,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149749_1_, p_149749_2_ + 1, p_149749_3_ - 1, p_149749_4_);
 				}
 
-				if (p_149749_1_.getBlock(p_149749_2_, p_149749_3_, p_149749_4_ - 1).NormalCube)
+				if (p_149749_1_.getBlock(p_149749_2_, p_149749_3_, p_149749_4_ - 1).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149749_1_, p_149749_2_, p_149749_3_ + 1, p_149749_4_ - 1);
 				}
@@ -292,7 +279,7 @@ namespace DotCraftCore.nBlock
 					this.func_150172_m(p_149749_1_, p_149749_2_, p_149749_3_ - 1, p_149749_4_ - 1);
 				}
 
-				if (p_149749_1_.getBlock(p_149749_2_, p_149749_3_, p_149749_4_ + 1).NormalCube)
+				if (p_149749_1_.getBlock(p_149749_2_, p_149749_3_, p_149749_4_ + 1).isBlockNormalCube())
 				{
 					this.func_150172_m(p_149749_1_, p_149749_2_, p_149749_3_ + 1, p_149749_4_ + 1);
 				}
@@ -366,29 +353,29 @@ namespace DotCraftCore.nBlock
 				}
 				else
 				{
-					bool var7 = func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_, p_149709_4_, 1) || !p_149709_1_.getBlock(p_149709_2_ - 1, p_149709_3_, p_149709_4_).NormalCube && func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_ - 1, p_149709_4_, -1);
-					bool var8 = func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_, p_149709_4_, 3) || !p_149709_1_.getBlock(p_149709_2_ + 1, p_149709_3_, p_149709_4_).NormalCube && func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_ - 1, p_149709_4_, -1);
-					bool var9 = func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_, p_149709_4_ - 1, 2) || !p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ - 1).NormalCube && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ - 1, p_149709_4_ - 1, -1);
-					bool var10 = func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_, p_149709_4_ + 1, 0) || !p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ + 1).NormalCube && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ - 1, p_149709_4_ + 1, -1);
+					bool var7 = func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_, p_149709_4_, 1) || !p_149709_1_.getBlock(p_149709_2_ - 1, p_149709_3_, p_149709_4_).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_ - 1, p_149709_4_, -1);
+					bool var8 = func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_, p_149709_4_, 3) || !p_149709_1_.getBlock(p_149709_2_ + 1, p_149709_3_, p_149709_4_).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_ - 1, p_149709_4_, -1);
+					bool var9 = func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_, p_149709_4_ - 1, 2) || !p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ - 1).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ - 1, p_149709_4_ - 1, -1);
+					bool var10 = func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_, p_149709_4_ + 1, 0) || !p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ + 1).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ - 1, p_149709_4_ + 1, -1);
 
-					if (!p_149709_1_.getBlock(p_149709_2_, p_149709_3_ + 1, p_149709_4_).NormalCube)
+					if (!p_149709_1_.getBlock(p_149709_2_, p_149709_3_ + 1, p_149709_4_).isBlockNormalCube())
 					{
-						if (p_149709_1_.getBlock(p_149709_2_ - 1, p_149709_3_, p_149709_4_).NormalCube && func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_ + 1, p_149709_4_, -1))
+						if (p_149709_1_.getBlock(p_149709_2_ - 1, p_149709_3_, p_149709_4_).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_ - 1, p_149709_3_ + 1, p_149709_4_, -1))
 						{
 							var7 = true;
 						}
 
-						if (p_149709_1_.getBlock(p_149709_2_ + 1, p_149709_3_, p_149709_4_).NormalCube && func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_ + 1, p_149709_4_, -1))
+						if (p_149709_1_.getBlock(p_149709_2_ + 1, p_149709_3_, p_149709_4_).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_ + 1, p_149709_3_ + 1, p_149709_4_, -1))
 						{
 							var8 = true;
 						}
 
-						if (p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ - 1).NormalCube && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ + 1, p_149709_4_ - 1, -1))
+						if (p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ - 1).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ + 1, p_149709_4_ - 1, -1))
 						{
 							var9 = true;
 						}
 
-						if (p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ + 1).NormalCube && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ + 1, p_149709_4_ + 1, -1))
+						if (p_149709_1_.getBlock(p_149709_2_, p_149709_3_, p_149709_4_ + 1).isBlockNormalCube() && func_150176_g(p_149709_1_, p_149709_2_, p_149709_3_ + 1, p_149709_4_ + 1, -1))
 						{
 							var10 = true;
 						}
@@ -416,9 +403,9 @@ namespace DotCraftCore.nBlock
 
 			if (var6 > 0)
 			{
-				double var7 = (double)p_149734_2_ + 0.5D + ((double)p_149734_5_.nextFloat() - 0.5D) * 0.2D;
-				double var9 = (double)((float)p_149734_3_ + 0.0625F);
-				double var11 = (double)p_149734_4_ + 0.5D + ((double)p_149734_5_.nextFloat() - 0.5D) * 0.2D;
+				double var7 = (double)p_149734_2_ + 0.5D + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
+				double var9 = (double)p_149734_3_ + 0.0625D;
+				double var11 = (double)p_149734_4_ + 0.5D + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
 				float var13 = (float)var6 / 15.0F;
 				float var14 = var13 * 0.6F + 0.4F;
 
@@ -487,20 +474,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Items.redstone;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_150182_M = p_149651_1_.registerIcon(this.TextureName + "_" + "cross");
-			this.field_150183_N = p_149651_1_.registerIcon(this.TextureName + "_" + "line");
-			this.field_150184_O = p_149651_1_.registerIcon(this.TextureName + "_" + "cross_overlay");
-			this.field_150180_P = p_149651_1_.registerIcon(this.TextureName + "_" + "line_overlay");
-			this.blockIcon = this.field_150182_M;
-		}
-
-		public static IIcon func_150173_e(string p_150173_0_)
-		{
-			return p_150173_0_.Equals("cross") ? Blocks.redstone_wire.field_150182_M : (p_150173_0_.Equals("line") ? Blocks.redstone_wire.field_150183_N : (p_150173_0_.Equals("cross_overlay") ? Blocks.redstone_wire.field_150184_O : (p_150173_0_.Equals("line_overlay") ? Blocks.redstone_wire.field_150180_P : null)));
-		}
 	}
-
 }

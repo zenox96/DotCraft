@@ -1,15 +1,12 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nWorld;
-
 	public class BlockStaticLiquid : BlockLiquid
 	{
-		
-
 		protected internal BlockStaticLiquid(Material p_i45429_1_) : base(p_i45429_1_)
 		{
 			this.TickRandomly = false;
@@ -42,7 +39,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
-			if (this.blockMaterial == Material.lava)
+			if (this.BlockMaterial == Material.lava)
 			{
 				int var6 = p_149674_5_.Next(3);
 				int var7;
@@ -54,7 +51,7 @@ namespace DotCraftCore.nBlock
 					p_149674_4_ += p_149674_5_.Next(3) - 1;
 					Block var8 = p_149674_1_.getBlock(p_149674_2_, p_149674_3_, p_149674_4_);
 
-					if (var8.blockMaterial == Material.air)
+					if (var8.BlockMaterial == Material.air)
 					{
 						if (this.isFlammable(p_149674_1_, p_149674_2_ - 1, p_149674_3_, p_149674_4_) || this.isFlammable(p_149674_1_, p_149674_2_ + 1, p_149674_3_, p_149674_4_) || this.isFlammable(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_ - 1) || this.isFlammable(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_ + 1) || this.isFlammable(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_) || this.isFlammable(p_149674_1_, p_149674_2_, p_149674_3_ + 1, p_149674_4_))
 						{
@@ -62,7 +59,7 @@ namespace DotCraftCore.nBlock
 							return;
 						}
 					}
-					else if (var8.blockMaterial.blocksMovement())
+					else if (var8.BlockMaterial.blocksMovement())
 					{
 						return;
 					}
@@ -89,7 +86,7 @@ namespace DotCraftCore.nBlock
 
 		private bool isFlammable(World p_149817_1_, int p_149817_2_, int p_149817_3_, int p_149817_4_)
 		{
-			return p_149817_1_.getBlock(p_149817_2_, p_149817_3_, p_149817_4_).Material.CanBurn;
+			return p_149817_1_.getBlock(p_149817_2_, p_149817_3_, p_149817_4_).BlockMaterial.CanBurn;
 		}
 	}
 

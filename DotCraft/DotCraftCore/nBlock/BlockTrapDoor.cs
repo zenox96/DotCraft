@@ -1,16 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity.nPlayer;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public class BlockTrapDoor : Block
 	{
-		
-
 		protected internal BlockTrapDoor(Material p_i45434_1_) : base(p_i45434_1_)
 		{
 			float var2 = 0.5F;
@@ -130,7 +127,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
-			if (this.blockMaterial == Material.iron)
+			if (this.BlockMaterial == Material.iron)
 			{
 				return true;
 			}
@@ -282,7 +279,7 @@ namespace DotCraftCore.nBlock
 
 		private static bool func_150119_a(Block p_150119_0_)
 		{
-			return p_150119_0_.blockMaterial.Opaque && p_150119_0_.renderAsNormalBlock() || p_150119_0_ == Blocks.glowstone || p_150119_0_ is BlockSlab || p_150119_0_ is BlockStairs;
+			return p_150119_0_.BlockMaterial.Opaque && p_150119_0_.renderAsNormalBlock() || p_150119_0_ == Blocks.glowstone || p_150119_0_ is BlockSlab || p_150119_0_ is BlockStairs;
 		}
 	}
 

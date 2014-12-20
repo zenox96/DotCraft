@@ -1,20 +1,15 @@
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRedstoneRepeater : BlockRedstoneDiode
 	{
 		public static readonly double[] field_149973_b = new double[] { -0.0625D, 0.0625D, 0.1875D, 0.3125D};
 		private static readonly int[] field_149974_M = new int[] {1, 2, 3, 4};
-		
 
 		protected internal BlockRedstoneRepeater(bool p_i45424_1_) : base(p_i45424_1_)
 		{
@@ -90,9 +85,9 @@ namespace DotCraftCore.nBlock
 			{
 				int var6 = p_149734_1_.getBlockMetadata(p_149734_2_, p_149734_3_, p_149734_4_);
 				int var7 = func_149895_l(var6);
-				double var8 = (double)((float)p_149734_2_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
-				double var10 = (double)((float)p_149734_3_ + 0.4F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
-				double var12 = (double)((float)p_149734_4_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
+				double var8 = ((double)p_149734_2_ + 0.5D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
+				double var10 = ((double)p_149734_3_ + 0.4D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
+				double var12 = ((double)p_149734_4_ + 0.5D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
 				double var14 = 0.0D;
 				double var16 = 0.0D;
 

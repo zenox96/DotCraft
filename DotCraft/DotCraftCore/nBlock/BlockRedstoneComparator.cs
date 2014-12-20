@@ -1,19 +1,13 @@
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityComparator = DotCraftCore.nTileEntity.TileEntityComparator;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRedstoneComparator : BlockRedstoneDiode, ITileEntityProvider
 	{
 		
@@ -60,15 +54,6 @@ namespace DotCraftCore.nBlock
 			{
 				return 37;
 			}
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public override IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			bool var3 = this.field_149914_a || (p_149691_2_ & 8) != 0;
-			return p_149691_1_ == 0 ? (var3 ? Blocks.redstone_torch.getBlockTextureFromSide(p_149691_1_) : Blocks.unlit_redstone_torch.getBlockTextureFromSide(p_149691_1_)) : (p_149691_1_ == 1 ? (var3 ? Blocks.powered_comparator.blockIcon : this.blockIcon) : Blocks.double_stone_slab.getBlockTextureFromSide(1));
 		}
 
 		protected internal override bool func_149905_c(int p_149905_1_)
@@ -122,7 +107,7 @@ namespace DotCraftCore.nBlock
 			{
 				var6 = var10.getComparatorInputOverride(p_149903_1_, var8, p_149903_3_, var9, Direction.rotateOpposite[var7]);
 			}
-			else if (var6 < 15 && var10.NormalCube)
+			else if (var6 < 15 && var10.isBlockNormalCube())
 			{
 				var8 += Direction.offsetX[var7];
 				var9 += Direction.offsetZ[var7];

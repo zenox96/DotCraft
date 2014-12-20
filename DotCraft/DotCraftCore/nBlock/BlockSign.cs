@@ -1,25 +1,18 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockSign : BlockContainer
 	{
 		private Type field_149968_a;
 		private bool field_149967_b;
 		
-
 		protected internal BlockSign(Type p_i45426_1_, bool p_i45426_2_) : base(Material.wood)
 		{
 			this.field_149967_b = p_i45426_2_;
@@ -27,14 +20,6 @@ namespace DotCraftCore.nBlock
 			float var3 = 0.25F;
 			float var4 = 1.0F;
 			this.setBlockBounds(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var4, 0.5F + var3);
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return Blocks.planks.getBlockTextureFromSide(p_149691_1_);
 		}
 
 ///    
@@ -129,7 +114,6 @@ namespace DotCraftCore.nBlock
 			}
 			catch (Exception var4)
 			{
-				throw new Exception(var4);
 			}
 		}
 
@@ -144,7 +128,7 @@ namespace DotCraftCore.nBlock
 
 			if (this.field_149967_b)
 			{
-				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ - 1, p_149695_4_).Material.Solid)
+				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ - 1, p_149695_4_).BlockMaterial.Solid)
 				{
 					var6 = true;
 				}
@@ -154,22 +138,22 @@ namespace DotCraftCore.nBlock
 				int var7 = p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_);
 				var6 = true;
 
-				if (var7 == 2 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).Material.Solid)
+				if (var7 == 2 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).BlockMaterial.Solid)
 				{
 					var6 = false;
 				}
 
-				if (var7 == 3 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).Material.Solid)
+				if (var7 == 3 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).BlockMaterial.Solid)
 				{
 					var6 = false;
 				}
 
-				if (var7 == 4 && p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).Material.Solid)
+				if (var7 == 4 && p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).BlockMaterial.Solid)
 				{
 					var6 = false;
 				}
 
-				if (var7 == 5 && p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).Material.Solid)
+				if (var7 == 5 && p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).BlockMaterial.Solid)
 				{
 					var6 = false;
 				}
@@ -191,10 +175,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Items.sign;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

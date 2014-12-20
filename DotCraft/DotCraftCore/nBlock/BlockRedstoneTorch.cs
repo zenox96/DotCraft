@@ -1,20 +1,16 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRedstoneTorch : BlockTorch
 	{
 		private bool field_150113_a;
 		private static IDictionary field_150112_b = new Hashtable();
-		
 
 		private bool func_150111_a(World p_150111_1_, int p_150111_2_, int p_150111_3_, int p_150111_4_, bool p_150111_5_)
 		{
@@ -190,9 +186,9 @@ namespace DotCraftCore.nBlock
 			if (this.field_150113_a)
 			{
 				int var6 = p_149734_1_.getBlockMetadata(p_149734_2_, p_149734_3_, p_149734_4_);
-				double var7 = (double)((float)p_149734_2_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
-				double var9 = (double)((float)p_149734_3_ + 0.7F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
-				double var11 = (double)((float)p_149734_4_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
+				double var7 = ((double)p_149734_2_ + 0.5D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
+				double var9 = ((double)p_149734_3_ + 0.7D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
+				double var11 = ((double)p_149734_4_ + 0.5D) + (p_149734_5_.NextDouble() - 0.5D) * 0.2D;
 				double var13 = 0.2199999988079071D;
 				double var15 = 0.27000001072883606D;
 

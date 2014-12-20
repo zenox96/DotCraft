@@ -1,36 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-
 	public class BlockSand : BlockFalling
 	{
 		public static readonly string[] field_149838_a = new string[] {"default", "red"};
-		private static IIcon field_149837_b;
-		private static IIcon field_149839_N;
-		
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_2_ == 1 ? field_149839_N : field_149837_b;
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			field_149837_b = p_149651_1_.registerIcon("sand");
-			field_149839_N = p_149651_1_.registerIcon("red_sand");
-		}
-
 ///    
 ///     <summary> * Determines the damage on the item the block drops. Used in cloth and wood. </summary>
 ///     

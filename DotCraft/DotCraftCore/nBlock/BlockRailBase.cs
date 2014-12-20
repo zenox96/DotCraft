@@ -1,23 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
-	using Vec3 = DotCraftCore.nUtil.Vec3;
-	using ChunkPosition = DotCraftCore.nWorld.ChunkPosition;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BlockRailBase : Block
 	{
 		protected internal readonly bool field_150053_a;
-		
 
 		public static bool func_150049_b_(World p_150049_0_, int p_150049_1_, int p_150049_2_, int p_150049_3_)
 		{

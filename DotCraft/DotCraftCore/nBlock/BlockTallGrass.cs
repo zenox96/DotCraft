@@ -1,46 +1,23 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using ColorizerGrass = DotCraftCore.nWorld.ColorizerGrass;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockTallGrass : BlockBush, IGrowable
 	{
 		private static readonly string[] field_149871_a = new string[] {"deadbush", "tallgrass", "fern"};
-		private IIcon[] field_149870_b;
-		
 
 		protected internal BlockTallGrass() : base(Material.vine)
 		{
 			float var1 = 0.4F;
 			this.setBlockBounds(0.5F - var1, 0.0F, 0.5F - var1, 0.5F + var1, 0.8F, 0.5F + var1);
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_2_ >= this.field_149870_b.Length)
-			{
-				p_149691_2_ = 0;
-			}
-
-			return this.field_149870_b[p_149691_2_];
 		}
 
 		public virtual int BlockColor
@@ -118,16 +95,6 @@ namespace DotCraftCore.nBlock
 			for (int var4 = 1; var4 < 3; ++var4)
 			{
 				p_149666_3_.Add(new ItemStack(p_149666_1_, 1, var4));
-			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149870_b = new IIcon[field_149871_a.Length];
-
-			for (int var2 = 0; var2 < this.field_149870_b.Length; ++var2)
-			{
-				this.field_149870_b[var2] = p_149651_1_.registerIcon(field_149871_a[var2]);
 			}
 		}
 

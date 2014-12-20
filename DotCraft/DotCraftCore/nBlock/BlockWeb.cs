@@ -1,16 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockWeb : Block
 	{
 		
@@ -60,7 +58,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
-			return Items.string;
+			return Items.@string;
 		}
 
 		protected internal virtual bool canSilkHarvest()

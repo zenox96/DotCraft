@@ -12,11 +12,9 @@ namespace DotCraftCore.nWorld
 	using BlockStairs = DotCraftCore.nBlock.BlockStairs;
 	using Material = DotCraftCore.nBlock.nMaterial.Material;
 	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
-	using CrashReport = DotCraftCore.nCrash.CrashReport;
-	using CrashReportCategory = DotCraftCore.nCrash.CrashReportCategory;
 	using Entity = DotCraftCore.nEntity.Entity;
 	using EntityLiving = DotCraftCore.nEntity.EntityLiving;
-	using EntityPlayer = DotCraftCore.nEntity.player.EntityPlayer;
+	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
 	using Blocks = DotCraftCore.nInit.Blocks;
 	using ItemStack = DotCraftCore.nItem.ItemStack;
 	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
@@ -73,7 +71,7 @@ namespace DotCraftCore.nWorld
 ///     * value of 0x3c6ef35f, producing a highly planar series of values ill-suited for choosing random blocks in a
 ///     * 16x128x16 field. </summary>
 ///     
-		protected internal int updateLCG = (new Random()).nextInt();
+		protected internal int updateLCG = (new Random()).Next();
 
 ///    
 ///     <summary> * magic number used to generate fast random numbers for 3d distribution within a chunk </summary>
@@ -161,10 +159,10 @@ namespace DotCraftCore.nWorld
 				}
 				catch (Exception var7)
 				{
-					CrashReport var5 = CrashReport.makeCrashReport(var7, "Getting biome");
-					CrashReportCategory var6 = var5.makeCategory("Coordinates of biome request");
-					var6.addCrashSectionCallable("Location", new Callable() {  public string call() { return CrashReportCategory.getLocationInfo(p_72807_1_, 0, p_72807_2_); } });
-					throw new ReportedException(var5);
+					//CrashReport var5 = CrashReport.makeCrashReport(var7, "Getting biome");
+					//CrashReportCategory var6 = var5.makeCategory("Coordinates of biome request");
+					//var6.addCrashSectionCallable("Location", new Callable() {  public string call() { return CrashReportCategory.getLocationInfo(p_72807_1_, 0, p_72807_2_); } });
+					//throw new ReportedException(var5);
 				}
 			}
 			else
@@ -575,7 +573,7 @@ namespace DotCraftCore.nWorld
 		{
 			Block var5 = this.getBlock(p_147480_1_, p_147480_2_, p_147480_3_);
 
-			if (var5.Material == Material.air)
+			if (var5.BlockMaterial == Material.air)
 			{
 				return false;
 			}
@@ -707,7 +705,7 @@ namespace DotCraftCore.nWorld
 				}
 				catch (Exception var12)
 				{
-					CrashReport var7 = CrashReport.makeCrashReport(var12, "Exception while updating neighbours");
+					/*CrashReport var7 = CrashReport.makeCrashReport(var12, "Exception while updating neighbours");
 					CrashReportCategory var8 = var7.makeCategory("Block being updated");
 					int var9;
 
@@ -722,7 +720,7 @@ namespace DotCraftCore.nWorld
 
 					var8.addCrashSectionCallable("Source block type", new Callable() {  public string call() { try { return string.Format("ID #{0:D} ({1} // {2})", new object[] {Convert.ToInt32(Block.getIdFromBlock(p_147460_4_)), p_147460_4_.UnlocalizedName, p_147460_4_.GetType().CanonicalName}); } catch (Exception var2) { return "ID #" + Block.getIdFromBlock(p_147460_4_); } } });
 					CrashReportCategory.func_147153_a(var8, p_147460_1_, p_147460_2_, p_147460_3_, var5, var9);
-					throw new ReportedException(var7);
+					throw new ReportedException(var7);*/
 				}
 			}
 		}
@@ -4108,7 +4106,7 @@ namespace DotCraftCore.nWorld
 ///    
 ///     <summary> * Adds some basic stats of the world to the given crash report. </summary>
 ///     
-		public virtual CrashReportCategory addWorldInfoToCrashReport(CrashReport p_72914_1_)
+		/*public virtual CrashReportCategory addWorldInfoToCrashReport(CrashReport p_72914_1_)
 		{
 			CrashReportCategory var2 = p_72914_1_.makeCategoryDepth("Affected level", 1);
 			var2.addCrashSection("Level name", this.worldInfo == null ? "????" : this.worldInfo.WorldName);
@@ -4125,7 +4123,7 @@ namespace DotCraftCore.nWorld
 			}
 
 			return var2;
-		}
+		}*/
 
 ///    
 ///     <summary> * Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed

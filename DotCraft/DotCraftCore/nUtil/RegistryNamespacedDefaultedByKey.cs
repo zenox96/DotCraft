@@ -1,49 +1,49 @@
+using DotCraftCore.nBlock;
 namespace DotCraftCore.nUtil
 {
 
-	public class RegistryNamespacedDefaultedByKey : RegistryNamespaced
+	public class RegistryNamespacedDefaultedByKey : RegistryNamespaced<string, Block>
 	{
-		private readonly string field_148760_d;
-		private object field_148761_e;
+		private readonly string defualtKey;
+		private Block defaultValue;
 		
 
-		public RegistryNamespacedDefaultedByKey(string p_i45127_1_)
+		public RegistryNamespacedDefaultedByKey(string keyDefault)
 		{
-			this.field_148760_d = p_i45127_1_;
+			this.defualtKey = keyDefault;
 		}
 
 ///    
 ///     <summary> * Adds a new object to this registry, keyed by both the given integer ID and the given string. </summary>
 ///     
-		public override void addObject(int intID, string stringID, object obj)
+		public override void addObject(int intID, string stringID, Block obj)
 		{
-			if(this.field_148760_d.Equals(stringID))
+			if(this.defualtKey.Equals(stringID))
 			{
-				this.field_148761_e = obj;
+				this.defaultValue = obj;
 			}
 
 			base.addObject(intID, stringID, obj);
 		}
 
-		public override object getObject(string p_82594_1_)
+		public override Block getObject(string stringKey)
 		{
-			object var2 = base.getObject(p_82594_1_);
-			return var2 == null ? this.field_148761_e : var2;
+			Block var2 = base.getObject(stringKey);
+			return var2 == null ? this.defaultValue : var2;
 		}
 
 ///    
 ///     <summary> * Gets the object identified by the given ID. </summary>
 ///     
-		public override object getObjectForID(int p_148754_1_)
+		public override Block getObjectForID(int intKey)
 		{
-			object var2 = base.getObjectForID(p_148754_1_);
-			return var2 == null ? this.field_148761_e : var2;
+			Block var2 = base.getObjectForID(intKey);
+			return var2 == null ? this.defaultValue : var2;
 		}
 
-		public override object getObject(object p_82594_1_)
+		public override Block getObject(object objKey)
 		{
-			return this.getObject((string)p_82594_1_);
+			return this.getObject((string)objKey);
 		}
 	}
-
 }

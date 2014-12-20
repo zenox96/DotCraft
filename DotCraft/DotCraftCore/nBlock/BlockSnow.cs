@@ -1,22 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockSnow : Block
 	{
 		
@@ -27,11 +20,6 @@ namespace DotCraftCore.nBlock
 			this.TickRandomly = true;
 			this.CreativeTab = CreativeTabs.tabDecorations;
 			this.func_150154_b(0);
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("snow");
 		}
 
 ///    
@@ -81,7 +69,7 @@ namespace DotCraftCore.nBlock
 		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
 			Block var5 = p_149742_1_.getBlock(p_149742_2_, p_149742_3_ - 1, p_149742_4_);
-			return var5 != Blocks.ice && var5 != Blocks.packed_ice ? (var5.Material == Material.leaves ? true : (var5 == this && (p_149742_1_.getBlockMetadata(p_149742_2_, p_149742_3_ - 1, p_149742_4_) & 7) == 7 ? true : var5.OpaqueCube && var5.blockMaterial.blocksMovement())) : false;
+			return var5 != Blocks.ice && var5 != Blocks.packed_ice ? (var5.BlockMaterial == Material.leaves ? true : (var5 == this && (p_149742_1_.getBlockMetadata(p_149742_2_, p_149742_3_ - 1, p_149742_4_) & 7) == 7 ? true : var5.OpaqueCube && var5.BlockMaterial.blocksMovement())) : false;
 		}
 
 		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)

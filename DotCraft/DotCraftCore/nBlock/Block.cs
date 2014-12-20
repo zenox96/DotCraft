@@ -17,7 +17,7 @@ namespace DotCraftCore.nBlock
     
     public class Block
     {
-        public static readonly RegistryNamespaced blockRegistry = new RegistryNamespacedDefaultedByKey("air");
+        public static readonly RegistryNamespacedDefaultedByKey blockRegistry = new RegistryNamespacedDefaultedByKey("air");
         private CreativeTabs displayOnCreativeTab;
         protected internal string textureName;
 
@@ -901,7 +901,7 @@ namespace DotCraftCore.nBlock
 
         public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
         {
-            return p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_).blockMaterial.Replaceable;
+            return p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_).BlockMaterial.Replaceable;
         }
 
         ///    

@@ -1,20 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nMonster;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntitySilverfish = DotCraftCore.nEntity.nMonster.EntitySilverfish;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-	using ImmutablePair = org.apache.commons.lang3.tuple.ImmutablePair;
-
 	public class BlockSilverfish : Block
 	{
 		public static readonly string[] field_150198_a = new string[] {"stone", "cobble", "brick", "mossybrick", "crackedbrick", "chiseledbrick"};
@@ -24,37 +18,6 @@ namespace DotCraftCore.nBlock
 		{
 			this.Hardness = 0.0F;
 			this.CreativeTab = CreativeTabs.tabDecorations;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			switch (p_149691_2_)
-			{
-				case 1:
-					return Blocks.cobblestone.getBlockTextureFromSide(p_149691_1_);
-
-				case 2:
-					return Blocks.stonebrick.getBlockTextureFromSide(p_149691_1_);
-
-				case 3:
-					return Blocks.stonebrick.getIcon(p_149691_1_, 1);
-
-				case 4:
-					return Blocks.stonebrick.getIcon(p_149691_1_, 2);
-
-				case 5:
-					return Blocks.stonebrick.getIcon(p_149691_1_, 3);
-
-				default:
-					return Blocks.stone.getBlockTextureFromSide(p_149691_1_);
-			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
 		}
 
 		public virtual void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
@@ -115,27 +78,27 @@ namespace DotCraftCore.nBlock
 			return 0;
 		}
 
-		public static ImmutablePair func_150197_b(int p_150197_0_)
+		public static Tuple<Block, int> func_150197_b(int p_150197_0_)
 		{
 			switch (p_150197_0_)
 			{
 				case 1:
-					return new ImmutablePair(Blocks.cobblestone, Convert.ToInt32(0));
+                    return new Tuple<Block, int>(Blocks.cobblestone, 0);
 
 				case 2:
-					return new ImmutablePair(Blocks.stonebrick, Convert.ToInt32(0));
+                    return new Tuple<Block, int>(Blocks.stonebrick, 0);
 
 				case 3:
-					return new ImmutablePair(Blocks.stonebrick, Convert.ToInt32(1));
+                    return new Tuple<Block, int>(Blocks.stonebrick, 1);
 
 				case 4:
-					return new ImmutablePair(Blocks.stonebrick, Convert.ToInt32(2));
+                    return new Tuple<Block, int>(Blocks.stonebrick, 2);
 
 				case 5:
-					return new ImmutablePair(Blocks.stonebrick, Convert.ToInt32(3));
+                    return new Tuple<Block, int>(Blocks.stonebrick, 3);
 
 				default:
-					return new ImmutablePair(Blocks.stone, Convert.ToInt32(0));
+                    return new Tuple<Block, int>(Blocks.stone, 0);
 			}
 		}
 

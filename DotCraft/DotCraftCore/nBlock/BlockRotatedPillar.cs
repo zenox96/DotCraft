@@ -1,17 +1,10 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BlockRotatedPillar : Block
 	{
-		protected internal IIcon field_150164_N;
-		
-
 		protected internal BlockRotatedPillar(Material p_i45425_1_) : base(p_i45425_1_)
 		{
 		}
@@ -51,23 +44,6 @@ namespace DotCraftCore.nBlock
 			}
 
 			return var10 | var11;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			int var3 = p_149691_2_ & 12;
-			int var4 = p_149691_2_ & 3;
-			return var3 == 0 && (p_149691_1_ == 1 || p_149691_1_ == 0) ? this.func_150161_d(var4) : (var3 == 4 && (p_149691_1_ == 5 || p_149691_1_ == 4) ? this.func_150161_d(var4) : (var3 == 8 && (p_149691_1_ == 2 || p_149691_1_ == 3) ? this.func_150161_d(var4) : this.func_150163_b(var4)));
-		}
-
-		protected internal abstract IIcon func_150163_b(int p_150163_1_);
-
-		protected internal virtual IIcon func_150161_d(int p_150161_1_)
-		{
-			return this.field_150164_N;
 		}
 
 ///    

@@ -1,21 +1,12 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+using System;
 namespace DotCraftCore.nEntity.nMonster
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockSilverfish = DotCraftCore.nBlock.BlockSilverfish;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EnumCreatureAttribute = DotCraftCore.nEntity.EnumCreatureAttribute;
-	using SharedMonsterAttributes = DotCraftCore.nEntity.SharedMonsterAttributes;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using DamageSource = DotCraftCore.nUtil.DamageSource;
-	using EntityDamageSource = DotCraftCore.nUtil.EntityDamageSource;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-	using ImmutablePair = org.apache.commons.lang3.tuple.ImmutablePair;
-
 	public class EntitySilverfish : EntityMob
 	{
 ///    
@@ -173,8 +164,8 @@ namespace DotCraftCore.nEntity.nMonster
 										if (!this.worldObj.GameRules.getGameRuleBooleanValue("mobGriefing"))
 										{
 											int var8 = this.worldObj.getBlockMetadata(var1 + var6, var2 + var5, var3 + var7);
-											ImmutablePair var9 = BlockSilverfish.func_150197_b(var8);
-											this.worldObj.setBlock(var1 + var6, var2 + var5, var3 + var7, (Block)var9.Left, (int)((int?)var9.Right), 3);
+                                            Tuple<Block, int> var9 = BlockSilverfish.func_150197_b(var8);
+											this.worldObj.setBlock(var1 + var6, var2 + var5, var3 + var7, var9.Item1, var9.Item2, 3);
 										}
 										else
 										{
@@ -183,7 +174,7 @@ namespace DotCraftCore.nEntity.nMonster
 
 										Blocks.monster_egg.onBlockDestroyedByPlayer(this.worldObj, var1 + var6, var2 + var5, var3 + var7, 0);
 
-										if (this.rand.nextBoolean())
+										if (this.rand.NextBoolean())
 										{
 											var4 = true;
 											break;

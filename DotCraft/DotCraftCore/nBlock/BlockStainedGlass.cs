@@ -1,29 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-
 	public class BlockStainedGlass : BlockBreakable
 	{
-		private static readonly IIcon[] field_149998_a = new IIcon[16];
-		
-
 		public BlockStainedGlass(Material p_i45427_1_) : base("glass", p_i45427_1_, false)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return field_149998_a[p_149691_2_ % field_149998_a.Length];
 		}
 
 ///    
@@ -55,14 +42,6 @@ namespace DotCraftCore.nBlock
 			get
 			{
 				return 1;
-			}
-		}
-
-		public override void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			for (int var2 = 0; var2 < field_149998_a.Length; ++var2)
-			{
-				field_149998_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_" + ItemDye.field_150921_b[func_149997_b(var2)]);
 			}
 		}
 

@@ -1,15 +1,12 @@
-﻿using System;
+﻿using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using System;
 
 namespace DotCraftCore.nBlock
 {
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-
 	public class BlockStone : Block
 	{
-		
-
 		public BlockStone() : base(Material.rock)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

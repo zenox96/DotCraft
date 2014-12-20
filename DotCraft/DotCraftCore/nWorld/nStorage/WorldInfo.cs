@@ -617,7 +617,7 @@ namespace DotCraftCore.nWorld.nStorage
 ///    
 ///     <summary> * Returns true if the World is initialized. </summary>
 ///     
-		public virtual bool isInitialized()
+		public virtual bool Initialized
 		{
 			get
 			{

@@ -3,7 +3,7 @@ using System;
 namespace DotCraftCore.nUtil
 {
 
-	using CrashReport = DotCraftCore.crash.CrashReport;
+	using CrashReport = DotCraftCore.nCrash.CrashReport;
 
 	public class ReportedException : Exception
 	{
@@ -11,9 +11,9 @@ namespace DotCraftCore.nUtil
 		private readonly CrashReport theReportedExceptionCrashReport;
 		
 
-		public ReportedException(CrashReport p_i1356_1_)
+		public ReportedException(CrashReport crash)
 		{
-			this.theReportedExceptionCrashReport = p_i1356_1_;
+			this.theReportedExceptionCrashReport = crash;
 		}
 
 ///    

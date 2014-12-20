@@ -1,12 +1,8 @@
+using DotCraftCore.nBlock.nMaterial;
 namespace DotCraftCore.nBlock
 {
-
-	
-
 	public abstract class BlockDirectional : Block
 	{
-		
-
 		protected internal BlockDirectional(Material p_i45401_1_) : base(p_i45401_1_)
 		{
 		}

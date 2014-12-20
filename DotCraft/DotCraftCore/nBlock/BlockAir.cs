@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace DotCraftCore.nBlock
 {
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockAir : Block
 	{
         protected internal BlockAir( )
-            : base(Material.Material.air)
+            : base(Material.air)
 		{
 		}
 

@@ -1,22 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using ColorizerFoliage = DotCraftCore.nWorld.ColorizerFoliage;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockVine : Block
 	{
 		
@@ -166,7 +158,7 @@ namespace DotCraftCore.nBlock
 
 		private bool func_150093_a(Block p_150093_1_)
 		{
-			return p_150093_1_.renderAsNormalBlock() && p_150093_1_.blockMaterial.blocksMovement();
+			return p_150093_1_.renderAsNormalBlock() && p_150093_1_.BlockMaterial.blocksMovement();
 		}
 
 		private bool func_150094_e(World p_150094_1_, int p_150094_2_, int p_150094_3_, int p_150094_4_)
@@ -315,7 +307,7 @@ namespace DotCraftCore.nBlock
 
 						var12 = p_149674_1_.getBlock(p_149674_2_ + Direction.offsetX[var11], p_149674_3_, p_149674_4_ + Direction.offsetZ[var11]);
 
-						if (var12.blockMaterial == Material.air)
+						if (var12.BlockMaterial == Material.air)
 						{
 							var13 = var11 + 1 & 3;
 							var14 = var11 + 3 & 3;
@@ -341,7 +333,7 @@ namespace DotCraftCore.nBlock
 								p_149674_1_.setBlock(p_149674_2_ + Direction.offsetX[var11], p_149674_3_, p_149674_4_ + Direction.offsetZ[var11], this, 0, 2);
 							}
 						}
-						else if (var12.blockMaterial.Opaque && var12.renderAsNormalBlock())
+						else if (var12.BlockMaterial.Opaque && var12.renderAsNormalBlock())
 						{
 							p_149674_1_.setBlockMetadataWithNotify(p_149674_2_, p_149674_3_, p_149674_4_, var9 | 1 << var11, 2);
 						}
@@ -350,7 +342,7 @@ namespace DotCraftCore.nBlock
 					{
 						var12 = p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_);
 
-						if (var12.blockMaterial == Material.air)
+						if (var12.BlockMaterial == Material.air)
 						{
 							var13 = p_149674_1_.rand.Next(16) & var9;
 

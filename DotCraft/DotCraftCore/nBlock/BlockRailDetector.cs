@@ -1,26 +1,16 @@
+using DotCraftCore.nCommand;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityMinecartCommandBlock = DotCraftCore.nEntity.EntityMinecartCommandBlock;
-	using EntityMinecart = DotCraftCore.nEntity.nItem.EntityMinecart;
-	using Container = DotCraftCore.nInventory.Container;
-	using IInventory = DotCraftCore.nInventory.IInventory;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockRailDetector : BlockRailBase
 	{
-		private IIcon[] field_150055_b;
-		
-
 		public BlockRailDetector() : base(true)
 		{
 			this.TickRandomly = true;
@@ -147,21 +137,5 @@ namespace DotCraftCore.nBlock
 
 			return 0;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_150055_b = new IIcon[2];
-			this.field_150055_b[0] = p_149651_1_.registerIcon(this.TextureName);
-			this.field_150055_b[1] = p_149651_1_.registerIcon(this.TextureName + "_powered");
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return (p_149691_2_ & 8) != 0 ? this.field_150055_b[1] : this.field_150055_b[0];
-		}
 	}
-
 }

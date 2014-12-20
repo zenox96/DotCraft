@@ -263,6 +263,8 @@
     <Compile Include="nCommand\StringHelperClass.cs" />
     <Compile Include="nCommand\SyntaxErrorException.cs" />
     <Compile Include="nCommand\WrongUsageException.cs" />
+    <Compile Include="nCrash\CrashReport.cs" />
+    <Compile Include="nCrash\CrashReportCategory.cs" />
     <Compile Include="nDispenser\BehaviorDefaultDispenseItem.cs" />
     <Compile Include="nDispenser\BehaviorProjectileDispense.cs" />
     <Compile Include="nDispenser\IBehaviorDispenseItem.cs" />
