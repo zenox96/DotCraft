@@ -1,19 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityNote = DotCraftCore.nTileEntity.TileEntityNote;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockNote : BlockContainer
 	{
-		
-
 		public BlockNote() : base(Material.wood)
 		{
 			this.CreativeTab = CreativeTabs.tabRedstone;

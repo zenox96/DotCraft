@@ -1,36 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockPistonExtension : Block
 	{
-		private IIcon field_150088_a;
-		
-
 		public BlockPistonExtension() : base(Material.piston)
 		{
 			this.StepSound = soundTypePiston;
 			this.Hardness = 0.5F;
-		}
-
-		public virtual void func_150086_a(IIcon p_150086_1_)
-		{
-			this.field_150088_a = p_150086_1_;
 		}
 
 		public virtual void func_150087_e()
@@ -76,19 +60,6 @@ namespace DotCraftCore.nBlock
 					p_149749_1_.setBlockToAir(p_149749_2_, p_149749_3_, p_149749_4_);
 				}
 			}
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			int var3 = func_150085_b(p_149691_2_);
-			return p_149691_1_ == var3 ? (this.field_150088_a != null ? this.field_150088_a : ((p_149691_2_ & 8) != 0 ? BlockPistonBase.func_150074_e("piston_top_sticky") : BlockPistonBase.func_150074_e("piston_top_normal"))) : (var3 < 6 && p_149691_1_ == Facing.oppositeSide[var3] ? BlockPistonBase.func_150074_e("piston_top_normal") : BlockPistonBase.func_150074_e("piston_side"));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
 		}
 
 ///    
@@ -243,7 +214,7 @@ namespace DotCraftCore.nBlock
 
 		public static int func_150085_b(int p_150085_0_)
 		{
-			return MathHelper.clamp_int(p_150085_0_ & 7, 0, Facing.offsetsXForSide.length - 1);
+			return MathHelper.clamp_int(p_150085_0_ & 7, 0, Facing.offsetsXForSide.Length - 1);
 		}
 
 ///    

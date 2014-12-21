@@ -1,14 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInventory;
-
 	public class BlockGlass : BlockBreakable
 	{
-		
-
 		public BlockGlass(Material p_i45408_1_, bool p_i45408_2_) : base("glass", p_i45408_1_, p_i45408_2_)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

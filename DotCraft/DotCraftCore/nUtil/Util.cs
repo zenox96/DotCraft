@@ -34,5 +34,10 @@ namespace DotCraftCore.nUtil
         {
             return rand.Next(1) > 0 ? true : false;
         }
+
+        public static double NextGaussian(this Random rand)
+        {
+            return Math.Sqrt(-2.0 * Math.Log(rand.NextDouble( ))) * Math.Sin(2.0 * Math.PI * rand.NextDouble( ));
+        }
     }
 }

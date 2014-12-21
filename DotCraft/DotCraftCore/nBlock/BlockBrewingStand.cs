@@ -1,37 +1,27 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Items = DotCraftCore.nInit.Items;
-	using Container = DotCraftCore.nInventory.Container;
-	using IInventory = DotCraftCore.nInventory.IInventory;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityBrewingStand = DotCraftCore.nTileEntity.TileEntityBrewingStand;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockBrewingStand : BlockContainer
 	{
 		private Random field_149961_a = new Random();
-		private IIcon field_149960_b;
-		
 
 		public BlockBrewingStand() : base(Material.iron)
 		{
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -117,9 +107,9 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
-			double var6 = (double)((float)p_149734_2_ + 0.4F + p_149734_5_.nextFloat() * 0.2F);
-			double var8 = (double)((float)p_149734_3_ + 0.7F + p_149734_5_.nextFloat() * 0.3F);
-			double var10 = (double)((float)p_149734_4_ + 0.4F + p_149734_5_.nextFloat() * 0.2F);
+			double var6 = (double)((float)p_149734_2_ + 0.4F + p_149734_5_.NextDouble() * 0.2F);
+			double var8 = (double)((float)p_149734_3_ + 0.7F + p_149734_5_.NextDouble() * 0.3F);
+			double var10 = (double)((float)p_149734_4_ + 0.4F + p_149734_5_.NextDouble() * 0.2F);
 			p_149734_1_.spawnParticle("smoke", var6, var8, var10, 0.0D, 0.0D, 0.0D);
 		}
 
@@ -137,9 +127,9 @@ namespace DotCraftCore.nBlock
 
 					if (var10 != null)
 					{
-						float var11 = this.field_149961_a.nextFloat() * 0.8F + 0.1F;
-						float var12 = this.field_149961_a.nextFloat() * 0.8F + 0.1F;
-						float var13 = this.field_149961_a.nextFloat() * 0.8F + 0.1F;
+						float var11 = this.field_149961_a.NextFloat() * 0.8F + 0.1F;
+						float var12 = this.field_149961_a.NextFloat() * 0.8F + 0.1F;
+						float var13 = this.field_149961_a.NextFloat() * 0.8F + 0.1F;
 
 						while (var10.stackSize > 0)
 						{
@@ -153,9 +143,9 @@ namespace DotCraftCore.nBlock
 							var10.stackSize -= var14;
 							EntityItem var15 = new EntityItem(p_149749_1_, (double)((float)p_149749_2_ + var11), (double)((float)p_149749_3_ + var12), (double)((float)p_149749_4_ + var13), new ItemStack(var10.Item, var14, var10.ItemDamage));
 							float var16 = 0.05F;
-							var15.motionX = (double)((float)this.field_149961_a.nextGaussian() * var16);
-							var15.motionY = (double)((float)this.field_149961_a.nextGaussian() * var16 + 0.2F);
-							var15.motionZ = (double)((float)this.field_149961_a.nextGaussian() * var16);
+							var15.motionX = (double)((float)this.field_149961_a.NextGaussian() * var16);
+							var15.motionY = (double)((float)this.field_149961_a.NextGaussian() * var16 + 0.2F);
+							var15.motionZ = (double)((float)this.field_149961_a.NextGaussian() * var16);
 							p_149749_1_.spawnEntityInWorld(var15);
 						}
 					}
@@ -187,17 +177,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Container.calcRedstoneFromInventory((IInventory)p_149736_1_.getTileEntity(p_149736_2_, p_149736_3_, p_149736_4_));
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			base.registerBlockIcons(p_149651_1_);
-			this.field_149960_b = p_149651_1_.registerIcon(this.TextureName + "_base");
-		}
-
-		public virtual IIcon func_149959_e()
-		{
-			return this.field_149960_b;
-		}
 	}
-
 }

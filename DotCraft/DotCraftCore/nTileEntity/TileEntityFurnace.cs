@@ -17,6 +17,7 @@ namespace DotCraftCore.nTileEntity
 	using FurnaceRecipes = DotCraftCore.item.crafting.FurnaceRecipes;
 	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
 	using NBTTagList = DotCraftCore.nbt.NBTTagList;
+    using DotCraftCore.nItem;
 
 	public class TileEntityFurnace : TileEntity, ISidedInventory
 	{

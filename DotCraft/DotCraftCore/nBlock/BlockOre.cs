@@ -1,20 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockOre : Block
 	{
-		
-
 		public BlockOre() : base(Material.rock)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

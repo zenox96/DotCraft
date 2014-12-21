@@ -1,19 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nWorld;
-
 	public class BlockDynamicLiquid : BlockLiquid
 	{
 		internal int field_149815_a;
 		internal bool[] field_149814_b = new bool[4];
 		internal int[] field_149816_M = new int[4];
-		
 
 		protected internal BlockDynamicLiquid(Material p_i45403_1_) : base(p_i45403_1_)
 		{
@@ -33,7 +29,7 @@ namespace DotCraftCore.nBlock
 			int var6 = this.func_149804_e(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_);
 			sbyte var7 = 1;
 
-			if (this.blockMaterial == Material.lava && !p_149674_1_.provider.isHellWorld)
+			if (this.BlockMaterial == Material.lava && !p_149674_1_.provider.isHellWorld)
 			{
 				var7 = 2;
 			}
@@ -71,19 +67,19 @@ namespace DotCraftCore.nBlock
 					}
 				}
 
-				if (this.field_149815_a >= 2 && this.blockMaterial == Material.water)
+				if (this.field_149815_a >= 2 && this.BlockMaterial == Material.water)
 				{
-					if (p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).Material.Solid)
+					if (p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).BlockMaterial.Solid)
 					{
 						var11 = 0;
 					}
-					else if (p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).Material == this.blockMaterial && p_149674_1_.getBlockMetadata(p_149674_2_, p_149674_3_ - 1, p_149674_4_) == 0)
+					else if (p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).BlockMaterial == this.BlockMaterial && p_149674_1_.getBlockMetadata(p_149674_2_, p_149674_3_ - 1, p_149674_4_) == 0)
 					{
 						var11 = 0;
 					}
 				}
 
-				if (this.blockMaterial == Material.lava && var6 < 8 && var11 < 8 && var11 > var6 && p_149674_5_.Next(4) != 0)
+				if (this.BlockMaterial == Material.lava && var6 < 8 && var11 < 8 && var11 > var6 && p_149674_5_.Next(4) != 0)
 				{
 					var9 *= 4;
 				}
@@ -118,7 +114,7 @@ namespace DotCraftCore.nBlock
 
 			if (this.func_149809_q(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_))
 			{
-				if (this.blockMaterial == Material.lava && p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).Material == Material.water)
+				if (this.BlockMaterial == Material.lava && p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).BlockMaterial == Material.water)
 				{
 					p_149674_1_.setBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_, Blocks.stone);
 					this.func_149799_m(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_);
@@ -177,7 +173,7 @@ namespace DotCraftCore.nBlock
 			{
 				Block var6 = p_149813_1_.getBlock(p_149813_2_, p_149813_3_, p_149813_4_);
 
-				if (this.blockMaterial == Material.lava)
+				if (this.BlockMaterial == Material.lava)
 				{
 					this.func_149799_m(p_149813_1_, p_149813_2_, p_149813_3_, p_149813_4_);
 				}
@@ -221,7 +217,7 @@ namespace DotCraftCore.nBlock
 						++var11;
 					}
 
-					if (!this.func_149807_p(p_149812_1_, var9, p_149812_3_, var11) && (p_149812_1_.getBlock(var9, p_149812_3_, var11).Material != this.blockMaterial || p_149812_1_.getBlockMetadata(var9, p_149812_3_, var11) != 0))
+					if (!this.func_149807_p(p_149812_1_, var9, p_149812_3_, var11) && (p_149812_1_.getBlock(var9, p_149812_3_, var11).BlockMaterial != this.BlockMaterial || p_149812_1_.getBlockMetadata(var9, p_149812_3_, var11) != 0))
 					{
 						if (!this.func_149807_p(p_149812_1_, var9, p_149812_3_ - 1, var11))
 						{
@@ -275,7 +271,7 @@ namespace DotCraftCore.nBlock
 					++var8;
 				}
 
-				if (!this.func_149807_p(p_149808_1_, var6, p_149808_3_, var8) && (p_149808_1_.getBlock(var6, p_149808_3_, var8).Material != this.blockMaterial || p_149808_1_.getBlockMetadata(var6, p_149808_3_, var8) != 0))
+				if (!this.func_149807_p(p_149808_1_, var6, p_149808_3_, var8) && (p_149808_1_.getBlock(var6, p_149808_3_, var8).BlockMaterial != this.BlockMaterial || p_149808_1_.getBlockMetadata(var6, p_149808_3_, var8) != 0))
 				{
 					if (this.func_149807_p(p_149808_1_, var6, p_149808_3_ - 1, var8))
 					{
@@ -309,7 +305,7 @@ namespace DotCraftCore.nBlock
 		private bool func_149807_p(World p_149807_1_, int p_149807_2_, int p_149807_3_, int p_149807_4_)
 		{
 			Block var5 = p_149807_1_.getBlock(p_149807_2_, p_149807_3_, p_149807_4_);
-			return var5 != Blocks.wooden_door && var5 != Blocks.iron_door && var5 != Blocks.standing_sign && var5 != Blocks.ladder && var5 != Blocks.reeds ? (var5.blockMaterial == Material.Portal ? true : var5.blockMaterial.blocksMovement()) : true;
+			return var5 != Blocks.wooden_door && var5 != Blocks.iron_door && var5 != Blocks.standing_sign && var5 != Blocks.ladder && var5 != Blocks.reeds ? (var5.BlockMaterial == Material.Portal ? true : var5.BlockMaterial.blocksMovement()) : true;
 		}
 
 		protected internal virtual int func_149810_a(World p_149810_1_, int p_149810_2_, int p_149810_3_, int p_149810_4_, int p_149810_5_)
@@ -338,8 +334,8 @@ namespace DotCraftCore.nBlock
 
 		private bool func_149809_q(World p_149809_1_, int p_149809_2_, int p_149809_3_, int p_149809_4_)
 		{
-			Material var5 = p_149809_1_.getBlock(p_149809_2_, p_149809_3_, p_149809_4_).Material;
-			return var5 == this.blockMaterial ? false : (var5 == Material.lava ? false : !this.func_149807_p(p_149809_1_, p_149809_2_, p_149809_3_, p_149809_4_));
+			Material var5 = p_149809_1_.getBlock(p_149809_2_, p_149809_3_, p_149809_4_).BlockMaterial;
+			return var5 == this.BlockMaterial ? false : (var5 == Material.lava ? false : !this.func_149807_p(p_149809_1_, p_149809_2_, p_149809_3_, p_149809_4_));
 		}
 
 		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)

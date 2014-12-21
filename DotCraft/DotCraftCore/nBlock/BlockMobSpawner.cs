@@ -1,18 +1,12 @@
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using Item = DotCraftCore.nItem.Item;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityMobSpawner = DotCraftCore.nTileEntity.TileEntityMobSpawner;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockMobSpawner : BlockContainer
 	{
-		
-
 		protected internal BlockMobSpawner() : base(Material.rock)
 		{
 		}
@@ -48,7 +42,7 @@ namespace DotCraftCore.nBlock
 			this.dropXpOnBlockBreak(p_149690_1_, p_149690_2_, p_149690_3_, p_149690_4_, var8);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

@@ -1,18 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public abstract class BlockLiquid : Block
 	{
-		private IIcon[] field_149806_a;
-		
-
 		protected internal BlockLiquid(Material p_i45413_1_) : base(p_i45413_1_)
 		{
 			float var2 = 0.0F;
@@ -23,7 +20,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
 		{
-			return this.blockMaterial != Material.lava;
+			return this.BlockMaterial != Material.lava;
 		}
 
 		public virtual int BlockColor
@@ -40,7 +37,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
-			if (this.blockMaterial != Material.water)
+			if (this.BlockMaterial != Material.water)
 			{
 				return 16777215;
 			}
@@ -75,22 +72,14 @@ namespace DotCraftCore.nBlock
 			return (float)(p_149801_0_ + 1) / 9.0F;
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ != 0 && p_149691_1_ != 1 ? this.field_149806_a[1] : this.field_149806_a[0];
-		}
-
 		protected internal virtual int func_149804_e(World p_149804_1_, int p_149804_2_, int p_149804_3_, int p_149804_4_)
 		{
-			return p_149804_1_.getBlock(p_149804_2_, p_149804_3_, p_149804_4_).Material == this.blockMaterial ? p_149804_1_.getBlockMetadata(p_149804_2_, p_149804_3_, p_149804_4_) : -1;
+			return p_149804_1_.getBlock(p_149804_2_, p_149804_3_, p_149804_4_).BlockMaterial == this.BlockMaterial ? p_149804_1_.getBlockMetadata(p_149804_2_, p_149804_3_, p_149804_4_) : -1;
 		}
 
 		protected internal virtual int func_149798_e(IBlockAccess p_149798_1_, int p_149798_2_, int p_149798_3_, int p_149798_4_)
 		{
-			if (p_149798_1_.getBlock(p_149798_2_, p_149798_3_, p_149798_4_).Material != this.blockMaterial)
+			if (p_149798_1_.getBlock(p_149798_2_, p_149798_3_, p_149798_4_).BlockMaterial != this.BlockMaterial)
 			{
 				return -1;
 			}
@@ -112,7 +101,7 @@ namespace DotCraftCore.nBlock
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{
@@ -131,14 +120,14 @@ namespace DotCraftCore.nBlock
 
 		public virtual bool isBlockSolid(IBlockAccess p_149747_1_, int p_149747_2_, int p_149747_3_, int p_149747_4_, int p_149747_5_)
 		{
-			Material var6 = p_149747_1_.getBlock(p_149747_2_, p_149747_3_, p_149747_4_).Material;
-			return var6 == this.blockMaterial ? false : (p_149747_5_ == 1 ? true : (var6 == Material.ice ? false : base.isBlockSolid(p_149747_1_, p_149747_2_, p_149747_3_, p_149747_4_, p_149747_5_)));
+			Material var6 = p_149747_1_.getBlock(p_149747_2_, p_149747_3_, p_149747_4_).BlockMaterial;
+			return var6 == this.BlockMaterial ? false : (p_149747_5_ == 1 ? true : (var6 == Material.ice ? false : base.isBlockSolid(p_149747_1_, p_149747_2_, p_149747_3_, p_149747_4_, p_149747_5_)));
 		}
 
 		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
-			Material var6 = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_).Material;
-			return var6 == this.blockMaterial ? false : (p_149646_5_ == 1 ? true : base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_));
+			Material var6 = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_).BlockMaterial;
+			return var6 == this.BlockMaterial ? false : (p_149646_5_ == 1 ? true : base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_));
 		}
 
 ///    
@@ -209,7 +198,7 @@ namespace DotCraftCore.nBlock
 
 				if (var11 < 0)
 				{
-					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).Material.blocksMovement())
+					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).BlockMaterial.blocksMovement())
 					{
 						var11 = this.func_149798_e(p_149800_1_, var8, p_149800_3_ - 1, var10);
 
@@ -291,7 +280,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual int func_149738_a(World p_149738_1_)
 		{
-			return this.blockMaterial == Material.water ? 5 : (this.blockMaterial == Material.lava ? (p_149738_1_.provider.hasNoSky ? 10 : 30) : 0);
+			return this.BlockMaterial == Material.water ? 5 : (this.BlockMaterial == Material.lava ? (p_149738_1_.provider.hasNoSky ? 10 : 30) : 0);
 		}
 
 		public virtual int getBlockBrightness(IBlockAccess p_149677_1_, int p_149677_2_, int p_149677_3_, int p_149677_4_)
@@ -312,7 +301,7 @@ namespace DotCraftCore.nBlock
 		{
 			get
 			{
-				return this.blockMaterial == Material.water ? 1 : 0;
+				return this.BlockMaterial == Material.water ? 1 : 0;
 			}
 		}
 
@@ -323,7 +312,7 @@ namespace DotCraftCore.nBlock
 		{
 			int var6;
 
-			if (this.blockMaterial == Material.water)
+			if (this.BlockMaterial == Material.water)
 			{
 				if (p_149734_5_.Next(10) == 0)
 				{
@@ -331,7 +320,7 @@ namespace DotCraftCore.nBlock
 
 					if (var6 <= 0 || var6 >= 8)
 					{
-						p_149734_1_.spawnParticle("suspended", (double)((float)p_149734_2_ + p_149734_5_.nextFloat()), (double)((float)p_149734_3_ + p_149734_5_.nextFloat()), (double)((float)p_149734_4_ + p_149734_5_.nextFloat()), 0.0D, 0.0D, 0.0D);
+						p_149734_1_.spawnParticle("suspended", ((double)p_149734_2_ + p_149734_5_.NextDouble()), ((double)p_149734_3_ + p_149734_5_.NextDouble()), ((double)p_149734_4_ + p_149734_5_.NextDouble()), 0.0D, 0.0D, 0.0D);
 					}
 				}
 
@@ -361,31 +350,31 @@ namespace DotCraftCore.nBlock
 						++var9;
 					}
 
-					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).Material == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).Material.blocksMovement() || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).Material.Liquid))
+					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).BlockMaterial == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.blocksMovement() || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.Liquid))
 					{
-						float var10 = 0.0625F;
-						double var11 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
-						double var13 = (double)((float)p_149734_3_ + p_149734_5_.nextFloat());
-						double var15 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+						double var10 = 0.0625D;
+						double var11 = ((double)p_149734_2_ + p_149734_5_.NextDouble());
+						double var13 = ((double)p_149734_3_ + p_149734_5_.NextDouble());
+						double var15 = ((double)p_149734_4_ + p_149734_5_.NextDouble());
 
 						if (var7 == 0)
 						{
-							var11 = (double)((float)p_149734_2_ - var10);
+							var11 = ((double)p_149734_2_ - var10);
 						}
 
 						if (var7 == 1)
 						{
-							var11 = (double)((float)(p_149734_2_ + 1) + var10);
+							var11 = ((double)(p_149734_2_ + 1) + var10);
 						}
 
 						if (var7 == 2)
 						{
-							var15 = (double)((float)p_149734_4_ - var10);
+							var15 = ((double)p_149734_4_ - var10);
 						}
 
 						if (var7 == 3)
 						{
-							var15 = (double)((float)(p_149734_4_ + 1) + var10);
+							var15 = ((double)(p_149734_4_ + 1) + var10);
 						}
 
 						double var17 = 0.0D;
@@ -416,13 +405,13 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			if (this.blockMaterial == Material.water && p_149734_5_.Next(64) == 0)
+			if (this.BlockMaterial == Material.water && p_149734_5_.Next(64) == 0)
 			{
 				var6 = p_149734_1_.getBlockMetadata(p_149734_2_, p_149734_3_, p_149734_4_);
 
 				if (var6 > 0 && var6 < 8)
 				{
-					p_149734_1_.playSound((double)((float)p_149734_2_ + 0.5F), (double)((float)p_149734_3_ + 0.5F), (double)((float)p_149734_4_ + 0.5F), "liquid.water", p_149734_5_.nextFloat() * 0.25F + 0.75F, p_149734_5_.nextFloat() * 1.0F + 0.5F, false);
+					p_149734_1_.playSound((double)p_149734_2_ + 0.5D, (double)p_149734_3_ + 0.5D, (double)p_149734_4_ + 0.5D, "liquid.water", p_149734_5_.NextFloat() * 0.25F + 0.75F, p_149734_5_.NextFloat() * 1.0F + 0.5F, false);
 				}
 			}
 
@@ -430,30 +419,30 @@ namespace DotCraftCore.nBlock
 			double var22;
 			double var23;
 
-			if (this.blockMaterial == Material.lava && p_149734_1_.getBlock(p_149734_2_, p_149734_3_ + 1, p_149734_4_).Material == Material.air && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ + 1, p_149734_4_).OpaqueCube)
+			if (this.BlockMaterial == Material.lava && p_149734_1_.getBlock(p_149734_2_, p_149734_3_ + 1, p_149734_4_).BlockMaterial == Material.air && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ + 1, p_149734_4_).OpaqueCube)
 			{
 				if (p_149734_5_.Next(100) == 0)
 				{
-					var21 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
+					var21 = (double)p_149734_2_ + p_149734_5_.NextDouble();
 					var22 = (double)p_149734_3_ + this.field_149756_F;
-					var23 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+					var23 = (double)p_149734_4_ + p_149734_5_.NextFloat();
 					p_149734_1_.spawnParticle("lava", var21, var22, var23, 0.0D, 0.0D, 0.0D);
-					p_149734_1_.playSound(var21, var22, var23, "liquid.lavapop", 0.2F + p_149734_5_.nextFloat() * 0.2F, 0.9F + p_149734_5_.nextFloat() * 0.15F, false);
+					p_149734_1_.playSound(var21, var22, var23, "liquid.lavapop", 0.2F + p_149734_5_.NextFloat() * 0.2F, 0.9F + p_149734_5_.NextFloat() * 0.15F, false);
 				}
 
 				if (p_149734_5_.Next(200) == 0)
 				{
-					p_149734_1_.playSound((double)p_149734_2_, (double)p_149734_3_, (double)p_149734_4_, "liquid.lava", 0.2F + p_149734_5_.nextFloat() * 0.2F, 0.9F + p_149734_5_.nextFloat() * 0.15F, false);
+					p_149734_1_.playSound((double)p_149734_2_, (double)p_149734_3_, (double)p_149734_4_, "liquid.lava", 0.2F + p_149734_5_.NextFloat() * 0.2F, 0.9F + p_149734_5_.NextFloat() * 0.15F, false);
 				}
 			}
 
-			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).Material.blocksMovement())
+			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).BlockMaterial.blocksMovement())
 			{
-				var21 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
+				var21 = (double)p_149734_2_ + p_149734_5_.NextDouble();
 				var22 = (double)p_149734_3_ - 1.05D;
-				var23 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+				var23 = (double)p_149734_4_ + p_149734_5_.NextDouble();
 
-				if (this.blockMaterial == Material.water)
+				if (this.BlockMaterial == Material.water)
 				{
 					p_149734_1_.spawnParticle("dripWater", var21, var22, var23, 0.0D, 0.0D, 0.0D);
 				}
@@ -495,31 +484,31 @@ namespace DotCraftCore.nBlock
 		{
 			if (p_149805_1_.getBlock(p_149805_2_, p_149805_3_, p_149805_4_) == this)
 			{
-				if (this.blockMaterial == Material.lava)
+				if (this.BlockMaterial == Material.lava)
 				{
 					bool var5 = false;
 
-					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_, p_149805_4_ - 1).Material == Material.water)
+					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_, p_149805_4_ - 1).BlockMaterial == Material.water)
 					{
 						var5 = true;
 					}
 
-					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_, p_149805_4_ + 1).Material == Material.water)
+					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_, p_149805_4_ + 1).BlockMaterial == Material.water)
 					{
 						var5 = true;
 					}
 
-					if (var5 || p_149805_1_.getBlock(p_149805_2_ - 1, p_149805_3_, p_149805_4_).Material == Material.water)
+					if (var5 || p_149805_1_.getBlock(p_149805_2_ - 1, p_149805_3_, p_149805_4_).BlockMaterial == Material.water)
 					{
 						var5 = true;
 					}
 
-					if (var5 || p_149805_1_.getBlock(p_149805_2_ + 1, p_149805_3_, p_149805_4_).Material == Material.water)
+					if (var5 || p_149805_1_.getBlock(p_149805_2_ + 1, p_149805_3_, p_149805_4_).BlockMaterial == Material.water)
 					{
 						var5 = true;
 					}
 
-					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_ + 1, p_149805_4_).Material == Material.water)
+					if (var5 || p_149805_1_.getBlock(p_149805_2_, p_149805_3_ + 1, p_149805_4_).BlockMaterial == Material.water)
 					{
 						var5 = true;
 					}
@@ -545,30 +534,12 @@ namespace DotCraftCore.nBlock
 
 		protected internal virtual void func_149799_m(World p_149799_1_, int p_149799_2_, int p_149799_3_, int p_149799_4_)
 		{
-			p_149799_1_.playSoundEffect((double)((float)p_149799_2_ + 0.5F), (double)((float)p_149799_3_ + 0.5F), (double)((float)p_149799_4_ + 0.5F), "random.fizz", 0.5F, 2.6F + (p_149799_1_.rand.nextFloat() - p_149799_1_.rand.nextFloat()) * 0.8F);
+			p_149799_1_.playSoundEffect((double)p_149799_2_ + 0.5D, (double)p_149799_3_ + 0.5D, (double)p_149799_4_ + 0.5D, "random.fizz", 0.5F, 2.6F + (p_149799_1_.rand.NextFloat() - p_149799_1_.rand.NextFloat()) * 0.8F);
 
 			for (int var5 = 0; var5 < 8; ++var5)
 			{
 				p_149799_1_.spawnParticle("largesmoke", (double)p_149799_2_ + new Random(1).NextDouble(), (double)p_149799_3_ + 1.2D, (double)p_149799_4_ + new Random(2).NextDouble(), 0.0D, 0.0D, 0.0D);
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			if (this.blockMaterial == Material.lava)
-			{
-				this.field_149806_a = new IIcon[] {p_149651_1_.registerIcon("lava_still"), p_149651_1_.registerIcon("lava_flow")};
-			}
-			else
-			{
-				this.field_149806_a = new IIcon[] {p_149651_1_.registerIcon("water_still"), p_149651_1_.registerIcon("water_flow")};
-			}
-		}
-
-		public static IIcon func_149803_e(string p_149803_0_)
-		{
-			return p_149803_0_ == "water_still" ? Blocks.flowing_water.field_149806_a[0] : (p_149803_0_ == "water_flow" ? Blocks.flowing_water.field_149806_a[1] : (p_149803_0_ == "lava_still" ? Blocks.flowing_lava.field_149806_a[0] : (p_149803_0_ == "lava_flow" ? Blocks.flowing_lava.field_149806_a[1] : null)));
-		}
 	}
-
 }

@@ -1,38 +1,10 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockPotato : BlockCrops
 	{
-		private IIcon[] field_149869_a;
-		
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public override IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_2_ < 7)
-			{
-				if (p_149691_2_ == 6)
-				{
-					p_149691_2_ = 5;
-				}
-
-				return this.field_149869_a[p_149691_2_ >> 1];
-			}
-			else
-			{
-				return this.field_149869_a[3];
-			}
-		}
-
 		protected internal override Item func_149866_i()
 		{
 			return Items.potato;
@@ -58,16 +30,5 @@ namespace DotCraftCore.nBlock
 				}
 			}
 		}
-
-		public override void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149869_a = new IIcon[4];
-
-			for (int var2 = 0; var2 < this.field_149869_a.Length; ++var2)
-			{
-				this.field_149869_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_stage_" + var2);
-			}
-		}
 	}
-
 }

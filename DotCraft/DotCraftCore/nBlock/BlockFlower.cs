@@ -1,51 +1,22 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-
 	public class BlockFlower : BlockBush
 	{
-		private static readonly string[][] field_149860_M = new string[][] {{"flower_dandelion"}, {"flower_rose", "flower_blue_orchid", "flower_allium", "flower_houstonia", "flower_tulip_red", "flower_tulip_orange", "flower_tulip_white", "flower_tulip_pink", "flower_oxeye_daisy"}};
+		private static readonly string[,] field_149860_M = new string[,] {{"flower_dandelion"}, {"flower_rose", "flower_blue_orchid", "flower_allium", "flower_houstonia", "flower_tulip_red", "flower_tulip_orange", "flower_tulip_white", "flower_tulip_pink", "flower_oxeye_daisy"}};
 		public static readonly string[] field_149859_a = new string[] {"poppy", "blueOrchid", "allium", "houstonia", "tulipRed", "tulipOrange", "tulipWhite", "tulipPink", "oxeyeDaisy"};
 		public static readonly string[] field_149858_b = new string[] {"dandelion"};
-		private IIcon[] field_149861_N;
 		private int field_149862_O;
 		
 
 		protected internal BlockFlower(int p_i2173_1_) : base(Material.plants)
 		{
 			this.field_149862_O = p_i2173_1_;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_2_ >= this.field_149861_N.Length)
-			{
-				p_149691_2_ = 0;
-			}
-
-			return this.field_149861_N[p_149691_2_];
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149861_N = new IIcon[field_149860_M[this.field_149862_O].Length];
-
-			for (int var2 = 0; var2 < this.field_149861_N.Length; ++var2)
-			{
-				this.field_149861_N[var2] = p_149651_1_.registerIcon(field_149860_M[this.field_149862_O][var2]);
-			}
 		}
 
 ///    

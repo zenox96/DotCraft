@@ -1,16 +1,12 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nWorld;
+using DotCraftCore.nWorld.nGen.nFeature;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using World = DotCraftCore.nWorld.World;
-	using WorldGenBigMushroom = DotCraftCore.nWorld.nGen.nFeature.WorldGenBigMushroom;
-
 	public class BlockMushroom : BlockBush, IGrowable
 	{
-		
-
 		protected internal BlockMushroom()
 		{
 			float var1 = 0.2F;
@@ -134,7 +130,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
 		{
-			return (double)p_149852_2_.nextFloat() < 0.4D;
+			return p_149852_2_.NextDouble() < 0.4D;
 		}
 
 		public virtual void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)

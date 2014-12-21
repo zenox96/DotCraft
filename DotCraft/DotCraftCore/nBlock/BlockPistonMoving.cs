@@ -1,19 +1,12 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Item = DotCraftCore.nItem.Item;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityPiston = DotCraftCore.nTileEntity.TileEntityPiston;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockPistonMoving : BlockContainer
 	{
 		
@@ -169,7 +162,7 @@ namespace DotCraftCore.nBlock
 			{
 				Block var6 = var5.func_145861_a();
 
-				if (var6 == this || var6.Material == Material.air)
+				if (var6 == this || var6.BlockMaterial == Material.air)
 				{
 					return;
 				}
@@ -194,7 +187,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual AxisAlignedBB func_149964_a(World p_149964_1_, int p_149964_2_, int p_149964_3_, int p_149964_4_, Block p_149964_5_, float p_149964_6_, int p_149964_7_)
 		{
-			if (p_149964_5_ != this && p_149964_5_.Material != Material.air)
+			if (p_149964_5_ != this && p_149964_5_.BlockMaterial != Material.air)
 			{
 				AxisAlignedBB var8 = p_149964_5_.getCollisionBoundingBoxFromPool(p_149964_1_, p_149964_2_, p_149964_3_, p_149964_4_);
 
@@ -253,11 +246,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Item.getItemById(0);
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("piston_top_normal");
-		}
 	}
-
 }

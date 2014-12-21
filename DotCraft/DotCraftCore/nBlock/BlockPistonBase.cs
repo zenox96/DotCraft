@@ -1,32 +1,19 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityPiston = DotCraftCore.nTileEntity.TileEntityPiston;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockPistonBase : Block
 	{
 		private readonly bool field_150082_a;
-		private IIcon field_150081_b;
-		private IIcon field_150083_M;
-		private IIcon field_150084_N;
-		
 
 		public BlockPistonBase(bool p_i45443_1_) : base(Material.piston)
 		{
@@ -36,36 +23,9 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabRedstone;
 		}
 
-		public virtual IIcon func_150073_e()
-		{
-			return this.field_150084_N;
-		}
-
 		public virtual void func_150070_b(float p_150070_1_, float p_150070_2_, float p_150070_3_, float p_150070_4_, float p_150070_5_, float p_150070_6_)
 		{
 			this.setBlockBounds(p_150070_1_, p_150070_2_, p_150070_3_, p_150070_4_, p_150070_5_, p_150070_6_);
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			int var3 = func_150076_b(p_149691_2_);
-			return var3 > 5 ? this.field_150084_N : (p_149691_1_ == var3 ? (!func_150075_c(p_149691_2_) && this.field_149759_B <= 0.0D && this.field_149760_C <= 0.0D && this.field_149754_D <= 0.0D && this.field_149755_E >= 1.0D && this.field_149756_F >= 1.0D && this.field_149757_G >= 1.0D ? this.field_150084_N : this.field_150081_b) : (p_149691_1_ == Facing.oppositeSide[var3] ? this.field_150083_M : this.blockIcon));
-		}
-
-		public static IIcon func_150074_e(string p_150074_0_)
-		{
-			return p_150074_0_ == "piston_side" ? Blocks.piston.blockIcon : (p_150074_0_ == "piston_top_normal" ? Blocks.piston.field_150084_N : (p_150074_0_ == "piston_top_sticky" ? Blocks.sticky_piston.field_150084_N : (p_150074_0_ == "piston_inner" ? Blocks.piston.field_150081_b : null)));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("piston_side");
-			this.field_150084_N = p_149651_1_.registerIcon(this.field_150082_a ? "piston_top_sticky" : "piston_top_normal");
-			this.field_150081_b = p_149651_1_.registerIcon("piston_inner");
-			this.field_150083_M = p_149651_1_.registerIcon("piston_bottom");
 		}
 
 ///    
@@ -180,7 +140,7 @@ namespace DotCraftCore.nBlock
 				}
 
 				p_149696_1_.setBlockMetadataWithNotify(p_149696_2_, p_149696_3_, p_149696_4_, p_149696_6_ | 8, 2);
-				p_149696_1_.playSoundEffect((double)p_149696_2_ + 0.5D, (double)p_149696_3_ + 0.5D, (double)p_149696_4_ + 0.5D, "tile.piston.out", 0.5F, p_149696_1_.rand.nextFloat() * 0.25F + 0.6F);
+				p_149696_1_.playSoundEffect((double)p_149696_2_ + 0.5D, (double)p_149696_3_ + 0.5D, (double)p_149696_4_ + 0.5D, "tile.piston.out", 0.5F, p_149696_1_.rand.NextFloat() * 0.25F + 0.6F);
 			}
 			else if (p_149696_5_ == 1)
 			{
@@ -221,7 +181,7 @@ namespace DotCraftCore.nBlock
 						}
 					}
 
-					if (!var13 && var11.Material != Material.air && func_150080_a(var11, p_149696_1_, var8, var9, var10, false) && (var11.MobilityFlag == 0 || var11 == Blocks.piston || var11 == Blocks.sticky_piston))
+					if (!var13 && var11.BlockMaterial != Material.air && func_150080_a(var11, p_149696_1_, var8, var9, var10, false) && (var11.MobilityFlag == 0 || var11 == Blocks.piston || var11 == Blocks.sticky_piston))
 					{
 						p_149696_2_ += Facing.offsetsXForSide[p_149696_6_];
 						p_149696_3_ += Facing.offsetsYForSide[p_149696_6_];
@@ -240,7 +200,7 @@ namespace DotCraftCore.nBlock
 					p_149696_1_.setBlockToAir(p_149696_2_ + Facing.offsetsXForSide[p_149696_6_], p_149696_3_ + Facing.offsetsYForSide[p_149696_6_], p_149696_4_ + Facing.offsetsZForSide[p_149696_6_]);
 				}
 
-				p_149696_1_.playSoundEffect((double)p_149696_2_ + 0.5D, (double)p_149696_3_ + 0.5D, (double)p_149696_4_ + 0.5D, "tile.piston.in", 0.5F, p_149696_1_.rand.nextFloat() * 0.15F + 0.6F);
+				p_149696_1_.playSoundEffect((double)p_149696_2_ + 0.5D, (double)p_149696_3_ + 0.5D, (double)p_149696_4_ + 0.5D, "tile.piston.in", 0.5F, p_149696_1_.rand.NextFloat() * 0.15F + 0.6F);
 			}
 
 			return true;
@@ -404,7 +364,7 @@ namespace DotCraftCore.nBlock
 
 					Block var9 = p_150077_0_.getBlock(var5, var6, var7);
 
-					if (var9.Material != Material.air)
+					if (var9.BlockMaterial != Material.air)
 					{
 						if (!func_150080_a(var9, p_150077_0_, var5, var6, var7, true))
 						{
@@ -449,7 +409,7 @@ namespace DotCraftCore.nBlock
 
 					Block var10 = p_150079_1_.getBlock(var6, var7, var8);
 
-					if (var10.Material != Material.air)
+					if (var10.BlockMaterial != Material.air)
 					{
 						if (!func_150080_a(var10, p_150079_1_, var6, var7, var8, true))
 						{

@@ -1,33 +1,23 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Container = DotCraftCore.nInventory.Container;
-	using IInventory = DotCraftCore.nInventory.IInventory;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityFurnace = DotCraftCore.nTileEntity.TileEntityFurnace;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockFurnace : BlockContainer
 	{
 		private readonly Random field_149933_a = new Random();
 		private readonly bool field_149932_b;
 		private static bool field_149934_M;
-		private IIcon field_149935_N;
-		private IIcon field_149936_O;
-		
 
 		protected internal BlockFurnace(bool p_i45407_1_) : base(Material.rock)
 		{
@@ -55,43 +45,28 @@ namespace DotCraftCore.nBlock
 				Block var8 = p_149930_1_.getBlock(p_149930_2_ + 1, p_149930_3_, p_149930_4_);
 				sbyte var9 = 3;
 
-				if (var5.func_149730_j() && !var6.func_149730_j())
+				if (var5.OpaqueCube && !var6.OpaqueCube)
 				{
 					var9 = 3;
 				}
 
-				if (var6.func_149730_j() && !var5.func_149730_j())
+				if (var6.OpaqueCube && !var5.OpaqueCube)
 				{
 					var9 = 2;
 				}
 
-				if (var7.func_149730_j() && !var8.func_149730_j())
+				if (var7.OpaqueCube && !var8.OpaqueCube)
 				{
 					var9 = 5;
 				}
 
-				if (var8.func_149730_j() && !var7.func_149730_j())
+				if (var8.OpaqueCube && !var7.OpaqueCube)
 				{
 					var9 = 4;
 				}
 
 				p_149930_1_.setBlockMetadataWithNotify(p_149930_2_, p_149930_3_, p_149930_4_, var9, 2);
 			}
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_149935_N : (p_149691_1_ == 0 ? this.field_149935_N : (p_149691_1_ != p_149691_2_ ? this.blockIcon : this.field_149936_O));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("furnace_side");
-			this.field_149936_O = p_149651_1_.registerIcon(this.field_149932_b ? "furnace_front_on" : "furnace_front_off");
-			this.field_149935_N = p_149651_1_.registerIcon("furnace_top");
 		}
 
 ///    
@@ -103,10 +78,10 @@ namespace DotCraftCore.nBlock
 			{
 				int var6 = p_149734_1_.getBlockMetadata(p_149734_2_, p_149734_3_, p_149734_4_);
 				float var7 = (float)p_149734_2_ + 0.5F;
-				float var8 = (float)p_149734_3_ + 0.0F + p_149734_5_.nextFloat() * 6.0F / 16.0F;
+				float var8 = (float)p_149734_3_ + 0.0F + p_149734_5_.NextFloat() * 6.0F / 16.0F;
 				float var9 = (float)p_149734_4_ + 0.5F;
 				float var10 = 0.52F;
-				float var11 = p_149734_5_.nextFloat() * 0.6F - 0.3F;
+				float var11 = p_149734_5_.NextFloat() * 0.6F - 0.3F;
 
 				if (var6 == 4)
 				{
@@ -233,9 +208,9 @@ namespace DotCraftCore.nBlock
 
 						if (var9 != null)
 						{
-							float var10 = this.field_149933_a.nextFloat() * 0.8F + 0.1F;
-							float var11 = this.field_149933_a.nextFloat() * 0.8F + 0.1F;
-							float var12 = this.field_149933_a.nextFloat() * 0.8F + 0.1F;
+							float var10 = this.field_149933_a.NextFloat() * 0.8F + 0.1F;
+							float var11 = this.field_149933_a.NextFloat() * 0.8F + 0.1F;
+							float var12 = this.field_149933_a.NextFloat() * 0.8F + 0.1F;
 
 							while (var9.stackSize > 0)
 							{
@@ -254,10 +229,10 @@ namespace DotCraftCore.nBlock
 									var14.EntityItem.TagCompound = (NBTTagCompound)var9.TagCompound.copy();
 								}
 
-								float var15 = 0.05F;
-								var14.motionX = (double)((float)this.field_149933_a.nextGaussian() * var15);
-								var14.motionY = (double)((float)this.field_149933_a.nextGaussian() * var15 + 0.2F);
-								var14.motionZ = (double)((float)this.field_149933_a.nextGaussian() * var15);
+								double var15 = 0.05D;
+								var14.motionX = this.field_149933_a.NextGaussian() * var15;
+								var14.motionY = this.field_149933_a.NextGaussian() * var15 + 0.2D;
+								var14.motionZ = this.field_149933_a.NextGaussian() * var15;
 								p_149749_1_.spawnEntityInWorld(var14);
 							}
 						}

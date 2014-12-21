@@ -1,37 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCarpet : Block
 	{
-		
-
 		protected internal BlockCarpet() : base(Material.carpet)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
 			this.TickRandomly = true;
 			this.CreativeTab = CreativeTabs.tabDecorations;
 			this.func_150089_b(0);
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return Blocks.wool.getIcon(p_149691_1_, p_149691_2_);
 		}
 
 ///    
@@ -45,7 +28,7 @@ namespace DotCraftCore.nBlock
 			return AxisAlignedBB.getBoundingBox((double)p_149668_2_ + this.field_149759_B, (double)p_149668_3_ + this.field_149760_C, (double)p_149668_4_ + this.field_149754_D, (double)p_149668_2_ + this.field_149755_E, (double)((float)p_149668_3_ + (float)var5 * var6), (double)p_149668_4_ + this.field_149757_G);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -130,10 +113,5 @@ namespace DotCraftCore.nBlock
 				p_149666_3_.Add(new ItemStack(p_149666_1_, 1, var4));
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

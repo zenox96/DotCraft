@@ -1,25 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCake : Block
 	{
-		private IIcon field_150038_a;
-		private IIcon field_150037_b;
-		private IIcon field_150039_M;
-		
-
 		protected internal BlockCake() : base(Material.field_151568_F)
 		{
 			this.TickRandomly = true;
@@ -69,28 +59,12 @@ namespace DotCraftCore.nBlock
 			return AxisAlignedBB.getBoundingBox((double)((float)p_149633_2_ + var7), (double)p_149633_3_, (double)((float)p_149633_4_ + var6), (double)((float)(p_149633_2_ + 1) - var6), (double)((float)p_149633_3_ + var8), (double)((float)(p_149633_4_ + 1) - var6));
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_150038_a : (p_149691_1_ == 0 ? this.field_150037_b : (p_149691_2_ > 0 && p_149691_1_ == 4 ? this.field_150039_M : this.blockIcon));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_150039_M = p_149651_1_.registerIcon(this.TextureName + "_inner");
-			this.field_150038_a = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_150037_b = p_149651_1_.registerIcon(this.TextureName + "_bottom");
-		}
-
 		public virtual bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -151,7 +125,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual bool canBlockStay(World p_149718_1_, int p_149718_2_, int p_149718_3_, int p_149718_4_)
 		{
-			return p_149718_1_.getBlock(p_149718_2_, p_149718_3_ - 1, p_149718_4_).Material.Solid;
+			return p_149718_1_.getBlock(p_149718_2_, p_149718_3_ - 1, p_149718_4_).BlockMaterial.Solid;
 		}
 
 ///    

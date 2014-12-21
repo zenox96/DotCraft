@@ -1,19 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nTileEntity;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public class BlockEndPortal : BlockContainer
 	{
 		public static bool field_149948_a;
-		
 
 		protected internal BlockEndPortal(Material p_i45404_1_) : base(p_i45404_1_)
 		{
@@ -43,7 +41,7 @@ namespace DotCraftCore.nBlock
 		{
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{
@@ -77,9 +75,9 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
-			double var6 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
-			double var8 = (double)((float)p_149734_3_ + 0.8F);
-			double var10 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+			double var6 = (double)p_149734_2_ + p_149734_5_.NextDouble();
+			double var8 = (double)p_149734_3_ + 0.8D;
+			double var10 = (double)p_149734_4_ + p_149734_5_.NextDouble();
 			double var12 = 0.0D;
 			double var14 = 0.0D;
 			double var16 = 0.0D;
@@ -116,15 +114,9 @@ namespace DotCraftCore.nBlock
 			return Item.getItemById(0);
 		}
 
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("portal");
-		}
-
 		public virtual MapColor getMapColor(int p_149728_1_)
 		{
 			return MapColor.field_151654_J;
 		}
 	}
-
 }

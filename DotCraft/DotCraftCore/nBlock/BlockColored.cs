@@ -1,29 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-	
-
 	public class BlockColored : Block
 	{
-		private IIcon[] field_150033_a;
-		
-
 		public BlockColored(Material p_i45398_1_) : base(p_i45398_1_)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return this.field_150033_a[p_149691_2_ % this.field_150033_a.Length];
 		}
 
 ///    
@@ -49,16 +35,6 @@ namespace DotCraftCore.nBlock
 			for (int var4 = 0; var4 < 16; ++var4)
 			{
 				p_149666_3_.Add(new ItemStack(p_149666_1_, 1, var4));
-			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_150033_a = new IIcon[16];
-
-			for (int var2 = 0; var2 < this.field_150033_a.Length; ++var2)
-			{
-				this.field_150033_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_" + ItemDye.field_150921_b[func_150031_c(var2)]);
 			}
 		}
 

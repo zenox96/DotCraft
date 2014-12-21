@@ -1,18 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nCommand.nServer;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityCommandBlock = DotCraftCore.nTileEntity.TileEntityCommandBlock;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCommandBlock : BlockContainer
 	{
-		
-
 		public BlockCommandBlock() : base(Material.iron)
 		{
 		}

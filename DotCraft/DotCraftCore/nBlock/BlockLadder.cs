@@ -1,18 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockLadder : Block
 	{
-		
-
 		protected internal BlockLadder() : base(Material.circuits)
 		{
 			this.CreativeTab = CreativeTabs.tabDecorations;
@@ -67,7 +62,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -93,29 +88,29 @@ namespace DotCraftCore.nBlock
 
 		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
-			return p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1).NormalCube ? true : p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1).NormalCube));
+			return p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_).isBlockNormalCube() ? true : (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_).isBlockNormalCube() ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1).isBlockNormalCube() ? true : p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1).isBlockNormalCube()));
 		}
 
 		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
 		{
 			int var10 = p_149660_9_;
 
-			if ((p_149660_9_ == 0 || p_149660_5_ == 2) && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ + 1).NormalCube)
+			if ((p_149660_9_ == 0 || p_149660_5_ == 2) && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ + 1).isBlockNormalCube())
 			{
 				var10 = 2;
 			}
 
-			if ((var10 == 0 || p_149660_5_ == 3) && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ - 1).NormalCube)
+			if ((var10 == 0 || p_149660_5_ == 3) && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ - 1).isBlockNormalCube())
 			{
 				var10 = 3;
 			}
 
-			if ((var10 == 0 || p_149660_5_ == 4) && p_149660_1_.getBlock(p_149660_2_ + 1, p_149660_3_, p_149660_4_).NormalCube)
+			if ((var10 == 0 || p_149660_5_ == 4) && p_149660_1_.getBlock(p_149660_2_ + 1, p_149660_3_, p_149660_4_).isBlockNormalCube())
 			{
 				var10 = 4;
 			}
 
-			if ((var10 == 0 || p_149660_5_ == 5) && p_149660_1_.getBlock(p_149660_2_ - 1, p_149660_3_, p_149660_4_).NormalCube)
+			if ((var10 == 0 || p_149660_5_ == 5) && p_149660_1_.getBlock(p_149660_2_ - 1, p_149660_3_, p_149660_4_).isBlockNormalCube())
 			{
 				var10 = 5;
 			}
@@ -128,22 +123,22 @@ namespace DotCraftCore.nBlock
 			int var6 = p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_);
 			bool var7 = false;
 
-			if (var6 == 2 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).NormalCube)
+			if (var6 == 2 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).isBlockNormalCube())
 			{
 				var7 = true;
 			}
 
-			if (var6 == 3 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).NormalCube)
+			if (var6 == 3 && p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).isBlockNormalCube())
 			{
 				var7 = true;
 			}
 
-			if (var6 == 4 && p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).NormalCube)
+			if (var6 == 4 && p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).isBlockNormalCube())
 			{
 				var7 = true;
 			}
 
-			if (var6 == 5 && p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).NormalCube)
+			if (var6 == 5 && p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).isBlockNormalCube())
 			{
 				var7 = true;
 			}

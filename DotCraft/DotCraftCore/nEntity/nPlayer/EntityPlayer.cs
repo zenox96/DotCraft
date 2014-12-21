@@ -6,6 +6,7 @@ namespace DotCraftCore.nEntity.nPlayer
 
 	using DotCraftCore.nBlock;
 using DotCraftCore.nStats;
+using DotCraftCore.nTileEntity;
 using Charsets = com.google.common.base.Charsets;
 	using GameProfile = com.mojang.authlib.GameProfile;
 	using Block = DotCraftCore.nBlock.Block;

@@ -31,7 +31,7 @@ namespace DotCraftCore.nBlock
 			return !this.field_150099_b ? null : base.getItemDropped(p_149650_1_, p_149650_2_, p_149650_3_);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

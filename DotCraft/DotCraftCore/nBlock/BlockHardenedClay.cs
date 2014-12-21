@@ -1,14 +1,9 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-
 	public class BlockHardenedClay : Block
 	{
-		
-
 		public BlockHardenedClay() : base(Material.rock)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
@@ -19,5 +14,4 @@ namespace DotCraftCore.nBlock
 			return MapColor.field_151676_q;
 		}
 	}
-
 }

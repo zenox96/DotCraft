@@ -1,23 +1,14 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCrops : BlockBush, IGrowable
 	{
-		private IIcon[] field_149867_a;
-		
-
 		protected internal BlockCrops()
 		{
 			this.TickRandomly = true;
@@ -119,19 +110,6 @@ namespace DotCraftCore.nBlock
 		}
 
 ///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_2_ < 0 || p_149691_2_ > 7)
-			{
-				p_149691_2_ = 7;
-			}
-
-			return this.field_149867_a[p_149691_2_];
-		}
-
-///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
 		public override int RenderType
@@ -195,16 +173,6 @@ namespace DotCraftCore.nBlock
 		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return this.func_149866_i();
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149867_a = new IIcon[8];
-
-			for (int var2 = 0; var2 < this.field_149867_a.Length; ++var2)
-			{
-				this.field_149867_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_stage_" + var2);
-			}
 		}
 
 		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)

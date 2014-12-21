@@ -1,11 +1,9 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-
 	public class BlockPackedIce : Block
 	{
 		

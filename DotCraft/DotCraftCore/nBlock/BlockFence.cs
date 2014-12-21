@@ -1,20 +1,18 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity;
-    using DotCraftCore.nEntity.nPlayer;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public class BlockFence : Block
 	{
 		private readonly string field_149827_a;
-		
 
 		public BlockFence(string p_i45406_1_, Material p_i45406_2_) : base(p_i45406_2_)
 		{
@@ -115,7 +113,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(var9, 0.0F, var11, var10, 1.0F, var12);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -147,7 +145,7 @@ namespace DotCraftCore.nBlock
 		public virtual bool func_149826_e(IBlockAccess p_149826_1_, int p_149826_2_, int p_149826_3_, int p_149826_4_)
 		{
 			Block var5 = p_149826_1_.getBlock(p_149826_2_, p_149826_3_, p_149826_4_);
-			return var5 != this && var5 != Blocks.fence_gate ? (var5.blockMaterial.Opaque && var5.renderAsNormalBlock() ? var5.blockMaterial != Material.field_151572_C : false) : true;
+			return var5 != this && var5 != Blocks.fence_gate ? (var5.BlockMaterial.Opaque && var5.renderAsNormalBlock() ? var5.BlockMaterial != Material.field_151572_C : false) : true;
 		}
 
 		public static bool func_149825_a(Block p_149825_0_)
@@ -158,11 +156,6 @@ namespace DotCraftCore.nBlock
 		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			return true;
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.field_149827_a);
 		}
 
 ///    

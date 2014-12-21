@@ -1,20 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockLever : Block
 	{
-		
-
 		protected internal BlockLever() : base(Material.circuits)
 		{
 			this.CreativeTab = CreativeTabs.tabRedstone;
@@ -29,7 +23,7 @@ namespace DotCraftCore.nBlock
 			return null;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -58,12 +52,12 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
 		{
-			return p_149707_5_ == 0 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_ + 1, p_149707_4_).NormalCube ? true : (p_149707_5_ == 1 && World.doesBlockHaveSolidTopSurface(p_149707_1_, p_149707_2_, p_149707_3_ - 1, p_149707_4_) ? true : (p_149707_5_ == 2 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ + 1).NormalCube ? true : (p_149707_5_ == 3 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ - 1).NormalCube ? true : (p_149707_5_ == 4 && p_149707_1_.getBlock(p_149707_2_ + 1, p_149707_3_, p_149707_4_).NormalCube ? true : p_149707_5_ == 5 && p_149707_1_.getBlock(p_149707_2_ - 1, p_149707_3_, p_149707_4_).NormalCube))));
+			return p_149707_5_ == 0 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_ + 1, p_149707_4_).isBlockNormalCube() ? true : (p_149707_5_ == 1 && World.doesBlockHaveSolidTopSurface(p_149707_1_, p_149707_2_, p_149707_3_ - 1, p_149707_4_) ? true : (p_149707_5_ == 2 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ + 1).isBlockNormalCube() ? true : (p_149707_5_ == 3 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ - 1).isBlockNormalCube() ? true : (p_149707_5_ == 4 && p_149707_1_.getBlock(p_149707_2_ + 1, p_149707_3_, p_149707_4_).isBlockNormalCube() ? true : p_149707_5_ == 5 && p_149707_1_.getBlock(p_149707_2_ - 1, p_149707_3_, p_149707_4_).isBlockNormalCube()))));
 		}
 
 		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
-			return p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1).NormalCube ? true : (World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) ? true : p_149742_1_.getBlock(p_149742_2_, p_149742_3_ + 1, p_149742_4_).NormalCube))));
+			return p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_).isBlockNormalCube() ? true : (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_).isBlockNormalCube() ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1).isBlockNormalCube() ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1).isBlockNormalCube() ? true : (World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) ? true : p_149742_1_.getBlock(p_149742_2_, p_149742_3_ + 1, p_149742_4_).isBlockNormalCube()))));
 		}
 
 		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
@@ -72,7 +66,7 @@ namespace DotCraftCore.nBlock
 			int var10 = p_149660_9_ & 7;
 			sbyte var12 = -1;
 
-			if (p_149660_5_ == 0 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_ + 1, p_149660_4_).NormalCube)
+			if (p_149660_5_ == 0 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_ + 1, p_149660_4_).isBlockNormalCube())
 			{
 				var12 = 0;
 			}
@@ -82,22 +76,22 @@ namespace DotCraftCore.nBlock
 				var12 = 5;
 			}
 
-			if (p_149660_5_ == 2 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ + 1).NormalCube)
+			if (p_149660_5_ == 2 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ + 1).isBlockNormalCube())
 			{
 				var12 = 4;
 			}
 
-			if (p_149660_5_ == 3 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ - 1).NormalCube)
+			if (p_149660_5_ == 3 && p_149660_1_.getBlock(p_149660_2_, p_149660_3_, p_149660_4_ - 1).isBlockNormalCube())
 			{
 				var12 = 3;
 			}
 
-			if (p_149660_5_ == 4 && p_149660_1_.getBlock(p_149660_2_ + 1, p_149660_3_, p_149660_4_).NormalCube)
+			if (p_149660_5_ == 4 && p_149660_1_.getBlock(p_149660_2_ + 1, p_149660_3_, p_149660_4_).isBlockNormalCube())
 			{
 				var12 = 2;
 			}
 
-			if (p_149660_5_ == 5 && p_149660_1_.getBlock(p_149660_2_ - 1, p_149660_3_, p_149660_4_).NormalCube)
+			if (p_149660_5_ == 5 && p_149660_1_.getBlock(p_149660_2_ - 1, p_149660_3_, p_149660_4_).isBlockNormalCube())
 			{
 				var12 = 1;
 			}
@@ -172,22 +166,22 @@ namespace DotCraftCore.nBlock
 				int var6 = p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_) & 7;
 				bool var7 = false;
 
-				if (!p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).NormalCube && var6 == 1)
+				if (!p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_).isBlockNormalCube() && var6 == 1)
 				{
 					var7 = true;
 				}
 
-				if (!p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).NormalCube && var6 == 2)
+				if (!p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_).isBlockNormalCube() && var6 == 2)
 				{
 					var7 = true;
 				}
 
-				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).NormalCube && var6 == 3)
+				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1).isBlockNormalCube() && var6 == 3)
 				{
 					var7 = true;
 				}
 
-				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).NormalCube && var6 == 4)
+				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1).isBlockNormalCube() && var6 == 4)
 				{
 					var7 = true;
 				}
@@ -202,12 +196,12 @@ namespace DotCraftCore.nBlock
 					var7 = true;
 				}
 
-				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).NormalCube && var6 == 0)
+				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).isBlockNormalCube() && var6 == 0)
 				{
 					var7 = true;
 				}
 
-				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).NormalCube && var6 == 7)
+				if (!p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).isBlockNormalCube() && var6 == 7)
 				{
 					var7 = true;
 				}

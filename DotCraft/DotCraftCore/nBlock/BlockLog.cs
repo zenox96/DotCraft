@@ -1,20 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Item = DotCraftCore.nItem.Item;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BlockLog : BlockRotatedPillar
 	{
-		protected internal IIcon[] field_150167_a;
-		protected internal IIcon[] field_150166_b;
-		
-
 		public BlockLog() : base(Material.wood)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
@@ -53,7 +46,7 @@ namespace DotCraftCore.nBlock
 					{
 						for (int var11 = -var7; var11 <= var7; ++var11)
 						{
-							if (p_149749_1_.getBlock(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11).Material == Material.leaves)
+							if (p_149749_1_.getBlock(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11).BlockMaterial == Material.leaves)
 							{
 								int var12 = p_149749_1_.getBlockMetadata(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11);
 
@@ -67,16 +60,5 @@ namespace DotCraftCore.nBlock
 				}
 			}
 		}
-
-		protected internal override IIcon func_150163_b(int p_150163_1_)
-		{
-			return this.field_150167_a[p_150163_1_ % this.field_150167_a.Length];
-		}
-
-		protected internal override IIcon func_150161_d(int p_150161_1_)
-		{
-			return this.field_150166_b[p_150161_1_ % this.field_150166_b.Length];
-		}
 	}
-
 }

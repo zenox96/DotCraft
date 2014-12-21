@@ -7,8 +7,6 @@ namespace DotCraftCore.nBlock
 {
 	public class BlockTorch : Block
 	{
-		
-
 		protected internal BlockTorch() : base(Material.circuits)
 		{
 			this.TickRandomly = true;
@@ -24,7 +22,7 @@ namespace DotCraftCore.nBlock
 			return null;
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{

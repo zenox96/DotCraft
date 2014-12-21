@@ -1,35 +1,24 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPassive;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityOcelot = DotCraftCore.nEntity.nPassive.EntityOcelot;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Container = DotCraftCore.nInventory.Container;
-	using IInventory = DotCraftCore.nInventory.IInventory;
-	using InventoryLargeChest = DotCraftCore.nInventory.InventoryLargeChest;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockChest : BlockContainer
 	{
 		private readonly Random field_149955_b = new Random();
 		public readonly int field_149956_a;
 		
-
 		protected internal BlockChest(int p_i45397_1_) : base(Material.wood)
 		{
 			this.field_149956_a = p_i45397_1_;
@@ -37,7 +26,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -358,11 +347,11 @@ namespace DotCraftCore.nBlock
 
 					if (var9 != null)
 					{
-						float var10 = this.field_149955_b.nextFloat() * 0.8F + 0.1F;
-						float var11 = this.field_149955_b.nextFloat() * 0.8F + 0.1F;
+						float var10 = this.field_149955_b.NextFloat() * 0.8F + 0.1F;
+						float var11 = this.field_149955_b.NextFloat() * 0.8F + 0.1F;
 						EntityItem var14;
 
-						for (float var12 = this.field_149955_b.nextFloat() * 0.8F + 0.1F; var9.stackSize > 0; p_149749_1_.spawnEntityInWorld(var14))
+						for (float var12 = this.field_149955_b.NextFloat() * 0.8F + 0.1F; var9.stackSize > 0; p_149749_1_.spawnEntityInWorld(var14))
 						{
 							int var13 = this.field_149955_b.Next(21) + 10;
 
@@ -373,10 +362,10 @@ namespace DotCraftCore.nBlock
 
 							var9.stackSize -= var13;
 							var14 = new EntityItem(p_149749_1_, (double)((float)p_149749_2_ + var10), (double)((float)p_149749_3_ + var11), (double)((float)p_149749_4_ + var12), new ItemStack(var9.Item, var13, var9.ItemDamage));
-							float var15 = 0.05F;
-							var14.motionX = (double)((float)this.field_149955_b.nextGaussian() * var15);
-							var14.motionY = (double)((float)this.field_149955_b.nextGaussian() * var15 + 0.2F);
-							var14.motionZ = (double)((float)this.field_149955_b.nextGaussian() * var15);
+							double var15 = 0.05D;
+							var14.motionX = this.field_149955_b.NextGaussian() * var15;
+							var14.motionY = this.field_149955_b.NextGaussian() * var15 + 0.2D;
+							var14.motionZ = this.field_149955_b.NextGaussian() * var15;
 
 							if (var9.hasTagCompound())
 							{
@@ -422,7 +411,7 @@ namespace DotCraftCore.nBlock
 			{
 				return null;
 			}
-			else if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_ + 1, p_149951_4_).NormalCube)
+			else if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_ + 1, p_149951_4_).isBlockNormalCube())
 			{
 				return null;
 			}
@@ -536,11 +525,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Container.calcRedstoneFromInventory(this.func_149951_m(p_149736_1_, p_149736_2_, p_149736_3_, p_149736_4_));
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("planks_oak");
-		}
 	}
-
 }

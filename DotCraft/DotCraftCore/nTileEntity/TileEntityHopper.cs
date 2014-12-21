@@ -20,6 +20,9 @@ namespace DotCraftCore.nTileEntity
 	using Facing = DotCraftCore.nUtil.Facing;
 	using MathHelper = DotCraftCore.nUtil.MathHelper;
 	using World = DotCraftCore.nWorld.World;
+    using DotCraftCore.nInventory;
+    using DotCraftCore.nEntity.nItem;
+    using DotCraftCore.nItem;
 
 	public class TileEntityHopper : TileEntity, IHopper
 	{

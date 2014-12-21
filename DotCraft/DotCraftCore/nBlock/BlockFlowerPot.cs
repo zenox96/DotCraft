@@ -1,22 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemBlock = DotCraftCore.nItem.ItemBlock;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityFlowerPot = DotCraftCore.nTileEntity.TileEntityFlowerPot;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockFlowerPot : BlockContainer
 	{
-		
 
 		public BlockFlowerPot() : base(Material.circuits)
 		{
@@ -33,7 +26,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.5F - var2, 0.0F, 0.5F - var2, 0.5F + var2, var1, 0.5F + var2);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

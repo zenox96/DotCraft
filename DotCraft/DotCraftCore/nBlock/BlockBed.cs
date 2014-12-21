@@ -1,31 +1,19 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+using DotCraftCore.nWorld.nBiome;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
-	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-	using BiomeGenBase = DotCraftCore.nWorld.nBiome.BiomeGenBase;
-
 	public class BlockBed : BlockDirectional
 	{
-		public static readonly int[][] field_149981_a = new int[][] {{0, 1}, { -1, 0}, {0, -1}, {1, 0}};
-		private IIcon[] field_149980_b;
-		private IIcon[] field_149982_M;
-		private IIcon[] field_149983_N;
-		
+		public static readonly int[,] field_149981_a = new int[,] {{0, 1}, { -1, 0}, {0, -1}, {1, 0}};
 
 		public BlockBed() : base(Material.cloth)
 		{
@@ -136,31 +124,6 @@ namespace DotCraftCore.nBlock
 		}
 
 ///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_1_ == 0)
-			{
-				return Blocks.planks.getBlockTextureFromSide(p_149691_1_);
-			}
-			else
-			{
-				int var3 = func_149895_l(p_149691_2_);
-				int var4 = Direction.bedDirection[var3][p_149691_1_];
-				int var5 = func_149975_b(p_149691_2_) ? 1 : 0;
-				return (var5 != 1 || var4 != 2) && (var5 != 0 || var4 != 3) ? (var4 != 5 && var4 != 4 ? this.field_149983_N[var5] : this.field_149982_M[var5]) : this.field_149980_b[var5];
-			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149983_N = new IIcon[] {p_149651_1_.registerIcon(this.TextureName + "_feet_top"), p_149651_1_.registerIcon(this.TextureName + "_head_top")};
-			this.field_149980_b = new IIcon[] {p_149651_1_.registerIcon(this.TextureName + "_feet_end"), p_149651_1_.registerIcon(this.TextureName + "_head_end")};
-			this.field_149982_M = new IIcon[] {p_149651_1_.registerIcon(this.TextureName + "_feet_side"), p_149651_1_.registerIcon(this.TextureName + "_head_side")};
-		}
-
-///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
 		public virtual int RenderType
@@ -176,7 +139,7 @@ namespace DotCraftCore.nBlock
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -264,7 +227,7 @@ namespace DotCraftCore.nBlock
 				{
 					for (int var13 = var9; var13 <= var11; ++var13)
 					{
-						if (World.doesBlockHaveSolidTopSurface(p_149977_0_, var12, p_149977_2_ - 1, var13) && !p_149977_0_.getBlock(var12, p_149977_2_, var13).Material.Opaque && !p_149977_0_.getBlock(var12, p_149977_2_ + 1, var13).Material.Opaque)
+						if (World.doesBlockHaveSolidTopSurface(p_149977_0_, var12, p_149977_2_ - 1, var13) && !p_149977_0_.getBlock(var12, p_149977_2_, var13).BlockMaterial.Opaque && !p_149977_0_.getBlock(var12, p_149977_2_ + 1, var13).BlockMaterial.Opaque)
 						{
 							if (p_149977_4_ <= 0)
 							{

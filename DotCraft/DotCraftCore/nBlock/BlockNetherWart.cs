@@ -1,22 +1,13 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockNetherWart : BlockBush
 	{
-		private IIcon[] field_149883_a;
-		
-
 		protected internal BlockNetherWart()
 		{
 			this.TickRandomly = true;
@@ -52,14 +43,6 @@ namespace DotCraftCore.nBlock
 			}
 
 			base.updateTick(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_, p_149674_5_);
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_2_ >= 3 ? this.field_149883_a[2] : (p_149691_2_ > 0 ? this.field_149883_a[1] : this.field_149883_a[0]);
 		}
 
 ///    
@@ -119,16 +102,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Items.nether_wart;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149883_a = new IIcon[3];
-
-			for (int var2 = 0; var2 < this.field_149883_a.Length; ++var2)
-			{
-				this.field_149883_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_stage_" + var2);
-			}
-		}
 	}
-
 }

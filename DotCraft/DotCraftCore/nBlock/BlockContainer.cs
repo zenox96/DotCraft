@@ -1,9 +1,9 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
+
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nTileEntity;
-    using DotCraftCore.nWorld;
-
 	public abstract class BlockContainer : Block, ITileEntityProvider
 	{
 		protected internal BlockContainer(Material p_i45386_1_) : base(p_i45386_1_)

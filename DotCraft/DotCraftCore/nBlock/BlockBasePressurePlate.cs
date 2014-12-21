@@ -1,13 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public abstract class BlockBasePressurePlate : Block
 	{
 		private string field_150067_a;
@@ -55,7 +53,7 @@ namespace DotCraftCore.nBlock
 			return null;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -215,11 +213,5 @@ namespace DotCraftCore.nBlock
 		protected internal abstract int func_150060_c(int p_150060_1_);
 
 		protected internal abstract int func_150066_d(int p_150066_1_);
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.field_150067_a);
-		}
 	}
-
 }

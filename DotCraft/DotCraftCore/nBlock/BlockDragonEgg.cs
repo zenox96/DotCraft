@@ -1,19 +1,13 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Item = DotCraftCore.nItem.Item;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockDragonEgg : Block
 	{
-		
-
 		public BlockDragonEgg() : base(Material.dragonEgg)
 		{
 			this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 1.0F, 0.9375F);
@@ -92,7 +86,7 @@ namespace DotCraftCore.nBlock
 					int var7 = p_150019_3_ + p_150019_1_.rand.Next(8) - p_150019_1_.rand.Next(8);
 					int var8 = p_150019_4_ + p_150019_1_.rand.Next(16) - p_150019_1_.rand.Next(16);
 
-					if (p_150019_1_.getBlock(var6, var7, var8).blockMaterial == Material.air)
+					if (p_150019_1_.getBlock(var6, var7, var8).BlockMaterial == Material.air)
 					{
 						if (!p_150019_1_.isClient)
 						{
@@ -106,13 +100,13 @@ namespace DotCraftCore.nBlock
 							for (int var10 = 0; var10 < var9; ++var10)
 							{
 								double var11 = p_150019_1_.rand.NextDouble();
-								float var13 = (p_150019_1_.rand.nextFloat() - 0.5F) * 0.2F;
-								float var14 = (p_150019_1_.rand.nextFloat() - 0.5F) * 0.2F;
-								float var15 = (p_150019_1_.rand.nextFloat() - 0.5F) * 0.2F;
+								double var13 = (p_150019_1_.rand.NextDouble() - 0.5D) * 0.2D;
+								double var14 = (p_150019_1_.rand.NextDouble() - 0.5D) * 0.2D;
+								double var15 = (p_150019_1_.rand.NextDouble() - 0.5D) * 0.2D;
 								double var16 = (double)var6 + (double)(p_150019_2_ - var6) * var11 + (p_150019_1_.rand.NextDouble() - 0.5D) * 1.0D + 0.5D;
 								double var18 = (double)var7 + (double)(p_150019_3_ - var7) * var11 + p_150019_1_.rand.NextDouble() * 1.0D - 0.5D;
 								double var20 = (double)var8 + (double)(p_150019_4_ - var8) * var11 + (p_150019_1_.rand.NextDouble() - 0.5D) * 1.0D + 0.5D;
-								p_150019_1_.spawnParticle("portal", var16, var18, var20, (double)var13, (double)var14, (double)var15);
+								p_150019_1_.spawnParticle("portal", var16, var18, var20, var13, var14, var15);
 							}
 						}
 
@@ -127,7 +121,7 @@ namespace DotCraftCore.nBlock
 			return 5;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

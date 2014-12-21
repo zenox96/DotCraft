@@ -1,20 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityBeacon = DotCraftCore.nTileEntity.TileEntityBeacon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockBeacon : BlockContainer
 	{
-		
-
 		public BlockBeacon() : base(Material.glass)
 		{
 			this.Hardness = 3.0F;
@@ -51,7 +45,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -73,11 +67,6 @@ namespace DotCraftCore.nBlock
 			{
 				return 34;
 			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			base.registerBlockIcons(p_149651_1_);
 		}
 
 ///    

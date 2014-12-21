@@ -1,12 +1,12 @@
-﻿using System;
+﻿using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nWorld;
+using System;
 
 namespace DotCraftCore.nBlock
 {
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockFalling : Block
 	{
 		public static bool field_149832_M;
@@ -51,7 +51,7 @@ namespace DotCraftCore.nBlock
 				{
 					if (!p_149830_1_.isClient)
 					{
-						EntityFallingBlock var9 = new EntityFallingBlock(p_149830_1_, (double)((float)p_149830_2_ + 0.5F), (double)((float)p_149830_3_ + 0.5F), (double)((float)p_149830_4_ + 0.5F), this, p_149830_1_.getBlockMetadata(p_149830_2_, p_149830_3_, p_149830_4_));
+						EntityFallingBlock var9 = new EntityFallingBlock(p_149830_1_, (double)p_149830_2_ + 0.5D, (double)p_149830_3_ + 0.5D, (double)p_149830_4_ + 0.5D, this, p_149830_1_.getBlockMetadata(p_149830_2_, p_149830_3_, p_149830_4_));
 						this.func_149829_a(var9);
 						p_149830_1_.spawnEntityInWorld(var9);
 					}
@@ -86,7 +86,7 @@ namespace DotCraftCore.nBlock
 		{
 			Block var4 = p_149831_0_.getBlock(p_149831_1_, p_149831_2_, p_149831_3_);
 
-			if (var4.blockMaterial == Material.air)
+			if (var4.BlockMaterial == Material.air)
 			{
 				return true;
 			}
@@ -96,7 +96,7 @@ namespace DotCraftCore.nBlock
 			}
 			else
 			{
-				Material var5 = var4.blockMaterial;
+				Material var5 = var4.BlockMaterial;
 				return var5 == Material.water ? true : var5 == Material.lava;
 			}
 		}

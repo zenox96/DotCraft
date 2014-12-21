@@ -1,35 +1,22 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Container = DotCraftCore.nInventory.Container;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityHopper = DotCraftCore.nTileEntity.TileEntityHopper;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockHopper : BlockContainer
 	{
 		private readonly Random field_149922_a = new Random();
-		private IIcon field_149921_b;
-		private IIcon field_149923_M;
-		private IIcon field_149924_N;
-		
 
 		public BlockHopper() : base(Material.iron)
 		{
@@ -150,9 +137,9 @@ namespace DotCraftCore.nBlock
 
 					if (var9 != null)
 					{
-						float var10 = this.field_149922_a.nextFloat() * 0.8F + 0.1F;
-						float var11 = this.field_149922_a.nextFloat() * 0.8F + 0.1F;
-						float var12 = this.field_149922_a.nextFloat() * 0.8F + 0.1F;
+						float var10 = this.field_149922_a.NextFloat() * 0.8F + 0.1F;
+						float var11 = this.field_149922_a.NextFloat() * 0.8F + 0.1F;
+						float var12 = this.field_149922_a.NextFloat() * 0.8F + 0.1F;
 
 						while (var9.stackSize > 0)
 						{
@@ -202,7 +189,7 @@ namespace DotCraftCore.nBlock
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{
@@ -241,13 +228,6 @@ namespace DotCraftCore.nBlock
 		public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
 		{
 			return Container.calcRedstoneFromInventory(func_149920_e(p_149736_1_, p_149736_2_, p_149736_3_, p_149736_4_));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149921_b = p_149651_1_.registerIcon("hopper_outside");
-			this.field_149923_M = p_149651_1_.registerIcon("hopper_top");
-			this.field_149924_N = p_149651_1_.registerIcon("hopper_inside");
 		}
 
 		public static IIcon func_149916_e(string p_149916_0_)

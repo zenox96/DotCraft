@@ -1,23 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEnchantment;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockIce : BlockBreakable
 	{
-		
-
 		public BlockIce() : base("ice", Material.ice, false)
 		{
 			this.slipperiness = 0.98F;
@@ -65,7 +58,7 @@ namespace DotCraftCore.nBlock
 
 				int var7 = EnchantmentHelper.getFortuneModifier(p_149636_2_);
 				this.dropBlockAsItem(p_149636_1_, p_149636_3_, p_149636_4_, p_149636_5_, p_149636_6_, var7);
-				Material var8 = p_149636_1_.getBlock(p_149636_3_, p_149636_4_ - 1, p_149636_5_).Material;
+				Material var8 = p_149636_1_.getBlock(p_149636_3_, p_149636_4_ - 1, p_149636_5_).BlockMaterial;
 
 				if (var8.blocksMovement() || var8.Liquid)
 				{

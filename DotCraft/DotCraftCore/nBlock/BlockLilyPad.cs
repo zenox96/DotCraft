@@ -1,21 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityBoat = DotCraftCore.nEntity.nItem.EntityBoat;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockLilyPad : BlockBush
 	{
-		
-
 		protected internal BlockLilyPad()
 		{
 			float var1 = 0.5F;
@@ -87,7 +82,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public override bool canBlockStay(World p_149718_1_, int p_149718_2_, int p_149718_3_, int p_149718_4_)
 		{
-			return p_149718_3_ >= 0 && p_149718_3_ < 256 ? p_149718_1_.getBlock(p_149718_2_, p_149718_3_ - 1, p_149718_4_).Material == Material.water && p_149718_1_.getBlockMetadata(p_149718_2_, p_149718_3_ - 1, p_149718_4_) == 0 : false;
+			return p_149718_3_ >= 0 && p_149718_3_ < 256 ? p_149718_1_.getBlock(p_149718_2_, p_149718_3_ - 1, p_149718_4_).BlockMaterial == Material.water && p_149718_1_.getBlockMetadata(p_149718_2_, p_149718_3_ - 1, p_149718_4_) == 0 : false;
 		}
 	}
 

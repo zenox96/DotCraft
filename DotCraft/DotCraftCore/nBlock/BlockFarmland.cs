@@ -1,24 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockFarmland : Block
 	{
-		private IIcon field_149824_a;
-		private IIcon field_149823_b;
-		
-
 		protected internal BlockFarmland() : base(Material.ground)
 		{
 			this.TickRandomly = true;
@@ -35,7 +27,7 @@ namespace DotCraftCore.nBlock
 			return AxisAlignedBB.getBoundingBox((double)(p_149668_2_ + 0), (double)(p_149668_3_ + 0), (double)(p_149668_4_ + 0), (double)(p_149668_2_ + 1), (double)(p_149668_3_ + 1), (double)(p_149668_4_ + 1));
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -85,7 +77,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual void onFallenUpon(World p_149746_1_, int p_149746_2_, int p_149746_3_, int p_149746_4_, Entity p_149746_5_, float p_149746_6_)
 		{
-			if (!p_149746_1_.isClient && p_149746_1_.rand.nextFloat() < p_149746_6_ - 0.5F)
+			if (!p_149746_1_.isClient && p_149746_1_.rand.NextFloat() < p_149746_6_ - 0.5F)
 			{
 				if (!(p_149746_5_ is EntityPlayer) && !p_149746_1_.GameRules.getGameRuleBooleanValue("mobGriefing"))
 				{
@@ -124,7 +116,7 @@ namespace DotCraftCore.nBlock
 				{
 					for (int var7 = p_149821_4_ - 4; var7 <= p_149821_4_ + 4; ++var7)
 					{
-						if (p_149821_1_.getBlock(var5, var6, var7).Material == Material.water)
+						if (p_149821_1_.getBlock(var5, var6, var7).BlockMaterial == Material.water)
 						{
 							return true;
 						}
@@ -138,7 +130,7 @@ namespace DotCraftCore.nBlock
 		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			base.onNeighborBlockChange(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, p_149695_5_);
-			Material var6 = p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).Material;
+			Material var6 = p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_).BlockMaterial;
 
 			if (var6.Solid)
 			{
@@ -158,12 +150,5 @@ namespace DotCraftCore.nBlock
 		{
 			return Item.getItemFromBlock(Blocks.dirt);
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149824_a = p_149651_1_.registerIcon(this.TextureName + "_wet");
-			this.field_149823_b = p_149651_1_.registerIcon(this.TextureName + "_dry");
-		}
 	}
-
 }

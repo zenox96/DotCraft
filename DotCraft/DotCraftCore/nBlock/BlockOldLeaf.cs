@@ -1,23 +1,15 @@
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using ColorizerFoliage = DotCraftCore.nWorld.ColorizerFoliage;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockOldLeaf : BlockLeaves
 	{
 		public static readonly string[][] field_150130_N = new string[][] {{"leaves_oak", "leaves_spruce", "leaves_birch", "leaves_jungle"}, {"leaves_oak_opaque", "leaves_spruce_opaque", "leaves_birch_opaque", "leaves_jungle_opaque"}};
 		public static readonly string[] field_150131_O = new string[] {"oak", "spruce", "birch", "jungle"};
-		
 
 ///    
 ///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
@@ -57,14 +49,6 @@ namespace DotCraftCore.nBlock
 			return var2;
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public override IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return (p_149691_2_ & 3) == 1 ? this.field_150129_M[this.field_150127_b][1] : ((p_149691_2_ & 3) == 3 ? this.field_150129_M[this.field_150127_b][3] : ((p_149691_2_ & 3) == 2 ? this.field_150129_M[this.field_150127_b][2] : this.field_150129_M[this.field_150127_b][0]));
-		}
-
 		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{
 			p_149666_3_.Add(new ItemStack(p_149666_1_, 1, 0));
@@ -73,23 +57,9 @@ namespace DotCraftCore.nBlock
 			p_149666_3_.Add(new ItemStack(p_149666_1_, 1, 3));
 		}
 
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			for (int var2 = 0; var2 < field_150130_N.Length; ++var2)
-			{
-				this.field_150129_M[var2] = new IIcon[field_150130_N[var2].Length];
-
-				for (int var3 = 0; var3 < field_150130_N[var2].Length; ++var3)
-				{
-					this.field_150129_M[var2][var3] = p_149651_1_.registerIcon(field_150130_N[var2][var3]);
-				}
-			}
-		}
-
 		public override string[] func_150125_e()
 		{
 			return field_150131_O;
 		}
 	}
-
 }

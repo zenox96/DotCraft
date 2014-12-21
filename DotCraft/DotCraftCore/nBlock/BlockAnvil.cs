@@ -1,26 +1,19 @@
-﻿using System.Collections;
+﻿using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
+using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using IIconRegister = DotCraftCore.Client.renderer.texture.IIconRegister;
-    using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-    using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-    using EntityFallingBlock = DotCraftCore.nEntity.nItem.EntityFallingBlock;
-    using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-    using Item = DotCraftCore.nItem.Item;
-    using ItemStack = DotCraftCore.nItem.ItemStack;
-    using IIcon = DotCraftCore.nUtil.IIcon;
-    using MathHelper = DotCraftCore.nUtil.MathHelper;
-    using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-    using World = DotCraftCore.nWorld.World;
-
     public class BlockAnvil : BlockFalling
     {
         public static readonly string[] field_149834_a = new string[] { "intact", "slightlyDamaged", "veryDamaged" };
         private static readonly string[] field_149835_N = new string[] { "anvil_top_damaged_0", "anvil_top_damaged_1", "anvil_top_damaged_2" };
         public int field_149833_b;
-        private IIcon[] field_149836_O;
-        
 
         protected internal BlockAnvil( )
             : base(Material.anvil)
@@ -41,33 +34,6 @@ namespace DotCraftCore.nBlock
 				return false;
 			}
 		}
-
-        ///    
-        ///     <summary> * Gets the block's texture. Args: side, meta </summary>
-        ///     
-        public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-        {
-            if (this.field_149833_b == 3 && p_149691_1_ == 1)
-            {
-                int var3 = (p_149691_2_ >> 2) % this.field_149836_O.Length;
-                return this.field_149836_O[var3];
-            }
-            else
-            {
-                return this.blockIcon;
-            }
-        }
-
-        public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-        {
-            this.blockIcon = p_149651_1_.registerIcon("anvil_base");
-            this.field_149836_O = new IIcon[field_149835_N.Length];
-
-            for (int var2 = 0; var2 < this.field_149836_O.Length; ++var2)
-            {
-                this.field_149836_O[var2] = p_149651_1_.registerIcon(field_149835_N[var2]);
-            }
-        }
 
         ///    
         ///     <summary> * Called when the block is placed in the world. </summary>

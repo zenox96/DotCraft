@@ -56,12 +56,16 @@
     <Compile Include="nBlock\Block.cs" />
     <Compile Include="nBlock\BlockAir.cs" />
     <Compile Include="nBlock\BlockAnvil.cs" />
-    <Compile Include="nBlock\BlockBasePressurePlate.cs" />
+    <Compile Include="nBlock\BlockBasePressurePlate.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="nBlock\BlockBeacon.cs" />
     <Compile Include="nBlock\BlockBed.cs" />
     <Compile Include="nBlock\BlockBookshelf.cs" />
     <Compile Include="nBlock\BlockBreakable.cs" />
-    <Compile Include="nBlock\BlockBrewingStand.cs" />
+    <Compile Include="nBlock\BlockBrewingStand.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="nBlock\BlockBush.cs" />
     <Compile Include="nBlock\BlockButton.cs" />
     <Compile Include="nBlock\BlockButtonStone.cs" />
@@ -90,14 +94,20 @@
     <Compile Include="nBlock\BlockDragonEgg.cs" />
     <Compile Include="nBlock\BlockDropper.cs" />
     <Compile Include="nBlock\BlockDynamicLiquid.cs" />
-    <Compile Include="nBlock\BlockEnchantmentTable.cs" />
+    <Compile Include="nBlock\BlockEnchantmentTable.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="nBlock\BlockEnderChest.cs" />
     <Compile Include="nBlock\BlockEndPortal.cs" />
     <Compile Include="nBlock\BlockEndPortalFrame.cs" />
     <Compile Include="nBlock\BlockEventData.cs" />
     <Compile Include="nBlock\BlockFalling.cs" />
-    <Compile Include="nBlock\BlockFarmland.cs" />
-    <Compile Include="nBlock\BlockFence.cs" />
+    <Compile Include="nBlock\BlockFarmland.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="nBlock\BlockFence.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="nBlock\BlockFenceGate.cs" />
     <Compile Include="nBlock\BlockFire.cs" />
     <Compile Include="nBlock\BlockFlower.cs" />

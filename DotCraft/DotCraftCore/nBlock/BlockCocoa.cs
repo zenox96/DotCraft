@@ -1,46 +1,18 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCocoa : BlockDirectional, IGrowable
 	{
-		private IIcon[] field_149989_a;
-		
-
 		public BlockCocoa() : base(Material.plants)
 		{
 			this.TickRandomly = true;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return this.field_149989_a[2];
-		}
-
-		public virtual IIcon func_149988_b(int p_149988_1_)
-		{
-			if (p_149988_1_ < 0 || p_149988_1_ >= this.field_149989_a.Length)
-			{
-				p_149988_1_ = this.field_149989_a.Length - 1;
-			}
-
-			return this.field_149989_a[p_149988_1_];
 		}
 
 ///    
@@ -94,7 +66,7 @@ namespace DotCraftCore.nBlock
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -218,16 +190,6 @@ namespace DotCraftCore.nBlock
 			return 3;
 		}
 
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149989_a = new IIcon[3];
-
-			for (int var2 = 0; var2 < this.field_149989_a.Length; ++var2)
-			{
-				this.field_149989_a[var2] = p_149651_1_.registerIcon(this.TextureName + "_stage_" + var2);
-			}
-		}
-
 		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
 		{
 			int var6 = p_149851_1_.getBlockMetadata(p_149851_2_, p_149851_3_, p_149851_4_);
@@ -249,5 +211,4 @@ namespace DotCraftCore.nBlock
 			p_149853_1_.setBlockMetadataWithNotify(p_149853_3_, p_149853_4_, p_149853_5_, var8 << 2 | var7, 2);
 		}
 	}
-
 }

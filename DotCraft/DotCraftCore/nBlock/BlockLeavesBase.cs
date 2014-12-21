@@ -1,20 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-
 	public class BlockLeavesBase : Block
 	{
 		protected internal bool field_150121_P;
-		
 
 		protected internal BlockLeavesBase(Material p_i45433_1_, bool p_i45433_2_) : base(p_i45433_1_)
 		{
 			this.field_150121_P = p_i45433_2_;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

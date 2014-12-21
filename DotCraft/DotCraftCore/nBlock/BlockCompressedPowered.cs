@@ -1,14 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nWorld;
+
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-
 	public class BlockCompressedPowered : BlockCompressed
 	{
-		
-
 		public BlockCompressedPowered(MapColor p_i45416_1_) : base(p_i45416_1_)
 		{
 			this.CreativeTab = CreativeTabs.tabRedstone;

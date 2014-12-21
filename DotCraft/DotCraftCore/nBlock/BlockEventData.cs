@@ -1,6 +1,5 @@
 namespace DotCraftCore.nBlock
 {
-
 	public class BlockEventData
 	{
 		private int coordX;
@@ -11,7 +10,6 @@ namespace DotCraftCore.nBlock
 	/// <summary> Different for each blockID  </summary>
 		private int eventID;
 		private int eventParameter;
-		
 
 		public BlockEventData(int p_i45362_1_, int p_i45362_2_, int p_i45362_3_, Block p_i45362_4_, int p_i45362_5_, int p_i45362_6_)
 		{

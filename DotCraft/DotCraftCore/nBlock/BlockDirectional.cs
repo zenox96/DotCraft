@@ -12,5 +12,4 @@ namespace DotCraftCore.nBlock
 			return p_149895_0_ & 3;
 		}
 	}
-
 }

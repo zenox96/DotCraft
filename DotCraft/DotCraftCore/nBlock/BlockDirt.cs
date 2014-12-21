@@ -1,81 +1,18 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockDirt : Block
 	{
 		public static readonly string[] field_150009_a = new string[] {"default", "default", "podzol"};
-		private IIcon field_150008_b;
-		private IIcon field_150010_M;
-		
 
 		protected internal BlockDirt() : base(Material.ground)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			if (p_149691_2_ == 2)
-			{
-				if (p_149691_1_ == 1)
-				{
-					return this.field_150008_b;
-				}
-
-				if (p_149691_1_ != 0)
-				{
-					return this.field_150010_M;
-				}
-			}
-
-			return this.blockIcon;
-		}
-
-		public virtual IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_, int p_149673_3_, int p_149673_4_, int p_149673_5_)
-		{
-			int var6 = p_149673_1_.getBlockMetadata(p_149673_2_, p_149673_3_, p_149673_4_);
-
-			if (var6 == 2)
-			{
-				if (p_149673_5_ == 1)
-				{
-					return this.field_150008_b;
-				}
-
-				if (p_149673_5_ != 0)
-				{
-					Material var7 = p_149673_1_.getBlock(p_149673_2_, p_149673_3_ + 1, p_149673_4_).Material;
-
-					if (var7 == Material.field_151597_y || var7 == Material.craftedSnow)
-					{
-						return Blocks.grass.getIcon(p_149673_1_, p_149673_2_, p_149673_3_, p_149673_4_, p_149673_5_);
-					}
-
-					Block var8 = p_149673_1_.getBlock(p_149673_2_, p_149673_3_ + 1, p_149673_4_);
-
-					if (var8 != Blocks.dirt && var8 != Blocks.grass)
-					{
-						return this.field_150010_M;
-					}
-				}
-			}
-
-			return this.blockIcon;
 		}
 
 ///    
@@ -104,13 +41,6 @@ namespace DotCraftCore.nBlock
 		{
 			p_149666_3_.Add(new ItemStack(this, 1, 0));
 			p_149666_3_.Add(new ItemStack(this, 1, 2));
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			base.registerBlockIcons(p_149651_1_);
-			this.field_150008_b = p_149651_1_.registerIcon(this.TextureName + "_" + "podzol_top");
-			this.field_150010_M = p_149651_1_.registerIcon(this.TextureName + "_" + "podzol_side");
 		}
 
 ///    

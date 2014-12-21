@@ -1,20 +1,19 @@
-﻿using System;
+﻿using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nInventory;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nEnchantment;
+using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nTileEntity;
-    using DotCraftCore.nWorld;
-    using DotCraftCore.nEntity;
-    using DotCraftCore.nEntity.nPlayer;
-    using DotCraftCore.nEntity.nItem;
-    using DotCraftCore.nStats;
-    using DotCraftCore.nEnchantment;
-    
     public class Block
     {
         public static readonly RegistryNamespacedDefaultedByKey blockRegistry = new RegistryNamespacedDefaultedByKey("air");
@@ -108,7 +107,7 @@ namespace DotCraftCore.nBlock
             return this.field_149783_u;
         }
 
-        public readonly virtual Material BlockMaterial
+        public virtual Material BlockMaterial
         {
             get;
             protected set;
@@ -443,7 +442,7 @@ namespace DotCraftCore.nBlock
         public virtual bool OpaqueCube
 		{
 			get;
-            set;
+            protected set;
 		}
 
         ///    

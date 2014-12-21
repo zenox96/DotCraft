@@ -1,15 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nItem;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-
 	public class BlockObsidian : BlockStone
 	{
-		
 
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>

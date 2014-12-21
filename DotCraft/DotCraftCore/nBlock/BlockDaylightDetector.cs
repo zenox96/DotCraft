@@ -1,24 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityDaylightDetector = DotCraftCore.nTileEntity.TileEntityDaylightDetector;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using EnumSkyBlock = DotCraftCore.nWorld.EnumSkyBlock;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockDaylightDetector : BlockContainer
 	{
-		private IIcon[] field_149958_a = new IIcon[2];
-		
-
 		public BlockDaylightDetector() : base(Material.wood)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.375F, 1.0F);
@@ -67,7 +57,7 @@ namespace DotCraftCore.nBlock
 					var7 += (((float)Math.PI * 2F) - var7) * 0.2F;
 				}
 
-				var6 = Math.Round((float)var6 * MathHelper.cos(var7));
+				var6 = (int)Math.Round((float)var6 * MathHelper.cos(var7));
 
 				if (var6 < 0)
 				{
@@ -91,7 +81,7 @@ namespace DotCraftCore.nBlock
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -112,22 +102,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
-			return new TileEntityDaylightDetector();
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_149958_a[0] : this.field_149958_a[1];
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149958_a[0] = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_149958_a[1] = p_149651_1_.registerIcon(this.TextureName + "_side");
+		    return new TileEntityDaylightDetector();
 		}
 	}
-
 }

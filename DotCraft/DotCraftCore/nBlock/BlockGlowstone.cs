@@ -1,17 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-
 	public class BlockGlowstone : Block
 	{
-		
-
 		public BlockGlowstone(Material p_i45409_1_) : base(p_i45409_1_)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

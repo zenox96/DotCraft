@@ -1,12 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public class BlockPressurePlateWeighted : BlockBasePressurePlate
 	{
 		private readonly int field_150068_a;

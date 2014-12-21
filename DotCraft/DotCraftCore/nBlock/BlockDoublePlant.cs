@@ -1,31 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockDoublePlant : BlockBush, IGrowable
 	{
 		public static readonly string[] field_149892_a = new string[] {"sunflower", "syringa", "grass", "fern", "rose", "paeonia"};
-		private IIcon[] field_149893_M;
-		private IIcon[] field_149894_N;
-		public IIcon[] field_149891_b;
-		
 
 		public BlockDoublePlant() : base(Material.plants)
 		{
@@ -119,19 +108,6 @@ namespace DotCraftCore.nBlock
 		public static int func_149890_d(int p_149890_0_)
 		{
 			return p_149890_0_ & 7;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return func_149887_c(p_149691_2_) ? this.field_149893_M[0] : this.field_149893_M[p_149691_2_ & 7];
-		}
-
-		public virtual IIcon func_149888_a(bool p_149888_1_, int p_149888_2_)
-		{
-			return p_149888_1_ ? this.field_149894_N[p_149888_2_] : this.field_149893_M[p_149888_2_];
 		}
 
 ///    
@@ -230,22 +206,6 @@ namespace DotCraftCore.nBlock
 				this.dropBlockAsItem_do(p_149886_1_, p_149886_2_, p_149886_3_, p_149886_4_, new ItemStack(Blocks.tallgrass, 2, var8));
 				return true;
 			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149893_M = new IIcon[field_149892_a.Length];
-			this.field_149894_N = new IIcon[field_149892_a.Length];
-
-			for (int var2 = 0; var2 < this.field_149893_M.Length; ++var2)
-			{
-				this.field_149893_M[var2] = p_149651_1_.registerIcon("double_plant_" + field_149892_a[var2] + "_bottom");
-				this.field_149894_N[var2] = p_149651_1_.registerIcon("double_plant_" + field_149892_a[var2] + "_top");
-			}
-
-			this.field_149891_b = new IIcon[2];
-			this.field_149891_b[0] = p_149651_1_.registerIcon("double_plant_sunflower_front");
-			this.field_149891_b[1] = p_149651_1_.registerIcon("double_plant_sunflower_back");
 		}
 
 		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)

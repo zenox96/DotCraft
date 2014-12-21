@@ -1,21 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockDeadBush : BlockBush
 	{
-		
-
 		protected internal BlockDeadBush() : base(Material.vine)
 		{
 			float var1 = 0.4F;

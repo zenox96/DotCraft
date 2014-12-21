@@ -1,23 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nEntity.nProjectile;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using EntityArrow = DotCraftCore.nEntity.nProjectile.EntityArrow;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BlockButton : Block
 	{
 		private readonly bool field_150047_a;
-		
 
 		protected internal BlockButton(bool p_i45396_1_) : base(Material.circuits)
 		{
@@ -40,7 +34,7 @@ namespace DotCraftCore.nBlock
 			return this.field_150047_a ? 30 : 20;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -366,10 +360,5 @@ namespace DotCraftCore.nBlock
 				p_150042_1_.notifyBlocksOfNeighborChange(p_150042_2_, p_150042_3_ - 1, p_150042_4_, this);
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-		}
 	}
-
 }

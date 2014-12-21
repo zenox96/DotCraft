@@ -1,52 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockEndPortalFrame : Block
 	{
-		private IIcon field_150023_a;
-		private IIcon field_150022_b;
-		
-
 		public BlockEndPortalFrame() : base(Material.rock)
 		{
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_150023_a : (p_149691_1_ == 0 ? Blocks.end_stone.getBlockTextureFromSide(p_149691_1_) : this.blockIcon);
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_150023_a = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_150022_b = p_149651_1_.registerIcon(this.TextureName + "_eye");
-		}
-
-		public virtual IIcon func_150021_e()
-		{
-			return this.field_150022_b;
-		}
-
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

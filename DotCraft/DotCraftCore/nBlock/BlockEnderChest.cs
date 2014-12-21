@@ -1,33 +1,25 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using InventoryEnderChest = DotCraftCore.nInventory.InventoryEnderChest;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityEnderChest = DotCraftCore.nTileEntity.TileEntityEnderChest;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockEnderChest : BlockContainer
 	{
-		
-
 		protected internal BlockEnderChest() : base(Material.rock)
 		{
 			this.CreativeTab = CreativeTabs.tabDecorations;
 			this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{
@@ -110,7 +102,7 @@ namespace DotCraftCore.nBlock
 
 			if (var10 != null && var11 != null)
 			{
-				if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_ + 1, p_149727_4_).NormalCube)
+				if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_ + 1, p_149727_4_).isBlockNormalCube())
 				{
 					return true;
 				}
@@ -146,29 +138,23 @@ namespace DotCraftCore.nBlock
 		{
 			for (int var6 = 0; var6 < 3; ++var6)
 			{
-				double var10000 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
-				double var9 = (double)((float)p_149734_3_ + p_149734_5_.nextFloat());
-				var10000 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+				double var10000 = (double)p_149734_2_ + p_149734_5_.NextDouble();
+				double var9 = (double)p_149734_3_ + p_149734_5_.NextDouble();
+				var10000 = (double)p_149734_4_ + p_149734_5_.NextDouble();
 				double var13 = 0.0D;
 				double var15 = 0.0D;
 				double var17 = 0.0D;
 				int var19 = p_149734_5_.Next(2) * 2 - 1;
 				int var20 = p_149734_5_.Next(2) * 2 - 1;
-				var13 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.125D;
-				var15 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.125D;
-				var17 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.125D;
+				var13 = (p_149734_5_.NextDouble() - 0.5D) * 0.125D;
+				var15 = (p_149734_5_.NextDouble() - 0.5D) * 0.125D;
+				var17 = (p_149734_5_.NextDouble() - 0.5D) * 0.125D;
 				double var11 = (double)p_149734_4_ + 0.5D + 0.25D * (double)var20;
-				var17 = (double)(p_149734_5_.nextFloat() * 1.0F * (float)var20);
+				var17 = p_149734_5_.NextDouble() * 1.0D * (double)var20;
 				double var7 = (double)p_149734_2_ + 0.5D + 0.25D * (double)var19;
-				var13 = (double)(p_149734_5_.nextFloat() * 1.0F * (float)var19);
+				var13 = p_149734_5_.NextDouble() * 1.0D * (double)var19;
 				p_149734_1_.spawnParticle("portal", var7, var9, var11, var13, var15, var17);
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon("obsidian");
-		}
 	}
-
 }

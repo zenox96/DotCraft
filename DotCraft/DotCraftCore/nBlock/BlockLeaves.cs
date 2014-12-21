@@ -1,27 +1,18 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nStats;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using StatList = DotCraftCore.nStats.StatList;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using ColorizerFoliage = DotCraftCore.nWorld.ColorizerFoliage;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BlockLeaves : BlockLeavesBase
 	{
 		internal int[] field_150128_a;
 		protected internal int field_150127_b;
-		protected internal IIcon[][] field_150129_M = new IIcon[2][];
-		
 
 		public BlockLeaves() : base(Material.leaves, false)
 		{
@@ -87,7 +78,7 @@ namespace DotCraftCore.nBlock
 					{
 						for (int var11 = -var7; var11 <= var7; ++var11)
 						{
-							if (p_149749_1_.getBlock(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11).Material == Material.leaves)
+							if (p_149749_1_.getBlock(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11).BlockMaterial == Material.leaves)
 							{
 								int var12 = p_149749_1_.getBlockMetadata(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11);
 								p_149749_1_.setBlockMetadataWithNotify(p_149749_2_ + var9, p_149749_3_ + var10, p_149749_4_ + var11, var12 | 8, 4);
@@ -137,7 +128,7 @@ namespace DotCraftCore.nBlock
 
 									if (var15 != Blocks.log && var15 != Blocks.log2)
 									{
-										if (var15.Material == Material.leaves)
+										if (var15.BlockMaterial == Material.leaves)
 										{
 											this.field_150128_a[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -2;
 										}
@@ -221,9 +212,9 @@ namespace DotCraftCore.nBlock
 		{
 			if (p_149734_1_.canLightningStrikeAt(p_149734_2_, p_149734_3_ + 1, p_149734_4_) && !World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && p_149734_5_.Next(15) == 1)
 			{
-				double var6 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
+				double var6 = (double)p_149734_2_ + p_149734_5_.NextDouble();
 				double var8 = (double)p_149734_3_ - 0.05D;
-				double var10 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+				double var10 = (double)p_149734_4_ + p_149734_5_.NextDouble();
 				p_149734_1_.spawnParticle("dripWater", var6, var8, var10, 0.0D, 0.0D, 0.0D);
 			}
 		}
@@ -318,23 +309,12 @@ namespace DotCraftCore.nBlock
 			return p_149692_1_ & 3;
 		}
 
-		public override bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
 				return !this.field_150121_P;
 			}
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public abstract IIcon getIcon(int p_149691_1_, int p_149691_2_);
-
-		public virtual void func_150122_b(bool p_150122_1_)
-		{
-			this.field_150121_P = p_150122_1_;
-			this.field_150127_b = p_150122_1_ ? 0 : 1;
 		}
 
 ///    
@@ -348,5 +328,4 @@ namespace DotCraftCore.nBlock
 
 		public abstract string[] func_150125_e();
 	}
-
 }

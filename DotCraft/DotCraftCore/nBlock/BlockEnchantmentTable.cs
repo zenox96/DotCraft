@@ -1,26 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.nEntity.EntityLivingBase;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using TileEntityEnchantmentTable = DotCraftCore.nTileEntity.TileEntityEnchantmentTable;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockEnchantmentTable : BlockContainer
 	{
-		private IIcon field_149950_a;
-		private IIcon field_149949_b;
-		
-
 		protected internal BlockEnchantmentTable() : base(Material.rock)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.75F, 1.0F);
@@ -60,7 +51,7 @@ namespace DotCraftCore.nBlock
 									break;
 								}
 
-								p_149734_1_.spawnParticle("enchantmenttable", (double)p_149734_2_ + 0.5D, (double)p_149734_3_ + 2.0D, (double)p_149734_4_ + 0.5D, (double)((float)(var6 - p_149734_2_) + p_149734_5_.nextFloat()) - 0.5D, (double)((float)(var8 - p_149734_3_) - p_149734_5_.nextFloat() - 1.0F), (double)((float)(var7 - p_149734_4_) + p_149734_5_.nextFloat()) - 0.5D);
+								p_149734_1_.spawnParticle("enchantmenttable", (double)p_149734_2_ + 0.5D, (double)p_149734_3_ + 2.0D, (double)p_149734_4_ + 0.5D, (double)(var6 - p_149734_2_) + p_149734_5_.NextDouble() - 0.5D, (double)(var8 - p_149734_3_) - p_149734_5_.NextDouble() - 1.0D, (double)(var7 - p_149734_4_) + p_149734_5_.NextDouble() - 0.5D);
 							}
 						}
 					}
@@ -68,20 +59,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool isOpaqueCube()
+		public virtual bool OpaqueCube
 		{
 			get
 			{
 				return false;
 			}
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 0 ? this.field_149949_b : (p_149691_1_ == 1 ? this.field_149950_a : this.blockIcon);
 		}
 
 ///    
@@ -121,13 +104,5 @@ namespace DotCraftCore.nBlock
 				((TileEntityEnchantmentTable)p_149689_1_.getTileEntity(p_149689_2_, p_149689_3_, p_149689_4_)).func_145920_a(p_149689_6_.DisplayName);
 			}
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_" + "side");
-			this.field_149950_a = p_149651_1_.registerIcon(this.TextureName + "_" + "top");
-			this.field_149949_b = p_149651_1_.registerIcon(this.TextureName + "_" + "bottom");
-		}
 	}
-
 }

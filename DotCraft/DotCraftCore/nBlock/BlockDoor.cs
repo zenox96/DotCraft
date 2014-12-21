@@ -1,20 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-    using DotCraftCore.nBlock.nMaterial;
-    using DotCraftCore.nEntity.nPlayer;
-    using DotCraftCore.nInit;
-    using DotCraftCore.nItem;
-    using DotCraftCore.nUtil;
-    using DotCraftCore.nWorld;
-
 	public class BlockDoor : Block
 	{
-		private IIcon[] field_150017_a;
-		private IIcon[] field_150016_b;
-		
-
 		protected internal BlockDoor(Material p_i45402_1_) : base(p_i45402_1_)
 		{
 			float var2 = 0.5F;
@@ -22,87 +17,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.5F - var2, 0.0F, 0.5F - var2, 0.5F + var2, var3, 0.5F + var2);
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return this.field_150016_b[0];
-		}
-
-		public virtual IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_, int p_149673_3_, int p_149673_4_, int p_149673_5_)
-		{
-			if (p_149673_5_ != 1 && p_149673_5_ != 0)
-			{
-				int var6 = this.func_150012_g(p_149673_1_, p_149673_2_, p_149673_3_, p_149673_4_);
-				int var7 = var6 & 3;
-				bool var8 = (var6 & 4) != 0;
-				bool var9 = false;
-				bool var10 = (var6 & 8) != 0;
-
-				if (var8)
-				{
-					if (var7 == 0 && p_149673_5_ == 2)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 1 && p_149673_5_ == 5)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 2 && p_149673_5_ == 3)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 3 && p_149673_5_ == 4)
-					{
-						var9 = !var9;
-					}
-				}
-				else
-				{
-					if (var7 == 0 && p_149673_5_ == 5)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 1 && p_149673_5_ == 3)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 2 && p_149673_5_ == 4)
-					{
-						var9 = !var9;
-					}
-					else if (var7 == 3 && p_149673_5_ == 2)
-					{
-						var9 = !var9;
-					}
-
-					if ((var6 & 16) != 0)
-					{
-						var9 = !var9;
-					}
-				}
-
-				return var10 ? this.field_150017_a[var9 ? 1 : 0] : this.field_150016_b[var9 ? 1 : 0];
-			}
-			else
-			{
-				return this.field_150016_b[0];
-			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_150017_a = new IIcon[2];
-			this.field_150016_b = new IIcon[2];
-			this.field_150017_a[0] = p_149651_1_.registerIcon(this.TextureName + "_upper");
-			this.field_150016_b[0] = p_149651_1_.registerIcon(this.TextureName + "_lower");
-			this.field_150017_a[1] = new IconFlipped(this.field_150017_a[0], true, false);
-			this.field_150016_b[1] = new IconFlipped(this.field_150016_b[0], true, false);
-		}
-
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -260,7 +175,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
-			if (this.blockMaterial == Material.iron)
+			if (this.BlockMaterial == Material.iron)
 			{
 				return true;
 			}
@@ -369,7 +284,7 @@ namespace DotCraftCore.nBlock
 
 		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
-			return (p_149650_1_ & 8) != 0 ? null : (this.blockMaterial == Material.iron ? Items.iron_door : Items.wooden_door);
+			return (p_149650_1_ & 8) != 0 ? null : (this.BlockMaterial == Material.iron ? Items.iron_door : Items.wooden_door);
 		}
 
 		public virtual MovingObjectPosition collisionRayTrace(World p_149731_1_, int p_149731_2_, int p_149731_3_, int p_149731_4_, Vec3 p_149731_5_, Vec3 p_149731_6_)
@@ -418,7 +333,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
-			return this.blockMaterial == Material.iron ? Items.iron_door : Items.wooden_door;
+			return this.BlockMaterial == Material.iron ? Items.iron_door : Items.wooden_door;
 		}
 
 ///    

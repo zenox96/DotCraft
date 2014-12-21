@@ -3,11 +3,12 @@ using System;
 namespace DotCraftCore.nTileEntity
 {
 
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using IInventory = DotCraftCore.inventory.IInventory;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
+    using DotCraftCore.nItem;
+    using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
+    using IInventory = DotCraftCore.inventory.IInventory;
+    using ItemStack = DotCraftCore.item.ItemStack;
+    using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
+    using NBTTagList = DotCraftCore.nbt.NBTTagList;
 
 	public class TileEntityDispenser : TileEntity, IInventory
 	{

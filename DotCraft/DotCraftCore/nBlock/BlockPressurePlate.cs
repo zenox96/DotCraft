@@ -1,12 +1,11 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-	using DotCraftCore.nBlock.nMaterial;
-using DotCraftCore.nEntity;
-using DotCraftCore.nEntity.nPlayer;
-using DotCraftCore.nWorld;
-
 	public class BlockPressurePlate : BlockBasePressurePlate
 	{
 		private BlockPressurePlate.Sensitivity field_150069_a;

@@ -1,10 +1,7 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-
 	public class BlockCompressed : Block
 	{
 		private readonly MapColor field_150202_a;

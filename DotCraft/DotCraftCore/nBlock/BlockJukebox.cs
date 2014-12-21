@@ -1,35 +1,19 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using TileEntity = DotCraftCore.nTileEntity.TileEntity;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockJukebox : BlockContainer
 	{
-		private IIcon field_149927_a;
-		
-
 		protected internal BlockJukebox() : base(Material.wood)
 		{
 			this.CreativeTab = CreativeTabs.tabDecorations;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_149927_a : this.blockIcon;
 		}
 
 ///    
@@ -79,9 +63,9 @@ namespace DotCraftCore.nBlock
 						var5.func_145857_a((ItemStack)null);
 						p_149925_1_.setBlockMetadataWithNotify(p_149925_2_, p_149925_3_, p_149925_4_, 0, 2);
 						float var7 = 0.7F;
-						double var8 = (double)(p_149925_1_.rand.nextFloat() * var7) + (double)(1.0F - var7) * 0.5D;
-						double var10 = (double)(p_149925_1_.rand.nextFloat() * var7) + (double)(1.0F - var7) * 0.2D + 0.6D;
-						double var12 = (double)(p_149925_1_.rand.nextFloat() * var7) + (double)(1.0F - var7) * 0.5D;
+						double var8 = (double)(p_149925_1_.rand.NextDouble() * var7) + (double)(1.0F - var7) * 0.5D;
+						double var10 = (double)(p_149925_1_.rand.NextDouble() * var7) + (double)(1.0F - var7) * 0.2D + 0.6D;
+						double var12 = (double)(p_149925_1_.rand.NextDouble() * var7) + (double)(1.0F - var7) * 0.5D;
 						ItemStack var14 = var6.copy();
 						EntityItem var15 = new EntityItem(p_149925_1_, (double)p_149925_2_ + var8, (double)p_149925_3_ + var10, (double)p_149925_4_ + var12, var14);
 						var15.delayBeforeCanPickup = 10;
@@ -114,12 +98,6 @@ namespace DotCraftCore.nBlock
 		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			return new BlockJukebox.TileEntityJukebox();
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_149927_a = p_149651_1_.registerIcon(this.TextureName + "_top");
 		}
 
 		public virtual bool hasComparatorInputOverride()

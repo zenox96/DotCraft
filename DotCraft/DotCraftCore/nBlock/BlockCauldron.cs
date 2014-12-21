@@ -1,55 +1,20 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemArmor = DotCraftCore.nItem.ItemArmor;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCauldron : Block
 	{
-		private IIcon field_150029_a;
-		private IIcon field_150028_b;
-		private IIcon field_150030_M;
-		
-
 		public BlockCauldron() : base(Material.iron)
 		{
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_150028_b : (p_149691_1_ == 0 ? this.field_150030_M : this.blockIcon);
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_150029_a = p_149651_1_.registerIcon(this.TextureName + "_" + "inner");
-			this.field_150028_b = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_150030_M = p_149651_1_.registerIcon(this.TextureName + "_" + "bottom");
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-		}
-
-		public static IIcon func_150026_e(string p_150026_0_)
-		{
-			return p_150026_0_.Equals("inner") ? Blocks.cauldron.field_150029_a : (p_150026_0_.Equals("bottom") ? Blocks.cauldron.field_150030_M : null);
 		}
 
 		public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
@@ -76,7 +41,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{

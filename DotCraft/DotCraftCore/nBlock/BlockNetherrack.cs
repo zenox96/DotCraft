@@ -1,14 +1,9 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInventory;
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-
 	public class BlockNetherrack : Block
 	{
-		
-
 		public BlockNetherrack() : base(Material.rock)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;

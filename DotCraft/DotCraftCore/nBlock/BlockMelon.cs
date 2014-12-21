@@ -1,31 +1,17 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Items = DotCraftCore.nInit.Items;
-	using Item = DotCraftCore.nItem.Item;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-
 	public class BlockMelon : Block
 	{
-		private IIcon field_150201_a;
-		
-
 		protected internal BlockMelon() : base(Material.field_151572_C)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ != 1 && p_149691_1_ != 0 ? this.blockIcon : this.field_150201_a;
 		}
 
 		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
@@ -55,12 +41,5 @@ namespace DotCraftCore.nBlock
 
 			return var3;
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_150201_a = p_149651_1_.registerIcon(this.TextureName + "_top");
-		}
 	}
-
 }

@@ -10,6 +10,7 @@ namespace DotCraftCore.nItem
 	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
 	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
 	using World = DotCraftCore.nWorld.World;
+    using DotCraftCore.nEntity.nPlayer;
 
 	public class ItemLead : Item
 	{

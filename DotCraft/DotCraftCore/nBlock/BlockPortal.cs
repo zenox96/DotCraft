@@ -1,23 +1,16 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using Entity = DotCraftCore.nEntity.Entity;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemMonsterPlacer = DotCraftCore.nItem.ItemMonsterPlacer;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockPortal : BlockBreakable
 	{
 		public static readonly int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
-		
 
 		public BlockPortal() : base("portal", Material.Portal, false)
 		{
@@ -216,26 +209,26 @@ namespace DotCraftCore.nBlock
 
 			for (int var6 = 0; var6 < 4; ++var6)
 			{
-				double var7 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
-				double var9 = (double)((float)p_149734_3_ + p_149734_5_.nextFloat());
-				double var11 = (double)((float)p_149734_4_ + p_149734_5_.nextFloat());
+				double var7 = (double)((float)p_149734_2_ + p_149734_5_.NextFloat());
+				double var9 = (double)((float)p_149734_3_ + p_149734_5_.NextFloat());
+				double var11 = (double)((float)p_149734_4_ + p_149734_5_.NextFloat());
 				double var13 = 0.0D;
 				double var15 = 0.0D;
 				double var17 = 0.0D;
 				int var19 = p_149734_5_.Next(2) * 2 - 1;
-				var13 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
-				var15 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
-				var17 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
+				var13 = (p_149734_5_.NextDouble() - 0.5D) * 0.5D;
+				var15 = (p_149734_5_.NextDouble() - 0.5D) * 0.5D;
+				var17 = (p_149734_5_.NextDouble() - 0.5D) * 0.5D;
 
 				if (p_149734_1_.getBlock(p_149734_2_ - 1, p_149734_3_, p_149734_4_) != this && p_149734_1_.getBlock(p_149734_2_ + 1, p_149734_3_, p_149734_4_) != this)
 				{
 					var7 = (double)p_149734_2_ + 0.5D + 0.25D * (double)var19;
-					var13 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19);
+					var13 = (p_149734_5_.NextDouble() * 2.0D * (double)var19);
 				}
 				else
 				{
 					var11 = (double)p_149734_4_ + 0.5D + 0.25D * (double)var19;
-					var17 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19);
+					var17 = (p_149734_5_.NextDouble() * 2.0D * (double)var19);
 				}
 
 				p_149734_1_.spawnParticle("portal", var7, var9, var11, var13, var15, var17);
@@ -404,7 +397,7 @@ namespace DotCraftCore.nBlock
 
 			protected internal virtual bool func_150857_a(Block p_150857_1_)
 			{
-				return p_150857_1_.blockMaterial == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == Blocks.portal;
+				return p_150857_1_.BlockMaterial == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == Blocks.portal;
 			}
 
 			public virtual bool func_150860_b()

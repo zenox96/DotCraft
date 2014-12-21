@@ -1,24 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.nInventory.CreativeTabs;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using DamageSource = DotCraftCore.nUtil.DamageSource;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class BlockCactus : Block
 	{
-		private IIcon field_150041_a;
-		private IIcon field_150040_b;
-		
-
 		protected internal BlockCactus() : base(Material.field_151570_A)
 		{
 			this.TickRandomly = true;
@@ -76,20 +67,12 @@ namespace DotCraftCore.nBlock
 			return AxisAlignedBB.getBoundingBox((double)((float)p_149633_2_ + var5), (double)p_149633_3_, (double)((float)p_149633_4_ + var5), (double)((float)(p_149633_2_ + 1) - var5), (double)(p_149633_3_ + 1), (double)((float)(p_149633_4_ + 1) - var5));
 		}
 
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return p_149691_1_ == 1 ? this.field_150041_a : (p_149691_1_ == 0 ? this.field_150040_b : this.blockIcon);
-		}
-
 		public virtual bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -126,19 +109,19 @@ namespace DotCraftCore.nBlock
 ///     
 		public virtual bool canBlockStay(World p_149718_1_, int p_149718_2_, int p_149718_3_, int p_149718_4_)
 		{
-			if (p_149718_1_.getBlock(p_149718_2_ - 1, p_149718_3_, p_149718_4_).Material.Solid)
+			if (p_149718_1_.getBlock(p_149718_2_ - 1, p_149718_3_, p_149718_4_).BlockMaterial.Solid)
 			{
 				return false;
 			}
-			else if (p_149718_1_.getBlock(p_149718_2_ + 1, p_149718_3_, p_149718_4_).Material.Solid)
+			else if (p_149718_1_.getBlock(p_149718_2_ + 1, p_149718_3_, p_149718_4_).BlockMaterial.Solid)
 			{
 				return false;
 			}
-			else if (p_149718_1_.getBlock(p_149718_2_, p_149718_3_, p_149718_4_ - 1).Material.Solid)
+			else if (p_149718_1_.getBlock(p_149718_2_, p_149718_3_, p_149718_4_ - 1).BlockMaterial.Solid)
 			{
 				return false;
 			}
-			else if (p_149718_1_.getBlock(p_149718_2_, p_149718_3_, p_149718_4_ + 1).Material.Solid)
+			else if (p_149718_1_.getBlock(p_149718_2_, p_149718_3_, p_149718_4_ + 1).BlockMaterial.Solid)
 			{
 				return false;
 			}
@@ -153,13 +136,5 @@ namespace DotCraftCore.nBlock
 		{
 			p_149670_5_.attackEntityFrom(DamageSource.cactus, 1.0F);
 		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.blockIcon = p_149651_1_.registerIcon(this.TextureName + "_side");
-			this.field_150041_a = p_149651_1_.registerIcon(this.TextureName + "_top");
-			this.field_150040_b = p_149651_1_.registerIcon(this.TextureName + "_bottom");
-		}
 	}
-
 }

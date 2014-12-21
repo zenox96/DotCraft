@@ -1,24 +1,15 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nBlock
 {
-
-	using MapColor = DotCraftCore.nBlock.nMaterial.MapColor;
-	
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using IBlockAccess = DotCraftCore.nWorld.IBlockAccess;
-	using World = DotCraftCore.nWorld.World;
-	using WorldProviderEnd = DotCraftCore.nWorld.WorldProviderEnd;
-
 	public class BlockFire : Block
 	{
 		private int[] field_149849_a = new int[256];
 		private int[] field_149848_b = new int[256];
-		private IIcon[] field_149850_M;
-		
 
 		protected internal BlockFire() : base(Material.fire)
 		{
@@ -67,7 +58,7 @@ namespace DotCraftCore.nBlock
 			return null;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -328,13 +319,13 @@ namespace DotCraftCore.nBlock
 		{
 			if (p_149734_5_.Next(24) == 0)
 			{
-				p_149734_1_.playSound((double)((float)p_149734_2_ + 0.5F), (double)((float)p_149734_3_ + 0.5F), (double)((float)p_149734_4_ + 0.5F), "fire.fire", 1.0F + p_149734_5_.nextFloat(), p_149734_5_.nextFloat() * 0.7F + 0.3F, false);
+				p_149734_1_.playSound((double)p_149734_2_ + 0.5D, (double)p_149734_3_ + 0.5D, (double)p_149734_4_ + 0.5D, "fire.fire", 1.0F + p_149734_5_.NextFloat(), p_149734_5_.NextFloat() * 0.7F + 0.3F, false);
 			}
 
 			int var6;
-			float var7;
-			float var8;
-			float var9;
+			double var7;
+			double var8;
+			double var9;
 
 			if (!World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !Blocks.fire.func_149844_e(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_))
 			{
@@ -342,10 +333,10 @@ namespace DotCraftCore.nBlock
 				{
 					for (var6 = 0; var6 < 2; ++var6)
 					{
-						var7 = (float)p_149734_2_ + p_149734_5_.nextFloat() * 0.1F;
-						var8 = (float)p_149734_3_ + p_149734_5_.nextFloat();
-						var9 = (float)p_149734_4_ + p_149734_5_.nextFloat();
-						p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+						var7 = (double)p_149734_2_ + p_149734_5_.NextDouble() * 0.1D;
+                        var8 = (double)p_149734_3_ + p_149734_5_.NextDouble( );
+                        var9 = (double)p_149734_4_ + p_149734_5_.NextDouble( );
+						p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 					}
 				}
 
@@ -353,10 +344,10 @@ namespace DotCraftCore.nBlock
 				{
 					for (var6 = 0; var6 < 2; ++var6)
 					{
-						var7 = (float)(p_149734_2_ + 1) - p_149734_5_.nextFloat() * 0.1F;
-						var8 = (float)p_149734_3_ + p_149734_5_.nextFloat();
-						var9 = (float)p_149734_4_ + p_149734_5_.nextFloat();
-						p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+                        var7 = (double)(p_149734_2_ + 1) - p_149734_5_.NextDouble( ) * 0.1D;
+                        var8 = (double)p_149734_3_ + p_149734_5_.NextDouble( );
+                        var9 = (double)p_149734_4_ + p_149734_5_.NextDouble( );
+						p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 					}
 				}
 
@@ -364,10 +355,10 @@ namespace DotCraftCore.nBlock
 				{
 					for (var6 = 0; var6 < 2; ++var6)
 					{
-						var7 = (float)p_149734_2_ + p_149734_5_.nextFloat();
-						var8 = (float)p_149734_3_ + p_149734_5_.nextFloat();
-						var9 = (float)p_149734_4_ + p_149734_5_.nextFloat() * 0.1F;
-						p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+                        var7 = (double)p_149734_2_ + p_149734_5_.NextDouble( );
+                        var8 = (double)p_149734_3_ + p_149734_5_.NextDouble( );
+                        var9 = (double)p_149734_4_ + p_149734_5_.NextDouble( ) * 0.1D;
+						p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 					}
 				}
 
@@ -375,10 +366,10 @@ namespace DotCraftCore.nBlock
 				{
 					for (var6 = 0; var6 < 2; ++var6)
 					{
-						var7 = (float)p_149734_2_ + p_149734_5_.nextFloat();
-						var8 = (float)p_149734_3_ + p_149734_5_.nextFloat();
-						var9 = (float)(p_149734_4_ + 1) - p_149734_5_.nextFloat() * 0.1F;
-						p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+                        var7 = (double)p_149734_2_ + p_149734_5_.NextDouble( );
+                        var8 = (double)p_149734_3_ + p_149734_5_.NextDouble( );
+                        var9 = (double)(p_149734_4_ + 1) - p_149734_5_.NextDouble( ) * 0.1D;
+						p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 					}
 				}
 
@@ -386,10 +377,10 @@ namespace DotCraftCore.nBlock
 				{
 					for (var6 = 0; var6 < 2; ++var6)
 					{
-						var7 = (float)p_149734_2_ + p_149734_5_.nextFloat();
-						var8 = (float)(p_149734_3_ + 1) - p_149734_5_.nextFloat() * 0.1F;
-						var9 = (float)p_149734_4_ + p_149734_5_.nextFloat();
-						p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+                        var7 = (double)p_149734_2_ + p_149734_5_.NextDouble( );
+                        var8 = (double)(p_149734_3_ + 1) - p_149734_5_.NextDouble( ) * 0.1D;
+                        var9 = (double)p_149734_4_ + p_149734_5_.NextDouble( );
+						p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 					}
 				}
 			}
@@ -397,30 +388,12 @@ namespace DotCraftCore.nBlock
 			{
 				for (var6 = 0; var6 < 3; ++var6)
 				{
-					var7 = (float)p_149734_2_ + p_149734_5_.nextFloat();
-					var8 = (float)p_149734_3_ + p_149734_5_.nextFloat() * 0.5F + 0.5F;
-					var9 = (float)p_149734_4_ + p_149734_5_.nextFloat();
-					p_149734_1_.spawnParticle("largesmoke", (double)var7, (double)var8, (double)var9, 0.0D, 0.0D, 0.0D);
+                    var7 = (double)p_149734_2_ + p_149734_5_.NextDouble( );
+                    var8 = (double)p_149734_3_ + p_149734_5_.NextDouble( ) * 0.5D + 0.5D;
+                    var9 = (double)p_149734_4_ + p_149734_5_.NextDouble( );
+					p_149734_1_.spawnParticle("largesmoke", var7, var8, var9, 0.0D, 0.0D, 0.0D);
 				}
 			}
-		}
-
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
-		{
-			this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon(this.TextureName + "_layer_0"), p_149651_1_.registerIcon(this.TextureName + "_layer_1")};
-		}
-
-		public virtual IIcon func_149840_c(int p_149840_1_)
-		{
-			return this.field_149850_M[p_149840_1_];
-		}
-
-///    
-///     <summary> * Gets the block's texture. Args: side, meta </summary>
-///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
-		{
-			return this.field_149850_M[0];
 		}
 
 		public virtual MapColor getMapColor(int p_149728_1_)
@@ -428,5 +401,4 @@ namespace DotCraftCore.nBlock
 			return MapColor.field_151656_f;
 		}
 	}
-
 }
