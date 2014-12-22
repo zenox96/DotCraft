@@ -35,8 +35,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nStats\IStatStringFormat.cs" />
+    <Compile Include="nRealms\DisconnectedOnlineScreen.cs" />
+    <Compile Include="nRealms\Realms.cs" />
+    <Compile Include="nRealms\RealmsAnvilLevelStorageSource.cs" />
+    <Compile Include="nRealms\RealmsBridge.cs" />
+    <Compile Include="nRealms\RealmsButton.cs" />
+    <Compile Include="nRealms\RealmsConnect.cs" />
+    <Compile Include="nRealms\RealmsEditBox.cs" />
+    <Compile Include="nRealms\RealmsLevelSummary.cs" />
+    <Compile Include="nRealms\RealmsMth.cs" />
+    <Compile Include="nRealms\RealmsScreen.cs" />
+    <Compile Include="nRealms\RealmsScrolledSelectionList.cs" />
+    <Compile Include="nRealms\RealmsServerAddress.cs" />
+    <Compile Include="nRealms\RealmsServerStatusPinger.cs" />
+    <Compile Include="nRealms\RealmsSharedConstants.cs" />
+    <Compile Include="nRealms\RealmsSliderButton.cs" />
+    <Compile Include="nRealms\RendererUtility.cs" />
+    <Compile Include="nRealms\ServerPing.cs" />
+    <Compile Include="nRealms\Tezzelator.cs" />
     <Compile Include="nServer\nIntegrated\IntegratedPlayerList.cs" />
     <Compile Include="nServer\nIntegrated\IntegratedServer.cs" />
+    <Compile Include="nUtil\EnchantmentNameParts.cs" />
+    <Compile Include="nUtil\MinecraftError.cs" />
+    <Compile Include="nUtil\MouseFilter.cs" />
+    <Compile Include="nUtil\MouseHelper.cs" />
+    <Compile Include="nUtil\MovementInput.cs" />
+    <Compile Include="nUtil\MovementInputFromOptions.cs" />
+    <Compile Include="nUtil\ResourceLocation.cs" />
+    <Compile Include="nUtil\ScreenShotHelper.cs" />
+    <Compile Include="nUtil\Session.cs" />
+    <Compile Include="nUtil\ThreadSafeBoundList.cs" />
+    <Compile Include="nUtil\Timer.cs" />
+    <Compile Include="nUtil\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotCraftCore\DotCraftCore.csproj">
@@ -46,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="nClient\" />
+    <Folder Include="nServer\nGUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
