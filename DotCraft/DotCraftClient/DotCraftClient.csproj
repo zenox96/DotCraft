@@ -34,6 +34,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="nServer\nIntegrated\IntegratedPlayerList.cs" />
+    <Compile Include="nServer\nIntegrated\IntegratedServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotCraftCore\DotCraftCore.csproj">
+      <Project>{c63edca7-b43f-417a-89c7-40ae77480ac5}</Project>
+      <Name>DotCraftCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="nClient\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

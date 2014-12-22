@@ -6,8 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftCore", "DotCraftCore\DotCraftCore.csproj", "{C63EDCA7-B43F-417A-89C7-40AE77480AC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftClient", "DotCraftClient\DotCraftClient.csproj", "{154C99AA-D91D-4760-B751-C19FCE67D171}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C63EDCA7-B43F-417A-89C7-40AE77480AC5} = {C63EDCA7-B43F-417A-89C7-40AE77480AC5}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftServer", "DotCraftServer\DotCraftServer.csproj", "{D7F92B45-8358-4C24-9A26-F590DDCBC81F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C63EDCA7-B43F-417A-89C7-40AE77480AC5} = {C63EDCA7-B43F-417A-89C7-40AE77480AC5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

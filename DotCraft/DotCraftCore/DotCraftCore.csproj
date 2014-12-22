@@ -761,8 +761,6 @@
     <Compile Include="nScoreboard\ServerScoreboard.cs" />
     <Compile Include="nScoreboard\Team.cs" />
     <Compile Include="nServer\nGUI\IUpdatePlayerListBox.cs" />
-    <Compile Include="nServer\nIntegrated\IntegratedPlayerList.cs" />
-    <Compile Include="nServer\nIntegrated\IntegratedServer.cs" />
     <Compile Include="nServer\nManagement\BanEntry.cs" />
     <Compile Include="nServer\nManagement\BanList.cs" />
     <Compile Include="nServer\nManagement\IPBanEntry.cs" />

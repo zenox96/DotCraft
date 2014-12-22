@@ -1256,9 +1256,9 @@ namespace DotCraftCore.nBlock
         ///    
         ///     <summary> * Returns true only if block is flowerPot </summary>
         ///     
-        public virtual bool isFlowerPot( )
+        public virtual bool FlowerPot
 		{
-			return false;
+			get { return false; }
 		}
 
         public virtual bool func_149698_L( )

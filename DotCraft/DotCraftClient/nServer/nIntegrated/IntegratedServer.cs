@@ -1,27 +1,8 @@
+using DotCraftCore.nServer;
 using System;
 
-namespace DotCraftCore.nServer.nIntegrated
+namespace DotCraftClient.nServer.nIntegrated
 {
-
-	using ClientBrandRetriever = DotCraftCore.client.ClientBrandRetriever;
-	using Minecraft = DotCraftCore.client.Minecraft;
-	using ThreadLanServerPing = DotCraftCore.client.multiplayer.ThreadLanServerPing;
-	using CrashReport = DotCraftCore.crash.CrashReport;
-	using PlayerUsageSnooper = DotCraftCore.profiler.PlayerUsageSnooper;
-	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
-	using CryptManager = DotCraftCore.nUtil.CryptManager;
-	using HttpUtil = DotCraftCore.nUtil.HttpUtil;
-	using EnumDifficulty = DotCraftCore.nWorld.EnumDifficulty;
-	using WorldManager = DotCraftCore.nWorld.WorldManager;
-	using WorldServer = DotCraftCore.nWorld.WorldServer;
-	using WorldServerMulti = DotCraftCore.nWorld.WorldServerMulti;
-	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
-	using WorldType = DotCraftCore.nWorld.WorldType;
-	using DemoWorldServer = DotCraftCore.nWorld.nDemo.DemoWorldServer;
-	using ISaveHandler = DotCraftCore.nWorld.nStorage.ISaveHandler;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
 	public class IntegratedServer : MinecraftServer
 	{
 		private static readonly Logger logger = LogManager.Logger;
