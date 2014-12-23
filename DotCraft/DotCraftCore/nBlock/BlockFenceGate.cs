@@ -14,7 +14,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabRedstone;
 		}
 
-		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+		public override bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
 			return !p_149742_1_.getBlock(p_149742_2_, p_149742_3_ - 1, p_149742_4_).BlockMaterial.Solid ? false : base.canPlaceBlockAt(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_);
 		}
@@ -23,13 +23,13 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			int var5 = p_149668_1_.getBlockMetadata(p_149668_2_, p_149668_3_, p_149668_4_);
 			return isFenceGateOpen(var5) ? null : (var5 != 2 && var5 != 0 ? AxisAlignedBB.getBoundingBox((double)p_149668_2_ + 0.375D, (double)p_149668_3_, (double)p_149668_4_, (double)p_149668_2_ + 0.625D, (double)p_149668_3_ + 1.5D, (double)(p_149668_4_ + 1)) : AxisAlignedBB.getBoundingBox((double)p_149668_2_, (double)p_149668_3_, (double)p_149668_4_ + 0.375D, (double)(p_149668_2_ + 1), (double)p_149668_3_ + 1.5D, (double)p_149668_4_ + 0.625D));
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			int var5 = func_149895_l(p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_));
 
@@ -51,12 +51,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
+		public override bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
 		{
 			return isFenceGateOpen(p_149655_1_.getBlockMetadata(p_149655_2_, p_149655_3_, p_149655_4_));
 		}
@@ -64,7 +64,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -75,7 +75,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called when the block is placed in the world. </summary>
 ///     
-		public virtual void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+		public override void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
 		{
 			int var7 = (MathHelper.floor_double((double)(p_149689_5_.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3) % 4;
 			p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, var7, 2);
@@ -84,7 +84,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			int var10 = p_149727_1_.getBlockMetadata(p_149727_2_, p_149727_3_, p_149727_4_);
 
@@ -109,7 +109,7 @@ namespace DotCraftCore.nBlock
 			return true;
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (!p_149695_1_.isClient)
 			{
@@ -140,7 +140,7 @@ namespace DotCraftCore.nBlock
 			return (p_149896_0_ & 4) != 0;
 		}
 
-		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
+		public override bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			return true;
 		}

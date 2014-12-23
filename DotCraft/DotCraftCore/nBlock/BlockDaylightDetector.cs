@@ -15,12 +15,12 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabRedstone;
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.375F, 1.0F);
 		}
 
-		public virtual int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
+		public override int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
 		{
 			return p_149709_1_.getBlockMetadata(p_149709_2_, p_149709_3_, p_149709_4_);
 		}
@@ -28,11 +28,11 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 		}
 
@@ -40,7 +40,7 @@ namespace DotCraftCore.nBlock
 		{
 		}
 
-		public virtual void func_149957_e(World p_149957_1_, int p_149957_2_, int p_149957_3_, int p_149957_4_)
+		public override void func_149957_e(World p_149957_1_, int p_149957_2_, int p_149957_3_, int p_149957_4_)
 		{
 			if (!p_149957_1_.provider.hasNoSky)
 			{
@@ -76,7 +76,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
@@ -92,7 +92,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Can this block provide power. Only wire currently seems to have this change based on its state. </summary>
 ///     
-		public virtual bool canProvidePower()
+		public override bool canProvidePower()
 		{
 			return true;
 		}
@@ -100,7 +100,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 		    return new TileEntityDaylightDetector();
 		}

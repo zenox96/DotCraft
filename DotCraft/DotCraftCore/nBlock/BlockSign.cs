@@ -26,7 +26,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
@@ -34,13 +34,13 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the bounding box of the wired rectangular prism to render. </summary>
 ///     
-		public virtual AxisAlignedBB getSelectedBoundingBoxFromPool(World p_149633_1_, int p_149633_2_, int p_149633_3_, int p_149633_4_)
+		public override AxisAlignedBB getSelectedBoundingBoxFromPool(World p_149633_1_, int p_149633_2_, int p_149633_3_, int p_149633_4_)
 		{
 			this.setBlockBoundsBasedOnState(p_149633_1_, p_149633_2_, p_149633_3_, p_149633_4_);
 			return base.getSelectedBoundingBoxFromPool(p_149633_1_, p_149633_2_, p_149633_3_, p_149633_4_);
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			if (!this.field_149967_b)
 			{
@@ -77,7 +77,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -85,17 +85,17 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
+		public override bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
 		{
 			return true;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -106,7 +106,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			try
 			{
@@ -117,12 +117,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Items.sign;
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			bool var6 = false;
 
@@ -171,7 +171,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
 ///     
-		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+		public override Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return Items.sign;
 		}

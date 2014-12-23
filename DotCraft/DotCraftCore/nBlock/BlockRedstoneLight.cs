@@ -21,7 +21,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
 		{
 			if (!p_149726_1_.isClient)
 			{
@@ -36,7 +36,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (!p_149695_1_.isClient)
 			{
@@ -54,7 +54,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient && this.field_150171_a && !p_149674_1_.isBlockIndirectlyGettingPowered(p_149674_2_, p_149674_3_, p_149674_4_))
 			{
@@ -62,7 +62,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Item.getItemFromBlock(Blocks.redstone_lamp);
 		}
@@ -70,7 +70,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
 ///     
-		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+		public override Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return Item.getItemFromBlock(Blocks.redstone_lamp);
 		}
@@ -79,7 +79,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
 ///     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null. </summary>
 ///     
-		protected internal virtual ItemStack createStackedBlock(int p_149644_1_)
+		protected internal override ItemStack createStackedBlock(int p_149644_1_)
 		{
 			return new ItemStack(Blocks.redstone_lamp);
 		}

@@ -24,12 +24,12 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
 
-		public virtual int func_149738_a(World p_149738_1_)
+		public override int func_149738_a(World p_149738_1_)
 		{
 			return this.field_150047_a ? 30 : 20;
 		}
@@ -42,7 +42,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
@@ -50,17 +50,17 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * checks to see if you can place this block can be placed on that side of a block: BlockLever overrides </summary>
 ///     
-		public virtual bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
+		public override bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
 		{
 			return p_149707_5_ == 2 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ + 1).NormalCube ? true : (p_149707_5_ == 3 && p_149707_1_.getBlock(p_149707_2_, p_149707_3_, p_149707_4_ - 1).NormalCube ? true : (p_149707_5_ == 4 && p_149707_1_.getBlock(p_149707_2_ + 1, p_149707_3_, p_149707_4_).NormalCube ? true : p_149707_5_ == 5 && p_149707_1_.getBlock(p_149707_2_ - 1, p_149707_3_, p_149707_4_).NormalCube));
 		}
 
-		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+		public override bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
 			return p_149742_1_.getBlock(p_149742_2_ - 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_ + 1, p_149742_3_, p_149742_4_).NormalCube ? true : (p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ - 1).NormalCube ? true : p_149742_1_.getBlock(p_149742_2_, p_149742_3_, p_149742_4_ + 1).NormalCube));
 		}
 
-		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
+		public override int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
 		{
 			int var10 = p_149660_1_.getBlockMetadata(p_149660_2_, p_149660_3_, p_149660_4_);
 			int var11 = var10 & 8;
@@ -95,7 +95,7 @@ namespace DotCraftCore.nBlock
 			return p_150045_1_.getBlock(p_150045_2_ - 1, p_150045_3_, p_150045_4_).NormalCube ? 1 : (p_150045_1_.getBlock(p_150045_2_ + 1, p_150045_3_, p_150045_4_).NormalCube ? 2 : (p_150045_1_.getBlock(p_150045_2_, p_150045_3_, p_150045_4_ - 1).NormalCube ? 3 : (p_150045_1_.getBlock(p_150045_2_, p_150045_3_, p_150045_4_ + 1).NormalCube ? 4 : 1)));
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (this.func_150044_m(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_))
 			{
@@ -144,7 +144,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			int var5 = p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_);
 			this.func_150043_b(var5);
@@ -185,14 +185,14 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called when a player hits the block. Args: world, x, y, z, player </summary>
 ///     
-		public virtual void onBlockClicked(World p_149699_1_, int p_149699_2_, int p_149699_3_, int p_149699_4_, EntityPlayer p_149699_5_)
+		public override void onBlockClicked(World p_149699_1_, int p_149699_2_, int p_149699_3_, int p_149699_4_, EntityPlayer p_149699_5_)
 		{
 		}
 
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			int var10 = p_149727_1_.getBlockMetadata(p_149727_2_, p_149727_3_, p_149727_4_);
 			int var11 = var10 & 7;
@@ -213,7 +213,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
+		public override void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
 		{
 			if ((p_149749_6_ & 8) > 0)
 			{
@@ -224,12 +224,12 @@ namespace DotCraftCore.nBlock
 			base.breakBlock(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_, p_149749_6_);
 		}
 
-		public virtual int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
+		public override int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
 		{
 			return (p_149709_1_.getBlockMetadata(p_149709_2_, p_149709_3_, p_149709_4_) & 8) > 0 ? 15 : 0;
 		}
 
-		public virtual int isProvidingStrongPower(IBlockAccess p_149748_1_, int p_149748_2_, int p_149748_3_, int p_149748_4_, int p_149748_5_)
+		public override int isProvidingStrongPower(IBlockAccess p_149748_1_, int p_149748_2_, int p_149748_3_, int p_149748_4_, int p_149748_5_)
 		{
 			int var6 = p_149748_1_.getBlockMetadata(p_149748_2_, p_149748_3_, p_149748_4_);
 
@@ -247,7 +247,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Can this block provide power. Only wire currently seems to have this change based on its state. </summary>
 ///     
-		public virtual bool canProvidePower()
+		public override bool canProvidePower()
 		{
 			return true;
 		}
@@ -255,7 +255,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient)
 			{
@@ -282,7 +282,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Sets the block's bounds for rendering it as an item </summary>
 ///     
-		public virtual void setBlockBoundsForItemRender()
+		public override void setBlockBoundsForItemRender()
 		{
 			float var1 = 0.1875F;
 			float var2 = 0.125F;
@@ -290,7 +290,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.5F - var1, 0.5F - var2, 0.5F - var3, 0.5F + var1, 0.5F + var2, 0.5F + var3);
 		}
 
-		public virtual void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
+		public override void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
 		{
 			if (!p_149670_1_.isClient)
 			{

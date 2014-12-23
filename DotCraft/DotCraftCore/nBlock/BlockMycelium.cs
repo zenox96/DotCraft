@@ -18,7 +18,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient)
 			{
@@ -47,7 +47,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			base.randomDisplayTick(p_149734_1_, p_149734_2_, p_149734_3_, p_149734_4_, p_149734_5_);
 
@@ -57,7 +57,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Blocks.dirt.getItemDropped(0, p_149650_2_, p_149650_3_);
 		}

@@ -21,7 +21,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha </summary>
 ///     
-		public virtual int RenderBlockPass
+		public override int RenderBlockPass
 		{
 			get
 			{
@@ -34,7 +34,7 @@ namespace DotCraftCore.nBlock
 			return base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, 1 - p_149646_5_);
 		}
 
-		public virtual void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
+		public override void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
 		{
 			p_149636_2_.addStat(StatList.mineBlockStatArray[Block.getIdFromBlock(this)], 1);
 			p_149636_2_.addExhaustion(0.025F);
@@ -60,7 +60,7 @@ namespace DotCraftCore.nBlock
 				this.dropBlockAsItem(p_149636_1_, p_149636_3_, p_149636_4_, p_149636_5_, p_149636_6_, var7);
 				Material var8 = p_149636_1_.getBlock(p_149636_3_, p_149636_4_ - 1, p_149636_5_).BlockMaterial;
 
-				if (var8.blocksMovement() || var8.Liquid)
+				if (var8.BlocksMovement() || var8.Liquid)
 				{
 					p_149636_1_.setBlock(p_149636_3_, p_149636_4_, p_149636_5_, Blocks.flowing_water);
 				}
@@ -70,7 +70,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 0;
 		}
@@ -78,7 +78,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (p_149674_1_.getSavedLightValue(EnumSkyBlock.Block, p_149674_2_, p_149674_3_, p_149674_4_) > 11 - this.LightOpacity)
 			{
@@ -93,7 +93,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int MobilityFlag
+		public override int MobilityFlag
 		{
 			get
 			{

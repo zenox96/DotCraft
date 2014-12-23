@@ -9,7 +9,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabBlock;
 		}
 
-		public virtual MapColor getMapColor(int p_149728_1_)
+		public override MapColor getMapColor(int p_149728_1_)
 		{
 			return MapColor.field_151655_K;
 		}

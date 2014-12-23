@@ -29,7 +29,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabTransport;
 		}
 
-		public virtual bool func_150050_e()
+		public override bool func_150050_e()
 		{
 			return this.field_150053_a;
 		}
@@ -38,12 +38,12 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -51,13 +51,13 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual MovingObjectPosition collisionRayTrace(World p_149731_1_, int p_149731_2_, int p_149731_3_, int p_149731_4_, Vec3 p_149731_5_, Vec3 p_149731_6_)
+		public override MovingObjectPosition collisionRayTrace(World p_149731_1_, int p_149731_2_, int p_149731_3_, int p_149731_4_, Vec3 p_149731_5_, Vec3 p_149731_6_)
 		{
 			this.setBlockBoundsBasedOnState(p_149731_1_, p_149731_2_, p_149731_3_, p_149731_4_);
 			return base.collisionRayTrace(p_149731_1_, p_149731_2_, p_149731_3_, p_149731_4_, p_149731_5_, p_149731_6_);
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			int var5 = p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_);
 
@@ -71,7 +71,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
@@ -79,7 +79,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -90,17 +90,17 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 1;
 		}
 
-		public virtual bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+		public override bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
 			return World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_);
 		}
 
-		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
 		{
 			if (!p_149726_1_.isClient)
 			{
@@ -113,7 +113,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (!p_149695_1_.isClient)
 			{
@@ -164,11 +164,11 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		protected internal virtual void func_150048_a(World p_150048_1_, int p_150048_2_, int p_150048_3_, int p_150048_4_, int p_150048_5_, int p_150048_6_, Block p_150048_7_)
+		protected internal override void func_150048_a(World p_150048_1_, int p_150048_2_, int p_150048_3_, int p_150048_4_, int p_150048_5_, int p_150048_6_, Block p_150048_7_)
 		{
 		}
 
-		protected internal virtual void func_150052_a(World p_150052_1_, int p_150052_2_, int p_150052_3_, int p_150052_4_, bool p_150052_5_)
+		protected internal override void func_150052_a(World p_150052_1_, int p_150052_2_, int p_150052_3_, int p_150052_4_, bool p_150052_5_)
 		{
 			if (!p_150052_1_.isClient)
 			{
@@ -176,7 +176,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int MobilityFlag
+		public override int MobilityFlag
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
+		public override void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
 		{
 			int var7 = p_149749_6_;
 
@@ -352,7 +352,7 @@ namespace DotCraftCore.nBlock
 				return false;
 			}
 
-			protected internal virtual int func_150650_a()
+			protected internal override int func_150650_a()
 			{
 				int var1 = 0;
 
@@ -482,7 +482,7 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			public virtual void func_150655_a(bool p_150655_1_, bool p_150655_2_)
+			public override void func_150655_a(bool p_150655_1_, bool p_150655_2_)
 			{
 				bool var3 = this.func_150647_c(this.field_150661_c, this.field_150658_d, this.field_150659_e - 1);
 				bool var4 = this.func_150647_c(this.field_150661_c, this.field_150658_d, this.field_150659_e + 1);

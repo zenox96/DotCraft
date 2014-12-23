@@ -49,7 +49,7 @@ namespace DotCraftCore.nBlock
 			return var2;
 		}
 
-		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
+		public override void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{
 			p_149666_3_.Add(new ItemStack(p_149666_1_, 1, 0));
 			p_149666_3_.Add(new ItemStack(p_149666_1_, 1, 1));

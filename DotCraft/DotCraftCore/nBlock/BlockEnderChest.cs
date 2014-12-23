@@ -19,7 +19,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 		}
 
-		public virtual bool OpaqueCube
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -27,7 +27,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
@@ -35,7 +35,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -43,7 +43,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Item.getItemFromBlock(Blocks.obsidian);
 		}
@@ -51,12 +51,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 8;
 		}
 
-		protected internal virtual bool canSilkHarvest()
+		protected internal override bool canSilkHarvest()
 		{
 			return true;
 		}
@@ -64,7 +64,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called when the block is placed in the world. </summary>
 ///     
-		public virtual void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+		public override void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
 		{
 			sbyte var7 = 0;
 			int var8 = MathHelper.floor_double((double)(p_149689_5_.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
@@ -95,7 +95,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			InventoryEnderChest var10 = p_149727_5_.InventoryEnderChest;
 			TileEntityEnderChest var11 = (TileEntityEnderChest)p_149727_1_.getTileEntity(p_149727_2_, p_149727_3_, p_149727_4_);
@@ -126,7 +126,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			return new TileEntityEnderChest();
 		}
@@ -134,7 +134,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			for (int var6 = 0; var6 < 3; ++var6)
 			{

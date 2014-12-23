@@ -20,12 +20,12 @@ namespace DotCraftCore.nBlock
 		{
 		}
 
-		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
 		{
 			p_149726_1_.scheduleBlockUpdate(p_149726_2_, p_149726_3_, p_149726_4_, this, this.func_149738_a(p_149726_1_));
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			p_149695_1_.scheduleBlockUpdate(p_149695_2_, p_149695_3_, p_149695_4_, this, this.func_149738_a(p_149695_1_));
 		}
@@ -33,7 +33,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient)
 			{
@@ -73,11 +73,11 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		protected internal virtual void func_149829_a(EntityFallingBlock p_149829_1_)
+		protected internal override void func_149829_a(EntityFallingBlock p_149829_1_)
 		{
 		}
 
-		public virtual int func_149738_a(World p_149738_1_)
+		public override int func_149738_a(World p_149738_1_)
 		{
 			return 2;
 		}
@@ -101,7 +101,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void func_149828_a(World p_149828_1_, int p_149828_2_, int p_149828_3_, int p_149828_4_, int p_149828_5_)
+		public override void func_149828_a(World p_149828_1_, int p_149828_2_, int p_149828_3_, int p_149828_4_, int p_149828_5_)
 		{
 		}
 	}

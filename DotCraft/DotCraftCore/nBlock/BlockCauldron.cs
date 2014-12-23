@@ -17,7 +17,7 @@ namespace DotCraftCore.nBlock
 		{
 		}
 
-		public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
+		public override void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.3125F, 1.0F);
 			base.addCollisionBoxesToList(p_149743_1_, p_149743_2_, p_149743_3_, p_149743_4_, p_149743_5_, p_149743_6_, p_149743_7_);
@@ -36,7 +36,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Sets the block's bounds for rendering it as an item </summary>
 ///     
-		public virtual void setBlockBoundsForItemRender()
+		public override void setBlockBoundsForItemRender()
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
@@ -52,7 +52,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -60,12 +60,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
+		public override void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
 		{
 			int var6 = func_150027_b(p_149670_1_.getBlockMetadata(p_149670_2_, p_149670_3_, p_149670_4_));
 			float var7 = (float)p_149670_3_ + (6.0F + (float)(3 * var6)) / 16.0F;
@@ -80,7 +80,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			if (p_149727_1_.isClient)
 			{
@@ -157,7 +157,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void func_150024_a(World p_150024_1_, int p_150024_2_, int p_150024_3_, int p_150024_4_, int p_150024_5_)
+		public override void func_150024_a(World p_150024_1_, int p_150024_2_, int p_150024_3_, int p_150024_4_, int p_150024_5_)
 		{
 			p_150024_1_.setBlockMetadataWithNotify(p_150024_2_, p_150024_3_, p_150024_4_, MathHelper.clamp_int(p_150024_5_, 0, 3), 2);
 			p_150024_1_.func_147453_f(p_150024_2_, p_150024_3_, p_150024_4_, this);
@@ -166,7 +166,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * currently only used by BlockCauldron to incrament meta-data during rain </summary>
 ///     
-		public virtual void fillWithRain(World p_149639_1_, int p_149639_2_, int p_149639_3_, int p_149639_4_)
+		public override void fillWithRain(World p_149639_1_, int p_149639_2_, int p_149639_3_, int p_149639_4_)
 		{
 			if (p_149639_1_.rand.Next(20) == 1)
 			{
@@ -179,7 +179,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Items.cauldron;
 		}
@@ -187,17 +187,17 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
 ///     
-		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+		public override Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return Items.cauldron;
 		}
 
-		public virtual bool hasComparatorInputOverride()
+		public override bool hasComparatorInputOverride()
 		{
 			return true;
 		}
 
-		public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
+		public override int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
 		{
 			int var6 = p_149736_1_.getBlockMetadata(p_149736_2_, p_149736_3_, p_149736_4_);
 			return func_150027_b(var6);

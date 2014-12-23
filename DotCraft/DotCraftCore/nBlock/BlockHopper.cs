@@ -24,12 +24,12 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
 
-		public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
+		public override void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.625F, 1.0F);
 			base.addCollisionBoxesToList(p_149743_1_, p_149743_2_, p_149743_3_, p_149743_4_, p_149743_5_, p_149743_6_, p_149743_7_);
@@ -45,7 +45,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
 
-		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
+		public override int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
 		{
 			int var10 = Facing.oppositeSide[p_149660_5_];
 
@@ -60,7 +60,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			return new TileEntityHopper();
 		}
@@ -68,7 +68,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called when the block is placed in the world. </summary>
 ///     
-		public virtual void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+		public override void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
 		{
 			base.onBlockPlacedBy(p_149689_1_, p_149689_2_, p_149689_3_, p_149689_4_, p_149689_5_, p_149689_6_);
 
@@ -88,7 +88,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			if (p_149727_1_.isClient)
 			{
@@ -107,7 +107,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			this.func_149919_e(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_);
 		}
@@ -176,7 +176,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -184,12 +184,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool OpaqueCube
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -197,7 +197,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
+		public override bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			return true;
 		}
@@ -205,7 +205,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets the block's texture. Args: side, meta </summary>
 ///     
-		public virtual IIcon getIcon(int p_149691_1_, int p_149691_2_)
+		public override IIcon getIcon(int p_149691_1_, int p_149691_2_)
 		{
 			return p_149691_1_ == 1 ? this.field_149923_M : this.field_149921_b;
 		}
@@ -220,12 +220,12 @@ namespace DotCraftCore.nBlock
 			return (p_149917_0_ & 8) != 8;
 		}
 
-		public virtual bool hasComparatorInputOverride()
+		public override bool hasComparatorInputOverride()
 		{
 			return true;
 		}
 
-		public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
+		public override int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
 		{
 			return Container.calcRedstoneFromInventory(func_149920_e(p_149736_1_, p_149736_2_, p_149736_3_, p_149736_4_));
 		}
@@ -238,7 +238,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets the icon name of the ItemBlock corresponding to this block. Used by hoppers. </summary>
 ///     
-		public virtual string ItemIconName
+		public override string ItemIconName
 		{
 			get
 			{

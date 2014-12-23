@@ -20,16 +20,6 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.5F - var1, 0.0F, 0.5F - var1, 0.5F + var1, 0.8F, 0.5F + var1);
 		}
 
-		public virtual int BlockColor
-		{
-			get
-			{
-				double var1 = 0.5D;
-				double var3 = 1.0D;
-				return ColorizerGrass.getGrassColor(var1, var3);
-			}
-		}
-
 ///    
 ///     <summary> * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants. </summary>
 ///     
@@ -38,25 +28,7 @@ namespace DotCraftCore.nBlock
 			return this.func_149854_a(p_149718_1_.getBlock(p_149718_2_, p_149718_3_ - 1, p_149718_4_));
 		}
 
-///    
-///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
-///     
-		public virtual int getRenderColor(int p_149741_1_)
-		{
-			return p_149741_1_ == 0 ? 16777215 : ColorizerGrass.getGrassColor(0.5D, 1.0D);
-		}
-
-///    
-///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
-///     * when first determining what to render. </summary>
-///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
-		{
-			int var5 = p_149720_1_.getBlockMetadata(p_149720_2_, p_149720_3_, p_149720_4_);
-			return var5 == 0 ? 16777215 : p_149720_1_.getBiomeGenForCoords(p_149720_2_, p_149720_4_).getBiomeGrassColor(p_149720_2_, p_149720_3_, p_149720_4_);
-		}
-
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return p_149650_2_.Next(8) == 0 ? Items.wheat_seeds : null;
 		}
@@ -64,12 +36,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive). </summary>
 ///     
-		public virtual int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
+		public override int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
 		{
 			return 1 + p_149679_2_.Next(p_149679_1_ * 2 + 1);
 		}
 
-		public virtual void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
+		public override void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
 		{
 			if (!p_149636_1_.isClient && p_149636_2_.CurrentEquippedItem != null && p_149636_2_.CurrentEquippedItem.Item == Items.shears)
 			{
@@ -85,12 +57,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Get the block's damage value (for use with pick block). </summary>
 ///     
-		public virtual int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
+		public override int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_)
 		{
 			return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
 		}
 
-		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
+		public override void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{
 			for (int var4 = 1; var4 < 3; ++var4)
 			{
@@ -98,18 +70,18 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
+		public override bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
 		{
 			int var6 = p_149851_1_.getBlockMetadata(p_149851_2_, p_149851_3_, p_149851_4_);
 			return var6 != 0;
 		}
 
-		public virtual bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
+		public override bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
 		{
 			return true;
 		}
 
-		public virtual void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)
+		public override void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)
 		{
 			int var6 = p_149853_1_.getBlockMetadata(p_149853_3_, p_149853_4_, p_149853_5_);
 			sbyte var7 = 2;

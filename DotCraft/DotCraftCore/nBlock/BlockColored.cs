@@ -15,7 +15,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Determines the damage on the item the block drops. Used in cloth and wood. </summary>
 ///     
-		public virtual int damageDropped(int p_149692_1_)
+		public override int damageDropped(int p_149692_1_)
 		{
 			return p_149692_1_;
 		}
@@ -30,7 +30,7 @@ namespace DotCraftCore.nBlock
 			return ~p_150031_0_ & 15;
 		}
 
-		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
+		public override void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{
 			for (int var4 = 0; var4 < 16; ++var4)
 			{
@@ -38,7 +38,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual MapColor getMapColor(int p_149728_1_)
+		public override MapColor getMapColor(int p_149728_1_)
 		{
 			return MapColor.func_151644_a(p_149728_1_);
 		}

@@ -15,7 +15,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabBlock;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return this == Blocks.coal_ore ? Items.coal : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
 		}
@@ -23,7 +23,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return this == Blocks.lapis_ore ? 4 + p_149745_1_.Next(5) : 1;
 		}
@@ -31,7 +31,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive). </summary>
 ///     
-		public virtual int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
+		public override int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
 		{
 			if (p_149679_1_ > 0 && Item.getItemFromBlock(this) != this.getItemDropped(0, p_149679_2_, p_149679_1_))
 			{
@@ -53,7 +53,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Drops the block items with a specified chance of dropping the specified items </summary>
 ///     
-		public virtual void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
+		public override void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
 		{
 			base.dropBlockAsItemWithChance(p_149690_1_, p_149690_2_, p_149690_3_, p_149690_4_, p_149690_5_, p_149690_6_, p_149690_7_);
 
@@ -89,7 +89,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Determines the damage on the item the block drops. Used in cloth and wood. </summary>
 ///     
-		public virtual int damageDropped(int p_149692_1_)
+		public override int damageDropped(int p_149692_1_)
 		{
 			return this == Blocks.lapis_ore ? 4 : 0;
 		}

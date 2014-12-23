@@ -18,12 +18,12 @@ namespace DotCraftCore.nBlock
 			this.TickRandomly = true;
 		}
 
-		public virtual bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
+		public override bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
 		{
 			return this.BlockMaterial != Material.lava;
 		}
 
-		public virtual int BlockColor
+		public override int BlockColor
 		{
 			get
 			{
@@ -35,7 +35,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
 ///     * when first determining what to render. </summary>
 ///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+		public override int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
 			if (this.BlockMaterial != Material.water)
 			{
@@ -72,12 +72,12 @@ namespace DotCraftCore.nBlock
 			return (float)(p_149801_0_ + 1) / 9.0F;
 		}
 
-		protected internal virtual int func_149804_e(World p_149804_1_, int p_149804_2_, int p_149804_3_, int p_149804_4_)
+		protected internal override int func_149804_e(World p_149804_1_, int p_149804_2_, int p_149804_3_, int p_149804_4_)
 		{
 			return p_149804_1_.getBlock(p_149804_2_, p_149804_3_, p_149804_4_).BlockMaterial == this.BlockMaterial ? p_149804_1_.getBlockMetadata(p_149804_2_, p_149804_3_, p_149804_4_) : -1;
 		}
 
-		protected internal virtual int func_149798_e(IBlockAccess p_149798_1_, int p_149798_2_, int p_149798_3_, int p_149798_4_)
+		protected internal override int func_149798_e(IBlockAccess p_149798_1_, int p_149798_2_, int p_149798_3_, int p_149798_4_)
 		{
 			if (p_149798_1_.getBlock(p_149798_2_, p_149798_3_, p_149798_4_).BlockMaterial != this.BlockMaterial)
 			{
@@ -96,12 +96,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool OpaqueCube
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -113,18 +113,18 @@ namespace DotCraftCore.nBlock
 ///     * Returns whether this block is collideable based on the arguments passed in \n<param name="par1"> block metaData \n@param
 ///     * par2 whether the player right-clicked while holding a boat </param>
 ///     
-		public virtual bool canCollideCheck(int p_149678_1_, bool p_149678_2_)
+		public override bool canCollideCheck(int p_149678_1_, bool p_149678_2_)
 		{
 			return p_149678_2_ && p_149678_1_ == 0;
 		}
 
-		public virtual bool isBlockSolid(IBlockAccess p_149747_1_, int p_149747_2_, int p_149747_3_, int p_149747_4_, int p_149747_5_)
+		public override bool isBlockSolid(IBlockAccess p_149747_1_, int p_149747_2_, int p_149747_3_, int p_149747_4_, int p_149747_5_)
 		{
 			Material var6 = p_149747_1_.getBlock(p_149747_2_, p_149747_3_, p_149747_4_).BlockMaterial;
 			return var6 == this.BlockMaterial ? false : (p_149747_5_ == 1 ? true : (var6 == Material.ice ? false : base.isBlockSolid(p_149747_1_, p_149747_2_, p_149747_3_, p_149747_4_, p_149747_5_)));
 		}
 
-		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
+		public override bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			Material var6 = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_).BlockMaterial;
 			return var6 == this.BlockMaterial ? false : (p_149646_5_ == 1 ? true : base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_));
@@ -134,7 +134,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
@@ -142,7 +142,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return null;
 		}
@@ -158,7 +158,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 0;
 		}
@@ -198,7 +198,7 @@ namespace DotCraftCore.nBlock
 
 				if (var11 < 0)
 				{
-					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).BlockMaterial.blocksMovement())
+					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).BlockMaterial.BlocksMovement())
 					{
 						var11 = this.func_149798_e(p_149800_1_, var8, p_149800_3_ - 1, var10);
 
@@ -270,7 +270,7 @@ namespace DotCraftCore.nBlock
 			return var5;
 		}
 
-		public virtual void velocityToAddToEntity(World p_149640_1_, int p_149640_2_, int p_149640_3_, int p_149640_4_, Entity p_149640_5_, Vec3 p_149640_6_)
+		public override void velocityToAddToEntity(World p_149640_1_, int p_149640_2_, int p_149640_3_, int p_149640_4_, Entity p_149640_5_, Vec3 p_149640_6_)
 		{
 			Vec3 var7 = this.func_149800_f(p_149640_1_, p_149640_2_, p_149640_3_, p_149640_4_);
 			p_149640_6_.xCoord += var7.xCoord;
@@ -278,12 +278,12 @@ namespace DotCraftCore.nBlock
 			p_149640_6_.zCoord += var7.zCoord;
 		}
 
-		public virtual int func_149738_a(World p_149738_1_)
+		public override int func_149738_a(World p_149738_1_)
 		{
 			return this.BlockMaterial == Material.water ? 5 : (this.BlockMaterial == Material.lava ? (p_149738_1_.provider.hasNoSky ? 10 : 30) : 0);
 		}
 
-		public virtual int getBlockBrightness(IBlockAccess p_149677_1_, int p_149677_2_, int p_149677_3_, int p_149677_4_)
+		public override int getBlockBrightness(IBlockAccess p_149677_1_, int p_149677_2_, int p_149677_3_, int p_149677_4_)
 		{
 			int var5 = p_149677_1_.getLightBrightnessForSkyBlocks(p_149677_2_, p_149677_3_, p_149677_4_, 0);
 			int var6 = p_149677_1_.getLightBrightnessForSkyBlocks(p_149677_2_, p_149677_3_ + 1, p_149677_4_, 0);
@@ -297,7 +297,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha </summary>
 ///     
-		public virtual int RenderBlockPass
+		public override int RenderBlockPass
 		{
 			get
 			{
@@ -308,7 +308,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			int var6;
 
@@ -350,7 +350,7 @@ namespace DotCraftCore.nBlock
 						++var9;
 					}
 
-					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).BlockMaterial == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.blocksMovement() || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.Liquid))
+					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).BlockMaterial == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.BlocksMovement() || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.Liquid))
 					{
 						double var10 = 0.0625D;
 						double var11 = ((double)p_149734_2_ + p_149734_5_.NextDouble());
@@ -436,7 +436,7 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).BlockMaterial.blocksMovement())
+			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).BlockMaterial.BlocksMovement())
 			{
 				var21 = (double)p_149734_2_ + p_149734_5_.NextDouble();
 				var22 = (double)p_149734_3_ - 1.05D;
@@ -470,12 +470,12 @@ namespace DotCraftCore.nBlock
 			return var5.xCoord == 0.0D && var5.zCoord == 0.0D ? -1000.0D : Math.Atan2(var5.zCoord, var5.xCoord) - (Math.PI / 2D);
 		}
 
-		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
 		{
 			this.func_149805_n(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_);
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			this.func_149805_n(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_);
 		}
@@ -532,7 +532,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		protected internal virtual void func_149799_m(World p_149799_1_, int p_149799_2_, int p_149799_3_, int p_149799_4_)
+		protected internal override void func_149799_m(World p_149799_1_, int p_149799_2_, int p_149799_3_, int p_149799_4_)
 		{
 			p_149799_1_.playSoundEffect((double)p_149799_2_ + 0.5D, (double)p_149799_3_ + 0.5D, (double)p_149799_4_ + 0.5D, "random.fizz", 0.5F, 2.6F + (p_149799_1_.rand.NextFloat() - p_149799_1_.rand.NextFloat()) * 0.8F);
 

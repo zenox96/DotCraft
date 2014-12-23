@@ -23,7 +23,7 @@ namespace DotCraftCore.nBlock
 			this.StepSound = soundTypeGrass;
 		}
 
-		public virtual int BlockColor
+		public override int BlockColor
 		{
 			get
 			{
@@ -36,7 +36,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
 ///     
-		public virtual int getRenderColor(int p_149741_1_)
+		public override int getRenderColor(int p_149741_1_)
 		{
 			return ColorizerFoliage.FoliageColorBasic;
 		}
@@ -45,7 +45,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
 ///     * when first determining what to render. </summary>
 ///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+		public override int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
 			int var5 = 0;
 			int var6 = 0;
@@ -65,7 +65,7 @@ namespace DotCraftCore.nBlock
 			return (var5 / 9 & 255) << 16 | (var6 / 9 & 255) << 8 | var7 / 9 & 255;
 		}
 
-		public virtual void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
+		public override void breakBlock(World p_149749_1_, int p_149749_2_, int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_)
 		{
 			sbyte var7 = 1;
 			int var8 = var7 + 1;
@@ -92,7 +92,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient)
 			{
@@ -208,7 +208,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			if (p_149734_1_.canLightningStrikeAt(p_149734_2_, p_149734_3_ + 1, p_149734_4_) && !World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && p_149734_5_.Next(15) == 1)
 			{
@@ -228,12 +228,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return p_149745_1_.Next(20) == 0 ? 1 : 0;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Item.getItemFromBlock(Blocks.sapling);
 		}
@@ -241,7 +241,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Drops the block items with a specified chance of dropping the specified items </summary>
 ///     
-		public virtual void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
+		public override void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
 		{
 			if (!p_149690_1_.isClient)
 			{
@@ -279,16 +279,16 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		protected internal virtual void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_, int p_150124_6_)
+		protected internal override void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_, int p_150124_6_)
 		{
 		}
 
-		protected internal virtual int func_150123_b(int p_150123_1_)
+		protected internal override int func_150123_b(int p_150123_1_)
 		{
 			return 20;
 		}
 
-		public virtual void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
+		public override void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
 		{
 			if (!p_149636_1_.isClient && p_149636_2_.CurrentEquippedItem != null && p_149636_2_.CurrentEquippedItem.Item == Items.shears)
 			{
@@ -304,7 +304,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Determines the damage on the item the block drops. Used in cloth and wood. </summary>
 ///     
-		public virtual int damageDropped(int p_149692_1_)
+		public override int damageDropped(int p_149692_1_)
 		{
 			return p_149692_1_ & 3;
 		}
@@ -321,7 +321,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
 ///     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null. </summary>
 ///     
-		protected internal virtual ItemStack createStackedBlock(int p_149644_1_)
+		protected internal override ItemStack createStackedBlock(int p_149644_1_)
 		{
 			return new ItemStack(Item.getItemFromBlock(this), 1, p_149644_1_ & 3);
 		}

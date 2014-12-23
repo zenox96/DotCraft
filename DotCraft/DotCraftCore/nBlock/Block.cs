@@ -51,7 +51,7 @@ namespace DotCraftCore.nBlock
 
         public static int getIdFromBlock(Block p_149682_0_)
         {
-            return blockRegistry.getIDForObject(p_149682_0_);
+            return blockRegistry.GetIDForObject(p_149682_0_);
         }
 
         public static Block getBlockById(int p_149729_0_)
@@ -475,17 +475,12 @@ namespace DotCraftCore.nBlock
             return this;
         }
 
-        ///    
-        ///     <summary> * Indicate if a material is a normal solid opaque cube </summary>
-        ///     
-        public virtual bool isBlockNormalCube( )
+        public virtual bool NormalCube
 		{
-			return this.BlockMaterial.blocksMovement() && this.renderAsNormalBlock();
-		}
-
-        public virtual bool isNormalCube( )
-		{
-			return this.BlockMaterial.Opaque && this.renderAsNormalBlock() && !this.canProvidePower();
+			get
+            {
+                return this.BlockMaterial.Opaque && this.renderAsNormalBlock() && !this.canProvidePower();
+            }
 		}
 
         public virtual bool renderAsNormalBlock( )
@@ -495,7 +490,7 @@ namespace DotCraftCore.nBlock
 
         public virtual bool getBlocksMovement(IBlockAccess p_149655_1_, int p_149655_2_, int p_149655_3_, int p_149655_4_)
         {
-            return !this.BlockMaterial.blocksMovement( );
+            return !this.BlockMaterial.BlocksMovement;
         }
 
         ///    
@@ -1197,17 +1192,6 @@ namespace DotCraftCore.nBlock
             get
             {
                 return this.BlockMaterial.MaterialMobility;
-            }
-        }
-
-        ///    
-        ///     <summary> * Returns the default ambient occlusion value based on block opacity </summary>
-        ///     
-        public virtual float AmbientOcclusionLightValue
-        {
-            get
-            {
-                return isBlockNormalCube() ? 0.2F : 1.0F;
             }
         }
 

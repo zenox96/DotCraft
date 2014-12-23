@@ -21,17 +21,17 @@ namespace DotCraftCore.nBlock
 			this.field_151344_d = p_i45362_4_;
 		}
 
-		public virtual int func_151340_a()
+		public override int func_151340_a()
 		{
 			return this.coordX;
 		}
 
-		public virtual int func_151342_b()
+		public override int func_151342_b()
 		{
 			return this.coordY;
 		}
 
-		public virtual int func_151341_c()
+		public override int func_151341_c()
 		{
 			return this.coordZ;
 		}
@@ -39,7 +39,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Get the Event ID (different for each BlockID) </summary>
 ///     
-		public virtual int EventID
+		public override int EventID
 		{
 			get
 			{
@@ -47,7 +47,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int EventParameter
+		public override int EventParameter
 		{
 			get
 			{
@@ -55,7 +55,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Block Block
+		public override Block Block
 		{
 			get
 			{

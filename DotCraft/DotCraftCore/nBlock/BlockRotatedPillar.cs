@@ -12,7 +12,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -20,7 +20,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
+		public override int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
 		{
 			int var10 = p_149660_9_ & 3;
 			sbyte var11 = 0;
@@ -49,12 +49,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Determines the damage on the item the block drops. Used in cloth and wood. </summary>
 ///     
-		public virtual int damageDropped(int p_149692_1_)
+		public override int damageDropped(int p_149692_1_)
 		{
 			return p_149692_1_ & 3;
 		}
 
-		public virtual int func_150162_k(int p_150162_1_)
+		public override int func_150162_k(int p_150162_1_)
 		{
 			return p_150162_1_ & 3;
 		}
@@ -63,7 +63,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
 ///     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null. </summary>
 ///     
-		protected internal virtual ItemStack createStackedBlock(int p_149644_1_)
+		protected internal override ItemStack createStackedBlock(int p_149644_1_)
 		{
 			return new ItemStack(Item.getItemFromBlock(this), 1, this.func_150162_k(p_149644_1_));
 		}

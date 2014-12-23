@@ -38,12 +38,12 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
 
-		public virtual bool OpaqueCube
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -55,7 +55,7 @@ namespace DotCraftCore.nBlock
 ///     * Returns whether this block is collideable based on the arguments passed in \n<param name="par1"> block metaData \n@param
 ///     * par2 whether the player right-clicked while holding a boat </param>
 ///     
-		public virtual bool canCollideCheck(int p_149678_1_, bool p_149678_2_)
+		public override bool canCollideCheck(int p_149678_1_, bool p_149678_2_)
 		{
 			return false;
 		}
@@ -63,7 +63,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Drops the block items with a specified chance of dropping the specified items </summary>
 ///     
-		public virtual void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
+		public override void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
 		{
 		}
 	}

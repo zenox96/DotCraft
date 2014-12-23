@@ -36,11 +36,8 @@
 		public static readonly Material dragonEgg = (new Material(MapColor.field_151669_i)).setNoPushMobility();
 		public static readonly Material Portal = (new MaterialPortal(MapColor.field_151660_b)).setImmovableMobility();
 		public static readonly Material field_151568_F = (new Material(MapColor.field_151660_b)).setNoPushMobility();
-		
-        /* TODO annonymous inner class
-         * public static readonly Material field_151569_G = (new Material(MapColor.field_151659_e) {  public bool blocksMovement() { return false; } }).setRequiresTool().setNoPushMobility();
-         */
-
+        public static readonly Material field_151569_G = (new Material(MapColor.field_151659_e)).SetBlocksMovement(false).setRequiresTool().setNoPushMobility();
+        
 	/// <summary> Pistons' material.  </summary>
 		public static readonly Material piston = (new Material(MapColor.field_151665_m)).setImmovableMobility();
 
@@ -70,11 +67,11 @@
 ///     
 		private int mobilityFlag;
 		private bool isAdventureModeExempt;
-		
 
 		public Material(MapColor p_i2116_1_)
 		{
 			this.materialMapColor = p_i2116_1_;
+            BlocksMovement = true; //Set Default values for auto properties
 		}
 
 ///    
@@ -110,10 +107,16 @@
 ///    
 ///     <summary> * Returns if this material is considered solid or not </summary>
 ///     
-		public virtual bool blocksMovement()
+		public virtual bool BlocksMovement
 		{
-			return true;
+			get;
+            protected set;
 		}
+
+        protected Material SetBlocksMovement(bool value){
+            BlocksMovement = value;
+            return this;
+        }
 
 ///    
 ///     <summary> * Marks the material as translucent </summary>
@@ -180,7 +183,7 @@
 		{
 			get
 			{
-				return this.isTranslucent ? false : this.blocksMovement();
+				return this.isTranslucent ? false : this.BlocksMovement();
 			}
 		}
 

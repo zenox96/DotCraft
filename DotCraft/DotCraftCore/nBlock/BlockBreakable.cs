@@ -23,7 +23,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
+		public override bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			Block var6 = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_);
 

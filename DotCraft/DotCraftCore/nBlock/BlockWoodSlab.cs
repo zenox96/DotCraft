@@ -11,14 +11,13 @@ namespace DotCraftCore.nBlock
 	public class BlockWoodSlab : BlockSlab
 	{
 		public static readonly string[] field_150005_b = new string[] {"oak", "spruce", "birch", "jungle", "acacia", "big_oak"};
-		
 
 		public BlockWoodSlab(bool p_i45437_1_) : base(p_i45437_1_, Material.wood)
 		{
 			this.CreativeTab = CreativeTabs.tabBlock;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Item.getItemFromBlock(Blocks.wooden_slab);
 		}
@@ -27,7 +26,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
 ///     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null. </summary>
 ///     
-		protected internal virtual ItemStack createStackedBlock(int p_149644_1_)
+		protected internal override ItemStack createStackedBlock(int p_149644_1_)
 		{
 			return new ItemStack(Item.getItemFromBlock(Blocks.wooden_slab), 2, p_149644_1_ & 7);
 		}
@@ -42,7 +41,7 @@ namespace DotCraftCore.nBlock
 			return base.UnlocalizedName + "." + field_150005_b[p_150002_1_];
 		}
 
-		public virtual void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
+		public override void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, IList p_149666_3_)
 		{
 			if (p_149666_1_ != Item.getItemFromBlock(Blocks.double_wooden_slab))
 			{

@@ -24,7 +24,7 @@ namespace DotCraftCore.nBlock
 			this.field_149932_b = p_i45407_1_;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Item.getItemFromBlock(Blocks.furnace);
 		}
@@ -72,7 +72,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			if (this.field_149932_b)
 			{
@@ -109,7 +109,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			if (p_149727_1_.isClient)
 			{
@@ -156,7 +156,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			return new TileEntityFurnace();
 		}
@@ -164,7 +164,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called when the block is placed in the world. </summary>
 ///     
-		public virtual void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+		public override void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
 		{
 			int var7 = MathHelper.floor_double((double)(p_149689_5_.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
@@ -245,12 +245,12 @@ namespace DotCraftCore.nBlock
 			base.breakBlock(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_, p_149749_6_);
 		}
 
-		public virtual bool hasComparatorInputOverride()
+		public override bool hasComparatorInputOverride()
 		{
 			return true;
 		}
 
-		public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
+		public override int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
 		{
 			return Container.calcRedstoneFromInventory((IInventory)p_149736_1_.getTileEntity(p_149736_2_, p_149736_3_, p_149736_4_));
 		}
@@ -258,7 +258,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
 ///     
-		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+		public override Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return Item.getItemFromBlock(Blocks.furnace);
 		}

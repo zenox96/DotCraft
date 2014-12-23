@@ -14,7 +14,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 0;
 		}
@@ -22,7 +22,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha </summary>
 ///     
-		public virtual int RenderBlockPass
+		public override int RenderBlockPass
 		{
 			get
 			{
@@ -30,12 +30,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		protected internal virtual bool canSilkHarvest()
+		protected internal override bool canSilkHarvest()
 		{
 			return true;
 		}

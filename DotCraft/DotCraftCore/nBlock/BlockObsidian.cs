@@ -10,7 +10,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 1;
 		}
@@ -20,7 +20,7 @@ namespace DotCraftCore.nBlock
 			return Item.getItemFromBlock(Blocks.obsidian);
 		}
 
-		public virtual MapColor getMapColor(int p_149728_1_)
+		public override MapColor getMapColor(int p_149728_1_)
 		{
 			return MapColor.field_151654_J;
 		}

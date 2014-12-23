@@ -30,7 +30,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
+		public override void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
 		{
 			if (p_149743_7_ == null || !(p_149743_7_ is EntityBoat))
 			{
@@ -47,7 +47,7 @@ namespace DotCraftCore.nBlock
 			return AxisAlignedBB.getBoundingBox((double)p_149668_2_ + this.field_149759_B, (double)p_149668_3_ + this.field_149760_C, (double)p_149668_4_ + this.field_149754_D, (double)p_149668_2_ + this.field_149755_E, (double)p_149668_3_ + this.field_149756_F, (double)p_149668_4_ + this.field_149757_G);
 		}
 
-		public virtual int BlockColor
+		public override int BlockColor
 		{
 			get
 			{
@@ -58,7 +58,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
 ///     
-		public virtual int getRenderColor(int p_149741_1_)
+		public override int getRenderColor(int p_149741_1_)
 		{
 			return 2129968;
 		}
@@ -67,7 +67,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
 ///     * when first determining what to render. </summary>
 ///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+		public override int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
 			return 2129968;
 		}

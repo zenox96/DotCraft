@@ -26,7 +26,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabDecorations;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return !this.field_150099_b ? null : base.getItemDropped(p_149650_1_, p_149650_2_, p_149650_3_);
 		}
@@ -39,7 +39,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
@@ -47,7 +47,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -55,12 +55,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
+		public override bool shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_)
 		{
 			return p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_) == this ? false : base.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
 		}
 
-		public virtual void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
+		public override void addCollisionBoxesToList(World p_149743_1_, int p_149743_2_, int p_149743_3_, int p_149743_4_, AxisAlignedBB p_149743_5_, IList p_149743_6_, Entity p_149743_7_)
 		{
 			bool var8 = this.func_150098_a(p_149743_1_.getBlock(p_149743_2_, p_149743_3_, p_149743_4_ - 1));
 			bool var9 = this.func_150098_a(p_149743_1_.getBlock(p_149743_2_, p_149743_3_, p_149743_4_ + 1));
@@ -109,12 +109,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Sets the block's bounds for rendering it as an item </summary>
 ///     
-		public virtual void setBlockBoundsForItemRender()
+		public override void setBlockBoundsForItemRender()
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			float var5 = 0.4375F;
 			float var6 = 0.5625F;
@@ -162,7 +162,7 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(var5, 0.0F, var7, var6, 1.0F, var8);
 		}
 
-		public virtual IIcon func_150097_e()
+		public override IIcon func_150097_e()
 		{
 			return this.field_150102_N;
 		}
@@ -172,7 +172,7 @@ namespace DotCraftCore.nBlock
 			return p_150098_1_.func_149730_j() || p_150098_1_ == this || p_150098_1_ == Blocks.glass || p_150098_1_ == Blocks.stained_glass || p_150098_1_ == Blocks.stained_glass_pane || p_150098_1_ is BlockPane;
 		}
 
-		protected internal virtual bool canSilkHarvest()
+		protected internal override bool canSilkHarvest()
 		{
 			return true;
 		}
@@ -181,12 +181,12 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
 ///     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null. </summary>
 ///     
-		protected internal virtual ItemStack createStackedBlock(int p_149644_1_)
+		protected internal override ItemStack createStackedBlock(int p_149644_1_)
 		{
 			return new ItemStack(Item.getItemFromBlock(this), 1, p_149644_1_);
 		}
 
-		public virtual void registerBlockIcons(IIconRegister p_149651_1_)
+		public override void registerBlockIcons(IIconRegister p_149651_1_)
 		{
 			this.blockIcon = p_149651_1_.registerIcon(this.field_150101_M);
 			this.field_150102_N = p_149651_1_.registerIcon(this.field_150100_a);

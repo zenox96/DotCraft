@@ -19,7 +19,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			if (p_149727_1_.getBlockMetadata(p_149727_2_, p_149727_3_, p_149727_4_) == 0)
 			{
@@ -32,7 +32,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void func_149926_b(World p_149926_1_, int p_149926_2_, int p_149926_3_, int p_149926_4_, ItemStack p_149926_5_)
+		public override void func_149926_b(World p_149926_1_, int p_149926_2_, int p_149926_3_, int p_149926_4_, ItemStack p_149926_5_)
 		{
 			if (!p_149926_1_.isClient)
 			{
@@ -46,7 +46,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void func_149925_e(World p_149925_1_, int p_149925_2_, int p_149925_3_, int p_149925_4_)
+		public override void func_149925_e(World p_149925_1_, int p_149925_2_, int p_149925_3_, int p_149925_4_)
 		{
 			if (!p_149925_1_.isClient)
 			{
@@ -84,7 +84,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Drops the block items with a specified chance of dropping the specified items </summary>
 ///     
-		public virtual void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
+		public override void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_)
 		{
 			if (!p_149690_1_.isClient)
 			{
@@ -95,17 +95,17 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns a new instance of a block's tile entity class. Called on placing the block. </summary>
 ///     
-		public virtual TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
 			return new BlockJukebox.TileEntityJukebox();
 		}
 
-		public virtual bool hasComparatorInputOverride()
+		public override bool hasComparatorInputOverride()
 		{
 			return true;
 		}
 
-		public virtual int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
+		public override int getComparatorInputOverride(World p_149736_1_, int p_149736_2_, int p_149736_3_, int p_149736_4_, int p_149736_5_)
 		{
 			ItemStack var6 = ((BlockJukebox.TileEntityJukebox)p_149736_1_.getTileEntity(p_149736_2_, p_149736_3_, p_149736_4_)).func_145856_a();
 			return var6 == null ? 0 : Item.getIdFromItem(var6.Item) + 1 - Item.getIdFromItem(Items.record_13);
@@ -116,7 +116,7 @@ namespace DotCraftCore.nBlock
 			private ItemStack field_145858_a;
 			
 
-			public virtual void readFromNBT(NBTTagCompound p_145839_1_)
+			public override void readFromNBT(NBTTagCompound p_145839_1_)
 			{
 				base.readFromNBT(p_145839_1_);
 
@@ -130,7 +130,7 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			public virtual void writeToNBT(NBTTagCompound p_145841_1_)
+			public override void writeToNBT(NBTTagCompound p_145841_1_)
 			{
 				base.writeToNBT(p_145841_1_);
 
@@ -141,12 +141,12 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			public virtual ItemStack func_145856_a()
+			public override ItemStack func_145856_a()
 			{
 				return this.field_145858_a;
 			}
 
-			public virtual void func_145857_a(ItemStack p_145857_1_)
+			public override void func_145857_a(ItemStack p_145857_1_)
 			{
 				this.field_145858_a = p_145857_1_;
 				this.onInventoryChanged();

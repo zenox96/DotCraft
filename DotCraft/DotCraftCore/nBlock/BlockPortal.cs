@@ -20,7 +20,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			base.updateTick(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_, p_149674_5_);
 
@@ -49,12 +49,12 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
 			int var5 = func_149999_b(p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_));
 
@@ -91,12 +91,12 @@ namespace DotCraftCore.nBlock
 			this.setBlockBounds(0.5F - var6, 0.0F, 0.5F - var7, 0.5F + var6, 1.0F, 0.5F + var7);
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual bool func_150000_e(World p_150000_1_, int p_150000_2_, int p_150000_3_, int p_150000_4_)
+		public override bool func_150000_e(World p_150000_1_, int p_150000_2_, int p_150000_3_, int p_150000_4_)
 		{
 			BlockPortal.Size var5 = new BlockPortal.Size(p_150000_1_, p_150000_2_, p_150000_3_, p_150000_4_, 1);
 			BlockPortal.Size var6 = new BlockPortal.Size(p_150000_1_, p_150000_2_, p_150000_3_, p_150000_4_, 2);
@@ -117,7 +117,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			int var6 = func_149999_b(p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_));
 			BlockPortal.Size var7 = new BlockPortal.Size(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, 1);
@@ -173,7 +173,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 0;
 		}
@@ -181,7 +181,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha </summary>
 ///     
-		public virtual int RenderBlockPass
+		public override int RenderBlockPass
 		{
 			get
 			{
@@ -189,7 +189,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
+		public override void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
 		{
 			if (p_149670_5_.ridingEntity == null && p_149670_5_.riddenByEntity == null)
 			{
@@ -200,7 +200,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * A randomly called display update to be able to add particles or other items for display </summary>
 ///     
-		public virtual void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+		public override void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 		{
 			if (p_149734_5_.Next(100) == 0)
 			{
@@ -238,7 +238,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Gets an item for the block being called on. Args: world, x, y, z </summary>
 ///     
-		public virtual Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+		public override Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
 		{
 			return Item.getItemById(0);
 		}
@@ -292,7 +292,7 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			protected internal virtual int func_150853_a(int p_150853_1_, int p_150853_2_, int p_150853_3_, int p_150853_4_)
+			protected internal override int func_150853_a(int p_150853_1_, int p_150853_2_, int p_150853_3_, int p_150853_4_)
 			{
 				int var6 = Direction.offsetX[p_150853_4_];
 				int var7 = Direction.offsetZ[p_150853_4_];
@@ -320,7 +320,7 @@ namespace DotCraftCore.nBlock
 				return var8 == Blocks.obsidian ? var5 : 0;
 			}
 
-			protected internal virtual int func_150858_a()
+			protected internal override int func_150858_a()
 			{
 				int var1;
 				int var2;
@@ -395,17 +395,17 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			protected internal virtual bool func_150857_a(Block p_150857_1_)
+			protected internal override bool func_150857_a(Block p_150857_1_)
 			{
 				return p_150857_1_.BlockMaterial == Material.air || p_150857_1_ == Blocks.fire || p_150857_1_ == Blocks.portal;
 			}
 
-			public virtual bool func_150860_b()
+			public override bool func_150860_b()
 			{
 				return this.field_150861_f != null && this.field_150868_h >= 2 && this.field_150868_h <= 21 && this.field_150862_g >= 3 && this.field_150862_g <= 21;
 			}
 
-			public virtual void func_150859_c()
+			public override void func_150859_c()
 			{
 				for (int var1 = 0; var1 < this.field_150868_h; ++var1)
 				{

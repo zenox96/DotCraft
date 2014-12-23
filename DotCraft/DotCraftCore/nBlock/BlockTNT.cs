@@ -17,7 +17,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabRedstone;
 		}
 
-		public virtual void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+		public override void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
 		{
 			base.onBlockAdded(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_);
 
@@ -28,7 +28,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
 			{
@@ -40,7 +40,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 1;
 		}
@@ -48,7 +48,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon the block being destroyed by an explosion </summary>
 ///     
-		public virtual void onBlockDestroyedByExplosion(World p_149723_1_, int p_149723_2_, int p_149723_3_, int p_149723_4_, Explosion p_149723_5_)
+		public override void onBlockDestroyedByExplosion(World p_149723_1_, int p_149723_2_, int p_149723_3_, int p_149723_4_, Explosion p_149723_5_)
 		{
 			if (!p_149723_1_.isClient)
 			{
@@ -58,12 +58,12 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
+		public override void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
 		{
 			this.func_150114_a(p_149664_1_, p_149664_2_, p_149664_3_, p_149664_4_, p_149664_5_, (EntityLivingBase)null);
 		}
 
-		public virtual void func_150114_a(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_, EntityLivingBase p_150114_6_)
+		public override void func_150114_a(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_, EntityLivingBase p_150114_6_)
 		{
 			if (!p_150114_1_.isClient)
 			{
@@ -79,7 +79,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Called upon block activation (right click on the block.) </summary>
 ///     
-		public virtual bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+		public override bool onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
 		{
 			if (p_149727_5_.CurrentEquippedItem != null && p_149727_5_.CurrentEquippedItem.Item == Items.flint_and_steel)
 			{
@@ -94,7 +94,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
+		public override void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
 		{
 			if (p_149670_5_ is EntityArrow && !p_149670_1_.isClient)
 			{
@@ -111,7 +111,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Return whether this block can drop from an explosion. </summary>
 ///     
-		public virtual bool canDropFromExplosion(Explosion p_149659_1_)
+		public override bool canDropFromExplosion(Explosion p_149659_1_)
 		{
 			return false;
 		}

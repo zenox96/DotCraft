@@ -1,6 +1,7 @@
 using DotCraftCore.nBlock.nMaterial;
 using DotCraftCore.nEntity.nPlayer;
 using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
 using DotCraftCore.nItem;
 using DotCraftCore.nStats;
 using DotCraftCore.nUtil;
@@ -11,8 +12,6 @@ namespace DotCraftCore.nBlock
 {
 	public class BlockVine : Block
 	{
-		
-
 		public BlockVine() : base(Material.vine)
 		{
 			this.TickRandomly = true;
@@ -22,7 +21,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Sets the block's bounds for rendering it as an item </summary>
 ///     
-		public virtual void setBlockBoundsForItemRender()
+		public override void setBlockBoundsForItemRender()
 		{
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		}
@@ -30,7 +29,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * The type of render function that is called for this block </summary>
 ///     
-		public virtual int RenderType
+		public override int RenderType
 		{
 			get
 			{
@@ -38,7 +37,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool isOpaqueCube()
+		public override bool OpaqueCube
 		{
 			get
 			{
@@ -46,14 +45,13 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool renderAsNormalBlock()
+		public override bool renderAsNormalBlock()
 		{
 			return false;
 		}
 
-		public virtual void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+		public override void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
 		{
-			float var5 = 0.0625F;
 			int var6 = p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_);
 			float var7 = 1.0F;
 			float var8 = 1.0F;
@@ -124,7 +122,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 ///     * cleared to be reused) </summary>
 ///     
-		public virtual AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+		public override AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
 		{
 			return null;
 		}
@@ -132,7 +130,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * checks to see if you can place this block can be placed on that side of a block: BlockLever overrides </summary>
 ///     
-		public virtual bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
+		public override bool canPlaceBlockOnSide(World p_149707_1_, int p_149707_2_, int p_149707_3_, int p_149707_4_, int p_149707_5_)
 		{
 			switch (p_149707_5_)
 			{
@@ -158,7 +156,7 @@ namespace DotCraftCore.nBlock
 
 		private bool func_150093_a(Block p_150093_1_)
 		{
-			return p_150093_1_.renderAsNormalBlock() && p_150093_1_.BlockMaterial.blocksMovement();
+			return p_150093_1_.renderAsNormalBlock() && p_150093_1_.BlockMaterial.BlocksMovement;
 		}
 
 		private bool func_150094_e(World p_150094_1_, int p_150094_2_, int p_150094_3_, int p_150094_4_)
@@ -194,32 +192,16 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int BlockColor
-		{
-			get
-			{
-				return ColorizerFoliage.FoliageColorBasic;
-			}
-		}
-
-///    
-///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
-///     
-		public virtual int getRenderColor(int p_149741_1_)
-		{
-			return ColorizerFoliage.FoliageColorBasic;
-		}
-
 ///    
 ///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
 ///     * when first determining what to render. </summary>
 ///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+		public override int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
 			return p_149720_1_.getBiomeGenForCoords(p_149720_2_, p_149720_4_).getBiomeFoliageColor(p_149720_2_, p_149720_3_, p_149720_4_);
 		}
 
-		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
 		{
 			if (!p_149695_1_.isClient && !this.func_150094_e(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_))
 			{
@@ -231,7 +213,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient && p_149674_1_.rand.Next(4) == 0)
 			{
@@ -366,7 +348,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
+		public override int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
 		{
 			sbyte var10 = 0;
 
@@ -392,7 +374,7 @@ namespace DotCraftCore.nBlock
 			return var10 != 0 ? var10 : p_149660_9_;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return null;
 		}
@@ -400,12 +382,12 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 0;
 		}
 
-		public virtual void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
+		public override void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_)
 		{
 			if (!p_149636_1_.isClient && p_149636_2_.CurrentEquippedItem != null && p_149636_2_.CurrentEquippedItem.Item == Items.shears)
 			{

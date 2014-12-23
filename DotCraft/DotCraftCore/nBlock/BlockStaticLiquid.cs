@@ -37,7 +37,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (this.BlockMaterial == Material.lava)
 			{
@@ -59,7 +59,7 @@ namespace DotCraftCore.nBlock
 							return;
 						}
 					}
-					else if (var8.BlockMaterial.blocksMovement())
+					else if (var8.BlockMaterial.BlocksMovement)
 					{
 						return;
 					}

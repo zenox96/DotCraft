@@ -24,7 +24,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			int var6 = this.func_149804_e(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_);
 			sbyte var7 = 1;
@@ -305,10 +305,10 @@ namespace DotCraftCore.nBlock
 		private bool func_149807_p(World p_149807_1_, int p_149807_2_, int p_149807_3_, int p_149807_4_)
 		{
 			Block var5 = p_149807_1_.getBlock(p_149807_2_, p_149807_3_, p_149807_4_);
-			return var5 != Blocks.wooden_door && var5 != Blocks.iron_door && var5 != Blocks.standing_sign && var5 != Blocks.ladder && var5 != Blocks.reeds ? (var5.BlockMaterial == Material.Portal ? true : var5.BlockMaterial.blocksMovement()) : true;
+			return var5 != Blocks.wooden_door && var5 != Blocks.iron_door && var5 != Blocks.standing_sign && var5 != Blocks.ladder && var5 != Blocks.reeds ? (var5.BlockMaterial == Material.Portal ? true : var5.BlockMaterial.BlocksMovement()) : true;
 		}
 
-		protected internal virtual int func_149810_a(World p_149810_1_, int p_149810_2_, int p_149810_3_, int p_149810_4_, int p_149810_5_)
+		protected internal override int func_149810_a(World p_149810_1_, int p_149810_2_, int p_149810_3_, int p_149810_4_, int p_149810_5_)
 		{
 			int var6 = this.func_149804_e(p_149810_1_, p_149810_2_, p_149810_3_, p_149810_4_);
 
@@ -348,7 +348,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual bool func_149698_L()
+		public override bool func_149698_L()
 		{
 			return true;
 		}

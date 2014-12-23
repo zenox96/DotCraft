@@ -30,7 +30,7 @@ namespace DotCraftCore.nBlock.nMaterial
 ///    
 ///     <summary> * Returns if this material is considered solid or not </summary>
 ///     
-		public override bool blocksMovement()
+		public override bool BlocksMovement()
 		{
 			return false;
 		}

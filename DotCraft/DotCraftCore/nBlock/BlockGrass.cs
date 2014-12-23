@@ -17,7 +17,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabBlock;
 		}
 
-		public virtual int BlockColor
+		public override int BlockColor
 		{
 			get
 			{
@@ -30,7 +30,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the color this block should be rendered. Used by leaves. </summary>
 ///     
-		public virtual int getRenderColor(int p_149741_1_)
+		public override int getRenderColor(int p_149741_1_)
 		{
 			return this.BlockColor;
 		}
@@ -39,7 +39,7 @@ namespace DotCraftCore.nBlock
 ///     <summary> * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
 ///     * when first determining what to render. </summary>
 ///     
-		public virtual int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+		public override int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
 		{
 			int var5 = 0;
 			int var6 = 0;
@@ -62,7 +62,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Ticks the block if it's been scheduled </summary>
 ///     
-		public virtual void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+		public override void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
 		{
 			if (!p_149674_1_.isClient)
 			{
@@ -88,22 +88,22 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Blocks.dirt.getItemDropped(0, p_149650_2_, p_149650_3_);
 		}
 
-		public virtual bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
+		public override bool func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, bool p_149851_5_)
 		{
 			return true;
 		}
 
-		public virtual bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
+		public override bool func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
 		{
 			return true;
 		}
 
-		public virtual void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)
+		public override void func_149853_b(World p_149853_1_, Random p_149853_2_, int p_149853_3_, int p_149853_4_, int p_149853_5_)
 		{
 			int var6 = 0;
 

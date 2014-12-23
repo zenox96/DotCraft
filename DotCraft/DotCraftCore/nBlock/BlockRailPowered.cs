@@ -7,7 +7,7 @@ namespace DotCraftCore.nBlock
 		{
 		}
 
-		protected internal virtual bool func_150058_a(World p_150058_1_, int p_150058_2_, int p_150058_3_, int p_150058_4_, int p_150058_5_, bool p_150058_6_, int p_150058_7_)
+		protected internal override bool func_150058_a(World p_150058_1_, int p_150058_2_, int p_150058_3_, int p_150058_4_, int p_150058_5_, bool p_150058_6_, int p_150058_7_)
 		{
 			if (p_150058_7_ >= 8)
 			{
@@ -109,7 +109,7 @@ namespace DotCraftCore.nBlock
 			}
 		}
 
-		protected internal virtual bool func_150057_a(World p_150057_1_, int p_150057_2_, int p_150057_3_, int p_150057_4_, bool p_150057_5_, int p_150057_6_, int p_150057_7_)
+		protected internal override bool func_150057_a(World p_150057_1_, int p_150057_2_, int p_150057_3_, int p_150057_4_, bool p_150057_5_, int p_150057_6_, int p_150057_7_)
 		{
 			Block var8 = p_150057_1_.getBlock(p_150057_2_, p_150057_3_, p_150057_4_);
 

@@ -14,7 +14,7 @@ namespace DotCraftCore.nBlock
 			this.CreativeTab = CreativeTabs.tabBlock;
 		}
 
-		public virtual Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 		{
 			return Items.melon;
 		}
@@ -22,7 +22,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the quantity of items to drop on block destruction. </summary>
 ///     
-		public virtual int quantityDropped(Random p_149745_1_)
+		public override int quantityDropped(Random p_149745_1_)
 		{
 			return 3 + p_149745_1_.Next(5);
 		}
@@ -30,7 +30,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive). </summary>
 ///     
-		public virtual int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
+		public override int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
 		{
 			int var3 = this.quantityDropped(p_149679_2_) + p_149679_2_.Next(1 + p_149679_1_);
 
