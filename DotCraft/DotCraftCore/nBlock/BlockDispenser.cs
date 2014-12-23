@@ -15,7 +15,7 @@ namespace DotCraftCore.nBlock
 {
 	public class BlockDispenser : BlockContainer
 	{
-		public static readonly IRegistry dispenseBehaviorRegistry = new RegistryDefaulted(new BehaviorDefaultDispenseItem());
+        public static readonly IRegistry<Item, IBehaviorDispenseItem> dispenseBehaviorRegistry = new RegistryDefaulted<Item, IBehaviorDispenseItem>(new BehaviorDefaultDispenseItem( ));
 		protected internal Random field_149942_b = new Random();
 
 		protected internal BlockDispenser() : base(Material.rock)
@@ -119,7 +119,7 @@ namespace DotCraftCore.nBlock
 
 		protected internal virtual IBehaviorDispenseItem func_149940_a(ItemStack p_149940_1_)
 		{
-			return (IBehaviorDispenseItem)dispenseBehaviorRegistry.getObject(p_149940_1_.Item);
+			return (IBehaviorDispenseItem)dispenseBehaviorRegistry.GetObject(p_149940_1_.Item);
 		}
 
 		public virtual void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)

@@ -68,6 +68,10 @@
     <Compile Include="nUtil\ThreadSafeBoundList.cs" />
     <Compile Include="nUtil\Timer.cs" />
     <Compile Include="nUtil\Util.cs" />
+    <Compile Include="nWorld\ColorizerFoliage.cs" />
+    <Compile Include="nWorld\ColorizerGrass.cs" />
+    <Compile Include="nWorld\nStorage\SaveFormatComparator.cs" />
+    <Compile Include="nWorld\nStorage\SaveHandlerMP.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotCraftCore\DotCraftCore.csproj">
@@ -78,6 +82,9 @@
   <ItemGroup>
     <Folder Include="nClient\" />
     <Folder Include="nServer\nGUI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

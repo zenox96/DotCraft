@@ -1,8 +1,5 @@
-namespace DotCraftCore.nWorld.nStorage
+namespace DotCraftServer.nWorld.nStorage
 {
-
-	using WorldSettings = DotCraftCore.nWorld.WorldSettings;
-
 	public class SaveFormatComparator : Comparable
 	{
 	/// <summary> the file name of this save  </summary>

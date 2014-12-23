@@ -775,6 +775,7 @@
     <Compile Include="nStats\StatFileWriter.cs" />
     <Compile Include="nStats\StatisticsFile.cs" />
     <Compile Include="nStats\StatList.cs" />
+    <Compile Include="nUtil\BiMap.cs" />
     <Compile Include="nUtil\StringHelperClass.cs" />
     <Compile Include="nTileEntity\IHopper.cs" />
     <Compile Include="nTileEntity\MobSpawnerBaseLogic.cs" />
@@ -823,7 +824,6 @@
     <Compile Include="nUtil\IIcon.cs" />
     <Compile Include="nUtil\IJsonSerializable.cs" />
     <Compile Include="nUtil\IntHashMap.cs" />
-    <Compile Include="nUtil\IObjectIntIterable.cs" />
     <Compile Include="nUtil\IProgressUpdate.cs" />
     <Compile Include="nUtil\IRegistry.cs" />
     <Compile Include="nUtil\JsonSerializableSet.cs" />
@@ -897,10 +897,6 @@
     <Compile Include="nWorld\nChunk\nStorage\NibbleArrayReader.cs" />
     <Compile Include="nWorld\nChunk\nStorage\RegionFile.cs" />
     <Compile Include="nWorld\nChunk\nStorage\RegionFileCache.cs" />
-    <Compile Include="nWorld\ColorizerFoliage.cs" />
-    <Compile Include="nWorld\ColorizerGrass.cs" />
-    <Compile Include="nWorld\nDemo\DemoWorldManager.cs" />
-    <Compile Include="nWorld\nDemo\DemoWorldServer.cs" />
     <Compile Include="nWorld\EnumDifficulty.cs" />
     <Compile Include="nWorld\EnumSkyBlock.cs" />
     <Compile Include="nWorld\Explosion.cs" />
@@ -1012,10 +1008,8 @@
     <Compile Include="nWorld\nStorage\IThreadedFileIO.cs" />
     <Compile Include="nWorld\nStorage\MapData.cs" />
     <Compile Include="nWorld\nStorage\MapStorage.cs" />
-    <Compile Include="nWorld\nStorage\SaveFormatComparator.cs" />
     <Compile Include="nWorld\nStorage\SaveFormatOld.cs" />
     <Compile Include="nWorld\nStorage\SaveHandler.cs" />
-    <Compile Include="nWorld\nStorage\SaveHandlerMP.cs" />
     <Compile Include="nWorld\nStorage\ThreadedFileIOBase.cs" />
     <Compile Include="nWorld\nStorage\WorldInfo.cs" />
     <Compile Include="nWorld\StringHelperClass.cs" />

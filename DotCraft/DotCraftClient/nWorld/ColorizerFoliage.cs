@@ -1,4 +1,4 @@
-namespace DotCraftCore.nWorld
+namespace DotCraftServer.nWorld
 {
 
 	public class ColorizerFoliage

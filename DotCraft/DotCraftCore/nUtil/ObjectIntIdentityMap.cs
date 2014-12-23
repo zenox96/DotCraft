@@ -10,7 +10,7 @@ namespace DotCraftCore.nUtil
 		private List<T> list = new List<T>();
 		
 
-		public virtual void func_148746_a(T key, int value)
+		public virtual void Add(T key, int value)
 		{
 			this.map.Add(key, value);
 
@@ -19,13 +19,13 @@ namespace DotCraftCore.nUtil
 			this.list[value] = key;
 		}
 
-		public virtual int getValue(T key)
+		public virtual int GetValue(T key)
 		{
 			int var2 = this.map[key];
 			return var2 == null ? -1 : var2;
 		}
 
-		public virtual T? getObject(int index)
+		public virtual T GetObject(int index)
 		{
             if (index >= 0 && index < this.list.Count)
 			    return this.list[index];
@@ -33,14 +33,14 @@ namespace DotCraftCore.nUtil
                 throw new ArgumentOutOfRangeException("" + index);
 		}
 
-		public virtual IEnumerator iterator()
+        public virtual IEnumerator GetEnumerator( )
 		{
             return list.GetEnumerator();
 		}
 
-		public virtual bool isObjectNotNull(int p_148744_1_)
+		public virtual bool IsObjectNotNull(int p_148744_1_)
 		{
-			return this.getObject(p_148744_1_) != null;
+			return this.GetObject(p_148744_1_) != null;
 		}
 	}
 

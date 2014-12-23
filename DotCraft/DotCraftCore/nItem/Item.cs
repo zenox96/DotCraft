@@ -272,7 +272,7 @@ using DotCraftCore.nInventory;
 			while (var2.MoveNext())
 			{
 				string var3 = (string)var2.Current;
-				Block var4 = (Block)Block.blockRegistry.getObject(var3);
+				Block var4 = (Block)Block.blockRegistry.GetObject(var3);
 				object var5;
 
 				if (var4 == Blocks.wool)

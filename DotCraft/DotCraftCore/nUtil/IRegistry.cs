@@ -1,14 +1,15 @@
+using System.Collections.Generic;
 namespace DotCraftCore.nUtil
 {
-
 	public interface IRegistry<T, K>
 	{
-		object getObject(T key);
+		public K GetObject(T key);
+		public void putObject(T key, K value);
+        public bool containsKey(T key);
 
-///    
-///     <summary> * Register an object on this registry. </summary>
-///     
-		void putObject(T key, K value);
+        public ICollection<T> Keys
+        {
+            get;
+        }
 	}
-
 }
