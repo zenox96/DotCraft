@@ -2,62 +2,19 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Collections;
 using System.Threading;
+using DotCraftCore.nCommand;
+using DotCraftCore.nProfiler;
+using log4net;
+using DotCraftCore.nWorld.nStorage;
+using DotCraftCore.nNetwork;
+using DotCraftCore.nWorld;
+using DotCraftCore.nServer.nManagement;
 
 namespace DotCraftCore.nServer
 {
-
-	using Charsets = com.google.common.base.Charsets;
-	using GameProfile = com.mojang.authlib.GameProfile;
-	using GameProfileRepository = com.mojang.authlib.GameProfileRepository;
-	using MinecraftSessionService = com.mojang.authlib.minecraft.MinecraftSessionService;
-	using YggdrasilAuthenticationService = com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
-	using ByteBuf = io.netty.buffer.ByteBuf;
-	using ByteBufOutputStream = io.netty.buffer.ByteBufOutputStream;
-	using Unpooled = io.netty.buffer.Unpooled;
-	using Base64 = io.netty.handler.codec.base64.Base64;
-	using ImageIO = javax.imageio.ImageIO;
-	using CommandBase = DotCraftCore.nCommand.CommandBase;
-	using ICommandManager = DotCraftCore.nCommand.ICommandManager;
-	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
-	using ServerCommandManager = DotCraftCore.nCommand.nServerCommandManager;
-	using CrashReport = DotCraftCore.crash.CrashReport;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using EntityPlayerMP = DotCraftCore.entity.player.EntityPlayerMP;
-	using NetworkSystem = DotCraftCore.network.NetworkSystem;
-	using ServerStatusResponse = DotCraftCore.network.ServerStatusResponse;
-	using S03PacketTimeUpdate = DotCraftCore.network.play.server.S03PacketTimeUpdate;
-	using IPlayerUsage = DotCraftCore.profiler.IPlayerUsage;
-	using PlayerUsageSnooper = DotCraftCore.profiler.PlayerUsageSnooper;
-	using Profiler = DotCraftCore.profiler.Profiler;
-	using IUpdatePlayerListBox = DotCraftCore.Server.GUI.IUpdatePlayerListBox;
-	using PlayerProfileCache = DotCraftCore.Server.Management.PlayerProfileCache;
-	using ServerConfigurationManager = DotCraftCore.Server.Management.ServerConfigurationManager;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using IProgressUpdate = DotCraftCore.Util.IProgressUpdate;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using ReportedException = DotCraftCore.Util.ReportedException;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using MinecraftException = DotCraftCore.World.MinecraftException;
-	using World = DotCraftCore.World.World;
-	using WorldManager = DotCraftCore.World.WorldManager;
-	using WorldServer = DotCraftCore.World.WorldServer;
-	using WorldServerMulti = DotCraftCore.World.WorldServerMulti;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using WorldType = DotCraftCore.World.WorldType;
-	using AnvilSaveConverter = DotCraftCore.World.Chunk.Storage.AnvilSaveConverter;
-	using DemoWorldServer = DotCraftCore.World.Demo.DemoWorldServer;
-	using ISaveFormat = DotCraftCore.World.Storage.ISaveFormat;
-	using ISaveHandler = DotCraftCore.World.Storage.ISaveHandler;
-	using WorldInfo = DotCraftCore.World.Storage.WorldInfo;
-	using Validate = org.apache.commons.lang3.Validate;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
-	public abstract class MinecraftServer : ICommandSender, Runnable, IPlayerUsage
+	public abstract class MinecraftServer : ICommandSender, IPlayerUsage
 	{
-		private static readonly Logger logger = LogManager.Logger;
+		private static readonly ILog logger = LogManager.GetLogger("Minecraft");
 		public static readonly File field_152367_a = new File("usercache.json");
 
 	/// <summary> Instance of Minecraft Server.  </summary>
@@ -65,7 +22,7 @@ namespace DotCraftCore.nServer
 		private readonly ISaveFormat anvilConverterForAnvilFile;
 
 	/// <summary> The PlayerUsageSnooper instance.  </summary>
-		private readonly PlayerUsageSnooper usageSnooper = new PlayerUsageSnooper("server", this, SystemTimeMillis);
+		//private readonly PlayerUsageSnooper usageSnooper = new PlayerUsageSnooper("server", this, SystemTimeMillis);
 		private readonly File anvilFile;
 
 ///    
@@ -73,7 +30,7 @@ namespace DotCraftCore.nServer
 ///     
 		private readonly IList tickables = new ArrayList();
 		private readonly ICommandManager commandManager;
-		public readonly nProfiler theProfiler = new Profiler();
+		public readonly Profiler theProfiler = new Profiler();
 		private readonly NetworkSystem field_147144_o;
 		private readonly ServerStatusResponse field_147147_p = new ServerStatusResponse();
 		private readonly Random field_147146_q = new Random();
@@ -185,9 +142,10 @@ namespace DotCraftCore.nServer
 		{
 			if(this.ActiveAnvilConverter.isOldMapFormat(p_71237_1_))
 			{
-				logger.info("Converting map!");
+				logger.Info("Converting map!");
 				this.UserMessage = "menu.convertingLevel";
-				this.ActiveAnvilConverter.convertMapFormat(p_71237_1_, new IProgressUpdate() { private long field_96245_b = System.currentTimeMillis();  public void displayProgressMessage(string p_73720_1_) {} public void resetProgressAndMessage(string p_73721_1_) {} public void setLoadingProgress(int p_73718_1_) { if(System.currentTimeMillis() - this.field_96245_b >= 1000L) { this.field_96245_b = System.currentTimeMillis(); MinecraftServer.logger.info("Converting... " + p_73718_1_ + "%"); } } public void func_146586_a() {} public void resetProgresAndWorkingMessage(string p_73719_1_) {} });
+				this.ActiveAnvilConverter.convertMapFormat(p_71237_1_, new AnonymousProgressHelper());
+                    
 			}
 		}
 
@@ -1444,6 +1402,22 @@ namespace DotCraftCore.nServer
 		}
 	}
 
+    private internal class AnonymousProgressHelper : IProgressUpdate
+    {
+        private long field_96245_b = System.currentTimeMillis();
+        public override void displayProgressMessage(string p_73720_1_) {}
+        public override void resetProgressAndMessage(string p_73721_1_) {}
+        public override void setLoadingProgress(int p_73718_1_)
+        {
+            if(System.currentTimeMillis() - this.field_96245_b >= 1000L)
+            {
+                this.field_96245_b = System.currentTimeMillis();
+                MinecraftServer.logger.Info("Converting... " + p_73718_1_ + "%");
+            }
+        }
+        public override void func_146586_a() {}
+        public override void resetProgresAndWorkingMessage(string p_73719_1_) {}
+    }
 }
 
 //----------------------------------------------------------------------------------------

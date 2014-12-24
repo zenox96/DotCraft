@@ -15,7 +15,8 @@ namespace DotCraftClient.nServer.nIntegrated
 		private ThreadLanServerPing lanServerPing;
 		
 
-		public IntegratedServer(Minecraft p_i1317_1_, string p_i1317_2_, string p_i1317_3_, WorldSettings p_i1317_4_) : base(new File(p_i1317_1_.mcDataDir, "saves"), p_i1317_1_.getProxy())
+		public IntegratedServer(Minecraft p_i1317_1_, string p_i1317_2_, string p_i1317_3_, WorldSettings p_i1317_4_)
+            : base(new File(p_i1317_1_.mcDataDir, "saves"), p_i1317_1_.getProxy())
 		{
 			this.ServerOwner = p_i1317_1_.Session.Username;
 			this.FolderName = p_i1317_2_;
