@@ -66,7 +66,7 @@ namespace DotCraftCore.nCommand
 
 				if(var9 != null)
 				{
-					throw new WrongUsageException(var9.getCommandUsage(p_71515_1_), new object[0]);
+					throw new WrongUsageException(var9.GetCommandUsage(p_71515_1_), new object[0]);
 				}
 
 				if(MathHelper.parseIntWithDefault(p_71515_2_[0], -1) != -1)
@@ -80,21 +80,21 @@ namespace DotCraftCore.nCommand
 			int var7 = Math.Min((var13 + 1) * var4, var3.Count);
 			ChatComponentTranslation var14 = new ChatComponentTranslation("commands.help.header", new object[] {Convert.ToInt32(var13 + 1), Convert.ToInt32(var5 + 1)});
 			var14.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-			p_71515_1_.addChatMessage(var14);
+			p_71515_1_.AddChatMessage(var14);
 
 			for (int var15 = var13 * var4; var15 < var7; ++var15)
 			{
 				ICommand var10 = (ICommand)var3[var15];
-				ChatComponentTranslation var11 = new ChatComponentTranslation(var10.getCommandUsage(p_71515_1_), new object[0]);
+				ChatComponentTranslation var11 = new ChatComponentTranslation(var10.GetCommandUsage(p_71515_1_), new object[0]);
 				var11.ChatStyle.ChatClickEvent = new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/" + var10.CommandName + " ");
-				p_71515_1_.addChatMessage(var11);
+				p_71515_1_.AddChatMessage(var11);
 			}
 
 			if(var13 == 0 && p_71515_1_ is EntityPlayer)
 			{
 				ChatComponentTranslation var16 = new ChatComponentTranslation("commands.help.footer", new object[0]);
 				var16.ChatStyle.Color = EnumChatFormatting.GREEN;
-				p_71515_1_.addChatMessage(var16);
+				p_71515_1_.AddChatMessage(var16);
 			}
 		}
 

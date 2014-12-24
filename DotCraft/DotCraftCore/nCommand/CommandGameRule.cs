@@ -63,7 +63,7 @@ namespace DotCraftCore.nCommand
 				if(var4.hasRule(var6))
 				{
 					string var5 = var4.getGameRuleStringValue(var6);
-					p_71515_1_.addChatMessage((new ChatComponentText(var6)).appendText(" = ").appendText(var5));
+					p_71515_1_.AddChatMessage((new ChatComponentText(var6)).appendText(" = ").appendText(var5));
 				}
 				else
 				{
@@ -73,7 +73,7 @@ namespace DotCraftCore.nCommand
 			else if(p_71515_2_.Length == 0)
 			{
 				GameRules var3 = this.GameRules;
-				p_71515_1_.addChatMessage(new ChatComponentText(joinNiceString(var3.Rules)));
+				p_71515_1_.AddChatMessage(new ChatComponentText(JoinNiceString(var3.Rules)));
 			}
 			else
 			{
@@ -84,9 +84,9 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, this.GameRules.Rules) : (p_71516_2_.Length == 2 ? getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"true", "false"}): null);
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, this.GameRules.Rules) : (p_71516_2_.Length == 2 ? GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"true", "false"}): null);
 		}
 
 ///    

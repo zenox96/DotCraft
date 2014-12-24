@@ -54,7 +54,7 @@ namespace DotCraftCore.nCommand.nServer
 				var3 = MathHelper.floor_double(func_110666_a(p_71515_1_, (double)var3, p_71515_2_[0]));
 				var4 = MathHelper.floor_double(func_110666_a(p_71515_1_, (double)var4, p_71515_2_[1]));
 				var5 = MathHelper.floor_double(func_110666_a(p_71515_1_, (double)var5, p_71515_2_[2]));
-				Block var6 = CommandBase.getBlockByText(p_71515_1_, p_71515_2_[3]);
+				Block var6 = CommandBase.GetBlockByText(p_71515_1_, p_71515_2_[3]);
 				int var7 = 0;
 
 				if(p_71515_2_.Length >= 5)
@@ -139,9 +139,9 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 4 ? getListOfStringsFromIterableMatchingLastWord(p_71516_2_, Block.blockRegistry.Keys) : (p_71516_2_.Length == 6 ? getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"replace", "destroy", "keep"}): null);
+			return p_71516_2_.Length == 4 ? GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, Block.blockRegistry.Keys) : (p_71516_2_.Length == 6 ? GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"replace", "destroy", "keep"}): null);
 		}
 	}
 

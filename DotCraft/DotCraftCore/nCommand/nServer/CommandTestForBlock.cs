@@ -141,7 +141,7 @@ namespace DotCraftCore.nCommand.nServer
 								}
 							}
 
-							p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.testforblock.success", new object[] {Convert.ToInt32(var3), Convert.ToInt32(var4), Convert.ToInt32(var5)}));
+							p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.testforblock.success", new object[] {Convert.ToInt32(var3), Convert.ToInt32(var4), Convert.ToInt32(var5)}));
 						}
 					}
 				}
@@ -201,9 +201,9 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 4 ? getListOfStringsFromIterableMatchingLastWord(p_71516_2_, Block.blockRegistry.Keys) : null;
+			return p_71516_2_.Length == 4 ? GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, Block.blockRegistry.Keys) : null;
 		}
 	}
 

@@ -41,9 +41,9 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Returns true if the given command sender is allowed to use this command. </summary>
 ///     
-		public override bool canCommandSenderUseCommand(ICommandSender p_71519_1_)
+		public override bool CanCommandSenderUseCommand(ICommandSender p_71519_1_)
 		{
-			return MinecraftServer.Server.ConfigurationManager.func_152608_h().func_152689_b() && base.canCommandSenderUseCommand(p_71519_1_);
+			return MinecraftServer.Server.ConfigurationManager.func_152608_h().func_152689_b() && base.CanCommandSenderUseCommand(p_71519_1_);
 		}
 
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
@@ -72,9 +72,9 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.ConfigurationManager.func_152608_h().func_152685_a()) : null;
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.ConfigurationManager.func_152608_h().func_152685_a()) : null;
 		}
 	}
 

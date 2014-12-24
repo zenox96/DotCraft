@@ -38,7 +38,7 @@ namespace DotCraftCore.nCommand
 
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
 		{
-			EntityPlayerMP var3 = p_71515_2_.Length == 0 ? getCommandSenderAsPlayer(p_71515_1_) : getPlayer(p_71515_1_, p_71515_2_[0]);
+			EntityPlayerMP var3 = p_71515_2_.Length == 0 ? GetCommandSenderAsPlayer(p_71515_1_) : GetPlayer(p_71515_1_, p_71515_2_[0]);
 
 			if(p_71515_2_.Length == 4)
 			{
@@ -70,15 +70,15 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length != 1 && p_71516_2_.Length != 2 ? null : getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+			return p_71516_2_.Length != 1 && p_71516_2_.Length != 2 ? null : GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 		}
 
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

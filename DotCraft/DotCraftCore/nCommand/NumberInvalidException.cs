@@ -9,7 +9,7 @@ namespace DotCraftCore.nCommand
 		{
 		}
 
-		public NumberInvalidException(string p_i1360_1_, params object[] p_i1360_2_) : base(p_i1360_1_, p_i1360_2_)
+		public NumberInvalidException(string unlocalizedMessage, params object[] errorObjs) : base(unlocalizedMessage, errorObjs)
 		{
 		}
 	}

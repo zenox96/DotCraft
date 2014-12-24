@@ -5,10 +5,6 @@ using System.Text;
 
 namespace DotCraftCore.nUtil
 {
-
-	using Iterators = com.google.common.collect.Iterators;
-	using Lists = com.google.common.collect.Lists;
-
 	public class ChatComponentTranslation : ChatComponentStyle
 	{
 		private readonly string key;

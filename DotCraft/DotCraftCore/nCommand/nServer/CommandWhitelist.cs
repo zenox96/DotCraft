@@ -63,9 +63,9 @@ namespace DotCraftCore.nCommand.nServer
 
 				if(p_71515_2_[0].Equals("list"))
 				{
-					p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.whitelist.list", new object[] {Convert.ToInt32(var3.ConfigurationManager.func_152598_l().length), Convert.ToInt32(var3.ConfigurationManager.AvailablePlayerDat.length)}));
+					p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.whitelist.list", new object[] {Convert.ToInt32(var3.ConfigurationManager.func_152598_l().length), Convert.ToInt32(var3.ConfigurationManager.AvailablePlayerDat.length)}));
 					string[] var5 = var3.ConfigurationManager.func_152598_l();
-					p_71515_1_.addChatMessage(new ChatComponentText(joinNiceString(var5)));
+					p_71515_1_.AddChatMessage(new ChatComponentText(JoinNiceString(var5)));
 					return;
 				}
 
@@ -123,11 +123,11 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
 			if(p_71516_2_.Length == 1)
 			{
-				return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"on", "off", "list", "add", "remove", "reload"});
+				return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"on", "off", "list", "add", "remove", "reload"});
 			}
 			else
 			{
@@ -135,12 +135,12 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(p_71516_2_[0].Equals("remove"))
 					{
-						return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.ConfigurationManager.func_152598_l());
+						return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.ConfigurationManager.func_152598_l());
 					}
 
 					if(p_71516_2_[0].Equals("add"))
 					{
-						return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.func_152358_ax().func_152654_a());
+						return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.func_152358_ax().func_152654_a());
 					}
 				}
 

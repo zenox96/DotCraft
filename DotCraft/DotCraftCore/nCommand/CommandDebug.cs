@@ -163,9 +163,9 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"start", "stop"}): null;
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"start", "stop"}): null;
 		}
 	}
 

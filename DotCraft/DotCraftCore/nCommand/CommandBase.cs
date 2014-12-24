@@ -1,21 +1,17 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nItem;
+using DotCraftCore.nServer;
+using DotCraftCore.nUtil;
 using System;
 using System.Collections;
 using System.Text;
 
 namespace DotCraftCore.nCommand
 {
-	using EntityPlayerMP = DotCraftCore.nEntity.nPlayer.EntityPlayerMP;
-	using Item = DotCraftCore.nItem.Item;
-	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
-	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
-	using ChatComponentTranslation = DotCraftCore.nUtil.ChatComponentTranslation;
-	using EnumChatFormatting = DotCraftCore.nUtil.EnumChatFormatting;
-	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
-
 	public abstract class CommandBase : ICommand
 	{
 		private static IAdminCommand theAdmin;
-		
 
 ///    
 ///     <summary> * Return the required permission level for this command. </summary>
@@ -28,26 +24,28 @@ namespace DotCraftCore.nCommand
 			}
 		}
 
-		public virtual IList CommandAliases
+		public abstract override IList CommandAliases
 		{
-			get
-			{
-				return null;
-			}
+			get;
 		}
+
+        public abstract override string CommandName
+        {
+            get;
+        }
 
 ///    
 ///     <summary> * Returns true if the given command sender is allowed to use this command. </summary>
 ///     
-		public virtual bool canCommandSenderUseCommand(ICommandSender p_71519_1_)
+		public virtual bool CanCommandSenderUseCommand(ICommandSender sender)
 		{
-			return p_71519_1_.canCommandSenderUseCommand(this.RequiredPermissionLevel, this.CommandName);
+			return sender.CanCommandSenderUseCommand(this.RequiredPermissionLevel, this.CommandName);
 		}
 
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public virtual IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public virtual IList AddTabCompletionOptions(ICommandSender sender, string[] p_71516_2_)
 		{
 			return null;
 		}
@@ -55,40 +53,40 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Parses an int from the given string. </summary>
 ///     
-		public static int parseInt(ICommandSender p_71526_0_, string p_71526_1_)
+		public static int ParseInt(ICommandSender sender, string stringToInt)
 		{
 			try
 			{
-				return Convert.ToInt32(p_71526_1_);
+				return Convert.ToInt32(stringToInt);
 			}
-			catch (NumberFormatException var3)
+			catch (FormatException)
 			{
-				throw new NumberInvalidException("commands.generic.num.invalid", new object[] {p_71526_1_});
+				throw new NumberInvalidException("commands.generic.num.invalid", new object[] {stringToInt});
 			}
 		}
 
 ///    
 ///     <summary> * Parses an int from the given sring with a specified minimum. </summary>
 ///     
-		public static int parseIntWithMin(ICommandSender p_71528_0_, string p_71528_1_, int p_71528_2_)
+		public static int ParseIntWithMin(ICommandSender sender, string stringToInt, int minimumValue)
 		{
-			return parseIntBounded(p_71528_0_, p_71528_1_, p_71528_2_, int.MaxValue);
+			return ParseIntBounded(sender, stringToInt, minimumValue, int.MaxValue);
 		}
 
 ///    
 ///     <summary> * Parses an int from the given string within a specified bound. </summary>
 ///     
-		public static int parseIntBounded(ICommandSender p_71532_0_, string p_71532_1_, int p_71532_2_, int p_71532_3_)
+		public static int ParseIntBounded(ICommandSender sender, string stringToInt, int minimumValue, int maximumValue)
 		{
-			int var4 = parseInt(p_71532_0_, p_71532_1_);
+			int var4 = ParseInt(sender, stringToInt);
 
-			if(var4 < p_71532_2_)
+			if(var4 < minimumValue)
 			{
-				throw new NumberInvalidException("commands.generic.num.tooSmall", new object[] {Convert.ToInt32(var4), Convert.ToInt32(p_71532_2_)});
+				throw new NumberInvalidException("commands.generic.num.tooSmall", new object[] {Convert.ToInt32(var4), Convert.ToInt32(minimumValue)});
 			}
-			else if(var4 > p_71532_3_)
+			else if(var4 > maximumValue)
 			{
-				throw new NumberInvalidException("commands.generic.num.tooBig", new object[] {Convert.ToInt32(var4), Convert.ToInt32(p_71532_3_)});
+				throw new NumberInvalidException("commands.generic.num.tooBig", new object[] {Convert.ToInt32(var4), Convert.ToInt32(maximumValue)});
 			}
 			else
 			{
@@ -99,13 +97,13 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Parses a double from the given string or throws an exception if it's not a double. </summary>
 ///     
-		public static double parseDouble(ICommandSender p_82363_0_, string p_82363_1_)
+		public static double ParseDouble(ICommandSender sender, string p_82363_1_)
 		{
 			try
 			{
 				double var2 = Convert.ToDouble(p_82363_1_);
 
-				if(!Doubles.isFinite(var2))
+				if(double.IsInfinity(var2) | double.IsNaN(var2))
 				{
 					throw new NumberInvalidException("commands.generic.num.invalid", new object[] {p_82363_1_});
 				}
@@ -114,7 +112,7 @@ namespace DotCraftCore.nCommand
 					return var2;
 				}
 			}
-			catch (NumberFormatException var4)
+			catch (FormatException)
 			{
 				throw new NumberInvalidException("commands.generic.num.invalid", new object[] {p_82363_1_});
 			}
@@ -124,18 +122,18 @@ namespace DotCraftCore.nCommand
 ///     <summary> * Parses a double from the given string.  Throws if the string could not be parsed as a double, or if it's less
 ///     * than the given minimum value. </summary>
 ///     
-		public static double parseDoubleWithMin(ICommandSender p_110664_0_, string p_110664_1_, double p_110664_2_)
+        public static double ParseDoubleWithMin(ICommandSender sender, string p_110664_1_, double p_110664_2_)
 		{
-			return parseDoubleBounded(p_110664_0_, p_110664_1_, p_110664_2_, double.MaxValue);
+            return parseDoubleBounded(sender, p_110664_1_, p_110664_2_, double.MaxValue);
 		}
 
 ///    
 ///     <summary> * Parses a double from the given string.  Throws if the string could not be parsed as a double, or if it's not
 ///     * between the given min and max values. </summary>
 ///     
-		public static double parseDoubleBounded(ICommandSender p_110661_0_, string p_110661_1_, double p_110661_2_, double p_110661_4_)
+        public static double parseDoubleBounded(ICommandSender sender, string p_110661_1_, double p_110661_2_, double p_110661_4_)
 		{
-			double var6 = parseDouble(p_110661_0_, p_110661_1_);
+            double var6 = ParseDouble(sender, p_110661_1_);
 
 			if(var6 < p_110661_2_)
 			{
@@ -155,7 +153,7 @@ namespace DotCraftCore.nCommand
 ///     <summary> * Parses a boolean value from the given string.  Throws if the string does not contain a boolean value.  Accepted
 ///     * values are (case-sensitive): "true", "false", "0", "1". </summary>
 ///     
-		public static bool parseBoolean(ICommandSender p_110662_0_, string p_110662_1_)
+        public static bool ParseBoolean(ICommandSender sender, string p_110662_1_)
 		{
 			if(!p_110662_1_.Equals("true") && !p_110662_1_.Equals("1"))
 			{
@@ -177,11 +175,11 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Returns the given ICommandSender as a EntityPlayer or throw an exception. </summary>
 ///     
-		public static EntityPlayerMP getCommandSenderAsPlayer(ICommandSender p_71521_0_)
+        public static EntityPlayerMP GetCommandSenderAsPlayer(ICommandSender sender)
 		{
-			if(p_71521_0_ is EntityPlayerMP)
+			if(sender is EntityPlayerMP)
 			{
-				return (EntityPlayerMP)p_71521_0_;
+				return (EntityPlayerMP)sender;
 			}
 			else
 			{
@@ -189,9 +187,9 @@ namespace DotCraftCore.nCommand
 			}
 		}
 
-		public static EntityPlayerMP getPlayer(ICommandSender p_82359_0_, string p_82359_1_)
+        public static EntityPlayerMP GetPlayer(ICommandSender sender, string p_82359_1_)
 		{
-			EntityPlayerMP var2 = PlayerSelector.matchOnePlayer(p_82359_0_, p_82359_1_);
+			EntityPlayerMP var2 = PlayerSelector.matchOnePlayer(sender, p_82359_1_);
 
 			if(var2 != null)
 			{
@@ -212,9 +210,9 @@ namespace DotCraftCore.nCommand
 			}
 		}
 
-		public static string func_96332_d(ICommandSender p_96332_0_, string p_96332_1_)
+        public static string func_96332_d(ICommandSender sender, string p_96332_1_)
 		{
-			EntityPlayerMP var2 = PlayerSelector.matchOnePlayer(p_96332_0_, p_96332_1_);
+			EntityPlayerMP var2 = PlayerSelector.matchOnePlayer(sender, p_96332_1_);
 
 			if(var2 != null)
 			{
@@ -230,12 +228,12 @@ namespace DotCraftCore.nCommand
 			}
 		}
 
-		public static IChatComponent func_147178_a(ICommandSender p_147178_0_, string[] p_147178_1_, int p_147178_2_)
+        public static IChatComponent func_147178_a(ICommandSender sender, string[] p_147178_1_, int p_147178_2_)
 		{
-			return func_147176_a(p_147178_0_, p_147178_1_, p_147178_2_, false);
+			return func_147176_a(sender, p_147178_1_, p_147178_2_, false);
 		}
 
-		public static IChatComponent func_147176_a(ICommandSender p_147176_0_, string[] p_147176_1_, int p_147176_2_, bool p_147176_3_)
+        public static IChatComponent func_147176_a(ICommandSender sender, string[] p_147176_1_, int p_147176_2_, bool p_147176_3_)
 		{
 			ChatComponentText var4 = new ChatComponentText("");
 
@@ -250,7 +248,7 @@ namespace DotCraftCore.nCommand
 
 				if(p_147176_3_)
 				{
-					IChatComponent var7 = PlayerSelector.func_150869_b(p_147176_0_, p_147176_1_[var5]);
+					IChatComponent var7 = PlayerSelector.func_150869_b(sender, p_147176_1_[var5]);
 
 					if(var7 != null)
 					{
@@ -268,7 +266,7 @@ namespace DotCraftCore.nCommand
 			return var4;
 		}
 
-		public static string func_82360_a(ICommandSender p_82360_0_, string[] p_82360_1_, int p_82360_2_)
+        public static string func_82360_a(ICommandSender sender, string[] p_82360_1_, int p_82360_2_)
 		{
 			StringBuilder var3 = new StringBuilder();
 
@@ -286,16 +284,16 @@ namespace DotCraftCore.nCommand
 			return var3.ToString();
 		}
 
-		public static double func_110666_a(ICommandSender p_110666_0_, double p_110666_1_, string p_110666_3_)
+        public static double func_110666_a(ICommandSender sender, double p_110666_1_, string p_110666_3_)
 		{
-			return func_110665_a(p_110666_0_, p_110666_1_, p_110666_3_, -30000000, 30000000);
+			return func_110665_a(sender, p_110666_1_, p_110666_3_, -30000000, 30000000);
 		}
 
-		public static double func_110665_a(ICommandSender p_110665_0_, double p_110665_1_, string p_110665_3_, int p_110665_4_, int p_110665_5_)
+        public static double func_110665_a(ICommandSender sender, double p_110665_1_, string p_110665_3_, int p_110665_4_, int p_110665_5_)
 		{
 			bool var6 = p_110665_3_.StartsWith("~");
 
-			if(var6 && double.isNaN(p_110665_1_))
+			if(var6 && double.IsNaN(p_110665_1_))
 			{
 				throw new NumberInvalidException("commands.generic.num.invalid", new object[] {Convert.ToDouble(p_110665_1_)});
 			}
@@ -312,7 +310,7 @@ namespace DotCraftCore.nCommand
 						p_110665_3_ = p_110665_3_.Substring(1);
 					}
 
-					var7 += parseDouble(p_110665_0_, p_110665_3_);
+					var7 += ParseDouble(sender, p_110665_3_);
 
 					if(!var9 && !var6)
 					{
@@ -342,7 +340,7 @@ namespace DotCraftCore.nCommand
 ///     * string as an integer ID (deprecated).  Warns the sender if we matched by parsing the ID.  Throws if the item
 ///     * wasn't found.  Returns the item if it was found. </summary>
 ///     
-		public static Item getItemByText(ICommandSender p_147179_0_, string p_147179_1_)
+        public static Item GetItemByText(ICommandSender sender, string p_147179_1_)
 		{
 			Item var2 = (Item)Item.itemRegistry.getObject(p_147179_1_);
 
@@ -356,14 +354,13 @@ namespace DotCraftCore.nCommand
 					{
 						ChatComponentTranslation var4 = new ChatComponentTranslation("commands.generic.deprecatedId", new object[] {Item.itemRegistry.getNameForObject(var3)});
 						var4.ChatStyle.Color = EnumChatFormatting.GRAY;
-						p_147179_0_.addChatMessage(var4);
+						sender.AddChatMessage(var4);
 					}
 
 					var2 = var3;
 				}
-				catch (NumberFormatException var5)
+				catch (FormatException)
 				{
-					;
 				}
 			}
 
@@ -382,11 +379,11 @@ namespace DotCraftCore.nCommand
 ///     * string as an integer ID (deprecated).  Warns the sender if we matched by parsing the ID.  Throws if the block
 ///     * wasn't found.  Returns the block if it was found. </summary>
 ///     
-		public static Block getBlockByText(ICommandSender p_147180_0_, string p_147180_1_)
+        public static Block GetBlockByText(ICommandSender sender, string p_147180_1_)
 		{
 			if(Block.blockRegistry.containsKey(p_147180_1_))
 			{
-				return (Block)Block.blockRegistry.getObject(p_147180_1_);
+				return Block.blockRegistry.GetObject(p_147180_1_);
 			}
 			else
 			{
@@ -394,18 +391,17 @@ namespace DotCraftCore.nCommand
 				{
 					int var2 = Convert.ToInt32(p_147180_1_);
 
-					if(Block.blockRegistry.containsID(var2))
+					if(Block.blockRegistry.ContainsID(var2))
 					{
 						Block var3 = Block.getBlockById(var2);
-						ChatComponentTranslation var4 = new ChatComponentTranslation("commands.generic.deprecatedId", new object[] {Block.blockRegistry.getNameForObject(var3)});
+						ChatComponentTranslation var4 = new ChatComponentTranslation("commands.generic.deprecatedId", new object[] {Block.blockRegistry.GetNameForObject(var3)});
 						var4.ChatStyle.Color = EnumChatFormatting.GRAY;
-						p_147180_0_.addChatMessage(var4);
+						sender.AddChatMessage(var4);
 						return var3;
 					}
 				}
-				catch (NumberFormatException var5)
+				catch (FormatException var5)
 				{
-					;
 				}
 
 				throw new NumberInvalidException("commands.give.notFound", new object[] {p_147180_1_});
@@ -416,7 +412,7 @@ namespace DotCraftCore.nCommand
 ///     <summary> * Creates a linguistic series joining the input objects together.  Examples: 1) {} --> "",  2) {"Steve"} -->
 ///     * "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil and Mark" </summary>
 ///     
-		public static string joinNiceString(object[] p_71527_0_)
+		public static string JoinNiceString(object[] p_71527_0_)
 		{
 			StringBuilder var1 = new StringBuilder();
 
@@ -446,7 +442,7 @@ namespace DotCraftCore.nCommand
 ///     <summary> * Creates a linguistic series joining the input chat components.  Examples: 1) {} --> "",  2) {"Steve"} -->
 ///     * "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil and Mark" </summary>
 ///     
-		public static IChatComponent joinNiceString(IChatComponent[] p_147177_0_)
+		public static IChatComponent JoinNiceString(IChatComponent[] p_147177_0_)
 		{
 			ChatComponentText var1 = new ChatComponentText("");
 
@@ -475,35 +471,37 @@ namespace DotCraftCore.nCommand
 ///     * {"Steve"} --> "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil
 ///     * and Mark" </summary>
 ///     
-		public static string joinNiceStringFromCollection(ICollection p_96333_0_)
+		public static string JoinNiceStringFromCollection(ICollection p_96333_0_)
 		{
-			return joinNiceString(p_96333_0_.ToArray(new string[p_96333_0_.size()]));
+            var tmp = new string[p_96333_0_.Count];
+            p_96333_0_.CopyTo(tmp, 0);
+			return JoinNiceString(tmp);
 		}
 
 ///    
 ///     <summary> * Returns true if the given substring is exactly equal to the start of the given string (case insensitive). </summary>
 ///     
-		public static bool doesStringStartWith(string p_71523_0_, string p_71523_1_)
+		public static bool DoesStringStartWith(string p_71523_0_, string p_71523_1_)
 		{
-			return p_71523_1_.regionMatches(true, 0, p_71523_0_, 0, p_71523_0_.Length);
+            return p_71523_0_.ToLower().Equals(p_71523_1_.ToLower().Substring(0, p_71523_0_.Length));
 		}
 
 ///    
 ///     <summary> * Returns a List of strings (chosen from the given strings) which the last word in the given string array is a
 ///     * beginning-match for. (Tab completion). </summary>
 ///     
-		public static IList getListOfStringsMatchingLastWord(string[] p_71530_0_, params string[] p_71530_1_)
+		public static IList GetListOfStringsMatchingLastWord(string[] p_71530_0_, params string[] p_71530_1_)
 		{
 			string var2 = p_71530_0_[p_71530_0_.Length - 1];
 			ArrayList var3 = new ArrayList();
 			string[] var4 = p_71530_1_;
-			int var5 = p_71530_1_.length;
+			int var5 = p_71530_1_.Length;
 
 			for (int var6 = 0; var6 < var5; ++var6)
 			{
 				string var7 = var4[var6];
 
-				if(doesStringStartWith(var2, var7))
+				if(DoesStringStartWith(var2, var7))
 				{
 					var3.Add(var7);
 				}
@@ -516,7 +514,7 @@ namespace DotCraftCore.nCommand
 ///     <summary> * Returns a List of strings (chosen from the given string iterable) which the last word in the given string array
 ///     * is a beginning-match for. (Tab completion). </summary>
 ///     
-		public static IList getListOfStringsFromIterableMatchingLastWord(string[] p_71531_0_, IEnumerable p_71531_1_)
+		public static IList GetListOfStringsFromIterableMatchingLastWord(string[] p_71531_0_, IEnumerable p_71531_1_)
 		{
 			string var2 = p_71531_0_[p_71531_0_.Length - 1];
 			ArrayList var3 = new ArrayList();
@@ -526,7 +524,7 @@ namespace DotCraftCore.nCommand
 			{
 				string var5 = (string)var4.Current;
 
-				if(doesStringStartWith(var2, var5))
+				if(DoesStringStartWith(var2, var5))
 				{
 					var3.Add(var5);
 				}
@@ -538,21 +536,21 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public virtual bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public virtual bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return false;
 		}
 
-		public static void func_152373_a(ICommandSender p_152373_0_, ICommand p_152373_1_, string p_152373_2_, params object[] p_152373_3_)
+        public static void func_152373_a(ICommandSender sender, ICommand p_152373_1_, string p_152373_2_, params object[] p_152373_3_)
 		{
-			func_152374_a(p_152373_0_, p_152373_1_, 0, p_152373_2_, p_152373_3_);
+			func_152374_a(sender, p_152373_1_, 0, p_152373_2_, p_152373_3_);
 		}
 
-		public static void func_152374_a(ICommandSender p_152374_0_, ICommand p_152374_1_, int p_152374_2_, string p_152374_3_, params object[] p_152374_4_)
+        public static void func_152374_a(ICommandSender sender, ICommand p_152374_1_, int p_152374_2_, string p_152374_3_, params object[] p_152374_4_)
 		{
 			if(theAdmin != null)
 			{
-				theAdmin.func_152372_a(p_152374_0_, p_152374_1_, p_152374_2_, p_152374_3_, p_152374_4_);
+				theAdmin.func_152372_a(sender, p_152374_1_, p_152374_2_, p_152374_3_, p_152374_4_);
 			}
 		}
 
@@ -567,15 +565,9 @@ namespace DotCraftCore.nCommand
 			}
 		}
 
-		public virtual int compareTo(ICommand p_compareTo_1_)
+		public virtual int CompareTo(ICommand p_compareTo_1_)
 		{
 			return this.CommandName.CompareTo(p_compareTo_1_.CommandName);
 		}
-
-		public virtual int compareTo(object p_compareTo_1_)
-		{
-			return this.CompareTo((ICommand)p_compareTo_1_);
-		}
 	}
-
 }

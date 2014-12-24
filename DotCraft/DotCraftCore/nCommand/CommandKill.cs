@@ -35,9 +35,9 @@ namespace DotCraftCore.nCommand
 
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
 		{
-			EntityPlayerMP var3 = getCommandSenderAsPlayer(p_71515_1_);
+			EntityPlayerMP var3 = GetCommandSenderAsPlayer(p_71515_1_);
 			var3.attackEntityFrom(DamageSource.outOfWorld, float.MaxValue);
-			p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.kill.success", new object[0]));
+			p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.kill.success", new object[0]));
 		}
 	}
 

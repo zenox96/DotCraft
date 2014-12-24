@@ -42,7 +42,7 @@ namespace DotCraftCore.nCommand.nServer
 		{
 			if(p_71515_2_.Length > 0)
 			{
-				IChatComponent var3 = func_147176_a(p_71515_1_, p_71515_2_, 0, p_71515_1_.canCommandSenderUseCommand(1, "me"));
+				IChatComponent var3 = func_147176_a(p_71515_1_, p_71515_2_, 0, p_71515_1_.CanCommandSenderUseCommand(1, "me"));
 				MinecraftServer.Server.ConfigurationManager.func_148539_a(new ChatComponentTranslation("chat.type.emote", new object[] {p_71515_1_.func_145748_c_(), var3}));
 			}
 			else
@@ -54,9 +54,9 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+			return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 		}
 	}
 

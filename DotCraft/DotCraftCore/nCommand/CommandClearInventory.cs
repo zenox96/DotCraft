@@ -38,8 +38,8 @@ namespace DotCraftCore.nCommand
 
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
 		{
-			EntityPlayerMP var3 = p_71515_2_.Length == 0 ? getCommandSenderAsPlayer(p_71515_1_) : getPlayer(p_71515_1_, p_71515_2_[0]);
-			Item var4 = p_71515_2_.Length >= 2 ? getItemByText(p_71515_1_, p_71515_2_[1]) : null;
+			EntityPlayerMP var3 = p_71515_2_.Length == 0 ? GetCommandSenderAsPlayer(p_71515_1_) : GetPlayer(p_71515_1_, p_71515_2_[0]);
+			Item var4 = p_71515_2_.Length >= 2 ? GetItemByText(p_71515_1_, p_71515_2_[1]) : null;
 			int var5 = p_71515_2_.Length >= 3 ? parseIntWithMin(p_71515_1_, p_71515_2_[2], 0) : -1;
 
 			if(p_71515_2_.Length >= 2 && var4 == null)
@@ -70,9 +70,9 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, this.func_147209_d()) : (p_71516_2_.Length == 2 ? getListOfStringsFromIterableMatchingLastWord(p_71516_2_, Item.itemRegistry.Keys) : null);
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, this.func_147209_d()) : (p_71516_2_.Length == 2 ? GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, Item.itemRegistry.Keys) : null);
 		}
 
 		protected internal virtual string[] func_147209_d()
@@ -83,7 +83,7 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

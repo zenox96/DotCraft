@@ -50,7 +50,7 @@ namespace DotCraftCore.nCommand.nServer
 			}
 			else
 			{
-				EntityPlayerMP var3 = getPlayer(p_71515_1_, p_71515_2_[0]);
+				EntityPlayerMP var3 = GetPlayer(p_71515_1_, p_71515_2_[0]);
 				string var4 = func_82360_a(p_71515_1_, p_71515_2_, 1);
 
 				try
@@ -69,15 +69,15 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames) : null;
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames) : null;
 		}
 
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

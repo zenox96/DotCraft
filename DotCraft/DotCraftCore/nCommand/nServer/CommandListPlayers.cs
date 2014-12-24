@@ -39,8 +39,8 @@ namespace DotCraftCore.nCommand.nServer
 
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
 		{
-			p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.players.list", new object[] {Convert.ToInt32(MinecraftServer.Server.CurrentPlayerCount), Convert.ToInt32(MinecraftServer.Server.MaxPlayers)}));
-			p_71515_1_.addChatMessage(new ChatComponentText(MinecraftServer.Server.ConfigurationManager.func_152609_b(p_71515_2_.Length > 0 && "uuids".equalsIgnoreCase(p_71515_2_[0]))));
+			p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.players.list", new object[] {Convert.ToInt32(MinecraftServer.Server.CurrentPlayerCount), Convert.ToInt32(MinecraftServer.Server.MaxPlayers)}));
+			p_71515_1_.AddChatMessage(new ChatComponentText(MinecraftServer.Server.ConfigurationManager.func_152609_b(p_71515_2_.Length > 0 && "uuids".equalsIgnoreCase(p_71515_2_[0]))));
 		}
 	}
 

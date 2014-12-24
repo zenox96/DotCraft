@@ -2,17 +2,6 @@ using System;
 
 namespace DotCraftCore.nNetwork
 {
-
-	using Charsets = com.google.common.base.Charsets;
-	using ByteBuf = io.netty.buffer.ByteBuf;
-	using Unpooled = io.netty.buffer.Unpooled;
-	using ChannelFutureListener = io.netty.channel.ChannelFutureListener;
-	using ChannelHandlerContext = io.netty.channel.ChannelHandlerContext;
-	using ChannelInboundHandlerAdapter = io.netty.channel.ChannelInboundHandlerAdapter;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
 	public class PingResponseHandler : ChannelInboundHandlerAdapter
 	{
 		private static readonly Logger logger = LogManager.Logger;

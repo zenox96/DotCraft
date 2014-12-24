@@ -52,7 +52,7 @@ namespace DotCraftCore.nCommand
 					var3[var4] = var2[var4].func_145748_c_();
 				}
 
-				return CommandBase.joinNiceString(var3);
+				return CommandBase.JoinNiceString(var3);
 			}
 			else
 			{

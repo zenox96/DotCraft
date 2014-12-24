@@ -70,7 +70,7 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Returns true if the command sender is allowed to use the given command. </summary>
 ///     
-		public virtual bool canCommandSenderUseCommand(int p_70003_1_, string p_70003_2_)
+		public virtual bool CanCommandSenderUseCommand(int p_70003_1_, string p_70003_2_)
 		{
 			return p_70003_1_ <= 2;
 		}
@@ -132,7 +132,7 @@ namespace DotCraftCore.nCommand.nServer
 ///     * (like "I fetched this block for you by ID, but I'd like you to know that every time you do this, I die a little
 ///     * inside"), and errors (like "it's not called iron_pixacke, silly"). </summary>
 ///     
-		public virtual void addChatMessage(IChatComponent p_145747_1_)
+		public virtual void AddChatMessage(IChatComponent p_145747_1_)
 		{
 			if(this.field_145765_c && this.EntityWorld != null && !this.EntityWorld.isClient)
 			{

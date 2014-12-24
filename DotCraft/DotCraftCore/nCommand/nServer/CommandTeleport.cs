@@ -52,11 +52,11 @@ namespace DotCraftCore.nCommand.nServer
 
 				if(p_71515_2_.Length != 2 && p_71515_2_.Length != 4)
 				{
-					var3 = getCommandSenderAsPlayer(p_71515_1_);
+					var3 = GetCommandSenderAsPlayer(p_71515_1_);
 				}
 				else
 				{
-					var3 = getPlayer(p_71515_1_, p_71515_2_[0]);
+					var3 = GetPlayer(p_71515_1_, p_71515_2_[0]);
 
 					if(var3 == null)
 					{
@@ -68,7 +68,7 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(p_71515_2_.Length == 1 || p_71515_2_.Length == 2)
 					{
-						EntityPlayerMP var11 = getPlayer(p_71515_1_, p_71515_2_[p_71515_2_.Length - 1]);
+						EntityPlayerMP var11 = GetPlayer(p_71515_1_, p_71515_2_[p_71515_2_.Length - 1]);
 
 						if(var11 == null)
 						{
@@ -102,15 +102,15 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length != 1 && p_71516_2_.Length != 2 ? null : getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+			return p_71516_2_.Length != 1 && p_71516_2_.Length != 2 ? null : GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 		}
 
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

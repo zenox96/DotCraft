@@ -1,10 +1,8 @@
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+
 namespace DotCraftCore.nCommand
 {
-
-	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
-	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
-	using World = DotCraftCore.nWorld.World;
-
 	public interface ICommandSender
 	{
 ///    
@@ -20,12 +18,12 @@ namespace DotCraftCore.nCommand
 ///     * (like "I fetched this block for you by ID, but I'd like you to know that every time you do this, I die a little
 ///     * inside"), and errors (like "it's not called iron_pixacke, silly"). </summary>
 ///     
-		void addChatMessage(IChatComponent p_145747_1_);
+		void AddChatMessage(IChatComponent p_145747_1_);
 
 ///    
 ///     <summary> * Returns true if the command sender is allowed to use the given command. </summary>
 ///     
-		bool canCommandSenderUseCommand(int p_70003_1_, string p_70003_2_);
+		bool CanCommandSenderUseCommand(int p_70003_1_, string p_70003_2_);
 
 ///    
 ///     <summary> * Return the position for this command sender. </summary>

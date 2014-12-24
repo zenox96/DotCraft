@@ -46,14 +46,14 @@ namespace DotCraftCore.nCommand.nServer
 			}
 			else
 			{
-				getPlayer(p_71515_1_, p_71515_2_[0]);
+				GetPlayer(p_71515_1_, p_71515_2_[0]);
 			}
 		}
 
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

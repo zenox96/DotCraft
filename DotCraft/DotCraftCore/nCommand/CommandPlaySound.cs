@@ -45,7 +45,7 @@ namespace DotCraftCore.nCommand
 				sbyte var3 = 0;
 				int var36 = var3 + 1;
 				string var4 = p_71515_2_[var3];
-				EntityPlayerMP var5 = getPlayer(p_71515_1_, p_71515_2_[var36++]);
+				EntityPlayerMP var5 = GetPlayer(p_71515_1_, p_71515_2_[var36++]);
 				double var6 = (double)var5.PlayerCoordinates.posX;
 				double var8 = (double)var5.PlayerCoordinates.posY;
 				double var10 = (double)var5.PlayerCoordinates.posZ;
@@ -122,7 +122,7 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 1;
 		}

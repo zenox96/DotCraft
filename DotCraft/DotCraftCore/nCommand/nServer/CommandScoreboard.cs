@@ -396,7 +396,7 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(var5.equalsIgnoreCase("color"))
 					{
-						throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, joinNiceStringFromCollection(EnumChatFormatting.getValidValues(true, false))});
+						throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, JoinNiceStringFromCollection(EnumChatFormatting.getValidValues(true, false))});
 					}
 					else if(!var5.equalsIgnoreCase("friendlyfire") && !var5.equalsIgnoreCase("seeFriendlyInvisibles"))
 					{
@@ -404,7 +404,7 @@ namespace DotCraftCore.nCommand.nServer
 					}
 					else
 					{
-						throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, joinNiceStringFromCollection(new string[]{"true", "false"})});
+						throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, JoinNiceStringFromCollection(new string[]{"true", "false"})});
 					}
 				}
 				else
@@ -417,7 +417,7 @@ namespace DotCraftCore.nCommand.nServer
 
 						if(var7 == null || var7.FancyStyling)
 						{
-							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, joinNiceStringFromCollection(EnumChatFormatting.getValidValues(true, false))});
+							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, JoinNiceStringFromCollection(EnumChatFormatting.getValidValues(true, false))});
 						}
 
 						var4.NamePrefix = var7.ToString();
@@ -427,7 +427,7 @@ namespace DotCraftCore.nCommand.nServer
 					{
 						if(!var6.equalsIgnoreCase("true") && !var6.equalsIgnoreCase("false"))
 						{
-							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, joinNiceStringFromCollection(new string[]{"true", "false"})});
+							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, JoinNiceStringFromCollection(new string[]{"true", "false"})});
 						}
 
 						var4.AllowFriendlyFire = var6.equalsIgnoreCase("true");
@@ -436,7 +436,7 @@ namespace DotCraftCore.nCommand.nServer
 					{
 						if(!var6.equalsIgnoreCase("true") && !var6.equalsIgnoreCase("false"))
 						{
-							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, joinNiceStringFromCollection(new string[]{"true", "false"})});
+							throw new WrongUsageException("commands.scoreboard.teams.option.noValue", new object[] {var5, JoinNiceStringFromCollection(new string[]{"true", "false"})});
 						}
 
 						var4.SeeFriendlyInvisiblesEnabled = var6.equalsIgnoreCase("true");
@@ -481,8 +481,8 @@ namespace DotCraftCore.nCommand.nServer
 
 				ChatComponentTranslation var7 = new ChatComponentTranslation("commands.scoreboard.teams.list.player.count", new object[] {Convert.ToInt32(var6.size()), var5.RegisteredName});
 				var7.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-				p_147186_1_.addChatMessage(var7);
-				p_147186_1_.addChatMessage(new ChatComponentText(joinNiceString(var6.ToArray())));
+				p_147186_1_.AddChatMessage(var7);
+				p_147186_1_.AddChatMessage(new ChatComponentText(JoinNiceString(var6.ToArray())));
 			}
 			else
 			{
@@ -495,13 +495,13 @@ namespace DotCraftCore.nCommand.nServer
 
 				ChatComponentTranslation var10 = new ChatComponentTranslation("commands.scoreboard.teams.list.count", new object[] {Convert.ToInt32(var9.size())});
 				var10.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-				p_147186_1_.addChatMessage(var10);
+				p_147186_1_.AddChatMessage(var10);
 				IEnumerator var11 = var9.GetEnumerator();
 
 				while (var11.MoveNext())
 				{
 					ScorePlayerTeam var8 = (ScorePlayerTeam)var11.Current;
-					p_147186_1_.addChatMessage(new ChatComponentTranslation("commands.scoreboard.teams.list.entry", new object[] {var8.RegisteredName, var8.func_96669_c(), Convert.ToInt32(var8.MembershipCollection.size())}));
+					p_147186_1_.AddChatMessage(new ChatComponentTranslation("commands.scoreboard.teams.list.entry", new object[] {var8.RegisteredName, var8.func_96669_c(), Convert.ToInt32(var8.MembershipCollection.size())}));
 				}
 			}
 		}
@@ -516,7 +516,7 @@ namespace DotCraftCore.nCommand.nServer
 
 			if(p_147190_1_ is EntityPlayer && p_147190_3_ == p_147190_2_.Length)
 			{
-				var8 = getCommandSenderAsPlayer(p_147190_1_).CommandSenderName;
+				var8 = GetCommandSenderAsPlayer(p_147190_1_).CommandSenderName;
 
 				if(var4.func_151392_a(var8, var5))
 				{
@@ -546,12 +546,12 @@ namespace DotCraftCore.nCommand.nServer
 
 			if(!var6.Count == 0)
 			{
-				func_152373_a(p_147190_1_, this, "commands.scoreboard.teams.join.success", new object[] {Convert.ToInt32(var6.Count), var5, joinNiceString(var6.ToArray(new string[0]))});
+				func_152373_a(p_147190_1_, this, "commands.scoreboard.teams.join.success", new object[] {Convert.ToInt32(var6.Count), var5, JoinNiceString(var6.ToArray(new string[0]))});
 			}
 
 			if(!var7.Count == 0)
 			{
-				throw new CommandException("commands.scoreboard.teams.join.failure", new object[] {Convert.ToInt32(var7.Count), var5, joinNiceString(var7.ToArray(new string[0]))});
+				throw new CommandException("commands.scoreboard.teams.join.failure", new object[] {Convert.ToInt32(var7.Count), var5, JoinNiceString(var7.ToArray(new string[0]))});
 			}
 		}
 
@@ -564,7 +564,7 @@ namespace DotCraftCore.nCommand.nServer
 
 			if(p_147199_1_ is EntityPlayer && p_147199_3_ == p_147199_2_.Length)
 			{
-				var7 = getCommandSenderAsPlayer(p_147199_1_).CommandSenderName;
+				var7 = GetCommandSenderAsPlayer(p_147199_1_).CommandSenderName;
 
 				if(var4.func_96524_g(var7))
 				{
@@ -594,12 +594,12 @@ namespace DotCraftCore.nCommand.nServer
 
 			if(!var5.Count == 0)
 			{
-				func_152373_a(p_147199_1_, this, "commands.scoreboard.teams.leave.success", new object[] {Convert.ToInt32(var5.Count), joinNiceString(var5.ToArray(new string[0]))});
+				func_152373_a(p_147199_1_, this, "commands.scoreboard.teams.leave.success", new object[] {Convert.ToInt32(var5.Count), JoinNiceString(var5.ToArray(new string[0]))});
 			}
 
 			if(!var6.Count == 0)
 			{
-				throw new CommandException("commands.scoreboard.teams.leave.failure", new object[] {Convert.ToInt32(var6.Count), joinNiceString(var6.ToArray(new string[0]))});
+				throw new CommandException("commands.scoreboard.teams.leave.failure", new object[] {Convert.ToInt32(var6.Count), JoinNiceString(var6.ToArray(new string[0]))});
 			}
 		}
 
@@ -652,13 +652,13 @@ namespace DotCraftCore.nCommand.nServer
 			{
 				ChatComponentTranslation var4 = new ChatComponentTranslation("commands.scoreboard.objectives.list.count", new object[] {Convert.ToInt32(var3.size())});
 				var4.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-				p_147196_1_.addChatMessage(var4);
+				p_147196_1_.AddChatMessage(var4);
 				IEnumerator var5 = var3.GetEnumerator();
 
 				while (var5.MoveNext())
 				{
 					ScoreObjective var6 = (ScoreObjective)var5.Current;
-					p_147196_1_.addChatMessage(new ChatComponentTranslation("commands.scoreboard.objectives.list.entry", new object[] {var6.Name, var6.DisplayName, var6.Criteria.func_96636_a()}));
+					p_147196_1_.AddChatMessage(new ChatComponentTranslation("commands.scoreboard.objectives.list.entry", new object[] {var6.Name, var6.DisplayName, var6.Criteria.func_96636_a()}));
 				}
 			}
 		}
@@ -710,13 +710,13 @@ namespace DotCraftCore.nCommand.nServer
 
 				ChatComponentTranslation var7 = new ChatComponentTranslation("commands.scoreboard.players.list.player.count", new object[] {Convert.ToInt32(var6.Count), var5});
 				var7.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-				p_147195_1_.addChatMessage(var7);
+				p_147195_1_.AddChatMessage(var7);
 				IEnumerator var8 = var6.Values.GetEnumerator();
 
 				while (var8.MoveNext())
 				{
 					Score var9 = (Score)var8.Current;
-					p_147195_1_.addChatMessage(new ChatComponentTranslation("commands.scoreboard.players.list.player.entry", new object[] {Convert.ToInt32(var9.ScorePoints), var9.func_96645_d().DisplayName, var9.func_96645_d().Name}));
+					p_147195_1_.AddChatMessage(new ChatComponentTranslation("commands.scoreboard.players.list.player.entry", new object[] {Convert.ToInt32(var9.ScorePoints), var9.func_96645_d().DisplayName, var9.func_96645_d().Name}));
 				}
 			}
 			else
@@ -730,8 +730,8 @@ namespace DotCraftCore.nCommand.nServer
 
 				ChatComponentTranslation var11 = new ChatComponentTranslation("commands.scoreboard.players.list.count", new object[] {Convert.ToInt32(var10.size())});
 				var11.ChatStyle.Color = EnumChatFormatting.DARK_GREEN;
-				p_147195_1_.addChatMessage(var11);
-				p_147195_1_.addChatMessage(new ChatComponentText(joinNiceString(var10.ToArray())));
+				p_147195_1_.AddChatMessage(var11);
+				p_147195_1_.AddChatMessage(new ChatComponentText(JoinNiceString(var10.ToArray())));
 			}
 		}
 
@@ -771,11 +771,11 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
 			if(p_71516_2_.Length == 1)
 			{
-				return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"objectives", "players", "teams"});
+				return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"objectives", "players", "teams"});
 			}
 			else
 			{
@@ -783,7 +783,7 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(p_71516_2_.Length == 2)
 					{
-						return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"list", "add", "remove", "setdisplay"});
+						return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"list", "add", "remove", "setdisplay"});
 					}
 
 					if(p_71516_2_[1].equalsIgnoreCase("add"))
@@ -791,26 +791,26 @@ namespace DotCraftCore.nCommand.nServer
 						if(p_71516_2_.Length == 4)
 						{
 							Set var3 = IScoreObjectiveCriteria.field_96643_a.Keys;
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, var3);
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, var3);
 						}
 					}
 					else if(p_71516_2_[1].equalsIgnoreCase("remove"))
 					{
 						if(p_71516_2_.Length == 3)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(false));
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(false));
 						}
 					}
 					else if(p_71516_2_[1].equalsIgnoreCase("setdisplay"))
 					{
 						if(p_71516_2_.Length == 3)
 						{
-							return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"list", "sidebar", "belowName"});
+							return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"list", "sidebar", "belowName"});
 						}
 
 						if(p_71516_2_.Length == 4)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(false));
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(false));
 						}
 					}
 				}
@@ -818,26 +818,26 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(p_71516_2_.Length == 2)
 					{
-						return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"set", "add", "remove", "reset", "list"});
+						return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"set", "add", "remove", "reset", "list"});
 					}
 
 					if(!p_71516_2_[1].equalsIgnoreCase("set") && !p_71516_2_[1].equalsIgnoreCase("add") && !p_71516_2_[1].equalsIgnoreCase("remove"))
 					{
 						if((p_71516_2_[1].equalsIgnoreCase("reset") || p_71516_2_[1].equalsIgnoreCase("list")) && p_71516_2_.Length == 3)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().ObjectiveNames);
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().ObjectiveNames);
 						}
 					}
 					else
 					{
 						if(p_71516_2_.Length == 3)
 						{
-							return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+							return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 						}
 
 						if(p_71516_2_.Length == 4)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(true));
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147184_a(true));
 						}
 					}
 				}
@@ -845,26 +845,26 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if(p_71516_2_.Length == 2)
 					{
-						return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"add", "remove", "join", "leave", "empty", "list", "option"});
+						return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"add", "remove", "join", "leave", "empty", "list", "option"});
 					}
 
 					if(p_71516_2_[1].equalsIgnoreCase("join"))
 					{
 						if(p_71516_2_.Length == 3)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
 						}
 
 						if(p_71516_2_.Length >= 4)
 						{
-							return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+							return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 						}
 					}
 					else
 					{
 						if(p_71516_2_[1].equalsIgnoreCase("leave"))
 						{
-							return getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
+							return GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames);
 						}
 
 						if(!p_71516_2_[1].equalsIgnoreCase("empty") && !p_71516_2_[1].equalsIgnoreCase("list") && !p_71516_2_[1].equalsIgnoreCase("remove"))
@@ -873,31 +873,31 @@ namespace DotCraftCore.nCommand.nServer
 							{
 								if(p_71516_2_.Length == 3)
 								{
-									return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
+									return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
 								}
 
 								if(p_71516_2_.Length == 4)
 								{
-									return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"color", "friendlyfire", "seeFriendlyInvisibles"});
+									return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"color", "friendlyfire", "seeFriendlyInvisibles"});
 								}
 
 								if(p_71516_2_.Length == 5)
 								{
 									if(p_71516_2_[3].equalsIgnoreCase("color"))
 									{
-										return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, EnumChatFormatting.getValidValues(true, false));
+										return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, EnumChatFormatting.getValidValues(true, false));
 									}
 
 									if(p_71516_2_[3].equalsIgnoreCase("friendlyfire") || p_71516_2_[3].equalsIgnoreCase("seeFriendlyInvisibles"))
 									{
-										return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"true", "false"});
+										return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"true", "false"});
 									}
 								}
 							}
 						}
 						else if(p_71516_2_.Length == 3)
 						{
-							return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
+							return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, this.func_147192_d().TeamNames);
 						}
 					}
 				}
@@ -928,7 +928,7 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_1_[0].equalsIgnoreCase("players") ? p_82358_2_ == 2 : (!p_82358_1_[0].equalsIgnoreCase("teams") ? false : p_82358_2_ == 2 || p_82358_2_ == 3);
 		}

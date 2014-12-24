@@ -45,7 +45,7 @@ namespace DotCraftCore.nCommand
 					throw new CommandNotFoundException();
 				}
 
-				if(var5.canCommandSenderUseCommand(p_71556_1_))
+				if(var5.CanCommandSenderUseCommand(p_71556_1_))
 				{
 					if(var6 > -1)
 					{
@@ -61,14 +61,14 @@ namespace DotCraftCore.nCommand
 
 							try
 							{
-								var5.processCommand(p_71556_1_, var3);
+								var5.ProcessCommand(p_71556_1_, var3);
 								++var7;
 							}
 							catch (CommandException var17)
 							{
 								ChatComponentTranslation var15 = new ChatComponentTranslation(var17.Message, var17.ErrorOjbects);
 								var15.ChatStyle.Color = EnumChatFormatting.RED;
-								p_71556_1_.addChatMessage(var15);
+								p_71556_1_.AddChatMessage(var15);
 							}
 						}
 
@@ -78,14 +78,14 @@ namespace DotCraftCore.nCommand
 					{
 						try
 						{
-							var5.processCommand(p_71556_1_, var3);
+							var5.ProcessCommand(p_71556_1_, var3);
 							++var7;
 						}
 						catch (CommandException var16)
 						{
 							var9 = new ChatComponentTranslation(var16.Message, var16.ErrorOjbects);
 							var9.ChatStyle.Color = EnumChatFormatting.RED;
-							p_71556_1_.addChatMessage(var9);
+							p_71556_1_.AddChatMessage(var9);
 						}
 					}
 				}
@@ -93,26 +93,26 @@ namespace DotCraftCore.nCommand
 				{
 					ChatComponentTranslation var21 = new ChatComponentTranslation("commands.generic.permission", new object[0]);
 					var21.ChatStyle.Color = EnumChatFormatting.RED;
-					p_71556_1_.addChatMessage(var21);
+					p_71556_1_.AddChatMessage(var21);
 				}
 			}
 			catch (WrongUsageException var18)
 			{
 				var9 = new ChatComponentTranslation("commands.generic.usage", new object[] {new ChatComponentTranslation(var18.Message, var18.ErrorOjbects)});
 				var9.ChatStyle.Color = EnumChatFormatting.RED;
-				p_71556_1_.addChatMessage(var9);
+				p_71556_1_.AddChatMessage(var9);
 			}
 			catch (CommandException var19)
 			{
 				var9 = new ChatComponentTranslation(var19.Message, var19.ErrorOjbects);
 				var9.ChatStyle.Color = EnumChatFormatting.RED;
-				p_71556_1_.addChatMessage(var9);
+				p_71556_1_.AddChatMessage(var9);
 			}
 			catch (Exception var20)
 			{
 				var9 = new ChatComponentTranslation("commands.generic.exception", new object[0]);
 				var9.ChatStyle.Color = EnumChatFormatting.RED;
-				p_71556_1_.addChatMessage(var9);
+				p_71556_1_.AddChatMessage(var9);
 				logger.error("Couldn\'t process command: \'" + p_71556_2_ + "\'", var20);
 			}
 
@@ -179,7 +179,7 @@ namespace DotCraftCore.nCommand
 				{
 					Entry var7 = (Entry)var6.Current;
 
-					if(CommandBase.doesStringStartWith(var4, (string)var7.Key) && ((ICommand)var7.Value).canCommandSenderUseCommand(p_71558_1_))
+					if(CommandBase.DoesStringStartWith(var4, (string)var7.Key) && ((ICommand)var7.Value).CanCommandSenderUseCommand(p_71558_1_))
 					{
 						var8.Add(var7.Key);
 					}
@@ -195,7 +195,7 @@ namespace DotCraftCore.nCommand
 
 					if(var5 != null)
 					{
-						return var5.addTabCompletionOptions(p_71558_1_, dropFirstString(var3));
+						return var5.AddTabCompletionOptions(p_71558_1_, dropFirstString(var3));
 					}
 				}
 
@@ -215,7 +215,7 @@ namespace DotCraftCore.nCommand
 			{
 				ICommand var4 = (ICommand)var3.Current;
 
-				if(var4.canCommandSenderUseCommand(p_71557_1_))
+				if(var4.CanCommandSenderUseCommand(p_71557_1_))
 				{
 					var2.Add(var4);
 				}
@@ -248,7 +248,7 @@ namespace DotCraftCore.nCommand
 			{
 				for (int var3 = 0; var3 < p_82370_2_.Length; ++var3)
 				{
-					if(p_82370_1_.isUsernameIndex(p_82370_2_, var3) && PlayerSelector.matchesMultiplePlayers(p_82370_2_[var3]))
+					if(p_82370_1_.IsUsernameIndex(p_82370_2_, var3) && PlayerSelector.matchesMultiplePlayers(p_82370_2_[var3]))
 					{
 						return var3;
 					}

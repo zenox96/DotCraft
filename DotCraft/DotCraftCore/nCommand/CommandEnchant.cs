@@ -46,7 +46,7 @@ namespace DotCraftCore.nCommand
 			}
 			else
 			{
-				EntityPlayerMP var3 = getPlayer(p_71515_1_, p_71515_2_[0]);
+				EntityPlayerMP var3 = GetPlayer(p_71515_1_, p_71515_2_[0]);
 				int var4 = parseIntBounded(p_71515_1_, p_71515_2_[1], 0, Enchantment.enchantmentsList.length - 1);
 				int var5 = 1;
 				ItemStack var6 = var3.CurrentEquippedItem;
@@ -107,9 +107,9 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 1 ? getListOfStringsMatchingLastWord(p_71516_2_, this.ListOfPlayers) : null;
+			return p_71516_2_.Length == 1 ? GetListOfStringsMatchingLastWord(p_71516_2_, this.ListOfPlayers) : null;
 		}
 
 		protected internal virtual string[] ListOfPlayers
@@ -123,7 +123,7 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 0;
 		}

@@ -63,11 +63,11 @@ namespace DotCraftCore.nCommand
 
 				if(p_71515_2_.Length > 1)
 				{
-					var3 = getPlayer(p_71515_1_, p_71515_2_[1]);
+					var3 = GetPlayer(p_71515_1_, p_71515_2_[1]);
 				}
 				else
 				{
-					var3 = getCommandSenderAsPlayer(p_71515_1_);
+					var3 = GetCommandSenderAsPlayer(p_71515_1_);
 				}
 
 				if(var5)
@@ -99,9 +99,9 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
-			return p_71516_2_.Length == 2 ? getListOfStringsMatchingLastWord(p_71516_2_, this.AllUsernames) : null;
+			return p_71516_2_.Length == 2 ? GetListOfStringsMatchingLastWord(p_71516_2_, this.AllUsernames) : null;
 		}
 
 		protected internal virtual string[] AllUsernames
@@ -115,7 +115,7 @@ namespace DotCraftCore.nCommand
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 1;
 		}

@@ -60,7 +60,7 @@ namespace DotCraftCore.nCommand.nServer
 					throw new WrongUsageException("commands.setworldspawn.usage", new object[0]);
 				}
 
-				ChunkCoordinates var8 = getCommandSenderAsPlayer(p_71515_1_).PlayerCoordinates;
+				ChunkCoordinates var8 = GetCommandSenderAsPlayer(p_71515_1_).PlayerCoordinates;
 				p_71515_1_.EntityWorld.setSpawnLocation(var8.posX, var8.posY, var8.posZ);
 				func_152373_a(p_71515_1_, this, "commands.setworldspawn.success", new object[] {Convert.ToInt32(var8.posX), Convert.ToInt32(var8.posY), Convert.ToInt32(var8.posZ)});
 			}

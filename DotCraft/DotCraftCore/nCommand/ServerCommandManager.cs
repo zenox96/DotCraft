@@ -124,7 +124,7 @@ namespace DotCraftCore.nCommand
 				{
 					EntityPlayer var9 = (EntityPlayer)var8.Current;
 
-					if(var9 != p_152372_1_ && MinecraftServer.Server.ConfigurationManager.func_152596_g(var9.GameProfile) && p_152372_2_.canCommandSenderUseCommand(var9) && (!(p_152372_1_ is RConConsoleSource) || MinecraftServer.Server.func_152363_m()))
+					if(var9 != p_152372_1_ && MinecraftServer.Server.ConfigurationManager.func_152596_g(var9.GameProfile) && p_152372_2_.CanCommandSenderUseCommand(var9) && (!(p_152372_1_ is RConConsoleSource) || MinecraftServer.Server.func_152363_m()))
 					{
 						var9.addChatMessage(var7);
 					}
@@ -138,7 +138,7 @@ namespace DotCraftCore.nCommand
 
 			if((p_152372_3_ & 1) != 1)
 			{
-				p_152372_1_.addChatMessage(new ChatComponentTranslation(p_152372_4_, p_152372_5_));
+				p_152372_1_.AddChatMessage(new ChatComponentTranslation(p_152372_4_, p_152372_5_));
 			}
 		}
 	}

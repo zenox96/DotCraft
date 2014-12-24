@@ -64,7 +64,7 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
 			if(p_71516_2_.Length == 1)
 			{
@@ -77,7 +77,7 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					GameProfile var8 = var5[var7];
 
-					if(!MinecraftServer.Server.ConfigurationManager.func_152596_g(var8) && doesStringStartWith(var3, var8.Name))
+					if(!MinecraftServer.Server.ConfigurationManager.func_152596_g(var8) && DoesStringStartWith(var3, var8.Name))
 					{
 						var4.Add(var8.Name);
 					}

@@ -52,11 +52,11 @@ namespace DotCraftCore.nCommand.nServer
 
 				if(p_71515_2_.Length >= 3)
 				{
-					var4 = getPlayer(p_71515_1_, p_71515_2_[2]);
+					var4 = GetPlayer(p_71515_1_, p_71515_2_[2]);
 				}
 				else
 				{
-					var4 = getCommandSenderAsPlayer(p_71515_1_);
+					var4 = GetCommandSenderAsPlayer(p_71515_1_);
 				}
 
 				if(p_71515_2_[0].equalsIgnoreCase("give"))
@@ -108,15 +108,15 @@ namespace DotCraftCore.nCommand.nServer
 ///    
 ///     <summary> * Adds the strings available in this command to the given list of tab completion options. </summary>
 ///     
-		public override IList addTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
+		public override IList AddTabCompletionOptions(ICommandSender p_71516_1_, string[] p_71516_2_)
 		{
 			if(p_71516_2_.Length == 1)
 			{
-				return getListOfStringsMatchingLastWord(p_71516_2_, new string[] {"give"});
+				return GetListOfStringsMatchingLastWord(p_71516_2_, new string[] {"give"});
 			}
 			else if(p_71516_2_.Length != 2)
 			{
-				return p_71516_2_.Length == 3 ? getListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames) : null;
+				return p_71516_2_.Length == 3 ? GetListOfStringsMatchingLastWord(p_71516_2_, MinecraftServer.Server.AllUsernames) : null;
 			}
 			else
 			{
@@ -129,14 +129,14 @@ namespace DotCraftCore.nCommand.nServer
 					var3.Add(var5.statId);
 				}
 
-				return getListOfStringsFromIterableMatchingLastWord(p_71516_2_, var3);
+				return GetListOfStringsFromIterableMatchingLastWord(p_71516_2_, var3);
 			}
 		}
 
 ///    
 ///     <summary> * Return whether the specified command parameter index is a username parameter. </summary>
 ///     
-		public override bool isUsernameIndex(string[] p_82358_1_, int p_82358_2_)
+		public override bool IsUsernameIndex(string[] p_82358_1_, int p_82358_2_)
 		{
 			return p_82358_2_ == 2;
 		}

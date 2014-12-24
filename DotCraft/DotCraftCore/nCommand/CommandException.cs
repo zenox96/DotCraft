@@ -1,23 +1,18 @@
+using System;
+
 namespace DotCraftCore.nCommand
 {
-
 	public class CommandException : Exception
 	{
-		private object[] errorObjects;
-		
-
-		public CommandException(string p_i1359_1_, params object[] p_i1359_2_) : base(p_i1359_1_)
+		public CommandException(string message, params object[] errorObjs) : base(message)
 		{
-			this.errorObjects = p_i1359_2_;
+            ErrorOjbects = errorObjs;
 		}
 
-		public virtual object[] ErrorOjbects
+		public readonly virtual object[] ErrorOjbects
 		{
-			get
-			{
-				return this.errorObjects;
-			}
+			get;
+            protected set;
 		}
 	}
-
 }

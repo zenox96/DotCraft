@@ -29,7 +29,7 @@ namespace DotCraftCore.nCommand.nServer
 		public virtual void processCommand(ICommandSender p_71515_1_, string[] p_71515_2_)
 		{
 			MinecraftServer var3 = MinecraftServer.Server;
-			p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.save.start", new object[0]));
+			p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.save.start", new object[0]));
 
 			if(var3.ConfigurationManager != null)
 			{
@@ -56,7 +56,7 @@ namespace DotCraftCore.nCommand.nServer
 
 				if(p_71515_2_.Length > 0 && "flush".Equals(p_71515_2_[0]))
 				{
-					p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.save.flushStart", new object[0]));
+					p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.save.flushStart", new object[0]));
 
 					for (var4 = 0; var4 < var3.worldServers.length; ++var4)
 					{
@@ -70,7 +70,7 @@ namespace DotCraftCore.nCommand.nServer
 						}
 					}
 
-					p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.save.flushEnd", new object[0]));
+					p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.save.flushEnd", new object[0]));
 				}
 			}
 			catch (MinecraftException var7)

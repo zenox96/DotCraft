@@ -42,7 +42,7 @@ namespace DotCraftCore.nCommand.nServer
 		{
 			if(p_71515_1_ is EntityPlayer)
 			{
-				p_71515_1_.addChatMessage(new ChatComponentText("Command is not available for players"));
+				p_71515_1_.AddChatMessage(new ChatComponentText("Command is not available for players"));
 			}
 			else
 			{
@@ -50,19 +50,19 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					if("hottest-read".Equals(p_71515_2_[0]))
 					{
-						p_71515_1_.addChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152477_e().ToString()));
+						p_71515_1_.AddChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152477_e().ToString()));
 					}
 					else if("hottest-write".Equals(p_71515_2_[0]))
 					{
-						p_71515_1_.addChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152475_g().ToString()));
+						p_71515_1_.AddChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152475_g().ToString()));
 					}
 					else if("most-read".Equals(p_71515_2_[0]))
 					{
-						p_71515_1_.addChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152467_f().ToString()));
+						p_71515_1_.AddChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152467_f().ToString()));
 					}
 					else if("most-write".Equals(p_71515_2_[0]))
 					{
-						p_71515_1_.addChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152470_h().ToString()));
+						p_71515_1_.AddChatMessage(new ChatComponentText(NetworkManager.field_152462_h.func_152470_h().ToString()));
 					}
 					else
 					{
@@ -81,12 +81,12 @@ namespace DotCraftCore.nCommand.nServer
 								}
 								catch (Exception var6)
 								{
-									p_71515_1_.addChatMessage(new ChatComponentText("Packet " + p_71515_2_[1] + " not found!"));
+									p_71515_1_.AddChatMessage(new ChatComponentText("Packet " + p_71515_2_[1] + " not found!"));
 								}
 							}
 							else
 							{
-								p_71515_1_.addChatMessage(new ChatComponentText("Packet id is missing"));
+								p_71515_1_.AddChatMessage(new ChatComponentText("Packet id is missing"));
 							}
 						}
 						else if("packet-write".Equals(p_71515_2_[0]))
@@ -101,25 +101,25 @@ namespace DotCraftCore.nCommand.nServer
 								}
 								catch (Exception var5)
 								{
-									p_71515_1_.addChatMessage(new ChatComponentText("Packet " + p_71515_2_[1] + " not found!"));
+									p_71515_1_.AddChatMessage(new ChatComponentText("Packet " + p_71515_2_[1] + " not found!"));
 								}
 							}
 							else
 							{
-								p_71515_1_.addChatMessage(new ChatComponentText("Packet id is missing"));
+								p_71515_1_.AddChatMessage(new ChatComponentText("Packet id is missing"));
 							}
 						}
 						else if("read-count".Equals(p_71515_2_[0]))
 						{
-							p_71515_1_.addChatMessage(new ChatComponentText("total-read-count" + Convert.ToString(NetworkManager.field_152462_h.func_152472_c())));
+							p_71515_1_.AddChatMessage(new ChatComponentText("total-read-count" + Convert.ToString(NetworkManager.field_152462_h.func_152472_c())));
 						}
 						else if("write-count".Equals(p_71515_2_[0]))
 						{
-							p_71515_1_.addChatMessage(new ChatComponentText("total-write-count" + Convert.ToString(NetworkManager.field_152462_h.func_152473_d())));
+							p_71515_1_.AddChatMessage(new ChatComponentText("total-write-count" + Convert.ToString(NetworkManager.field_152462_h.func_152473_d())));
 						}
 						else
 						{
-							p_71515_1_.addChatMessage(new ChatComponentText("Unrecognized: " + p_71515_2_[0]));
+							p_71515_1_.AddChatMessage(new ChatComponentText("Unrecognized: " + p_71515_2_[0]));
 						}
 					}
 				}
@@ -127,7 +127,7 @@ namespace DotCraftCore.nCommand.nServer
 				{
 					string var3 = "reads: " + NetworkManager.field_152462_h.func_152465_a();
 					var3 = var3 + ", writes: " + NetworkManager.field_152462_h.func_152471_b();
-					p_71515_1_.addChatMessage(new ChatComponentText(var3));
+					p_71515_1_.AddChatMessage(new ChatComponentText(var3));
 				}
 			}
 		}
@@ -136,11 +136,11 @@ namespace DotCraftCore.nCommand.nServer
 		{
 			if(p_152375_3_ != null)
 			{
-				p_152375_1_.addChatMessage(new ChatComponentText(p_152375_3_.ToString()));
+				p_152375_1_.AddChatMessage(new ChatComponentText(p_152375_3_.ToString()));
 			}
 			else
 			{
-				p_152375_1_.addChatMessage(new ChatComponentText("Packet " + p_152375_2_ + " not found!"));
+				p_152375_1_.AddChatMessage(new ChatComponentText("Packet " + p_152375_2_ + " not found!"));
 			}
 		}
 	}

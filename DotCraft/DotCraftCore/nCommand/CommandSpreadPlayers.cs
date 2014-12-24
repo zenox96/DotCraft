@@ -97,7 +97,7 @@ namespace DotCraftCore.nCommand
 						throw new PlayerNotFoundException();
 					}
 
-					p_71515_1_.addChatMessage(new ChatComponentTranslation("commands.spreadplayers.spreading." + (var12 ? "teams" : "players"), new object[] {Convert.ToInt32(var13.Count), Convert.ToDouble(var10), Convert.ToDouble(var4), Convert.ToDouble(var6), Convert.ToDouble(var8)}));
+					p_71515_1_.AddChatMessage(new ChatComponentTranslation("commands.spreadplayers.spreading." + (var12 ? "teams" : "players"), new object[] {Convert.ToInt32(var13.Count), Convert.ToDouble(var10), Convert.ToDouble(var4), Convert.ToDouble(var6), Convert.ToDouble(var8)}));
 					this.func_110669_a(p_71515_1_, var13, new CommandSpreadPlayers.Position(var4, var6), var8, var10, ((EntityLivingBase)var13[0]).worldObj, var12);
 					return;
 				}
@@ -118,7 +118,7 @@ namespace DotCraftCore.nCommand
 
 			if(var19.Length > 1)
 			{
-				p_110669_1_.addChatMessage(new ChatComponentTranslation("commands.spreadplayers.info." + (p_110669_9_ ? "teams" : "players"), new object[] {string.Format("{0:F2}", new object[]{Convert.ToDouble(var21)}), Convert.ToInt32(var20)}));
+				p_110669_1_.AddChatMessage(new ChatComponentTranslation("commands.spreadplayers.info." + (p_110669_9_ ? "teams" : "players"), new object[] {string.Format("{0:F2}", new object[]{Convert.ToDouble(var21)}), Convert.ToInt32(var20)}));
 			}
 		}
 
