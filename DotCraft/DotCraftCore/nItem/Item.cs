@@ -1,58 +1,25 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nPotion;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nItem
 {
-
-	using HashMultimap = com.google.common.collect.HashMultimap;
-	using Multimap = com.google.common.collect.Multimap;
-	using Sets = com.google.common.collect.Sets;
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockDirt = DotCraftCore.nBlock.BlockDirt;
-	using BlockDoublePlant = DotCraftCore.nBlock.BlockDoublePlant;
-	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
-	using BlockNewLog = DotCraftCore.nBlock.BlockNewLog;
-	using BlockOldLog = DotCraftCore.nBlock.BlockOldLog;
-	using BlockQuartz = DotCraftCore.nBlock.BlockQuartz;
-	using BlockSand = DotCraftCore.nBlock.BlockSand;
-	using BlockSandStone = DotCraftCore.nBlock.BlockSandStone;
-	using BlockSapling = DotCraftCore.nBlock.BlockSapling;
-	using BlockSilverfish = DotCraftCore.nBlock.BlockSilverfish;
-	using BlockStoneBrick = DotCraftCore.nBlock.BlockStoneBrick;
-	using BlockWall = DotCraftCore.nBlock.BlockWall;
-	using BlockWood = DotCraftCore.nBlock.BlockWood;
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using EntityItemFrame = DotCraftCore.entity.item.EntityItemFrame;
-	using EntityPainting = DotCraftCore.entity.item.EntityPainting;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
-	using Potion = DotCraftCore.nPotion.Potion;
-	using PotionHelper = DotCraftCore.nPotion.PotionHelper;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
-	using RegistryNamespaced = DotCraftCore.nUtil.RegistryNamespaced;
-	using StatCollector = DotCraftCore.nUtil.StatCollector;
-	using Vec3 = DotCraftCore.nUtil.Vec3;
-	using World = DotCraftCore.nWorld.World;
-using DotCraftCore.nInventory;
-
 	public class Item
 	{
 		public static readonly RegistryNamespaced itemRegistry = new RegistryNamespaced();
 		protected internal static readonly UUID field_111210_e = UUID.fromString("CB3F55D3-645C-4F38-A497-9C13A33DB5CF");
-		private CreativeTabs tabToDisplayOn;
 
 	/// <summary> The RNG used by the Item subclasses.  </summary>
 		protected internal static Random itemRand = new Random();
-
-	/// <summary> Maximum size of the stack.  </summary>
-		protected internal int maxStackSize = 64;
 
 	/// <summary> Maximum damage an item can handle.  </summary>
 		private int maxDamage;
@@ -69,9 +36,6 @@ using DotCraftCore.nInventory;
 
 	/// <summary> The unlocalized name of this item.  </summary>
 		private string unlocalizedName;
-
-	/// <summary> Icon index in the icons table.  </summary>
-		protected internal IIcon itemIcon;
 
 	/// <summary> The string associated with this Item's Icon.  </summary>
 		protected internal string iconString;
@@ -94,9 +58,9 @@ using DotCraftCore.nInventory;
 
 		public static void registerItems()
 		{
-			itemRegistry.addObject(256, "iron_shovel", (new ItemSpade(Item.ToolMaterial.IRON)).setUnlocalizedName("shovelIron").setTextureName("iron_shovel"));
-			itemRegistry.addObject(257, "iron_pickaxe", (new ItemPickaxe(Item.ToolMaterial.IRON)).setUnlocalizedName("pickaxeIron").setTextureName("iron_pickaxe"));
-			itemRegistry.addObject(258, "iron_axe", (new ItemAxe(Item.ToolMaterial.IRON)).setUnlocalizedName("hatchetIron").setTextureName("iron_axe"));
+			itemRegistry.addObject(256, "iron_shovel", (new ItemSpade(Item.ToolMaterial.Iron)).setUnlocalizedName("shovelIron").setTextureName("iron_shovel"));
+			itemRegistry.addObject(257, "iron_pickaxe", (new ItemPickaxe(Item.ToolMaterial.Iron)).setUnlocalizedName("pickaxeIron").setTextureName("iron_pickaxe"));
+			itemRegistry.addObject(258, "iron_axe", (new ItemAxe(Item.ToolMaterial.Iron)).setUnlocalizedName("hatchetIron").setTextureName("iron_axe"));
 			itemRegistry.addObject(259, "flint_and_steel", (new ItemFlintAndSteel()).setUnlocalizedName("flintAndSteel").setTextureName("flint_and_steel"));
 			itemRegistry.addObject(260, "apple", (new ItemFood(4, 0.3F, false)).setUnlocalizedName("apple").setTextureName("apple"));
 			itemRegistry.addObject(261, "bow", (new ItemBow()).setUnlocalizedName("bow").setTextureName("bow"));
@@ -105,57 +69,57 @@ using DotCraftCore.nInventory;
 			itemRegistry.addObject(264, "diamond", (new Item()).setUnlocalizedName("diamond").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("diamond"));
 			itemRegistry.addObject(265, "iron_ingot", (new Item()).setUnlocalizedName("ingotIron").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("iron_ingot"));
 			itemRegistry.addObject(266, "gold_ingot", (new Item()).setUnlocalizedName("ingotGold").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("gold_ingot"));
-			itemRegistry.addObject(267, "iron_sword", (new ItemSword(Item.ToolMaterial.IRON)).setUnlocalizedName("swordIron").setTextureName("iron_sword"));
-			itemRegistry.addObject(268, "wooden_sword", (new ItemSword(Item.ToolMaterial.WOOD)).setUnlocalizedName("swordWood").setTextureName("wood_sword"));
-			itemRegistry.addObject(269, "wooden_shovel", (new ItemSpade(Item.ToolMaterial.WOOD)).setUnlocalizedName("shovelWood").setTextureName("wood_shovel"));
-			itemRegistry.addObject(270, "wooden_pickaxe", (new ItemPickaxe(Item.ToolMaterial.WOOD)).setUnlocalizedName("pickaxeWood").setTextureName("wood_pickaxe"));
-			itemRegistry.addObject(271, "wooden_axe", (new ItemAxe(Item.ToolMaterial.WOOD)).setUnlocalizedName("hatchetWood").setTextureName("wood_axe"));
-			itemRegistry.addObject(272, "stone_sword", (new ItemSword(Item.ToolMaterial.STONE)).setUnlocalizedName("swordStone").setTextureName("stone_sword"));
-			itemRegistry.addObject(273, "stone_shovel", (new ItemSpade(Item.ToolMaterial.STONE)).setUnlocalizedName("shovelStone").setTextureName("stone_shovel"));
-			itemRegistry.addObject(274, "stone_pickaxe", (new ItemPickaxe(Item.ToolMaterial.STONE)).setUnlocalizedName("pickaxeStone").setTextureName("stone_pickaxe"));
-			itemRegistry.addObject(275, "stone_axe", (new ItemAxe(Item.ToolMaterial.STONE)).setUnlocalizedName("hatchetStone").setTextureName("stone_axe"));
-			itemRegistry.addObject(276, "diamond_sword", (new ItemSword(Item.ToolMaterial.EMERALD)).setUnlocalizedName("swordDiamond").setTextureName("diamond_sword"));
-			itemRegistry.addObject(277, "diamond_shovel", (new ItemSpade(Item.ToolMaterial.EMERALD)).setUnlocalizedName("shovelDiamond").setTextureName("diamond_shovel"));
-			itemRegistry.addObject(278, "diamond_pickaxe", (new ItemPickaxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("pickaxeDiamond").setTextureName("diamond_pickaxe"));
-			itemRegistry.addObject(279, "diamond_axe", (new ItemAxe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("hatchetDiamond").setTextureName("diamond_axe"));
+			itemRegistry.addObject(267, "iron_sword", (new ItemSword(Item.ToolMaterial.Iron)).setUnlocalizedName("swordIron").setTextureName("iron_sword"));
+			itemRegistry.addObject(268, "wooden_sword", (new ItemSword(Item.ToolMaterial.Wood)).setUnlocalizedName("swordWood").setTextureName("wood_sword"));
+			itemRegistry.addObject(269, "wooden_shovel", (new ItemSpade(Item.ToolMaterial.Wood)).setUnlocalizedName("shovelWood").setTextureName("wood_shovel"));
+			itemRegistry.addObject(270, "wooden_pickaxe", (new ItemPickaxe(Item.ToolMaterial.Wood)).setUnlocalizedName("pickaxeWood").setTextureName("wood_pickaxe"));
+			itemRegistry.addObject(271, "wooden_axe", (new ItemAxe(Item.ToolMaterial.Wood)).setUnlocalizedName("hatchetWood").setTextureName("wood_axe"));
+			itemRegistry.addObject(272, "stone_sword", (new ItemSword(Item.ToolMaterial.Stone)).setUnlocalizedName("swordStone").setTextureName("stone_sword"));
+			itemRegistry.addObject(273, "stone_shovel", (new ItemSpade(Item.ToolMaterial.Stone)).setUnlocalizedName("shovelStone").setTextureName("stone_shovel"));
+			itemRegistry.addObject(274, "stone_pickaxe", (new ItemPickaxe(Item.ToolMaterial.Stone)).setUnlocalizedName("pickaxeStone").setTextureName("stone_pickaxe"));
+			itemRegistry.addObject(275, "stone_axe", (new ItemAxe(Item.ToolMaterial.Stone)).setUnlocalizedName("hatchetStone").setTextureName("stone_axe"));
+			itemRegistry.addObject(276, "diamond_sword", (new ItemSword(Item.ToolMaterial.Emerald)).setUnlocalizedName("swordDiamond").setTextureName("diamond_sword"));
+			itemRegistry.addObject(277, "diamond_shovel", (new ItemSpade(Item.ToolMaterial.Emerald)).setUnlocalizedName("shovelDiamond").setTextureName("diamond_shovel"));
+			itemRegistry.addObject(278, "diamond_pickaxe", (new ItemPickaxe(Item.ToolMaterial.Emerald)).setUnlocalizedName("pickaxeDiamond").setTextureName("diamond_pickaxe"));
+			itemRegistry.addObject(279, "diamond_axe", (new ItemAxe(Item.ToolMaterial.Emerald)).setUnlocalizedName("hatchetDiamond").setTextureName("diamond_axe"));
 			itemRegistry.addObject(280, "stick", (new Item()).setFull3D().setUnlocalizedName("stick").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("stick"));
 			itemRegistry.addObject(281, "bowl", (new Item()).setUnlocalizedName("bowl").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("bowl"));
 			itemRegistry.addObject(282, "mushroom_stew", (new ItemSoup(6)).setUnlocalizedName("mushroomStew").setTextureName("mushroom_stew"));
-			itemRegistry.addObject(283, "golden_sword", (new ItemSword(Item.ToolMaterial.GOLD)).setUnlocalizedName("swordGold").setTextureName("gold_sword"));
-			itemRegistry.addObject(284, "golden_shovel", (new ItemSpade(Item.ToolMaterial.GOLD)).setUnlocalizedName("shovelGold").setTextureName("gold_shovel"));
-			itemRegistry.addObject(285, "golden_pickaxe", (new ItemPickaxe(Item.ToolMaterial.GOLD)).setUnlocalizedName("pickaxeGold").setTextureName("gold_pickaxe"));
-			itemRegistry.addObject(286, "golden_axe", (new ItemAxe(Item.ToolMaterial.GOLD)).setUnlocalizedName("hatchetGold").setTextureName("gold_axe"));
+			itemRegistry.addObject(283, "golden_sword", (new ItemSword(Item.ToolMaterial.Gold)).setUnlocalizedName("swordGold").setTextureName("gold_sword"));
+			itemRegistry.addObject(284, "golden_shovel", (new ItemSpade(Item.ToolMaterial.Gold)).setUnlocalizedName("shovelGold").setTextureName("gold_shovel"));
+			itemRegistry.addObject(285, "golden_pickaxe", (new ItemPickaxe(Item.ToolMaterial.Gold)).setUnlocalizedName("pickaxeGold").setTextureName("gold_pickaxe"));
+			itemRegistry.addObject(286, "golden_axe", (new ItemAxe(Item.ToolMaterial.Gold)).setUnlocalizedName("hatchetGold").setTextureName("gold_axe"));
 			itemRegistry.addObject(287, "string", (new ItemReed(Blocks.tripwire)).setUnlocalizedName("string").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("string"));
 			itemRegistry.addObject(288, "feather", (new Item()).setUnlocalizedName("feather").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("feather"));
 			itemRegistry.addObject(289, "gunpowder", (new Item()).setUnlocalizedName("sulphur").setPotionEffect(PotionHelper.gunpowderEffect).setCreativeTab(CreativeTabs.tabMaterials).setTextureName("gunpowder"));
-			itemRegistry.addObject(290, "wooden_hoe", (new ItemHoe(Item.ToolMaterial.WOOD)).setUnlocalizedName("hoeWood").setTextureName("wood_hoe"));
-			itemRegistry.addObject(291, "stone_hoe", (new ItemHoe(Item.ToolMaterial.STONE)).setUnlocalizedName("hoeStone").setTextureName("stone_hoe"));
-			itemRegistry.addObject(292, "iron_hoe", (new ItemHoe(Item.ToolMaterial.IRON)).setUnlocalizedName("hoeIron").setTextureName("iron_hoe"));
-			itemRegistry.addObject(293, "diamond_hoe", (new ItemHoe(Item.ToolMaterial.EMERALD)).setUnlocalizedName("hoeDiamond").setTextureName("diamond_hoe"));
-			itemRegistry.addObject(294, "golden_hoe", (new ItemHoe(Item.ToolMaterial.GOLD)).setUnlocalizedName("hoeGold").setTextureName("gold_hoe"));
+			itemRegistry.addObject(290, "wooden_hoe", (new ItemHoe(Item.ToolMaterial.Wood)).setUnlocalizedName("hoeWood").setTextureName("wood_hoe"));
+			itemRegistry.addObject(291, "stone_hoe", (new ItemHoe(Item.ToolMaterial.Stone)).setUnlocalizedName("hoeStone").setTextureName("stone_hoe"));
+			itemRegistry.addObject(292, "iron_hoe", (new ItemHoe(Item.ToolMaterial.Iron)).setUnlocalizedName("hoeIron").setTextureName("iron_hoe"));
+			itemRegistry.addObject(293, "diamond_hoe", (new ItemHoe(Item.ToolMaterial.Emerald)).setUnlocalizedName("hoeDiamond").setTextureName("diamond_hoe"));
+			itemRegistry.addObject(294, "golden_hoe", (new ItemHoe(Item.ToolMaterial.Gold)).setUnlocalizedName("hoeGold").setTextureName("gold_hoe"));
 			itemRegistry.addObject(295, "wheat_seeds", (new ItemSeeds(Blocks.wheat, Blocks.farmland)).setUnlocalizedName("seeds").setTextureName("seeds_wheat"));
 			itemRegistry.addObject(296, "wheat", (new Item()).setUnlocalizedName("wheat").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("wheat"));
 			itemRegistry.addObject(297, "bread", (new ItemFood(5, 0.6F, false)).setUnlocalizedName("bread").setTextureName("bread"));
-			itemRegistry.addObject(298, "leather_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.CLOTH, 0, 0)).setUnlocalizedName("helmetCloth").setTextureName("leather_helmet"));
-			itemRegistry.addObject(299, "leather_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.CLOTH, 0, 1)).setUnlocalizedName("chestplateCloth").setTextureName("leather_chestplate"));
-			itemRegistry.addObject(300, "leather_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.CLOTH, 0, 2)).setUnlocalizedName("leggingsCloth").setTextureName("leather_leggings"));
-			itemRegistry.addObject(301, "leather_boots", (new ItemArmor(ItemArmor.ArmorMaterial.CLOTH, 0, 3)).setUnlocalizedName("bootsCloth").setTextureName("leather_boots"));
-			itemRegistry.addObject(302, "chainmail_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.CHAIN, 1, 0)).setUnlocalizedName("helmetChain").setTextureName("chainmail_helmet"));
-			itemRegistry.addObject(303, "chainmail_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.CHAIN, 1, 1)).setUnlocalizedName("chestplateChain").setTextureName("chainmail_chestplate"));
-			itemRegistry.addObject(304, "chainmail_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.CHAIN, 1, 2)).setUnlocalizedName("leggingsChain").setTextureName("chainmail_leggings"));
-			itemRegistry.addObject(305, "chainmail_boots", (new ItemArmor(ItemArmor.ArmorMaterial.CHAIN, 1, 3)).setUnlocalizedName("bootsChain").setTextureName("chainmail_boots"));
-			itemRegistry.addObject(306, "iron_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.IRON, 2, 0)).setUnlocalizedName("helmetIron").setTextureName("iron_helmet"));
-			itemRegistry.addObject(307, "iron_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.IRON, 2, 1)).setUnlocalizedName("chestplateIron").setTextureName("iron_chestplate"));
-			itemRegistry.addObject(308, "iron_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.IRON, 2, 2)).setUnlocalizedName("leggingsIron").setTextureName("iron_leggings"));
-			itemRegistry.addObject(309, "iron_boots", (new ItemArmor(ItemArmor.ArmorMaterial.IRON, 2, 3)).setUnlocalizedName("bootsIron").setTextureName("iron_boots"));
-			itemRegistry.addObject(310, "diamond_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.DIAMOND, 3, 0)).setUnlocalizedName("helmetDiamond").setTextureName("diamond_helmet"));
-			itemRegistry.addObject(311, "diamond_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.DIAMOND, 3, 1)).setUnlocalizedName("chestplateDiamond").setTextureName("diamond_chestplate"));
-			itemRegistry.addObject(312, "diamond_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.DIAMOND, 3, 2)).setUnlocalizedName("leggingsDiamond").setTextureName("diamond_leggings"));
-			itemRegistry.addObject(313, "diamond_boots", (new ItemArmor(ItemArmor.ArmorMaterial.DIAMOND, 3, 3)).setUnlocalizedName("bootsDiamond").setTextureName("diamond_boots"));
-			itemRegistry.addObject(314, "golden_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.GOLD, 4, 0)).setUnlocalizedName("helmetGold").setTextureName("gold_helmet"));
-			itemRegistry.addObject(315, "golden_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.GOLD, 4, 1)).setUnlocalizedName("chestplateGold").setTextureName("gold_chestplate"));
-			itemRegistry.addObject(316, "golden_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.GOLD, 4, 2)).setUnlocalizedName("leggingsGold").setTextureName("gold_leggings"));
-			itemRegistry.addObject(317, "golden_boots", (new ItemArmor(ItemArmor.ArmorMaterial.GOLD, 4, 3)).setUnlocalizedName("bootsGold").setTextureName("gold_boots"));
+			itemRegistry.addObject(298, "leather_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.Cloth, 0, 0)).setUnlocalizedName("helmetCloth").setTextureName("leather_helmet"));
+			itemRegistry.addObject(299, "leather_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.Cloth, 0, 1)).setUnlocalizedName("chestplateCloth").setTextureName("leather_chestplate"));
+			itemRegistry.addObject(300, "leather_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.Cloth, 0, 2)).setUnlocalizedName("leggingsCloth").setTextureName("leather_leggings"));
+			itemRegistry.addObject(301, "leather_boots", (new ItemArmor(ItemArmor.ArmorMaterial.Cloth, 0, 3)).setUnlocalizedName("bootsCloth").setTextureName("leather_boots"));
+			itemRegistry.addObject(302, "chainmail_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.Chain, 1, 0)).setUnlocalizedName("helmetChain").setTextureName("chainmail_helmet"));
+			itemRegistry.addObject(303, "chainmail_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.Chain, 1, 1)).setUnlocalizedName("chestplateChain").setTextureName("chainmail_chestplate"));
+			itemRegistry.addObject(304, "chainmail_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.Chain, 1, 2)).setUnlocalizedName("leggingsChain").setTextureName("chainmail_leggings"));
+			itemRegistry.addObject(305, "chainmail_boots", (new ItemArmor(ItemArmor.ArmorMaterial.Chain, 1, 3)).setUnlocalizedName("bootsChain").setTextureName("chainmail_boots"));
+			itemRegistry.addObject(306, "iron_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.Iron, 2, 0)).setUnlocalizedName("helmetIron").setTextureName("iron_helmet"));
+			itemRegistry.addObject(307, "iron_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.Iron, 2, 1)).setUnlocalizedName("chestplateIron").setTextureName("iron_chestplate"));
+			itemRegistry.addObject(308, "iron_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.Iron, 2, 2)).setUnlocalizedName("leggingsIron").setTextureName("iron_leggings"));
+			itemRegistry.addObject(309, "iron_boots", (new ItemArmor(ItemArmor.ArmorMaterial.Iron, 2, 3)).setUnlocalizedName("bootsIron").setTextureName("iron_boots"));
+			itemRegistry.addObject(310, "diamond_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.Diamond, 3, 0)).setUnlocalizedName("helmetDiamond").setTextureName("diamond_helmet"));
+			itemRegistry.addObject(311, "diamond_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.Diamond, 3, 1)).setUnlocalizedName("chestplateDiamond").setTextureName("diamond_chestplate"));
+			itemRegistry.addObject(312, "diamond_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.Diamond, 3, 2)).setUnlocalizedName("leggingsDiamond").setTextureName("diamond_leggings"));
+			itemRegistry.addObject(313, "diamond_boots", (new ItemArmor(ItemArmor.ArmorMaterial.Diamond, 3, 3)).setUnlocalizedName("bootsDiamond").setTextureName("diamond_boots"));
+			itemRegistry.addObject(314, "golden_helmet", (new ItemArmor(ItemArmor.ArmorMaterial.Gold, 4, 0)).setUnlocalizedName("helmetGold").setTextureName("gold_helmet"));
+			itemRegistry.addObject(315, "golden_chestplate", (new ItemArmor(ItemArmor.ArmorMaterial.Gold, 4, 1)).setUnlocalizedName("chestplateGold").setTextureName("gold_chestplate"));
+			itemRegistry.addObject(316, "golden_leggings", (new ItemArmor(ItemArmor.ArmorMaterial.Gold, 4, 2)).setUnlocalizedName("leggingsGold").setTextureName("gold_leggings"));
+			itemRegistry.addObject(317, "golden_boots", (new ItemArmor(ItemArmor.ArmorMaterial.Gold, 4, 3)).setUnlocalizedName("bootsGold").setTextureName("gold_boots"));
 			itemRegistry.addObject(318, "flint", (new Item()).setUnlocalizedName("flint").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("flint"));
 			itemRegistry.addObject(319, "porkchop", (new ItemFood(3, 0.3F, true)).setUnlocalizedName("porkchopRaw").setTextureName("porkchop_raw"));
 			itemRegistry.addObject(320, "cooked_porkchop", (new ItemFood(8, 0.8F, true)).setUnlocalizedName("porkchopCooked").setTextureName("porkchop_cooked"));
@@ -273,91 +237,91 @@ using DotCraftCore.nInventory;
 			{
 				string var3 = (string)var2.Current;
 				Block var4 = (Block)Block.blockRegistry.GetObject(var3);
-				object var5;
+				Item var5;
 
 				if (var4 == Blocks.wool)
 				{
-					var5 = (new ItemCloth(Blocks.wool)).UnlocalizedName = "cloth";
+					var5 = (new ItemCloth(Blocks.wool)).setUnlocalizedName("cloth");
 				}
 				else if (var4 == Blocks.stained_hardened_clay)
 				{
-					var5 = (new ItemCloth(Blocks.stained_hardened_clay)).UnlocalizedName = "clayHardenedStained";
+					var5 = (new ItemCloth(Blocks.stained_hardened_clay)).setUnlocalizedName("clayHardenedStained");
 				}
 				else if (var4 == Blocks.stained_glass)
 				{
-					var5 = (new ItemCloth(Blocks.stained_glass)).UnlocalizedName = "stainedGlass";
+					var5 = (new ItemCloth(Blocks.stained_glass)).setUnlocalizedName("stainedGlass");
 				}
 				else if (var4 == Blocks.stained_glass_pane)
 				{
-					var5 = (new ItemCloth(Blocks.stained_glass_pane)).UnlocalizedName = "stainedGlassPane";
+					var5 = (new ItemCloth(Blocks.stained_glass_pane)).setUnlocalizedName("stainedGlassPane");
 				}
 				else if (var4 == Blocks.carpet)
 				{
-					var5 = (new ItemCloth(Blocks.carpet)).UnlocalizedName = "woolCarpet";
+					var5 = (new ItemCloth(Blocks.carpet)).setUnlocalizedName("woolCarpet");
 				}
 				else if (var4 == Blocks.dirt)
 				{
-					var5 = (new ItemMultiTexture(Blocks.dirt, Blocks.dirt, BlockDirt.field_150009_a)).UnlocalizedName = "dirt";
+					var5 = (new ItemMultiTexture(Blocks.dirt, Blocks.dirt, BlockDirt.field_150009_a)).setUnlocalizedName("dirt");
 				}
 				else if (var4 == Blocks.sand)
 				{
-					var5 = (new ItemMultiTexture(Blocks.sand, Blocks.sand, BlockSand.field_149838_a)).UnlocalizedName = "sand";
+					var5 = (new ItemMultiTexture(Blocks.sand, Blocks.sand, BlockSand.field_149838_a)).setUnlocalizedName("sand");
 				}
 				else if (var4 == Blocks.log)
 				{
-					var5 = (new ItemMultiTexture(Blocks.log, Blocks.log, BlockOldLog.field_150168_M)).UnlocalizedName = "log";
+					var5 = (new ItemMultiTexture(Blocks.log, Blocks.log, BlockOldLog.field_150168_M)).setUnlocalizedName("log");
 				}
 				else if (var4 == Blocks.log2)
 				{
-					var5 = (new ItemMultiTexture(Blocks.log2, Blocks.log2, BlockNewLog.field_150169_M)).UnlocalizedName = "log";
+					var5 = (new ItemMultiTexture(Blocks.log2, Blocks.log2, BlockNewLog.field_150169_M)).setUnlocalizedName("log");
 				}
 				else if (var4 == Blocks.planks)
 				{
-					var5 = (new ItemMultiTexture(Blocks.planks, Blocks.planks, BlockWood.field_150096_a)).UnlocalizedName = "wood";
+					var5 = (new ItemMultiTexture(Blocks.planks, Blocks.planks, BlockWood.field_150096_a)).setUnlocalizedName("wood");
 				}
 				else if (var4 == Blocks.monster_egg)
 				{
-					var5 = (new ItemMultiTexture(Blocks.monster_egg, Blocks.monster_egg, BlockSilverfish.field_150198_a)).UnlocalizedName = "monsterStoneEgg";
+					var5 = (new ItemMultiTexture(Blocks.monster_egg, Blocks.monster_egg, BlockSilverfish.field_150198_a)).setUnlocalizedName("monsterStoneEgg");
 				}
 				else if (var4 == Blocks.stonebrick)
 				{
-					var5 = (new ItemMultiTexture(Blocks.stonebrick, Blocks.stonebrick, BlockStoneBrick.field_150142_a)).UnlocalizedName = "stonebricksmooth";
+					var5 = (new ItemMultiTexture(Blocks.stonebrick, Blocks.stonebrick, BlockStoneBrick.field_150142_a)).setUnlocalizedName("stonebricksmooth");
 				}
 				else if (var4 == Blocks.sandstone)
 				{
-					var5 = (new ItemMultiTexture(Blocks.sandstone, Blocks.sandstone, BlockSandStone.field_150157_a)).UnlocalizedName = "sandStone";
+					var5 = (new ItemMultiTexture(Blocks.sandstone, Blocks.sandstone, BlockSandStone.field_150157_a)).setUnlocalizedName("sandStone");
 				}
 				else if (var4 == Blocks.quartz_block)
 				{
-					var5 = (new ItemMultiTexture(Blocks.quartz_block, Blocks.quartz_block, BlockQuartz.field_150191_a)).UnlocalizedName = "quartzBlock";
+					var5 = (new ItemMultiTexture(Blocks.quartz_block, Blocks.quartz_block, BlockQuartz.field_150191_a)).setUnlocalizedName("quartzBlock");
 				}
 				else if (var4 == Blocks.stone_slab)
 				{
-					var5 = (new ItemSlab(Blocks.stone_slab, Blocks.stone_slab, Blocks.double_stone_slab, false)).UnlocalizedName = "stoneSlab";
+					var5 = (new ItemSlab(Blocks.stone_slab, Blocks.stone_slab, Blocks.double_stone_slab, false)).setUnlocalizedName("stoneSlab");
 				}
 				else if (var4 == Blocks.double_stone_slab)
 				{
-					var5 = (new ItemSlab(Blocks.double_stone_slab, Blocks.stone_slab, Blocks.double_stone_slab, true)).UnlocalizedName = "stoneSlab";
+					var5 = (new ItemSlab(Blocks.double_stone_slab, Blocks.stone_slab, Blocks.double_stone_slab, true)).setUnlocalizedName("stoneSlab");
 				}
 				else if (var4 == Blocks.wooden_slab)
 				{
-					var5 = (new ItemSlab(Blocks.wooden_slab, Blocks.wooden_slab, Blocks.double_wooden_slab, false)).UnlocalizedName = "woodSlab";
+					var5 = (new ItemSlab(Blocks.wooden_slab, Blocks.wooden_slab, Blocks.double_wooden_slab, false)).setUnlocalizedName("woodSlab");
 				}
 				else if (var4 == Blocks.double_wooden_slab)
 				{
-					var5 = (new ItemSlab(Blocks.double_wooden_slab, Blocks.wooden_slab, Blocks.double_wooden_slab, true)).UnlocalizedName = "woodSlab";
+					var5 = (new ItemSlab(Blocks.double_wooden_slab, Blocks.wooden_slab, Blocks.double_wooden_slab, true)).setUnlocalizedName("woodSlab");
 				}
 				else if (var4 == Blocks.sapling)
 				{
-					var5 = (new ItemMultiTexture(Blocks.sapling, Blocks.sapling, BlockSapling.field_149882_a)).UnlocalizedName = "sapling";
+					var5 = (new ItemMultiTexture(Blocks.sapling, Blocks.sapling, BlockSapling.field_149882_a)).setUnlocalizedName("sapling");
 				}
 				else if (var4 == Blocks.leaves)
 				{
-					var5 = (new ItemLeaves(Blocks.leaves)).UnlocalizedName = "leaves";
+					var5 = (new ItemLeaves(Blocks.leaves)).setUnlocalizedName("leaves");
 				}
 				else if (var4 == Blocks.leaves2)
 				{
-					var5 = (new ItemLeaves(Blocks.leaves2)).UnlocalizedName = "leaves";
+					var5 = (new ItemLeaves(Blocks.leaves2)).setUnlocalizedName("leaves");
 				}
 				else if (var4 == Blocks.vine)
 				{
@@ -369,11 +333,11 @@ using DotCraftCore.nInventory;
 				}
 				else if (var4 == Blocks.yellow_flower)
 				{
-					var5 = (new ItemMultiTexture(Blocks.yellow_flower, Blocks.yellow_flower, BlockFlower.field_149858_b)).UnlocalizedName = "flower";
+					var5 = (new ItemMultiTexture(Blocks.yellow_flower, Blocks.yellow_flower, BlockFlower.field_149858_b)).setUnlocalizedName("flower");
 				}
 				else if (var4 == Blocks.red_flower)
 				{
-					var5 = (new ItemMultiTexture(Blocks.red_flower, Blocks.red_flower, BlockFlower.field_149859_a)).UnlocalizedName = "rose";
+					var5 = (new ItemMultiTexture(Blocks.red_flower, Blocks.red_flower, BlockFlower.field_149859_a)).setUnlocalizedName("rose");
 				}
 				else if (var4 == Blocks.snow_layer)
 				{
@@ -393,15 +357,15 @@ using DotCraftCore.nInventory;
 				}
 				else if (var4 == Blocks.cobblestone_wall)
 				{
-					var5 = (new ItemMultiTexture(Blocks.cobblestone_wall, Blocks.cobblestone_wall, BlockWall.field_150092_a)).UnlocalizedName = "cobbleWall";
+					var5 = (new ItemMultiTexture(Blocks.cobblestone_wall, Blocks.cobblestone_wall, BlockWall.field_150092_a)).setUnlocalizedName("cobbleWall");
 				}
 				else if (var4 == Blocks.anvil)
 				{
-					var5 = (new ItemAnvilBlock(Blocks.anvil)).UnlocalizedName = "anvil";
+					var5 = (new ItemAnvilBlock(Blocks.anvil)).setUnlocalizedName("anvil");
 				}
 				else if (var4 == Blocks.double_plant)
 				{
-					var5 = (new ItemDoublePlant(Blocks.double_plant, Blocks.double_plant, BlockDoublePlant.field_149892_a)).UnlocalizedName = "doublePlant";
+					var5 = (new ItemDoublePlant(Blocks.double_plant, Blocks.double_plant, BlockDoublePlant.field_149892_a)).setUnlocalizedName("doublePlant");
 				}
 				else
 				{
@@ -417,14 +381,138 @@ using DotCraftCore.nInventory;
 			}
 		}
 
-		public virtual Item MaxStackSize
-		{
-			set
-			{
-				this.maxStackSize = value;
-				return this;
-			}
-		}
+        protected virtual Item setUnlocalizedName(String name)
+        {
+            this.UnlocalizedName = name;
+            return this;
+        }
+
+        ///    
+        ///     <summary> * Sets the unlocalized name of this item to the string passed as the parameter, prefixed by "item." </summary>
+        ///     
+        public virtual string UnlocalizedName
+        {
+            get
+            {
+                return "item." + this.unlocalizedName;
+            }
+            protected set
+            {
+                this.unlocalizedName = value;
+            }
+        }
+
+        ///    
+        ///     <summary> * Translates the unlocalized name of this item, but without the .name suffix, so the translation fails and the
+        ///     * unlocalized name itself is returned. </summary>
+        ///     
+        public virtual string getUnlocalizedNameInefficiently(ItemStack p_77657_1_)
+        {
+            string var2 = this.getUnlocalizedName(p_77657_1_);
+            return var2 == null ? "" : StatCollector.translateToLocal(var2);
+        }
+
+        ///    
+        ///     <summary> * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
+        ///     * different names based on their damage or NBT. </summary>
+        ///     
+        public virtual string getUnlocalizedName(ItemStack p_77667_1_)
+        {
+            return "item." + this.unlocalizedName;
+        }
+
+        public virtual string TextureName
+        {
+            protected set;
+            get;
+        }
+
+        protected virtual Item setTextureName(string value)
+        {
+            this.TextureName = value;
+            return this;
+        }
+
+        ///    
+        ///     <summary> * gets the CreativeTab this item is displayed on </summary>
+        ///     
+        public virtual CreativeTabs CreativeTab
+        {
+            get;
+            protected set;
+        }
+
+        protected virtual Item setCreativeTab(CreativeTabs value)
+        {
+            CreativeTab = value;
+            return this;
+        }
+
+        public virtual int MaxStackSize
+        {
+            get;
+            protected set;
+        }
+
+        protected virtual Item setMaxStackSize(int value)
+        {
+            this.MaxStackSize = value;
+            return this;
+        }
+
+        ///    
+        ///     <summary> * Sets the string representing this item's effect on a potion when used as an ingredient. </summary>
+        ///     
+        public virtual string ItemPotionEffect
+        {
+            get;
+            protected set;
+        }
+
+        public virtual string getPotionEffect(ItemStack p_150896_1_)
+        {
+            return ItemPotionEffect;
+        }
+
+        protected virtual Item setPotionEffect(String value)
+        {
+            this.ItemPotionEffect = value;
+            return this;
+        }
+
+        public virtual Item ContainerItem
+        {
+            get;
+            protected set;
+        }
+
+        protected virtual Item setContainerItem(Item value)
+        {
+            this.ContainerItem = value;
+            return this;
+        }
+
+        public virtual bool HasSubtypes
+        {
+            get;
+            protected set;
+        }
+
+        protected virtual Item setHasSubtypes(bool value)
+        {
+            this.HasSubtypes = value;
+            return this;
+        }
+
+
+
+
+
+
+
+
+
+		
 
 ///    
 ///     <summary> * Returns 0 for /terrain.png, 1 for /gui/items.png </summary>
@@ -435,14 +523,6 @@ using DotCraftCore.nInventory;
 			{
 				return 1;
 			}
-		}
-
-///    
-///     <summary> * Gets an icon index based on an item's damage value </summary>
-///     
-		public virtual IIcon getIconFromDamage(int p_77617_1_)
-		{
-			return this.itemIcon;
 		}
 
 ///    
@@ -481,37 +561,12 @@ using DotCraftCore.nInventory;
 		}
 
 ///    
-///     <summary> * Returns the maximum size of the stack for a specific item. </summary>
-///     
-		public virtual int ItemStackLimit
-		{
-			get
-			{
-				return this.maxStackSize;
-			}
-		}
-
-///    
 ///     <summary> * Returns the metadata of the block which this Item (ItemBlock) can place </summary>
 ///     
 		public virtual int getMetadata(int p_77647_1_)
 		{
 			return 0;
 		}
-
-		public virtual bool HasSubtypes
-		{
-			get
-			{
-				return this.hasSubtypes;
-			}
-			set
-			{
-				this.hasSubtypes = value;
-				return this;
-			}
-		}
-
 
 ///    
 ///     <summary> * Returns the maximum damage an item can take. </summary>
@@ -598,58 +653,6 @@ using DotCraftCore.nInventory;
 		}
 
 ///    
-///     <summary> * Sets the unlocalized name of this item to the string passed as the parameter, prefixed by "item." </summary>
-///     
-		public virtual Item UnlocalizedName
-		{
-			set
-			{
-				this.unlocalizedName = value;
-				return this;
-			}
-			get
-			{
-				return "item." + this.unlocalizedName;
-			}
-		}
-
-///    
-///     <summary> * Translates the unlocalized name of this item, but without the .name suffix, so the translation fails and the
-///     * unlocalized name itself is returned. </summary>
-///     
-		public virtual string getUnlocalizedNameInefficiently(ItemStack p_77657_1_)
-		{
-			string var2 = this.getUnlocalizedName(p_77657_1_);
-			return var2 == null ? "" : StatCollector.translateToLocal(var2);
-		}
-
-///    
-///     <summary> * Returns the unlocalized name of this item. </summary>
-///     
-
-///    
-///     <summary> * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
-///     * different names based on their damage or NBT. </summary>
-///     
-		public virtual string getUnlocalizedName(ItemStack p_77667_1_)
-		{
-			return "item." + this.unlocalizedName;
-		}
-
-		public virtual Item ContainerItem
-		{
-			set
-			{
-				this.containerItem = value;
-				return this;
-			}
-			get
-			{
-				return this.containerItem;
-			}
-		}
-
-///    
 ///     <summary> * If this returns true, after a recipe involving this item is crafted the container item will be added to the
 ///     * player's inventory instead of remaining in the crafting grid. </summary>
 ///     
@@ -732,23 +735,6 @@ using DotCraftCore.nInventory;
 		{
 		}
 
-///    
-///     <summary> * Sets the string representing this item's effect on a potion when used as an ingredient. </summary>
-///     
-		protected internal virtual Item PotionEffect
-		{
-			set
-			{
-				this.potionEffect = value;
-				return this;
-			}
-		}
-
-		public virtual string getPotionEffect(ItemStack p_150896_1_)
-		{
-			return this.potionEffect;
-		}
-
 		public virtual bool isPotionIngredient(ItemStack p_150892_1_)
 		{
 			return this.getPotionEffect(p_150892_1_) != null;
@@ -824,14 +810,6 @@ using DotCraftCore.nInventory;
 		}
 
 ///    
-///     <summary> * Gets an icon index based on an item's damage value and the given render pass </summary>
-///     
-		public virtual IIcon getIconFromDamageForRenderPass(int p_77618_1_, int p_77618_2_)
-		{
-			return this.getIconFromDamage(p_77618_1_);
-		}
-
-///    
 ///     <summary> * This returns the sub items </summary>
 ///     
 		public virtual void getSubItems(Item p_150895_1_, CreativeTabs p_150895_2_, IList p_150895_3_)
@@ -839,21 +817,7 @@ using DotCraftCore.nInventory;
 			p_150895_3_.Add(new ItemStack(p_150895_1_, 1, 0));
 		}
 
-///    
-///     <summary> * gets the CreativeTab this item is displayed on </summary>
-///     
-		public virtual CreativeTabs CreativeTab
-		{
-			get
-			{
-				return this.tabToDisplayOn;
-			}
-			set
-			{
-				this.tabToDisplayOn = value;
-				return this;
-			}
-		}
+
 
 ///    
 ///     <summary> * returns this; </summary>
@@ -876,11 +840,6 @@ using DotCraftCore.nInventory;
 			return false;
 		}
 
-		public virtual void registerIcons(IIconRegister p_94581_1_)
-		{
-			this.itemIcon = p_94581_1_.registerIcon(this.IconString);
-		}
-
 ///    
 ///     <summary> * Gets a map of item attribute modifiers, used by ItemSword to increase hit damage. </summary>
 ///     
@@ -889,15 +848,6 @@ using DotCraftCore.nInventory;
 			get
 			{
 				return HashMultimap.create();
-			}
-		}
-
-		protected internal virtual Item TextureName
-		{
-			set
-			{
-				this.iconString = value;
-				return this;
 			}
 		}
 
@@ -912,80 +862,60 @@ using DotCraftCore.nInventory;
 			}
 		}
 
-		public enum ToolMaterial
+		public class ToolMaterial
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			WOOD("WOOD", 0, 0, 59, 2.0F, 0.0F, 15),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			STONE("STONE", 1, 1, 131, 4.0F, 1.0F, 5),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			IRON("IRON", 2, 2, 250, 6.0F, 2.0F, 14),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			EMERALD("EMERALD", 3, 3, 1561, 8.0F, 3.0F, 10),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			GOLD("GOLD", 4, 0, 32, 12.0F, 0.0F, 22);
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final int harvestLevel;
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final int maxUses;
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final float efficiencyOnProperMaterial;
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final float damageVsEntity;
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final int enchantability;
+            public enum ToolMaterialEnum {
+                WOOD = 1,
+			    STONE =2,
+			    IRON = 3,
+			    EMERALD = 4,
+			    GOLD = 5
+            }
 
-			@private static final Item.ToolMaterial[] $VALUES = new Item.ToolMaterial[]{WOOD, STONE, IRON, EMERALD, GOLD
-		}
+            public static readonly ToolMaterial Wood = new ToolMaterial(ToolMaterialEnum.WOOD, 0, 0, 59, 2.0F, 0.0F, 15);
+            public static readonly ToolMaterial Stone = new ToolMaterial(ToolMaterialEnum.STONE, 1, 1, 131, 4.0F, 1.0F, 5);
+            public static readonly ToolMaterial Iron = new ToolMaterial(ToolMaterialEnum.IRON, 2, 2, 250, 6.0F, 2.0F, 14);
+            public static readonly ToolMaterial Emerald = new ToolMaterial(ToolMaterialEnum.EMERALD, 3, 3, 1561, 8.0F, 3.0F, 10);
+            public static readonly ToolMaterial Gold = new ToolMaterial(ToolMaterialEnum.GOLD, 4, 0, 32, 12.0F, 0.0F, 22);
 			
-
-			private ToolMaterial(string p_i1874_1_, int p_i1874_2_, int p_i1874_3_, int p_i1874_4_, float p_i1874_5_, float p_i1874_6_, int p_i1874_7_)
+			private ToolMaterial(ToolMaterialEnum value, int p_i1874_2_, int level, int durability, float efficiency, float damage, int enchant)
 			{
-				this.harvestLevel = p_i1874_3_;
-				this.maxUses = p_i1874_4_;
-				this.efficiencyOnProperMaterial = p_i1874_5_;
-				this.damageVsEntity = p_i1874_6_;
-				this.enchantability = p_i1874_7_;
+                this.Enum = value;
+				this.HarvestLevel = level;
+				this.MaxUses = durability;
+				this.EfficiencyOnProperMaterial = efficiency;
+				this.DamageVsEntity = damage;
+				this.Enchantability = enchant;
 			}
+
+            public virtual ToolMaterialEnum Enum
+            {
+                get;
+            }
 
 			public virtual int MaxUses
 			{
-				get
-				{
-					return this.maxUses;
-				}
+                get;
 			}
 
 			public virtual float EfficiencyOnProperMaterial
 			{
-				get
-				{
-					return this.efficiencyOnProperMaterial;
-				}
+				get;
 			}
 
 			public virtual float DamageVsEntity
 			{
-				get
-				{
-					return this.damageVsEntity;
-				}
+				get;
 			}
 
 			public virtual int HarvestLevel
 			{
-				get
-				{
-					return this.harvestLevel;
-				}
+				get;
 			}
 
 			public virtual int Enchantability
 			{
-				get
-				{
-					return this.enchantability;
-				}
+				get;
 			}
 
 			public virtual Item func_150995_f()

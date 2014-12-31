@@ -1,14 +1,5 @@
 namespace DotCraftCore.nItem
 {
-
-	using Multimap = com.google.common.collect.Multimap;
-	using Block = DotCraftCore.nBlock.Block;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityLivingBase = DotCraftCore.entity.EntityLivingBase;
-	using SharedMonsterAttributes = DotCraftCore.entity.SharedMonsterAttributes;
-	using AttributeModifier = DotCraftCore.entity.ai.attributes.AttributeModifier;
-	using World = DotCraftCore.nWorld.World;
-
 	public class ItemTool : Item
 	{
 		private Set field_150914_c;

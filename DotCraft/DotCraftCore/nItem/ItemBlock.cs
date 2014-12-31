@@ -1,22 +1,15 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nItem
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using IIconRegister = DotCraftCore.client.renderer.texture.IIconRegister;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using IIcon = DotCraftCore.nUtil.IIcon;
-	using World = DotCraftCore.nWorld.World;
-
 	public class ItemBlock : Item
 	{
 		protected internal readonly Block field_150939_a;
-		private IIcon field_150938_b;
-		
 
 		public ItemBlock(Block p_i45328_1_)
 		{
@@ -26,16 +19,15 @@ namespace DotCraftCore.nItem
 ///    
 ///     <summary> * Sets the unlocalized name of this item to the string passed as the parameter, prefixed by "item." </summary>
 ///     
-		public virtual ItemBlock UnlocalizedName
+		public override string UnlocalizedName
 		{
-			set
-			{
-				base.UnlocalizedName = value;
-				return this;
-			}
-			get
+            get
 			{
 				return this.field_150939_a.UnlocalizedName;
+			}
+			protected set
+			{
+				base.UnlocalizedName = value;
 			}
 		}
 
@@ -48,14 +40,6 @@ namespace DotCraftCore.nItem
 			{
 				return this.field_150939_a.ItemIconName != null ? 1 : 0;
 			}
-		}
-
-///    
-///     <summary> * Gets an icon index based on an item's damage value </summary>
-///     
-		public virtual IIcon getIconFromDamage(int p_77617_1_)
-		{
-			return this.field_150938_b != null ? this.field_150938_b : this.field_150939_a.getBlockTextureFromSide(1);
 		}
 
 ///    
@@ -111,7 +95,7 @@ namespace DotCraftCore.nItem
 			{
 				return false;
 			}
-			else if (p_77648_5_ == 255 && this.field_150939_a.Material.Solid)
+			else if (p_77648_5_ == 255 && this.field_150939_a.BlockMaterial.Solid)
 			{
 				return false;
 			}
@@ -215,16 +199,5 @@ namespace DotCraftCore.nItem
 		{
 			this.field_150939_a.getSubBlocks(p_150895_1_, p_150895_2_, p_150895_3_);
 		}
-
-		public virtual void registerIcons(IIconRegister p_94581_1_)
-		{
-			string var2 = this.field_150939_a.ItemIconName;
-
-			if (var2 != null)
-			{
-				this.field_150938_b = p_94581_1_.registerIcon(var2);
-			}
-		}
 	}
-
 }
