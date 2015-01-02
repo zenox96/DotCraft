@@ -1,17 +1,13 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nEntity;
+using DotCraftCore.nItem;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+
 namespace DotCraftCore.nDispenser
 {
-
-	using BlockDispenser = DotCraftCore.nBlock.BlockDispenser;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using IProjectile = DotCraftCore.nEntity.IProjectile;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using EnumFacing = DotCraftCore.nUtil.EnumFacing;
-	using World = DotCraftCore.nWorld.World;
-
 	public abstract class BehaviorProjectileDispense : BehaviorDefaultDispenseItem
 	{
-		
-
 ///    
 ///     <summary> * Dispense the specified stack, play the dispense sound and spawn particles. </summary>
 ///     
@@ -21,7 +17,7 @@ namespace DotCraftCore.nDispenser
 			IPosition var4 = BlockDispenser.func_149939_a(p_82487_1_);
 			EnumFacing var5 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
 			IProjectile var6 = this.getProjectileEntity(var3, var4);
-			var6.setThrowableHeading((double)var5.FrontOffsetX, (double)((float)var5.FrontOffsetY + 0.1F), (double)var5.FrontOffsetZ, this.func_82500_b(), this.func_82498_a());
+			var6.setThrowableHeading((double)var5.FrontOffsetX, (double)var5.FrontOffsetY + 0.1D, (double)var5.FrontOffsetZ, this.func_82500_b(), this.func_82498_a());
 			var3.spawnEntityInWorld((Entity)var6);
 			p_82487_2_.splitStack(1);
 			return p_82487_2_;

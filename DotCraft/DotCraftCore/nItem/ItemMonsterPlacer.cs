@@ -20,6 +20,7 @@ namespace DotCraftCore.nItem
 	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
 	using StatCollector = DotCraftCore.nUtil.StatCollector;
 	using World = DotCraftCore.nWorld.World;
+    using DotCraftCore.nEntity;
 
 	public class ItemMonsterPlacer : Item
 	{

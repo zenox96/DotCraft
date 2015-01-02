@@ -770,7 +770,7 @@ namespace DotCraftCore.nItem
 ///     
 		public virtual bool isItemTool(ItemStack p_77616_1_)
 		{
-			return this.ItemStackLimit == 1 && this.Damageable;
+			return this.MaxStackSize == 1 && this.Damageable;
 		}
 
 		protected internal virtual MovingObjectPosition getMovingObjectPositionFromPlayer(World p_77621_1_, EntityPlayer p_77621_2_, bool p_77621_3_)
@@ -888,39 +888,59 @@ namespace DotCraftCore.nItem
 				this.Enchantability = enchant;
 			}
 
-            public virtual ToolMaterialEnum Enum
+            public readonly virtual ToolMaterialEnum Enum
             {
                 get;
+                private set;
             }
 
-			public virtual int MaxUses
+            public readonly virtual int MaxUses
 			{
                 get;
+                private set;
 			}
 
-			public virtual float EfficiencyOnProperMaterial
+            public readonly virtual float EfficiencyOnProperMaterial
 			{
-				get;
+                get;
+                private set;
 			}
 
-			public virtual float DamageVsEntity
+            public readonly virtual float DamageVsEntity
 			{
-				get;
+                get;
+                private set;
 			}
 
-			public virtual int HarvestLevel
+            public readonly virtual int HarvestLevel
 			{
-				get;
+                get;
+                private set;
 			}
 
-			public virtual int Enchantability
+            public readonly virtual int Enchantability
 			{
-				get;
+                get;
+                private set;
 			}
 
 			public virtual Item func_150995_f()
 			{
-				return this == WOOD ? Item.getItemFromBlock(Blocks.planks) : (this == STONE ? Item.getItemFromBlock(Blocks.cobblestone) : (this == GOLD ? Items.gold_ingot : (this == IRON ? Items.iron_ingot : (this == EMERALD ? Items.diamond : null))));
+                switch (this.Enum)
+                {
+                    case ToolMaterialEnum.WOOD:
+                        return Item.getItemFromBlock(Blocks.planks);
+                    case ToolMaterialEnum.STONE:
+                        return Item.getItemFromBlock(Blocks.cobblestone);
+                    case ToolMaterialEnum.GOLD:
+                        return Items.gold_ingot;
+                    case ToolMaterialEnum.IRON:
+                        return Items.iron_ingot;
+                    case ToolMaterialEnum.EMERALD:
+                        return Items.diamond;
+                    default:
+                        return null;
+                }
 			}
 		}
 	}

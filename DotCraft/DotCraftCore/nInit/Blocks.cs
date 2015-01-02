@@ -1,35 +1,6 @@
+using DotCraftCore.nBlock;
 namespace DotCraftCore.nInit
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockBeacon = DotCraftCore.nBlock.BlockBeacon;
-	using BlockBush = DotCraftCore.nBlock.BlockBush;
-	using BlockCauldron = DotCraftCore.nBlock.BlockCauldron;
-	using BlockChest = DotCraftCore.nBlock.BlockChest;
-	using BlockDaylightDetector = DotCraftCore.nBlock.BlockDaylightDetector;
-	using BlockDeadBush = DotCraftCore.nBlock.BlockDeadBush;
-	using BlockDoublePlant = DotCraftCore.nBlock.BlockDoublePlant;
-	using BlockFire = DotCraftCore.nBlock.BlockFire;
-	using BlockFlower = DotCraftCore.nBlock.BlockFlower;
-	using BlockGrass = DotCraftCore.nBlock.BlockGrass;
-	using BlockHopper = DotCraftCore.nBlock.BlockHopper;
-	using BlockLeaves = DotCraftCore.nBlock.BlockLeaves;
-	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
-	using BlockMycelium = DotCraftCore.nBlock.BlockMycelium;
-	using BlockPistonBase = DotCraftCore.nBlock.BlockPistonBase;
-	using BlockPistonExtension = DotCraftCore.nBlock.BlockPistonExtension;
-	using BlockPistonMoving = DotCraftCore.nBlock.BlockPistonMoving;
-	using BlockPortal = DotCraftCore.nBlock.BlockPortal;
-	using BlockRedstoneComparator = DotCraftCore.nBlock.BlockRedstoneComparator;
-	using BlockRedstoneRepeater = DotCraftCore.nBlock.BlockRedstoneRepeater;
-	using BlockRedstoneWire = DotCraftCore.nBlock.BlockRedstoneWire;
-	using BlockSand = DotCraftCore.nBlock.BlockSand;
-	using BlockSlab = DotCraftCore.nBlock.BlockSlab;
-	using BlockStainedGlass = DotCraftCore.nBlock.BlockStainedGlass;
-	using BlockStainedGlassPane = DotCraftCore.nBlock.BlockStainedGlassPane;
-	using BlockTallGrass = DotCraftCore.nBlock.BlockTallGrass;
-	using BlockTripWireHook = DotCraftCore.nBlock.BlockTripWireHook;
-
 	public class Blocks
 	{
 		public static readonly Block air = (Block)Block.blockRegistry.GetObject("air");
@@ -203,7 +174,5 @@ namespace DotCraftCore.nInit
 		public static readonly BlockDoublePlant double_plant = (BlockDoublePlant)Block.blockRegistry.GetObject("double_plant");
 		public static readonly BlockStainedGlass stained_glass = (BlockStainedGlass)Block.blockRegistry.GetObject("stained_glass");
 		public static readonly BlockStainedGlassPane stained_glass_pane = (BlockStainedGlassPane)Block.blockRegistry.GetObject("stained_glass_pane");
-		
 	}
-
 }

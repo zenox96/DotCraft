@@ -1,16 +1,6 @@
+using DotCraftCore.nItem;
 namespace DotCraftCore.nInit
 {
-
-	using Item = DotCraftCore.nItem.Item;
-	using ItemArmor = DotCraftCore.nItem.ItemArmor;
-	using ItemBow = DotCraftCore.nItem.ItemBow;
-	using ItemEmptyMap = DotCraftCore.nItem.ItemEmptyMap;
-	using ItemEnchantedBook = DotCraftCore.nItem.ItemEnchantedBook;
-	using ItemFishingRod = DotCraftCore.nItem.ItemFishingRod;
-	using ItemMap = DotCraftCore.nItem.ItemMap;
-	using ItemPotion = DotCraftCore.nItem.ItemPotion;
-	using ItemShears = DotCraftCore.nItem.ItemShears;
-
 	public class Items
 	{
 		public static readonly Item iron_shovel = (Item)Item.itemRegistry.getObject("iron_shovel");
@@ -184,7 +174,5 @@ namespace DotCraftCore.nInit
 		public static readonly Item record_ward = (Item)Item.itemRegistry.getObject("record_ward");
 		public static readonly Item record_11 = (Item)Item.itemRegistry.getObject("record_11");
 		public static readonly Item record_wait = (Item)Item.itemRegistry.getObject("record_wait");
-		
 	}
-
 }
