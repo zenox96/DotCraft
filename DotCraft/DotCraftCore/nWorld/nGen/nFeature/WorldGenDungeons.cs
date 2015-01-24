@@ -1,19 +1,14 @@
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nInit;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
 using System;
 
 namespace DotCraftCore.nWorld.nGen.nFeature
 {
-
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
-	using TileEntityChest = DotCraftCore.nTileEntity.TileEntityChest;
-	using TileEntityMobSpawner = DotCraftCore.nTileEntity.TileEntityMobSpawner;
-	using WeightedRandomChestContent = DotCraftCore.nUtil.WeightedRandomChestContent;
-	using World = DotCraftCore.nWorld.World;
-
 	public class WorldGenDungeons : WorldGenerator
 	{
-		private static readonly WeightedRandomChestContent[] field_111189_a = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 10), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 4, 10), new WeightedRandomChestContent(Items.bread, 0, 1, 1, 10), new WeightedRandomChestContent(Items.wheat, 0, 1, 4, 10), new WeightedRandomChestContent(Items.gunpowder, 0, 1, 4, 10), new WeightedRandomChestContent(Items.string, 0, 1, 4, 10), new WeightedRandomChestContent(Items.bucket, 0, 1, 1, 10), new WeightedRandomChestContent(Items.golden_apple, 0, 1, 1, 1), new WeightedRandomChestContent(Items.redstone, 0, 1, 4, 10), new WeightedRandomChestContent(Items.record_13, 0, 1, 1, 10), new WeightedRandomChestContent(Items.record_cat, 0, 1, 1, 10), new WeightedRandomChestContent(Items.name_tag, 0, 1, 1, 10), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 2), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 5), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
+		private static readonly WeightedRandomChestContent[] field_111189_a = new WeightedRandomChestContent[] {new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 10), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 4, 10), new WeightedRandomChestContent(Items.bread, 0, 1, 1, 10), new WeightedRandomChestContent(Items.wheat, 0, 1, 4, 10), new WeightedRandomChestContent(Items.gunpowder, 0, 1, 4, 10), new WeightedRandomChestContent(Items.@string, 0, 1, 4, 10), new WeightedRandomChestContent(Items.bucket, 0, 1, 1, 10), new WeightedRandomChestContent(Items.golden_apple, 0, 1, 1, 1), new WeightedRandomChestContent(Items.redstone, 0, 1, 4, 10), new WeightedRandomChestContent(Items.record_13, 0, 1, 1, 10), new WeightedRandomChestContent(Items.record_cat, 0, 1, 1, 10), new WeightedRandomChestContent(Items.name_tag, 0, 1, 1, 10), new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 2), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 5), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1)};
 		
 
 		public override bool generate(World p_76484_1_, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_)
@@ -32,7 +27,7 @@ namespace DotCraftCore.nWorld.nGen.nFeature
 				{
 					for (var12 = p_76484_5_ - var8 - 1; var12 <= p_76484_5_ + var8 + 1; ++var12)
 					{
-						Material var13 = p_76484_1_.getBlock(var10, var11, var12).Material;
+						Material var13 = p_76484_1_.getBlock(var10, var11, var12).BlockMaterial;
 
 						if (var11 == p_76484_4_ - 1 && !var13.Solid)
 						{
@@ -64,11 +59,11 @@ namespace DotCraftCore.nWorld.nGen.nFeature
 							{
 								p_76484_1_.setBlockToAir(var10, var11, var12);
 							}
-							else if (var11 >= 0 && !p_76484_1_.getBlock(var10, var11 - 1, var12).Material.Solid)
+							else if (var11 >= 0 && !p_76484_1_.getBlock(var10, var11 - 1, var12).BlockMaterial.Solid)
 							{
 								p_76484_1_.setBlockToAir(var10, var11, var12);
 							}
-							else if (p_76484_1_.getBlock(var10, var11, var12).Material.Solid)
+							else if (p_76484_1_.getBlock(var10, var11, var12).BlockMaterial.Solid)
 							{
 								if (var11 == p_76484_4_ - 1 && p_76484_2_.Next(4) != 0)
 								{
@@ -102,22 +97,22 @@ namespace DotCraftCore.nWorld.nGen.nFeature
 								{
 									int var15 = 0;
 
-									if (p_76484_1_.getBlock(var12 - 1, p_76484_4_, var14).Material.Solid)
+									if (p_76484_1_.getBlock(var12 - 1, p_76484_4_, var14).BlockMaterial.Solid)
 									{
 										++var15;
 									}
 
-									if (p_76484_1_.getBlock(var12 + 1, p_76484_4_, var14).Material.Solid)
+									if (p_76484_1_.getBlock(var12 + 1, p_76484_4_, var14).BlockMaterial.Solid)
 									{
 										++var15;
 									}
 
-									if (p_76484_1_.getBlock(var12, p_76484_4_, var14 - 1).Material.Solid)
+									if (p_76484_1_.getBlock(var12, p_76484_4_, var14 - 1).BlockMaterial.Solid)
 									{
 										++var15;
 									}
 
-									if (p_76484_1_.getBlock(var12, p_76484_4_, var14 + 1).Material.Solid)
+									if (p_76484_1_.getBlock(var12, p_76484_4_, var14 + 1).BlockMaterial.Solid)
 									{
 										++var15;
 									}

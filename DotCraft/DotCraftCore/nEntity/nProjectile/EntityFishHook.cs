@@ -1,3 +1,14 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEnchantment;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nStats;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
@@ -5,9 +16,9 @@ namespace DotCraftCore.nEntity.nProjectile
 {
 	public class EntityFishHook : Entity
 	{
-		private static readonly IList field_146039_d = Arrays.asList(new WeightedRandomFishable[] {(new WeightedRandomFishable(new ItemStack(Items.leather_boots), 10)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.leather), 10), new WeightedRandomFishable(new ItemStack(Items.bone), 10), new WeightedRandomFishable(new ItemStack(Items.potionitem), 10), new WeightedRandomFishable(new ItemStack(Items.string), 5), (new WeightedRandomFishable(new ItemStack(Items.fishing_rod), 2)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.bowl), 10), new WeightedRandomFishable(new ItemStack(Items.stick), 5), new WeightedRandomFishable(new ItemStack(Items.dye, 10, 0), 1), new WeightedRandomFishable(new ItemStack(Blocks.tripwire_hook), 10), new WeightedRandomFishable(new ItemStack(Items.rotten_flesh), 10)});
+		private static readonly IList field_146039_d = Arrays.asList(new WeightedRandomFishable[] {(new WeightedRandomFishable(new ItemStack(Items.leather_boots), 10)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.leather), 10), new WeightedRandomFishable(new ItemStack(Items.bone), 10), new WeightedRandomFishable(new ItemStack(Items.potionitem), 10), new WeightedRandomFishable(new ItemStack(Items.@string), 5), (new WeightedRandomFishable(new ItemStack(Items.fishing_rod), 2)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.bowl), 10), new WeightedRandomFishable(new ItemStack(Items.stick), 5), new WeightedRandomFishable(new ItemStack(Items.dye, 10, 0), 1), new WeightedRandomFishable(new ItemStack(Blocks.tripwire_hook), 10), new WeightedRandomFishable(new ItemStack(Items.rotten_flesh), 10)});
 		private static readonly IList field_146041_e = Arrays.asList(new WeightedRandomFishable[] {new WeightedRandomFishable(new ItemStack(Blocks.waterlily), 1), new WeightedRandomFishable(new ItemStack(Items.name_tag), 1), new WeightedRandomFishable(new ItemStack(Items.saddle), 1), (new WeightedRandomFishable(new ItemStack(Items.bow), 1)).func_150709_a(0.25F).func_150707_a(), (new WeightedRandomFishable(new ItemStack(Items.fishing_rod), 1)).func_150709_a(0.25F).func_150707_a(), (new WeightedRandomFishable(new ItemStack(Items.book), 1)).func_150707_a()});
-		private static readonly IList field_146036_f = Arrays.asList(new WeightedRandomFishable[] {new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.FishType.COD.func_150976_a()), 60), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.FishType.SALMON.func_150976_a()), 25), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.FishType.CLOWNFISH.func_150976_a()), 2), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.FishType.PUFFERFISH.func_150976_a()), 13)});
+		private static readonly IList field_146036_f = Arrays.asList(new WeightedRandomFishable[] {new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.EnumFishType.COD.func_150976_a()), 60), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.EnumFishType.SALMON.func_150976_a()), 25), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.EnumFishType.CLOWNFISH.func_150976_a()), 2), new WeightedRandomFishable(new ItemStack(Items.fish, 1, ItemFishFood.EnumFishType.PUFFERFISH.func_150976_a()), 13)});
 		private int field_146037_g;
 		private int field_146048_h;
 		private int field_146050_i;
@@ -93,9 +104,9 @@ namespace DotCraftCore.nEntity.nProjectile
 			p_146035_1_ /= (double)var9;
 			p_146035_3_ /= (double)var9;
 			p_146035_5_ /= (double)var9;
-			p_146035_1_ += this.rand.nextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
-			p_146035_3_ += this.rand.nextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
-			p_146035_5_ += this.rand.nextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
+			p_146035_1_ += this.rand.NextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
+			p_146035_3_ += this.rand.NextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
+			p_146035_5_ += this.rand.NextGaussian() * 0.007499999832361937D * (double)p_146035_8_;
 			p_146035_1_ *= (double)p_146035_7_;
 			p_146035_3_ *= (double)p_146035_7_;
 			p_146035_5_ *= (double)p_146035_7_;
@@ -160,7 +171,7 @@ namespace DotCraftCore.nEntity.nProjectile
 				{
 					ItemStack var1 = this.field_146042_b.CurrentEquippedItem;
 
-					if (this.field_146042_b.isDead || !this.field_146042_b.EntityAlive || var1 == null || var1.Item != Items.fishing_rod || this.getDistanceSqToEntity(this.field_146042_b) > 1024.0D)
+					if (this.field_146042_b.isDead || !this.field_146042_b.isEntityAlive || var1 == null || var1.Item != Items.fishing_rod || this.getDistanceSqToEntity(this.field_146042_b) > 1024.0D)
 					{
 						this.setDead();
 						this.field_146042_b.fishEntity = null;
@@ -201,9 +212,9 @@ namespace DotCraftCore.nEntity.nProjectile
 					}
 
 					this.field_146051_au = false;
-					this.motionX *= (double)(this.rand.nextFloat() * 0.2F);
-					this.motionY *= (double)(this.rand.nextFloat() * 0.2F);
-					this.motionZ *= (double)(this.rand.nextFloat() * 0.2F);
+					this.motionX *= this.rand.NextDouble() * 0.2D;
+					this.motionY *= this.rand.NextDouble() * 0.2D;
+					this.motionZ *= this.rand.NextDouble() * 0.2D;
 					this.field_146049_av = 0;
 					this.field_146047_aw = 0;
 				}
@@ -299,11 +310,11 @@ namespace DotCraftCore.nEntity.nProjectile
 
 					this.rotationPitch = this.prevRotationPitch + (this.rotationPitch - this.prevRotationPitch) * 0.2F;
 					this.rotationYaw = this.prevRotationYaw + (this.rotationYaw - this.prevRotationYaw) * 0.2F;
-					float var31 = 0.92F;
+					double var31 = 0.92D;
 
 					if (this.onGround || this.isCollidedHorizontally)
 					{
-						var31 = 0.5F;
+						var31 = 0.5D;
 					}
 
 					sbyte var32 = 5;
@@ -326,12 +337,12 @@ namespace DotCraftCore.nEntity.nProjectile
 						WorldServer var35 = (WorldServer)this.worldObj;
 						int var36 = 1;
 
-						if (this.rand.nextFloat() < 0.25F && this.worldObj.canLightningStrikeAt(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY) + 1, MathHelper.floor_double(this.posZ)))
+						if (this.rand.NextFloat() < 0.25F && this.worldObj.canLightningStrikeAt(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY) + 1, MathHelper.floor_double(this.posZ)))
 						{
 							var36 = 2;
 						}
 
-						if (this.rand.nextFloat() < 0.5F && !this.worldObj.canBlockSeeTheSky(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY) + 1, MathHelper.floor_double(this.posZ)))
+						if (this.rand.NextFloat() < 0.5F && !this.worldObj.canBlockSeeTheSky(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY) + 1, MathHelper.floor_double(this.posZ)))
 						{
 							--var36;
 						}
@@ -362,7 +373,7 @@ namespace DotCraftCore.nEntity.nProjectile
 								if (this.field_146038_az <= 0)
 								{
 									this.motionY -= 0.20000000298023224D;
-									this.playSound("random.splash", 0.25F, 1.0F + (this.rand.nextFloat() - this.rand.nextFloat()) * 0.4F);
+									this.playSound("random.splash", 0.25F, 1.0F + (this.rand.NextFloat() - this.rand.NextFloat()) * 0.4F);
 									var15 = (float)MathHelper.floor_double(this.boundingBox.minY);
 									var35.func_147487_a("bubble", this.posX, (double)(var15 + 1.0F), this.posZ, (int)(1.0F + this.width * 20.0F), (double)this.width, 0.0D, (double)this.width, 0.20000000298023224D);
 									var35.func_147487_a("wake", this.posX, (double)(var15 + 1.0F), this.posZ, (int)(1.0F + this.width * 20.0F), (double)this.width, 0.0D, (double)this.width, 0.20000000298023224D);
@@ -370,7 +381,7 @@ namespace DotCraftCore.nEntity.nProjectile
 								}
 								else
 								{
-									this.field_146054_aA = (float)((double)this.field_146054_aA + this.rand.nextGaussian() * 4.0D);
+									this.field_146054_aA = (float)((double)this.field_146054_aA + this.rand.NextGaussian() * 4.0D);
 									var15 = this.field_146054_aA * 0.017453292F;
 									var37 = MathHelper.sin(var15);
 									var17 = MathHelper.cos(var15);
@@ -378,7 +389,7 @@ namespace DotCraftCore.nEntity.nProjectile
 									var20 = (double)((float)MathHelper.floor_double(this.boundingBox.minY) + 1.0F);
 									var22 = this.posZ + (double)(var17 * (float)this.field_146038_az * 0.1F);
 
-									if (this.rand.nextFloat() < 0.15F)
+									if (this.rand.NextFloat() < 0.15F)
 									{
 										var35.func_147487_a("bubble", var38, var20 - 0.10000000149011612D, var22, 1, (double)var37, 0.1D, (double)var17, 0.0D);
 									}
@@ -407,7 +418,7 @@ namespace DotCraftCore.nEntity.nProjectile
 									var15 = (float)((double)var15 + (double)(60 - this.field_146040_ay) * 0.01D);
 								}
 
-								if (this.rand.nextFloat() < var15)
+								if (this.rand.NextFloat() < var15)
 								{
 									var37 = MathHelper.randomFloatClamp(this.rand, 0.0F, 360.0F) * 0.017453292F;
 									var17 = MathHelper.randomFloatClamp(this.rand, 25.0F, 60.0F);
@@ -432,7 +443,7 @@ namespace DotCraftCore.nEntity.nProjectile
 
 						if (this.field_146045_ax > 0)
 						{
-							this.motionY -= (double)(this.rand.nextFloat() * this.rand.nextFloat() * this.rand.nextFloat()) * 0.2D;
+							this.motionY -= this.rand.NextDouble() * this.rand.NextDouble() * this.rand.NextDouble();
 						}
 					}
 
@@ -441,13 +452,13 @@ namespace DotCraftCore.nEntity.nProjectile
 
 					if (var33 > 0.0D)
 					{
-						var31 = (float)((double)var31 * 0.9D);
+						var31 = var31 * 0.9D;
 						this.motionY *= 0.8D;
 					}
 
-					this.motionX *= (double)var31;
-					this.motionY *= (double)var31;
-					this.motionZ *= (double)var31;
+					this.motionX *= var31;
+					this.motionY *= var31;
+					this.motionZ *= var31;
 					this.setPosition(this.posX, this.posY, this.posZ);
 				}
 			}
@@ -538,7 +549,7 @@ namespace DotCraftCore.nEntity.nProjectile
 
 		private ItemStack func_146033_f()
 		{
-			float var1 = this.worldObj.rand.nextFloat();
+			float var1 = this.worldObj.rand.NextFloat();
 			int var2 = EnchantmentHelper.func_151386_g(this.field_146042_b);
 			int var3 = EnchantmentHelper.func_151387_h(this.field_146042_b);
 			float var4 = 0.1F - (float)var2 * 0.025F - (float)var3 * 0.01F;

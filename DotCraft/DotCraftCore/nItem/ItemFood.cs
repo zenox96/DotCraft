@@ -1,11 +1,11 @@
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nPotion;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+
 namespace DotCraftCore.nItem
 {
-
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using PotionEffect = DotCraftCore.nPotion.PotionEffect;
-	using World = DotCraftCore.nWorld.World;
-
 	public class ItemFood : Item
 	{
 	/// <summary> Number of ticks to run while 'EnumAction'ing until result.  </summary>
@@ -15,17 +15,10 @@ namespace DotCraftCore.nItem
 		private readonly int healAmount;
 		private readonly float saturationModifier;
 
-	/// <summary> Whether wolves like this food (true for raw and cooked porkchop).  </summary>
-		private readonly bool isWolfsFavoriteMeat;
-
-///    
-///     <summary> * If this field is true, the food can be consumed even if the player don't need to eat. </summary>
-///     
+    /// <summary> * If this field is true, the food can be consumed even if the player don't need to eat. </summary>
 		private bool alwaysEdible;
 
-///    
-///     <summary> * represents the potion effect that will occurr upon eating this food. Set by setPotionEffect </summary>
-///     
+    /// <summary> * represents the potion effect that will occurr upon eating this food. Set by setPotionEffect </summary>
 		private int potionId;
 
 	/// <summary> set by setPotionEffect  </summary>
@@ -55,14 +48,14 @@ namespace DotCraftCore.nItem
 		{
 			--p_77654_1_.stackSize;
 			p_77654_3_.FoodStats.func_151686_a(this, p_77654_1_);
-			p_77654_2_.playSoundAtEntity(p_77654_3_, "random.burp", 0.5F, p_77654_2_.rand.nextFloat() * 0.1F + 0.9F);
+			p_77654_2_.playSoundAtEntity(p_77654_3_, "random.burp", 0.5F, p_77654_2_.rand.NextFloat() * 0.1F + 0.9F);
 			this.onFoodEaten(p_77654_1_, p_77654_2_, p_77654_3_);
 			return p_77654_1_;
 		}
 
 		protected internal virtual void onFoodEaten(ItemStack p_77849_1_, World p_77849_2_, EntityPlayer p_77849_3_)
 		{
-			if (!p_77849_2_.isClient && this.potionId > 0 && p_77849_2_.rand.nextFloat() < this.potionEffectProbability)
+			if (!p_77849_2_.isClient && this.potionId > 0 && p_77849_2_.rand.NextFloat() < this.potionEffectProbability)
 			{
 				p_77849_3_.addPotionEffect(new PotionEffect(this.potionId, this.potionDuration * 20, this.potionAmplifier));
 			}
@@ -110,12 +103,10 @@ namespace DotCraftCore.nItem
 ///    
 ///     <summary> * Whether wolves like this food (true for raw and cooked porkchop). </summary>
 ///     
-		public virtual bool isWolfsFavoriteMeat()
+		public virtual bool isWolfsFavoriteMeat
 		{
-			get
-			{
-				return this.isWolfsFavoriteMeat;
-			}
+			get;
+            protected set;
 		}
 
 ///    

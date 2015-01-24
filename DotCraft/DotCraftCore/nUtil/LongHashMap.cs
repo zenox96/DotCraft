@@ -41,8 +41,8 @@ namespace DotCraftCore.nUtil
 ///     
 		private static int hash(int p_76157_0_)
 		{
-			p_76157_0_ ^= (int)((uint)p_76157_0_ >> 20 ^ p_76157_0_ >)>> 12;
-			return p_76157_0_ ^ (int)((uint)p_76157_0_ >> 7 ^ p_76157_0_ >)>> 4;
+			p_76157_0_ ^= p_76157_0_ >> 20 ^ p_76157_0_ >> 12;
+			return p_76157_0_ ^ p_76157_0_ >> 7 ^ p_76157_0_ >> 4;
 		}
 
 ///    

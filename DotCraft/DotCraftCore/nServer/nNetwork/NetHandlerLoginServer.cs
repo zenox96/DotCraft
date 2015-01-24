@@ -1,30 +1,10 @@
+using DotCraftCore.nNetwork;
+using DotCraftCore.nNetwork.nLogin;
 using System;
 using System.Threading;
 
 namespace DotCraftCore.nServer.nNetwork
 {
-
-	using Charsets = com.google.common.base.Charsets;
-	using GameProfile = com.mojang.authlib.GameProfile;
-	using AuthenticationUnavailableException = com.mojang.authlib.exceptions.AuthenticationUnavailableException;
-	using GenericFutureListener = io.netty.util.concurrent.GenericFutureListener;
-	using SecretKey = javax.crypto.SecretKey;
-	using EnumConnectionState = DotCraftCore.network.EnumConnectionState;
-	using NetworkManager = DotCraftCore.network.NetworkManager;
-	using INetHandlerLoginServer = DotCraftCore.network.login.INetHandlerLoginServer;
-	using C00PacketLoginStart = DotCraftCore.network.login.client.C00PacketLoginStart;
-	using C01PacketEncryptionResponse = DotCraftCore.network.login.client.C01PacketEncryptionResponse;
-	using S00PacketDisconnect = DotCraftCore.network.login.server.S00PacketDisconnect;
-	using S01PacketEncryptionRequest = DotCraftCore.network.login.server.S01PacketEncryptionRequest;
-	using S02PacketLoginSuccess = DotCraftCore.network.login.server.S02PacketLoginSuccess;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using CryptManager = DotCraftCore.Util.CryptManager;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using Validate = org.apache.commons.lang3.Validate;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
 	public class NetHandlerLoginServer : INetHandlerLoginServer
 	{
 		private static readonly AtomicInteger field_147331_b = new AtomicInteger(0);

@@ -1,80 +1,31 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nCommand;
+using DotCraftCore.nCommand.nServer;
+using DotCraftCore.nEnchantment;
+using DotCraftCore.nEntity.nAI.nAttributes;
+using DotCraftCore.nEntity.nBoss;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nMonster;
+using DotCraftCore.nEntity.nPassive;
+using DotCraftCore.nEntity.nProjectile;
+using DotCraftCore.nEvent;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nPotion;
+using DotCraftCore.nScoreboard;
+using DotCraftCore.nStats;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
+using DotCraftCore.nWorld.nChunk;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nEntity.nPlayer
 {
-
-	using DotCraftCore.nBlock;
-using DotCraftCore.nStats;
-using DotCraftCore.nTileEntity;
-using Charsets = com.google.common.base.Charsets;
-	using GameProfile = com.mojang.authlib.GameProfile;
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockBed = DotCraftCore.nBlock.BlockBed;
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using ICommandSender = DotCraftCore.nCommand.ICommandSender;
-	using CommandBlockLogic = DotCraftCore.nCommand.nServer.CommandBlockLogic;
-	using EnchantmentHelper = DotCraftCore.Enchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.Entity.Entity;
-	using EntityList = DotCraftCore.Entity.EntityList;
-	using EntityLivingBase = DotCraftCore.Entity.EntityLivingBase;
-	using IEntityMultiPart = DotCraftCore.Entity.IEntityMultiPart;
-	using IMerchant = DotCraftCore.Entity.IMerchant;
-	using SharedMonsterAttributes = DotCraftCore.Entity.SharedMonsterAttributes;
-	using IAttributeInstance = DotCraftCore.Entity.AI.Attributes.IAttributeInstance;
-	using EntityDragonPart = DotCraftCore.Entity.Boss.EntityDragonPart;
-	using EntityBoat = DotCraftCore.Entity.Item.EntityBoat;
-	using EntityItem = DotCraftCore.Entity.Item.EntityItem;
-	using EntityMinecart = DotCraftCore.Entity.Item.EntityMinecart;
-	using EntityMinecartHopper = DotCraftCore.Entity.Item.EntityMinecartHopper;
-	using EntityMob = DotCraftCore.Entity.Monster.EntityMob;
-	using IMob = DotCraftCore.Entity.Monster.IMob;
-	using EntityHorse = DotCraftCore.Entity.Passive.EntityHorse;
-	using EntityPig = DotCraftCore.Entity.Passive.EntityPig;
-	using EntityArrow = DotCraftCore.Entity.Projectile.EntityArrow;
-	using EntityFishHook = DotCraftCore.Entity.Projectile.EntityFishHook;
-	using ClickEvent = DotCraftCore.Event.ClickEvent;
-	using Blocks = DotCraftCore.Init.Blocks;
-	using Items = DotCraftCore.Init.Items;
-	using Container = DotCraftCore.Inventory.Container;
-	using ContainerPlayer = DotCraftCore.Inventory.ContainerPlayer;
-	using IInventory = DotCraftCore.Inventory.IInventory;
-	using InventoryEnderChest = DotCraftCore.Inventory.InventoryEnderChest;
-	using EnumAction = DotCraftCore.Item.EnumAction;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.NBT.NBTTagList;
-	using Potion = DotCraftCore.Potion.Potion;
-	using IScoreObjectiveCriteria = DotCraftCore.Scoreboard.IScoreObjectiveCriteria;
-	using Score = DotCraftCore.Scoreboard.Score;
-	using ScoreObjective = DotCraftCore.Scoreboard.ScoreObjective;
-	using ScorePlayerTeam = DotCraftCore.Scoreboard.ScorePlayerTeam;
-	using Scoreboard = DotCraftCore.Scoreboard.Scoreboard;
-	using Team = DotCraftCore.Scoreboard.Team;
-	using AchievementList = DotCraftCore.Stats.AchievementList;
-	using StatBase = DotCraftCore.Stats.StatBase;
-	using StatList = DotCraftCore.Stats.StatList;
-	using TileEntity = DotCraftCore.TileEntity.TileEntity;
-	using TileEntityBeacon = DotCraftCore.TileEntity.TileEntityBeacon;
-	using TileEntityBrewingStand = DotCraftCore.TileEntity.TileEntityBrewingStand;
-	using TileEntityDispenser = DotCraftCore.TileEntity.TileEntityDispenser;
-	using TileEntityFurnace = DotCraftCore.TileEntity.TileEntityFurnace;
-	using TileEntityHopper = DotCraftCore.TileEntity.TileEntityHopper;
-	using AxisAlignedBB = DotCraftCore.Util.AxisAlignedBB;
-	using ChatComponentText = DotCraftCore.Util.ChatComponentText;
-	using ChunkCoordinates = DotCraftCore.Util.ChunkCoordinates;
-	using DamageSource = DotCraftCore.Util.DamageSource;
-	using FoodStats = DotCraftCore.Util.FoodStats;
-	using IChatComponent = DotCraftCore.Util.IChatComponent;
-	using IIcon = DotCraftCore.Util.IIcon;
-	using MathHelper = DotCraftCore.Util.MathHelper;
-	using Vec3 = DotCraftCore.Util.Vec3;
-	using EnumDifficulty = DotCraftCore.World.EnumDifficulty;
-	using World = DotCraftCore.World.World;
-	using WorldSettings = DotCraftCore.World.WorldSettings;
-	using IChunkProvider = DotCraftCore.World.Chunk.IChunkProvider;
-
 	public abstract class EntityPlayer : EntityLivingBase, ICommandSender
 	{
 	/// <summary> Inventory of the player  </summary>
@@ -169,7 +120,7 @@ using Charsets = com.google.common.base.Charsets;
 		public EntityFishHook fishEntity;
 		
 
-		public EntityPlayer(nWorld p_i45324_1_, GameProfile p_i45324_2_) : base(p_i45324_1_)
+		public EntityPlayer(World p_i45324_1_, GameProfile p_i45324_2_) : base(p_i45324_1_)
 		{
 			this.entityUniqueID = func_146094_a(p_i45324_2_);
 			this.field_146106_i = p_i45324_2_;
@@ -221,7 +172,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Checks if the entity is currently using an item (e.g., bow, food, sword) by holding down the useItemButton </summary>
 ///     
-		public virtual bool isUsingItem()
+		public virtual bool isUsingItem
 		{
 			get
 			{
@@ -236,7 +187,7 @@ using Charsets = com.google.common.base.Charsets;
 		{
 			get
 			{
-				return this.UsingItem ? this.itemInUse.MaxItemUseDuration - this.itemInUseCount : 0;
+				return this.isUsingItem ? this.itemInUse.MaxItemUseDuration - this.itemInUseCount : 0;
 			}
 		}
 
@@ -257,15 +208,15 @@ using Charsets = com.google.common.base.Charsets;
 
 			if (!this.worldObj.isClient)
 			{
-				this.Eating = false;
+				this.isEating = false;
 			}
 		}
 
-		public virtual bool isBlocking()
+		public virtual bool isBlocking
 		{
 			get
 			{
-				return this.UsingItem && this.itemInUse.Item.getItemUseAction(this.itemInUse) == EnumAction.block;
+				return this.isUsingItem && this.itemInUse.Item.getItemUseAction(this.itemInUse) == EnumAction.block;
 			}
 		}
 
@@ -301,7 +252,7 @@ using Charsets = com.google.common.base.Charsets;
 				--this.xpCooldown;
 			}
 
-			if (this.PlayerSleeping)
+			if (this.isPlayerSleeping)
 			{
 				++this.sleepTimer;
 
@@ -312,11 +263,11 @@ using Charsets = com.google.common.base.Charsets;
 
 				if (!this.worldObj.isClient)
 				{
-					if (!this.InBed)
+					if (!this.isInBed())
 					{
 						this.wakeUpPlayer(true, true, false);
 					}
-					else if (this.worldObj.Daytime)
+					else if (this.worldObj.isDaytime)
 					{
 						this.wakeUpPlayer(false, true, true);
 					}
@@ -340,7 +291,7 @@ using Charsets = com.google.common.base.Charsets;
 				this.openContainer = this.inventoryContainer;
 			}
 
-			if (this.Burning && this.capabilities.disableDamage)
+			if (this.isBurning && this.capabilities.disableDamage)
 			{
 				this.extinguish();
 			}
@@ -449,17 +400,17 @@ using Charsets = com.google.common.base.Charsets;
 		{
 			if (p_71010_1_.ItemUseAction == EnumAction.drink)
 			{
-				this.playSound("random.drink", 0.5F, this.worldObj.rand.nextFloat() * 0.1F + 0.9F);
+				this.playSound("random.drink", 0.5F, this.worldObj.rand.NextFloat() * 0.1F + 0.9F);
 			}
 
 			if (p_71010_1_.ItemUseAction == EnumAction.eat)
 			{
 				for (int var3 = 0; var3 < p_71010_2_; ++var3)
 				{
-					Vec3 var4 = Vec3.createVectorHelper(((double)this.rand.nextFloat() - 0.5D) * 0.1D, new Random(1).NextDouble() * 0.1D + 0.1D, 0.0D);
+					Vec3 var4 = Vec3.createVectorHelper((this.rand.NextDouble() - 0.5D) * 0.1D, new Random(1).NextDouble() * 0.1D + 0.1D, 0.0D);
 					var4.rotateAroundX(-this.rotationPitch * (float)Math.PI / 180.0F);
 					var4.rotateAroundY(-this.rotationYaw * (float)Math.PI / 180.0F);
-					Vec3 var5 = Vec3.createVectorHelper(((double)this.rand.nextFloat() - 0.5D) * 0.3D, (double)(-this.rand.nextFloat()) * 0.6D - 0.3D, 0.6D);
+					Vec3 var5 = Vec3.createVectorHelper((this.rand.NextDouble() - 0.5D) * 0.3D, (-this.rand.NextDouble()) * 0.6D - 0.3D, 0.6D);
 					var5.rotateAroundX(-this.rotationPitch * (float)Math.PI / 180.0F);
 					var5.rotateAroundY(-this.rotationYaw * (float)Math.PI / 180.0F);
 					var5 = var5.addVector(this.posX, this.posY + (double)this.EyeHeight, this.posZ);
@@ -473,7 +424,7 @@ using Charsets = com.google.common.base.Charsets;
 					this.worldObj.spawnParticle(var6, var5.xCoord, var5.yCoord, var5.zCoord, var4.xCoord, var4.yCoord + 0.05D, var4.zCoord);
 				}
 
-				this.playSound("random.eat", 0.5F + 0.5F * (float)this.rand.Next(2), (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+				this.playSound("random.eat", 0.5F + 0.5F * (float)this.rand.Next(2), (this.rand.NextFloat() - this.rand.NextFloat()) * 0.2F + 1.0F);
 			}
 		}
 
@@ -517,7 +468,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Dead and sleeping entities cannot move </summary>
 ///     
-		protected internal override bool isMovementBlocked()
+		protected internal override bool isMovementBlocked
 		{
 			get
 			{
@@ -563,10 +514,10 @@ using Charsets = com.google.common.base.Charsets;
 ///     
 		public override void updateRidden()
 		{
-			if (!this.worldObj.isClient && this.Sneaking)
+			if (!this.worldObj.isClient && this.isSneaking)
 			{
 				this.mountEntity((Entity)null);
-				this.Sneaking = false;
+				this.isSneaking = false;
 			}
 			else
 			{
@@ -638,7 +589,7 @@ using Charsets = com.google.common.base.Charsets;
 
 			if (this.Sprinting)
 			{
-				this.jumpMovementFactor = (float)((double)this.jumpMovementFactor + (double)this.speedInAir * 0.3D);
+				this.jumpMovementFactor = (float)(this.jumpMovementFactor + this.speedInAir * 0.3F);
 			}
 
 			this.AIMoveSpeed = (float)var1.AttributeValue;
@@ -745,8 +696,8 @@ using Charsets = com.google.common.base.Charsets;
 
 			if (p_70645_1_ != null)
 			{
-				this.motionX = (double)(-MathHelper.cos((this.attackedAtYaw + this.rotationYaw) * (float)Math.PI / 180.0F) * 0.1F);
-				this.motionZ = (double)(-MathHelper.sin((this.attackedAtYaw + this.rotationYaw) * (float)Math.PI / 180.0F) * 0.1F);
+				this.motionX = (double)(-Math.Cos((this.attackedAtYaw + this.rotationYaw) * Math.PI / 180.0D) * 0.1D);
+				this.motionZ = (double)(-Math.Sin((this.attackedAtYaw + this.rotationYaw) * Math.PI / 180.0D) * 0.1D);
 			}
 			else
 			{
@@ -849,8 +800,8 @@ using Charsets = com.google.common.base.Charsets;
 
 				if (p_146097_2_)
 				{
-					var6 = this.rand.nextFloat() * 0.5F;
-					float var7 = this.rand.nextFloat() * (float)Math.PI * 2.0F;
+					var6 = this.rand.NextFloat() * 0.5F;
+					float var7 = this.rand.NextFloat() * (float)Math.PI * 2.0F;
 					var4.motionX = (double)(-MathHelper.sin(var7) * var6);
 					var4.motionZ = (double)(MathHelper.cos(var7) * var6);
 					var4.motionY = 0.20000000298023224D;
@@ -862,10 +813,10 @@ using Charsets = com.google.common.base.Charsets;
 					var4.motionZ = (double)(MathHelper.cos(this.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(this.rotationPitch / 180.0F * (float)Math.PI) * var5);
 					var4.motionY = (double)(-MathHelper.sin(this.rotationPitch / 180.0F * (float)Math.PI) * var5 + 0.1F);
 					var5 = 0.02F;
-					var6 = this.rand.nextFloat() * (float)Math.PI * 2.0F;
-					var5 *= this.rand.nextFloat();
+					var6 = this.rand.NextFloat() * (float)Math.PI * 2.0F;
+					var5 *= this.rand.NextFloat();
 					var4.motionX += Math.Cos((double)var6) * (double)var5;
-					var4.motionY += (double)((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
+					var4.motionY += (double)((this.rand.NextFloat() - this.rand.NextFloat()) * 0.1F);
 					var4.motionZ += Math.Sin((double)var6) * (double)var5;
 				}
 
@@ -910,14 +861,14 @@ using Charsets = com.google.common.base.Charsets;
 				}
 			}
 
-			if (this.isPotionActive(nPotion.digSpeed))
+			if (this.isPotionActive(Potion.digSpeed))
 			{
-				var3 *= 1.0F + (float)(this.getActivePotionEffect(nPotion.digSpeed).Amplifier + 1) * 0.2F;
+				var3 *= 1.0F + (float)(this.getActivePotionEffect(Potion.digSpeed).Amplifier + 1) * 0.2F;
 			}
 
-			if (this.isPotionActive(nPotion.digSlowdown))
+			if (this.isPotionActive(Potion.digSlowdown))
 			{
-				var3 *= 1.0F - (float)(this.getActivePotionEffect(nPotion.digSlowdown).Amplifier + 1) * 0.2F;
+				var3 *= 1.0F - (float)(this.getActivePotionEffect(Potion.digSlowdown).Amplifier + 1) * 0.2F;
 			}
 
 			if (this.isInsideOfMaterial(Material.water) && !EnchantmentHelper.getAquaAffinityModifier(this))
@@ -1066,7 +1017,7 @@ using Charsets = com.google.common.base.Charsets;
 ///     
 		public override bool attackEntityFrom(DamageSource p_70097_1_, float p_70097_2_)
 		{
-			if (this.EntityInvulnerable)
+			if (this.isEntityInvulnerable)
 			{
 				return false;
 			}
@@ -1084,12 +1035,12 @@ using Charsets = com.google.common.base.Charsets;
 				}
 				else
 				{
-					if (this.PlayerSleeping && !this.worldObj.isClient)
+					if (this.isPlayerSleeping && !this.worldObj.isClient)
 					{
 						this.wakeUpPlayer(true, true, false);
 					}
 
-					if (p_70097_1_.DifficultyScaled)
+					if (p_70097_1_.isDifficultyScaled)
 					{
 						if (this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL)
 						{
@@ -1182,9 +1133,9 @@ using Charsets = com.google.common.base.Charsets;
 ///     
 		protected internal override void damageEntity(DamageSource p_70665_1_, float p_70665_2_)
 		{
-			if (!this.EntityInvulnerable)
+			if (!this.isEntityInvulnerable)
 			{
-				if (!p_70665_1_.Unblockable && this.Blocking && p_70665_2_ > 0.0F)
+				if (!p_70665_1_.isUnblockable && this.isBlocking && p_70665_2_ > 0.0F)
 				{
 					p_70665_2_ = (1.0F + p_70665_2_) * 0.5F;
 				}
@@ -1213,7 +1164,7 @@ using Charsets = com.google.common.base.Charsets;
 		{
 		}
 
-		public virtual void func_146100_a(nTileEntity p_146100_1_)
+		public virtual void func_146100_a(TileEntity p_146100_1_)
 		{
 		}
 
@@ -1342,7 +1293,7 @@ using Charsets = com.google.common.base.Charsets;
 
 					if (var2 > 0.0F || var4 > 0.0F)
 					{
-						bool var5 = this.fallDistance > 0.0F && !this.onGround && !this.OnLadder && !this.InWater && !this.isPotionActive(nPotion.blindness) && this.ridingEntity == null && p_71059_1_ is EntityLivingBase;
+						bool var5 = this.fallDistance > 0.0F && !this.onGround && !this.isOnLadder && !this.inWater && !this.isPotionActive(Potion.blindness) && this.ridingEntity == null && p_71059_1_ is EntityLivingBase;
 
 						if (var5 && var2 > 0.0F)
 						{
@@ -1353,7 +1304,7 @@ using Charsets = com.google.common.base.Charsets;
 						bool var6 = false;
 						int var7 = EnchantmentHelper.getFireAspectModifier(this);
 
-						if (p_71059_1_ is EntityLivingBase && var7 > 0 && !p_71059_1_.Burning)
+						if (p_71059_1_ is EntityLivingBase && var7 > 0 && !p_71059_1_.isBurning)
 						{
 							var6 = true;
 							p_71059_1_.Fire = 1;
@@ -1470,7 +1421,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Checks if this entity is inside of an opaque block </summary>
 ///     
-		public override bool isEntityInsideOpaqueBlock()
+		public override bool isEntityInsideOpaqueBlock
 		{
 			get
 			{
@@ -1496,17 +1447,17 @@ using Charsets = com.google.common.base.Charsets;
 		{
 			if (!this.worldObj.isClient)
 			{
-				if (this.PlayerSleeping || !this.EntityAlive)
+				if (this.isPlayerSleeping || !this.isEntityAlive)
 				{
 					return EntityPlayer.EnumStatus.OTHER_PROBLEM;
 				}
 
-				if (!this.worldObj.provider.SurfaceWorld)
+				if (!this.worldObj.provider.isSurfaceWorld)
 				{
 					return EntityPlayer.EnumStatus.NOT_POSSIBLE_HERE;
 				}
 
-				if (this.worldObj.Daytime)
+				if (this.worldObj.isDaytime)
 				{
 					return EntityPlayer.EnumStatus.NOT_POSSIBLE_NOW;
 				}
@@ -1654,7 +1605,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Checks if the player is currently in a bed </summary>
 ///     
-		private bool isInBed()
+		private bool isInBed
 		{
 			get
 			{
@@ -1666,7 +1617,7 @@ using Charsets = com.google.common.base.Charsets;
 ///     <summary> * Ensure that a block enabling respawning exists at the specified coordinates and find an empty space nearby to
 ///     * spawn. </summary>
 ///     
-		public static ChunkCoordinates verifyRespawnCoordinates(nWorld p_71056_0_, ChunkCoordinates p_71056_1_, bool p_71056_2_)
+		public static ChunkCoordinates verifyRespawnCoordinates(World p_71056_0_, ChunkCoordinates p_71056_1_, bool p_71056_2_)
 		{
 			IChunkProvider var3 = p_71056_0_.ChunkProvider;
 			var3.loadChunk(p_71056_1_.posX - 3 >> 4, p_71056_1_.posZ - 3 >> 4);
@@ -1724,7 +1675,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Returns whether player is sleeping or not </summary>
 ///     
-		public override bool isPlayerSleeping()
+		public override bool isPlayerSleeping
 		{
 			get
 			{
@@ -1735,7 +1686,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Returns whether or not the player is asleep and the screen has fully faded. </summary>
 ///     
-		public virtual bool isPlayerFullyAsleep()
+		public virtual bool isPlayerFullyAsleep
 		{
 			get
 			{
@@ -1785,7 +1736,7 @@ using Charsets = com.google.common.base.Charsets;
 			}
 		}
 
-		public virtual bool isSpawnForced()
+		public virtual bool isSpawnForced
 		{
 			get
 			{
@@ -1899,7 +1850,7 @@ using Charsets = com.google.common.base.Charsets;
 						this.addExhaustion(0.015F * (float)var7 * 0.01F);
 					}
 				}
-				else if (this.InWater)
+				else if (this.inWater)
 				{
 					var7 = Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
 
@@ -1909,7 +1860,7 @@ using Charsets = com.google.common.base.Charsets;
 						this.addExhaustion(0.015F * (float)var7 * 0.01F);
 					}
 				}
-				else if (this.OnLadder)
+				else if (this.isOnLadder)
 				{
 					if (p_71000_3_ > 0.0D)
 					{
@@ -2037,48 +1988,6 @@ using Charsets = com.google.common.base.Charsets;
 			}
 		}
 
-///    
-///     <summary> * Gets the Icon Index of the item currently held </summary>
-///     
-		public override IIcon getItemIcon(ItemStack p_70620_1_, int p_70620_2_)
-		{
-			IIcon var3 = base.getItemIcon(p_70620_1_, p_70620_2_);
-
-			if (p_70620_1_.Item == Items.fishing_rod && this.fishEntity != null)
-			{
-				var3 = Items.fishing_rod.func_94597_g();
-			}
-			else
-			{
-				if (p_70620_1_.Item.requiresMultipleRenderPasses())
-				{
-					return p_70620_1_.Item.getIconFromDamageForRenderPass(p_70620_1_.ItemDamage, p_70620_2_);
-				}
-
-				if (this.itemInUse != null && p_70620_1_.Item == Items.bow)
-				{
-					int var4 = p_70620_1_.MaxItemUseDuration - this.itemInUseCount;
-
-					if (var4 >= 18)
-					{
-						return Items.bow.getItemIconForUseDuration(2);
-					}
-
-					if (var4 > 13)
-					{
-						return Items.bow.getItemIconForUseDuration(1);
-					}
-
-					if (var4 > 0)
-					{
-						return Items.bow.getItemIconForUseDuration(0);
-					}
-				}
-			}
-
-			return var3;
-		}
-
 		public virtual ItemStack getCurrentArmor(int p_82169_1_)
 		{
 			return this.inventory.armorItemInSlot(p_82169_1_);
@@ -2187,7 +2096,7 @@ using Charsets = com.google.common.base.Charsets;
 
 				if (!this.worldObj.isClient)
 				{
-					this.Eating = true;
+					this.isEating = true;
 				}
 			}
 		}
@@ -2205,9 +2114,9 @@ using Charsets = com.google.common.base.Charsets;
 			{
 				Block var4 = this.worldObj.getBlock(p_82246_1_, p_82246_2_, p_82246_3_);
 
-				if (var4.Material != Material.air)
+				if (var4.BlockMaterial != Material.air)
 				{
-					if (var4.Material.AdventureModeExempt)
+					if (var4.BlockMaterial.AdventureModeExempt)
 					{
 						return true;
 					}
@@ -2251,7 +2160,7 @@ using Charsets = com.google.common.base.Charsets;
 ///    
 ///     <summary> * Only use is to identify if class is an instance of player for experience dropping </summary>
 ///     
-		protected internal override bool isPlayer()
+		protected internal override bool isPlayer
 		{
 			get
 			{
@@ -2333,7 +2242,7 @@ using Charsets = com.google.common.base.Charsets;
 			}
 		}
 
-		public virtual nWorld EntityWorld
+		public virtual World EntityWorld
 		{
 			get
 			{
@@ -2386,7 +2295,7 @@ using Charsets = com.google.common.base.Charsets;
 ///     
 		public override bool isInvisibleToPlayer(EntityPlayer p_98034_1_)
 		{
-			if (!this.Invisible)
+			if (!this.isInvisible)
 			{
 				return false;
 			}
@@ -2413,7 +2322,7 @@ using Charsets = com.google.common.base.Charsets;
 			}
 		}
 
-		public override bool isPushedByWater()
+		public override bool isPushedByWater
 		{
 			get
 			{
@@ -2421,7 +2330,7 @@ using Charsets = com.google.common.base.Charsets;
 			}
 		}
 
-		public virtual nScoreboard WorldScoreboard
+		public virtual Scoreboard WorldScoreboard
 		{
 			get
 			{
@@ -2440,7 +2349,7 @@ using Charsets = com.google.common.base.Charsets;
 		public override IChatComponent func_145748_c_()
 		{
 			ChatComponentText var1 = new ChatComponentText(ScorePlayerTeam.formatPlayerName(this.Team, this.CommandSenderName));
-			var1.ChatStyle.ChatClickEvent = new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/msg " + this.CommandSenderName + " ");
+			var1.ChatStyle.ChatClickEvent = new ClickEvent(ClickEvent.EnumAction.SUGGEST_COMMAND, "/msg " + this.CommandSenderName + " ");
 			return var1;
 		}
 
@@ -2468,7 +2377,7 @@ using Charsets = com.google.common.base.Charsets;
 
 			if (var1 == null)
 			{
-				var1 = UUID.nameUUIDFromBytes(("OfflinePlayer:" + p_146094_0_.Name).getBytes(Charsets.UTF_8));
+				var1 = UUID.NameUUIDFromBytes(("OfflinePlayer:" + p_146094_0_.Name).getBytes(Charsets.UTF_8));
 			}
 
 			return var1;

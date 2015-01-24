@@ -1,8 +1,7 @@
+using Entity = DotCraftCore.nEntity.Entity;
+
 namespace DotCraftCore.nUtil
 {
-
-	using Entity = DotCraftCore.entity.Entity;
-
 	public class MovingObjectPosition
 	{
 	/// <summary> What type of ray trace hit was this? 0 = block, 1 = entity  </summary>
@@ -62,21 +61,9 @@ namespace DotCraftCore.nUtil
 
 		public enum MovingObjectType
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			MISS("MISS", 0),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			BLOCK("BLOCK", 1),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			ENTITY("ENTITY", 2);
-
-			@private static final MovingObjectPosition.MovingObjectType[] $VALUES = new MovingObjectPosition.MovingObjectType[]{MISS, BLOCK, ENTITY
-		}
-			
-
-			private MovingObjectType(string p_i2302_1_, int p_i2302_2_)
-			{
-			}
-		}
+            MISS = 0,
+            BLOCK = 1,
+            ENTITY = 2
+        }
 	}
-
 }

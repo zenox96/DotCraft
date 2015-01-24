@@ -1,14 +1,8 @@
+using DotCraftCore.nEntity;
 using System;
 
 namespace DotCraftCore.nEntity
 {
-
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using IMob = DotCraftCore.nEntity.nMonster.IMob;
-	using EntityAmbientCreature = DotCraftCore.nEntity.nPassive.EntityAmbientCreature;
-	using EntityAnimal = DotCraftCore.nEntity.nPassive.EntityAnimal;
-	using EntityWaterMob = DotCraftCore.nEntity.nPassive.EntityWaterMob;
-
 	public enum EnumCreatureType
 	{
 //JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:

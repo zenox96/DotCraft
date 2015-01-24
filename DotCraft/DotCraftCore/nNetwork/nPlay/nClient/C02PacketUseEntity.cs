@@ -1,19 +1,14 @@
+using DotCraftCore.nEntity;
+using DotCraftCore.nWorld;
+using System;
+
 namespace DotCraftCore.nNetwork.nPlay.nClient
 {
-
-	using Entity = DotCraftCore.entity.Entity;
-	using INetHandler = DotCraftCore.nNetwork.INetHandler;
-	using Packet = DotCraftCore.nNetwork.Packet;
-	using PacketBuffer = DotCraftCore.nNetwork.PacketBuffer;
-	using INetHandlerPlayServer = DotCraftCore.nNetwork.nPlay.INetHandlerPlayServer;
-	using World = DotCraftCore.nWorld.World;
-
 	public class C02PacketUseEntity : Packet
 	{
 		private int field_149567_a;
 		private C02PacketUseEntity.Action field_149566_b;
 		
-
 		public C02PacketUseEntity()
 		{
 		}
@@ -32,7 +27,8 @@ namespace DotCraftCore.nNetwork.nPlay.nClient
 		public override void readPacketData(PacketBuffer p_148837_1_)
 		{
 			this.field_149567_a = p_148837_1_.readInt();
-			this.field_149566_b = C02PacketUseEntity.Action.field_151421_c[p_148837_1_.readByte() % C02PacketUseEntity.Action.field_151421_c.length];
+            var values = Enum.GetValues(typeof(C02PacketUseEntity.Action));
+			this.field_149566_b = (Action)values.GetValue(p_148837_1_.readByte() % values.Length);
 		}
 
 ///    
@@ -43,7 +39,7 @@ namespace DotCraftCore.nNetwork.nPlay.nClient
 		public override void writePacketData(PacketBuffer p_148840_1_)
 		{
 			p_148840_1_.writeInt(this.field_149567_a);
-			p_148840_1_.writeByte(this.field_149566_b.field_151418_d);
+			p_148840_1_.writeByte((int)this.field_149566_b);
 		}
 
 		public virtual void processPacket(INetHandlerPlayServer p_148833_1_)
@@ -68,36 +64,8 @@ namespace DotCraftCore.nNetwork.nPlay.nClient
 
 		public enum Action
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			INTERACT("INTERACT", 0, 0),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			ATTACK("ATTACK", 1, 1);
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private static final C02PacketUseEntity.Action[] field_151421_c = new C02PacketUseEntity.Action[values().length];
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final int field_151418_d;
-
-			@private static final C02PacketUseEntity.Action[] $VALUES = new C02PacketUseEntity.Action[]{INTERACT, ATTACK
-		}
-			
-
-			private Action(string p_i45250_1_, int p_i45250_2_, int p_i45250_3_)
-			{
-				this.field_151418_d = p_i45250_3_;
-			}
-
-			static C02PacketUseEntity()
-			{
-				C02PacketUseEntity.Action[] var0 = values();
-				int var1 = var0.Length;
-
-				for (int var2 = 0; var2 < var1; ++var2)
-				{
-					C02PacketUseEntity.Action var3 = var0[var2];
-					field_151421_c[var3.field_151418_d] = var3;
-				}
-			}
-		}
+            INTERACT = 0,
+            ATTACK = 1
+        }
 	}
-
 }

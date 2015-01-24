@@ -46,12 +46,12 @@ namespace DotCraftCore.nItem.nCrafting
 			this.func_151393_a(Blocks.emerald_ore, new ItemStack(Items.emerald), 1.0F);
 			this.func_151396_a(Items.potato, new ItemStack(Items.baked_potato), 0.35F);
 			this.func_151393_a(Blocks.netherrack, new ItemStack(Items.netherbrick), 0.1F);
-			ItemFishFood.FishType[] var1 = ItemFishFood.FishType.values();
+			ItemFishFood.EnumFishType[] var1 = ItemFishFood.EnumFishType.values();
 			int var2 = var1.Length;
 
 			for (int var3 = 0; var3 < var2; ++var3)
 			{
-				ItemFishFood.FishType var4 = var1[var3];
+				ItemFishFood.EnumFishType var4 = var1[var3];
 
 				if (var4.func_150973_i())
 				{

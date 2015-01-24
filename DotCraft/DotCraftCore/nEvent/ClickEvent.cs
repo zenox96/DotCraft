@@ -1,15 +1,15 @@
+
+
+using System.Collections.Generic;
 namespace DotCraftCore.nEvent
 {
-
-	using Maps = com.google.common.collect.Maps;
-
 	public class ClickEvent
 	{
-		private readonly ClickEvent.Action action;
+		private readonly ClickEvent.EnumAction action;
 		private readonly string value;
 		
 
-		public ClickEvent(ClickEvent.Action p_i45156_1_, string p_i45156_2_)
+		public ClickEvent(ClickEvent.EnumAction p_i45156_1_, string p_i45156_2_)
 		{
 			this.action = p_i45156_1_;
 			this.value = p_i45156_2_;
@@ -18,7 +18,7 @@ namespace DotCraftCore.nEvent
 ///    
 ///     <summary> * Gets the action to perform when this event is raised. </summary>
 ///     
-		public virtual ClickEvent.Action Action
+		public virtual ClickEvent.EnumAction Action
 		{
 			get
 			{
@@ -87,65 +87,44 @@ namespace DotCraftCore.nEvent
 			return var1;
 		}
 
-		public enum Action
+		public enum EnumAction
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			OPEN_URL("OPEN_URL", 0, "open_url", true),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			OPEN_FILE("OPEN_FILE", 1, "open_file", false),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			RUN_COMMAND("RUN_COMMAND", 2, "run_command", true),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			TWITCH_USER_INFO("TWITCH_USER_INFO", 3, "twitch_user_info", false),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SUGGEST_COMMAND("SUGGEST_COMMAND", 4, "suggest_command", true);
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private static final Map nameMapping = Maps.newHashMap();
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final boolean allowedInChat;
-//JAVA TO VB & C# CONVERTER TODO TASK: Enums cannot contain fields in .NET:
-//			private final String canonicalName;
+            OPEN_URL = 0,
+            OPEN_FILE = 1,
+            RUN_COMMAND = 2,
+            TWITCH_USER_INFO = 3,
+            SUGGEST_COMMAND = 4
+        }
 
-			@private static final ClickEvent.Action[] $VALUES = new ClickEvent.Action[]{OPEN_URL, OPEN_FILE, RUN_COMMAND, TWITCH_USER_INFO, SUGGEST_COMMAND
-		}
-			
+        public static class EnumActionExtension
+        {
+            private static readonly bool[] allowedInChatMap;
+            private static readonly string[] canonicalNameMap;
+            private static readonly Dictionary<string, EnumAction> nameMapping;
 
-			private Action(string p_i45155_1_, int p_i45155_2_, string p_i45155_3_, bool p_i45155_4_)
+            static EnumActionExtension(){
+                allowedInChatMap = new bool[]{true, false, true, false, true};
+                canonicalNameMap = new string[]{"open_url","open_file","run_command","twitch_user_info","suggest_command"};
+                nameMapping = new Dictionary<string, EnumAction>();
+                for (int i = 0; i < canonicalNameMap.Length; i++){
+                    nameMapping.Add(canonicalNameMap[i], (EnumAction)i);
+                }
+            }
+
+            public bool shouldAllowInChat(this EnumAction e)
 			{
-				this.canonicalName = p_i45155_3_;
-				this.allowedInChat = p_i45155_4_;
+				return EnumActionExtension.allowedInChatMap[(int)e];
 			}
 
-			public virtual bool shouldAllowInChat()
-			{
-				return this.allowedInChat;
+            public string CanonicalName(this EnumAction e)
+            {
+                return EnumActionExtension.canonicalNameMap[(int)e];
 			}
 
-			public virtual string CanonicalName
+            public static HoverEvent.EnumAction getValueByCanonicalName(this EnumAction e, string p_150684_0_)
 			{
-				get
-				{
-					return this.canonicalName;
-				}
+				return (HoverEvent.EnumAction)nameMapping[p_150684_0_];
 			}
-
-			public static ClickEvent.Action getValueByCanonicalName(string p_150672_0_)
-			{
-				return (ClickEvent.Action)nameMapping.get(p_150672_0_);
-			}
-
-			static ClickEvent()
-			{
-				ClickEvent.Action[] var0 = values();
-				int var1 = var0.Length;
-
-				for (int var2 = 0; var2 < var1; ++var2)
-				{
-					ClickEvent.Action var3 = var0[var2];
-					nameMapping.put(var3.CanonicalName, var3);
-				}
-			}
-		}
+        }
 	}
-
 }
