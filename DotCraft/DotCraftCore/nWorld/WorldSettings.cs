@@ -1,7 +1,7 @@
 namespace DotCraftCore.nWorld
 {
 
-	using PlayerCapabilities = DotCraftCore.entity.player.PlayerCapabilities;
+	using PlayerCapabilities = DotCraftCore.nEntity.nPlayer.PlayerCapabilities;
 	using WorldInfo = DotCraftCore.nWorld.nStorage.WorldInfo;
 
 	public sealed class WorldSettings
@@ -70,7 +70,7 @@ namespace DotCraftCore.nWorld
 ///    
 ///     <summary> * Returns true if the Bonus Chest is enabled. </summary>
 ///     
-		public bool isBonusChestEnabled()
+		public bool isBonusChestEnabled
 		{
 			get
 			{
@@ -114,7 +114,7 @@ namespace DotCraftCore.nWorld
 ///    
 ///     <summary> * Get whether the map features (e.g. strongholds) generation is enabled or disabled. </summary>
 ///     
-		public bool isMapFeaturesEnabled()
+		public bool isMapFeaturesEnabled
 		{
 			get
 			{
@@ -235,8 +235,7 @@ namespace DotCraftCore.nWorld
 				}
 			}
 
-			public static WorldSettings.GameType getByID(int p_77146_0_)
-			{
+			public static WorldSettings.GameType getByID(int p_77146_0_) {
 				WorldSettings.GameType[] var1 = values();
 				int var2 = var1.Length;
 
@@ -251,7 +250,7 @@ namespace DotCraftCore.nWorld
 				}
 
 				return SURVIVAL;
-			}
+                
 
 			public static WorldSettings.GameType getByName(string p_77142_0_)
 			{
@@ -266,11 +265,6 @@ namespace DotCraftCore.nWorld
 					{
 						return var4;
 					}
-				}
+
 
 				return SURVIVAL;
-			}
-		}
-	}
-
-}

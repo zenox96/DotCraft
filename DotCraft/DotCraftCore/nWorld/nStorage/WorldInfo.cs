@@ -509,7 +509,7 @@ namespace DotCraftCore.nWorld.nStorage
 ///    
 ///     <summary> * Returns true if it is raining, false otherwise. </summary>
 ///     
-		public virtual bool isRaining()
+		public virtual bool isRaining
 		{
 			get
 			{
@@ -562,7 +562,7 @@ namespace DotCraftCore.nWorld.nStorage
 ///    
 ///     <summary> * Get whether the map features (e.g. strongholds) generation is enabled or disabled. </summary>
 ///     
-		public virtual bool isMapFeaturesEnabled()
+		public virtual bool isMapFeaturesEnabled
 		{
 			get
 			{
@@ -577,7 +577,7 @@ namespace DotCraftCore.nWorld.nStorage
 ///    
 ///     <summary> * Returns true if hardcore mode is enabled, otherwise false </summary>
 ///     
-		public virtual bool isHardcoreModeEnabled()
+		public virtual bool isHardcoreModeEnabled
 		{
 			get
 			{
