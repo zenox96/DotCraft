@@ -9,6 +9,14 @@ namespace DotCraftCore.nUtil
             return (float)(rand.NextDouble());
         }
 
+        public static long NextLong(this Random rand)
+        {
+            long tmp = rand.Next(Int32.MaxValue);
+            tmp = tmp << 32;
+            tmp += rand.Next(Int32.MaxValue);
+            return tmp;
+        }
+
         public static bool NextBoolean(this Random rand)
         {
             return rand.Next(1) > 0 ? true : false;

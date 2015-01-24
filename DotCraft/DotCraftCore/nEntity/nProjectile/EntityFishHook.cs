@@ -3,30 +3,6 @@ using System.Collections;
 
 namespace DotCraftCore.nEntity.nProjectile
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using EnchantmentHelper = DotCraftCore.nEnchantment.EnchantmentHelper;
-	using Entity = DotCraftCore.nEntity.Entity;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityXPOrb = DotCraftCore.nEntity.nItem.EntityXPOrb;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Items = DotCraftCore.nInit.Items;
-	using ItemFishFood = DotCraftCore.nItem.ItemFishFood;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using StatList = DotCraftCore.nStats.StatList;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using DamageSource = DotCraftCore.nUtil.DamageSource;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
-	using Vec3 = DotCraftCore.nUtil.Vec3;
-	using WeightedRandom = DotCraftCore.nUtil.WeightedRandom;
-	using WeightedRandomFishable = DotCraftCore.nUtil.WeightedRandomFishable;
-	using World = DotCraftCore.nWorld.World;
-	using WorldServer = DotCraftCore.nWorld.WorldServer;
-
 	public class EntityFishHook : Entity
 	{
 		private static readonly IList field_146039_d = Arrays.asList(new WeightedRandomFishable[] {(new WeightedRandomFishable(new ItemStack(Items.leather_boots), 10)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.leather), 10), new WeightedRandomFishable(new ItemStack(Items.bone), 10), new WeightedRandomFishable(new ItemStack(Items.potionitem), 10), new WeightedRandomFishable(new ItemStack(Items.string), 5), (new WeightedRandomFishable(new ItemStack(Items.fishing_rod), 2)).func_150709_a(0.9F), new WeightedRandomFishable(new ItemStack(Items.bowl), 10), new WeightedRandomFishable(new ItemStack(Items.stick), 5), new WeightedRandomFishable(new ItemStack(Items.dye, 10, 0), 1), new WeightedRandomFishable(new ItemStack(Blocks.tripwire_hook), 10), new WeightedRandomFishable(new ItemStack(Items.rotten_flesh), 10)});

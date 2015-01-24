@@ -1,26 +1,22 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 
 namespace DotCraftCore.nItem
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using Blocks = DotCraftCore.init.Blocks;
-	using Items = DotCraftCore.init.Items;
-	using MovingObjectPosition = DotCraftCore.nUtil.MovingObjectPosition;
-	using World = DotCraftCore.nWorld.World;
-
 	public class ItemBucket : Item
 	{
 	/// <summary> field for checking if the bucket has been filled.  </summary>
 		private Block isFull;
-		
 
 		public ItemBucket(Block p_i45331_1_)
 		{
-			this.maxStackSize = 1;
+			this.MaxStackSize = 1;
 			this.isFull = p_i45331_1_;
 			this.CreativeTab = CreativeTabs.tabMisc;
 		}
@@ -57,7 +53,7 @@ namespace DotCraftCore.nItem
 							return p_77659_1_;
 						}
 
-						Material var9 = p_77659_2_.getBlock(var6, var7, var8).Material;
+						Material var9 = p_77659_2_.getBlock(var6, var7, var8).BlockMaterial;
 						int var10 = p_77659_2_.getBlockMetadata(var6, var7, var8);
 
 						if (var9 == Material.water && var10 == 0)
@@ -157,7 +153,7 @@ namespace DotCraftCore.nItem
 			}
 			else
 			{
-				Material var5 = p_77875_1_.getBlock(p_77875_2_, p_77875_3_, p_77875_4_).Material;
+				Material var5 = p_77875_1_.getBlock(p_77875_2_, p_77875_3_, p_77875_4_).BlockMaterial;
 				bool var6 = !var5.Solid;
 
 				if (!p_77875_1_.isAirBlock(p_77875_2_, p_77875_3_, p_77875_4_) && !var6)
@@ -168,7 +164,7 @@ namespace DotCraftCore.nItem
 				{
 					if (p_77875_1_.provider.isHellWorld && this.isFull == Blocks.flowing_water)
 					{
-						p_77875_1_.playSoundEffect((double)((float)p_77875_2_ + 0.5F), (double)((float)p_77875_3_ + 0.5F), (double)((float)p_77875_4_ + 0.5F), "random.fizz", 0.5F, 2.6F + (p_77875_1_.rand.nextFloat() - p_77875_1_.rand.nextFloat()) * 0.8F);
+						p_77875_1_.playSoundEffect((double)((float)p_77875_2_ + 0.5F), (double)((float)p_77875_3_ + 0.5F), (double)((float)p_77875_4_ + 0.5F), "random.fizz", 0.5F, 2.6F + (p_77875_1_.rand.NextFloat() - p_77875_1_.rand.NextFloat()) * 0.8F);
 
 						for (int var7 = 0; var7 < 8; ++var7)
 						{

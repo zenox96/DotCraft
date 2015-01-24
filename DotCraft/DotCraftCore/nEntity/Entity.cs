@@ -1,50 +1,30 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nCrash;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nEffect;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInit;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nServer;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nEntity
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockLiquid = DotCraftCore.nBlock.BlockLiquid;
-	using Material = DotCraftCore.nBlock.nMaterial.Material;
-	using CrashReport = DotCraftCore.crash.CrashReport;
-	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using EnchantmentProtection = DotCraftCore.nEnchantment.EnchantmentProtection;
-	using EntityLightningBolt = DotCraftCore.nEntity.nEffect.EntityLightningBolt;
-	using EntityItem = DotCraftCore.nEntity.nItem.EntityItem;
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using Blocks = DotCraftCore.nInit.Blocks;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using NBTTagDouble = DotCraftCore.nNBT.NBTTagDouble;
-	using NBTTagFloat = DotCraftCore.nNBT.NBTTagFloat;
-	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
-	using MinecraftServer = DotCraftCore.nServer.MinecraftServer;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using ChatComponentText = DotCraftCore.nUtil.ChatComponentText;
-	using ChunkCoordinates = DotCraftCore.nUtil.ChunkCoordinates;
-	using DamageSource = DotCraftCore.nUtil.DamageSource;
-	using Direction = DotCraftCore.nUtil.Direction;
-	using IChatComponent = DotCraftCore.nUtil.IChatComponent;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using ReportedException = DotCraftCore.nUtil.ReportedException;
-	using StatCollector = DotCraftCore.nUtil.StatCollector;
-	using Vec3 = DotCraftCore.nUtil.Vec3;
-	using Explosion = DotCraftCore.nWorld.Explosion;
-	using World = DotCraftCore.nWorld.World;
-	using WorldServer = DotCraftCore.nWorld.WorldServer;
-
 	public abstract class Entity
 	{
 		private static int nextEntityID;
-		private int field_145783_c;
+		private int entityID;
 		public double renderDistanceWeight;
 
 ///    
 ///     <summary> * Blocks entities from spawning when they do their AABB check to make sure the spot is clear of entities that can
 ///     * prevent spawning. </summary>
-///     
 		public bool preventEntitySpawning;
 
 	/// <summary> The entity that is riding this entity  </summary>
@@ -223,18 +203,18 @@ namespace DotCraftCore.nEntity
 		{
 			get
 			{
-				return this.field_145783_c;
+				return this.entityID;
 			}
 			set
 			{
-				this.field_145783_c = value;
+				this.entityID = value;
 			}
 		}
 
 
 		public Entity(World p_i1582_1_)
 		{
-			this.field_145783_c = nextEntityID++;
+			this.entityID = nextEntityID++;
 			this.renderDistanceWeight = 1.0D;
 			this.boundingBox = AxisAlignedBB.getBoundingBox(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
 			this.field_70135_K = true;
@@ -244,7 +224,7 @@ namespace DotCraftCore.nEntity
 			this.rand = new Random();
 			this.fireResistance = 1;
 			this.firstUpdate = true;
-			this.entityUniqueID = UUID.randomUUID();
+			this.entityUniqueID = UUID.RandomUUID();
 			this.myEntitySize = Entity.EnumEntitySize.SIZE_2;
 			this.worldObj = p_i1582_1_;
 			this.setPosition(0.0D, 0.0D, 0.0D);
@@ -272,12 +252,12 @@ namespace DotCraftCore.nEntity
 
 		public override bool Equals(object p_equals_1_)
 		{
-			return p_equals_1_ is Entity ? ((Entity)p_equals_1_).field_145783_c == this.field_145783_c : false;
+			return p_equals_1_ is Entity ? ((Entity)p_equals_1_).entityID == this.entityID : false;
 		}
 
 		public override int GetHashCode()
 		{
-			return this.field_145783_c;
+			return this.entityID;
 		}
 
 ///    
@@ -497,9 +477,9 @@ namespace DotCraftCore.nEntity
 				int var6 = MathHelper.floor_double(this.posZ);
 				Block var4 = this.worldObj.getBlock(var5, var2, var6);
 
-				if (var4.Material != Material.air)
+				if (var4.BlockMaterial != Material.air)
 				{
-					this.worldObj.spawnParticle("blockcrack_" + Block.getIdFromBlock(var4) + "_" + this.worldObj.getBlockMetadata(var5, var2, var6), this.posX + ((double)this.rand.nextFloat() - 0.5D) * (double)this.width, this.boundingBox.minY + 0.1D, this.posZ + ((double)this.rand.nextFloat() - 0.5D) * (double)this.width, -this.motionX * 4.0D, 1.5D, -this.motionZ * 4.0D);
+					this.worldObj.spawnParticle("blockcrack_" + Block.getIdFromBlock(var4) + "_" + this.worldObj.getBlockMetadata(var5, var2, var6), this.posX + (this.rand.NextDouble() - 0.5D) * (double)this.width, this.boundingBox.minY + 0.1D, this.posZ + (this.rand.NextDouble() - 0.5D) * (double)this.width, -this.motionX * 4.0D, 1.5D, -this.motionZ * 4.0D);
 				}
 			}
 
@@ -614,7 +594,7 @@ namespace DotCraftCore.nEntity
 		{
 			AxisAlignedBB var7 = this.boundingBox.getOffsetBoundingBox(p_70038_1_, p_70038_3_, p_70038_5_);
 			IList var8 = this.worldObj.getCollidingBoundingBoxes(this, var7);
-			return !var8.Count == 0 ? false : !this.worldObj.isAnyLiquid(var7);
+			return var8.Count != 0 ? false : !this.worldObj.isAnyLiquid(var7);
 		}
 
 ///    
@@ -907,11 +887,11 @@ namespace DotCraftCore.nEntity
 					this.distanceWalkedModified = (float)((double)this.distanceWalkedModified + (double)MathHelper.sqrt_double(var38 * var38 + var27 * var27) * 0.6D);
 					this.distanceWalkedOnStepModified = (float)((double)this.distanceWalkedOnStepModified + (double)MathHelper.sqrt_double(var38 * var38 + var25 * var25 + var27 * var27) * 0.6D);
 
-					if (this.distanceWalkedOnStepModified > (float)this.nextStepDistance && var32.Material != Material.air)
+					if (this.distanceWalkedOnStepModified > (float)this.nextStepDistance && var32.BlockMaterial != Material.air)
 					{
 						this.nextStepDistance = (int)this.distanceWalkedOnStepModified + 1;
 
-						if (this.InWater)
+						if (this.inWater)
 						{
 							float var34 = MathHelper.sqrt_double(this.motionX * this.motionX * 0.20000000298023224D + this.motionY * this.motionY + this.motionZ * this.motionZ * 0.20000000298023224D) * 0.35F;
 
@@ -920,7 +900,7 @@ namespace DotCraftCore.nEntity
 								var34 = 1.0F;
 							}
 
-							this.playSound(this.SwimSound, var34, 1.0F + (this.rand.nextFloat() - this.rand.nextFloat()) * 0.4F);
+							this.playSound(this.SwimSound, var34, 1.0F + (this.rand.NextFloat() - this.rand.NextFloat()) * 0.4F);
 						}
 
 						this.func_145780_a(var39, var30, var31, var32);
@@ -940,7 +920,7 @@ namespace DotCraftCore.nEntity
 					throw new ReportedException(var41);
 				}
 
-				bool var40 = this.Wet;
+				bool var40 = this.isWet;
 
 				if (this.worldObj.func_147470_e(this.boundingBox.contract(0.001D, 0.001D, 0.001D)))
 				{
@@ -963,7 +943,7 @@ namespace DotCraftCore.nEntity
 
 				if (var40 && this.fire > 0)
 				{
-					this.playSound("random.fizz", 0.7F, 1.6F + (this.rand.nextFloat() - this.rand.nextFloat()) * 0.4F);
+					this.playSound("random.fizz", 0.7F, 1.6F + (this.rand.NextFloat() - this.rand.NextFloat()) * 0.4F);
 					this.fire = -this.fireResistance;
 				}
 
@@ -1017,16 +997,16 @@ namespace DotCraftCore.nEntity
 
 		protected internal virtual void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
 		{
-			SoundType var5 = p_145780_4_.stepSound;
+			SoundType var5 = p_145780_4_.StepSound;
 
 			if (this.worldObj.getBlock(p_145780_1_, p_145780_2_ + 1, p_145780_3_) == Blocks.snow_layer)
 			{
-				var5 = Blocks.snow_layer.stepSound;
-				this.playSound(var5.func_150498_e(), var5.func_150497_c() * 0.15F, var5.func_150494_d());
+				var5 = Blocks.snow_layer.StepSound;
+				this.playSound(var5.StepSoundName, var5.Volume * 0.15F, var5.Pitch);
 			}
-			else if (!p_145780_4_.Material.Liquid)
+			else if (!p_145780_4_.BlockMaterial.Liquid)
 			{
-				this.playSound(var5.func_150498_e(), var5.func_150497_c() * 0.15F, var5.func_150494_d());
+				this.playSound(var5.StepSoundName, var5.Volume * 0.15F, var5.Pitch);
 			}
 		}
 
@@ -1060,7 +1040,7 @@ namespace DotCraftCore.nEntity
 			}
 			else if (p_70064_1_ < 0.0D)
 			{
-				this.fallDistance = (float)((double)this.fallDistance - p_70064_1_);
+				this.fallDistance = this.fallDistance - (float)p_70064_1_;
 			}
 		}
 
@@ -1087,7 +1067,7 @@ namespace DotCraftCore.nEntity
 			}
 		}
 
-		public bool isImmuneToFire()
+		public bool isImmuneToFire
 		{
 			get
 			{
@@ -1109,7 +1089,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Checks if this entity is either in water or on an open air block in rain (used in wolves). </summary>
 ///     
-		public virtual bool isWet()
+		public virtual bool isWet
 		{
 			get
 			{
@@ -1121,7 +1101,7 @@ namespace DotCraftCore.nEntity
 ///     <summary> * Checks if this entity is inside water (if inWater field is true as a result of handleWaterMovement() returning
 ///     * true) </summary>
 ///     
-		public virtual bool isInWater()
+		public virtual bool isInWater
 		{
 			get
 			{
@@ -1145,24 +1125,24 @@ namespace DotCraftCore.nEntity
 						var1 = 1.0F;
 					}
 
-					this.playSound(this.SplashSound, var1, 1.0F + (this.rand.nextFloat() - this.rand.nextFloat()) * 0.4F);
-					float var2 = (float)MathHelper.floor_double(this.boundingBox.minY);
+					this.playSound(this.SplashSound, var1, 1.0F + (this.rand.NextFloat() - this.rand.NextFloat()) * 0.4F);
+					double var2 = MathHelper.floor_double(this.boundingBox.minY);
 					int var3;
-					float var4;
-					float var5;
+					double var4;
+					double var5;
 
 					for (var3 = 0; (float)var3 < 1.0F + this.width * 20.0F; ++var3)
 					{
-						var4 = (this.rand.nextFloat() * 2.0F - 1.0F) * this.width;
-						var5 = (this.rand.nextFloat() * 2.0F - 1.0F) * this.width;
-						this.worldObj.spawnParticle("bubble", this.posX + (double)var4, (double)(var2 + 1.0F), this.posZ + (double)var5, this.motionX, this.motionY - (double)(this.rand.nextFloat() * 0.2F), this.motionZ);
+						var4 = (this.rand.NextDouble() * 2.0D - 1.0D) * (double)this.width;
+						var5 = (this.rand.NextDouble() * 2.0D - 1.0D) * (double)this.width;
+						this.worldObj.spawnParticle("bubble", this.posX + var4, var2 + 1.0D, this.posZ + var5, this.motionX, this.motionY - (this.rand.NextDouble() * 0.2D), this.motionZ);
 					}
 
 					for (var3 = 0; (float)var3 < 1.0F + this.width * 20.0F; ++var3)
 					{
-						var4 = (this.rand.nextFloat() * 2.0F - 1.0F) * this.width;
-						var5 = (this.rand.nextFloat() * 2.0F - 1.0F) * this.width;
-						this.worldObj.spawnParticle("splash", this.posX + (double)var4, (double)(var2 + 1.0F), this.posZ + (double)var5, this.motionX, this.motionY, this.motionZ);
+						var4 = (this.rand.NextDouble() * 2.0D - 1.0D) * (double)this.width;
+						var5 = (this.rand.NextDouble() * 2.0D - 1.0D) * (double)this.width;
+						this.worldObj.spawnParticle("splash", this.posX + var4, var2 + 1.0D, this.posZ + var5, this.motionX, this.motionY, this.motionZ);
 					}
 				}
 
@@ -1191,13 +1171,13 @@ namespace DotCraftCore.nEntity
 ///     
 		public virtual bool isInsideOfMaterial(Material p_70055_1_)
 		{
-			double var2 = this.posY + (double)this.EyeHeight;
+			double var2 = this.posY + this.EyeHeight;
 			int var4 = MathHelper.floor_double(this.posX);
-			int var5 = MathHelper.floor_float((float)MathHelper.floor_double(var2));
+			int var5 = MathHelper.floor_double(var2);
 			int var6 = MathHelper.floor_double(this.posZ);
 			Block var7 = this.worldObj.getBlock(var4, var5, var6);
 
-			if (var7.Material == p_70055_1_)
+			if (var7.BlockMaterial == p_70055_1_)
 			{
 				float var8 = BlockLiquid.func_149801_b(this.worldObj.getBlockMetadata(var4, var5, var6)) - 0.11111111F;
 				float var9 = (float)(var5 + 1) - var8;
@@ -1244,10 +1224,10 @@ namespace DotCraftCore.nEntity
 				var4 = p_70060_3_ / var4;
 				p_70060_1_ *= var4;
 				p_70060_2_ *= var4;
-				float var5 = MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F);
-				float var6 = MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F);
-				this.motionX += (double)(p_70060_1_ * var6 - p_70060_2_ * var5);
-				this.motionZ += (double)(p_70060_2_ * var6 + p_70060_1_ * var5);
+				double var5 = Math.Sin(this.rotationYaw * Math.PI / 180.0F);
+				double var6 = Math.Cos(this.rotationYaw * Math.PI / 180.0F);
+				this.motionX += (p_70060_1_ * var6 - p_70060_2_ * var5);
+				this.motionZ += (p_70060_2_ * var6 + p_70060_1_ * var5);
 			}
 		}
 
@@ -1449,7 +1429,7 @@ namespace DotCraftCore.nEntity
 ///     
 		public virtual bool attackEntityFrom(DamageSource p_70097_1_, float p_70097_2_)
 		{
-			if (this.EntityInvulnerable)
+			if (this.isEntityInvulnerable)
 			{
 				return false;
 			}
@@ -1562,8 +1542,8 @@ namespace DotCraftCore.nEntity
 				p_70109_1_.setInteger("Dimension", this.dimension);
 				p_70109_1_.setBoolean("Invulnerable", this.invulnerable);
 				p_70109_1_.setInteger("PortalCooldown", this.timeUntilPortal);
-				p_70109_1_.setLong("UUIDMost", this.UniqueID.MostSignificantBits);
-				p_70109_1_.setLong("UUIDLeast", this.UniqueID.LeastSignificantBits);
+				p_70109_1_.setLong("UUIDMost", (long)this.UniqueID.MostSignificantBits);
+				p_70109_1_.setLong("UUIDLeast", (long)this.UniqueID.LeastSignificantBits);
 				this.writeEntityToNBT(p_70109_1_);
 
 				if (this.ridingEntity != null)
@@ -1687,7 +1667,7 @@ namespace DotCraftCore.nEntity
 		{
 			NBTTagList var2 = new NBTTagList();
 			double[] var3 = p_70087_1_;
-			int var4 = p_70087_1_.length;
+			int var4 = p_70087_1_.Length;
 
 			for (int var5 = 0; var5 < var4; ++var5)
 			{
@@ -1705,7 +1685,7 @@ namespace DotCraftCore.nEntity
 		{
 			NBTTagList var2 = new NBTTagList();
 			float[] var3 = p_70049_1_;
-			int var4 = p_70049_1_.length;
+			int var4 = p_70049_1_.Length;
 
 			for (int var5 = 0; var5 < var4; ++var5)
 			{
@@ -1755,7 +1735,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Checks whether target entity is alive. </summary>
 ///     
-		public virtual bool isEntityAlive()
+		public virtual bool isEntityAlive
 		{
 			get
 			{
@@ -1766,7 +1746,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Checks if this entity is inside of an opaque block </summary>
 ///     
-		public virtual bool isEntityInsideOpaqueBlock()
+		public virtual bool isEntityInsideOpaqueBlock
 		{
 			get
 			{
@@ -1849,26 +1829,26 @@ namespace DotCraftCore.nEntity
 
 					double var1 = this.entityRiderYawDelta * 0.5D;
 					double var3 = this.entityRiderPitchDelta * 0.5D;
-					float var5 = 10.0F;
+					double var5 = 10.0F;
 
-					if (var1 > (double)var5)
+					if (var1 > var5)
 					{
-						var1 = (double)var5;
+						var1 = var5;
 					}
 
-					if (var1 < (double)(-var5))
+					if (var1 < (-var5))
 					{
-						var1 = (double)(-var5);
+						var1 = (-var5);
 					}
 
-					if (var3 > (double)var5)
+					if (var3 > var5)
 					{
-						var3 = (double)var5;
+						var3 = var5;
 					}
 
-					if (var3 < (double)(-var5))
+					if (var3 < (-var5))
 					{
-						var3 = (double)(-var5);
+						var3 = (-var5);
 					}
 
 					this.entityRiderYawDelta -= var1;
@@ -1958,7 +1938,7 @@ namespace DotCraftCore.nEntity
 			this.setRotation(p_70056_7_, p_70056_8_);
 			IList var10 = this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox.contract(0.03125D, 0.0D, 0.03125D));
 
-			if (!var10.Count == 0)
+			if (var10.Count != 0)
 			{
 				double var11 = 0.0D;
 
@@ -2069,7 +2049,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Returns true if the entity is on fire. Used by render to add the fire effect on rendering. </summary>
 ///     
-		public virtual bool isBurning()
+		public virtual bool isBurning
 		{
 			get
 			{
@@ -2082,7 +2062,7 @@ namespace DotCraftCore.nEntity
 ///     <summary> * Returns true if the entity is riding another entity, used by render to rotate the legs to be in 'sit' position
 ///     * for players. </summary>
 ///     
-		public virtual bool isRiding()
+		public virtual bool isRiding
 		{
 			get
 			{
@@ -2093,7 +2073,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Returns if this entity is sneaking. </summary>
 ///     
-		public virtual bool isSneaking()
+		public virtual bool isSneaking
 		{
 			get
 			{
@@ -2112,7 +2092,7 @@ namespace DotCraftCore.nEntity
 ///    
 ///     <summary> * Get if the Entity is sprinting. </summary>
 ///     
-		public virtual bool isSprinting()
+		public virtual bool isSprinting
 		{
 			get
 			{
@@ -2128,7 +2108,7 @@ namespace DotCraftCore.nEntity
 ///     <summary> * Set sprinting switch for Entity. </summary>
 ///     
 
-		public virtual bool isInvisible()
+		public virtual bool isInvisible
 		{
 			get
 			{
@@ -2151,7 +2131,7 @@ namespace DotCraftCore.nEntity
 		}
 
 
-		public virtual bool isEating()
+		public virtual bool isEating
 		{
 			get
 			{
@@ -2279,36 +2259,36 @@ namespace DotCraftCore.nEntity
 					var23 = 5;
 				}
 
-				float var26 = this.rand.nextFloat() * 0.2F + 0.1F;
+				double var26 = this.rand.NextDouble() * 0.2D + 0.1D;
 
 				if (var23 == 0)
 				{
-					this.motionX = (double)(-var26);
+					this.motionX = -var26;
 				}
 
 				if (var23 == 1)
 				{
-					this.motionX = (double)var26;
+					this.motionX = var26;
 				}
 
 				if (var23 == 2)
 				{
-					this.motionY = (double)(-var26);
+					this.motionY = -var26;
 				}
 
 				if (var23 == 3)
 				{
-					this.motionY = (double)var26;
+					this.motionY = var26;
 				}
 
 				if (var23 == 4)
 				{
-					this.motionZ = (double)(-var26);
+					this.motionZ = -var26;
 				}
 
 				if (var23 == 5)
 				{
-					this.motionZ = (double)var26;
+					this.motionZ = var26;
 				}
 
 				return true;
@@ -2394,13 +2374,13 @@ namespace DotCraftCore.nEntity
 
 		public override string ToString()
 		{
-			return string.Format("{0}[\'{1}\'/{2:D}, l=\'{3}\', x={4:F2}, y={5:F2}, z={6:F2}]", new object[] {this.GetType().SimpleName, this.CommandSenderName, Convert.ToInt32(this.field_145783_c), this.worldObj == null ? "~NULL~" : this.worldObj.WorldInfo.WorldName, Convert.ToDouble(this.posX), Convert.ToDouble(this.posY), Convert.ToDouble(this.posZ)});
+			return string.Format("{0}[\'{1}\'/{2:D}, l=\'{3}\', x={4:F2}, y={5:F2}, z={6:F2}]", new object[] {this.GetType().Name, this.CommandSenderName, Convert.ToInt32(this.entityID), this.worldObj == null ? "~NULL~" : this.worldObj.WorldInfo.WorldName, Convert.ToDouble(this.posX), Convert.ToDouble(this.posY), Convert.ToDouble(this.posZ)});
 		}
 
 ///    
 ///     <summary> * Return whether this entity is invulnerable to damage. </summary>
 ///     
-		public virtual bool isEntityInvulnerable()
+		public virtual bool isEntityInvulnerable
 		{
 			get
 			{
@@ -2515,12 +2495,12 @@ namespace DotCraftCore.nEntity
 
 		public virtual void addEntityCrashInfo(CrashReportCategory p_85029_1_)
 		{
-			p_85029_1_.addCrashSectionCallable("Entity Type", new Callable() {  public string call() { return EntityList.getEntityString(Entity.this) + " (" + Entity.GetType().CanonicalName + ")"; } });
+			/*p_85029_1_.addCrashSectionCallable("Entity Type", new Callable() {  public string call() { return EntityList.getEntityString(Entity.this) + " (" + Entity.GetType().CanonicalName + ")"; } });
 			p_85029_1_.addCrashSection("Entity ID", Convert.ToInt32(this.field_145783_c));
 			p_85029_1_.addCrashSectionCallable("Entity Name", new Callable() {  public string call() { return Entity.CommandSenderName; } });
 			p_85029_1_.addCrashSection("Entity\'s Exact location", string.Format("{0:F2}, {1:F2}, {2:F2}", new object[] {Convert.ToDouble(this.posX), Convert.ToDouble(this.posY), Convert.ToDouble(this.posZ)}));
 			p_85029_1_.addCrashSection("Entity\'s Block location", CrashReportCategory.getLocationInfo(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)));
-			p_85029_1_.addCrashSection("Entity\'s Momentum", string.Format("{0:F2}, {1:F2}, {2:F2}", new object[] {Convert.ToDouble(this.motionX), Convert.ToDouble(this.motionY), Convert.ToDouble(this.motionZ)}));
+			p_85029_1_.addCrashSection("Entity\'s Momentum", string.Format("{0:F2}, {1:F2}, {2:F2}", new object[] {Convert.ToDouble(this.motionX), Convert.ToDouble(this.motionY), Convert.ToDouble(this.motionZ)}));*/
 		}
 
 ///    
@@ -2528,7 +2508,7 @@ namespace DotCraftCore.nEntity
 ///     
 		public virtual bool canRenderOnFire()
 		{
-			return this.Burning;
+			return this.isBurning;
 		}
 
 		public virtual UUID UniqueID
@@ -2539,7 +2519,7 @@ namespace DotCraftCore.nEntity
 			}
 		}
 
-		public virtual bool isPushedByWater()
+		public virtual bool isPushedByWater
 		{
 			get
 			{
@@ -2558,40 +2538,26 @@ namespace DotCraftCore.nEntity
 
 		public enum EnumEntitySize
 		{
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_1("SIZE_1", 0),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_2("SIZE_2", 1),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_3("SIZE_3", 2),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_4("SIZE_4", 3),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_5("SIZE_5", 4),
-//JAVA TO VB & C# CONVERTER TODO TASK: Enum values must be single integer values in .NET:
-			SIZE_6("SIZE_6", 5);
+            SIZE_1 = 0,
+            SIZE_2 = 1,
+            SIZE_3 = 2,
+            SIZE_4 = 3,
+            SIZE_5 = 4,
+            SIZE_6 = 5
+        }
 
-			@private static final Entity.EnumEntitySize[] $VALUES = new Entity.EnumEntitySize[]{SIZE_1, SIZE_2, SIZE_3, SIZE_4, SIZE_5, SIZE_6
-		}
-			
-
-			private EnumEntitySize(string p_i1581_1_, int p_i1581_2_)
+        public static class EnumEntitySizeExtenstions
+        {
+            public static int multiplyBy32AndRound(this EnumEntitySize value, double p_75630_1_)
 			{
-			}
+				double var3 = p_75630_1_ - MathHelper.floor_double(p_75630_1_) + 0.5D;
 
-			public virtual int multiplyBy32AndRound(double p_75630_1_)
-			{
-				double var3 = p_75630_1_ - ((double)MathHelper.floor_double(p_75630_1_) + 0.5D);
-
-				switch (Entity.SwitchEnumEntitySize.field_96565_a[this.ordinal()])
+				switch (value)
 				{
-					case 1:
-						if (var3 < 0.0D)
+					case EnumEntitySize.SIZE_1:
+                        if (var3 < -0.3125D)
 						{
-							if (var3 < -0.3125D)
-							{
-								return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
-							}
+							return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
 						}
 						else if (var3 < 0.3125D)
 						{
@@ -2600,13 +2566,10 @@ namespace DotCraftCore.nEntity
 
 						return MathHelper.floor_double(p_75630_1_ * 32.0D);
 
-					case 2:
-						if (var3 < 0.0D)
+                    case EnumEntitySize.SIZE_2:
+						if (var3 < -0.3125D)
 						{
-							if (var3 < -0.3125D)
-							{
-								return MathHelper.floor_double(p_75630_1_ * 32.0D);
-							}
+							return MathHelper.floor_double(p_75630_1_ * 32.0D);
 						}
 						else if (var3 < 0.3125D)
 						{
@@ -2615,7 +2578,7 @@ namespace DotCraftCore.nEntity
 
 						return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
 
-					case 3:
+                    case EnumEntitySize.SIZE_3:
 						if (var3 > 0.0D)
 						{
 							return MathHelper.floor_double(p_75630_1_ * 32.0D);
@@ -2623,13 +2586,10 @@ namespace DotCraftCore.nEntity
 
 						return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
 
-					case 4:
-						if (var3 < 0.0D)
+                    case EnumEntitySize.SIZE_4:
+						if (var3 < -0.1875D)
 						{
-							if (var3 < -0.1875D)
-							{
-								return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
-							}
+							return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
 						}
 						else if (var3 < 0.1875D)
 						{
@@ -2638,13 +2598,10 @@ namespace DotCraftCore.nEntity
 
 						return MathHelper.floor_double(p_75630_1_ * 32.0D);
 
-					case 5:
-						if (var3 < 0.0D)
+                    case EnumEntitySize.SIZE_5:
+                        if (var3 < -0.1875D)
 						{
-							if (var3 < -0.1875D)
-							{
-								return MathHelper.floor_double(p_75630_1_ * 32.0D);
-							}
+							return MathHelper.floor_double(p_75630_1_ * 32.0D);
 						}
 						else if (var3 < 0.1875D)
 						{
@@ -2653,7 +2610,8 @@ namespace DotCraftCore.nEntity
 
 						return MathHelper.ceiling_double_int(p_75630_1_ * 32.0D);
 
-					case 6:
+                    case EnumEntitySize.SIZE_6:
+                        goto default;
 					default:
 						if (var3 > 0.0D)
 						{
@@ -2665,70 +2623,6 @@ namespace DotCraftCore.nEntity
 						}
 				}
 			}
-		}
-
-		internal sealed class SwitchEnumEntitySize
-		{
-			internal static readonly int[] field_96565_a = new int[Entity.EnumEntitySize.values().length];
-			
-
-			static SwitchEnumEntitySize()
-			{
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_1.ordinal()] = 1;
-				}
-				catch (NoSuchFieldError var6)
-				{
-					;
-				}
-
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_2.ordinal()] = 2;
-				}
-				catch (NoSuchFieldError var5)
-				{
-					;
-				}
-
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_3.ordinal()] = 3;
-				}
-				catch (NoSuchFieldError var4)
-				{
-					;
-				}
-
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_4.ordinal()] = 4;
-				}
-				catch (NoSuchFieldError var3)
-				{
-					;
-				}
-
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_5.ordinal()] = 5;
-				}
-				catch (NoSuchFieldError var2)
-				{
-					;
-				}
-
-				try
-				{
-					field_96565_a[Entity.EnumEntitySize.SIZE_6.ordinal()] = 6;
-				}
-				catch (NoSuchFieldError var1)
-				{
-					;
-				}
-			}
-		}
+        }
 	}
-
 }

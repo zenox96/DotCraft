@@ -2,23 +2,9 @@ using System.Collections;
 
 namespace DotCraftCore.nUtil
 {
-
-	using Gson = com.google.gson.Gson;
-	using GsonBuilder = com.google.gson.GsonBuilder;
-	using JsonArray = com.google.gson.JsonArray;
-	using JsonDeserializationContext = com.google.gson.JsonDeserializationContext;
-	using JsonDeserializer = com.google.gson.JsonDeserializer;
-	using JsonElement = com.google.gson.JsonElement;
-	using JsonObject = com.google.gson.JsonObject;
-	using JsonParseException = com.google.gson.JsonParseException;
-	using JsonPrimitive = com.google.gson.JsonPrimitive;
-	using JsonSerializationContext = com.google.gson.JsonSerializationContext;
-	using JsonSerializer = com.google.gson.JsonSerializer;
-
 	public interface IChatComponent : IEnumerable
 	{
 		IChatComponent ChatStyle {set;get;}
-
 
 ///    
 ///     <summary> * Appends the given text to the end of this component. </summary>

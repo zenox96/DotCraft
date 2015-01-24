@@ -134,9 +134,9 @@ namespace DotCraftCore.nInit
         public ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
-            double var4 = p_82487_1_.X + (double)var3.FrontOffsetX;
+            double var4 = p_82487_1_.X + (double)var3.getFrontOffsetX( );
             double var6 = (double)p_82487_1_.YInt + 0.2D;
-            double var8 = p_82487_1_.Z + (double)var3.FrontOffsetZ;
+            double var8 = p_82487_1_.Z + (double)var3.getFrontOffsetZ();
             Entity var10 = ItemMonsterPlacer.spawnCreature(p_82487_1_.World, p_82487_2_.ItemDamage, var4, var6, var8);
             if (var10 is EntityLivingBase && p_82487_2_.hasDisplayName( ))
             {
@@ -152,9 +152,9 @@ namespace DotCraftCore.nInit
         public ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
-            double var4 = p_82487_1_.X + (double)var3.FrontOffsetX;
+            double var4 = p_82487_1_.X + (double)var3.getFrontOffsetX();
             double var6 = (double)p_82487_1_.YInt + 0.2D;
-            double var8 = p_82487_1_.Z + (double)var3.FrontOffsetZ;
+            double var8 = p_82487_1_.Z + (double)var3.getFrontOffsetZ();
             EntityFireworkRocket var10 = new EntityFireworkRocket(p_82487_1_.World, var4, var6, var8, p_82487_2_);
             p_82487_1_.World.spawnEntityInWorld(var10);
             p_82487_2_.splitStack(1);
@@ -173,14 +173,14 @@ namespace DotCraftCore.nInit
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
             IPosition var4 = BlockDispenser.func_149939_a(p_82487_1_);
-            double var5 = var4.X + (double)var3.FrontOffsetX * 0.3D;
-            double var7 = var4.Y + (double)var3.FrontOffsetX * 0.3D;
-            double var9 = var4.Z + (double)var3.FrontOffsetZ * 0.3D;
+            double var5 = var4.X + (double)var3.getFrontOffsetX() * 0.3D;
+            double var7 = var4.Y + (double)var3.getFrontOffsetX() * 0.3D;
+            double var9 = var4.Z + (double)var3.getFrontOffsetZ() * 0.3D;
             World var11 = p_82487_1_.World;
             Random var12 = var11.rand;
-            double var13 = var12.NextGaussian( ) * 0.05D + (double)var3.FrontOffsetX;
-            double var15 = var12.NextGaussian( ) * 0.05D + (double)var3.FrontOffsetY;
-            double var17 = var12.NextGaussian( ) * 0.05D + (double)var3.FrontOffsetZ;
+            double var13 = var12.NextGaussian( ) * 0.05D + (double)var3.getFrontOffsetX();
+            double var15 = var12.NextGaussian( ) * 0.05D + (double)var3.getFrontOffsetY();
+            double var17 = var12.NextGaussian( ) * 0.05D + (double)var3.getFrontOffsetZ();
             var11.spawnEntityInWorld(new EntitySmallFireball(var11, var5, var7, var9, var13, var15, var17));
             p_82487_2_.splitStack(1);
             return p_82487_2_;
@@ -199,12 +199,12 @@ namespace DotCraftCore.nInit
         public ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
-            World var4 = p_82487_1_.World; double var5 = p_82487_1_.X + ((double)var3.FrontOffsetX * 1.125D);
-            double var7 = p_82487_1_.Y + ((double)var3.FrontOffsetY * 1.125D);
-            double var9 = p_82487_1_.Z + ((double)var3.FrontOffsetZ * 1.125D);
-            int var11 = p_82487_1_.XInt + var3.FrontOffsetX;
-            int var12 = p_82487_1_.YInt + var3.FrontOffsetY;
-            int var13 = p_82487_1_.ZInt + var3.FrontOffsetZ;
+            World var4 = p_82487_1_.World; double var5 = p_82487_1_.X + ((double)var3.getFrontOffsetX() * 1.125D);
+            double var7 = p_82487_1_.Y + ((double)var3.getFrontOffsetY() * 1.125D);
+            double var9 = p_82487_1_.Z + ((double)var3.getFrontOffsetZ() * 1.125D);
+            int var11 = p_82487_1_.XInt + var3.getFrontOffsetX();
+            int var12 = p_82487_1_.YInt + var3.getFrontOffsetY();
+            int var13 = p_82487_1_.ZInt + var3.getFrontOffsetZ();
             Material var14 = var4.getBlock(var11, var12, var13).BlockMaterial;
             double var15 = 0.0D;
             if (Material.water.Equals(var14))
@@ -259,9 +259,9 @@ namespace DotCraftCore.nInit
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
             World var4 = p_82487_1_.World;
-            int var5 = p_82487_1_.XInt + var3.FrontOffsetX;
-            int var6 = p_82487_1_.YInt + var3.FrontOffsetY;
-            int var7 = p_82487_1_.ZInt + var3.FrontOffsetZ;
+            int var5 = p_82487_1_.XInt + var3.getFrontOffsetX();
+            int var6 = p_82487_1_.YInt + var3.getFrontOffsetY();
+            int var7 = p_82487_1_.ZInt + var3.getFrontOffsetZ();
             Material var8 = var4.getBlock(var5, var6, var7).BlockMaterial;
             int var9 = var4.getBlockMetadata(var5, var6, var7);
             Item var10;
@@ -300,9 +300,9 @@ namespace DotCraftCore.nInit
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
             World var4 = p_82487_1_.World;
-            int var5 = p_82487_1_.XInt + var3.FrontOffsetX;
-            int var6 = p_82487_1_.YInt + var3.FrontOffsetY;
-            int var7 = p_82487_1_.ZInt + var3.FrontOffsetZ;
+            int var5 = p_82487_1_.XInt + var3.getFrontOffsetX();
+            int var6 = p_82487_1_.YInt + var3.getFrontOffsetY();
+            int var7 = p_82487_1_.ZInt + var3.getFrontOffsetZ();
             if (var4.isAirBlock(var5, var6, var7))
             {
                 var4.setBlock(var5, var6, var7, Blocks.fire);
@@ -346,9 +346,9 @@ namespace DotCraftCore.nInit
             {
                 EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
                 World var4 = p_82487_1_.World;
-                int var5 = p_82487_1_.XInt + var3.FrontOffsetX;
-                int var6 = p_82487_1_.YInt + var3.FrontOffsetY;
-                int var7 = p_82487_1_.ZInt + var3.FrontOffsetZ;
+                int var5 = p_82487_1_.XInt + var3.getFrontOffsetX();
+                int var6 = p_82487_1_.YInt + var3.getFrontOffsetY();
+                int var7 = p_82487_1_.ZInt + var3.getFrontOffsetZ();
                 if (ItemDye.func_150919_a(p_82487_2_, var4, var5, var6, var7))
                 {
                     if (!var4.isClient)
@@ -387,9 +387,9 @@ namespace DotCraftCore.nInit
         {
             EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.BlockMetadata);
             World var4 = p_82487_1_.World;
-            int var5 = p_82487_1_.XInt + var3.FrontOffsetX;
-            int var6 = p_82487_1_.YInt + var3.FrontOffsetY;
-            int var7 = p_82487_1_.ZInt + var3.FrontOffsetZ;
+            int var5 = p_82487_1_.XInt + var3.getFrontOffsetX();
+            int var6 = p_82487_1_.YInt + var3.getFrontOffsetY();
+            int var7 = p_82487_1_.ZInt + var3.getFrontOffsetZ();
             EntityTNTPrimed var8 = new EntityTNTPrimed(var4, (double)var5 + 0.5D, (double)var6 + 0.5D, (double)var7 + 0.5D, (EntityLivingBase)null);
             var4.spawnEntityInWorld(var8);
             --p_82487_2_.stackSize;
