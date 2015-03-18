@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace DotCraftCore.nUtil
+namespace DotCraftUtil
 {
     /***
      * 
      * Helper Class for interop with the java UUIDs
      * 
      ***/
-    class UUID
+    public class UUID
     {
         private static Random rand = new Random();
 
@@ -49,7 +45,7 @@ namespace DotCraftCore.nUtil
 
         public static UUID NameUUIDFromBytes(byte[] name)
         {
-            throw new NotImplementedException("NameUUIDFromBytes isnt implemented yet");
+            throw new NotImplementedException("NameUUIDFromBytes isnt implemented");
             /* MD5 md = MD5.Create( );
             byte[] md5Bytes = md.digest(name);
             md5Bytes[6]  &= 0x0f;  // clear version
@@ -63,7 +59,7 @@ namespace DotCraftCore.nUtil
         {
             var tmp = name.Replace("-","");
 
-            return new UUID(long.Parse(tmp.Substring(0, 15), System.Globalization.NumberStyles.AllowHexSpecifier), long.Parse(tmp.Substring(16), System.Globalization.NumberStyles.AllowHexSpecifier));
+            return new UUID(long.Parse(tmp.Substring(0, 16), System.Globalization.NumberStyles.AllowHexSpecifier), long.Parse(tmp.Substring(16), System.Globalization.NumberStyles.AllowHexSpecifier));
         }
 
         public ulong LeastSignificantBits
@@ -121,7 +117,7 @@ namespace DotCraftCore.nUtil
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("{0,8:8}-", this.MostSignificantBits >> 32 & 0xFFFFFFFFL);
+            sb.AppendFormat("{0,8:X8}-", this.MostSignificantBits >> 32 & 0xFFFFFFFFL);
             sb.AppendFormat("{0,4:X4}-", this.MostSignificantBits >> 16 & 0xFFFFL);
             sb.AppendFormat("{0,4:X4}-", this.MostSignificantBits & 0xFFFFL);
 
@@ -141,6 +137,12 @@ namespace DotCraftCore.nUtil
                 }
             }
             return false;
+        }
+
+        public override int GetHashCode( )
+        {
+            ulong hilo = MostSignificantBits ^ LeastSignificantBits;
+            return ((int)(hilo >> 32)) ^ (int)hilo;
         }
     }
 }

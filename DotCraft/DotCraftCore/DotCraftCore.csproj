@@ -849,8 +849,6 @@
     <Compile Include="nUtil\StringUtils.cs" />
     <Compile Include="nUtil\Tuple.cs" />
     <Compile Include="nUtil\TupleIntJsonSerializable.cs" />
-    <Compile Include="nUtil\UtilExtension.cs" />
-    <Compile Include="nUtil\UUID.cs" />
     <Compile Include="nUtil\Vec3.cs" />
     <Compile Include="nUtil\WeightedRandom.cs" />
     <Compile Include="nUtil\WeightedRandomChestContent.cs" />

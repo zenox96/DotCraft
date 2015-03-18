@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Authlib.nProperties
 {
-    class PropertyMap
+    public class PropertyMap
     {
         
     }

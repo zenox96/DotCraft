@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftServer", "DotCraftS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authlib", "Authlib\Authlib.csproj", "{331A72FD-3FA7-40AA-9A42-C10F823E5464}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{022EFF1E-AD8B-42FD-BC50-CE0D50EEAAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftUtil", "DotCraftUtil\DotCraftUtil.csproj", "{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{331A72FD-3FA7-40AA-9A42-C10F823E5464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{331A72FD-3FA7-40AA-9A42-C10F823E5464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{331A72FD-3FA7-40AA-9A42-C10F823E5464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022EFF1E-AD8B-42FD-BC50-CE0D50EEAAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022EFF1E-AD8B-42FD-BC50-CE0D50EEAAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022EFF1E-AD8B-42FD-BC50-CE0D50EEAAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022EFF1E-AD8B-42FD-BC50-CE0D50EEAAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 using System;
 
-namespace DotCraftCore.nUtil
+namespace DotCraftUtil
 {
     public static class UtilExtension
     {
@@ -25,6 +25,17 @@ namespace DotCraftCore.nUtil
         public static double NextGaussian(this Random rand)
         {
             return Math.Sqrt(-2.0 * Math.Log(rand.NextDouble( ))) * Math.Sin(2.0 * Math.PI * rand.NextDouble( ));
+        }
+
+        public static int GetJavaHashCode(this string str)
+        {
+            int h = 0;
+            
+            for (int i = 0; i < str.Length; i++) {
+                h = 31*h + str[i];
+            }
+
+            return h;
         }
     }
 }
