@@ -1,20 +1,9 @@
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nUtil;
 using System.Collections;
 
 namespace DotCraftCore.nServer.nManagement
 {
-
-	using Predicate = com.google.common.base.Predicate;
-	using Iterators = com.google.common.collect.Iterators;
-	using Lists = com.google.common.collect.Lists;
-	using Agent = com.mojang.authlib.Agent;
-	using GameProfile = com.mojang.authlib.GameProfile;
-	using ProfileLookupCallback = com.mojang.authlib.ProfileLookupCallback;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using MinecraftServer = DotCraftCore.Server.MinecraftServer;
-	using StringUtils = DotCraftCore.Util.StringUtils;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
 	public class PreYggdrasilConverter
 	{
 		private static readonly Logger field_152732_e = LogManager.Logger;
@@ -28,7 +17,7 @@ namespace DotCraftCore.nServer.nManagement
 		{
 //JAVA TO VB & C# CONVERTER WARNING: The original Java variable was marked 'final':
 //ORIGINAL LINE: String[] var3 = (String[])Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate() {  public boolean func_152733_a(String p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public boolean apply(Object p_apply_1_) { return this.func_152733_a((String)p_apply_1_); } }), String.class);
-			string[] var3 = (string[])Iterators.ToArray(Iterators.filter(p_152717_1_.GetEnumerator(), new Predicate() {  public bool func_152733_a(string p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public bool apply(object p_apply_1_) { return this.func_152733_a((string)p_apply_1_); } }), typeof(string));
+			//string[] var3 = (string[])Iterators.ToArray(Iterators.filter(p_152717_1_.GetEnumerator(), new Predicate() {  public bool func_152733_a(string p_152733_1_) { return !StringUtils.isNullOrEmpty(p_152733_1_); } public bool apply(object p_apply_1_) { return this.func_152733_a((string)p_apply_1_); } }), typeof(string));
 
 			if(p_152717_0_.ServerInOnlineMode)
 			{

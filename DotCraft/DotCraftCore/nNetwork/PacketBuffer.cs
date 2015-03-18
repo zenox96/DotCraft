@@ -1,19 +1,10 @@
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
 using System;
+using System.IO;
 
 namespace DotCraftCore.nNetwork
 {
-
-	using Charsets = com.google.common.base.Charsets;
-	using ByteBuf = io.netty.buffer.ByteBuf;
-	using ByteBufAllocator = io.netty.buffer.ByteBufAllocator;
-	using ByteBufProcessor = io.netty.buffer.ByteBufProcessor;
-	using ReferenceCounted = io.netty.util.ReferenceCounted;
-	using Item = DotCraftCore.Item.Item;
-	using ItemStack = DotCraftCore.Item.ItemStack;
-	using CompressedStreamTools = DotCraftCore.NBT.CompressedStreamTools;
-	using NBTSizeTracker = DotCraftCore.NBT.NBTSizeTracker;
-	using NBTTagCompound = DotCraftCore.NBT.NBTTagCompound;
-
 	public class PacketBuffer : ByteBuf
 	{
 		private readonly ByteBuf field_150794_a;
@@ -251,7 +242,7 @@ namespace DotCraftCore.nNetwork
 			return this.field_150794_a.unwrap();
 		}
 
-		public virtual bool isDirect()
+		public virtual bool isDirect
 		{
 			get
 			{
@@ -299,7 +290,7 @@ namespace DotCraftCore.nNetwork
 			return this.field_150794_a.maxWritableBytes();
 		}
 
-		public virtual bool isReadable()
+		public virtual bool isReadable
 		{
 			get
 			{
@@ -312,7 +303,7 @@ namespace DotCraftCore.nNetwork
 			return this.field_150794_a.isReadable(p_isReadable_1_);
 		}
 
-		public virtual bool isWritable()
+		public virtual bool isWritable
 		{
 			get
 			{
