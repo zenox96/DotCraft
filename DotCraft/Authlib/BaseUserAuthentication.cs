@@ -1,4 +1,4 @@
-﻿using Authlib.nProperties;
+﻿using DotCraftUtil;
 using log4net;
 using log4net.Repository.Hierarchy;
 using System;
@@ -19,7 +19,7 @@ namespace Authlib
         protected static readonly String STORAGE_KEY_USER_ID = "userid";
         protected static readonly String STORAGE_KEY_USER_PROPERTIES = "userProperties";
         private readonly AuthenticationService authenticationService;
-        private readonly PropertyMap userProperties = new PropertyMap();
+        private readonly Dictionary<String, Property> userProperties = new Dictionary<String, Property>();
         private String userid;
         private String username;
         private String password;
@@ -41,7 +41,7 @@ namespace Authlib
             this.password = null;
             this.userid = null;
             this.setSelectedProfile((GameProfile)null);
-            this.getModifiableUserProperties().clear();
+            this.getModifiableUserProperties().Clear();
             this.setUserType(UserType.NULL);
         }
 
@@ -58,7 +58,7 @@ namespace Authlib
         }
 
         public void setPassword(String password) {
-            if(this.isLoggedIn() && this.canPlayOnline() && StringUtils.isNotBlank(password)) {
+            if(this.isLoggedIn() && this.canPlayOnline() && password.Trim() != "") {
                 throw new AccessViolationException("Cannot set password whilst logged in & online");
             } else {
                 this.password = password;
@@ -86,15 +86,15 @@ namespace Authlib
             String value;
             if(credentials.ContainsKey("userProperties")) {
                 try {
-                    List<Dictionary<String,Object>> profile = (List<Dictionary<String,Object>>)credentials["userProperties"];
-                    List<Dictionary<String,Object>>.Enumerator t = profile.GetEnumerator();
+                    List<Dictionary<String,String>> profile = (List<Dictionary<String,String>>)credentials["userProperties"];
+                    List<Dictionary<String,String>>.Enumerator t = profile.GetEnumerator();
 
                     while(t.MoveNext())
                     {
-                        Dictionary<String,Object> i = t.Current;
-                        String propertyMap = (String)i["name"];
-                        name = (String)i["value"];
-                        value = (String)i["signature"];
+                        Dictionary<String,String> i = t.Current;
+                        String propertyMap = i["name"];
+                        name = i["value"];
+                        value = i["signature"];
                         if(value == null) {
                             this.getModifiableUserProperties()[propertyMap] = new Property(propertyMap, name);
                         } else {
@@ -110,14 +110,14 @@ namespace Authlib
                 GameProfile profile1 = new GameProfile(UUIDTypeAdapter.fromString((String)credentials["uuid"]), (String)credentials["displayName"]);
                 if(credentials.ContainsKey("profileProperties")) {
                     try {
-                        List<Dictionary<String, Object>> t1 = (List<Dictionary<String, Object>>)credentials["profileProperties"];
-                        List<Dictionary<String, Object>>.Enumerator i = t1.GetEnumerator();
+                        List<Dictionary<String, String>> t1 = (List<Dictionary<String, String>>)credentials["profileProperties"];
+                        List<Dictionary<String, String>>.Enumerator i = t1.GetEnumerator();
 
                         while(i.MoveNext()) {
-                            Dictionary<String, Object> propertyMap1 = (Dictionary<String, Object>)i.Current;
-                            name = (String)propertyMap1["name"];
-                            value = (String)propertyMap1["value"];
-                            String signature = (String)propertyMap1["signature"];
+                            Dictionary<String, String> propertyMap1 = i.Current;
+                            name = propertyMap1["name"];
+                            value = propertyMap1["value"];
+                            String signature = propertyMap1["signature"];
                             if(signature == null) {
                                 profile1.Properties[name] = new Property(name, value);
                             } else {
@@ -146,17 +146,17 @@ namespace Authlib
                 result["username"] = this.getUsername();
             }
 
-            if(!this.getUserProperties().isEmpty()) {
-                ArrayList selectedProfile = new ArrayList();
-                List<Property>.Enumerator properties = this.getUserProperties().values().iterator();
+            if(this.getUserProperties().Count() != 0) {
+                List<Dictionary<String,String>> selectedProfile = new List<Dictionary<String,String>>();
+                Dictionary<String, Property>.ValueCollection.Enumerator properties = this.getUserProperties().Values.GetEnumerator();
 
                 while(properties.MoveNext()) {
                     Property i = properties.Current;
-                    Dictionary<String,Object> profileProperty = new Dictionary<String,Object>();
+                    Dictionary<String,String> profileProperty = new Dictionary<String,String>();
                     profileProperty["name"] = i.Name;
                     profileProperty["value"] = i.Value;
                     profileProperty["signature"] = i.Signature;
-                    selectedProfile.add(profileProperty);
+                    selectedProfile.Add(profileProperty);
                 }
 
                 result["userProperties"] = selectedProfile;
@@ -164,22 +164,22 @@ namespace Authlib
 
             GameProfile selectedProfile1 = this.getSelectedProfile();
             if(selectedProfile1 != null) {
-                result.put("displayName", selectedProfile1.getName());
-                result.put("uuid", selectedProfile1.getId());
-                ArrayList properties1 = new ArrayList();
-                Iterator i$1 = selectedProfile1.getProperties().values().iterator();
+                result["displayName"] = selectedProfile1.Name;
+                result["uuid"] = selectedProfile1.Id;
+                List<Dictionary<String, String>> properties1 = new List<Dictionary<String, String>>( );
+                Dictionary<String, Property>.ValueCollection.Enumerator i = selectedProfile1.Properties.Values.GetEnumerator();
 
-                while(i$1.hasNext()) {
-                    Property profileProperty1 = (Property)i$1.next();
-                    HashMap property = new HashMap();
-                    property.put("name", profileProperty1.getName());
-                    property.put("value", profileProperty1.getValue());
-                    property.put("signature", profileProperty1.getSignature());
-                    properties1.add(property);
+                while(i.MoveNext()) {
+                    Property profileProperty1 = i.Current;
+                    Dictionary<String,String> property = new Dictionary<String,String>();
+                    property["name"] = profileProperty1.Name;
+                    property["value"] = profileProperty1.Value;
+                    property["signature"] = profileProperty1.Signature;
+                    properties1.Add(property);
                 }
 
-                if(!properties1.isEmpty()) {
-                    result.put("profileProperties", properties1);
+                if(properties1.Count() != 0) {
+                    result["profileProperties"] = properties1;
                 }
             }
 
@@ -227,17 +227,15 @@ namespace Authlib
             return this.userid;
         }
 
-        public PropertyMap getUserProperties() {
+        public Dictionary<String, Property> getUserProperties() {
             if(this.isLoggedIn()) {
-                PropertyMap result = new PropertyMap();
-                result.putAll(this.getModifiableUserProperties());
-                return result;
+                return new Dictionary<String, Property>(this.getModifiableUserProperties());
             } else {
-                return new PropertyMap();
+                return new Dictionary<String, Property>();
             }
         }
 
-        protected PropertyMap getModifiableUserProperties() {
+        protected Dictionary<String, Property> getModifiableUserProperties() {
             return this.userProperties;
         }
 
@@ -252,5 +250,17 @@ namespace Authlib
         protected void setUserid(String userid) {
             this.userid = userid;
         }
+
+        public void logIn();
+
+        public bool canPlayOnline();
+
+        public GameProfile[] getAvailableProfiles();
+
+        public void selectGameProfile(GameProfile var1);
+
+        public string getAuthenticatedToken();
+
+        Dictionary<String, Property> UserAuthentication.getUserProperties();
     }
 }

@@ -1,5 +1,4 @@
-﻿using Authlib.nProperties;
-using DotCraftUtil;
+﻿using DotCraftUtil;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ namespace Authlib
     {
         private readonly UUID _id;
         private readonly String _name;
-        private readonly PropertyMap _properties = new PropertyMap( );
+        private readonly Dictionary<String, Property> _properties = new Dictionary<String, Property>( );
 
         public UUID Id
         {
@@ -24,7 +23,7 @@ namespace Authlib
             get { return _name; }
         }
 
-        public PropertyMap Properties
+        public Dictionary<String, Property> Properties
         {
             get { return _properties; }
         }

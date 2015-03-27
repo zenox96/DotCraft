@@ -1,5 +1,4 @@
-﻿using Authlib.nProperties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +34,7 @@ namespace Authlib
 
         String getUserID();
 
-        PropertyMap getUserProperties();
+        Dictionary<String, Property> getUserProperties();
 
         UserType getUserType();
     }

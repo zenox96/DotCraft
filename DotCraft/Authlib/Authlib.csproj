@@ -53,8 +53,7 @@
     <Compile Include="GameProfileRepository.cs" />
     <Compile Include="nMinecraft\MinecraftProfileTexture.cs" />
     <Compile Include="nMinecraft\MinecraftSessionService.cs" />
-    <Compile Include="nProperties\Property.cs" />
-    <Compile Include="nProperties\PropertyMap.cs" />
+    <Compile Include="Property.cs" />
     <Compile Include="ProfileLookupCallback.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAuthentication.cs" />
