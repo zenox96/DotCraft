@@ -48,9 +48,13 @@
   <ItemGroup>
     <Compile Include="Agent.cs" />
     <Compile Include="AuthenticationService.cs" />
+    <Compile Include="BaseAuthenticationService.cs" />
     <Compile Include="BaseUserAuthentication.cs" />
     <Compile Include="GameProfile.cs" />
     <Compile Include="GameProfileRepository.cs" />
+    <Compile Include="HttpAuthenticationService.cs" />
+    <Compile Include="nMinecraft\BaseMinecraftSessionService.cs" />
+    <Compile Include="nMinecraft\HttpMinecraftSessionService.cs" />
     <Compile Include="nMinecraft\MinecraftProfileTexture.cs" />
     <Compile Include="nMinecraft\MinecraftSessionService.cs" />
     <Compile Include="Property.cs" />
