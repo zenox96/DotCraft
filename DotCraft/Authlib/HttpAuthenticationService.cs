@@ -11,7 +11,7 @@ namespace Authlib
 {
     public abstract class HttpAuthenticationService : BaseAuthenticationService
     {
-        private static readonly ILog LOGGER = LogManager.GetLogger();
+        private static readonly ILog LOGGER = LogManager.GetLogger("Minecraft");
         private readonly Proxy proxy;
 
         protected HttpAuthenticationService(Proxy proxy)
@@ -32,6 +32,7 @@ namespace Authlib
             WebClient connection = new WebClient();
             connection.BaseAddress = url.AbsoluteUri;
             connection.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
+            HttpWebRequest.Create(url);
 
             //HttpURLConnection connection = (HttpURLConnection)url.openConnection(this.proxy);
             /*connection.setConnectTimeout(15000);
@@ -197,13 +198,9 @@ namespace Authlib
             }
         }
 
-        public static URL concatenateURL(URL url, String query)
+        public static Uri concatenateURL(Uri url, String query)
         {
-            try {
-                return url.getQuery() != null && url.getQuery().length() > 0 ? new URL(url.getProtocol(), url.getHost(), url.getPort(), url.getFile() + "&" + query):new URL(url.getProtocol(), url.getHost(), url.getPort(), url.getFile() + "?" + query);
-            } catch (MalformedURLException var3) {
-                throw new IllegalArgumentException("Could not concatenate given URL with GET arguments!", var3);
-            }
+            return url.Query != null && url.Query.Length > 0 ? new UriBuilder(url.Scheme, url.Host, url.Port, url.PathAndQuery + "&" + query).Uri : new UriBuilder(url.Scheme, url.Host, url.Port, url.PathAndQuery + "?" + query).Uri;;
         }
     }
 }
