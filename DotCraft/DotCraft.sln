@@ -1,18 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftCore", "DotCraftCore\DotCraftCore.csproj", "{C63EDCA7-B43F-417A-89C7-40AE77480AC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF} = {FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftClient", "DotCraftClient\DotCraftClient.csproj", "{154C99AA-D91D-4760-B751-C19FCE67D171}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C63EDCA7-B43F-417A-89C7-40AE77480AC5} = {C63EDCA7-B43F-417A-89C7-40AE77480AC5}
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF} = {FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCraftServer", "DotCraftServer\DotCraftServer.csproj", "{D7F92B45-8358-4C24-9A26-F590DDCBC81F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C63EDCA7-B43F-417A-89C7-40AE77480AC5} = {C63EDCA7-B43F-417A-89C7-40AE77480AC5}
+		{FF49F6C4-ECCA-49C4-BA65-73FC24224EAF} = {FF49F6C4-ECCA-49C4-BA65-73FC24224EAF}
+		{331A72FD-3FA7-40AA-9A42-C10F823E5464} = {331A72FD-3FA7-40AA-9A42-C10F823E5464}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authlib", "Authlib\Authlib.csproj", "{331A72FD-3FA7-40AA-9A42-C10F823E5464}"

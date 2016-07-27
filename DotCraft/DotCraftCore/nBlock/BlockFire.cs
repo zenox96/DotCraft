@@ -2,6 +2,7 @@ using DotCraftCore.nBlock.nMaterial;
 using DotCraftCore.nInit;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 
 namespace DotCraftCore.nBlock
@@ -114,7 +115,7 @@ namespace DotCraftCore.nBlock
 					p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
 				}
 
-				if (!var6 && p_149674_1_.Raining && (p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ - 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ + 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ - 1) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ + 1)))
+				if (!var6 && p_149674_1_.isRaining() && (p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ - 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ + 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ - 1) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ + 1)))
 				{
 					p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
 				}
@@ -176,14 +177,14 @@ namespace DotCraftCore.nBlock
 
 										if (var14 > 0)
 										{
-											int var15 = (var14 + 40 + p_149674_1_.difficultySetting.DifficultyId * 7) / (var7 + 30);
+											int var15 = (var14 + 40 + p_149674_1_.difficultySetting.getDifficultyId() * 7) / (var7 + 30);
 
 											if (var8)
 											{
 												var15 /= 2;
 											}
 
-											if (var15 > 0 && p_149674_5_.Next(var13) <= var15 && (!p_149674_1_.Raining || !p_149674_1_.canLightningStrikeAt(var10, var12, var11)) && !p_149674_1_.canLightningStrikeAt(var10 - 1, var12, p_149674_4_) && !p_149674_1_.canLightningStrikeAt(var10 + 1, var12, var11) && !p_149674_1_.canLightningStrikeAt(var10, var12, var11 - 1) && !p_149674_1_.canLightningStrikeAt(var10, var12, var11 + 1))
+											if (var15 > 0 && p_149674_5_.Next(var13) <= var15 && (!p_149674_1_.isRaining() || !p_149674_1_.canLightningStrikeAt(var10, var12, var11)) && !p_149674_1_.canLightningStrikeAt(var10 - 1, var12, p_149674_4_) && !p_149674_1_.canLightningStrikeAt(var10 + 1, var12, var11) && !p_149674_1_.canLightningStrikeAt(var10, var12, var11 - 1) && !p_149674_1_.canLightningStrikeAt(var10, var12, var11 + 1))
 											{
 												int var16 = var7 + p_149674_5_.Next(5) / 4;
 
@@ -267,10 +268,7 @@ namespace DotCraftCore.nBlock
 
 		public override bool isCollidable()
 		{
-			get
-			{
-				return false;
-			}
+			return false;
 		}
 
 		public override bool func_149844_e(IBlockAccess p_149844_1_, int p_149844_2_, int p_149844_3_, int p_149844_4_)
