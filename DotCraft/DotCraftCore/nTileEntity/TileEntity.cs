@@ -1,19 +1,14 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nInit;
+using DotCraftCore.nNBT;
+using DotCraftCore.nNetwork;
+using DotCraftCore.nTileEntity;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nTileEntity
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockJukebox = DotCraftCore.nBlock.BlockJukebox;
-	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using Blocks = DotCraftCore.init.Blocks;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using Packet = DotCraftCore.network.Packet;
-	using World = DotCraftCore.nWorld.World;
-	using LogManager = org.apache.logging.log4j.LogManager;
-	using Logger = org.apache.logging.log4j.Logger;
-
 	public class TileEntity
 	{
 		private static readonly Logger logger = LogManager.Logger;
@@ -42,7 +37,7 @@ namespace DotCraftCore.nTileEntity
 
 		private static void func_145826_a(Type p_145826_0_, string p_145826_1_)
 		{
-			if(nameToClassMap.ContainsKey(p_145826_1_))
+			if(nameToClassMap.Contains(p_145826_1_))
 			{
 				throw new System.ArgumentException("Duplicate id: " + p_145826_1_);
 			}
@@ -117,7 +112,7 @@ namespace DotCraftCore.nTileEntity
 
 			try
 			{
-				Type var2 = (Class)nameToClassMap[p_145827_0_.getString("id")];
+				Type var2 = (Type)nameToClassMap[p_145827_0_.getString("id")];
 
 				if(var2 != null)
 				{
@@ -217,7 +212,7 @@ namespace DotCraftCore.nTileEntity
 			}
 		}
 
-		public virtual bool isInvalid()
+		public virtual bool isInvalid
 		{
 			get
 			{
@@ -252,13 +247,13 @@ namespace DotCraftCore.nTileEntity
 			this.blockMetadata = -1;
 		}
 
-		public virtual void func_145828_a(CrashReportCategory p_145828_1_)
+/*		public virtual void func_145828_a(CrashReportCategory p_145828_1_)
 		{
 			p_145828_1_.addCrashSectionCallable("Name", new Callable() {  public string call() { return(string)TileEntity.classToNameMap.get(TileEntity.GetType()) + " // " + TileEntity.GetType().CanonicalName; } });
 			CrashReportCategory.func_147153_a(p_145828_1_, this.field_145851_c, this.field_145848_d, this.field_145849_e, this.BlockType, this.BlockMetadata);
 			p_145828_1_.addCrashSectionCallable("Actual block type", new Callable() {  public string call() { int var1 = Block.getIdFromBlock(TileEntity.worldObj.getBlock(TileEntity.field_145851_c, TileEntity.field_145848_d, TileEntity.field_145849_e)); try { return string.Format("ID #{0:D} ({1} // {2})", new object[] {Convert.ToInt32(var1), Block.getBlockById(var1).UnlocalizedName, Block.getBlockById(var1).GetType().CanonicalName}); } catch (Exception var3) { return "ID #" + var1; } } });
 			p_145828_1_.addCrashSectionCallable("Actual block data value", new Callable() {  public string call() { int var1 = TileEntity.worldObj.getBlockMetadata(TileEntity.field_145851_c, TileEntity.field_145848_d, TileEntity.field_145849_e); if(var1 < 0) { return "Unknown? (Got " + var1 + ")"; } else { string var2 = string.Format("{0,4}", new object[] {int.toBinaryString(var1)}).replace(" ", "0"); return string.Format("{0:D} / 0x{0:X} / 0b{1}", new object[] {Convert.ToInt32(var1), var2}); } } });
-		}
+		}*/
 
 		static TileEntity()
 		{

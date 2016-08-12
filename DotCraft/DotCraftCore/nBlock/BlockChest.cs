@@ -9,6 +9,7 @@ using DotCraftCore.nNBT;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 using System.Collections;
 
@@ -511,7 +512,7 @@ namespace DotCraftCore.nBlock
 				Entity var5 = (Entity)var4.Current;
 				var6 = (EntityOcelot)var5;
 			}
-			while (!var6.Sitting);
+			while (!var6.isSitting());
 
 			return true;
 		}

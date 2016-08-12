@@ -8,10 +8,10 @@ namespace Authlib
 {
     public interface AuthenticationService
     {
-        UserAuthentication createUserAuthentication(Agent var1);
+        UserAuthentication CreateUserAuthentication(Agent var1);
 
-        MinecraftSessionService createMinecraftSessionService( );
+        MinecraftSessionService CreateMinecraftSessionService( );
 
-        GameProfileRepository createProfileRepository( );
+        GameProfileRepository CreateProfileRepository( );
     }
 }

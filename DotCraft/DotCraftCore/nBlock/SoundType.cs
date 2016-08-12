@@ -29,34 +29,34 @@ namespace DotCraftCore.nBlock
             this.Pitch = pitch;
         }
 
-        public virtual readonly float Volume
+        public virtual float Volume
         {
             get;
-            set;
+            private set;
         }
 
-        public virtual readonly float Pitch
+        public virtual float Pitch
         {
             get;
-            set;
+            private set;
         }
 
-        public virtual readonly string SoundName
+        public virtual string SoundName
         {
             get;
-            set;
+            private set;
         }
 
-        public virtual readonly string DigSoundName
+        public virtual string DigSoundName
         {
             get;
-            set;
+            private set;
         }
 
-        public virtual readonly string StepSoundName
+        public virtual string StepSoundName
         {
             get;
-            set;
+            private set;
         }
     }
 }

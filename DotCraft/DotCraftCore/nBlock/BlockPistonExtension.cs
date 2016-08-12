@@ -1,4 +1,5 @@
 using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
 using DotCraftCore.nEntity.nPlayer;
 using DotCraftCore.nInit;
 using DotCraftCore.nItem;

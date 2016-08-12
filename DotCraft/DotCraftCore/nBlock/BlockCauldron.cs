@@ -70,7 +70,7 @@ namespace DotCraftCore.nBlock
 			int var6 = func_150027_b(p_149670_1_.getBlockMetadata(p_149670_2_, p_149670_3_, p_149670_4_));
 			float var7 = (float)p_149670_3_ + (6.0F + (float)(3 * var6)) / 16.0F;
 
-			if (!p_149670_1_.isClient && p_149670_5_.Burning && var6 > 0 && p_149670_5_.boundingBox.minY <= (double)var7)
+			if (!p_149670_1_.isClient && p_149670_5_.isBurning && var6 > 0 && p_149670_5_.boundingBox.minY <= (double)var7)
 			{
 				p_149670_5_.extinguish();
 				this.func_150024_a(p_149670_1_, p_149670_2_, p_149670_3_, p_149670_4_, var6 - 1);
@@ -143,7 +143,7 @@ namespace DotCraftCore.nBlock
 								this.func_150024_a(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, var12 - 1);
 							}
 						}
-						else if (var12 > 0 && var10.Item is ItemArmor && ((ItemArmor)var10.Item).ArmorMaterial == ItemArmor.ArmorMaterial.CLOTH)
+						else if (var12 > 0 && var10.Item is ItemArmor && ((ItemArmor)var10.Item).ItemArmorMaterial == ItemArmor.ArmorMaterial.Cloth)
 						{
 							ItemArmor var14 = (ItemArmor)var10.Item;
 							var14.removeColor(var10);

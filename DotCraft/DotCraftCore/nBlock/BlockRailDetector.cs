@@ -75,7 +75,7 @@ namespace DotCraftCore.nBlock
 			float var8 = 0.125F;
 			IList var9 = p_150054_1_.getEntitiesWithinAABB(typeof(EntityMinecart), AxisAlignedBB.getBoundingBox((double)((float)p_150054_2_ + var8), (double)p_150054_3_, (double)((float)p_150054_4_ + var8), (double)((float)(p_150054_2_ + 1) - var8), (double)((float)(p_150054_3_ + 1) - var8), (double)((float)(p_150054_4_ + 1) - var8)));
 
-			if (!var9.Count == 0)
+			if (var9.Count != 0)
 			{
 				var7 = true;
 			}

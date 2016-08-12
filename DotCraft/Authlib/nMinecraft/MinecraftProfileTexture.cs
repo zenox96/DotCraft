@@ -22,7 +22,7 @@ namespace Authlib.nMinecraft
         }
 
         public String toString() {
-            return (new ToStringBuilder(this)).append("url", this.url).append("hash", this.getHash()).toString();
+            return (new StringBuilder(this)).append("url", this.url).append("hash", this.getHash()).toString();
         }
 
         public static enum Type {

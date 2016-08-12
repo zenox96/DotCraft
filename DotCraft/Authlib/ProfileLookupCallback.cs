@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Authlib
 {
-    interface ProfileLookupCallback
+    public interface ProfileLookupCallback
     {
-        void onProfileLookupSucceeded(GameProfile var1);
+        void OnProfileLookupSucceeded(GameProfile var1);
 
-        void onProfileLookupFailed(GameProfile var1, Exception var2);
+        void OnProfileLookupFailed(GameProfile var1, Exception var2);
     }
 }

@@ -9,6 +9,7 @@ using DotCraftCore.nNBT;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 using System.Collections;
 
@@ -159,9 +160,9 @@ namespace DotCraftCore.nBlock
 							}
 
 							float var15 = 0.05F;
-							var14.motionX = (double)((float)this.field_149922_a.nextGaussian() * var15);
-							var14.motionY = (double)((float)this.field_149922_a.nextGaussian() * var15 + 0.2F);
-							var14.motionZ = (double)((float)this.field_149922_a.nextGaussian() * var15);
+							var14.motionX = (double)((float)this.field_149922_a.NextGaussian() * var15);
+							var14.motionY = (double)((float)this.field_149922_a.NextGaussian() * var15 + 0.2F);
+							var14.motionZ = (double)((float)this.field_149922_a.NextGaussian() * var15);
 							p_149749_1_.spawnEntityInWorld(var14);
 						}
 					}

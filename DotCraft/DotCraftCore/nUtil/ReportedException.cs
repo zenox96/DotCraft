@@ -35,7 +35,7 @@ namespace DotCraftCore.nUtil
 			}
 		}
 
-		public virtual string Message
+		public new virtual string Message
 		{
 			get
 			{

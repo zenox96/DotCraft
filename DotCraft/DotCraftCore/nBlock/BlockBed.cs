@@ -36,8 +36,8 @@ namespace DotCraftCore.nBlock
 				if (!func_149975_b(var10))
 				{
 					int var11 = func_149895_l(var10);
-					p_149727_2_ += field_149981_a[var11][0];
-					p_149727_4_ += field_149981_a[var11][1];
+					p_149727_2_ += field_149981_a[var11, 0];
+					p_149727_4_ += field_149981_a[var11, 1];
 
 					if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_, p_149727_4_) != this)
 					{
@@ -58,7 +58,7 @@ namespace DotCraftCore.nBlock
 						{
 							EntityPlayer var21 = (EntityPlayer)var12.Current;
 
-							if (var21.PlayerSleeping)
+							if (var21.isPlayerSleeping)
 							{
 								ChunkCoordinates var14 = var21.playerLocation;
 
@@ -106,8 +106,8 @@ namespace DotCraftCore.nBlock
 					double var15 = (double)p_149727_4_ + 0.5D;
 					p_149727_1_.setBlockToAir(p_149727_2_, p_149727_3_, p_149727_4_);
 					int var17 = func_149895_l(var10);
-					p_149727_2_ += field_149981_a[var17][0];
-					p_149727_4_ += field_149981_a[var17][1];
+					p_149727_2_ += field_149981_a[var17, 0];
+					p_149727_4_ += field_149981_a[var17, 1];
 
 					if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_, p_149727_4_) == this)
 					{
@@ -159,12 +159,12 @@ namespace DotCraftCore.nBlock
 
 			if (func_149975_b(var6))
 			{
-				if (p_149695_1_.getBlock(p_149695_2_ - field_149981_a[var7][0], p_149695_3_, p_149695_4_ - field_149981_a[var7][1]) != this)
+				if (p_149695_1_.getBlock(p_149695_2_ - field_149981_a[var7, 0], p_149695_3_, p_149695_4_ - field_149981_a[var7, 1]) != this)
 				{
 					p_149695_1_.setBlockToAir(p_149695_2_, p_149695_3_, p_149695_4_);
 				}
 			}
-			else if (p_149695_1_.getBlock(p_149695_2_ + field_149981_a[var7][0], p_149695_3_, p_149695_4_ + field_149981_a[var7][1]) != this)
+			else if (p_149695_1_.getBlock(p_149695_2_ + field_149981_a[var7, 0], p_149695_3_, p_149695_4_ + field_149981_a[var7, 1]) != this)
 			{
 				p_149695_1_.setBlockToAir(p_149695_2_, p_149695_3_, p_149695_4_);
 
@@ -218,8 +218,8 @@ namespace DotCraftCore.nBlock
 
 			for (int var7 = 0; var7 <= 1; ++var7)
 			{
-				int var8 = p_149977_1_ - field_149981_a[var6][0] * var7 - 1;
-				int var9 = p_149977_3_ - field_149981_a[var6][1] * var7 - 1;
+				int var8 = p_149977_1_ - field_149981_a[var6, 0] * var7 - 1;
+				int var9 = p_149977_3_ - field_149981_a[var6, 1] * var7 - 1;
 				int var10 = var8 + 2;
 				int var11 = var9 + 2;
 
@@ -278,8 +278,8 @@ namespace DotCraftCore.nBlock
 			if (p_149681_6_.capabilities.isCreativeMode && func_149975_b(p_149681_5_))
 			{
 				int var7 = func_149895_l(p_149681_5_);
-				p_149681_2_ -= field_149981_a[var7][0];
-				p_149681_4_ -= field_149981_a[var7][1];
+				p_149681_2_ -= field_149981_a[var7, 0];
+				p_149681_4_ -= field_149981_a[var7, 1];
 
 				if (p_149681_1_.getBlock(p_149681_2_, p_149681_3_, p_149681_4_) == this)
 				{

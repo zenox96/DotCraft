@@ -13,7 +13,7 @@ namespace Authlib.nMinecraft
         {
         }
 
-        public HttpAuthenticationService getAuthenticationService()
+        public new HttpAuthenticationService getAuthenticationService()
         {
             return (HttpAuthenticationService)base.getAuthenticationService();
         }

@@ -2,10 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Authlib
 {
@@ -20,7 +18,7 @@ namespace Authlib
             this.proxy = proxy;
         }
 
-        public Proxy getProxy
+        public Proxy getProxy()
         {
             return this.proxy;
         }

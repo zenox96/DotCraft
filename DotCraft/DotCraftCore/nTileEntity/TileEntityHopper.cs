@@ -1,29 +1,18 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nCommand;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nItem;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System;
 using System.Collections;
 
 namespace DotCraftCore.nTileEntity
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockChest = DotCraftCore.nBlock.BlockChest;
-	using BlockHopper = DotCraftCore.nBlock.BlockHopper;
-	using IEntitySelector = DotCraftCore.nCommand.IEntitySelector;
-	using Entity = DotCraftCore.entity.Entity;
-	using EntityItem = DotCraftCore.entity.item.EntityItem;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using IInventory = DotCraftCore.inventory.IInventory;
-	using ISidedInventory = DotCraftCore.inventory.ISidedInventory;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using Facing = DotCraftCore.nUtil.Facing;
-	using MathHelper = DotCraftCore.nUtil.MathHelper;
-	using World = DotCraftCore.nWorld.World;
-    using DotCraftCore.nInventory;
-    using DotCraftCore.nEntity.nItem;
-    using DotCraftCore.nItem;
-
 	public class TileEntityHopper : TileEntity, IHopper
 	{
 		private ItemStack[] field_145900_a = new ItemStack[5];
@@ -75,7 +64,7 @@ namespace DotCraftCore.nTileEntity
 			p_145841_1_.setTag("Items", var2);
 			p_145841_1_.setInteger("TransferCooldown", this.field_145901_j);
 
-			if(this.InventoryNameLocalized)
+			if(this.isInventoryNameLocalized)
 			{
 				p_145841_1_.setString("CustomName", this.field_145902_i);
 			}
@@ -180,14 +169,14 @@ namespace DotCraftCore.nTileEntity
 		{
 			get
 			{
-				return this.InventoryNameLocalized ? this.field_145902_i : "container.hopper";
+				return this.isInventoryNameLocalized ? this.field_145902_i : "container.hopper";
 			}
 		}
 
 ///    
 ///     <summary> * Returns if the inventory name is localized </summary>
 ///     
-		public virtual bool isInventoryNameLocalized()
+		public virtual bool isInventoryNameLocalized
 		{
 			get
 			{

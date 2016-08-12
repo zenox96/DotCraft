@@ -1,3 +1,4 @@
+using System;
 using DotCraftCore.nBlock.nMaterial;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nWorld;
@@ -28,6 +29,8 @@ namespace DotCraftCore.nBlock
 			TileEntity var7 = p_149696_1_.getTileEntity(p_149696_2_, p_149696_3_, p_149696_4_);
 			return var7 != null ? var7.receiveClientEvent(p_149696_5_, p_149696_6_) : false;
 		}
-	}
+
+        public abstract TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_);
+    }
 
 }

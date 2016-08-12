@@ -1,9 +1,8 @@
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nItem;
+
 namespace DotCraftCore.nInventory
 {
-
-	using EntityPlayer = DotCraftCore.nEntity.nPlayer.EntityPlayer;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-
 	public interface IInventory
 	{
 ///    
@@ -41,7 +40,7 @@ namespace DotCraftCore.nInventory
 ///    
 ///     <summary> * Returns if the inventory name is localized </summary>
 ///     
-		bool isInventoryNameLocalized() {get;}
+		bool isInventoryNameLocalized {get;}
 
 ///    
 ///     <summary> * Returns the maximum stack size for a inventory slot. </summary>

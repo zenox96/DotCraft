@@ -1,17 +1,13 @@
+using DotCraftCore.nBlock;
+using DotCraftCore.nEntity;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nInventory;
+using DotCraftCore.nUtil;
+using DotCraftCore.nWorld;
 using System.Collections;
 
 namespace DotCraftCore.nItem
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using CreativeTabs = DotCraftCore.creativetab.CreativeTabs;
-	using EntityLeashKnot = DotCraftCore.entity.EntityLeashKnot;
-	using EntityLiving = DotCraftCore.entity.EntityLiving;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-	using World = DotCraftCore.nWorld.World;
-    using DotCraftCore.nEntity.nPlayer;
-
 	public class ItemLead : Item
 	{
 		

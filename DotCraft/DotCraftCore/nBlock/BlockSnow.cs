@@ -69,7 +69,7 @@ namespace DotCraftCore.nBlock
 		public override bool canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
 		{
 			Block var5 = p_149742_1_.getBlock(p_149742_2_, p_149742_3_ - 1, p_149742_4_);
-			return var5 != Blocks.ice && var5 != Blocks.packed_ice ? (var5.BlockMaterial == Material.leaves ? true : (var5 == this && (p_149742_1_.getBlockMetadata(p_149742_2_, p_149742_3_ - 1, p_149742_4_) & 7) == 7 ? true : var5.OpaqueCube && var5.BlockMaterial.BlocksMovement())) : false;
+			return var5 != Blocks.ice && var5 != Blocks.packed_ice ? (var5.BlockMaterial == Material.leaves ? true : (var5 == this && (p_149742_1_.getBlockMetadata(p_149742_2_, p_149742_3_ - 1, p_149742_4_) & 7) == 7 ? true : var5.OpaqueCube && var5.BlockMaterial.BlocksMovement)) : false;
 		}
 
 		public override void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Authlib
 {
-    enum UserType
+    public enum UserType
     {
         NULL = 0,
         LEGACY = 1,
@@ -15,17 +15,18 @@ namespace Authlib
     public static class UserTypeExtension
     {
         private static readonly Dictionary<String, UserType> BY_NAME;
-        private readonly String name;
+        private static readonly String name;
 
-        public static UserType byName(String name) {
+        public static UserType ByName(String name)
+        {
             return (UserType)BY_NAME[name.ToLower()];
         }
 
-        public String getName() {
-            return this.name;
+        public static String GetName() {
+            return name;
         }
 
-        public static UserTypeExtension() {
+        static UserTypeExtension() {
             BY_NAME = new Dictionary<String, UserType>();
             UserType[] enums = Enum.GetValues(typeof(UserType)).Cast<UserType>().ToArray();
             int len = enums.Length;

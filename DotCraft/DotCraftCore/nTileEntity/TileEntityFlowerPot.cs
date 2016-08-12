@@ -1,12 +1,10 @@
+using DotCraftCore.nItem;
+using DotCraftCore.nNBT;
+using DotCraftCore.nNetwork;
+using DotCraftCore.nNetwork.nPlay.nServer;
+
 namespace DotCraftCore.nTileEntity
 {
-
-    using DotCraftCore.nItem;
-    using Item = DotCraftCore.item.Item;
-    using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-    using Packet = DotCraftCore.network.Packet;
-    using S35PacketUpdateTileEntity = DotCraftCore.network.play.server.S35PacketUpdateTileEntity;
-
 	public class TileEntityFlowerPot : TileEntity
 	{
 		private Item field_145967_a;

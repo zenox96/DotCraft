@@ -9,6 +9,7 @@ using DotCraftCore.nNBT;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 
 namespace DotCraftCore.nBlock
@@ -223,9 +224,9 @@ namespace DotCraftCore.nBlock
 		public static IPosition func_149939_a(IBlockSource p_149939_0_)
 		{
 			EnumFacing var1 = func_149937_b(p_149939_0_.BlockMetadata);
-			double var2 = p_149939_0_.X + 0.7D * (double)var1.FrontOffsetX;
-			double var4 = p_149939_0_.Y + 0.7D * (double)var1.FrontOffsetY;
-			double var6 = p_149939_0_.Z + 0.7D * (double)var1.FrontOffsetZ;
+			double var2 = p_149939_0_.X + 0.7D * var1.getFrontOffsetX();
+			double var4 = p_149939_0_.Y + 0.7D * var1.getFrontOffsetY();
+			double var6 = p_149939_0_.Z + 0.7D * var1.getFrontOffsetZ();
 			return new PositionImpl(var2, var4, var6);
 		}
 

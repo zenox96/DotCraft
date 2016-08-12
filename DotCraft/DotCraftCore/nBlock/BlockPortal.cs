@@ -4,13 +4,14 @@ using DotCraftCore.nInit;
 using DotCraftCore.nItem;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 
 namespace DotCraftCore.nBlock
 {
 	public class BlockPortal : BlockBreakable
 	{
-		public static readonly int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
+		public static readonly int[,] field_150001_a = new int[,] {{3, 1}, {2, 0}};
 
 		public BlockPortal() : base("portal", Material.Portal, false)
 		{
@@ -24,7 +25,7 @@ namespace DotCraftCore.nBlock
 		{
 			base.updateTick(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_, p_149674_5_);
 
-			if (p_149674_1_.provider.SurfaceWorld && p_149674_1_.GameRules.getGameRuleBooleanValue("doMobSpawning") && p_149674_5_.Next(2000) < p_149674_1_.difficultySetting.DifficultyId)
+			if (p_149674_1_.provider.isSurfaceWorld() && p_149674_1_.GameRules.getGameRuleBooleanValue("doMobSpawning") && p_149674_5_.Next(2000) < p_149674_1_.difficultySetting.getDifficultyId())
 			{
 				int var6;
 

@@ -1,3 +1,4 @@
+using DotCraftCore.nBlock.nMaterial;
 using DotCraftCore.nItem;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nWorld;

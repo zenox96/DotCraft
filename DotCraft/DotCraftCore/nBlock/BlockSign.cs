@@ -108,13 +108,7 @@ namespace DotCraftCore.nBlock
 ///     
 		public override TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
 		{
-			try
-			{
-				return (TileEntity)this.field_149968_a.newInstance();
-			}
-			catch (Exception var4)
-			{
-			}
+			return (TileEntity)this.field_149968_a.newInstance();
 		}
 
 		public override Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)

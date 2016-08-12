@@ -1,4 +1,5 @@
 using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
 using DotCraftCore.nEntity.nPlayer;
 using DotCraftCore.nEntity.nProjectile;
 using DotCraftCore.nInventory;
@@ -311,7 +312,7 @@ namespace DotCraftCore.nBlock
 			bool var7 = (var5 & 8) != 0;
 			this.func_150043_b(var5);
 			IList var9 = p_150046_1_.getEntitiesWithinAABB(typeof(EntityArrow), AxisAlignedBB.getBoundingBox((double)p_150046_2_ + this.field_149759_B, (double)p_150046_3_ + this.field_149760_C, (double)p_150046_4_ + this.field_149754_D, (double)p_150046_2_ + this.field_149755_E, (double)p_150046_3_ + this.field_149756_F, (double)p_150046_4_ + this.field_149757_G));
-			bool var8 = !var9.Count == 0;
+			bool var8 = var9.Count != 0;
 
 			if (var8 && !var7)
 			{

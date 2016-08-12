@@ -21,6 +21,7 @@ using DotCraftCore.nTileEntity;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
 using DotCraftCore.nWorld.nChunk;
+using DotCraftUtil;
 using System;
 using System.Collections;
 
@@ -414,7 +415,7 @@ namespace DotCraftCore.nEntity.nPlayer
 					var5.rotateAroundX(-this.rotationPitch * (float)Math.PI / 180.0F);
 					var5.rotateAroundY(-this.rotationYaw * (float)Math.PI / 180.0F);
 					var5 = var5.addVector(this.posX, this.posY + (double)this.EyeHeight, this.posZ);
-					string var6 = "iconcrack_" + nItem.getIdFromItem(p_71010_1_.Item);
+					string var6 = "iconcrack_" + Item.getIdFromItem(p_71010_1_.Item);
 
 					if (p_71010_1_.HasSubtypes)
 					{
@@ -472,7 +473,7 @@ namespace DotCraftCore.nEntity.nPlayer
 		{
 			get
 			{
-				return this.Health <= 0.0F || this.PlayerSleeping;
+				return this.Health <= 0.0F || this.isPlayerSleeping;
 			}
 		}
 
@@ -1632,8 +1633,8 @@ namespace DotCraftCore.nEntity.nPlayer
 			}
 			else
 			{
-				Material var4 = p_71056_0_.getBlock(p_71056_1_.posX, p_71056_1_.posY, p_71056_1_.posZ).Material;
-				Material var5 = p_71056_0_.getBlock(p_71056_1_.posX, p_71056_1_.posY + 1, p_71056_1_.posZ).Material;
+				Material var4 = p_71056_0_.getBlock(p_71056_1_.posX, p_71056_1_.posY, p_71056_1_.posZ).BlockMaterial;
+				Material var5 = p_71056_0_.getBlock(p_71056_1_.posX, p_71056_1_.posY + 1, p_71056_1_.posZ).BlockMaterial;
 				bool var6 = !var4.Solid && !var4.Liquid;
 				bool var7 = !var5.Solid && !var5.Liquid;
 				return p_71056_2_ && var6 && var7 ? p_71056_1_ : null;
@@ -1675,7 +1676,7 @@ namespace DotCraftCore.nEntity.nPlayer
 ///    
 ///     <summary> * Returns whether player is sleeping or not </summary>
 ///     
-		public override bool isPlayerSleeping
+		public new bool isPlayerSleeping
 		{
 			get
 			{
@@ -1842,7 +1843,7 @@ namespace DotCraftCore.nEntity.nPlayer
 
 				if (this.isInsideOfMaterial(Material.water))
 				{
-					var7 = Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_3_ * p_71000_3_ + p_71000_5_ * p_71000_5_) * 100.0F);
+					var7 = (int)Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_3_ * p_71000_3_ + p_71000_5_ * p_71000_5_) * 100.0F);
 
 					if (var7 > 0)
 					{
@@ -1852,7 +1853,7 @@ namespace DotCraftCore.nEntity.nPlayer
 				}
 				else if (this.inWater)
 				{
-					var7 = Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
+					var7 = (int)Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
 
 					if (var7 > 0)
 					{
@@ -1869,7 +1870,7 @@ namespace DotCraftCore.nEntity.nPlayer
 				}
 				else if (this.onGround)
 				{
-					var7 = Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
+					var7 = (int)Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
 
 					if (var7 > 0)
 					{
@@ -1887,7 +1888,7 @@ namespace DotCraftCore.nEntity.nPlayer
 				}
 				else
 				{
-					var7 = Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
+					var7 = (int)Math.Round(MathHelper.sqrt_double(p_71000_1_ * p_71000_1_ + p_71000_5_ * p_71000_5_) * 100.0F);
 
 					if (var7 > 25)
 					{
@@ -1904,7 +1905,7 @@ namespace DotCraftCore.nEntity.nPlayer
 		{
 			if (this.ridingEntity != null)
 			{
-				int var7 = Math.Round(MathHelper.sqrt_double(p_71015_1_ * p_71015_1_ + p_71015_3_ * p_71015_3_ + p_71015_5_ * p_71015_5_) * 100.0F);
+				int var7 = (int)Math.Round(MathHelper.sqrt_double(p_71015_1_ * p_71015_1_ + p_71015_3_ * p_71015_3_ + p_71015_5_ * p_71015_5_) * 100.0F);
 
 				if (var7 > 0)
 				{
@@ -2160,7 +2161,7 @@ namespace DotCraftCore.nEntity.nPlayer
 ///    
 ///     <summary> * Only use is to identify if class is an instance of player for experience dropping </summary>
 ///     
-		protected internal override bool isPlayer
+		protected internal new bool isPlayer
 		{
 			get
 			{

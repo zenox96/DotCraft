@@ -183,7 +183,7 @@
 		{
 			get
 			{
-				return this.isTranslucent ? false : this.BlocksMovement();
+				return this.isTranslucent ? false : this.BlocksMovement;
 			}
 		}
 

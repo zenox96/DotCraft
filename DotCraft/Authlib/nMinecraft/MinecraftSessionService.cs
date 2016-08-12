@@ -5,14 +5,14 @@ using System.Text;
 
 namespace Authlib.nMinecraft
 {
-    interface MinecraftSessionService
+    public interface MinecraftSessionService
     {
-        void joinServer(GameProfile var1, String var2, String var3);
+        void JoinServer(GameProfile var1, String var2, String var3);
 
-        GameProfile hasJoinedServer(GameProfile var1, String var2);
+        GameProfile HasJoinedServer(GameProfile var1, String var2);
 
-        Dictionary<Type, MinecraftProfileTexture> getTextures(GameProfile var1, Boolean var2);
+        Dictionary<Type, MinecraftProfileTexture> GetTextures(GameProfile var1, Boolean var2);
 
-        GameProfile fillProfileProperties(GameProfile var1, Boolean var2);
+        GameProfile FillProfileProperties(GameProfile var1, Boolean var2);
     }
 }

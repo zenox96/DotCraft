@@ -9,8 +9,8 @@ namespace DotCraftCore.nBlock
     using DotCraftCore.nItem;
     using DotCraftCore.nUtil;
     using DotCraftCore.nWorld;
-
-	public class BlockPane : Block
+    using nEntity;
+    public class BlockPane : Block
 	{
 		private readonly string field_150100_a;
 		private readonly bool field_150099_b;
@@ -51,7 +51,7 @@ namespace DotCraftCore.nBlock
 		{
 			get
 			{
-				return this.blockMaterial == Material.glass ? 41 : 18;
+				return this.BlockMaterial == Material.glass ? 41 : 18;
 			}
 		}
 

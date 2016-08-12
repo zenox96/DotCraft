@@ -4,6 +4,7 @@ using DotCraftCore.nItem;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
 using DotCraftCore.nWorld.nGen.nFeature;
+using DotCraftUtil;
 using System;
 using System.Collections;
 
@@ -72,7 +73,7 @@ namespace DotCraftCore.nBlock
 						{
 							if (this.func_149880_a(p_149878_1_, p_149878_2_ + var8, p_149878_3_, p_149878_4_ + var9, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8 + 1, p_149878_3_, p_149878_4_ + var9, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8, p_149878_3_, p_149878_4_ + var9 + 1, 1) && this.func_149880_a(p_149878_1_, p_149878_2_ + var8 + 1, p_149878_3_, p_149878_4_ + var9 + 1, 1))
 							{
-                                var7 = new WorldGenMegaPineTree(false, p_149878_5_.NextBoolean());
+                                var7 = new WorldGenMegaPineTree(false, p_149878_5_.Next(0,1) == 0);
 								var10 = true;
 								goto label78;
 							}
@@ -139,6 +140,7 @@ namespace DotCraftCore.nBlock
 					{
 						return;
 					}
+                    break;
 			}
 
 			Block var11 = Blocks.air;

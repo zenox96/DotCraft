@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Authlib
 {
-    interface GameProfileRepository
+    public interface GameProfileRepository
     {
-        void findProfilesByNames(String[] var1, Agent var2, ProfileLookupCallback var3);
+        void FindProfilesByNames(String[] var1, Agent var2, ProfileLookupCallback var3);
     }
 }

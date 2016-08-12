@@ -1,19 +1,11 @@
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System.Collections;
+using DotCraftCore.nEntity.nPlayer;
+using System;
 
 namespace DotCraftCore.nTileEntity
 {
-
-	using Block = DotCraftCore.nBlock.Block;
-	using BlockChest = DotCraftCore.nBlock.BlockChest;
-	using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-	using ContainerChest = DotCraftCore.inventory.ContainerChest;
-	using IInventory = DotCraftCore.inventory.IInventory;
-	using InventoryLargeChest = DotCraftCore.inventory.InventoryLargeChest;
-	using ItemStack = DotCraftCore.item.ItemStack;
-	using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nbt.NBTTagList;
-	using AxisAlignedBB = DotCraftCore.nUtil.AxisAlignedBB;
-
 	public class TileEntityChest : TileEntity, IInventory
 	{
 		private ItemStack[] field_145985_p = new ItemStack[36];
@@ -502,6 +494,11 @@ namespace DotCraftCore.nTileEntity
 
 			return this.field_145982_r;
 		}
-	}
+
+        public bool isUseableByPlayer(EntityPlayer p_70300_1_)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 }

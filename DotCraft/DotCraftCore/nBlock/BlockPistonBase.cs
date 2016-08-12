@@ -7,6 +7,7 @@ using DotCraftCore.nItem;
 using DotCraftCore.nTileEntity;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System.Collections;
 
 namespace DotCraftCore.nBlock

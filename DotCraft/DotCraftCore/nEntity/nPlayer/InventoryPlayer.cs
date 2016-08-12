@@ -2,19 +2,19 @@ using System;
 
 namespace DotCraftCore.nEntity.nPlayer
 {
+    using DotCraftCore.nItem;
+    using Block = DotCraftCore.nBlock.Block;
+    using CrashReport = DotCraftCore.crash.CrashReport;
+    using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
+    using IInventory = DotCraftCore.nInventory.IInventory;
+    using Item = DotCraftCore.nItem.Item;
+    using ItemArmor = DotCraftCore.nItem.ItemArmor;
+    using ItemStack = DotCraftCore.nItem.ItemStack;
+    using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
+    using NBTTagList = DotCraftCore.nNBT.NBTTagList;
+    using ReportedException = DotCraftCore.nUtil.ReportedException;
 
-	using Block = DotCraftCore.nBlock.Block;
-	using CrashReport = DotCraftCore.crash.CrashReport;
-	using CrashReportCategory = DotCraftCore.crash.CrashReportCategory;
-	using IInventory = DotCraftCore.nInventory.IInventory;
-	using Item = DotCraftCore.nItem.Item;
-	using ItemArmor = DotCraftCore.nItem.ItemArmor;
-	using ItemStack = DotCraftCore.nItem.ItemStack;
-	using NBTTagCompound = DotCraftCore.nNBT.NBTTagCompound;
-	using NBTTagList = DotCraftCore.nNBT.NBTTagList;
-	using ReportedException = DotCraftCore.nUtil.ReportedException;
-
-	public class InventoryPlayer : IInventory
+    public class InventoryPlayer : IInventory
 	{
 ///    
 ///     <summary> * An array of 36 item stacks indicating the main player inventory (including the visible bar). </summary>
@@ -129,7 +129,31 @@ namespace DotCraftCore.nEntity.nPlayer
 			}
 		}
 
-		public virtual void func_146030_a(Item p_146030_1_, int p_146030_2_, bool p_146030_3_, bool p_146030_4_)
+        public int SizeInventory
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string InventoryName
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int InventoryStackLimit
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public virtual void func_146030_a(Item p_146030_1_, int p_146030_2_, bool p_146030_3_, bool p_146030_4_)
 		{
 			bool var5 = true;
 			this.currentItemStack = this.CurrentItem;
@@ -444,7 +468,58 @@ namespace DotCraftCore.nEntity.nPlayer
 					CrashReportCategory var4 = var3.makeCategory("Item being added");
 					var4.addCrashSection("Item ID", Convert.ToInt32(Item.getIdFromItem(p_70441_1_.Item)));
 					var4.addCrashSection("Item data", Convert.ToInt32(p_70441_1_.ItemDamage));
-					var4.addCrashSectionCallable("Item name", new Callable() {  public string call() { return p_70441_1_.DisplayName; } });
+					var4.addCrashSectionCallable("Item name", new Callable() {  public string call() { return p_70441_1_.DisplayName; }
+
+        public ItemStack getStackInSlot(int p_70301_1_)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ItemStack decrStackSize(int p_70298_1_, int p_70298_2_)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ItemStack getStackInSlotOnClosing(int p_70304_1_)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setInventorySlotContents(int p_70299_1_, ItemStack p_70299_2_)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isInventoryNameLocalized()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void onInventoryChanged()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isUseableByPlayer(EntityPlayer p_70300_1_)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void openInventory()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void closeInventory()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_)
+        {
+            throw new NotImplementedException();
+        }
+    });
 					throw new ReportedException(var3);
 				}
 			}

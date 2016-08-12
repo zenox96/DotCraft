@@ -131,7 +131,7 @@ namespace DotCraftCore.nBlock
 ///    
 ///     <summary> * Returns true only if block is flowerPot </summary>
 ///     
-		public override bool isFlowerPot()
+		public new bool isFlowerPot
 		{
 			get
 			{

@@ -1,4 +1,5 @@
 using DotCraftCore.nBlock.nMaterial;
+using DotCraftCore.nEntity;
 using DotCraftCore.nInventory;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;

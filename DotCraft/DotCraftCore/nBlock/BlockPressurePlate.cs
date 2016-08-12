@@ -45,7 +45,7 @@ namespace DotCraftCore.nBlock
 				var5 = p_150065_1_.getEntitiesWithinAABB(typeof(EntityPlayer), this.func_150061_a(p_150065_2_, p_150065_3_, p_150065_4_));
 			}
 
-			if (var5 != null && !var5.Count == 0)
+			if (var5 != null && var5.Count != 0)
 			{
 				IEnumerator var6 = var5.GetEnumerator();
 

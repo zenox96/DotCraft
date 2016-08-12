@@ -4,6 +4,7 @@ using DotCraftCore.nInit;
 using DotCraftCore.nItem;
 using DotCraftCore.nUtil;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 
 namespace DotCraftCore.nBlock
@@ -198,7 +199,7 @@ namespace DotCraftCore.nBlock
 
 				if (var11 < 0)
 				{
-					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).BlockMaterial.BlocksMovement())
+					if (!p_149800_1_.getBlock(var8, p_149800_3_, var10).BlockMaterial.BlocksMovement)
 					{
 						var11 = this.func_149798_e(p_149800_1_, var8, p_149800_3_ - 1, var10);
 
@@ -350,7 +351,7 @@ namespace DotCraftCore.nBlock
 						++var9;
 					}
 
-					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).BlockMaterial == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.BlocksMovement() || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.Liquid))
+					if (p_149734_1_.getBlock(var8, p_149734_3_, var9).BlockMaterial == Material.air && (p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.BlocksMovement || p_149734_1_.getBlock(var8, p_149734_3_ - 1, var9).BlockMaterial.Liquid))
 					{
 						double var10 = 0.0625D;
 						double var11 = ((double)p_149734_2_ + p_149734_5_.NextDouble());
@@ -436,7 +437,7 @@ namespace DotCraftCore.nBlock
 				}
 			}
 
-			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).BlockMaterial.BlocksMovement())
+			if (p_149734_5_.Next(10) == 0 && World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !p_149734_1_.getBlock(p_149734_2_, p_149734_3_ - 2, p_149734_4_).BlockMaterial.BlocksMovement)
 			{
 				var21 = (double)p_149734_2_ + p_149734_5_.NextDouble();
 				var22 = (double)p_149734_3_ - 1.05D;

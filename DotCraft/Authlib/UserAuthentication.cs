@@ -6,15 +6,15 @@ using System.Text;
 namespace Authlib
 {
     public interface UserAuthentication {
-        Boolean canLogIn();
+        bool canLogIn();
 
         void logIn();
 
         void logOut();
 
-        Boolean isLoggedIn();
+        bool isLoggedIn();
 
-        Boolean canPlayOnline();
+        bool canPlayOnline();
 
         GameProfile[] getAvailableProfiles();
 
@@ -22,19 +22,19 @@ namespace Authlib
 
         void selectGameProfile(GameProfile var1);
 
-        void loadFromStorage(Dictionary<String, Object> var1);
+        void loadFromStorage(Dictionary<string, object> var1);
 
-        Dictionary<String, Object> saveForStorage();
+        Dictionary<string, object> saveForStorage();
 
-        void setUsername(String var1);
+        void setUsername(string var1);
 
-        void setPassword(String var1);
+        void setPassword(string var1);
 
-        String getAuthenticatedToken();
+        string getAuthenticatedToken();
 
-        String getUserID();
+        string getUserID();
 
-        Dictionary<String, Property> getUserProperties();
+        Dictionary<string, Property> getUserProperties();
 
         UserType getUserType();
     }

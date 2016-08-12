@@ -100,7 +100,7 @@ namespace DotCraftCore.nBlock
 			{
 				EntityArrow var6 = (EntityArrow)p_149670_5_;
 
-				if (var6.Burning)
+				if (var6.isBurning)
 				{
 					this.func_150114_a(p_149670_1_, p_149670_2_, p_149670_3_, p_149670_4_, 1, var6.shootingEntity is EntityLivingBase ? (EntityLivingBase)var6.shootingEntity : null);
 					p_149670_1_.setBlockToAir(p_149670_2_, p_149670_3_, p_149670_4_);

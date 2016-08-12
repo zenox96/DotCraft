@@ -102,7 +102,7 @@ namespace DotCraftCore.nBlock
 
 			if (var10 != null && var11 != null)
 			{
-				if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_ + 1, p_149727_4_).isBlockNormalCube())
+				if (p_149727_1_.getBlock(p_149727_2_, p_149727_3_ + 1, p_149727_4_).isBlockNormalCube)
 				{
 					return true;
 				}

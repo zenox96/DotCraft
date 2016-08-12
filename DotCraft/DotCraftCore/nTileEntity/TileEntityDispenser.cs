@@ -1,15 +1,11 @@
+using DotCraftCore.nInventory;
+using DotCraftCore.nItem;
 using System;
+using DotCraftCore.nEntity.nPlayer;
+using DotCraftCore.nNBT;
 
 namespace DotCraftCore.nTileEntity
 {
-
-    using DotCraftCore.nItem;
-    using EntityPlayer = DotCraftCore.entity.player.EntityPlayer;
-    using IInventory = DotCraftCore.inventory.IInventory;
-    using ItemStack = DotCraftCore.item.ItemStack;
-    using NBTTagCompound = DotCraftCore.nbt.NBTTagCompound;
-    using NBTTagList = DotCraftCore.nbt.NBTTagList;
-
 	public class TileEntityDispenser : TileEntity, IInventory
 	{
 		private ItemStack[] field_146022_i = new ItemStack[9];
@@ -142,7 +138,7 @@ namespace DotCraftCore.nTileEntity
 		{
 			get
 			{
-				return this.InventoryNameLocalized ? this.field_146020_a : "container.dispenser";
+				return this.isInventoryNameLocalized ? this.field_146020_a : "container.dispenser";
 			}
 		}
 
@@ -154,7 +150,7 @@ namespace DotCraftCore.nTileEntity
 ///    
 ///     <summary> * Returns if the inventory name is localized </summary>
 ///     
-		public virtual bool isInventoryNameLocalized()
+		public virtual bool isInventoryNameLocalized
 		{
 			get
 			{
@@ -203,7 +199,7 @@ namespace DotCraftCore.nTileEntity
 
 			p_145841_1_.setTag("Items", var2);
 
-			if(this.InventoryNameLocalized)
+			if(this.isInventoryNameLocalized)
 			{
 				p_145841_1_.setString("CustomName", this.field_146020_a);
 			}
@@ -243,6 +239,6 @@ namespace DotCraftCore.nTileEntity
 		{
 			return true;
 		}
-	}
+    }
 
 }

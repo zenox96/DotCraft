@@ -4,6 +4,7 @@ using DotCraftCore.nEntity.nPlayer;
 using DotCraftCore.nInit;
 using DotCraftCore.nInventory;
 using DotCraftCore.nItem;
+using DotCraftCore.nStats;
 using DotCraftCore.nWorld;
 using System;
 
@@ -60,7 +61,7 @@ namespace DotCraftCore.nBlock
 				this.dropBlockAsItem(p_149636_1_, p_149636_3_, p_149636_4_, p_149636_5_, p_149636_6_, var7);
 				Material var8 = p_149636_1_.getBlock(p_149636_3_, p_149636_4_ - 1, p_149636_5_).BlockMaterial;
 
-				if (var8.BlocksMovement() || var8.Liquid)
+				if (var8.BlocksMovement || var8.Liquid)
 				{
 					p_149636_1_.setBlock(p_149636_3_, p_149636_4_, p_149636_5_, Blocks.flowing_water);
 				}

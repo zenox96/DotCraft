@@ -124,7 +124,7 @@ namespace DotCraftCore.nBlock
 					var11 = this.func_150178_a(p_150175_1_, var13, p_150175_3_, var14, var11);
 				}
 
-				if (p_150175_1_.getBlock(var13, p_150175_3_, var14).isBlockNormalCube && !p_150175_1_.getBlock(p_150175_2_, p_150175_3_ + 1, p_150175_4_).isBlockNormalCube())
+				if (p_150175_1_.getBlock(var13, p_150175_3_, var14).isBlockNormalCube && !p_150175_1_.getBlock(p_150175_2_, p_150175_3_ + 1, p_150175_4_).isBlockNormalCube)
 				{
 					if ((var13 != p_150175_5_ || var14 != p_150175_7_) && p_150175_3_ >= p_150175_6_)
 					{

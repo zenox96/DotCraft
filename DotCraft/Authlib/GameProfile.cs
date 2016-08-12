@@ -1,9 +1,7 @@
 ﻿using DotCraftUtil;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Authlib
 {
@@ -28,7 +26,7 @@ namespace Authlib
             get { return _properties; }
         }
 
-        public Boolean legacy
+        public Boolean Legacy
         {
             get;
             private set;
@@ -105,15 +103,12 @@ namespace Authlib
             var sb = new StringBuilder();
             sb.Append("id=");
             sb.Append(this.Id);
-            sb.Append(",");
-            sb.Append("name=");
+            sb.Append(",name=");
             sb.Append(this.Name);
-            sb.Append(",");
-            sb.Append("properties=");
+            sb.Append(",properties=");
             sb.Append(this.Properties);
-            sb.Append(",");
-            sb.Append("legacy=");
-            sb.Append(this.legacy);
+            sb.Append(",legacy=");
+            sb.Append(this.Legacy);
             sb.Append(",");
             return sb.ToString();
         }

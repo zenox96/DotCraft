@@ -2,6 +2,7 @@ using DotCraftCore.nInit;
 using DotCraftCore.nInventory;
 using DotCraftCore.nItem;
 using DotCraftCore.nWorld;
+using DotCraftUtil;
 using System;
 using System.Collections;
 
@@ -14,7 +15,7 @@ namespace DotCraftCore.nBlock
 
 		private bool func_150111_a(World p_150111_1_, int p_150111_2_, int p_150111_3_, int p_150111_4_, bool p_150111_5_)
 		{
-			if (!field_150112_b.ContainsKey(p_150111_1_))
+			if (!field_150112_b.Contains(p_150111_1_))
 			{
 				field_150112_b.Add(p_150111_1_, new ArrayList());
 			}
@@ -116,7 +117,7 @@ namespace DotCraftCore.nBlock
 			bool var6 = this.func_150110_m(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_);
 			IList var7 = (IList)field_150112_b[p_149674_1_];
 
-			while (var7 != null && !var7.Count == 0 && p_149674_1_.TotalWorldTime - ((BlockRedstoneTorch.Toggle)var7[0]).field_150844_d > 60L)
+			while (var7 != null && var7.Count != 0 && p_149674_1_.TotalWorldTime - ((BlockRedstoneTorch.Toggle)var7[0]).field_150844_d > 60L)
 			{
 				var7.Remove(0);
 			}
@@ -129,7 +130,7 @@ namespace DotCraftCore.nBlock
 
 					if (this.func_150111_a(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_, true))
 					{
-						p_149674_1_.playSoundEffect((double)((float)p_149674_2_ + 0.5F), (double)((float)p_149674_3_ + 0.5F), (double)((float)p_149674_4_ + 0.5F), "random.fizz", 0.5F, 2.6F + (p_149674_1_.rand.nextFloat() - p_149674_1_.rand.nextFloat()) * 0.8F);
+						p_149674_1_.playSoundEffect((double)((float)p_149674_2_ + 0.5F), (double)((float)p_149674_3_ + 0.5F), (double)((float)p_149674_4_ + 0.5F), "random.fizz", 0.5F, 2.6F + (p_149674_1_.rand.NextFloat() - p_149674_1_.rand.NextFloat()) * 0.8F);
 
 						for (int var8 = 0; var8 < 5; ++var8)
 						{

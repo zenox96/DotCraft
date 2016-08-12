@@ -299,7 +299,7 @@ namespace DotCraftCore.nBlock
 			{
 				for (int var1 = 0; var1 < this.field_150657_g.Count; ++var1)
 				{
-					BlockRailBase.Rail var2 = this.func_150654_a((ChunkPosition)this.field_150657_g.get(var1));
+					BlockRailBase.Rail var2 = this.func_150654_a((ChunkPosition)this.field_150657_g[var1]);
 
 					if (var2 != null && var2.func_150653_a(this))
 					{
@@ -319,14 +319,14 @@ namespace DotCraftCore.nBlock
 
 			private BlockRailBase.Rail func_150654_a(ChunkPosition p_150654_1_)
 			{
-				return BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b, p_150654_1_.field_151328_c) ? BlockRailBase.new Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b, p_150654_1_.field_151328_c) : (BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b + 1, p_150654_1_.field_151328_c) ? BlockRailBase.new Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b + 1, p_150654_1_.field_151328_c) : (BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b - 1, p_150654_1_.field_151328_c) ? BlockRailBase.new Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b - 1, p_150654_1_.field_151328_c) : null));
+				return BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b, p_150654_1_.field_151328_c) ? new BlockRailBase.Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b, p_150654_1_.field_151328_c) : (BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b + 1, p_150654_1_.field_151328_c) ? new BlockRailBase.Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b + 1, p_150654_1_.field_151328_c) : (BlockRailBase.func_150049_b_(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b - 1, p_150654_1_.field_151328_c) ? new BlockRailBase.Rail(this.field_150660_b, p_150654_1_.field_151329_a, p_150654_1_.field_151327_b - 1, p_150654_1_.field_151328_c) : null));
 			}
 
 			private bool func_150653_a(BlockRailBase.Rail p_150653_1_)
 			{
 				for (int var2 = 0; var2 < this.field_150657_g.Count; ++var2)
 				{
-					ChunkPosition var3 = (ChunkPosition)this.field_150657_g.get(var2);
+					ChunkPosition var3 = (ChunkPosition)this.field_150657_g[var2];
 
 					if (var3.field_151329_a == p_150653_1_.field_150661_c && var3.field_151328_c == p_150653_1_.field_150659_e)
 					{
@@ -341,7 +341,7 @@ namespace DotCraftCore.nBlock
 			{
 				for (int var4 = 0; var4 < this.field_150657_g.Count; ++var4)
 				{
-					ChunkPosition var5 = (ChunkPosition)this.field_150657_g.get(var4);
+					ChunkPosition var5 = (ChunkPosition)this.field_150657_g[var4];
 
 					if (var5.field_151329_a == p_150652_1_ && var5.field_151328_c == p_150652_3_)
 					{
@@ -629,7 +629,7 @@ namespace DotCraftCore.nBlock
 
 					for (int var9 = 0; var9 < this.field_150657_g.Count; ++var9)
 					{
-						BlockRailBase.Rail var10 = this.func_150654_a((ChunkPosition)this.field_150657_g.get(var9));
+						BlockRailBase.Rail var10 = this.func_150654_a((ChunkPosition)this.field_150657_g[var9]);
 
 						if (var10 != null)
 						{
