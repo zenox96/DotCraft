@@ -1,7 +1,7 @@
 DotCraft
 ========
 
-A C# port of the Minecraft Client & Server
+A C# port of the 1.6.4 Minecraft Client & Server
 
 Planned functionallity includes:
 * Forge Support
